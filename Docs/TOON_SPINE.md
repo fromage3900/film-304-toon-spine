@@ -13,43 +13,45 @@ UE 5.8's Substrate Toon BSDF. It provides:
 - **Temporal effects** (wind, smear, boil for hand-drawn animation feel)
 - **Parallax** (height-based WPO for depth)
 - **Audio reactivity** (bass/mid/treble weight — optional, for music-driven scenes)
+- **Itto lane** (procedural cracks/ink wear breakup via Truchet + wear masks)
+- **Madoka lane** (Voronoi vein glow + radial witch rings, emissive)
+- **NikkiDreamGrade** (dreamy pastel color grading)
+- **SpaceParallax** (space parallax effect)
+- **ClothWindDrape** (cloth wind simulation for WPO)
+- **ColorRamp3** (unified ramp: low/mid/high + contrast, shadow band tinting)
+- **DF_ContactBlend** (contact blending)
+- **Impressionist_Impasto** (impasto brush stroke effect)
 
-## Dependency Graph
+## Dependency Graph (verified via binary scan)
 
 ```
 M_Master_Toon_Universal
-  ├── MF_ToonCharacterSurfaceCore        (toon surface logic)
-  ├── MF_MooaToonBaseInput_2             (Mooa toon encoding)
-  ├── MF_MooaEncodeAttributes            (attribute packing)
-  ├── MF_MooaDecodeAttributes            (attribute unpacking)
-  ├── MF_UVTransform                     (UV manipulation)
-  ├── MF_UVChannelSwitch                 (UV channel selection)
-  ├── MF_NormalAdjust                    (normal tweaking)
-  ├── MF_Triplanar                       (triplanar projection)
-  ├── MF_Triplanar_Stable                (stable triplanar)
-  ├── MF_ParallaxCore                    (parallax mapping)
-  ├── MF_RealParallax                    (real parallax)
-  ├── MF_UniversalMacroDetail            (macro detail)
-  ├── MF_SDF_BandRelief                  (SDF banding)
-  ├── MF_SDF_UtilityToolkit_Core         (SDF utilities)
-  └── MF_TranslucencyShadowToOpacityMask (translucency → opacity)
+  ├── MF_ClothWindDrape          (cloth wind WPO)
+  ├── MF_ColorRamp3             (unified color ramp)
+  │   └── (called by MF_Itto, MF_Madoka)
+  ├── MF_DF_ContactBlend        (contact blending)
+  ├── MF_Impressionist_Impasto  (impasto brush strokes)
+  ├── MF_Itto                   (procedural cracks/ink wear)
+  │   └── MF_ColorRamp3
+  ├── MF_Madoka                 (Voronoi vein glow + witch rings)
+  │   └── MF_ColorRamp3
+  ├── MF_NikkiDreamGrade        (dreamy pastel grade)
+  ├── MF_NormalAdjust           (normal tweaking)
+  ├── MF_SpaceParallax          (space parallax)
+  └── MF_MeshBlend_Activator_Index  ← MeshBlend plugin (STRIP FOR FILM)
 ```
 
-## Stripped Dependencies
+## Plugin Dependencies
 
-The following were in the original game project but are **not needed** for film:
+**One direct plugin dependency:** `MF_MeshBlend_Activator_Index` (MeshBlend plugin).
 
-| MF / Plugin | Why stripped |
-|-------------|--------------|
-| MF_MeshBlend_Activator_Index_1 | MeshBlend plugin (game-specific mesh blending) |
-| MF_Water* (15 files) | Water simulation (game-specific) |
-| MF_Nikki* (14 files) | Nikki character effects (game-specific) |
-| MF_ClothWindDrape | Cloth simulation (game-specific) |
-| MF_VertexPaintBlend | Vertex paint (game-specific) |
-| MF_UberBlendMode | Uber blend mode (game-specific) |
-| MF_SpaceParallax | Space parallax (game-specific) |
-| MF_Melodia* (2 files) | Melodia-specific effects |
-| MF_Melusina_SDFIris | Character-specific SDF |
+This is the ONLY plugin reference in the entire dependency graph. All 9 other MFs
+are clean — no plugin references.
+
+**To strip for film:** Remove the `bMeshBlendActivator_Active` parameter and its
+associated MaterialFunctionCall node from the master's graph. The MeshBlend
+activator is for per-mesh material blending in game environments — not needed
+for film/cinematic rendering.
 
 ## Toon Profiles
 
@@ -93,3 +95,12 @@ Outlines are **not** part of the toon shader. They remain a separate concern:
 
 The master exposes `EdgeStrength` and `InkColor` parameters for outline control,
 but the actual outline pass must be set up separately in the post-process chain.
+
+## Binary Scan Method
+
+The dependency graph was verified by scanning the `.uasset` binary for ASCII
+asset path strings. This is reliable for UE assets because asset references
+are stored as full package paths in the binary. No editor required.
+
+To re-verify: `extract_dependencies.py` in the UE editor, or binary scan with
+the method described above.
