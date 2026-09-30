@@ -56,12 +56,41 @@ def main():
             lib.log(f"ERROR building {mat_name}: {exc}")
             report["errors"].append(f"{mat_name}: {exc}")
 
+    # ---- toon profiles + material instances ----
+    if not report["errors"]:
+        try:
+            import build_toon_profiles
+            made = build_toon_profiles.build()
+            for pname in made:
+                report.setdefault("profiles", {})[pname] = \
+                    build_toon_profiles.verify_profile(pname)
+        except Exception as exc:
+            lib.log(f"ERROR building profiles: {exc}")
+            report["errors"].append(f"profiles: {exc}")
+
+    if not report["errors"]:
+        try:
+            import build_instances
+            made = build_instances.build()
+            for ipath in made:
+                iname = ipath.rsplit("/", 1)[-1].split(".", 1)[0]
+                expected = None
+                if iname in build_instances.INSTANCES:
+                    expected = build_instances.INSTANCES[iname][1]
+                report.setdefault("instances", {})[iname] = \
+                    build_instances.verify_instance(iname, expected)
+        except Exception as exc:
+            lib.log(f"ERROR building instances: {exc}")
+            report["errors"].append(f"instances: {exc}")
+
     lib.save_all()
     lib.write_report(report)
 
     ok = not report["errors"] and all(
         v.get("ok") for v in list(report["functions"].values())
-        + list(report["materials"].values()))
+        + list(report["materials"].values())
+        + list(report.get("profiles", {}).values())
+        + list(report.get("instances", {}).values()))
     lib.log(f"OVERALL: {'PASS' if ok else 'FAIL'}")
     return 0 if ok else 1
 

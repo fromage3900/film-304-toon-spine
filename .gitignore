@@ -25,3 +25,8 @@ Thumbs.db
 
 # Don't ignore Content/ — this is a content-first repo
 !Content/
+
+# World Partition external actor/object plumbing - regenerated with the .umap.
+# Committing these is noise and they are path-coupled to the map package.
+Content/__ExternalActors__/
+Content/__ExternalObjects__/
