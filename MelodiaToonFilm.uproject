@@ -2,14 +2,7 @@
 	"FileVersion": 3,
 	"EngineAssociation": "5.8",
 	"Category": "Film",
-	"Description": "Melodia Toon Film — standalone UE 5.8 toon shading spine for indie 3D animation",
-	"Modules": [
-		{
-			"Name": "MelodiaToonFilm",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		}
-	],
+	"Description": "Animation Art 5 group film - stylized look development. Content-only project: no C++ module, no third-party plugins.",
 	"Plugins": [
 		{
 			"Name": "MovieRenderPipeline",
