@@ -22,7 +22,7 @@ UE 5.8's Substrate Toon BSDF. It provides:
 - **DF_ContactBlend** (contact blending)
 - **Impressionist_Impasto** (impasto brush stroke effect)
 
-## Dependency Graph (verified via binary scan)
+## Dependency Graph (verified via headless UE scan)
 
 ```
 M_Master_Toon_Universal
@@ -38,20 +38,23 @@ M_Master_Toon_Universal
   ├── MF_NikkiDreamGrade        (dreamy pastel grade)
   ├── MF_NormalAdjust           (normal tweaking)
   ├── MF_SpaceParallax          (space parallax)
+  ├── Day_to_Night_Color        ← UltraDynamicSky plugin (STRIP FOR FILM)
   └── MF_MeshBlend_Activator_Index  ← MeshBlend plugin (STRIP FOR FILM)
 ```
 
 ## Plugin Dependencies
 
-**One direct plugin dependency:** `MF_MeshBlend_Activator_Index` (MeshBlend plugin).
+**Two direct plugin dependencies:**
 
-This is the ONLY plugin reference in the entire dependency graph. All 9 other MFs
-are clean — no plugin references.
+1. **MeshBlend** — `MF_MeshBlend_Activator_Index_0` (per-mesh material blending)
+2. **UltraDynamicSky** — `Day_to_Night_Color` (sky color utility)
 
-**To strip for film:** Remove the `bMeshBlendActivator_Active` parameter and its
-associated MaterialFunctionCall node from the master's graph. The MeshBlend
-activator is for per-mesh material blending in game environments — not needed
-for film/cinematic rendering.
+All 9 other MFs are clean — no plugin references.
+
+**To strip for film:**
+- Remove the `bMeshBlendActivator_Active` parameter and its MaterialFunctionCall node
+- Remove the `Day_to_Night_Color` call (or replace with a simple lerp between two colors)
+- Both are game-environment utilities — not needed for film/cinematic rendering
 
 ## Toon Profiles
 
