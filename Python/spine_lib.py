@@ -150,6 +150,17 @@ def scalar_const(owner, v, x=0, y=0):
     return e
 
 
+def texture_param(owner, name, group, x=0, y=0, desc=None):
+    """Texture parameter. Never auto-assigns a texture: an unwired parameter
+    samples the default grey, which is a safe placeholder and keeps the material
+    free of banned /Engine/ content (see material_lib.BANNED_TEXTURE_PATHS)."""
+    e = expr(owner, unreal.MaterialExpressionTextureSampleParameter2D, x, y)
+    e.set_editor_property("parameter_name", name)
+    e.set_editor_property("group", group)
+    _desc(e, desc)
+    return e
+
+
 def _desc(e, text):
     if not text:
         return

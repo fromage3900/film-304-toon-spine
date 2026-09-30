@@ -73,6 +73,10 @@ def build(rebuild=True):
     lib.try_set(mat, "bUsesSubstrate", True)
 
     # ---------------- parameters ----------------
+    # Artist-painted 1D ramp LUT, used when bUsePaintedRamp = 1.
+    ramp_lut_tex = lib.texture_param(mat, "RampTexture", "Ramp", -1400, -600,
+                                     desc="Painted 1D band ramp (horizontal strip)")
+
     vec = {}
     y = -400
     for pname, group, default, desc in SURFACE_PARAMS:
@@ -106,25 +110,40 @@ def build(rebuild=True):
     band_mask = lib.expr(mat, unreal.MaterialExpressionMultiply, -800, 400)
     lib.binary(abs_n, flt["BandStrength"], band_mask)
 
-    # ---------------- palette blend via MF_ColorRamp3 ----------------
+    # ---------------- palette blend: ramp family, switchable ----------------
+    # bUsePaintedRamp: 0 = MF_ColorRamp3 (slider bands), 1 = MF_RampLUT
+    # (artist-painted 1D ramp). Both share the BaseColor/ColorRamp/Mask
+    # signature, so the switch is a pure substitution.
+    mask_default = lib.scalar_const(mat, 0.0, -1000, 740)
     # The ramp is a real MaterialFunctionCall, not inline math: that keeps one
     # authored source of truth for band shape across the whole spine, and it is
     # what the original master did.
-    ramp_call = lib.expr(mat, unreal.MaterialExpressionMaterialFunctionCall,
-                         -560, 300)
-    ramp_call.set_editor_property("material_function",
-                                  unreal.load_asset(lib.asset_path(
-                                      lib.FUNCTION_DIR, "MF_ColorRamp3")))
-    lib.connect(vec["BaseTint"], "", ramp_call, "BaseColor")
-    lib.connect(vec["AccentTint"], "", ramp_call, "ColorRamp")
+    ramp_slider = lib.expr(mat, unreal.MaterialExpressionMaterialFunctionCall,
+                           -700, 180)
+    ramp_slider.set_editor_property("material_function",
+        unreal.load_asset(lib.asset_path(lib.FUNCTION_DIR, "MF_ColorRamp3")))
+    lib.connect(vec["BaseTint"], "", ramp_slider, "BaseColor")
+    lib.connect(vec["AccentTint"], "", ramp_slider, "ColorRamp")
+    lib.connect(mask_default, "", ramp_slider, "Mask")
 
-    # Mask defaults to 0 so the ramp reproduces the plain palette blend until a
-    # caller drives it.
-    mask_const = lib.scalar_const(mat, 0.0, -700, 460)
-    lib.connect(mask_const, "", ramp_call, "Mask")
+    ramp_lut = lib.expr(mat, unreal.MaterialExpressionMaterialFunctionCall,
+                        -700, 400)
+    ramp_lut.set_editor_property("material_function",
+        unreal.load_asset(lib.asset_path(lib.FUNCTION_DIR, "MF_RampLUT")))
+    lib.connect(vec["BaseTint"], "", ramp_lut, "BaseColor")
+    lib.connect(ramp_lut_tex, "", ramp_lut, "RampTexture")
+    lib.connect(mask_default, "", ramp_lut, "Mask")
 
-    oil_blend = lib.expr(mat, unreal.MaterialExpressionLinearInterpolate, -300, 300)
-    lib.connect(ramp_call, "Color", oil_blend, "A")
+    ramp_switch = lib.expr(mat, unreal.MaterialExpressionStaticSwitchParameter,
+                           -460, 300)
+    ramp_switch.set_editor_property("parameter_name", "bUsePaintedRamp")
+    ramp_switch.set_editor_property("group", "Ramp")
+    ramp_switch.set_editor_property("default_value", False)
+    lib.connect(ramp_lut, "Color", ramp_switch, ["True"])
+    lib.connect(ramp_slider, "Color", ramp_switch, ["False"])
+
+    oil_blend = lib.expr(mat, unreal.MaterialExpressionLinearInterpolate, -240, 300)
+    lib.connect(ramp_switch, "", oil_blend, "A")
 
     oil_mod = lib.expr(mat, unreal.MaterialExpressionLinearInterpolate, -120, 300)
     lib.ternary(vec["BaseTint"], oil_blend, flt["OilPaintStrength"], oil_mod)
