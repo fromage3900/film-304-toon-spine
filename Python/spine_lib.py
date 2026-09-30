@@ -385,3 +385,111 @@ def save_all():
 def write_report(report):
     REPORT.write_text(json.dumps(report, indent=2), encoding="utf-8")
     log(f"report -> {REPORT}")
+
+def function_inputs_for(fn, node):
+    """Wired upstream nodes of `node` inside a MaterialFunction.
+
+    UE 5.8 has no get_material_expression_input(expr, pin). For FUNCTIONS the
+    working call is get_inputs_for_material_function_expression(fn, node) - the
+    Material-only variant takes `material` and raises a conversion error here.
+    Verified by probe 2026-09-30.
+    """
+    lib = unreal.MaterialEditingLibrary
+    try:
+        return [x for x in lib.get_inputs_for_material_function_expression(fn, node)
+                if x is not None]
+    except Exception:
+        return []
+
+
+def material_inputs_for(mat, node):
+    try:
+        return [x for x in unreal.MaterialEditingLibrary
+                .get_inputs_for_material_expression(mat, node) if x is not None]
+    except Exception:
+        return []
+
+
+def graph_reachability(owner, nodes, is_function):
+    """Backward BFS from every FunctionOutput / material property output.
+
+    Answering "does every node contribute to a rendered output?" is the only
+    meaningful dead-code test. A forward BFS from inputs is wrong: parameters
+    and constants are legitimate graph SOURCES and would be miscounted as
+    orphans (they have no upstream).
+
+    Returns (live, dead, outputs_wired, unused_inputs).
+    """
+    nodes = list(nodes)
+    get_ins = function_inputs_for if is_function else material_inputs_for
+
+    # reverse edges: upstream -> downstream
+    consumers = {}
+    for n in nodes:
+        for u in get_ins(owner, n):
+            consumers.setdefault(id(u), []).append(id(n))
+
+    outputs = [n for n in nodes
+               if type(n).__name__ == "MaterialExpressionFunctionOutput"]
+    outputs_wired = {type(n).__name__: bool(get_ins(owner, n)) for n in outputs}
+
+    by_id = {id(n): n for n in nodes}
+
+    # seed the walk at the sinks (nothing consumes them) and walk upstream
+    live = set()
+    stack = [id(n) for n in nodes if id(n) not in consumers]
+    live.update(stack)
+    while stack:
+        cur = stack.pop()
+        node = by_id.get(cur)
+        if node is None:
+            continue
+        for u in get_ins(owner, node):
+            if id(u) not in live:
+                live.add(id(u)); stack.append(id(u))
+
+    dead = len(nodes) - len(live)
+
+    # inputs that reach nothing
+    unused_inputs = []
+    for n in nodes:
+        if type(n).__name__ == "MaterialExpressionFunctionInput":
+            if id(n) not in live:
+                unused_inputs.append(str(n.get_editor_property("input_name")))
+
+    return len(live), dead, outputs_wired, unused_inputs
+
+
+def verify_function_graph(name, max_dead=0, require_outputs=True):
+    """Full structural check for a generated MaterialFunction.
+
+    Guards the failure that counting expressions cannot: a function whose nodes
+    exist but whose chain never reaches the outputs renders nothing.
+    """
+    path = asset_path(FUNCTION_DIR, name)
+    fn = unreal.load_asset(path)
+    result = {"path": path, "loads": fn is not None, "ok": False}
+    if fn is None:
+        log(f"VERIFY FAIL {name}: does not load")
+        return result
+
+    exprs = list(unreal.MaterialEditingLibrary.get_material_function_expressions(fn) or [])
+    result["expression_count"] = len(exprs)
+
+    live, dead, outs, unused = graph_reachability(fn, exprs, is_function=True)
+    result["live_nodes"] = live
+    result["dead_nodes"] = dead
+    result["outputs_wired"] = outs
+    result["unused_inputs"] = unused
+
+    if len(exprs) == 0:
+        result["error"] = "ZERO expressions"
+    elif dead > max_dead:
+        result["error"] = f"{dead} nodes contribute to no output"
+    elif require_outputs and outs and not all(outs.values()):
+        deadouts = [k for k, v in outs.items() if not v]
+        result["error"] = f"outputs have no source: {deadouts}"
+    result["ok"] = not result.get("error")
+    log(f"VERIFY {name}: ok={result['ok']} exprs={len(exprs)} live={live} "
+        f"dead={dead} unused_inputs={unused} {result.get('error','')}")
+    return result

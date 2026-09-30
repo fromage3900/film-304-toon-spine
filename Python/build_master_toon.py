@@ -189,6 +189,48 @@ def build(rebuild=True):
     lib.binary(height_mul, vertex_n, wpo)
     lib.connect_property(wpo, unreal.MaterialProperty.MP_WORLD_POSITION_OFFSET)
 
+    # ---------------- contact shadow (distance field) ----------------
+    # The only distance-field nodes UE 5.8 ships are ApproxAO and Gradient,
+    # which read a mesh's BAKED field - they cannot author procedural shapes,
+    # but they do give a grounded contact shadow that stops a toon surface
+    # floating. Gated so it costs nothing when unused.
+    bContactShadow = lib.expr(mat, unreal.MaterialExpressionStaticSwitchParameter,
+                              -900, 1150)
+    bContactShadow.set_editor_property("parameter_name", "bContactShadow")
+    bContactShadow.set_editor_property("group", "Contact")
+    bContactShadow.set_editor_property("default_value", False)
+
+    ao = lib.expr(mat, unreal.MaterialExpressionDistanceFieldApproxAO, -1100, 1150)
+    # UE 5.8 exposes BaseDistance / Radius as INPUT PINS, not properties.
+    # Probed 2026-09-30: props list is empty, input_names are
+    #   ["World Position", "Normal", "BaseDistance", "Radius"].
+    ao_base = lib.scalar(mat, "ContactShadowDistance", "Contact", 12.0,
+                         -1100, 1280,
+                         desc="Distance-field sample distance for the contact shadow")
+    ao_radius = lib.scalar(mat, "ContactShadowRadius", "Contact", 40.0,
+                           -1100, 1360,
+                           desc="Search radius of the distance-field query")
+    lib.connect(ao_base, "", ao, "BaseDistance")
+    lib.connect(ao_radius, "", ao, "Radius")
+    ao_scale = lib.scalar(mat, "ContactShadowStrength", "Contact", 0.45,
+                          -1100, 1440,
+                          desc="How hard the distance-field contact shadow reads")
+
+    ao_tinted = lib.expr(mat, unreal.MaterialExpressionLinearInterpolate,
+                         -740, 1150)
+    lib.ternary(final_color, vec["InkColor"], ao_scale, ao_tinted)
+
+    contact = lib.expr(mat, unreal.MaterialExpressionMultiply, -580, 1150)
+    lib.connect(ao, "", contact, ["A"])
+    lib.connect(ao_scale, "", contact, ["B"])
+
+    shaded = lib.expr(mat, unreal.MaterialExpressionLinearInterpolate,
+                      -400, 1150)
+    lib.connect(bContactShadow, "", shaded, ["True", "False"])
+    lib.connect(final_color, "", shaded, ["False"])
+    lib.connect(ao_tinted, "", shaded, ["True"])
+    final_color = shaded
+
     # ---------------- Substrate Toon BSDF ----------------
     toon = lib.expr(mat, unreal.MaterialExpressionSubstrateToonBSDF, 700, 240)
     lib.connect(final_color, "", toon, ["BaseColor", "DiffuseColor"])

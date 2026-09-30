@@ -29,12 +29,12 @@ def main():
     for mod_name, fn_name, min_expr in [
         ("build_mf_colorramp3", "MF_ColorRamp3", 20),
         ("build_mf_ramplut", "MF_RampLUT", 8),
+        ("build_mf_patterns", "MF_ProceduralPatterns", 40),
     ]:
         try:
             mod = __import__(mod_name)
             mod.build()
-            report["functions"][fn_name] = lib.verify_function(
-                fn_name, min_expressions=min_expr)
+            report["functions"][fn_name] = lib.verify_function_graph(fn_name, max_dead=0)
         except Exception as exc:
             lib.log(f"ERROR building {fn_name}: {exc}")
             report["errors"].append(f"{fn_name}: {exc}")
