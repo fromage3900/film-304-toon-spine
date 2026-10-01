@@ -202,7 +202,53 @@ def build(rebuild=True):
     lib.connect(pat_scale, "", pat_call, "Scale")
     lib.connect(pat_angle, "", pat_call, "Angle")
     lib.connect(pat_index, "", pat_call, "CellIndex")
-    lib.connect(pat_density, "", pat_call, "Density")
+
+    # ---------------- shadow-driven hatch density ----------------
+    # The hatch should densify into shadow the way a painter hatches into the
+    # terminator, so density is driven by a KeyLightDir . Normal mask.
+    #
+    # This is deliberately NOT a second terminator authority: it exists only to
+    # modulate hatch COVERAGE, and the Toon Profile still owns the band
+    # structure. PatternHatchShadowDrive = 0 leaves density purely manual.
+    key_dir = lib.vector(mat, "KeyLightDir", "Pattern", (0.0, 0.0, 1.0),
+                         -1240, 2120,
+                         desc="Key light direction used to densify hatch in shadow")
+    key_n = lib.expr(mat, unreal.MaterialExpressionNormalize, -1040, 2120)
+    lib.unary(key_dir, key_n)
+
+    ndotl = lib.expr(mat, unreal.MaterialExpressionDotProduct, -880, 2120)
+    # Its own normal read rather than reusing the later `normal` node: this
+    # block runs before that one is defined, and a shadow-mask read costs
+    # nothing. (Caught by the build: NameError on `normal`.)
+    shade_n = lib.expr(mat, unreal.MaterialExpressionPixelNormalWS, -1040, 2240)
+    lib.connect(shade_n, "", ndotl, ["A", "a"])
+    lib.connect(key_n, "", ndotl, ["B", "b"])
+
+    ndotl_s = lib.expr(mat, unreal.MaterialExpressionSaturate, -720, 2120)
+    lib.unary(ndotl, ndotl_s)
+
+    shadow_m = lib.expr(mat, unreal.MaterialExpressionOneMinus, -580, 2120)
+    lib.unary(ndotl_s, shadow_m)
+
+    hatch_drive = lib.scalar(mat, "PatternHatchShadowDrive", "Pattern", 1.0,
+                             -1240, 2200,
+                             desc="How much the shadow mask drives hatch density "
+                                  "(0 = manual only)")
+    drive_m = lib.expr(mat, unreal.MaterialExpressionMultiply, -420, 2140)
+    lib.binary(shadow_m, hatch_drive, drive_m)
+
+    drive_s = lib.expr(mat, unreal.MaterialExpressionSaturate, -280, 2140)
+    lib.unary(drive_m, drive_s)
+
+    shadow_dens = lib.scalar(mat, "PatternHatchShadowDensity", "Pattern", 0.85,
+                             -1240, 2280,
+                             desc="Hatch coverage in shadow; PatternDensity is the "
+                                  "coverage in light")
+    dens_final = lib.expr(mat, unreal.MaterialExpressionLinearInterpolate,
+                          -100, 2140)
+    lib.ternary(pat_density, shadow_dens, drive_s, dens_final)
+
+    lib.connect(dens_final, "", pat_call, "Density")
 
     pat_amt = lib.expr(mat, unreal.MaterialExpressionMultiply, -460, 1600)
     lib.connect(pat_call, "Mask", pat_amt, ["A", "a"])

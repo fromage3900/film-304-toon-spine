@@ -82,10 +82,13 @@ mask. Parameters live in the **`Pattern`** group so they sort together in the MI
 | Parameter | Default | Meaning |
 |---|---|---|
 | `PatternStrength` | 0.0 | ink amount; 0 = off |
-| `PatternDensity` | 0.5 | coverage; raise in shadow |
+| `PatternIndex` | 0.0 | `CellIndex` — which pattern |
 | `PatternScale` | 12.0 | cells per UV unit |
 | `PatternAngle` | 0.0 | rotation, degrees |
-| `PatternIndex` | 0.0 | `CellIndex` — which pattern |
+| `PatternDensity` | 0.5 | hatch coverage in **light** |
+| `PatternHatchShadowDensity` | 0.85 | hatch coverage in **shadow** |
+| `PatternHatchShadowDrive` | 1.0 | how much the shadow mask drives density (0 = manual only) |
+| `KeyLightDir` | (0,0,1) | key light direction for the hatch shadow mask |
 
 `build_spine.py` asserts the master's `expected_calls` now includes `MF_ProceduralPatterns`, so the
 wiring cannot silently vanish the way the 2026-09-29 cross-project copy lost all ten calls.
@@ -118,9 +121,14 @@ wiring cannot silently vanish the way the 2026-09-29 cross-project copy lost all
 
 - `PatternIndex` is a scalar `If` chain, not a static switch — deliberate, so one instance can
   switch pattern without a recompile; the cost is a few extra ALU ops.
-- `Density` is **not yet driven from a shadow mask** in the master. The hook is there; wiring the
-  terminator into `PatternDensity` per Toon Profile is the next step and is what turns this from an
-  overlay into automatic shadow hatching.
+- `Density` **is** driven from a shadow mask (implemented 2026-10-01): `KeyLightDir · Normal` →
+  saturate → one-minus → scaled by `PatternHatchShadowDrive` → blended from `PatternDensity`
+  (light) to `PatternHatchShadowDensity` (shadow). The mask is **hatch-only** — the Toon Profile
+  still owns the band structure, so this does not become a second terminator authority.
+  `PatternHatchShadowDrive = 0` returns density to fully manual.
+- The shadow mask reads its own `PixelNormalWS` rather than reusing the master's later `normal`
+  node — that node is defined after this block, and referencing it raised `NameError` on the first
+  build attempt (caught by the spine report, not by a log line).
 - No true Voronoi/F1 cell pattern yet (Crackle approximates it with sine products).
 - `MF_ProceduralPatterns` was previously **unreferenced** (audit F6); it is now called by the
   master. A profile that wants hatching sets `PatternIndex`/`PatternDensity` on its instance.

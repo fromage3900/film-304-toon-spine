@@ -1,5 +1,5 @@
 ﻿MELODIA TOON FILM - verify_all
-run      : 2026-10-01 16:18:22
+run      : 2026-10-01 16:52:47
 repo     : P:\film-304-toon-spine
 bracket  : 8 checks, 0 failed
 
@@ -9,7 +9,7 @@ Check                                         Result Detail
 fork sync (vendored vs upstream)              PASS   PASS - vendored set matches upstream                       
 Blender available                             PASS   C:\Program Files\Blender Foundation\Blender 5.2\blender.exe
 fork verifier (builders/presets/dials)        PASS   16 assertions passed, 0 failed                             
-external actors in levels are present on disk PASS   1 level(s) use external actors; 290 packages on disk       
+external actors in levels are present on disk PASS   1 level(s) use external actors; 151 packages on disk       
 no self-named packages                        PASS   ok                                                         
 levels resolve to their own package path      PASS   ok                                                         
 documented paths exist                        PASS   ok                                                         

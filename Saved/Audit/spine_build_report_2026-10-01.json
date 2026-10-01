@@ -47,7 +47,7 @@
         "MF_ProceduralPatterns",
         "MF_RampLUT"
       ],
-      "expression_count": 77,
+      "expression_count": 88,
       "missing_calls": []
     },
     "M_Outline_InvertedHull": {
