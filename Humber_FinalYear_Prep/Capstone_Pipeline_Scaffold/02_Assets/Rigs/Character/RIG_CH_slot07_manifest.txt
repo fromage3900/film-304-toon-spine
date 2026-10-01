@@ -1,0 +1,4 @@
+# Team Member 07: Character Rigger (Body & Face)
+- Directory: `02_Assets/Rigs/Character/`
+- Required prefixes: `RIG_CH_`
+- Responsibilities: Deformation rig, facial controls, hand pose setups.

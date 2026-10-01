@@ -1,0 +1,18 @@
+{
+  "errors": [
+    "WorldPartitionEditorSettings: module 'unreal' has no attribute 'WorldPartitionEditorSettings'",
+    "WorldPartitionSettings: module 'unreal' has no attribute 'WorldPartitionSettings'"
+  ],
+  "MF_procedural_referencers": [],
+  "level_loaded": true,
+  "actor_count": 1,
+  "world_settings_found": false,
+  "world_class": "<class 'World'>",
+  "world_props": [
+    "is_package_external"
+  ],
+  "EditorPerProjectUserSettings_props": [
+    "is_package_external"
+  ],
+  "EditorPerProjectUserSettings_values": {}
+}

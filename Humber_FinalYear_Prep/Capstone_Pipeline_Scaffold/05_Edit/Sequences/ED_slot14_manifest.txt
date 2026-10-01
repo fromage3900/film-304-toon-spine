@@ -1,0 +1,4 @@
+# Team Member 14: Editor & Audio/Soundtrack Coordinator
+- Directory: `05_Edit/Sequences/`
+- Required prefixes: `ED_`, `VSE_`, `AUD_`
+- Responsibilities: Blender VSE master cut, 24fps 1920x1080 export, audio beats synchronization.

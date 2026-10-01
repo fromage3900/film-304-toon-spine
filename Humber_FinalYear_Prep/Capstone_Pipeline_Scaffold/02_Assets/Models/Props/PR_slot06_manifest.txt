@@ -1,0 +1,4 @@
+# Team Member 06: Key Props Modeler
+- Directory: `02_Assets/Models/Props/`
+- Required prefixes: `PR_`
+- Responsibilities: Hero props, handheld accessories, interactable objects.

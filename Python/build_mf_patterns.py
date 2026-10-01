@@ -21,6 +21,7 @@ Inputs
     Softness    scalar - edge width of the hard threshold (0 = razor sharp)
     Angle       scalar - pattern rotation in degrees
     CellIndex   scalar - selects which pattern to return
+    Density     scalar - ink coverage 0..1; the level the field is cut against
 
 Outputs
     Pattern     scalar - 0..1 field for the selected pattern
@@ -32,6 +33,23 @@ Patterns
     2  Stripes    - hard parallel bars
     3  Crackle    - Worley-ish cell breakup from fractional sine distance
     4  InkSplat   - radial falloff rings, high contrast
+    5  CrossHatch - two 45-degree line families; engraving / pencil hatch
+    6  Stipple    - hashed points; dry-brush / graphite grain
+    7  Rings      - concentric focal lines; manga screentone burst
+
+Density is what makes these usable in a film rather than as a flat overlay: it
+is the cut level, so raising it densifies the hatch the way a painter hatches
+into shadow. Drive it from a shadow mask or a Toon Profile and the pattern
+becomes automatic shadow hatching.
+
+Research basis (2026-10-01)
+    UE 5.8's Substrate Toon BSDF is experimental and its Toon Profile already
+    carries ShadowHatchingPattern{Texture,Size,Strength}. This function is the
+    art-directable companion: analytic, texture-free, and densifiable per
+    instance. Constructions follow the 2D signed-distance literature (Inigo
+    Quilez, "2D distance functions") - every pattern is a distance field on a
+    UV lattice, hard-thresholded. No SDF node exists in UE 5.8, so the fields
+    are composed from Sine/Frac/Abs/Floor/Length/Add/Mul.
 """
 from __future__ import annotations
 
@@ -231,11 +249,98 @@ def _inksplat(fn, uv, scale, x=-1100, y_offset=1900):
     return biased
 
 
+def _crosshatch(fn, u, v, scale, x=-1100, y_offset=2450):
+    """Cross-hatch: two 45-degree line families, the engraving / pencil hatch.
+
+    Lines at -45 come from (u+v); lines at +45 from (u-v). Each is a 1D
+    distance field (abs of the fractional part), and the ink sits where either
+    family is near its line - so the two families cross into a lattice.
+    """
+    a = lib.expr(fn, unreal.MaterialExpressionAdd, x, y_offset)
+    lib.binary(u, v, a)
+    b = lib.expr(fn, unreal.MaterialExpressionSubtract, x, y_offset + 220)
+    lib.binary(u, v, b)
+
+    fa = lib.expr(fn, unreal.MaterialExpressionMultiply, x + 150, y_offset)
+    lib.connect(a, "", fa, ["A", "a"])
+    lib.connect(scale, "", fa, ["B", "b"])
+    fr_a = lib.expr(fn, unreal.MaterialExpressionFrac, x + 300, y_offset)
+    lib.unary(fa, fr_a)
+    da = lib.expr(fn, unreal.MaterialExpressionAbs, x + 450, y_offset)
+    lib.unary(fr_a, da)
+
+    fb = lib.expr(fn, unreal.MaterialExpressionMultiply, x + 150, y_offset + 220)
+    lib.connect(b, "", fb, ["A", "a"])
+    lib.connect(scale, "", fb, ["B", "b"])
+    fr_b = lib.expr(fn, unreal.MaterialExpressionFrac, x + 300, y_offset + 220)
+    lib.unary(fb, fr_b)
+    db = lib.expr(fn, unreal.MaterialExpressionAbs, x + 450, y_offset + 220)
+    lib.unary(fr_b, db)
+
+    mn = lib.expr(fn, unreal.MaterialExpressionMin, x + 600, y_offset + 110)
+    lib.binary(da, db, mn)
+    return mn
+
+
+def _stipple(fn, u, v, scale, x=-1100, y_offset=3000):
+    """Stipple: hashed points (dry-brush / graphite grain).
+
+    A value hash frac(sin(u*12.9898 + v*78.233) * 43758.5453) - the standard
+    GLSL hash, which is why it uses those irrational constants. Thresholded
+    downstream, it reads as sparse ink flecks rather than a regular lattice.
+    """
+    su = lib.expr(fn, unreal.MaterialExpressionMultiply, x, y_offset)
+    lib.binary(u, scale, su)
+    fu = lib.expr(fn, unreal.MaterialExpressionFrac, x + 150, y_offset)
+    lib.unary(su, fu)
+
+    sv = lib.expr(fn, unreal.MaterialExpressionMultiply, x, y_offset + 220)
+    lib.binary(v, scale, sv)
+    fv = lib.expr(fn, unreal.MaterialExpressionFrac, x + 150, y_offset + 220)
+    lib.unary(sv, fv)
+
+    h1 = lib.expr(fn, unreal.MaterialExpressionMultiply, x + 300, y_offset)
+    lib.binary(fu, lib.scalar_const(fn, 12.9898, x + 300, y_offset + 80), h1)
+    h2 = lib.expr(fn, unreal.MaterialExpressionMultiply, x + 300, y_offset + 220)
+    lib.binary(fv, lib.scalar_const(fn, 78.233, x + 300, y_offset + 300), h2)
+
+    hs = lib.expr(fn, unreal.MaterialExpressionAdd, x + 450, y_offset + 110)
+    lib.binary(h1, h2, hs)
+
+    sn = lib.expr(fn, unreal.MaterialExpressionSine, x + 600, y_offset + 110)
+    sn.set_editor_property("period", 1.0)
+    lib.unary(hs, sn)
+
+    hm = lib.expr(fn, unreal.MaterialExpressionMultiply, x + 750, y_offset + 110)
+    lib.binary(sn, lib.scalar_const(fn, 43758.5453, x + 750, y_offset + 190), hm)
+
+    hf = lib.expr(fn, unreal.MaterialExpressionFrac, x + 900, y_offset + 110)
+    lib.unary(hm, hf)
+    return hf
+
+
+def _rings(fn, u, v, scale, x=-1100, y_offset=3700):
+    """Rings: concentric focal lines around the UV origin (screentone burst)."""
+    su = lib.expr(fn, unreal.MaterialExpressionMultiply, x, y_offset)
+    lib.binary(u, scale, su)
+    sv = lib.expr(fn, unreal.MaterialExpressionMultiply, x, y_offset + 220)
+    lib.binary(v, scale, sv)
+
+    ln = lib.expr(fn, unreal.MaterialExpressionLength, x + 180, y_offset + 110)
+    lib.connect(su, "", ln, ["A", "a"])
+    lib.connect(sv, "", ln, ["B", "b"])
+
+    fr = lib.expr(fn, unreal.MaterialExpressionFrac, x + 340, y_offset + 110)
+    lib.unary(ln, fr)
+    return fr
+
+
 def build(rebuild=True):
     lib.log(f"=== {NAME} ===")
     fn = lib.get_or_create_function(NAME, rebuild=rebuild)
     lib.try_set(fn, "description",
-                "SDF-style procedural patterns (halftone/checker/stripes/crackle/ink). "
+                "SDF-style procedural patterns (halftone/checker/stripes/crackle/ink/"
+                "crosshatch/stipple/rings) with a Density coverage knob. "
                 "UE 5.8 has no SDF node; these are analytic distance constructions.")
 
     # ---------------- inputs ----------------
@@ -248,11 +353,15 @@ def build(rebuild=True):
                                       preview=(0.0, 0, 0, 0), x=-2200, y=460)
     cell_in = lib.add_function_input(fn, "CellIndex", FI_SCALAR,
                                      preview=(0.0, 0, 0, 0), x=-2200, y=600)
+    # Density = ink coverage. It is the level the field is cut against, so it
+    # densifies the pattern the way a painter hatching into shadow does.
+    dens_in = lib.add_function_input(fn, "Density", FI_SCALAR,
+                                     preview=(0.5, 0, 0, 0), x=-2200, y=740)
 
     # per-pattern scale multipliers so one Scale knob still gives each pattern
     # its natural frequency
     scales = {}
-    for i, mult in enumerate([1.0, 1.0, 1.0, 1.0, 1.0]):
+    for i, mult in enumerate([1.0] * 8):
         scales[i] = lib.expr(fn, unreal.MaterialExpressionMultiply, -1900, 700 + i * 60)
         lib.connect(scale_in, "", scales[i], ["A"])
         lib.connect(lib.scalar_const(fn, mult, -1900, 780 + i * 60), "", scales[i], ["B"])
@@ -268,6 +377,9 @@ def build(rebuild=True):
         2: _stripes(fn, u, scales[2]),
         3: _crackle(fn, u, scales[3]),
         4: _inksplat(fn, u, scales[4]),
+        5: _crosshatch(fn, u, v, scales[5]),
+        6: _stipple(fn, u, v, scales[6]),
+        7: _rings(fn, u, v, scales[7]),
     }
 
     # ---------------- pattern selector (nested static-free If chain) ----------------
@@ -296,12 +408,14 @@ def build(rebuild=True):
     lib.connect(soft_in, "", half_soft, ["A"])
     lib.connect(lib.scalar_const(fn, 0.5, -100, 2480), "", half_soft, ["B"])
 
+    # The cut level is Density, not a fixed 0.5: raising Density inks more of
+    # the surface, which is how the pattern reads as shadow hatching.
     lo = lib.expr(fn, unreal.MaterialExpressionSubtract, 40, 2360)
-    lib.connect(lib.scalar_const(fn, 0.5, -100, 2560), "", lo, ["A"])
+    lib.connect(dens_in, "", lo, ["A"])
     lib.connect(half_soft, "", lo, ["B"])
 
     hi = lib.expr(fn, unreal.MaterialExpressionAdd, 40, 2560)
-    lib.connect(lib.scalar_const(fn, 0.5, -100, 2640), "", hi, ["A"])
+    lib.connect(dens_in, "", hi, ["A"])
     lib.connect(half_soft, "", hi, ["B"])
 
     edge = lib.expr(fn, unreal.MaterialExpressionSmoothStep, 200, 2200)

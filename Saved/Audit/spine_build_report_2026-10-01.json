@@ -1,0 +1,252 @@
+{
+  "functions": {
+    "MF_ColorRamp3": {
+      "path": "/Game/Materials/Functions/MF_ColorRamp3.MF_ColorRamp3",
+      "loads": true,
+      "ok": true,
+      "expression_count": 30,
+      "live_nodes": 30,
+      "dead_nodes": 0,
+      "outputs_wired": {
+        "MaterialExpressionFunctionOutput": true
+      },
+      "unused_inputs": []
+    },
+    "MF_RampLUT": {
+      "path": "/Game/Materials/Functions/MF_RampLUT.MF_RampLUT",
+      "loads": true,
+      "ok": true,
+      "expression_count": 11,
+      "live_nodes": 11,
+      "dead_nodes": 0,
+      "outputs_wired": {
+        "MaterialExpressionFunctionOutput": true
+      },
+      "unused_inputs": []
+    },
+    "MF_ProceduralPatterns": {
+      "path": "/Game/Materials/Functions/MF_ProceduralPatterns.MF_ProceduralPatterns",
+      "loads": true,
+      "ok": true,
+      "expression_count": 127,
+      "live_nodes": 127,
+      "dead_nodes": 0,
+      "outputs_wired": {
+        "MaterialExpressionFunctionOutput": true
+      },
+      "unused_inputs": []
+    }
+  },
+  "materials": {
+    "M_Master_Toon_Universal": {
+      "path": "/Game/Materials/Masters/M_Master_Toon_Universal.M_Master_Toon_Universal",
+      "loads": true,
+      "ok": true,
+      "mf_calls": [
+        "MF_ColorRamp3",
+        "MF_ProceduralPatterns",
+        "MF_RampLUT"
+      ],
+      "expression_count": 77,
+      "missing_calls": []
+    },
+    "M_Outline_InvertedHull": {
+      "path": "/Game/Materials/Masters/M_Outline_InvertedHull.M_Outline_InvertedHull",
+      "loads": true,
+      "ok": true,
+      "mf_calls": [],
+      "expression_count": 10,
+      "missing_calls": []
+    }
+  },
+  "errors": [],
+  "profiles": {
+    "TP_Default": {
+      "name": "TP_Default",
+      "loads": true,
+      "ok": true,
+      "chars": 2125,
+      "has_diffuse_ramp": true,
+      "has_specular_ramp": true,
+      "has_hatching": true,
+      "non_trivial": true,
+      "extinction_applied": true
+    },
+    "TP_TwoTone": {
+      "name": "TP_TwoTone",
+      "loads": true,
+      "ok": true,
+      "chars": 2125,
+      "has_diffuse_ramp": true,
+      "has_specular_ramp": true,
+      "has_hatching": true,
+      "non_trivial": true,
+      "extinction_applied": true
+    },
+    "TP_SoftPainterly": {
+      "name": "TP_SoftPainterly",
+      "loads": true,
+      "ok": true,
+      "chars": 2124,
+      "has_diffuse_ramp": true,
+      "has_specular_ramp": true,
+      "has_hatching": true,
+      "non_trivial": true,
+      "extinction_applied": true
+    },
+    "TP_Warm": {
+      "name": "TP_Warm",
+      "loads": true,
+      "ok": true,
+      "chars": 2124,
+      "has_diffuse_ramp": true,
+      "has_specular_ramp": true,
+      "has_hatching": true,
+      "non_trivial": true,
+      "extinction_applied": true
+    },
+    "TP_Cool": {
+      "name": "TP_Cool",
+      "loads": true,
+      "ok": true,
+      "chars": 2124,
+      "has_diffuse_ramp": true,
+      "has_specular_ramp": true,
+      "has_hatching": true,
+      "non_trivial": true,
+      "extinction_applied": true
+    },
+    "TP_Hero": {
+      "name": "TP_Hero",
+      "loads": true,
+      "ok": true,
+      "chars": 2124,
+      "has_diffuse_ramp": true,
+      "has_specular_ramp": true,
+      "has_hatching": true,
+      "non_trivial": true,
+      "extinction_applied": true
+    },
+    "TP_Environment": {
+      "name": "TP_Environment",
+      "loads": true,
+      "ok": true,
+      "chars": 2124,
+      "has_diffuse_ramp": true,
+      "has_specular_ramp": true,
+      "has_hatching": true,
+      "non_trivial": true,
+      "extinction_applied": true
+    },
+    "TP_Foliage": {
+      "name": "TP_Foliage",
+      "loads": true,
+      "ok": true,
+      "chars": 2124,
+      "has_diffuse_ramp": true,
+      "has_specular_ramp": true,
+      "has_hatching": true,
+      "non_trivial": true,
+      "extinction_applied": true
+    },
+    "TP_Gold": {
+      "name": "TP_Gold",
+      "loads": true,
+      "ok": true,
+      "chars": 2124,
+      "has_diffuse_ramp": true,
+      "has_specular_ramp": true,
+      "has_hatching": true,
+      "non_trivial": true,
+      "extinction_applied": true
+    },
+    "TP_Stone": {
+      "name": "TP_Stone",
+      "loads": true,
+      "ok": true,
+      "chars": 2124,
+      "has_diffuse_ramp": true,
+      "has_specular_ramp": true,
+      "has_hatching": true,
+      "non_trivial": true,
+      "extinction_applied": true
+    },
+    "TP_Hatched": {
+      "name": "TP_Hatched",
+      "loads": true,
+      "ok": true,
+      "chars": 2125,
+      "has_diffuse_ramp": true,
+      "has_specular_ramp": true,
+      "has_hatching": true,
+      "non_trivial": true,
+      "extinction_applied": true
+    }
+  },
+  "instances": {
+    "MI_Toon_Hero": {
+      "name": "MI_Toon_Hero",
+      "loads": true,
+      "ok": true,
+      "parent": "M_Master_Toon_Universal",
+      "checked": 10,
+      "mismatched": []
+    },
+    "MI_Toon_TwoTone": {
+      "name": "MI_Toon_TwoTone",
+      "loads": true,
+      "ok": true,
+      "parent": "M_Master_Toon_Universal",
+      "checked": 7,
+      "mismatched": []
+    },
+    "MI_Toon_Painterly": {
+      "name": "MI_Toon_Painterly",
+      "loads": true,
+      "ok": true,
+      "parent": "M_Master_Toon_Universal",
+      "checked": 9,
+      "mismatched": []
+    },
+    "MI_Toon_Environment": {
+      "name": "MI_Toon_Environment",
+      "loads": true,
+      "ok": true,
+      "parent": "M_Master_Toon_Universal",
+      "checked": 8,
+      "mismatched": []
+    },
+    "MI_Toon_Stone": {
+      "name": "MI_Toon_Stone",
+      "loads": true,
+      "ok": true,
+      "parent": "M_Master_Toon_Universal",
+      "checked": 8,
+      "mismatched": []
+    },
+    "MI_Toon_Gold": {
+      "name": "MI_Toon_Gold",
+      "loads": true,
+      "ok": true,
+      "parent": "M_Master_Toon_Universal",
+      "checked": 9,
+      "mismatched": []
+    },
+    "MI_Toon_Foliage": {
+      "name": "MI_Toon_Foliage",
+      "loads": true,
+      "ok": true,
+      "parent": "M_Master_Toon_Universal",
+      "checked": 7,
+      "mismatched": []
+    },
+    "MI_Toon_Hatched": {
+      "name": "MI_Toon_Hatched",
+      "loads": true,
+      "ok": true,
+      "parent": "M_Master_Toon_Universal",
+      "checked": 6,
+      "mismatched": []
+    }
+  }
+}

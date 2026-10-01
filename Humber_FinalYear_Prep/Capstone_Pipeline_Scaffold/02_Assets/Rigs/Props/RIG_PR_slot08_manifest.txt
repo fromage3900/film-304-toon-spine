@@ -1,0 +1,4 @@
+# Team Member 08: Prop & Mechanical Rigger
+- Directory: `02_Assets/Rigs/Props/`
+- Required prefixes: `RIG_PR_`
+- Responsibilities: Mechanical props, vehicle / instrument rigs, physics hair/cloth setup.

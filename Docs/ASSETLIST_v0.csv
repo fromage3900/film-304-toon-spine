@@ -1,0 +1,54 @@
+id,name,category,source,origin,path,verts,materials,owner,status
+M_Master_Toon_Universal,M_Master_Toon_Universal,master material,code-generated,Python/build_master_toon.py,Content/Materials/Masters/M_Master_Toon_Universal.uasset,,,TBD,in repo
+M_Outline_InvertedHull,M_Outline_InvertedHull,master material,code-generated,Python/build_m_outline.py,Content/Materials/Masters/M_Outline_InvertedHull.uasset,,,TBD,in repo
+MF_ColorRamp3,MF_ColorRamp3,material function,code-generated,Python/build_mf_colorramp3.py,Content/Materials/Functions/MF_ColorRamp3.uasset,,,TBD,in repo
+MF_ProceduralPatterns,MF_ProceduralPatterns,material function,code-generated,Python/build_mf_patterns.py,Content/Materials/Functions/MF_ProceduralPatterns.uasset,,,TBD,in repo
+MF_RampLUT,MF_RampLUT,material function,code-generated,Python/build_mf_ramplut.py,Content/Materials/Functions/MF_RampLUT.uasset,,,TBD,in repo
+TP_Cool,TP_Cool,toon profile,code-generated,Python/build_toon_profiles.py,Content/Materials/ToonProfiles/TP_Cool.uasset,,,TBD,in repo
+TP_Default,TP_Default,toon profile,code-generated,Python/build_toon_profiles.py,Content/Materials/ToonProfiles/TP_Default.uasset,,,TBD,in repo
+TP_Environment,TP_Environment,toon profile,code-generated,Python/build_toon_profiles.py,Content/Materials/ToonProfiles/TP_Environment.uasset,,,TBD,in repo
+TP_Foliage,TP_Foliage,toon profile,code-generated,Python/build_toon_profiles.py,Content/Materials/ToonProfiles/TP_Foliage.uasset,,,TBD,in repo
+TP_Gold,TP_Gold,toon profile,code-generated,Python/build_toon_profiles.py,Content/Materials/ToonProfiles/TP_Gold.uasset,,,TBD,in repo
+TP_Hatched,TP_Hatched,toon profile,code-generated,Python/build_toon_profiles.py,Content/Materials/ToonProfiles/TP_Hatched.uasset,,,TBD,in repo
+TP_Hero,TP_Hero,toon profile,code-generated,Python/build_toon_profiles.py,Content/Materials/ToonProfiles/TP_Hero.uasset,,,TBD,in repo
+TP_SoftPainterly,TP_SoftPainterly,toon profile,code-generated,Python/build_toon_profiles.py,Content/Materials/ToonProfiles/TP_SoftPainterly.uasset,,,TBD,in repo
+TP_Stone,TP_Stone,toon profile,code-generated,Python/build_toon_profiles.py,Content/Materials/ToonProfiles/TP_Stone.uasset,,,TBD,in repo
+TP_TwoTone,TP_TwoTone,toon profile,code-generated,Python/build_toon_profiles.py,Content/Materials/ToonProfiles/TP_TwoTone.uasset,,,TBD,in repo
+TP_Warm,TP_Warm,toon profile,code-generated,Python/build_toon_profiles.py,Content/Materials/ToonProfiles/TP_Warm.uasset,,,TBD,in repo
+MI_Outline_Heavy,MI_Outline_Heavy,material instance,code-generated,Python/build_instances.py,Content/Materials/Instances/MI_Outline_Heavy.uasset,,,TBD,in repo
+MI_Outline_Thin,MI_Outline_Thin,material instance,code-generated,Python/build_instances.py,Content/Materials/Instances/MI_Outline_Thin.uasset,,,TBD,in repo
+MI_Toon_Environment,MI_Toon_Environment,material instance,code-generated,Python/build_instances.py,Content/Materials/Instances/MI_Toon_Environment.uasset,,,TBD,in repo
+MI_Toon_Foliage,MI_Toon_Foliage,material instance,code-generated,Python/build_instances.py,Content/Materials/Instances/MI_Toon_Foliage.uasset,,,TBD,in repo
+MI_Toon_Gold,MI_Toon_Gold,material instance,code-generated,Python/build_instances.py,Content/Materials/Instances/MI_Toon_Gold.uasset,,,TBD,in repo
+MI_Toon_Hatched,MI_Toon_Hatched,material instance,code-generated,Python/build_instances.py,Content/Materials/Instances/MI_Toon_Hatched.uasset,,,TBD,in repo
+MI_Toon_Hero,MI_Toon_Hero,material instance,code-generated,Python/build_instances.py,Content/Materials/Instances/MI_Toon_Hero.uasset,,,TBD,in repo
+MI_Toon_Painterly,MI_Toon_Painterly,material instance,code-generated,Python/build_instances.py,Content/Materials/Instances/MI_Toon_Painterly.uasset,,,TBD,in repo
+MI_Toon_Stone,MI_Toon_Stone,material instance,code-generated,Python/build_instances.py,Content/Materials/Instances/MI_Toon_Stone.uasset,,,TBD,in repo
+MI_Toon_TwoTone,MI_Toon_TwoTone,material instance,code-generated,Python/build_instances.py,Content/Materials/Instances/MI_Toon_TwoTone.uasset,,,TBD,in repo
+L_Toon_Lookdev,L_Toon_Lookdev,level,code-generated,Python/build_test_level.py,Content/Maps/L_Toon_Lookdev.umap,,,TBD,in repo
+L_Toon_Lookdev_HLOD0_Instancing,Lookdev HLOD0 instancing,generated data,code-generated,editor HLOD build,Content/Maps/L_Toon_Lookdev_HLOD0_Instancing.uasset,,,TBD,in repo (regenerable)
+CITY_TightEstate,CITY_TightEstate,brutalist object (staged),code-generated,Blender/GN_BRUTALIST_CityBlock / BR_CITY_TIGHT,01_CITY_PBR,984,"BR_Concrete,BR_Asphalt,BR_Glazing",TBD,staged - not yet in Content/
+CITY_TowerCluster,CITY_TowerCluster,brutalist object (staged),code-generated,Blender/GN_BRUTALIST_CityBlock / BR_CITY_TOWERS,01_CITY_PBR,576,"BR_Concrete,BR_Asphalt,BR_Glazing",TBD,staged - not yet in Content/
+CITY_LowSprawl,CITY_LowSprawl,brutalist object (staged),code-generated,Blender/GN_BRUTALIST_CityBlock / BR_CITY_SPRAWL,01_CITY_PBR,1504,"BR_Concrete,BR_Asphalt,BR_Glazing",TBD,staged - not yet in Content/
+CITY_CivicSuperblock,CITY_CivicSuperblock,brutalist object (staged),code-generated,Blender/GN_BRUTALIST_CityBlock / BR_CITY_CIVIC,01_CITY_PBR,152,"BR_Concrete,BR_Asphalt,BR_Glazing",TBD,staged - not yet in Content/
+KMZ_TightEstate,KMZ_TightEstate,brutalist object (staged),code-generated,Blender/GN_BRUTALIST_CityBlock / BR_CITY_TIGHT,02_CITY_KOMIKAZE,984,"BR_Concrete_KOMIKAZE,BR_Asphalt_KOMIKAZE,BR_Glazing_KOMIKAZE",TBD,staged - not yet in Content/
+KMZ_TowerCluster,KMZ_TowerCluster,brutalist object (staged),code-generated,Blender/GN_BRUTALIST_CityBlock / BR_CITY_TOWERS,02_CITY_KOMIKAZE,576,"BR_Concrete_KOMIKAZE,BR_Asphalt_KOMIKAZE,BR_Glazing_KOMIKAZE",TBD,staged - not yet in Content/
+KMZ_LowSprawl,KMZ_LowSprawl,brutalist object (staged),code-generated,Blender/GN_BRUTALIST_CityBlock / BR_CITY_SPRAWL,02_CITY_KOMIKAZE,1504,"BR_Concrete_KOMIKAZE,BR_Asphalt_KOMIKAZE,BR_Glazing_KOMIKAZE",TBD,staged - not yet in Content/
+KMZ_CivicSuperblock,KMZ_CivicSuperblock,brutalist object (staged),code-generated,Blender/GN_BRUTALIST_CityBlock / BR_CITY_CIVIC,02_CITY_KOMIKAZE,152,"BR_Concrete_KOMIKAZE,BR_Asphalt_KOMIKAZE,BR_Glazing_KOMIKAZE",TBD,staged - not yet in Content/
+OFFICE_CivicSlab,OFFICE_CivicSlab,brutalist object (staged),code-generated,Blender/GN_BRUTALIST_OfficeBlock / BR_OFFICE_CIVIC,03_OFFICE_BLOCK,904,BR_Concrete,TBD,staged - not yet in Content/
+OFFICE_BarbicanScale,OFFICE_BarbicanScale,brutalist object (staged),code-generated,Blender/GN_BRUTALIST_OfficeBlock / BR_OFFICE_BARBICAN,03_OFFICE_BLOCK,1224,BR_Concrete,TBD,staged - not yet in Content/
+OFFICE_Bunker,OFFICE_Bunker,brutalist object (staged),code-generated,Blender/GN_BRUTALIST_OfficeBlock / BR_OFFICE_BUNKER,03_OFFICE_BLOCK,336,BR_Concrete,TBD,staged - not yet in Content/
+OFFICE_SlenderTower,OFFICE_SlenderTower,brutalist object (staged),code-generated,Blender/GN_BRUTALIST_OfficeBlock / BR_OFFICE_SLENDER,03_OFFICE_BLOCK,888,BR_Concrete,TBD,staged - not yet in Content/
+CUBICLE_Canonical,CUBICLE_Canonical,brutalist object (staged),code-generated,Blender/GN_BRUTALIST_CubicleFarm / BR_CUBICLE_CANON,04_INTERIOR_CUBICLES,1898,BR_Paving,TBD,staged - not yet in Content/
+CUBICLE_MazeShift,CUBICLE_MazeShift,brutalist object (staged),code-generated,Blender/GN_BRUTALIST_CubicleFarm / BR_CUBICLE_MAZE,04_INTERIOR_CUBICLES,3624,BR_Paving,TBD,staged - not yet in Content/
+CUBICLE_OpenPlan,CUBICLE_OpenPlan,brutalist object (staged),code-generated,Blender/GN_BRUTALIST_CubicleFarm / BR_CUBICLE_OPEN,04_INTERIOR_CUBICLES,2502,BR_Paving,TBD,staged - not yet in Content/
+CUBICLE_Swarm,CUBICLE_Swarm,brutalist object (staged),code-generated,Blender/GN_BRUTALIST_CubicleFarm / BR_CUBICLE_SWARM,04_INTERIOR_CUBICLES,6668,BR_Paving,TBD,staged - not yet in Content/
+FAC_TowerRibbon,FAC_TowerRibbon,brutalist object (staged),code-generated,Blender/GN_BRUTALIST_CityBlock / BR_CITY_TOWERS_GLASS,05_FACADE_VARIATION,1152,"BR_Concrete,BR_Asphalt,BR_Glazing",TBD,staged - not yet in Content/
+FAC_PunchedEstate,FAC_PunchedEstate,brutalist object (staged),code-generated,Blender/GN_BRUTALIST_CityBlock / BR_CITY_PUNCHED,05_FACADE_VARIATION,1848,"BR_Concrete,BR_Asphalt,BR_Glazing",TBD,staged - not yet in Content/
+FAC_CivicColonnade,FAC_CivicColonnade,brutalist object (staged),code-generated,Blender/GN_BRUTALIST_CityBlock / BR_CITY_COLONNADE,05_FACADE_VARIATION,552,"BR_Concrete,BR_Asphalt,BR_Glazing",TBD,staged - not yet in Content/
+ROOF_FlatParapet,ROOF_FlatParapet,brutalist object (staged),code-generated,Blender/GN_BRUTALIST_Roof / BR_ROOF_FLAT,06_ROOFS,56,BR_Concrete,TBD,staged - not yet in Content/
+ROOF_LowPitch,ROOF_LowPitch,brutalist object (staged),code-generated,Blender/GN_BRUTALIST_Roof / BR_ROOF_PITCH,06_ROOFS,24,BR_Concrete,TBD,staged - not yet in Content/
+ROOF_Sawtooth,ROOF_Sawtooth,brutalist object (staged),code-generated,Blender/GN_BRUTALIST_Roof / BR_ROOF_SAWTOOTH,06_ROOFS,248,BR_Concrete,TBD,staged - not yet in Content/
+ROOF_BarrelVault,ROOF_BarrelVault,brutalist object (staged),code-generated,Blender/GN_BRUTALIST_Roof / BR_ROOF_BARREL,06_ROOFS,48,BR_Concrete,TBD,staged - not yet in Content/
+ROOF_PyramidHip,ROOF_PyramidHip,brutalist object (staged),code-generated,Blender/GN_BRUTALIST_Roof / BR_ROOF_HIP,06_ROOFS,24,BR_Concrete,TBD,staged - not yet in Content/
+ROOF_PlantDeck,ROOF_PlantDeck,brutalist object (staged),code-generated,Blender/GN_BRUTALIST_Roof / BR_ROOF_PLANT,06_ROOFS,72,BR_Concrete,TBD,staged - not yet in Content/

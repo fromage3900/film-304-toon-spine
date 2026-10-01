@@ -1,0 +1,195 @@
+{
+  "actors": [
+    {
+      "name": "L00_Hero",
+      "material": "MI_Toon_Hero",
+      "spawned": true
+    },
+    {
+      "name": "L01_TwoTone",
+      "material": "MI_Toon_TwoTone",
+      "spawned": true
+    },
+    {
+      "name": "L02_Painterly",
+      "material": "MI_Toon_Painterly",
+      "spawned": true
+    },
+    {
+      "name": "L03_Environment",
+      "material": "MI_Toon_Environment",
+      "spawned": true
+    },
+    {
+      "name": "L04_Stone",
+      "material": "MI_Toon_Stone",
+      "spawned": true
+    },
+    {
+      "name": "L05_Gold",
+      "material": "MI_Toon_Gold",
+      "spawned": true
+    },
+    {
+      "name": "L06_Foliage",
+      "material": "MI_Toon_Foliage",
+      "spawned": true
+    },
+    {
+      "name": "L07_Hatched",
+      "material": "MI_Toon_Hatched",
+      "spawned": true
+    },
+    {
+      "name": "L08_HeroCube_Outline",
+      "material": "MI_Toon_Hero",
+      "spawned": true
+    },
+    {
+      "name": "L09_Ground",
+      "material": "MI_Toon_Hero",
+      "spawned": true
+    },
+    {
+      "name": "SKY_Sphere",
+      "spawned": false,
+      "note": "engine sky sphere absent"
+    }
+  ],
+  "errors": [],
+  "saved_as": "/Game/Maps/L_Toon_Lookdev.L_Toon_Lookdev",
+  "save_ok": true,
+  "map_on_disk": true,
+  "verify": {
+    "actors_found": [
+      "DirectionalLight",
+      "SM_SkySphere",
+      "SkyAtmosphere",
+      "SkyLight",
+      "PlayerStart",
+      "ExponentialHeightFog",
+      "L00_Hero",
+      "L01_TwoTone",
+      "L02_Painterly",
+      "L03_Environment",
+      "L04_Stone",
+      "L05_Gold",
+      "L06_Foliage",
+      "L07_Hatched",
+      "L08_HeroCube_Outline",
+      "L09_Ground",
+      "KEY_Directional",
+      "FILL_Directional",
+      "RIM_Directional",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X-1_Y-1_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X-4_Y3_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X-3_Y-1_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X3_Y-2_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X3_Y-1_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X-4_Y2_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X3_Y-3_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X-1_Y-2_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X1_Y-3_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X1_Y-4_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X1_Y-2_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X0_Y3_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X2_Y-1_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X-2_Y2_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X0_Y-1_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X-4_Y0_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X-1_Y-4_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X-4_Y-2_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X-3_Y0_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X2_Y-2_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X0_Y-2_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X2_Y3_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X0_Y-4_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X-2_Y0_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X1_Y3_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X-3_Y-4_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X-2_Y-3_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X1_Y2_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X-3_Y-3_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X-1_Y2_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X0_Y0_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X-2_Y1_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X-2_Y-2_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X-3_Y2_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X-4_Y1_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X-4_Y-3_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X-4_Y-4_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X2_Y1_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X-1_Y1_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X2_Y0_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X1_Y1_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X-2_Y-4_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X3_Y-4_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X-4_Y-1_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X-3_Y1_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X-2_Y3_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X-2_Y-1_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X1_Y-1_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X-1_Y-3_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X0_Y1_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X2_Y2_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X0_Y2_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X-1_Y3_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X1_Y0_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X3_Y1_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X0_Y-3_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X2_Y-4_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X-3_Y3_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X3_Y0_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X3_Y3_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X3_Y2_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X2_Y-3_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X-3_Y-2_Z0",
+      "HLOD0_Instancing/OpenWorld_MainGrid_L0_X-1_Y0_Z0"
+    ],
+    "materials_ok": true,
+    "all_actors": 151,
+    "actor_count": 83,
+    "ignored_engine_actors": 68,
+    "subject_materials": {
+      "L00_Hero": [
+        "/Game/Materials/Instances/MI_Toon_Hero.MI_Toon_Hero"
+      ],
+      "L01_TwoTone": [
+        "/Game/Materials/Instances/MI_Toon_TwoTone.MI_Toon_TwoTone"
+      ],
+      "L02_Painterly": [
+        "/Game/Materials/Instances/MI_Toon_Painterly.MI_Toon_Painterly"
+      ],
+      "L03_Environment": [
+        "/Game/Materials/Instances/MI_Toon_Environment.MI_Toon_Environment"
+      ],
+      "L04_Stone": [
+        "/Game/Materials/Instances/MI_Toon_Stone.MI_Toon_Stone"
+      ],
+      "L05_Gold": [
+        "/Game/Materials/Instances/MI_Toon_Gold.MI_Toon_Gold"
+      ],
+      "L06_Foliage": [
+        "/Game/Materials/Instances/MI_Toon_Foliage.MI_Toon_Foliage"
+      ],
+      "L07_Hatched": [
+        "/Game/Materials/Instances/MI_Toon_Hatched.MI_Toon_Hatched"
+      ],
+      "L08_HeroCube_Outline": [
+        "/Game/Materials/Instances/MI_Toon_Hero.MI_Toon_Hero"
+      ],
+      "L09_Ground": [
+        "/Game/Materials/Instances/MI_Toon_Hero.MI_Toon_Hero"
+      ]
+    },
+    "bad_materials": [],
+    "subjects_found": 10,
+    "subjects_missing": [],
+    "engine_scenery_count": 65,
+    "subject_count": 10,
+    "expected_subjects": 10,
+    "map_path": "/Game/Maps/L_Toon_Lookdev.L_Toon_Lookdev",
+    "map_on_disk": true,
+    "ok": true
+  }
+}

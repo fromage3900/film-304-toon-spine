@@ -1,0 +1,734 @@
+{
+ "stamp": "2026-09-30",
+ "blend": "P:\\film-304-toon-spine\\Saved\\Blend\\BRUTALIST_CITY_REVIEW_2026-09-30.blend",
+ "collections": {
+  "01_CITY_PBR": [
+   {
+    "object": "CITY_TightEstate",
+    "builder": "GN_BRUTALIST_CityBlock",
+    "preset": "BR_CITY_TIGHT",
+    "nodes": 230,
+    "params": 32,
+    "verts": 984,
+    "material": "BR_Concrete",
+    "materials": [
+     "BR_Concrete",
+     "BR_Asphalt",
+     "BR_Glazing"
+    ],
+    "material_sockets_set": [
+     "Massing Material=BR_Concrete",
+     "Ground Material=BR_Asphalt",
+     "Glazing Material=BR_Glazing"
+    ],
+    "material_sockets_missing": [],
+    "local_bbox": [
+     90.02,
+     90.0,
+     41.97
+    ],
+    "position": [
+     -230,
+     0,
+     0.0
+    ]
+   },
+   {
+    "object": "CITY_TowerCluster",
+    "builder": "GN_BRUTALIST_CityBlock",
+    "preset": "BR_CITY_TOWERS",
+    "nodes": 230,
+    "params": 32,
+    "verts": 576,
+    "material": "BR_Concrete",
+    "materials": [
+     "BR_Concrete",
+     "BR_Asphalt",
+     "BR_Glazing"
+    ],
+    "material_sockets_set": [
+     "Massing Material=BR_Concrete",
+     "Ground Material=BR_Asphalt",
+     "Glazing Material=BR_Glazing"
+    ],
+    "material_sockets_missing": [],
+    "local_bbox": [
+     114.02,
+     108.0,
+     84.61
+    ],
+    "position": [
+     10,
+     0,
+     0.0
+    ]
+   },
+   {
+    "object": "CITY_LowSprawl",
+    "builder": "GN_BRUTALIST_CityBlock",
+    "preset": "BR_CITY_SPRAWL",
+    "nodes": 230,
+    "params": 32,
+    "verts": 1504,
+    "material": "BR_Concrete",
+    "materials": [
+     "BR_Concrete",
+     "BR_Asphalt",
+     "BR_Glazing"
+    ],
+    "material_sockets_set": [
+     "Massing Material=BR_Concrete",
+     "Ground Material=BR_Asphalt",
+     "Glazing Material=BR_Glazing"
+    ],
+    "material_sockets_missing": [],
+    "local_bbox": [
+     156.02,
+     146.0,
+     16.37
+    ],
+    "position": [
+     250,
+     0,
+     0.0
+    ]
+   },
+   {
+    "object": "CITY_CivicSuperblock",
+    "builder": "GN_BRUTALIST_CityBlock",
+    "preset": "BR_CITY_CIVIC",
+    "nodes": 230,
+    "params": 32,
+    "verts": 152,
+    "material": "BR_Concrete",
+    "materials": [
+     "BR_Concrete",
+     "BR_Asphalt",
+     "BR_Glazing"
+    ],
+    "material_sockets_set": [
+     "Massing Material=BR_Concrete",
+     "Ground Material=BR_Asphalt",
+     "Glazing Material=BR_Glazing"
+    ],
+    "material_sockets_missing": [],
+    "local_bbox": [
+     126.02,
+     118.0,
+     27.84
+    ],
+    "position": [
+     470,
+     0,
+     0.0
+    ]
+   }
+  ],
+  "02_CITY_KOMIKAZE": [
+   {
+    "object": "KMZ_TightEstate",
+    "builder": "GN_BRUTALIST_CityBlock",
+    "preset": "BR_CITY_TIGHT",
+    "nodes": 230,
+    "params": 32,
+    "verts": 984,
+    "material": "BR_Concrete_KOMIKAZE",
+    "materials": [
+     "BR_Concrete_KOMIKAZE",
+     "BR_Asphalt_KOMIKAZE",
+     "BR_Glazing_KOMIKAZE"
+    ],
+    "material_sockets_set": [
+     "Massing Material=BR_Concrete_KOMIKAZE",
+     "Ground Material=BR_Asphalt_KOMIKAZE",
+     "Glazing Material=BR_Glazing_KOMIKAZE"
+    ],
+    "material_sockets_missing": [],
+    "local_bbox": [
+     90.02,
+     90.0,
+     41.97
+    ],
+    "position": [
+     -230,
+     320,
+     0.0
+    ]
+   },
+   {
+    "object": "KMZ_TowerCluster",
+    "builder": "GN_BRUTALIST_CityBlock",
+    "preset": "BR_CITY_TOWERS",
+    "nodes": 230,
+    "params": 32,
+    "verts": 576,
+    "material": "BR_Concrete_KOMIKAZE",
+    "materials": [
+     "BR_Concrete_KOMIKAZE",
+     "BR_Asphalt_KOMIKAZE",
+     "BR_Glazing_KOMIKAZE"
+    ],
+    "material_sockets_set": [
+     "Massing Material=BR_Concrete_KOMIKAZE",
+     "Ground Material=BR_Asphalt_KOMIKAZE",
+     "Glazing Material=BR_Glazing_KOMIKAZE"
+    ],
+    "material_sockets_missing": [],
+    "local_bbox": [
+     114.02,
+     108.0,
+     84.61
+    ],
+    "position": [
+     10,
+     320,
+     0.0
+    ]
+   },
+   {
+    "object": "KMZ_LowSprawl",
+    "builder": "GN_BRUTALIST_CityBlock",
+    "preset": "BR_CITY_SPRAWL",
+    "nodes": 230,
+    "params": 32,
+    "verts": 1504,
+    "material": "BR_Concrete_KOMIKAZE",
+    "materials": [
+     "BR_Concrete_KOMIKAZE",
+     "BR_Asphalt_KOMIKAZE",
+     "BR_Glazing_KOMIKAZE"
+    ],
+    "material_sockets_set": [
+     "Massing Material=BR_Concrete_KOMIKAZE",
+     "Ground Material=BR_Asphalt_KOMIKAZE",
+     "Glazing Material=BR_Glazing_KOMIKAZE"
+    ],
+    "material_sockets_missing": [],
+    "local_bbox": [
+     156.02,
+     146.0,
+     16.37
+    ],
+    "position": [
+     250,
+     320,
+     0.0
+    ]
+   },
+   {
+    "object": "KMZ_CivicSuperblock",
+    "builder": "GN_BRUTALIST_CityBlock",
+    "preset": "BR_CITY_CIVIC",
+    "nodes": 230,
+    "params": 32,
+    "verts": 152,
+    "material": "BR_Concrete_KOMIKAZE",
+    "materials": [
+     "BR_Concrete_KOMIKAZE",
+     "BR_Asphalt_KOMIKAZE",
+     "BR_Glazing_KOMIKAZE"
+    ],
+    "material_sockets_set": [
+     "Massing Material=BR_Concrete_KOMIKAZE",
+     "Ground Material=BR_Asphalt_KOMIKAZE",
+     "Glazing Material=BR_Glazing_KOMIKAZE"
+    ],
+    "material_sockets_missing": [],
+    "local_bbox": [
+     126.02,
+     118.0,
+     27.84
+    ],
+    "position": [
+     470,
+     320,
+     0.0
+    ]
+   }
+  ],
+  "03_OFFICE_BLOCK": [
+   {
+    "object": "OFFICE_CivicSlab",
+    "builder": "GN_BRUTALIST_OfficeBlock",
+    "preset": "BR_OFFICE_CIVIC",
+    "nodes": 268,
+    "params": 25,
+    "verts": 904,
+    "material": "BR_Concrete",
+    "materials": [
+     "BR_Concrete"
+    ],
+    "material_sockets_set": [],
+    "material_sockets_missing": [],
+    "local_bbox": [
+     21.17,
+     12.57,
+     25.6
+    ],
+    "position": [
+     -120,
+     -180,
+     0.0
+    ]
+   },
+   {
+    "object": "OFFICE_BarbicanScale",
+    "builder": "GN_BRUTALIST_OfficeBlock",
+    "preset": "BR_OFFICE_BARBICAN",
+    "nodes": 268,
+    "params": 25,
+    "verts": 1224,
+    "material": "BR_Concrete",
+    "materials": [
+     "BR_Concrete"
+    ],
+    "material_sockets_set": [],
+    "material_sockets_missing": [],
+    "local_bbox": [
+     28.0,
+     14.62,
+     34.8
+    ],
+    "position": [
+     -40,
+     -180,
+     0.0
+    ]
+   },
+   {
+    "object": "OFFICE_Bunker",
+    "builder": "GN_BRUTALIST_OfficeBlock",
+    "preset": "BR_OFFICE_BUNKER",
+    "nodes": 268,
+    "params": 25,
+    "verts": 336,
+    "material": "BR_Concrete",
+    "materials": [
+     "BR_Concrete"
+    ],
+    "material_sockets_set": [],
+    "material_sockets_missing": [],
+    "local_bbox": [
+     14.85,
+     10.81,
+     12.9
+    ],
+    "position": [
+     40,
+     -180,
+     0.0
+    ]
+   },
+   {
+    "object": "OFFICE_SlenderTower",
+    "builder": "GN_BRUTALIST_OfficeBlock",
+    "preset": "BR_OFFICE_SLENDER",
+    "nodes": 268,
+    "params": 25,
+    "verts": 888,
+    "material": "BR_Concrete",
+    "materials": [
+     "BR_Concrete"
+    ],
+    "material_sockets_set": [],
+    "material_sockets_missing": [],
+    "local_bbox": [
+     12.57,
+     8.56,
+     42.4
+    ],
+    "position": [
+     120,
+     -180,
+     0.0
+    ]
+   }
+  ],
+  "04_INTERIOR_CUBICLES": [
+   {
+    "object": "CUBICLE_Canonical",
+    "builder": "GN_BRUTALIST_CubicleFarm",
+    "preset": "BR_CUBICLE_CANON",
+    "nodes": 335,
+    "params": 26,
+    "verts": 1898,
+    "material": "BR_Paving",
+    "materials": [
+     "BR_Paving"
+    ],
+    "material_sockets_set": [],
+    "material_sockets_missing": [],
+    "local_bbox": [
+     10.23,
+     6.6,
+     2.19
+    ],
+    "position": [
+     -60,
+     -300,
+     0.0
+    ]
+   },
+   {
+    "object": "CUBICLE_MazeShift",
+    "builder": "GN_BRUTALIST_CubicleFarm",
+    "preset": "BR_CUBICLE_MAZE",
+    "nodes": 335,
+    "params": 26,
+    "verts": 3624,
+    "material": "BR_Paving",
+    "materials": [
+     "BR_Paving"
+    ],
+    "material_sockets_set": [],
+    "material_sockets_missing": [],
+    "local_bbox": [
+     17.64,
+     10.6,
+     2.19
+    ],
+    "position": [
+     0,
+     -300,
+     0.0
+    ]
+   },
+   {
+    "object": "CUBICLE_OpenPlan",
+    "builder": "GN_BRUTALIST_CubicleFarm",
+    "preset": "BR_CUBICLE_OPEN",
+    "nodes": 335,
+    "params": 26,
+    "verts": 2502,
+    "material": "BR_Paving",
+    "materials": [
+     "BR_Paving"
+    ],
+    "material_sockets_set": [],
+    "material_sockets_missing": [],
+    "local_bbox": [
+     13.64,
+     6.9,
+     1.22
+    ],
+    "position": [
+     60,
+     -300,
+     0.0
+    ]
+   },
+   {
+    "object": "CUBICLE_Swarm",
+    "builder": "GN_BRUTALIST_CubicleFarm",
+    "preset": "BR_CUBICLE_SWARM",
+    "nodes": 335,
+    "params": 26,
+    "verts": 6668,
+    "material": "BR_Paving",
+    "materials": [
+     "BR_Paving"
+    ],
+    "material_sockets_set": [],
+    "material_sockets_missing": [],
+    "local_bbox": [
+     24.86,
+     11.4,
+     2.04
+    ],
+    "position": [
+     120,
+     -300,
+     0.0
+    ]
+   }
+  ],
+  "05_FACADE_VARIATION": [
+   {
+    "object": "FAC_TowerRibbon",
+    "builder": "GN_BRUTALIST_CityBlock",
+    "preset": "BR_CITY_TOWERS_GLASS",
+    "nodes": 230,
+    "params": 32,
+    "verts": 1152,
+    "material": "BR_Concrete",
+    "materials": [
+     "BR_Concrete",
+     "BR_Asphalt",
+     "BR_Glazing"
+    ],
+    "material_sockets_set": [
+     "Massing Material=BR_Concrete",
+     "Ground Material=BR_Asphalt",
+     "Glazing Material=BR_Glazing"
+    ],
+    "material_sockets_missing": [],
+    "local_bbox": [
+     114.02,
+     108.0,
+     85.01
+    ],
+    "position": [
+     -300,
+     -520,
+     0.0
+    ]
+   },
+   {
+    "object": "FAC_PunchedEstate",
+    "builder": "GN_BRUTALIST_CityBlock",
+    "preset": "BR_CITY_PUNCHED",
+    "nodes": 230,
+    "params": 32,
+    "verts": 1848,
+    "material": "BR_Concrete",
+    "materials": [
+     "BR_Concrete",
+     "BR_Asphalt",
+     "BR_Glazing"
+    ],
+    "material_sockets_set": [
+     "Massing Material=BR_Concrete",
+     "Ground Material=BR_Asphalt",
+     "Glazing Material=BR_Glazing"
+    ],
+    "material_sockets_missing": [],
+    "local_bbox": [
+     105.02,
+     105.0,
+     37.05
+    ],
+    "position": [
+     0,
+     -520,
+     0.0
+    ]
+   },
+   {
+    "object": "FAC_CivicColonnade",
+    "builder": "GN_BRUTALIST_CityBlock",
+    "preset": "BR_CITY_COLONNADE",
+    "nodes": 230,
+    "params": 32,
+    "verts": 552,
+    "material": "BR_Concrete",
+    "materials": [
+     "BR_Concrete",
+     "BR_Asphalt",
+     "BR_Glazing"
+    ],
+    "material_sockets_set": [
+     "Massing Material=BR_Concrete",
+     "Ground Material=BR_Asphalt",
+     "Glazing Material=BR_Glazing"
+    ],
+    "material_sockets_missing": [],
+    "local_bbox": [
+     126.02,
+     118.0,
+     28.19
+    ],
+    "position": [
+     300,
+     -520,
+     0.0
+    ]
+   }
+  ],
+  "06_ROOFS": [
+   {
+    "object": "ROOF_FlatParapet",
+    "builder": "GN_BRUTALIST_Roof",
+    "preset": "BR_ROOF_FLAT",
+    "nodes": 222,
+    "params": 22,
+    "verts": 56,
+    "material": "BR_Concrete",
+    "materials": [
+     "BR_Concrete"
+    ],
+    "material_sockets_set": [
+     "Roof Material=BR_Concrete"
+    ],
+    "material_sockets_missing": [],
+    "local_bbox": [
+     19.24,
+     13.25,
+     4.11
+    ],
+    "position": [
+     -300,
+     -740,
+     0.0
+    ]
+   },
+   {
+    "object": "ROOF_LowPitch",
+    "builder": "GN_BRUTALIST_Roof",
+    "preset": "BR_ROOF_PITCH",
+    "nodes": 222,
+    "params": 22,
+    "verts": 24,
+    "material": "BR_Concrete",
+    "materials": [
+     "BR_Concrete"
+    ],
+    "material_sockets_set": [
+     "Roof Material=BR_Concrete"
+    ],
+    "material_sockets_missing": [],
+    "local_bbox": [
+     23.85,
+     15.81,
+     3.41
+    ],
+    "position": [
+     -150,
+     -740,
+     0.0
+    ]
+   },
+   {
+    "object": "ROOF_Sawtooth",
+    "builder": "GN_BRUTALIST_Roof",
+    "preset": "BR_ROOF_SAWTOOTH",
+    "nodes": 222,
+    "params": 22,
+    "verts": 248,
+    "material": "BR_Concrete",
+    "materials": [
+     "BR_Concrete"
+    ],
+    "material_sockets_set": [
+     "Roof Material=BR_Concrete"
+    ],
+    "material_sockets_missing": [],
+    "local_bbox": [
+     26.86,
+     23.01,
+     1.38
+    ],
+    "position": [
+     0,
+     -740,
+     0.0
+    ]
+   },
+   {
+    "object": "ROOF_BarrelVault",
+    "builder": "GN_BRUTALIST_Roof",
+    "preset": "BR_ROOF_BARREL",
+    "nodes": 222,
+    "params": 22,
+    "verts": 48,
+    "material": "BR_Concrete",
+    "materials": [
+     "BR_Concrete"
+    ],
+    "material_sockets_set": [
+     "Roof Material=BR_Concrete"
+    ],
+    "material_sockets_missing": [],
+    "local_bbox": [
+     21.04,
+     17.01,
+     7.05
+    ],
+    "position": [
+     150,
+     -740,
+     0.0
+    ]
+   },
+   {
+    "object": "ROOF_PyramidHip",
+    "builder": "GN_BRUTALIST_Roof",
+    "preset": "BR_ROOF_HIP",
+    "nodes": 222,
+    "params": 22,
+    "verts": 24,
+    "material": "BR_Concrete",
+    "materials": [
+     "BR_Concrete"
+    ],
+    "material_sockets_set": [
+     "Roof Material=BR_Concrete"
+    ],
+    "material_sockets_missing": [],
+    "local_bbox": [
+     26.04,
+     22.01,
+     6.34
+    ],
+    "position": [
+     300,
+     -740,
+     0.0
+    ]
+   },
+   {
+    "object": "ROOF_PlantDeck",
+    "builder": "GN_BRUTALIST_Roof",
+    "preset": "BR_ROOF_PLANT",
+    "nodes": 222,
+    "params": 22,
+    "verts": 72,
+    "material": "BR_Concrete",
+    "materials": [
+     "BR_Concrete"
+    ],
+    "material_sockets_set": [
+     "Roof Material=BR_Concrete"
+    ],
+    "material_sockets_missing": [],
+    "local_bbox": [
+     26.61,
+     13.21,
+     4.6
+    ],
+    "position": [
+     450,
+     -740,
+     0.0
+    ]
+   }
+  ]
+ },
+ "sheets": {
+  "city_pbr": "P:\\film-304-toon-spine\\Saved\\Audit\\brutalist_sheet_city_pbr.png",
+  "city_komikaze": "P:\\film-304-toon-spine\\Saved\\Audit\\brutalist_sheet_city_komikaze.png",
+  "facade": "P:\\film-304-toon-spine\\Saved\\Audit\\brutalist_sheet_facade.png",
+  "roofs": "P:\\film-304-toon-spine\\Saved\\Audit\\brutalist_sheet_roofs.png",
+  "family": "P:\\film-304-toon-spine\\Saved\\Audit\\brutalist_sheet_family.png",
+  "palette": "P:\\film-304-toon-spine\\Saved\\Audit\\brutalist_sheet_palette.png"
+ },
+ "palette": [
+  "BR_Concrete",
+  "BR_Concrete_KOMIKAZE",
+  "BR_Precast",
+  "BR_Precast_KOMIKAZE",
+  "BR_Alabaster",
+  "BR_Alabaster_KOMIKAZE",
+  "BR_Terrazzo",
+  "BR_Terrazzo_KOMIKAZE",
+  "BR_Brick",
+  "BR_Brick_KOMIKAZE",
+  "BR_Corten",
+  "BR_Corten_KOMIKAZE",
+  "BR_Steel",
+  "BR_Steel_KOMIKAZE",
+  "BR_Glazing",
+  "BR_Glazing_KOMIKAZE",
+  "BR_GlassBlock",
+  "BR_GlassBlock_KOMIKAZE",
+  "BR_Asphalt",
+  "BR_Asphalt_KOMIKAZE",
+  "BR_Tarmac",
+  "BR_Tarmac_KOMIKAZE",
+  "BR_Paving",
+  "BR_Paving_KOMIKAZE",
+  "BR_Markings",
+  "BR_Markings_KOMIKAZE",
+  "BR_Soil",
+  "BR_Soil_KOMIKAZE"
+ ]
+}

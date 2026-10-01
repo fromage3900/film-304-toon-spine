@@ -1,109 +1,113 @@
-# Toon Spine — Architecture & Dependency Map
+# Toon spine — architecture and dependency map
 
-## Overview
+Rewrite 2026-09-30. The previous version of this file described the **source** project it was
+extracted from, not this repo: it listed 12 material functions (`MF_Madoka`, `MF_Itto`,
+`MF_ClothWindDrape`, `Day_to_Night_Color`, …), 18 toon profiles (`TP_Melusina`, `TP_Stucco`,
+`TP_Wood`, `TP_Glass`, `TP_Impressionist_*`), and a `MeshBlend` plugin dependency. **None of those
+exist here.** Anyone following it looked for assets that were never extracted.
 
-The toon spine is a single master material (`M_Master_Toon_Universal`) built on
-UE 5.8's Substrate Toon BSDF. It provides:
+Everything below is from the files in this repo: `Content/` and `Python/`.
 
-- **Cel-shaded surface** via Substrate Toon BSDF with Toon Profile art-direction
-- **Oil-paint / impressionist** blending (BaseTint ↔ AccentTint ↔ StrokeStrength)
-- **SDF band relief** (world-position sine bands for architectural detail)
-- **Gilding** (gold leaf overlay with emissive control)
-- **Ink / pooling** (dark line work with wetness-driven roughness)
-- **Temporal effects** (wind, smear, boil for hand-drawn animation feel)
-- **Parallax** (height-based WPO for depth)
-- **Audio reactivity** (bass/mid/treble weight — optional, for music-driven scenes)
-- **Itto lane** (procedural cracks/ink wear breakup via Truchet + wear masks)
-- **Madoka lane** (Voronoi vein glow + radial witch rings, emissive)
-- **NikkiDreamGrade** (dreamy pastel color grading)
-- **SpaceParallax** (space parallax effect)
-- **ClothWindDrape** (cloth wind simulation for WPO)
-- **ColorRamp3** (unified ramp: low/mid/high + contrast, shadow band tinting)
-- **DF_ContactBlend** (contact blending)
-- **Impressionist_Impasto** (impasto brush stroke effect)
+## What the spine is
 
-## Dependency Graph (verified via headless UE scan)
+Two master materials, three material functions, eleven toon profiles and ten instances — a
+Substrate Toon shading spine that a film can shoot with, with no game-system dependencies.
+
+```
+Content/Materials/
+  Masters/       M_Master_Toon_Universal      the spine
+                 M_Outline_InvertedHull       the outline pass
+  Functions/     MF_ColorRamp3                 ramp generation
+                 MF_RampLUT                    LUT-driven ramp lookup
+                 MF_ProceduralPatterns         hatching / pattern source
+  ToonProfiles/  TP_Default  TP_Stone  TP_Foliage  TP_Gold  TP_Hero
+                 TP_Hatched  TP_TwoTone  TP_Environment  TP_SoftPainterly
+                 TP_Warm  TP_Cool
+  Instances/     MI_Toon_{Hero,Stone,Foliage,Gold,Hatched,TwoTone,Painterly,Environment}
+                 MI_Outline_{Thin,Heavy}
+```
+
+## Dependency graph
+
+Verified two ways: the builders' own expected-call lists
+(`Python/build_spine.py` asserts `["MF_ColorRamp3", "MF_RampLUT"]` for the master), and a
+binary scan of `M_Master_Toon_Universal.uasset` that reads the `/Game/...` package references
+out of the file. Both agree, and that agreement is the point — a copied master can keep a
+structurally valid graph with **zero** function calls and still look fine in the editor (that
+happened in the source project: 751,265 → 666,458 bytes with all ten `MaterialFunctionCall`
+references silently gone).
 
 ```
 M_Master_Toon_Universal
-  ├── MF_ClothWindDrape          (cloth wind WPO)
-  ├── MF_ColorRamp3             (unified color ramp)
-  │   └── (called by MF_Itto, MF_Madoka)
-  ├── MF_DF_ContactBlend        (contact blending)
-  ├── MF_Impressionist_Impasto  (impasto brush strokes)
-  ├── MF_Itto                   (procedural cracks/ink wear)
-  │   └── MF_ColorRamp3
-  ├── MF_Madoka                 (Voronoi vein glow + witch rings)
-  │   └── MF_ColorRamp3
-  ├── MF_NikkiDreamGrade        (dreamy pastel grade)
-  ├── MF_NormalAdjust           (normal tweaking)
-  ├── MF_SpaceParallax          (space parallax)
-  ├── Day_to_Night_Color        ← UltraDynamicSky plugin (STRIP FOR FILM)
-  └── MF_MeshBlend_Activator_Index  ← MeshBlend plugin (STRIP FOR FILM)
+├── MF_ColorRamp3          ramp / band generation
+└── MF_RampLUT             LUT-driven ramp lookup into the ramp from ColorRamp3
+
+M_Outline_InvertedHull     standalone; no MF dependencies
+
+TP_*  (11)                 data assets read by the master's Toon Profile input
+MI_*  (18 instances)       inherit from the two masters
 ```
 
-## Plugin Dependencies
+`MF_ProceduralPatterns` is built and shipped but **nothing references it** in the current graph.
+That is a known open question, not a discovery — see `Docs/AUDIT_2026-09-30.md`.
 
-**Two direct plugin dependencies:**
+## Plugin dependencies
 
-1. **MeshBlend** — `MF_MeshBlend_Activator_Index_0` (per-mesh material blending)
-2. **UltraDynamicSky** — `Day_to_Night_Color` (sky color utility)
+**None.** The uproject enables only what a content project needs:
 
-All 9 other MFs are clean — no plugin references.
+```json
+"Plugins": [ MovieRenderPipeline, PythonScriptPlugin ]
+```
 
-**To strip for film:**
-- Remove the `bMeshBlendActivator_Active` parameter and its MaterialFunctionCall node
-- Remove the `Day_to_Night_Color` call (or replace with a simple lerp between two colors)
-- Both are game-environment utilities — not needed for film/cinematic rendering
+Specifically absent, and deliberately so: `MeshBlend` (in the source project the master called
+`MF_MeshBlend_*` functions), the water simulation, and the Nikki character-effect materials. If
+you find a dangling function call, it is a missed extraction — report it, do not re-add the
+plugin.
 
-## Toon Profiles
+## Toon profiles
 
-18 Toon Profile assets provide art-direction presets:
+A Toon Profile is a **data asset** that the master reads, not a material. That is what lets one
+master serve a cel-shaded hero, a soft-ramped background and everything between without
+duplicating the graph.
 
-- **TP_Default** — neutral cel shading
-- **TP_Stucco** — matte architectural
-- **TP_Stone** — rough stone
-- **TP_Wood** — warm wood
-- **TP_Gold** — metallic gold
-- **TP_Glass** — translucent glass
-- **TP_Foliage** — soft organic
-- **TP_Ornamental** — decorative detail
-- **TP_Hero** — character hero
-- **TP_Character** — character base
-- **TP_Melusina** — Melusina character
-- **TP_NikkiDream** — dreamy pastel
-- **TP_Cosmic** — cosmic/space
-- **TP_Water** — water surface
-- **TP_Impressionist_Wet** — wet impressionist
-- **TP_Impressionist_Impasto** — impasto impressionist
-- **TP_Impressionist_Dry** — dry impressionist
-- **TP_Test** — test profile
+They are authored through `MaterialInstance.import_text` because `ToonProfile` only exposes
+`settings` as a property — that constraint was probed rather than assumed
+(`Python/build_toon_profiles.py`), and `verify_profile` asserts against the **imported text**,
+not against a log line.
 
-## Substrate Toon BSDF
+## Substrate Toon
 
-The master uses `MaterialExpressionSubstrateToonBSDF` connected to `MP_FRONT_MATERIAL`.
-This is UE 5.8's experimental toon shading path, built on the Substrate framework.
+`Config/DefaultEngine.ini` sets `r.Substrate=True` and
+`r.Substrate.OpaqueMaterialRoughRefraction=False`; Substrate is default-on in 5.7+. The master
+terminates in `MaterialExpressionSubstrateToonBSDF`, with BaseColor / Roughness / Normal wired
+from the graph.
 
-Key features:
-- Real lights drive the bands (not screen-space quantization)
-- Coexists with Lumen GI
-- Per-material stylization
-- No engine fork required
+**Substrate Toon is experimental in UE 5.8.** Expect parameters to move. Validate against real
+content in the first week, not the last.
 
 ## Outlines
 
-Outlines are **not** part of the toon shader. They remain a separate concern:
-- Post-process depth/normal edge detection, or
-- Inverted-hull mesh overlay
+Outlines are **not** part of the toon shader. This repo ships the inverted-hull approach:
 
-The master exposes `EdgeStrength` and `InkColor` parameters for outline control,
-but the actual outline pass must be set up separately in the post-process chain.
+- `M_Outline_InvertedHull` — unlit hull material
+- `MI_Outline_Thin` (characters) / `MI_Outline_Heavy` (architecture)
 
-## Binary Scan Method
+The post-process alternative (depth/normal edge detection) is described in
+`Docs/FILM_PIPELINE.md` and is not implemented here.
 
-The dependency graph was verified by scanning the `.uasset` binary for ASCII
-asset path strings. This is reliable for UE assets because asset references
-are stored as full package paths in the binary. No editor required.
+## How to re-derive any of this
 
-To re-verify: `extract_dependencies.py` in the UE editor, or binary scan with
-the method described above.
+Do not trust this document alone — re-derive it. All three methods are cheap:
+
+```powershell
+# 1. the builders assert their own expected calls and write a report
+UnrealEditor-Cmd.exe MelodiaToonFilm.uproject -ExecutePythonScript="Python/build_spine.py" -stdout -unattended
+
+# 2. the dependency trace, written to Saved/DependencyMap.json
+#    (run inside the editor)
+py "Python/extract_dependencies.py"
+
+# 3. a binary scan for /Game/... package references - no editor needed
+```
+
+If this file and method 1 disagree, **method 1 is right** and this file is the bug.

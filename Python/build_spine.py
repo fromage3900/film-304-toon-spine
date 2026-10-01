@@ -42,7 +42,7 @@ def main():
     # ---- materials ----
     for mod_name, mat_name, expected, min_expr in [
         ("build_master_toon", "M_Master_Toon_Universal",
-         ["MF_ColorRamp3", "MF_RampLUT"], 30),
+         ["MF_ColorRamp3", "MF_RampLUT", "MF_ProceduralPatterns"], 30),
         ("build_m_outline", "M_Outline_InvertedHull", [], 5),
     ]:
         if report["errors"]:

@@ -173,6 +173,48 @@ def build(rebuild=True):
     final_color = lib.expr(mat, unreal.MaterialExpressionAdd, 600, 300)
     lib.binary(with_ink, temporal_vec, final_color)
 
+    # ---------------- surface pattern (MF_ProceduralPatterns) ----------------
+    # Hatching / screentone overlay. PatternMask * PatternStrength inks the
+    # surface toward InkColor, so one material instance can carry painted
+    # shadow hatching instead of needing a bespoke master. PatternDensity is
+    # the coverage knob - drive it from a shadow mask and the hatch densifies
+    # automatically. PatternStrength defaults to 0, so every existing MI is
+    # unaffected until an artist turns it on.
+    pat_uv = lib.expr(mat, unreal.MaterialExpressionTextureCoordinate, -1200, 1600)
+    pat_call = lib.expr(mat, unreal.MaterialExpressionMaterialFunctionCall,
+                        -820, 1600)
+    pat_call.set_editor_property("material_function",
+        unreal.load_asset(lib.asset_path(lib.FUNCTION_DIR, "MF_ProceduralPatterns")))
+
+    pat_scale = lib.scalar(mat, "PatternScale", "Pattern", 12.0, -1240, 1720,
+                           desc="Pattern frequency (cells per UV unit)")
+    pat_angle = lib.scalar(mat, "PatternAngle", "Pattern", 0.0, -1240, 1800,
+                           desc="Pattern rotation in degrees")
+    pat_index = lib.scalar(mat, "PatternIndex", "Pattern", 0.0, -1240, 1880,
+                           desc="0 halftone 1 checker 2 stripes 3 crackle 4 ink "
+                                "5 crosshatch 6 stipple 7 rings")
+    pat_density = lib.scalar(mat, "PatternDensity", "Pattern", 0.5, -1240, 1960,
+                             desc="Ink coverage 0..1 - raise in shadow")
+    pat_strength = lib.scalar(mat, "PatternStrength", "Pattern", 0.0, -1240, 2040,
+                              desc="Pattern ink strength; 0 = off")
+
+    lib.connect(pat_uv, "", pat_call, "UV")
+    lib.connect(pat_scale, "", pat_call, "Scale")
+    lib.connect(pat_angle, "", pat_call, "Angle")
+    lib.connect(pat_index, "", pat_call, "CellIndex")
+    lib.connect(pat_density, "", pat_call, "Density")
+
+    pat_amt = lib.expr(mat, unreal.MaterialExpressionMultiply, -460, 1600)
+    lib.connect(pat_call, "Mask", pat_amt, ["A", "a"])
+    lib.connect(pat_strength, "", pat_amt, ["B", "b"])
+
+    patterned = lib.expr(mat, unreal.MaterialExpressionLinearInterpolate,
+                         -220, 1600)
+    lib.connect(final_color, "", patterned, "A")
+    lib.connect(vec["InkColor"], "", patterned, "B")
+    lib.connect(pat_amt, "", patterned, "Alpha")
+    final_color = patterned
+
     # ---------------- roughness: dry <-> wet ----------------
     rough = lib.expr(mat, unreal.MaterialExpressionLinearInterpolate, 600, 520)
     lib.ternary(flt["DryRoughness"], flt["WetRoughness"], flt["Wetness"], rough)
