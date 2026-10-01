@@ -1,12 +1,10 @@
-# Melodia Toon Film
+# Humber 304 UE Toon Shading Pipeline 
 
 Standalone UE 5.8 toon shading spine for indie 3D animation film projects.
 
-## What this is
+## Hello friends ~ 
 
-A clean extraction of the Melodia universal toon material system, stripped of game-specific
-dependencies (MeshBlend plugin, water sim, Nikki character effects) and ready for
-film/cinematic production in Unreal Engine 5.8's Substrate Toon pipeline.
+This is a base UE project that includes the shader pipeline we will be using for our indie film. I'll update with video tutorials on how to install asap; do not stress if you don't have git experience.
 
 ## Structure
 
