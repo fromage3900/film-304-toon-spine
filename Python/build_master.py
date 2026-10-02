@@ -1,7 +1,7 @@
 """Rebuild M_Master_Toon_Universal from scratch in a clean project.
 
 Run in UE 5.8 editor:
-  py "C:/EnvironmentPortfolio/melodia-toon-film/Python/build_master.py"
+  py "<repo>/Python/build_master.py"
 
 This creates the master with Substrate Toon BSDF root, wired to the
 extracted MF functions. No MeshBlend, no game-specific dependencies.
