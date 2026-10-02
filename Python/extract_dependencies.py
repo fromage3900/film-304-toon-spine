@@ -1,7 +1,7 @@
 """Trace the MF dependency graph from M_Master_Toon_Universal.
 
 Run in UE 5.8 editor Python console:
-  py "C:/EnvironmentPortfolio/melodia-toon-film/Python/extract_dependencies.py"
+  py "<repo>/Python/extract_dependencies.py"
 
 Outputs a JSON dependency map to Saved/DependencyMap.json
 """
