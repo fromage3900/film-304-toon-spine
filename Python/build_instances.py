@@ -175,6 +175,47 @@ INSTANCES = {
         "DryRoughness": 0.20,
         "bContactShadow": False,
     }),
+
+    # ------------------------------------------------------- film / character
+    # Added 2026-10-03 alongside TP_Melusina. BaseTint IS the canonical
+    # warm-violet #352D40, converted straight from the manifest's
+    # framing_standard.shading_pipeline.shadow_tint_hex (0x35,0x2D,0x40 / 255
+    # = 0.208, 0.176, 0.251). It lives here rather than in the profile because
+    # ToonProfile ramps are scalar-valued and cannot carry per-channel hue --
+    # the rule the office block above already follows.
+    "MI_Toon_Melusina": ("TP_Melusina", {
+        "BaseTint": (0.208, 0.176, 0.251, 1.0),   # #352D40 warm violet
+        "AccentTint": (0.72, 0.64, 0.78, 1.0),    # lifted violet for the lit side
+        "InkColor": (0.05, 0.04, 0.07, 1.0),
+        "InkIntensity": 0.30,
+        "DryRoughness": 0.58,
+        "BandScale": 0.028,
+        "BandStrength": 0.12,
+        "GildingStrength": 0.0,
+        # THE RAMP MUST BE OPTED IN OR THE PROFILE DOES NOTHING.
+        # build_master_toon wires RampStrength (default 0.0) into both
+        # MF_ColorRamp3 and MF_RampLUT's Mask, and both end in
+        # lerp(base_color, ramp_rgb, mask). At 0 the profile's authored ramp is
+        # never consulted, which is exactly what a preview render showed: a
+        # smooth falloff, no banding. Measured 2026-10-03 - the character
+        # instances were the first to set this, so every TP_* asset shipped
+        # before them was structurally verified and visually inert.
+        "RampStrength": 1.0,
+        "bUsePaintedRamp": False,
+        "bContactShadow": True,
+    }),
+    "MI_Toon_Character": ("TP_Character", {
+        "BaseTint": (0.30, 0.27, 0.34, 1.0),      # lifted #352D40 family
+        "AccentTint": (0.62, 0.57, 0.66, 1.0),
+        "InkColor": (0.06, 0.05, 0.08, 1.0),
+        "InkIntensity": 0.18,
+        "DryRoughness": 0.72,
+        # Held below the hero's 1.0 so background cast reads as a softer band
+        # than Melusina in the same frame, without a second profile cost.
+        "RampStrength": 0.85,
+        "bUsePaintedRamp": False,
+        "bContactShadow": False,
+    }),
 }
 
 

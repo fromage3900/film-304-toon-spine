@@ -1,0 +1,1564 @@
+{
+  "nodes": [
+    {
+      "i": 0,
+      "class": "MaterialExpressionTextureSampleParameter2D",
+      "label": "MaterialExpressionTextureSampleParameter2D:RampTexture",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [
+        "UVs",
+        "Apply View MipBias"
+      ],
+      "pos": [
+        -1400,
+        -600
+      ],
+      "consumed_by": [
+        45
+      ]
+    },
+    {
+      "i": 1,
+      "class": "MaterialExpressionVectorParameter",
+      "label": "MaterialExpressionVectorParameter:BaseTint",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -2000,
+        -400
+      ],
+      "consumed_by": [
+        44,
+        45,
+        48
+      ]
+    },
+    {
+      "i": 2,
+      "class": "MaterialExpressionVectorParameter",
+      "label": "MaterialExpressionVectorParameter:AccentTint",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -2000,
+        -280
+      ],
+      "consumed_by": [
+        44,
+        49
+      ]
+    },
+    {
+      "i": 3,
+      "class": "MaterialExpressionVectorParameter",
+      "label": "MaterialExpressionVectorParameter:InkColor",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -2000,
+        -160
+      ],
+      "consumed_by": [
+        52,
+        75,
+        86
+      ]
+    },
+    {
+      "i": 4,
+      "class": "MaterialExpressionVectorParameter",
+      "label": "MaterialExpressionVectorParameter:GoldTint",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -2000,
+        -40
+      ],
+      "consumed_by": [
+        50
+      ]
+    },
+    {
+      "i": 5,
+      "class": "MaterialExpressionVectorParameter",
+      "label": "MaterialExpressionVectorParameter:EmissiveColor",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -2000,
+        80
+      ],
+      "consumed_by": [
+        90
+      ]
+    },
+    {
+      "i": 6,
+      "class": "MaterialExpressionScalarParameter",
+      "label": "MaterialExpressionScalarParameter:UVScale",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -2000,
+        200
+      ],
+      "consumed_by": []
+    },
+    {
+      "i": 7,
+      "class": "MaterialExpressionScalarParameter",
+      "label": "MaterialExpressionScalarParameter:UVRotation",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -2000,
+        270
+      ],
+      "consumed_by": []
+    },
+    {
+      "i": 8,
+      "class": "MaterialExpressionScalarParameter",
+      "label": "MaterialExpressionScalarParameter:ParallaxScale",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -2000,
+        340
+      ],
+      "consumed_by": [
+        78
+      ]
+    },
+    {
+      "i": 9,
+      "class": "MaterialExpressionScalarParameter",
+      "label": "MaterialExpressionScalarParameter:ParallaxSteps",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -2000,
+        410
+      ],
+      "consumed_by": []
+    },
+    {
+      "i": 10,
+      "class": "MaterialExpressionScalarParameter",
+      "label": "MaterialExpressionScalarParameter:ParallaxHeight",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -2000,
+        480
+      ],
+      "consumed_by": [
+        78
+      ]
+    },
+    {
+      "i": 11,
+      "class": "MaterialExpressionScalarParameter",
+      "label": "MaterialExpressionScalarParameter:GildingStrength",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -2000,
+        550
+      ],
+      "consumed_by": [
+        50
+      ]
+    },
+    {
+      "i": 12,
+      "class": "MaterialExpressionScalarParameter",
+      "label": "MaterialExpressionScalarParameter:GoldEmissive",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -2000,
+        620
+      ],
+      "consumed_by": []
+    },
+    {
+      "i": 13,
+      "class": "MaterialExpressionScalarParameter",
+      "label": "MaterialExpressionScalarParameter:OilPaintStrength",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -2000,
+        690
+      ],
+      "consumed_by": [
+        48
+      ]
+    },
+    {
+      "i": 14,
+      "class": "MaterialExpressionScalarParameter",
+      "label": "MaterialExpressionScalarParameter:StrokeStrength",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -2000,
+        760
+      ],
+      "consumed_by": []
+    },
+    {
+      "i": 15,
+      "class": "MaterialExpressionScalarParameter",
+      "label": "MaterialExpressionScalarParameter:BrushScale",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -2000,
+        830
+      ],
+      "consumed_by": []
+    },
+    {
+      "i": 16,
+      "class": "MaterialExpressionScalarParameter",
+      "label": "MaterialExpressionScalarParameter:TemporalStrength",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -2000,
+        900
+      ],
+      "consumed_by": [
+        54
+      ]
+    },
+    {
+      "i": 17,
+      "class": "MaterialExpressionScalarParameter",
+      "label": "MaterialExpressionScalarParameter:WindSpeed",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -2000,
+        970
+      ],
+      "consumed_by": []
+    },
+    {
+      "i": 18,
+      "class": "MaterialExpressionScalarParameter",
+      "label": "MaterialExpressionScalarParameter:NoiseScale",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -2000,
+        1040
+      ],
+      "consumed_by": []
+    },
+    {
+      "i": 19,
+      "class": "MaterialExpressionScalarParameter",
+      "label": "MaterialExpressionScalarParameter:SmearStrength",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -2000,
+        1110
+      ],
+      "consumed_by": []
+    },
+    {
+      "i": 20,
+      "class": "MaterialExpressionScalarParameter",
+      "label": "MaterialExpressionScalarParameter:BoilIntensity",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -2000,
+        1180
+      ],
+      "consumed_by": []
+    },
+    {
+      "i": 21,
+      "class": "MaterialExpressionScalarParameter",
+      "label": "MaterialExpressionScalarParameter:InkIntensity",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -2000,
+        1250
+      ],
+      "consumed_by": [
+        52
+      ]
+    },
+    {
+      "i": 22,
+      "class": "MaterialExpressionScalarParameter",
+      "label": "MaterialExpressionScalarParameter:PoolingStrength",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -2000,
+        1320
+      ],
+      "consumed_by": []
+    },
+    {
+      "i": 23,
+      "class": "MaterialExpressionScalarParameter",
+      "label": "MaterialExpressionScalarParameter:Wetness",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -2000,
+        1390
+      ],
+      "consumed_by": [
+        76
+      ]
+    },
+    {
+      "i": 24,
+      "class": "MaterialExpressionScalarParameter",
+      "label": "MaterialExpressionScalarParameter:OrnamentStyle",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -2000,
+        1460
+      ],
+      "consumed_by": []
+    },
+    {
+      "i": 25,
+      "class": "MaterialExpressionScalarParameter",
+      "label": "MaterialExpressionScalarParameter:OrnamentScale",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -2000,
+        1530
+      ],
+      "consumed_by": []
+    },
+    {
+      "i": 26,
+      "class": "MaterialExpressionScalarParameter",
+      "label": "MaterialExpressionScalarParameter:CurvatureSensitivity",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -2000,
+        1600
+      ],
+      "consumed_by": []
+    },
+    {
+      "i": 27,
+      "class": "MaterialExpressionScalarParameter",
+      "label": "MaterialExpressionScalarParameter:AudioReactivity",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -2000,
+        1670
+      ],
+      "consumed_by": []
+    },
+    {
+      "i": 28,
+      "class": "MaterialExpressionScalarParameter",
+      "label": "MaterialExpressionScalarParameter:BassWeight",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -2000,
+        1740
+      ],
+      "consumed_by": []
+    },
+    {
+      "i": 29,
+      "class": "MaterialExpressionScalarParameter",
+      "label": "MaterialExpressionScalarParameter:MidWeight",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -2000,
+        1810
+      ],
+      "consumed_by": []
+    },
+    {
+      "i": 30,
+      "class": "MaterialExpressionScalarParameter",
+      "label": "MaterialExpressionScalarParameter:TrebleWeight",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -2000,
+        1880
+      ],
+      "consumed_by": []
+    },
+    {
+      "i": 31,
+      "class": "MaterialExpressionScalarParameter",
+      "label": "MaterialExpressionScalarParameter:DryRoughness",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -2000,
+        1950
+      ],
+      "consumed_by": [
+        76
+      ]
+    },
+    {
+      "i": 32,
+      "class": "MaterialExpressionScalarParameter",
+      "label": "MaterialExpressionScalarParameter:WetRoughness",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -2000,
+        2020
+      ],
+      "consumed_by": [
+        76
+      ]
+    },
+    {
+      "i": 33,
+      "class": "MaterialExpressionScalarParameter",
+      "label": "MaterialExpressionScalarParameter:EdgeStrength",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -2000,
+        2090
+      ],
+      "consumed_by": []
+    },
+    {
+      "i": 34,
+      "class": "MaterialExpressionScalarParameter",
+      "label": "MaterialExpressionScalarParameter:BandScale",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -2000,
+        2160
+      ],
+      "consumed_by": [
+        39
+      ]
+    },
+    {
+      "i": 35,
+      "class": "MaterialExpressionScalarParameter",
+      "label": "MaterialExpressionScalarParameter:BandStrength",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -2000,
+        2230
+      ],
+      "consumed_by": [
+        42
+      ]
+    },
+    {
+      "i": 36,
+      "class": "MaterialExpressionScalarParameter",
+      "label": "MaterialExpressionScalarParameter:EmissiveIntensity",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -2000,
+        2300
+      ],
+      "consumed_by": [
+        90
+      ]
+    },
+    {
+      "i": 37,
+      "class": "MaterialExpressionWorldPosition",
+      "label": "MaterialExpressionWorldPosition",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -1600,
+        400
+      ],
+      "consumed_by": [
+        38
+      ]
+    },
+    {
+      "i": 38,
+      "class": "MaterialExpressionComponentMask",
+      "label": "MaterialExpressionComponentMask",
+      "wired_input_count": 1,
+      "wired_inputs": [
+        "MaterialExpressionWorldPosition"
+      ],
+      "pin_names": [
+        "None"
+      ],
+      "pos": [
+        -1440,
+        400
+      ],
+      "consumed_by": [
+        39
+      ]
+    },
+    {
+      "i": 39,
+      "class": "MaterialExpressionMultiply",
+      "label": "MaterialExpressionMultiply",
+      "wired_input_count": 2,
+      "wired_inputs": [
+        "MaterialExpressionComponentMask",
+        "MaterialExpressionScalarParameter:BandScale"
+      ],
+      "pin_names": [
+        "A",
+        "B"
+      ],
+      "pos": [
+        -1280,
+        400
+      ],
+      "consumed_by": [
+        40
+      ]
+    },
+    {
+      "i": 40,
+      "class": "MaterialExpressionSine",
+      "label": "MaterialExpressionSine",
+      "wired_input_count": 1,
+      "wired_inputs": [
+        "MaterialExpressionMultiply"
+      ],
+      "pin_names": [
+        "None"
+      ],
+      "pos": [
+        -1120,
+        400
+      ],
+      "consumed_by": [
+        41
+      ]
+    },
+    {
+      "i": 41,
+      "class": "MaterialExpressionAbs",
+      "label": "MaterialExpressionAbs",
+      "wired_input_count": 1,
+      "wired_inputs": [
+        "MaterialExpressionSine"
+      ],
+      "pin_names": [
+        "None"
+      ],
+      "pos": [
+        -960,
+        400
+      ],
+      "consumed_by": [
+        42
+      ]
+    },
+    {
+      "i": 42,
+      "class": "MaterialExpressionMultiply",
+      "label": "MaterialExpressionMultiply",
+      "wired_input_count": 2,
+      "wired_inputs": [
+        "MaterialExpressionAbs",
+        "MaterialExpressionScalarParameter:BandStrength"
+      ],
+      "pin_names": [
+        "A",
+        "B"
+      ],
+      "pos": [
+        -800,
+        400
+      ],
+      "consumed_by": [
+        49
+      ]
+    },
+    {
+      "i": 43,
+      "class": "MaterialExpressionScalarParameter",
+      "label": "MaterialExpressionScalarParameter:RampStrength",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -1000,
+        740
+      ],
+      "consumed_by": [
+        44,
+        45
+      ]
+    },
+    {
+      "i": 44,
+      "class": "MaterialExpressionMaterialFunctionCall",
+      "label": "MaterialExpressionMaterialFunctionCall",
+      "wired_input_count": 3,
+      "wired_inputs": [
+        "MaterialExpressionVectorParameter:AccentTint",
+        "MaterialExpressionScalarParameter:RampStrength",
+        "MaterialExpressionVectorParameter:BaseTint"
+      ],
+      "pin_names": [
+        "ColorRamp",
+        "Mask",
+        "BaseColor"
+      ],
+      "pos": [
+        -700,
+        180
+      ],
+      "consumed_by": [
+        46
+      ]
+    },
+    {
+      "i": 45,
+      "class": "MaterialExpressionMaterialFunctionCall",
+      "label": "MaterialExpressionMaterialFunctionCall",
+      "wired_input_count": 3,
+      "wired_inputs": [
+        "MaterialExpressionTextureSampleParameter2D:RampTexture",
+        "MaterialExpressionScalarParameter:RampStrength",
+        "MaterialExpressionVectorParameter:BaseTint"
+      ],
+      "pin_names": [
+        "RampTexture",
+        "Mask",
+        "BaseColor"
+      ],
+      "pos": [
+        -700,
+        400
+      ],
+      "consumed_by": [
+        46
+      ]
+    },
+    {
+      "i": 46,
+      "class": "MaterialExpressionStaticSwitchParameter",
+      "label": "MaterialExpressionStaticSwitchParameter:bUsePaintedRamp",
+      "wired_input_count": 2,
+      "wired_inputs": [
+        "MaterialExpressionMaterialFunctionCall",
+        "MaterialExpressionMaterialFunctionCall"
+      ],
+      "pin_names": [
+        "True",
+        "False"
+      ],
+      "pos": [
+        -460,
+        300
+      ],
+      "consumed_by": [
+        47
+      ]
+    },
+    {
+      "i": 47,
+      "class": "MaterialExpressionLinearInterpolate",
+      "label": "MaterialExpressionLinearInterpolate",
+      "wired_input_count": 1,
+      "wired_inputs": [
+        "MaterialExpressionStaticSwitchParameter:bUsePaintedRamp"
+      ],
+      "pin_names": [
+        "A",
+        "B",
+        "Alpha"
+      ],
+      "pos": [
+        -240,
+        300
+      ],
+      "consumed_by": [
+        48
+      ]
+    },
+    {
+      "i": 48,
+      "class": "MaterialExpressionLinearInterpolate",
+      "label": "MaterialExpressionLinearInterpolate",
+      "wired_input_count": 3,
+      "wired_inputs": [
+        "MaterialExpressionVectorParameter:BaseTint",
+        "MaterialExpressionLinearInterpolate",
+        "MaterialExpressionScalarParameter:OilPaintStrength"
+      ],
+      "pin_names": [
+        "A",
+        "B",
+        "Alpha"
+      ],
+      "pos": [
+        -120,
+        300
+      ],
+      "consumed_by": [
+        49
+      ]
+    },
+    {
+      "i": 49,
+      "class": "MaterialExpressionLinearInterpolate",
+      "label": "MaterialExpressionLinearInterpolate",
+      "wired_input_count": 3,
+      "wired_inputs": [
+        "MaterialExpressionLinearInterpolate",
+        "MaterialExpressionVectorParameter:AccentTint",
+        "MaterialExpressionMultiply"
+      ],
+      "pin_names": [
+        "A",
+        "B",
+        "Alpha"
+      ],
+      "pos": [
+        60,
+        300
+      ],
+      "consumed_by": [
+        51
+      ]
+    },
+    {
+      "i": 50,
+      "class": "MaterialExpressionMultiply",
+      "label": "MaterialExpressionMultiply",
+      "wired_input_count": 2,
+      "wired_inputs": [
+        "MaterialExpressionScalarParameter:GildingStrength",
+        "MaterialExpressionVectorParameter:GoldTint"
+      ],
+      "pin_names": [
+        "A",
+        "B"
+      ],
+      "pos": [
+        -600,
+        640
+      ],
+      "consumed_by": [
+        51
+      ]
+    },
+    {
+      "i": 51,
+      "class": "MaterialExpressionAdd",
+      "label": "MaterialExpressionAdd",
+      "wired_input_count": 2,
+      "wired_inputs": [
+        "MaterialExpressionLinearInterpolate",
+        "MaterialExpressionMultiply"
+      ],
+      "pin_names": [
+        "A",
+        "B"
+      ],
+      "pos": [
+        240,
+        300
+      ],
+      "consumed_by": [
+        52
+      ]
+    },
+    {
+      "i": 52,
+      "class": "MaterialExpressionLinearInterpolate",
+      "label": "MaterialExpressionLinearInterpolate",
+      "wired_input_count": 3,
+      "wired_inputs": [
+        "MaterialExpressionAdd",
+        "MaterialExpressionVectorParameter:InkColor",
+        "MaterialExpressionScalarParameter:InkIntensity"
+      ],
+      "pin_names": [
+        "A",
+        "B",
+        "Alpha"
+      ],
+      "pos": [
+        420,
+        300
+      ],
+      "consumed_by": [
+        55
+      ]
+    },
+    {
+      "i": 53,
+      "class": "MaterialExpressionConstant3Vector",
+      "label": "MaterialExpressionConstant3Vector",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        120,
+        520
+      ],
+      "consumed_by": [
+        54
+      ]
+    },
+    {
+      "i": 54,
+      "class": "MaterialExpressionMultiply",
+      "label": "MaterialExpressionMultiply",
+      "wired_input_count": 2,
+      "wired_inputs": [
+        "MaterialExpressionScalarParameter:TemporalStrength",
+        "MaterialExpressionConstant3Vector"
+      ],
+      "pin_names": [
+        "A",
+        "B"
+      ],
+      "pos": [
+        280,
+        520
+      ],
+      "consumed_by": [
+        55
+      ]
+    },
+    {
+      "i": 55,
+      "class": "MaterialExpressionAdd",
+      "label": "MaterialExpressionAdd",
+      "wired_input_count": 2,
+      "wired_inputs": [
+        "MaterialExpressionLinearInterpolate",
+        "MaterialExpressionMultiply"
+      ],
+      "pin_names": [
+        "A",
+        "B"
+      ],
+      "pos": [
+        600,
+        300
+      ],
+      "consumed_by": [
+        75
+      ]
+    },
+    {
+      "i": 56,
+      "class": "MaterialExpressionTextureCoordinate",
+      "label": "MaterialExpressionTextureCoordinate",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -1200,
+        1600
+      ],
+      "consumed_by": [
+        57
+      ]
+    },
+    {
+      "i": 57,
+      "class": "MaterialExpressionMaterialFunctionCall",
+      "label": "MaterialExpressionMaterialFunctionCall",
+      "wired_input_count": 5,
+      "wired_inputs": [
+        "MaterialExpressionScalarParameter:PatternScale",
+        "MaterialExpressionScalarParameter:PatternAngle",
+        "MaterialExpressionScalarParameter:PatternIndex",
+        "MaterialExpressionLinearInterpolate",
+        "MaterialExpressionTextureCoordinate"
+      ],
+      "pin_names": [
+        "Scale",
+        "Softness",
+        "Angle",
+        "CellIndex",
+        "Density",
+        "UV"
+      ],
+      "pos": [
+        -820,
+        1600
+      ],
+      "consumed_by": [
+        74
+      ]
+    },
+    {
+      "i": 58,
+      "class": "MaterialExpressionScalarParameter",
+      "label": "MaterialExpressionScalarParameter:PatternScale",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -1240,
+        1720
+      ],
+      "consumed_by": [
+        57
+      ]
+    },
+    {
+      "i": 59,
+      "class": "MaterialExpressionScalarParameter",
+      "label": "MaterialExpressionScalarParameter:PatternAngle",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -1240,
+        1800
+      ],
+      "consumed_by": [
+        57
+      ]
+    },
+    {
+      "i": 60,
+      "class": "MaterialExpressionScalarParameter",
+      "label": "MaterialExpressionScalarParameter:PatternIndex",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -1240,
+        1880
+      ],
+      "consumed_by": [
+        57
+      ]
+    },
+    {
+      "i": 61,
+      "class": "MaterialExpressionScalarParameter",
+      "label": "MaterialExpressionScalarParameter:PatternDensity",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -1240,
+        1960
+      ],
+      "consumed_by": [
+        73
+      ]
+    },
+    {
+      "i": 62,
+      "class": "MaterialExpressionScalarParameter",
+      "label": "MaterialExpressionScalarParameter:PatternStrength",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -1240,
+        2040
+      ],
+      "consumed_by": [
+        74
+      ]
+    },
+    {
+      "i": 63,
+      "class": "MaterialExpressionVectorParameter",
+      "label": "MaterialExpressionVectorParameter:KeyLightDir",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -1240,
+        2120
+      ],
+      "consumed_by": [
+        64
+      ]
+    },
+    {
+      "i": 64,
+      "class": "MaterialExpressionNormalize",
+      "label": "MaterialExpressionNormalize",
+      "wired_input_count": 1,
+      "wired_inputs": [
+        "MaterialExpressionVectorParameter:KeyLightDir"
+      ],
+      "pin_names": [
+        "VectorInput"
+      ],
+      "pos": [
+        -1040,
+        2120
+      ],
+      "consumed_by": [
+        65
+      ]
+    },
+    {
+      "i": 65,
+      "class": "MaterialExpressionDotProduct",
+      "label": "MaterialExpressionDotProduct",
+      "wired_input_count": 2,
+      "wired_inputs": [
+        "MaterialExpressionPixelNormalWS",
+        "MaterialExpressionNormalize"
+      ],
+      "pin_names": [
+        "A",
+        "B"
+      ],
+      "pos": [
+        -880,
+        2120
+      ],
+      "consumed_by": [
+        67
+      ]
+    },
+    {
+      "i": 66,
+      "class": "MaterialExpressionPixelNormalWS",
+      "label": "MaterialExpressionPixelNormalWS",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -1040,
+        2240
+      ],
+      "consumed_by": [
+        65
+      ]
+    },
+    {
+      "i": 67,
+      "class": "MaterialExpressionSaturate",
+      "label": "MaterialExpressionSaturate",
+      "wired_input_count": 1,
+      "wired_inputs": [
+        "MaterialExpressionDotProduct"
+      ],
+      "pin_names": [
+        "None"
+      ],
+      "pos": [
+        -720,
+        2120
+      ],
+      "consumed_by": [
+        68
+      ]
+    },
+    {
+      "i": 68,
+      "class": "MaterialExpressionOneMinus",
+      "label": "MaterialExpressionOneMinus",
+      "wired_input_count": 1,
+      "wired_inputs": [
+        "MaterialExpressionSaturate"
+      ],
+      "pin_names": [
+        "None"
+      ],
+      "pos": [
+        -580,
+        2120
+      ],
+      "consumed_by": [
+        70
+      ]
+    },
+    {
+      "i": 69,
+      "class": "MaterialExpressionScalarParameter",
+      "label": "MaterialExpressionScalarParameter:PatternHatchShadowDrive",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -1240,
+        2200
+      ],
+      "consumed_by": [
+        70
+      ]
+    },
+    {
+      "i": 70,
+      "class": "MaterialExpressionMultiply",
+      "label": "MaterialExpressionMultiply",
+      "wired_input_count": 2,
+      "wired_inputs": [
+        "MaterialExpressionOneMinus",
+        "MaterialExpressionScalarParameter:PatternHatchShadowDrive"
+      ],
+      "pin_names": [
+        "A",
+        "B"
+      ],
+      "pos": [
+        -420,
+        2140
+      ],
+      "consumed_by": [
+        71
+      ]
+    },
+    {
+      "i": 71,
+      "class": "MaterialExpressionSaturate",
+      "label": "MaterialExpressionSaturate",
+      "wired_input_count": 1,
+      "wired_inputs": [
+        "MaterialExpressionMultiply"
+      ],
+      "pin_names": [
+        "None"
+      ],
+      "pos": [
+        -280,
+        2140
+      ],
+      "consumed_by": [
+        73
+      ]
+    },
+    {
+      "i": 72,
+      "class": "MaterialExpressionScalarParameter",
+      "label": "MaterialExpressionScalarParameter:PatternHatchShadowDensity",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -1240,
+        2280
+      ],
+      "consumed_by": [
+        73
+      ]
+    },
+    {
+      "i": 73,
+      "class": "MaterialExpressionLinearInterpolate",
+      "label": "MaterialExpressionLinearInterpolate",
+      "wired_input_count": 3,
+      "wired_inputs": [
+        "MaterialExpressionScalarParameter:PatternDensity",
+        "MaterialExpressionScalarParameter:PatternHatchShadowDensity",
+        "MaterialExpressionSaturate"
+      ],
+      "pin_names": [
+        "A",
+        "B",
+        "Alpha"
+      ],
+      "pos": [
+        -100,
+        2140
+      ],
+      "consumed_by": [
+        57
+      ]
+    },
+    {
+      "i": 74,
+      "class": "MaterialExpressionMultiply",
+      "label": "MaterialExpressionMultiply",
+      "wired_input_count": 2,
+      "wired_inputs": [
+        "MaterialExpressionMaterialFunctionCall",
+        "MaterialExpressionScalarParameter:PatternStrength"
+      ],
+      "pin_names": [
+        "A",
+        "B"
+      ],
+      "pos": [
+        -460,
+        1600
+      ],
+      "consumed_by": [
+        75
+      ]
+    },
+    {
+      "i": 75,
+      "class": "MaterialExpressionLinearInterpolate",
+      "label": "MaterialExpressionLinearInterpolate",
+      "wired_input_count": 3,
+      "wired_inputs": [
+        "MaterialExpressionAdd",
+        "MaterialExpressionVectorParameter:InkColor",
+        "MaterialExpressionMultiply"
+      ],
+      "pin_names": [
+        "A",
+        "B",
+        "Alpha"
+      ],
+      "pos": [
+        -220,
+        1600
+      ],
+      "consumed_by": [
+        86
+      ]
+    },
+    {
+      "i": 76,
+      "class": "MaterialExpressionLinearInterpolate",
+      "label": "MaterialExpressionLinearInterpolate",
+      "wired_input_count": 3,
+      "wired_inputs": [
+        "MaterialExpressionScalarParameter:DryRoughness",
+        "MaterialExpressionScalarParameter:WetRoughness",
+        "MaterialExpressionScalarParameter:Wetness"
+      ],
+      "pin_names": [
+        "A",
+        "B",
+        "Alpha"
+      ],
+      "pos": [
+        600,
+        520
+      ],
+      "consumed_by": [
+        89
+      ]
+    },
+    {
+      "i": 77,
+      "class": "MaterialExpressionPixelNormalWS",
+      "label": "MaterialExpressionPixelNormalWS",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        600,
+        640
+      ],
+      "consumed_by": [
+        89
+      ]
+    },
+    {
+      "i": 78,
+      "class": "MaterialExpressionMultiply",
+      "label": "MaterialExpressionMultiply",
+      "wired_input_count": 2,
+      "wired_inputs": [
+        "MaterialExpressionScalarParameter:ParallaxHeight",
+        "MaterialExpressionScalarParameter:ParallaxScale"
+      ],
+      "pin_names": [
+        "A",
+        "B"
+      ],
+      "pos": [
+        -600,
+        880
+      ],
+      "consumed_by": [
+        80
+      ]
+    },
+    {
+      "i": 79,
+      "class": "MaterialExpressionVertexNormalWS",
+      "label": "MaterialExpressionVertexNormalWS",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -600,
+        980
+      ],
+      "consumed_by": [
+        80
+      ]
+    },
+    {
+      "i": 80,
+      "class": "MaterialExpressionMultiply",
+      "label": "MaterialExpressionMultiply",
+      "wired_input_count": 2,
+      "wired_inputs": [
+        "MaterialExpressionMultiply",
+        "MaterialExpressionVertexNormalWS"
+      ],
+      "pin_names": [
+        "A",
+        "B"
+      ],
+      "pos": [
+        -300,
+        900
+      ],
+      "consumed_by": []
+    },
+    {
+      "i": 81,
+      "class": "MaterialExpressionStaticSwitchParameter",
+      "label": "MaterialExpressionStaticSwitchParameter:bContactShadow",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [
+        "True",
+        "False"
+      ],
+      "pos": [
+        -900,
+        1150
+      ],
+      "consumed_by": []
+    },
+    {
+      "i": 82,
+      "class": "MaterialExpressionDistanceFieldApproxAO",
+      "label": "MaterialExpressionDistanceFieldApproxAO",
+      "wired_input_count": 2,
+      "wired_inputs": [
+        "MaterialExpressionScalarParameter:ContactShadowDistance",
+        "MaterialExpressionScalarParameter:ContactShadowRadius"
+      ],
+      "pin_names": [
+        "World Position",
+        "Normal",
+        "BaseDistance",
+        "Radius"
+      ],
+      "pos": [
+        -1100,
+        1150
+      ],
+      "consumed_by": [
+        87
+      ]
+    },
+    {
+      "i": 83,
+      "class": "MaterialExpressionScalarParameter",
+      "label": "MaterialExpressionScalarParameter:ContactShadowDistance",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -1100,
+        1280
+      ],
+      "consumed_by": [
+        82
+      ]
+    },
+    {
+      "i": 84,
+      "class": "MaterialExpressionScalarParameter",
+      "label": "MaterialExpressionScalarParameter:ContactShadowRadius",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -1100,
+        1360
+      ],
+      "consumed_by": [
+        82
+      ]
+    },
+    {
+      "i": 85,
+      "class": "MaterialExpressionScalarParameter",
+      "label": "MaterialExpressionScalarParameter:ContactShadowStrength",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [],
+      "pos": [
+        -1100,
+        1440
+      ],
+      "consumed_by": [
+        86,
+        87
+      ]
+    },
+    {
+      "i": 86,
+      "class": "MaterialExpressionLinearInterpolate",
+      "label": "MaterialExpressionLinearInterpolate",
+      "wired_input_count": 3,
+      "wired_inputs": [
+        "MaterialExpressionLinearInterpolate",
+        "MaterialExpressionVectorParameter:InkColor",
+        "MaterialExpressionScalarParameter:ContactShadowStrength"
+      ],
+      "pin_names": [
+        "A",
+        "B",
+        "Alpha"
+      ],
+      "pos": [
+        -740,
+        1150
+      ],
+      "consumed_by": []
+    },
+    {
+      "i": 87,
+      "class": "MaterialExpressionMultiply",
+      "label": "MaterialExpressionMultiply",
+      "wired_input_count": 2,
+      "wired_inputs": [
+        "MaterialExpressionDistanceFieldApproxAO",
+        "MaterialExpressionScalarParameter:ContactShadowStrength"
+      ],
+      "pin_names": [
+        "A",
+        "B"
+      ],
+      "pos": [
+        -580,
+        1150
+      ],
+      "consumed_by": []
+    },
+    {
+      "i": 88,
+      "class": "MaterialExpressionLinearInterpolate",
+      "label": "MaterialExpressionLinearInterpolate",
+      "wired_input_count": 0,
+      "wired_inputs": [],
+      "pin_names": [
+        "A",
+        "B",
+        "Alpha"
+      ],
+      "pos": [
+        -400,
+        1150
+      ],
+      "consumed_by": [
+        89
+      ]
+    },
+    {
+      "i": 89,
+      "class": "MaterialExpressionSubstrateToonBSDF",
+      "label": "MaterialExpressionSubstrateToonBSDF",
+      "wired_input_count": 4,
+      "wired_inputs": [
+        "MaterialExpressionLinearInterpolate",
+        "MaterialExpressionLinearInterpolate",
+        "MaterialExpressionPixelNormalWS",
+        "MaterialExpressionMultiply"
+      ],
+      "pin_names": [
+        "BaseColor",
+        "Metallic",
+        "Specular",
+        "Roughness",
+        "Normal",
+        "EmissiveColor",
+        "PatternUVs",
+        "Anisotropy",
+        "Tangent"
+      ],
+      "pos": [
+        700,
+        240
+      ],
+      "consumed_by": []
+    },
+    {
+      "i": 90,
+      "class": "MaterialExpressionMultiply",
+      "label": "MaterialExpressionMultiply",
+      "wired_input_count": 2,
+      "wired_inputs": [
+        "MaterialExpressionVectorParameter:EmissiveColor",
+        "MaterialExpressionScalarParameter:EmissiveIntensity"
+      ],
+      "pin_names": [
+        "A",
+        "B"
+      ],
+      "pos": [
+        700,
+        60
+      ],
+      "consumed_by": [
+        89
+      ]
+    }
+  ]
+}

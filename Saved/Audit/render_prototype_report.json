@@ -1,0 +1,54 @@
+{
+  "hardware": "GTX 1050 Ti 4GB / i5-7300HQ 4C4T / 16GB",
+  "method": "unreal.AutomationLibrary.take_high_res_screenshot",
+  "not_the_final_tier": "Docs/FILM_PIPELINE.md section 9 (16-bit EXR, 256+ samples) is the shipping tier; this is prototype.",
+  "ok": false,
+  "output_dir": "P:\\film-304-toon-spine\\Saved\\Renders\\prototypes",
+  "rendered_count": 1,
+  "requested": [
+    "SH010",
+    "SH020",
+    "SH030",
+    "SH070"
+  ],
+  "requested_count": 4,
+  "resolution": [
+    1280,
+    720
+  ],
+  "stills": [
+    {
+      "bytes": 381621,
+      "call_blocked_seconds": 0.04,
+      "exists": true,
+      "fired_at_local": "2026-10-01 23:07:54",
+      "height": 720,
+      "path": "P:\\film-304-toon-spine\\Saved\\Renders\\prototypes\\COMP_SH010_proto_v01.png",
+      "requested": true,
+      "resolution_matches_spec": true,
+      "shot_id": "SH010",
+      "stem": "COMP_SH010_proto_v01",
+      "total_seconds": 15.13,
+      "width": 1280
+    },
+    {
+      "exists": false,
+      "requested": true,
+      "shot_id": "SH020",
+      "stem": "COMP_SH020_proto_v01"
+    },
+    {
+      "exists": false,
+      "requested": true,
+      "shot_id": "SH030",
+      "stem": "COMP_SH030_proto_v01"
+    },
+    {
+      "exists": false,
+      "requested": true,
+      "shot_id": "SH070",
+      "stem": "COMP_SH070_proto_v01"
+    }
+  ],
+  "tier": "prototype"
+}

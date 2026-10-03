@@ -1,0 +1,70 @@
+{
+  "ok": true,
+  "scalar_params": [
+    "AudioReactivity",
+    "BandScale",
+    "BandStrength",
+    "BassWeight",
+    "BoilIntensity",
+    "BrushScale",
+    "ContactShadowDistance",
+    "ContactShadowRadius",
+    "ContactShadowStrength",
+    "CurvatureSensitivity",
+    "DryRoughness",
+    "EdgeStrength",
+    "EmissiveIntensity",
+    "GildingStrength",
+    "GoldEmissive",
+    "InkIntensity",
+    "MidWeight",
+    "NoiseScale",
+    "OilPaintStrength",
+    "OrnamentScale",
+    "OrnamentStyle",
+    "ParallaxHeight",
+    "ParallaxScale",
+    "ParallaxSteps",
+    "PatternAngle",
+    "PatternDensity",
+    "PatternHatchShadowDensity",
+    "PatternHatchShadowDrive",
+    "PatternIndex",
+    "PatternScale",
+    "PatternStrength",
+    "PoolingStrength",
+    "RampStrength",
+    "SmearStrength",
+    "StrokeStrength",
+    "TemporalStrength",
+    "TrebleWeight",
+    "UVRotation",
+    "UVScale",
+    "WetRoughness",
+    "Wetness",
+    "WindSpeed"
+  ],
+  "vector_params": [
+    "AccentTint",
+    "BaseTint",
+    "EmissiveColor",
+    "GoldTint",
+    "InkColor",
+    "KeyLightDir"
+  ],
+  "static_switches": [
+    "bContactShadow",
+    "bUsePaintedRamp"
+  ],
+  "counts": {
+    "scalars": 42,
+    "vectors": 6,
+    "switches": 2,
+    "total_expressions": 91
+  },
+  "stage5_present": {
+    "RampStrength": true,
+    "EmissiveIntensity": true,
+    "EmissiveColor": true
+  }
+}

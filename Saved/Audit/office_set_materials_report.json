@@ -3,7 +3,7 @@
     "SM_CUBICLE_Canonical": {
       "instance": "MI_Toon_Office_Polypropylene",
       "before": [
-        "None"
+        "<Object '/Game/Materials/Instances/MI_Toon_Office_Polypropylene.MI_Toon_Office_Polypropylene' (0x0000016A3D7EE000) Class 'MaterialInstanceConstant'>"
       ],
       "after": "MI_Toon_Office_Polypropylene",
       "ok": true
@@ -11,7 +11,7 @@
     "SM_CUBICLE_MazeShift": {
       "instance": "MI_Toon_Office_Polypropylene",
       "before": [
-        "None"
+        "<Object '/Game/Materials/Instances/MI_Toon_Office_Polypropylene.MI_Toon_Office_Polypropylene' (0x0000016A3D7EE000) Class 'MaterialInstanceConstant'>"
       ],
       "after": "MI_Toon_Office_Polypropylene",
       "ok": true
@@ -19,7 +19,7 @@
     "SM_CUBICLE_OpenPlan": {
       "instance": "MI_Toon_Office_Polypropylene",
       "before": [
-        "None"
+        "<Object '/Game/Materials/Instances/MI_Toon_Office_Polypropylene.MI_Toon_Office_Polypropylene' (0x0000016A3D7EE000) Class 'MaterialInstanceConstant'>"
       ],
       "after": "MI_Toon_Office_Polypropylene",
       "ok": true
@@ -27,7 +27,7 @@
     "SM_CUBICLE_Swarm": {
       "instance": "MI_Toon_Office_Polypropylene",
       "before": [
-        "None"
+        "<Object '/Game/Materials/Instances/MI_Toon_Office_Polypropylene.MI_Toon_Office_Polypropylene' (0x0000016A3D7EE000) Class 'MaterialInstanceConstant'>"
       ],
       "after": "MI_Toon_Office_Polypropylene",
       "ok": true
@@ -35,7 +35,7 @@
     "SM_OFFICE_BarbicanScale": {
       "instance": "MI_Toon_Environment",
       "before": [
-        "None"
+        "<Object '/Game/Materials/Instances/MI_Toon_Environment.MI_Toon_Environment' (0x0000016A3D6D0800) Class 'MaterialInstanceConstant'>"
       ],
       "after": "MI_Toon_Environment",
       "ok": true
@@ -43,7 +43,7 @@
     "SM_OFFICE_Bunker": {
       "instance": "MI_Toon_Environment",
       "before": [
-        "None"
+        "<Object '/Game/Materials/Instances/MI_Toon_Environment.MI_Toon_Environment' (0x0000016A3D6D0800) Class 'MaterialInstanceConstant'>"
       ],
       "after": "MI_Toon_Environment",
       "ok": true
@@ -51,7 +51,7 @@
     "SM_OFFICE_CivicSlab": {
       "instance": "MI_Toon_Environment",
       "before": [
-        "None"
+        "<Object '/Game/Materials/Instances/MI_Toon_Environment.MI_Toon_Environment' (0x0000016A3D6D0800) Class 'MaterialInstanceConstant'>"
       ],
       "after": "MI_Toon_Environment",
       "ok": true
@@ -59,7 +59,7 @@
     "SM_OFFICE_SlenderTower": {
       "instance": "MI_Toon_Environment",
       "before": [
-        "None"
+        "<Object '/Game/Materials/Instances/MI_Toon_Environment.MI_Toon_Environment' (0x0000016A3D6D0800) Class 'MaterialInstanceConstant'>"
       ],
       "after": "MI_Toon_Environment",
       "ok": true

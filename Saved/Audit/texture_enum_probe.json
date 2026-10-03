@@ -1,0 +1,127 @@
+{
+  "ok": true,
+  "TextureCompressionSettings": {
+    "exists": true,
+    "members": [
+      "TC_ALPHA",
+      "TC_BC7",
+      "TC_DEFAULT",
+      "TC_DISPLACEMENTMAP",
+      "TC_DISTANCE_FIELD_FONT",
+      "TC_EDITOR_ICON",
+      "TC_GRAYSCALE",
+      "TC_HALF_FLOAT",
+      "TC_HDR",
+      "TC_HDR_COMPRESSED",
+      "TC_HDR_F32",
+      "TC_MASKS",
+      "TC_NORMALMAP",
+      "TC_SINGLE_FLOAT",
+      "TC_VECTOR_DISPLACEMENTMAP",
+      "cast",
+      "get_display_name",
+      "name",
+      "static_enum",
+      "value"
+    ]
+  },
+  "TextureFilter": {
+    "exists": true,
+    "members": [
+      "TF_BILINEAR",
+      "TF_DEFAULT",
+      "TF_NEAREST",
+      "TF_TRILINEAR",
+      "cast",
+      "get_display_name",
+      "name",
+      "static_enum",
+      "value"
+    ]
+  },
+  "TextureAddress": {
+    "exists": true,
+    "members": [
+      "TA_CLAMP",
+      "TA_MIRROR",
+      "TA_WRAP",
+      "cast",
+      "get_display_name",
+      "name",
+      "static_enum",
+      "value"
+    ]
+  },
+  "TextureMipGenSettings": {
+    "exists": true,
+    "members": [
+      "TMGS_ANGULAR",
+      "TMGS_BLUR1",
+      "TMGS_BLUR2",
+      "TMGS_BLUR3",
+      "TMGS_BLUR4",
+      "TMGS_BLUR5",
+      "TMGS_FROM_TEXTURE_GROUP",
+      "TMGS_LEAVE_EXISTING_MIPS",
+      "TMGS_NO_MIPMAPS",
+      "TMGS_SHARPEN0",
+      "TMGS_SHARPEN1",
+      "TMGS_SHARPEN10",
+      "TMGS_SHARPEN2",
+      "TMGS_SHARPEN3",
+      "TMGS_SHARPEN4",
+      "TMGS_SHARPEN5",
+      "TMGS_SHARPEN6",
+      "TMGS_SHARPEN7",
+      "TMGS_SHARPEN8",
+      "TMGS_SHARPEN9",
+      "TMGS_SIMPLE_AVERAGE",
+      "TMGS_UNFILTERED",
+      "cast",
+      "get_display_name",
+      "name",
+      "static_enum",
+      "value"
+    ]
+  },
+  "lossless_present": [
+    "TC_HDR",
+    "TC_GRAYSCALE",
+    "TC_VECTOR_DISPLACEMENTMAP",
+    "TC_DEFAULT"
+  ],
+  "lossless_absent": [
+    "TC_MASKSLESS",
+    "TC_VECTORSDISPLACEMENTMAP",
+    "TC_EDITORICON",
+    "TC_ALPHAGRADIENT",
+    "TC_NOPATH"
+  ],
+  "readback_probe": {
+    "srgb": {
+      "raw": "False",
+      "name_attr": "<none>",
+      "type": "bool"
+    },
+    "filter": {
+      "raw": "<TextureFilter.TF_NEAREST: 0>",
+      "name_attr": "TF_NEAREST",
+      "type": "TextureFilter"
+    },
+    "address_x": {
+      "raw": "<TextureAddress.TA_WRAP: 0>",
+      "name_attr": "TA_WRAP",
+      "type": "TextureAddress"
+    },
+    "compression_settings": {
+      "raw": "<TextureCompressionSettings.TC_DEFAULT: 0>",
+      "name_attr": "TC_DEFAULT",
+      "type": "TextureCompressionSettings"
+    },
+    "mip_gen_settings": {
+      "raw": "<TextureMipGenSettings.TMGS_NO_MIPMAPS: 13>",
+      "name_attr": "TMGS_NO_MIPMAPS",
+      "type": "TextureMipGenSettings"
+    }
+  }
+}

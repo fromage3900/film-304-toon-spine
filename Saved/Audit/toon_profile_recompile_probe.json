@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "steps": {
+    "0_original": null,
+    "1_after_set": "TP_Default",
+    "2_after_recompile": "TP_Default",
+    "2b_refetched_node": "TP_Default",
+    "3_set_after_recompile": "TP_Default",
+    "4_after_save": "TP_Default",
+    "5_after_reload": "TP_Default"
+  },
+  "same_node_object": true,
+  "restored": null
+}

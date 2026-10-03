@@ -1,0 +1,244 @@
+{
+  "errors": [],
+  "imported": [
+    {
+      "object": "CITY_CivicSuperblock",
+      "asset": "/Game/Environment/Brutalist/01_CITY_PBR/SM_CITY_CivicSuperblock",
+      "collection": "01_CITY_PBR",
+      "evaluated_verts": 152,
+      "material_slots": 2,
+      "material": "/Game/Materials/Instances/MI_Toon_Environment"
+    },
+    {
+      "object": "CITY_LowSprawl",
+      "asset": "/Game/Environment/Brutalist/01_CITY_PBR/SM_CITY_LowSprawl",
+      "collection": "01_CITY_PBR",
+      "evaluated_verts": 1504,
+      "material_slots": 2,
+      "material": "/Game/Materials/Instances/MI_Toon_Environment"
+    },
+    {
+      "object": "CITY_TightEstate",
+      "asset": "/Game/Environment/Brutalist/01_CITY_PBR/SM_CITY_TightEstate",
+      "collection": "01_CITY_PBR",
+      "evaluated_verts": 984,
+      "material_slots": 2,
+      "material": "/Game/Materials/Instances/MI_Toon_Environment"
+    },
+    {
+      "object": "CITY_TowerCluster",
+      "asset": "/Game/Environment/Brutalist/01_CITY_PBR/SM_CITY_TowerCluster",
+      "collection": "01_CITY_PBR",
+      "evaluated_verts": 576,
+      "material_slots": 2,
+      "material": "/Game/Materials/Instances/MI_Toon_Environment"
+    },
+    {
+      "object": "KMZ_CivicSuperblock",
+      "asset": "/Game/Environment/Brutalist/02_CITY_KOMIKAZE/SM_KMZ_CivicSuperblock",
+      "collection": "02_CITY_KOMIKAZE",
+      "evaluated_verts": 152,
+      "material_slots": 2,
+      "material": "/Game/Materials/Instances/MI_Toon_Environment"
+    },
+    {
+      "object": "KMZ_LowSprawl",
+      "asset": "/Game/Environment/Brutalist/02_CITY_KOMIKAZE/SM_KMZ_LowSprawl",
+      "collection": "02_CITY_KOMIKAZE",
+      "evaluated_verts": 1504,
+      "material_slots": 2,
+      "material": "/Game/Materials/Instances/MI_Toon_Environment"
+    },
+    {
+      "object": "KMZ_TightEstate",
+      "asset": "/Game/Environment/Brutalist/02_CITY_KOMIKAZE/SM_KMZ_TightEstate",
+      "collection": "02_CITY_KOMIKAZE",
+      "evaluated_verts": 984,
+      "material_slots": 2,
+      "material": "/Game/Materials/Instances/MI_Toon_Environment"
+    },
+    {
+      "object": "KMZ_TowerCluster",
+      "asset": "/Game/Environment/Brutalist/02_CITY_KOMIKAZE/SM_KMZ_TowerCluster",
+      "collection": "02_CITY_KOMIKAZE",
+      "evaluated_verts": 576,
+      "material_slots": 2,
+      "material": "/Game/Materials/Instances/MI_Toon_Environment"
+    },
+    {
+      "object": "OFFICE_BarbicanScale",
+      "asset": "/Game/Environment/Brutalist/03_OFFICE_BLOCK/SM_OFFICE_BarbicanScale",
+      "collection": "03_OFFICE_BLOCK",
+      "evaluated_verts": 1224,
+      "material_slots": 1,
+      "material": "/Game/Materials/Instances/MI_Toon_Environment"
+    },
+    {
+      "object": "OFFICE_Bunker",
+      "asset": "/Game/Environment/Brutalist/03_OFFICE_BLOCK/SM_OFFICE_Bunker",
+      "collection": "03_OFFICE_BLOCK",
+      "evaluated_verts": 336,
+      "material_slots": 1,
+      "material": "/Game/Materials/Instances/MI_Toon_Environment"
+    },
+    {
+      "object": "OFFICE_CivicSlab",
+      "asset": "/Game/Environment/Brutalist/03_OFFICE_BLOCK/SM_OFFICE_CivicSlab",
+      "collection": "03_OFFICE_BLOCK",
+      "evaluated_verts": 904,
+      "material_slots": 1,
+      "material": "/Game/Materials/Instances/MI_Toon_Environment"
+    },
+    {
+      "object": "OFFICE_SlenderTower",
+      "asset": "/Game/Environment/Brutalist/03_OFFICE_BLOCK/SM_OFFICE_SlenderTower",
+      "collection": "03_OFFICE_BLOCK",
+      "evaluated_verts": 888,
+      "material_slots": 1,
+      "material": "/Game/Materials/Instances/MI_Toon_Environment"
+    },
+    {
+      "object": "CUBICLE_Canonical",
+      "asset": "/Game/Environment/Brutalist/04_INTERIOR_CUBICLES/SM_CUBICLE_Canonical",
+      "collection": "04_INTERIOR_CUBICLES",
+      "evaluated_verts": 1898,
+      "material_slots": 1,
+      "material": "/Game/Materials/Instances/MI_Toon_Environment"
+    },
+    {
+      "object": "CUBICLE_MazeShift",
+      "asset": "/Game/Environment/Brutalist/04_INTERIOR_CUBICLES/SM_CUBICLE_MazeShift",
+      "collection": "04_INTERIOR_CUBICLES",
+      "evaluated_verts": 3624,
+      "material_slots": 1,
+      "material": "/Game/Materials/Instances/MI_Toon_Environment"
+    },
+    {
+      "object": "CUBICLE_OpenPlan",
+      "asset": "/Game/Environment/Brutalist/04_INTERIOR_CUBICLES/SM_CUBICLE_OpenPlan",
+      "collection": "04_INTERIOR_CUBICLES",
+      "evaluated_verts": 2502,
+      "material_slots": 1,
+      "material": "/Game/Materials/Instances/MI_Toon_Environment"
+    },
+    {
+      "object": "CUBICLE_Swarm",
+      "asset": "/Game/Environment/Brutalist/04_INTERIOR_CUBICLES/SM_CUBICLE_Swarm",
+      "collection": "04_INTERIOR_CUBICLES",
+      "evaluated_verts": 6668,
+      "material_slots": 1,
+      "material": "/Game/Materials/Instances/MI_Toon_Environment"
+    },
+    {
+      "object": "FAC_CivicColonnade",
+      "asset": "/Game/Environment/Brutalist/05_FACADE_VARIATION/SM_FAC_CivicColonnade",
+      "collection": "05_FACADE_VARIATION",
+      "evaluated_verts": 552,
+      "material_slots": 3,
+      "material": "/Game/Materials/Instances/MI_Toon_Environment"
+    },
+    {
+      "object": "FAC_PunchedEstate",
+      "asset": "/Game/Environment/Brutalist/05_FACADE_VARIATION/SM_FAC_PunchedEstate",
+      "collection": "05_FACADE_VARIATION",
+      "evaluated_verts": 1848,
+      "material_slots": 3,
+      "material": "/Game/Materials/Instances/MI_Toon_Environment"
+    },
+    {
+      "object": "FAC_TowerRibbon",
+      "asset": "/Game/Environment/Brutalist/05_FACADE_VARIATION/SM_FAC_TowerRibbon",
+      "collection": "05_FACADE_VARIATION",
+      "evaluated_verts": 1152,
+      "material_slots": 3,
+      "material": "/Game/Materials/Instances/MI_Toon_Environment"
+    },
+    {
+      "object": "ROOF_BarrelVault",
+      "asset": "/Game/Environment/Brutalist/06_ROOFS/SM_ROOF_BarrelVault",
+      "collection": "06_ROOFS",
+      "evaluated_verts": 48,
+      "material_slots": 1,
+      "material": "/Game/Materials/Instances/MI_Toon_Environment"
+    },
+    {
+      "object": "ROOF_FlatParapet",
+      "asset": "/Game/Environment/Brutalist/06_ROOFS/SM_ROOF_FlatParapet",
+      "collection": "06_ROOFS",
+      "evaluated_verts": 56,
+      "material_slots": 1,
+      "material": "/Game/Materials/Instances/MI_Toon_Environment"
+    },
+    {
+      "object": "ROOF_LowPitch",
+      "asset": "/Game/Environment/Brutalist/06_ROOFS/SM_ROOF_LowPitch",
+      "collection": "06_ROOFS",
+      "evaluated_verts": 24,
+      "material_slots": 1,
+      "material": "/Game/Materials/Instances/MI_Toon_Environment"
+    },
+    {
+      "object": "ROOF_PlantDeck",
+      "asset": "/Game/Environment/Brutalist/06_ROOFS/SM_ROOF_PlantDeck",
+      "collection": "06_ROOFS",
+      "evaluated_verts": 72,
+      "material_slots": 1,
+      "material": "/Game/Materials/Instances/MI_Toon_Environment"
+    },
+    {
+      "object": "ROOF_PyramidHip",
+      "asset": "/Game/Environment/Brutalist/06_ROOFS/SM_ROOF_PyramidHip",
+      "collection": "06_ROOFS",
+      "evaluated_verts": 24,
+      "material_slots": 1,
+      "material": "/Game/Materials/Instances/MI_Toon_Environment"
+    },
+    {
+      "object": "ROOF_Sawtooth",
+      "asset": "/Game/Environment/Brutalist/06_ROOFS/SM_ROOF_Sawtooth",
+      "collection": "06_ROOFS",
+      "evaluated_verts": 248,
+      "material_slots": 1,
+      "material": "/Game/Materials/Instances/MI_Toon_Environment"
+    }
+  ],
+  "dest_root": "/Game/Environment/Brutalist",
+  "base_material": "/Game/Materials/Instances/MI_Toon_Environment",
+  "expected_count": 25,
+  "imported_count": 25,
+  "assets_on_disk": [
+    "/Game/Environment/Brutalist/01_CITY_PBR/SM_CITY_CivicSuperblock.SM_CITY_CivicSuperblock",
+    "/Game/Environment/Brutalist/01_CITY_PBR/SM_CITY_LowSprawl.SM_CITY_LowSprawl",
+    "/Game/Environment/Brutalist/01_CITY_PBR/SM_CITY_TightEstate.SM_CITY_TightEstate",
+    "/Game/Environment/Brutalist/01_CITY_PBR/SM_CITY_TowerCluster.SM_CITY_TowerCluster",
+    "/Game/Environment/Brutalist/02_CITY_KOMIKAZE/SM_KMZ_CivicSuperblock.SM_KMZ_CivicSuperblock",
+    "/Game/Environment/Brutalist/02_CITY_KOMIKAZE/SM_KMZ_LowSprawl.SM_KMZ_LowSprawl",
+    "/Game/Environment/Brutalist/02_CITY_KOMIKAZE/SM_KMZ_TightEstate.SM_KMZ_TightEstate",
+    "/Game/Environment/Brutalist/02_CITY_KOMIKAZE/SM_KMZ_TowerCluster.SM_KMZ_TowerCluster",
+    "/Game/Environment/Brutalist/03_OFFICE_BLOCK/SM_OFFICE_BarbicanScale.SM_OFFICE_BarbicanScale",
+    "/Game/Environment/Brutalist/03_OFFICE_BLOCK/SM_OFFICE_Bunker.SM_OFFICE_Bunker",
+    "/Game/Environment/Brutalist/03_OFFICE_BLOCK/SM_OFFICE_CivicSlab.SM_OFFICE_CivicSlab",
+    "/Game/Environment/Brutalist/03_OFFICE_BLOCK/SM_OFFICE_SlenderTower.SM_OFFICE_SlenderTower",
+    "/Game/Environment/Brutalist/04_INTERIOR_CUBICLES/SM_CUBICLE_Canonical.SM_CUBICLE_Canonical",
+    "/Game/Environment/Brutalist/04_INTERIOR_CUBICLES/SM_CUBICLE_MazeShift.SM_CUBICLE_MazeShift",
+    "/Game/Environment/Brutalist/04_INTERIOR_CUBICLES/SM_CUBICLE_OpenPlan.SM_CUBICLE_OpenPlan",
+    "/Game/Environment/Brutalist/04_INTERIOR_CUBICLES/SM_CUBICLE_Swarm.SM_CUBICLE_Swarm",
+    "/Game/Environment/Brutalist/05_FACADE_VARIATION/SM_FAC_CivicColonnade.SM_FAC_CivicColonnade",
+    "/Game/Environment/Brutalist/05_FACADE_VARIATION/SM_FAC_PunchedEstate.SM_FAC_PunchedEstate",
+    "/Game/Environment/Brutalist/05_FACADE_VARIATION/SM_FAC_TowerRibbon.SM_FAC_TowerRibbon",
+    "/Game/Environment/Brutalist/06_ROOFS/SM_ROOF_BarrelVault.SM_ROOF_BarrelVault",
+    "/Game/Environment/Brutalist/06_ROOFS/SM_ROOF_FlatParapet.SM_ROOF_FlatParapet",
+    "/Game/Environment/Brutalist/06_ROOFS/SM_ROOF_LowPitch.SM_ROOF_LowPitch",
+    "/Game/Environment/Brutalist/06_ROOFS/SM_ROOF_PlantDeck.SM_ROOF_PlantDeck",
+    "/Game/Environment/Brutalist/06_ROOFS/SM_ROOF_PyramidHip.SM_ROOF_PyramidHip",
+    "/Game/Environment/Brutalist/06_ROOFS/SM_ROOF_Sawtooth.SM_ROOF_Sawtooth"
+  ],
+  "verify": {
+    "count_ok": true,
+    "all_on_disk": true,
+    "unassigned_materials": [],
+    "materials_ok": true,
+    "errors": [],
+    "ok": true
+  }
+}

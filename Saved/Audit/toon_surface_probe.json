@@ -1,0 +1,31 @@
+{
+  "ok": false,
+  "errors": [
+    "probe_substrate_pins: type object 'MaterialEditingLibrary' has no attribute 'get_outputs_for_material_expression'",
+    "probe_transform_node: 'MaterialExpressionTransform' object has no attribute 'has_editor_property'",
+    "emissive probe: type object 'MaterialEditingLibrary' has no attribute 'connect_material_expression'"
+  ],
+  "substrate_node_count": 1,
+  "substrate_inputs": [
+    "<Object '/Game/Materials/Masters/M_Master_Toon_Universal.M_Master_Toon_Universal:MaterialExpressionLinearInterpolate_8' (0x000001E23411AE00) Class 'MaterialExpressionLinearInterpolate'>",
+    "<Object '/Game/Materials/Masters/M_Master_Toon_Universal.M_Master_Toon_Universal:MaterialExpressionLinearInterpolate_6' (0x000001E23411AB00) Class 'MaterialExpressionLinearInterpolate'>",
+    "<Object '/Game/Materials/Masters/M_Master_Toon_Universal.M_Master_Toon_Universal:MaterialExpressionPixelNormalWS_1' (0x000001E201E1FEA0) Class 'MaterialExpressionPixelNormalWS'>"
+  ],
+  "transform_node_availability": {
+    "MaterialExpressionTransform": true,
+    "MaterialExpressionNormalTransform": false,
+    "MaterialExpressionTransformVector": false
+  },
+  "emissive_front_material": {
+    "asset": "/Game/Materials/Masters/__Probe_Toon_Emissive.__Probe_Toon_Emissive",
+    "failed": "type object 'MaterialEditingLibrary' has no attribute 'connect_material_expression'"
+  },
+  "api": {
+    "create_material_expression": true,
+    "connect_material_expression": false,
+    "TextureSample": true,
+    "StaticSwitchParameter": true,
+    "asset_import_task": true,
+    "NormalTable": false
+  }
+}

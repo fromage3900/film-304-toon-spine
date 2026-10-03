@@ -1,0 +1,750 @@
+{
+  "ok": true,
+  "master_expression_count": 88,
+  "property_probe_errors": {
+    "world_position_offset": "Material: Failed to find property 'world_position_offset' fo",
+    "front_material": "Material: Failed to find property 'front_material' for attri",
+    "emissive_color": "Material: Failed to find property 'emissive_color' for attri",
+    "base_color": "Material: Failed to find property 'base_color' for attribute",
+    "roughness": "Material: Property 'Roughness' for attribute 'roughness' on ",
+    "normal": "Material: Property 'Normal' for attribute 'normal' on 'Mater",
+    "material_attributes": "Material: Failed to find property 'material_attributes' for "
+  },
+  "property_wired_roots": {},
+  "property_root_sink_count": 2,
+  "live_node_count": 71,
+  "dead_node_count": 17,
+  "parameters": {
+    "scalar": [
+      {
+        "name": "ParallaxScale",
+        "group": "Parallax",
+        "reaches_toon_closure": true,
+        "desc": ""
+      },
+      {
+        "name": "ParallaxSteps",
+        "group": "Parked",
+        "reaches_toon_closure": false,
+        "desc": ""
+      },
+      {
+        "name": "ParallaxHeight",
+        "group": "Parallax",
+        "reaches_toon_closure": true,
+        "desc": ""
+      },
+      {
+        "name": "GildingStrength",
+        "group": "Gilding",
+        "reaches_toon_closure": true,
+        "desc": ""
+      },
+      {
+        "name": "GoldEmissive",
+        "group": "Parked",
+        "reaches_toon_closure": false,
+        "desc": ""
+      },
+      {
+        "name": "OilPaintStrength",
+        "group": "OilPaint",
+        "reaches_toon_closure": true,
+        "desc": ""
+      },
+      {
+        "name": "StrokeStrength",
+        "group": "Parked",
+        "reaches_toon_closure": false,
+        "desc": ""
+      },
+      {
+        "name": "BrushScale",
+        "group": "Parked",
+        "reaches_toon_closure": false,
+        "desc": ""
+      },
+      {
+        "name": "TemporalStrength",
+        "group": "Temporal",
+        "reaches_toon_closure": true,
+        "desc": ""
+      },
+      {
+        "name": "WindSpeed",
+        "group": "Parked",
+        "reaches_toon_closure": false,
+        "desc": ""
+      },
+      {
+        "name": "NoiseScale",
+        "group": "Parked",
+        "reaches_toon_closure": false,
+        "desc": ""
+      },
+      {
+        "name": "SmearStrength",
+        "group": "Parked",
+        "reaches_toon_closure": false,
+        "desc": ""
+      },
+      {
+        "name": "BoilIntensity",
+        "group": "Parked",
+        "reaches_toon_closure": false,
+        "desc": ""
+      },
+      {
+        "name": "InkIntensity",
+        "group": "Surface",
+        "reaches_toon_closure": true,
+        "desc": ""
+      },
+      {
+        "name": "PoolingStrength",
+        "group": "Parked",
+        "reaches_toon_closure": false,
+        "desc": ""
+      },
+      {
+        "name": "Wetness",
+        "group": "Surface",
+        "reaches_toon_closure": true,
+        "desc": ""
+      },
+      {
+        "name": "OrnamentStyle",
+        "group": "Parked",
+        "reaches_toon_closure": false,
+        "desc": ""
+      },
+      {
+        "name": "OrnamentScale",
+        "group": "Parked",
+        "reaches_toon_closure": false,
+        "desc": ""
+      },
+      {
+        "name": "CurvatureSensitivity",
+        "group": "Parked",
+        "reaches_toon_closure": false,
+        "desc": ""
+      },
+      {
+        "name": "AudioReactivity",
+        "group": "Parked",
+        "reaches_toon_closure": false,
+        "desc": ""
+      },
+      {
+        "name": "BassWeight",
+        "group": "Parked",
+        "reaches_toon_closure": false,
+        "desc": ""
+      },
+      {
+        "name": "MidWeight",
+        "group": "Parked",
+        "reaches_toon_closure": false,
+        "desc": ""
+      },
+      {
+        "name": "TrebleWeight",
+        "group": "Parked",
+        "reaches_toon_closure": false,
+        "desc": ""
+      },
+      {
+        "name": "DryRoughness",
+        "group": "Surface",
+        "reaches_toon_closure": true,
+        "desc": ""
+      },
+      {
+        "name": "WetRoughness",
+        "group": "Surface",
+        "reaches_toon_closure": true,
+        "desc": ""
+      },
+      {
+        "name": "EdgeStrength",
+        "group": "Parked",
+        "reaches_toon_closure": false,
+        "desc": ""
+      },
+      {
+        "name": "BandScale",
+        "group": "SDF",
+        "reaches_toon_closure": true,
+        "desc": ""
+      },
+      {
+        "name": "BandStrength",
+        "group": "SDF",
+        "reaches_toon_closure": true,
+        "desc": ""
+      },
+      {
+        "name": "EmissiveIntensity",
+        "group": "Emissive",
+        "reaches_toon_closure": true,
+        "desc": ""
+      },
+      {
+        "name": "RampStrength",
+        "group": "Ramp",
+        "reaches_toon_closure": true,
+        "desc": ""
+      },
+      {
+        "name": "PatternScale",
+        "group": "Pattern",
+        "reaches_toon_closure": true,
+        "desc": ""
+      },
+      {
+        "name": "PatternAngle",
+        "group": "Pattern",
+        "reaches_toon_closure": true,
+        "desc": ""
+      },
+      {
+        "name": "PatternIndex",
+        "group": "Pattern",
+        "reaches_toon_closure": true,
+        "desc": ""
+      },
+      {
+        "name": "PatternDensity",
+        "group": "Pattern",
+        "reaches_toon_closure": true,
+        "desc": ""
+      },
+      {
+        "name": "PatternStrength",
+        "group": "Pattern",
+        "reaches_toon_closure": true,
+        "desc": ""
+      },
+      {
+        "name": "PatternHatchShadowDrive",
+        "group": "Pattern",
+        "reaches_toon_closure": true,
+        "desc": ""
+      },
+      {
+        "name": "PatternHatchShadowDensity",
+        "group": "Pattern",
+        "reaches_toon_closure": true,
+        "desc": ""
+      },
+      {
+        "name": "ContactShadowDistance",
+        "group": "Contact",
+        "reaches_toon_closure": true,
+        "desc": ""
+      },
+      {
+        "name": "ContactShadowRadius",
+        "group": "Contact",
+        "reaches_toon_closure": true,
+        "desc": ""
+      },
+      {
+        "name": "ContactShadowStrength",
+        "group": "Contact",
+        "reaches_toon_closure": true,
+        "desc": ""
+      }
+    ],
+    "vector": [
+      {
+        "name": "BaseTint",
+        "group": "Palette",
+        "reaches_toon_closure": true,
+        "desc": ""
+      },
+      {
+        "name": "AccentTint",
+        "group": "Palette",
+        "reaches_toon_closure": true,
+        "desc": ""
+      },
+      {
+        "name": "InkColor",
+        "group": "Palette",
+        "reaches_toon_closure": true,
+        "desc": ""
+      },
+      {
+        "name": "GoldTint",
+        "group": "Palette",
+        "reaches_toon_closure": true,
+        "desc": ""
+      },
+      {
+        "name": "EmissiveColor",
+        "group": "Emissive",
+        "reaches_toon_closure": true,
+        "desc": ""
+      },
+      {
+        "name": "KeyLightDir",
+        "group": "Pattern",
+        "reaches_toon_closure": true,
+        "desc": ""
+      }
+    ],
+    "texture": [
+      {
+        "name": "RampTexture",
+        "group": "Ramp",
+        "reaches_toon_closure": true,
+        "desc": ""
+      }
+    ],
+    "static_switch": [
+      {
+        "name": "bUsePaintedRamp",
+        "group": "Ramp",
+        "reaches_toon_closure": true,
+        "desc": ""
+      },
+      {
+        "name": "bContactShadow",
+        "group": "Contact",
+        "reaches_toon_closure": true,
+        "desc": ""
+      }
+    ]
+  },
+  "inert_scalars": [
+    "AudioReactivity",
+    "BassWeight",
+    "BoilIntensity",
+    "BrushScale",
+    "CurvatureSensitivity",
+    "EdgeStrength",
+    "GoldEmissive",
+    "MidWeight",
+    "NoiseScale",
+    "OrnamentScale",
+    "OrnamentStyle",
+    "ParallaxSteps",
+    "PoolingStrength",
+    "SmearStrength",
+    "StrokeStrength",
+    "TrebleWeight",
+    "WindSpeed"
+  ],
+  "inert_vectors": [],
+  "counts": {
+    "scalar": 40,
+    "vector": 6,
+    "texture": 1,
+    "static_switch": 2
+  },
+  "master_toon_profile": "TP_Default",
+  "instances": {
+    "MI_Outline_Thin": {
+      "loads": true,
+      "parent": null,
+      "override_toon_profile": false,
+      "overrides_scalar": [
+        "Thickness"
+      ],
+      "overrides_vector": [
+        "InkColor"
+      ],
+      "PatternStrength": 0.0,
+      "PatternIndex": 0.0,
+      "PatternDensity": 0.0,
+      "PatternScale": 0.0,
+      "RampStrength": 0.0,
+      "EmissiveIntensity": 0.0
+    },
+    "MI_Outline_Heavy": {
+      "loads": true,
+      "parent": null,
+      "override_toon_profile": false,
+      "overrides_scalar": [
+        "Thickness"
+      ],
+      "overrides_vector": [
+        "InkColor"
+      ],
+      "PatternStrength": 0.0,
+      "PatternIndex": 0.0,
+      "PatternDensity": 0.0,
+      "PatternScale": 0.0,
+      "RampStrength": 0.0,
+      "EmissiveIntensity": 0.0
+    },
+    "MI_Toon_Hero": {
+      "loads": true,
+      "parent": "M_Master_Toon_Universal",
+      "override_toon_profile": false,
+      "overrides_scalar": [
+        "DryRoughness",
+        "GildingStrength",
+        "InkIntensity",
+        "OilPaintStrength"
+      ],
+      "overrides_vector": [
+        "AccentTint",
+        "BaseTint",
+        "InkColor"
+      ],
+      "PatternStrength": 0.0,
+      "PatternIndex": 0.0,
+      "PatternDensity": 0.5,
+      "PatternScale": 12.0,
+      "RampStrength": 0.0,
+      "EmissiveIntensity": 0.0
+    },
+    "MI_Toon_Environment": {
+      "loads": true,
+      "parent": "M_Master_Toon_Universal",
+      "override_toon_profile": false,
+      "overrides_scalar": [
+        "BandScale",
+        "BandStrength",
+        "DryRoughness",
+        "InkIntensity"
+      ],
+      "overrides_vector": [
+        "AccentTint",
+        "BaseTint"
+      ],
+      "PatternStrength": 0.0,
+      "PatternIndex": 0.0,
+      "PatternDensity": 0.5,
+      "PatternScale": 12.0,
+      "RampStrength": 0.0,
+      "EmissiveIntensity": 0.0
+    },
+    "MI_Toon_Foliage": {
+      "loads": true,
+      "parent": "M_Master_Toon_Universal",
+      "override_toon_profile": false,
+      "overrides_scalar": [
+        "DryRoughness",
+        "InkIntensity"
+      ],
+      "overrides_vector": [
+        "AccentTint",
+        "BaseTint"
+      ],
+      "PatternStrength": 0.0,
+      "PatternIndex": 0.0,
+      "PatternDensity": 0.5,
+      "PatternScale": 12.0,
+      "RampStrength": 0.0,
+      "EmissiveIntensity": 0.0
+    },
+    "MI_Toon_Hatched": {
+      "loads": true,
+      "parent": "M_Master_Toon_Universal",
+      "override_toon_profile": false,
+      "overrides_scalar": [
+        "DryRoughness",
+        "InkIntensity"
+      ],
+      "overrides_vector": [
+        "AccentTint",
+        "BaseTint"
+      ],
+      "PatternStrength": 0.0,
+      "PatternIndex": 0.0,
+      "PatternDensity": 0.5,
+      "PatternScale": 12.0,
+      "RampStrength": 0.0,
+      "EmissiveIntensity": 0.0
+    },
+    "MI_Toon_Gold": {
+      "loads": true,
+      "parent": "M_Master_Toon_Universal",
+      "override_toon_profile": false,
+      "overrides_scalar": [
+        "DryRoughness",
+        "GildingStrength",
+        "WetRoughness"
+      ],
+      "overrides_vector": [
+        "AccentTint",
+        "BaseTint",
+        "GoldTint"
+      ],
+      "PatternStrength": 0.0,
+      "PatternIndex": 0.0,
+      "PatternDensity": 0.5,
+      "PatternScale": 12.0,
+      "RampStrength": 0.0,
+      "EmissiveIntensity": 0.0
+    },
+    "MI_Toon_Office_Carpet": {
+      "loads": true,
+      "parent": "M_Master_Toon_Universal",
+      "override_toon_profile": false,
+      "overrides_scalar": [
+        "DryRoughness",
+        "InkIntensity",
+        "PatternDensity",
+        "PatternIndex",
+        "PatternScale",
+        "PatternStrength"
+      ],
+      "overrides_vector": [
+        "AccentTint",
+        "BaseTint"
+      ],
+      "PatternStrength": 0.25,
+      "PatternIndex": 6.0,
+      "PatternDensity": 0.55,
+      "PatternScale": 24.0,
+      "RampStrength": 0.0,
+      "EmissiveIntensity": 0.0
+    },
+    "MI_Toon_TwoTone": {
+      "loads": true,
+      "parent": "M_Master_Toon_Universal",
+      "override_toon_profile": false,
+      "overrides_scalar": [
+        "DryRoughness",
+        "InkIntensity"
+      ],
+      "overrides_vector": [
+        "AccentTint",
+        "BaseTint"
+      ],
+      "PatternStrength": 0.0,
+      "PatternIndex": 0.0,
+      "PatternDensity": 0.5,
+      "PatternScale": 12.0,
+      "RampStrength": 0.0,
+      "EmissiveIntensity": 0.0
+    },
+    "MI_Toon_Painterly": {
+      "loads": true,
+      "parent": "M_Master_Toon_Universal",
+      "override_toon_profile": false,
+      "overrides_scalar": [
+        "DryRoughness",
+        "InkIntensity",
+        "OilPaintStrength"
+      ],
+      "overrides_vector": [
+        "AccentTint",
+        "BaseTint"
+      ],
+      "PatternStrength": 0.0,
+      "PatternIndex": 0.0,
+      "PatternDensity": 0.5,
+      "PatternScale": 12.0,
+      "RampStrength": 0.0,
+      "EmissiveIntensity": 0.0
+    },
+    "MI_Toon_Office_Laminate": {
+      "loads": true,
+      "parent": "M_Master_Toon_Universal",
+      "override_toon_profile": false,
+      "overrides_scalar": [
+        "BandScale",
+        "BandStrength",
+        "DryRoughness",
+        "InkIntensity"
+      ],
+      "overrides_vector": [
+        "AccentTint",
+        "BaseTint"
+      ],
+      "PatternStrength": 0.0,
+      "PatternIndex": 0.0,
+      "PatternDensity": 0.5,
+      "PatternScale": 12.0,
+      "RampStrength": 0.0,
+      "EmissiveIntensity": 0.0
+    },
+    "MI_Toon_Office_DropCeiling": {
+      "loads": true,
+      "parent": "M_Master_Toon_Universal",
+      "override_toon_profile": false,
+      "overrides_scalar": [
+        "BandScale",
+        "BandStrength",
+        "DryRoughness",
+        "InkIntensity"
+      ],
+      "overrides_vector": [
+        "AccentTint",
+        "BaseTint"
+      ],
+      "PatternStrength": 0.0,
+      "PatternIndex": 0.0,
+      "PatternDensity": 0.5,
+      "PatternScale": 12.0,
+      "RampStrength": 0.0,
+      "EmissiveIntensity": 0.0
+    },
+    "MI_Toon_Office_Troffer": {
+      "loads": true,
+      "parent": "M_Master_Toon_Universal",
+      "override_toon_profile": false,
+      "overrides_scalar": [
+        "DryRoughness",
+        "EmissiveIntensity",
+        "InkIntensity"
+      ],
+      "overrides_vector": [
+        "AccentTint",
+        "BaseTint",
+        "EmissiveColor"
+      ],
+      "PatternStrength": 0.0,
+      "PatternIndex": 0.0,
+      "PatternDensity": 0.5,
+      "PatternScale": 12.0,
+      "RampStrength": 0.0,
+      "EmissiveIntensity": 1.0
+    },
+    "MI_Toon_Office_PowderCoat": {
+      "loads": true,
+      "parent": "M_Master_Toon_Universal",
+      "override_toon_profile": false,
+      "overrides_scalar": [
+        "DryRoughness",
+        "InkIntensity",
+        "PatternDensity",
+        "PatternIndex",
+        "PatternStrength"
+      ],
+      "overrides_vector": [
+        "AccentTint",
+        "BaseTint"
+      ],
+      "PatternStrength": 0.35,
+      "PatternIndex": 5.0,
+      "PatternDensity": 0.8,
+      "PatternScale": 12.0,
+      "RampStrength": 0.0,
+      "EmissiveIntensity": 0.0
+    },
+    "MI_Toon_Office_Screen": {
+      "loads": true,
+      "parent": "M_Master_Toon_Universal",
+      "override_toon_profile": false,
+      "overrides_scalar": [
+        "DryRoughness",
+        "EmissiveIntensity",
+        "InkIntensity"
+      ],
+      "overrides_vector": [
+        "AccentTint",
+        "BaseTint",
+        "EmissiveColor"
+      ],
+      "PatternStrength": 0.0,
+      "PatternIndex": 0.0,
+      "PatternDensity": 0.5,
+      "PatternScale": 12.0,
+      "RampStrength": 0.0,
+      "EmissiveIntensity": 1.0
+    },
+    "MI_Toon_Office_Polypropylene": {
+      "loads": true,
+      "parent": "M_Master_Toon_Universal",
+      "override_toon_profile": false,
+      "overrides_scalar": [
+        "DryRoughness",
+        "InkIntensity",
+        "PatternIndex",
+        "PatternScale",
+        "PatternStrength"
+      ],
+      "overrides_vector": [
+        "AccentTint",
+        "BaseTint"
+      ],
+      "PatternStrength": 0.2,
+      "PatternIndex": 11.0,
+      "PatternDensity": 0.5,
+      "PatternScale": 40.0,
+      "RampStrength": 0.0,
+      "EmissiveIntensity": 0.0
+    },
+    "MI_Toon_Office_Whiteboard": {
+      "loads": true,
+      "parent": "M_Master_Toon_Universal",
+      "override_toon_profile": false,
+      "overrides_scalar": [
+        "DryRoughness",
+        "InkIntensity"
+      ],
+      "overrides_vector": [
+        "AccentTint",
+        "BaseTint"
+      ],
+      "PatternStrength": 0.0,
+      "PatternIndex": 0.0,
+      "PatternDensity": 0.5,
+      "PatternScale": 12.0,
+      "RampStrength": 0.0,
+      "EmissiveIntensity": 0.0
+    },
+    "MI_Toon_Stone": {
+      "loads": true,
+      "parent": "M_Master_Toon_Universal",
+      "override_toon_profile": false,
+      "overrides_scalar": [
+        "BandScale",
+        "BandStrength",
+        "DryRoughness",
+        "InkIntensity"
+      ],
+      "overrides_vector": [
+        "AccentTint",
+        "BaseTint"
+      ],
+      "PatternStrength": 0.0,
+      "PatternIndex": 0.0,
+      "PatternDensity": 0.5,
+      "PatternScale": 12.0,
+      "RampStrength": 0.0,
+      "EmissiveIntensity": 0.0
+    }
+  },
+  "instances_with_pattern_on": [
+    "MI_Toon_Office_Carpet",
+    "MI_Toon_Office_Polypropylene",
+    "MI_Toon_Office_PowderCoat"
+  ],
+  "instances_with_ramp_on": [],
+  "instances_with_emissive_on": [
+    "MI_Toon_Office_Screen",
+    "MI_Toon_Office_Troffer"
+  ],
+  "pattern_function": {
+    "expression_count": 464,
+    "inputs": [
+      "UV",
+      "Scale",
+      "Softness",
+      "Angle",
+      "CellIndex",
+      "Density"
+    ],
+    "outputs": [
+      "Pattern",
+      "Mask"
+    ]
+  },
+  "level": "/Game/Maps/L_Toon_Shot_Env.L_Toon_Shot_Env",
+  "level_actor_counts": {
+    "CineCameraActor": 4,
+    "DirectionalLight": 1,
+    "SkyAtmosphere": 1,
+    "SkyLight": 1,
+    "StaticMeshActor": 9
+  },
+  "level_actor_total": 16
+}

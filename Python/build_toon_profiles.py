@@ -276,6 +276,47 @@ PROFILES = {
         "Whiteboard gloss. Light, crisp and reflective; the brightest floor in "
         "the set so marker ink and the room's key both read.",
     ),
+
+    # ------------------------------------------------------- film / character
+    # Added 2026-10-03. TP_Melusina is the film's CANONICAL character profile
+    # and was the one named gap: the shot manifest declares
+    #   framing_standard.shading_pipeline.toon_profile = "TP_Melusina"
+    #   framing_standard.shading_pipeline.shadow_tint_hex = "#352D40"
+    # Humber_FinalYear_Prep/GROUP_STAGING_GUIDE.md section 3 mandates it for
+    # character shading, the slot-09 material brief requires it, and
+    # Tools/dogfood_toon_spine.py asserts it -- while no such asset existed in
+    # either repo. Authored here to close that gap.
+    #
+    # Hue note, same as the office block: ToonProfile ramps are SCALAR-valued
+    # (_step4 writes one Value into all three colour curves), so #352D40 cannot
+    # live here as a colour. This profile carries the warm-violet *value*
+    # structure; the hue itself belongs in the instance BaseTint.
+
+    "TP_Melusina": (
+        # Halftone transition, not hard banding - the guide asks for "halftone
+        # transitions without banding", so the stops are short but not instant.
+        # Floor lifted well off black: #352D40 is a value, never 0.
+        [(0.00, 0.24), (0.26, 0.34), (0.42, 0.50), (0.64, 0.66), (0.85, 0.87), (1.00, 1.00)],
+        # Specular lifted for the close-ups (SH050 macro_emotion) to hold.
+        [(0.55, None), (0.64, 0.62), (1.00, 0.95)],
+        6.0, 0.90, 1.20, 0.55,
+        "CANONICAL hero character profile. Warm-violet shadow family (#352D40), "
+        "halftone transition rather than hard banding, shadow floor lifted off "
+        "black. Specular lifted so facial close-ups hold. Binds the manifest's "
+        "declared hatching_pattern (T_HatchPattern).",
+        {"hatch_texture": "T_HatchPattern"},
+    ),
+    "TP_Character": (
+        # Sibling to TP_Melusina so a second/background character does not
+        # inherit hero contrast and blow out against the hero in the same frame.
+        [(0.00, 0.30), (0.34, 0.46), (0.68, 0.72), (1.00, 1.00)],
+        [(0.68, None), (0.78, 0.35), (1.00, 0.40)],
+        5.0, 1.00, 0.70, 0.30,
+        "Secondary / background characters. Lower contrast and much less "
+        "specular than TP_Melusina so background cast recedes behind the hero "
+        "instead of competing with them.",
+        {"hatch_texture": "T_Hatch_Diagonal"},
+    ),
 }
 
 

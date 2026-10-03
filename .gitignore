@@ -28,6 +28,8 @@
 !/Saved/Reports/*.txt
 # ... and never the caches/intermediates that live alongside them.
 /Saved/Previews/
+# Machine-specific editor launch config (engine path differs per machine).
+/.claireon/
 /Saved/Blend/
 /Saved/Intermediate/
 /Saved/Logs/

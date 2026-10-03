@@ -1,0 +1,473 @@
+{
+ "stamp": "2026-09-30",
+ "blend": "P:\\film-304-toon-spine\\Saved\\Blend\\BRUTALIST_CITY_REVIEW_2026-09-30.blend",
+ "export_dir": "P:\\film-304-toon-spine\\Saved\\Export\\brutalist",
+ "scale_note": "Blender metres x100 -> Unreal centimetres",
+ "collections": {
+  "01_CITY_PBR": [
+   "CITY_CivicSuperblock",
+   "CITY_LowSprawl",
+   "CITY_TightEstate",
+   "CITY_TowerCluster"
+  ],
+  "02_CITY_KOMIKAZE": [
+   "KMZ_CivicSuperblock",
+   "KMZ_LowSprawl",
+   "KMZ_TightEstate",
+   "KMZ_TowerCluster"
+  ],
+  "03_OFFICE_BLOCK": [
+   "OFFICE_BarbicanScale",
+   "OFFICE_Bunker",
+   "OFFICE_CivicSlab",
+   "OFFICE_SlenderTower"
+  ],
+  "04_INTERIOR_CUBICLES": [
+   "CUBICLE_Canonical",
+   "CUBICLE_MazeShift",
+   "CUBICLE_OpenPlan",
+   "CUBICLE_Swarm"
+  ],
+  "05_FACADE_VARIATION": [
+   "FAC_CivicColonnade",
+   "FAC_PunchedEstate",
+   "FAC_TowerRibbon"
+  ],
+  "06_ROOFS": [
+   "ROOF_BarrelVault",
+   "ROOF_FlatParapet",
+   "ROOF_LowPitch",
+   "ROOF_PlantDeck",
+   "ROOF_PyramidHip",
+   "ROOF_Sawtooth"
+  ]
+ },
+ "objects": [
+  {
+   "object": "CITY_CivicSuperblock",
+   "collection": "01_CITY_PBR",
+   "fbx": "Saved/Export/brutalist/01_CITY_PBR/CITY_CivicSuperblock.fbx",
+   "evaluated_verts": 152,
+   "dimensions_m": [
+    126.024,
+    118.002,
+    27.839
+   ],
+   "materials_blender": [
+    "BR_Concrete",
+    "BR_Asphalt",
+    "BR_Glazing"
+   ],
+   "bytes": 23340,
+   "ok": true
+  },
+  {
+   "object": "CITY_LowSprawl",
+   "collection": "01_CITY_PBR",
+   "fbx": "Saved/Export/brutalist/01_CITY_PBR/CITY_LowSprawl.fbx",
+   "evaluated_verts": 1504,
+   "dimensions_m": [
+    156.024,
+    146.002,
+    16.375
+   ],
+   "materials_blender": [
+    "BR_Concrete",
+    "BR_Asphalt",
+    "BR_Glazing"
+   ],
+   "bytes": 75724,
+   "ok": true
+  },
+  {
+   "object": "CITY_TightEstate",
+   "collection": "01_CITY_PBR",
+   "fbx": "Saved/Export/brutalist/01_CITY_PBR/CITY_TightEstate.fbx",
+   "evaluated_verts": 984,
+   "dimensions_m": [
+    90.021,
+    90.002,
+    41.969
+   ],
+   "materials_blender": [
+    "BR_Concrete",
+    "BR_Asphalt",
+    "BR_Glazing"
+   ],
+   "bytes": 55116,
+   "ok": true
+  },
+  {
+   "object": "CITY_TowerCluster",
+   "collection": "01_CITY_PBR",
+   "fbx": "Saved/Export/brutalist/01_CITY_PBR/CITY_TowerCluster.fbx",
+   "evaluated_verts": 576,
+   "dimensions_m": [
+    114.023,
+    108.002,
+    84.606
+   ],
+   "materials_blender": [
+    "BR_Concrete",
+    "BR_Asphalt",
+    "BR_Glazing"
+   ],
+   "bytes": 39996,
+   "ok": true
+  },
+  {
+   "object": "KMZ_CivicSuperblock",
+   "collection": "02_CITY_KOMIKAZE",
+   "fbx": "Saved/Export/brutalist/02_CITY_KOMIKAZE/KMZ_CivicSuperblock.fbx",
+   "evaluated_verts": 152,
+   "dimensions_m": [
+    126.024,
+    118.002,
+    27.839
+   ],
+   "materials_blender": [
+    "BR_Concrete_KOMIKAZE",
+    "BR_Asphalt_KOMIKAZE",
+    "BR_Glazing_KOMIKAZE"
+   ],
+   "bytes": 23356,
+   "ok": true
+  },
+  {
+   "object": "KMZ_LowSprawl",
+   "collection": "02_CITY_KOMIKAZE",
+   "fbx": "Saved/Export/brutalist/02_CITY_KOMIKAZE/KMZ_LowSprawl.fbx",
+   "evaluated_verts": 1504,
+   "dimensions_m": [
+    156.024,
+    146.002,
+    16.375
+   ],
+   "materials_blender": [
+    "BR_Concrete_KOMIKAZE",
+    "BR_Asphalt_KOMIKAZE",
+    "BR_Glazing_KOMIKAZE"
+   ],
+   "bytes": 75740,
+   "ok": true
+  },
+  {
+   "object": "KMZ_TightEstate",
+   "collection": "02_CITY_KOMIKAZE",
+   "fbx": "Saved/Export/brutalist/02_CITY_KOMIKAZE/KMZ_TightEstate.fbx",
+   "evaluated_verts": 984,
+   "dimensions_m": [
+    90.021,
+    90.002,
+    41.969
+   ],
+   "materials_blender": [
+    "BR_Concrete_KOMIKAZE",
+    "BR_Asphalt_KOMIKAZE",
+    "BR_Glazing_KOMIKAZE"
+   ],
+   "bytes": 55132,
+   "ok": true
+  },
+  {
+   "object": "KMZ_TowerCluster",
+   "collection": "02_CITY_KOMIKAZE",
+   "fbx": "Saved/Export/brutalist/02_CITY_KOMIKAZE/KMZ_TowerCluster.fbx",
+   "evaluated_verts": 576,
+   "dimensions_m": [
+    114.023,
+    108.002,
+    84.606
+   ],
+   "materials_blender": [
+    "BR_Concrete_KOMIKAZE",
+    "BR_Asphalt_KOMIKAZE",
+    "BR_Glazing_KOMIKAZE"
+   ],
+   "bytes": 40012,
+   "ok": true
+  },
+  {
+   "object": "OFFICE_BarbicanScale",
+   "collection": "03_OFFICE_BLOCK",
+   "fbx": "Saved/Export/brutalist/03_OFFICE_BLOCK/OFFICE_BarbicanScale.fbx",
+   "evaluated_verts": 1224,
+   "dimensions_m": [
+    27.999,
+    14.622,
+    34.8
+   ],
+   "materials_blender": [
+    "BR_Concrete"
+   ],
+   "bytes": 50204,
+   "ok": true
+  },
+  {
+   "object": "OFFICE_Bunker",
+   "collection": "03_OFFICE_BLOCK",
+   "fbx": "Saved/Export/brutalist/03_OFFICE_BLOCK/OFFICE_Bunker.fbx",
+   "evaluated_verts": 336,
+   "dimensions_m": [
+    14.847,
+    10.81,
+    12.9
+   ],
+   "materials_blender": [
+    "BR_Concrete"
+   ],
+   "bytes": 26124,
+   "ok": true
+  },
+  {
+   "object": "OFFICE_CivicSlab",
+   "collection": "03_OFFICE_BLOCK",
+   "fbx": "Saved/Export/brutalist/03_OFFICE_BLOCK/OFFICE_CivicSlab.fbx",
+   "evaluated_verts": 904,
+   "dimensions_m": [
+    21.171,
+    12.57,
+    25.6
+   ],
+   "materials_blender": [
+    "BR_Concrete"
+   ],
+   "bytes": 41196,
+   "ok": true
+  },
+  {
+   "object": "OFFICE_SlenderTower",
+   "collection": "03_OFFICE_BLOCK",
+   "fbx": "Saved/Export/brutalist/03_OFFICE_BLOCK/OFFICE_SlenderTower.fbx",
+   "evaluated_verts": 888,
+   "dimensions_m": [
+    12.572,
+    8.556,
+    42.4
+   ],
+   "materials_blender": [
+    "BR_Concrete"
+   ],
+   "bytes": 40892,
+   "ok": true
+  },
+  {
+   "object": "CUBICLE_Canonical",
+   "collection": "04_INTERIOR_CUBICLES",
+   "fbx": "Saved/Export/brutalist/04_INTERIOR_CUBICLES/CUBICLE_Canonical.fbx",
+   "evaluated_verts": 1898,
+   "dimensions_m": [
+    10.235,
+    6.601,
+    2.19
+   ],
+   "materials_blender": [
+    "BR_Paving"
+   ],
+   "bytes": 80076,
+   "ok": true
+  },
+  {
+   "object": "CUBICLE_MazeShift",
+   "collection": "04_INTERIOR_CUBICLES",
+   "fbx": "Saved/Export/brutalist/04_INTERIOR_CUBICLES/CUBICLE_MazeShift.fbx",
+   "evaluated_verts": 3624,
+   "dimensions_m": [
+    17.643,
+    10.602,
+    2.19
+   ],
+   "materials_blender": [
+    "BR_Paving"
+   ],
+   "bytes": 138876,
+   "ok": true
+  },
+  {
+   "object": "CUBICLE_OpenPlan",
+   "collection": "04_INTERIOR_CUBICLES",
+   "fbx": "Saved/Export/brutalist/04_INTERIOR_CUBICLES/CUBICLE_OpenPlan.fbx",
+   "evaluated_verts": 2502,
+   "dimensions_m": [
+    13.637,
+    6.901,
+    1.22
+   ],
+   "materials_blender": [
+    "BR_Paving"
+   ],
+   "bytes": 103756,
+   "ok": true
+  },
+  {
+   "object": "CUBICLE_Swarm",
+   "collection": "04_INTERIOR_CUBICLES",
+   "fbx": "Saved/Export/brutalist/04_INTERIOR_CUBICLES/CUBICLE_Swarm.fbx",
+   "evaluated_verts": 6668,
+   "dimensions_m": [
+    24.86,
+    11.401,
+    2.04
+   ],
+   "materials_blender": [
+    "BR_Paving"
+   ],
+   "bytes": 239628,
+   "ok": true
+  },
+  {
+   "object": "FAC_CivicColonnade",
+   "collection": "05_FACADE_VARIATION",
+   "fbx": "Saved/Export/brutalist/05_FACADE_VARIATION/FAC_CivicColonnade.fbx",
+   "evaluated_verts": 552,
+   "dimensions_m": [
+    126.024,
+    118.002,
+    28.189
+   ],
+   "materials_blender": [
+    "BR_Concrete",
+    "BR_Asphalt",
+    "BR_Glazing"
+   ],
+   "bytes": 36140,
+   "ok": true
+  },
+  {
+   "object": "FAC_PunchedEstate",
+   "collection": "05_FACADE_VARIATION",
+   "fbx": "Saved/Export/brutalist/05_FACADE_VARIATION/FAC_PunchedEstate.fbx",
+   "evaluated_verts": 1848,
+   "dimensions_m": [
+    105.021,
+    105.002,
+    37.05
+   ],
+   "materials_blender": [
+    "BR_Concrete",
+    "BR_Asphalt",
+    "BR_Glazing"
+   ],
+   "bytes": 89196,
+   "ok": true
+  },
+  {
+   "object": "FAC_TowerRibbon",
+   "collection": "05_FACADE_VARIATION",
+   "fbx": "Saved/Export/brutalist/05_FACADE_VARIATION/FAC_TowerRibbon.fbx",
+   "evaluated_verts": 1152,
+   "dimensions_m": [
+    114.023,
+    108.002,
+    85.006
+   ],
+   "materials_blender": [
+    "BR_Concrete",
+    "BR_Asphalt",
+    "BR_Glazing"
+   ],
+   "bytes": 51052,
+   "ok": true
+  },
+  {
+   "object": "ROOF_BarrelVault",
+   "collection": "06_ROOFS",
+   "fbx": "Saved/Export/brutalist/06_ROOFS/ROOF_BarrelVault.fbx",
+   "evaluated_verts": 48,
+   "dimensions_m": [
+    21.041,
+    17.011,
+    7.05
+   ],
+   "materials_blender": [
+    "BR_Concrete"
+   ],
+   "bytes": 18188,
+   "ok": true
+  },
+  {
+   "object": "ROOF_FlatParapet",
+   "collection": "06_ROOFS",
+   "fbx": "Saved/Export/brutalist/06_ROOFS/ROOF_FlatParapet.fbx",
+   "evaluated_verts": 56,
+   "dimensions_m": [
+    19.244,
+    13.254,
+    4.11
+   ],
+   "materials_blender": [
+    "BR_Concrete"
+   ],
+   "bytes": 17788,
+   "ok": true
+  },
+  {
+   "object": "ROOF_LowPitch",
+   "collection": "06_ROOFS",
+   "fbx": "Saved/Export/brutalist/06_ROOFS/ROOF_LowPitch.fbx",
+   "evaluated_verts": 24,
+   "dimensions_m": [
+    23.845,
+    15.809,
+    3.405
+   ],
+   "materials_blender": [
+    "BR_Concrete"
+   ],
+   "bytes": 16892,
+   "ok": true
+  },
+  {
+   "object": "ROOF_PlantDeck",
+   "collection": "06_ROOFS",
+   "fbx": "Saved/Export/brutalist/06_ROOFS/ROOF_PlantDeck.fbx",
+   "evaluated_verts": 72,
+   "dimensions_m": [
+    26.606,
+    13.208,
+    4.6
+   ],
+   "materials_blender": [
+    "BR_Concrete"
+   ],
+   "bytes": 18588,
+   "ok": true
+  },
+  {
+   "object": "ROOF_PyramidHip",
+   "collection": "06_ROOFS",
+   "fbx": "Saved/Export/brutalist/06_ROOFS/ROOF_PyramidHip.fbx",
+   "evaluated_verts": 24,
+   "dimensions_m": [
+    26.038,
+    22.011,
+    6.34
+   ],
+   "materials_blender": [
+    "BR_Concrete"
+   ],
+   "bytes": 16924,
+   "ok": true
+  },
+  {
+   "object": "ROOF_Sawtooth",
+   "collection": "06_ROOFS",
+   "fbx": "Saved/Export/brutalist/06_ROOFS/ROOF_Sawtooth.fbx",
+   "evaluated_verts": 248,
+   "dimensions_m": [
+    26.857,
+    23.012,
+    1.378
+   ],
+   "materials_blender": [
+    "BR_Concrete"
+   ],
+   "bytes": 22204,
+   "ok": true
+  }
+ ],
+ "errors": [],
+ "object_count": 25,
+ "total_evaluated_verts": 28500,
+ "ok": true
+}
