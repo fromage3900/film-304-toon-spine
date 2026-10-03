@@ -22,6 +22,10 @@ Inputs
     Angle       scalar - pattern rotation in degrees
     CellIndex   scalar - selects which pattern to return
     Density     scalar - ink coverage 0..1; the level the field is cut against
+    SDFMap      texture2D - baked stroke field for CellIndex 12; MUST be
+                connected by every caller or the function fails to compile
+                ("Missing function input", the same hard error an unwired
+                Softness produced 2026-10-03)
 
 Outputs
     Pattern     scalar - 0..1 field for the selected pattern
@@ -43,6 +47,11 @@ Patterns
                     carpet-tile rhythm
     10 Perforation- round holes on a square lattice; acoustic panel / grille
     11 Weave      - warp/weft over-under by cell parity; cubicle fabric
+    12 SDFMap     - baked signed-distance stroke field (T_SDF_Strokes via the
+                    SDFMap input); continuous triangle distance so bilinear
+                    filtering gives wide soft edges the analytic fields cannot
+                    without aliasing, plus per-stroke width jitter from the
+                    map's G channel. Added 2026-10-03.
 
 Density is what makes these usable in a film rather than as a flat overlay: it
 is the cut level, so raising it densifies the hatch the way a painter hatches
@@ -70,6 +79,7 @@ NAME = "MF_ProceduralPatterns"
 
 FI_SCALAR = unreal.FunctionInputType.FUNCTION_INPUT_SCALAR
 FI_VECTOR2 = unreal.FunctionInputType.FUNCTION_INPUT_VECTOR2
+FI_TEXTURE = unreal.FunctionInputType.FUNCTION_INPUT_TEXTURE2D
 
 
 def _uv_basis(fn, angle_source, x=-2000):
@@ -554,14 +564,78 @@ def _weave(fn, u, v, scale, x=-1100, y_offset=9000):
     return pick
 
 
+def _sdfmap(fn, u, v, scale, sdf_in, x=-1100, y_offset=9800):
+    """Baked SDF stroke map (T_SDF_Strokes) - CellIndex 12.
+
+    Samples the map's R field at the rotated/scaled UV and shifts it by the
+    per-stroke width jitter carried in G, then returns it through the shared
+    Density/Softness cut like every other pattern. The baked field is a
+    continuous triangle of the wrapped stroke coordinate, so bilinear
+    filtering gives wide soft edges the analytic frac() fields cannot
+    produce without aliasing - that is the reason this one is a texture.
+    """
+    su = lib.expr(fn, unreal.MaterialExpressionMultiply, x, y_offset)
+    lib.binary(u, scale, su)
+
+    # NOTE: u from _uv_basis is the rotated TEXCOORD (float2), and su = u*scale
+    # is already the float2 sample UV - the same componentwise convention the
+    # analytic fields use. Appending su and sv would build a float4 and trip
+    # "Cannot cast from larger type float4 to smaller type float2" at the
+    # sample's UVs pin (caught by the 2026-10-03 build).
+
+    sample = lib.expr(fn, unreal.MaterialExpressionTextureSample,
+                      x + 320, y_offset + 70)
+    # The texture pin is 'Tex' on this build - measured for MF_RampLUT
+    # 2026-10-03 ("Missing input texture" when the old candidates missed).
+    lib.connect(sdf_in, "", sample, ["Tex", "TextureObject", ""])
+    lib.connect(su, "", sample, ["UVs", ""])
+
+    # Channel split via ComponentMask on the RGB output: no reliance on the
+    # sample's per-channel pin names, which are not stable across builds.
+    r_ch = lib.expr(fn, unreal.MaterialExpressionComponentMask,
+                    x + 520, y_offset)
+    r_ch.set_editor_property("r", True)
+    r_ch.set_editor_property("g", False)
+    r_ch.set_editor_property("b", False)
+    r_ch.set_editor_property("a", False)
+    lib.connect(sample, "", r_ch, ["", "None"])
+
+    g_ch = lib.expr(fn, unreal.MaterialExpressionComponentMask,
+                    x + 520, y_offset + 220)
+    g_ch.set_editor_property("r", False)
+    g_ch.set_editor_property("g", True)
+    g_ch.set_editor_property("b", False)
+    g_ch.set_editor_property("a", False)
+    lib.connect(sample, "", g_ch, ["", "None"])
+
+    # Width jitter: field -+ (G - 0.5) * 0.22 shifts each stroke's effective
+    # half-width by up to ~11% of the stroke spacing, hand-inked variance the
+    # analytic line families do not have.
+    centred = lib.expr(fn, unreal.MaterialExpressionSubtract,
+                       x + 700, y_offset + 220)
+    lib.binary(g_ch, lib.scalar_const(fn, 0.5, x + 700, y_offset + 300),
+               centred)
+
+    jitter = lib.expr(fn, unreal.MaterialExpressionMultiply,
+                      x + 860, y_offset + 220)
+    lib.binary(centred, lib.scalar_const(fn, 0.22, x + 860, y_offset + 300),
+               jitter)
+
+    shifted = lib.expr(fn, unreal.MaterialExpressionAdd,
+                       x + 1020, y_offset + 110)
+    lib.binary(r_ch, jitter, shifted)
+    return shifted
+
+
 def build(rebuild=True):
     lib.log(f"=== {NAME} ===")
     fn = lib.get_or_create_function(NAME, rebuild=rebuild)
     lib.try_set(fn, "description",
                 "SDF-style procedural patterns (halftone/checker/stripes/crackle/ink/"
-                "crosshatch/stipple/rings/voronoi/grid/perforation/weave) with a "
-                "Density coverage knob. "
-                "UE 5.8 has no SDF node; these are analytic distance constructions.")
+                "crosshatch/stipple/rings/voronoi/grid/perforation/weave/sdfmap) with "
+                "a Density coverage knob. "
+                "UE 5.8 has no SDF node; 0-11 are analytic distance constructions, "
+                "12 samples a baked signed-distance stroke texture.")
 
     # ---------------- inputs ----------------
     uv_in = lib.add_function_input(fn, "UV", FI_VECTOR2, x=-2200, y=0)
@@ -577,11 +651,17 @@ def build(rebuild=True):
     # densifies the pattern the way a painter hatching into shadow does.
     dens_in = lib.add_function_input(fn, "Density", FI_SCALAR,
                                      preview=(0.5, 0, 0, 0), x=-2200, y=740)
+    # Baked SDF stroke field for CellIndex 12. A texture2D function input has
+    # no preview default, so this MUST be wired by the caller - the master
+    # connects a TextureObjectParameter (PatternSDFMap) the same way it feeds
+    # MF_RampLUT's RampTexture.
+    sdf_in = lib.add_function_input(fn, "SDFMap", FI_TEXTURE,
+                                    x=-2200, y=880)
 
     # per-pattern scale multipliers so one Scale knob still gives each pattern
     # its natural frequency
     scales = {}
-    for i, mult in enumerate([1.0] * 12):
+    for i, mult in enumerate([1.0] * 13):
         scales[i] = lib.expr(fn, unreal.MaterialExpressionMultiply, -1900, 700 + i * 60)
         lib.connect(scale_in, "", scales[i], ["A"])
         lib.connect(lib.scalar_const(fn, mult, -1900, 780 + i * 60), "", scales[i], ["B"])
@@ -606,6 +686,7 @@ def build(rebuild=True):
         9: _grid(fn, u, v, scales[9]),
         10: _perforation(fn, u, v, scales[10]),
         11: _weave(fn, u, v, scales[11]),
+        12: _sdfmap(fn, u, v, scales[12], sdf_in),
     }
 
     # ---------------- pattern selector (nested static-free If chain) ----------------

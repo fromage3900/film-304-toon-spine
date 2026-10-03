@@ -27,6 +27,10 @@ WHAT THESE ARE FOR
                           (coloured shadow, never neutral: the manifest's
                           canonical #352D40 warm-violet shadow)
     T_Noise_White         band-breakup noise for DiffuseRampOffsetTexture
+    T_SDF_Strokes         baked signed-distance stroke field (RG) for
+                          MF_ProceduralPatterns CellIndex 12; R = continuous
+                          triangle distance (bilinear-safe soft edges),
+                          G = per-stroke width jitter hash
 
 SETTINGS THAT MATTER (applied defensively and READ BACK into the report -
 enum member names move between engine versions, so nothing is assumed to have
@@ -43,6 +47,7 @@ from __future__ import annotations
 
 import binascii
 import json
+import math
 import random
 import struct
 import sys
@@ -187,6 +192,48 @@ def gen_noise(size: int = 64, seed: int = 1337):
     return size, size, rows
 
 
+def gen_sdf_strokes(size: int = 256, strokes: int = 6,
+                    wave_amp: float = 0.45, wave_cycles: int = 3):
+    """Baked signed-distance stroke field - the texture sibling of _crosshatch.
+
+    Sampled by MF_ProceduralPatterns CellIndex 12 through the same
+    Density/Softness cut as the analytic patterns. Baking buys what an
+    analytic frac() chain cannot: the field is a CONTINUOUS triangle of the
+    wrapped stroke coordinate, so bilinear filtering produces wide clean soft
+    edges without sawtooth wrap seams, and a sine displacement bends the
+    strokes organically.
+
+    R = |2*frac(s) - 1| with s = u*strokes + wave_amp*sin(2*pi*wave_cycles*v).
+    1 at the stroke centre, 0 midway between strokes - _grid's polarity, so a
+    low Density inks wide strokes and a high Density thins them.
+    G = hash of the nearest stroke index (round(s) mod strokes, standard
+    12.9898 / 78.233 / 43758.5453 GLSL hash) for per-stroke width jitter.
+    Looked up by NEAREST stroke so the wrapped seam stroke resolves to the
+    same cell on both sides of the tile edge.
+    B = 128 spare.
+
+    Tiles exactly: s advances by `strokes` (an integer) across u, and the
+    wave completes wave_cycles integer periods across v.
+    """
+    rows = []
+    for y in range(size):
+        v = y / size
+        wave = wave_amp * math.sin(2.0 * math.pi * wave_cycles * v)
+        row = bytearray()
+        for x in range(size):
+            u = x / size
+            s = u * strokes + wave
+            fr = s - math.floor(s)
+            r = abs(2.0 * fr - 1.0)
+            cell = int(round(s)) % strokes
+            g = (math.sin(cell * 12.9898 + 78.233) * 43758.5453) % 1.0
+            if g < 0:
+                g += 1.0
+            row += bytes((int(r * 255), int(g * 255), 128))
+        rows.append(bytes(row))
+    return size, size, rows
+
+
 # ---------------------------------------------------------------------------
 # Catalogue
 # ---------------------------------------------------------------------------
@@ -225,6 +272,12 @@ CATALOG = [
     ("T_Noise_White", lambda: gen_noise(64), False, "bilinear", "wrap",
      "maskless", True,
      "Band-breakup noise for ToonProfile.DiffuseRampOffsetTexture."),
+    ("T_SDF_Strokes", lambda: gen_sdf_strokes(), False, "bilinear", "wrap",
+     "maskless", False,
+     "Baked signed-distance stroke field for MF_ProceduralPatterns "
+     "CellIndex 12 (SDFMap). A continuous triangle of the wrapped stroke "
+     "coordinate: bilinear-safe wide soft edges the analytic frac() chain "
+     "cannot give without aliasing. G carries per-stroke width jitter."),
 ]
 
 # Coloured-shadow stops. #352D40 warm violet is the manifest's canonical
