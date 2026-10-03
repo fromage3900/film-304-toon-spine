@@ -36,6 +36,7 @@ def main():
     import importlib
     for _mod in ("spine_lib", "build_textures", "build_mf_colorramp3",
                  "build_mf_ramplut", "build_mf_patterns", "build_master_toon",
+                 "build_master_toon_foliage", "build_master_toon_water",
                  "build_m_outline", "build_toon_profiles", "build_instances",
                  "build_office_set_materials"):
         sys.modules.pop(_mod, None)
@@ -77,6 +78,13 @@ def main():
     for mod_name, mat_name, expected, min_expr in [
         ("build_master_toon", "M_Master_Toon_Universal",
          ["MF_ColorRamp3", "MF_RampLUT", "MF_ProceduralPatterns"], 30),
+        # domain masters share the spine functions; foliage cuts opacity from
+        # the generated leaf SDF and carries sway WPO, water carries the
+        # scrolling ripple normal (T_Noise_White reads, no function)
+        ("build_master_toon_foliage", "M_Master_Toon_Foliage",
+         ["MF_ColorRamp3", "MF_RampLUT", "MF_ProceduralPatterns"], 30),
+        ("build_master_toon_water", "M_Master_Toon_Water",
+         ["MF_ColorRamp3", "MF_RampLUT", "MF_ProceduralPatterns"], 30),
         ("build_m_outline", "M_Outline_InvertedHull", [], 5),
     ]:
         if report["errors"]:
@@ -109,10 +117,15 @@ def main():
             for ipath in made:
                 iname = ipath.rsplit("/", 1)[-1].split(".", 1)[0]
                 expected = None
+                expected_parent = None
                 if iname in build_instances.INSTANCES:
-                    expected = build_instances.INSTANCES[iname][1]
+                    spec = build_instances.INSTANCES[iname]
+                    expected = spec[1]
+                    if len(spec) > 2:
+                        expected_parent = spec[2]
                 report.setdefault("instances", {})[iname] = \
-                    build_instances.verify_instance(iname, expected)
+                    build_instances.verify_instance(iname, expected,
+                                                    expected_parent)
         except Exception as exc:
             lib.log(f"ERROR building instances: {exc}")
             report["errors"].append(f"instances: {exc}")

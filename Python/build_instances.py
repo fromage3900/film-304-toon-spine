@@ -216,6 +216,100 @@ INSTANCES = {
         "bUsePaintedRamp": False,
         "bContactShadow": False,
     }),
+
+    # ------------------------------------------------- tilable SDF map looks
+    # Added 2026-10-03: the SDF map library's showcase instances. PatternIndex
+    # 12 samples the map carried by PatternSDFMap (a per-instance swappable
+    # TextureObjectParameter; texture overrides ride the new "T" support in
+    # _apply). The G channel's per-cell width jitter is baked into each map.
+    "MI_Toon_Scales": ("TP_Melusina", {
+        "BaseTint": (0.17, 0.28, 0.33, 1.0),      # sea-teal tail
+        "AccentTint": (0.42, 0.62, 0.68, 1.0),
+        "InkColor": (0.03, 0.04, 0.06, 1.0),
+        "InkIntensity": 0.35,
+        "DryRoughness": 0.42,
+        "RampStrength": 1.0,
+        "PatternIndex": 12.0,           # SDFMap
+        "PatternSDFMap": "/Game/Materials/Textures/T_SDF_Scales",
+        "PatternScale": 18.0,
+        "PatternStrength": 0.50,
+        "PatternDensity": 0.40,
+        "PatternSoftness": 0.05,
+        "bUsePaintedRamp": False,
+        "bContactShadow": True,
+    }),
+    "MI_Toon_CrackedStone": ("TP_Stone", {
+        "BaseTint": (0.42, 0.40, 0.37, 1.0),
+        "AccentTint": (0.58, 0.56, 0.52, 1.0),
+        "InkIntensity": 0.15,
+        "DryRoughness": 0.90,
+        "BandScale": 0.055,
+        "BandStrength": 0.20,
+        "PatternIndex": 12.0,
+        "PatternSDFMap": "/Game/Materials/Textures/T_SDF_Cracks",
+        "PatternScale": 5.0,
+        "PatternStrength": 0.45,
+        "PatternDensity": 0.55,
+        "bContactShadow": True,
+    }),
+    # ------------------------------------------------- foliage master set
+    "MI_Foliage_Fern": ("TP_Foliage", {
+        "BaseTint": (0.20, 0.36, 0.18, 1.0),
+        "AccentTint": (0.44, 0.64, 0.30, 1.0),
+        "InkIntensity": 0.12,
+        "DryRoughness": 0.88,
+        "RampStrength": 1.0,
+        "PatternIndex": 12.0,
+        "PatternSDFMap": "/Game/Materials/Textures/T_SDF_Strokes",
+        "PatternScale": 9.0,
+        "PatternStrength": 0.35,
+        "PatternDensity": 0.45,
+        "bUsePaintedRamp": False,
+        "bContactShadow": False,
+    }, "M_Master_Toon_Foliage"),
+    "MI_Foliage_Hedge": ("TP_Foliage", {
+        "BaseTint": (0.26, 0.44, 0.24, 1.0),
+        "AccentTint": (0.50, 0.70, 0.36, 1.0),
+        "InkIntensity": 0.08,
+        "DryRoughness": 0.90,
+        "RampStrength": 0.8,
+        "SwayAmount": 0.10,
+        "SwaySpeed": 1.6,
+        "bUsePaintedRamp": False,
+        "bContactShadow": False,
+    }, "M_Master_Toon_Foliage"),
+    # ------------------------------------------------- water master set
+    "MI_Water_Canal": ("TP_Default", {
+        "BaseTint": (0.14, 0.32, 0.36, 1.0),
+        "AccentTint": (0.44, 0.70, 0.74, 1.0),
+        "InkIntensity": 0.25,
+        "DryRoughness": 0.08,
+        "RampStrength": 0.80,
+        "BandScale": 0.030,
+        "BandStrength": 0.25,
+        "RippleScale1": 18.0,
+        "RippleSpeed1": 1.10,
+        "RippleScale2": 29.0,
+        "RippleSpeed2": 1.40,
+        "RippleStrength": 0.55,
+        "bUsePaintedRamp": False,
+        "bContactShadow": False,
+    }, "M_Master_Toon_Water"),
+    "MI_Water_Puddle": ("TP_Default", {
+        "BaseTint": (0.18, 0.30, 0.34, 1.0),
+        "AccentTint": (0.48, 0.66, 0.70, 1.0),
+        "InkIntensity": 0.15,
+        "DryRoughness": 0.04,
+        "RampStrength": 0.40,
+        "BandStrength": 0.10,
+        "RippleScale1": 40.0,
+        "RippleSpeed1": 0.30,
+        "RippleScale2": 61.0,
+        "RippleSpeed2": 0.20,
+        "RippleStrength": 0.25,
+        "bUsePaintedRamp": False,
+        "bContactShadow": False,
+    }, "M_Master_Toon_Water"),
 }
 
 
@@ -254,6 +348,15 @@ def _apply(inst, profile_name, overrides):
                         inst, key, value)
                 else:
                     lib.try_set(inst, key, value)
+            elif isinstance(value, str):
+                # texture parameter override (e.g. PatternSDFMap) - the value
+                # is the asset path; resolved and read back by name so a
+                # broken path fails the verify, not the render
+                tex = unreal.load_asset(value)
+                if tex is None:
+                    lib.log(f"WARN {inst.get_name()}.{key}: texture not found "
+                            f"{value}")
+                me.set_material_instance_texture_parameter_value(inst, key, tex)
             elif isinstance(value, tuple):
                 me.set_material_instance_vector_parameter_value(
                     inst, key, unreal.LinearColor(*value))
@@ -266,16 +369,17 @@ def _apply(inst, profile_name, overrides):
 
 def build(rebuild=True):
     lib.log(f"=== Material Instances ({len(INSTANCES)}) ===")
-    master = unreal.load_asset(lib.asset_path(lib.MASTER_DIR,
-                                              "M_Master_Toon_Universal"))
-    if master is None:
-        raise RuntimeError("master material missing - run build_master_toon first")
+    # per-instance parent: entries may carry a third element naming the master
+    # (foliage/water sets); the default is the universal toon master.
+    DEFAULT_PARENT = "M_Master_Toon_Universal"
 
     lib.ensure_dir(INSTANCE_DIR)
     tools = unreal.AssetToolsHelpers.get_asset_tools()
 
     made = []
-    for name, (profile_name, overrides) in INSTANCES.items():
+    for name, spec in INSTANCES.items():
+        profile_name, overrides = spec[0], spec[1]
+        parent_name = spec[2] if len(spec) > 2 else DEFAULT_PARENT
         path = lib.asset_path(INSTANCE_DIR, name)
         if unreal.EditorAssetLibrary.does_asset_exist(path):
             if rebuild:
@@ -284,6 +388,10 @@ def build(rebuild=True):
             else:
                 made.append(path)
                 continue
+        master = unreal.load_asset(lib.asset_path(lib.MASTER_DIR, parent_name))
+        if master is None:
+            lib.log(f"FAIL {name}: parent master {parent_name} missing")
+            continue
         inst = tools.create_asset(name, INSTANCE_DIR,
                                   unreal.MaterialInstanceConstant,
                                   unreal.MaterialInstanceConstantFactoryNew())
@@ -294,7 +402,7 @@ def build(rebuild=True):
         _apply(inst, profile_name, overrides)
         lib.save(inst)
         made.append(path)
-        lib.log(f"MI OK {name} -> {profile_name}")
+        lib.log(f"MI OK {name} -> {profile_name} ({parent_name})")
 
     # outline instance, parented to the outline master
     outline_master = unreal.load_asset(lib.asset_path(lib.MASTER_DIR,
@@ -333,7 +441,7 @@ def build(rebuild=True):
     return made
 
 
-def verify_instance(name, expected_overrides=None):
+def verify_instance(name, expected_overrides=None, expected_parent=None):
     """Confirm an instance exists, is parented, and kept its overrides."""
     path = lib.asset_path(INSTANCE_DIR, name)
     inst = unreal.load_asset(path)
@@ -364,6 +472,12 @@ def verify_instance(name, expected_overrides=None):
             if isinstance(want, bool):
                 got = me.get_material_instance_static_switch_parameter_value(inst, key)
                 got = bool(got)
+            elif isinstance(want, str):
+                # texture parameter - read back and compare ASSET NAMES, so a
+                # broken path or a stale assignment fails the verify
+                tex = me.get_material_instance_texture_parameter_value(inst, key)
+                got = tex.get_name() if tex else ""
+                want = want.rsplit("/", 1)[-1].split(".")[0]
             elif isinstance(want, tuple):
                 lc = me.get_material_instance_vector_parameter_value(inst, key)
                 # LinearColor exposes .r/.g/.b/.a and is NOT iterable
@@ -382,9 +496,14 @@ def verify_instance(name, expected_overrides=None):
 
     result["checked"] = checked
     result["mismatched"] = wrong
-    result["ok"] = (result["parent"] in ("M_Master_Toon_Universal",
-                                         "M_Outline_InvertedHull")
-                    and not wrong)
+    # parent_ok compares the NAME STRING (result["parent"] is get_name();
+    # the local `parent` is the UMaterialInterface object and never equals a
+    # string - that object-vs-string compare is what failed all 24 verifies
+    # in the 17:22 spine run before this fix).
+    parent_ok = (result["parent"] == expected_parent if expected_parent
+                 else result["parent"] in ("M_Master_Toon_Universal",
+                                           "M_Outline_InvertedHull"))
+    result["ok"] = parent_ok and not wrong
     if wrong:
         result["error"] = "; ".join(wrong[:4])
     lib.log(f"VERIFY {name}: ok={result['ok']} parent={result['parent']} "

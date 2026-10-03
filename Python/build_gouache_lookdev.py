@@ -135,13 +135,38 @@ CAM_FOCAL_MM = 50.0
 GROUND_LABEL = "LDV_Ground"
 
 
+def log(m):
+    unreal.log("[GouacheLookdev] " + str(m))
+
+
+def resolve_world_factory():
+    """Find the level factory by probing, not by guessing the name.
+
+    `unreal.WorldFactoryNew` does not exist on UE 5.8 - only `unreal.WorldFactory`
+    does - so a hardcoded guess raises AttributeError the moment a fresh level is
+    created. This is the same lesson as build_gouache_material's ENUM_SPECS: on
+    this codebase a name that has not been measured must not be trusted, because
+    the failure looks like a broken builder rather than a typo.
+    """
+    for nm in ("WorldFactory", "WorldFactoryNew", "WorldFactoryNewLevel"):
+        cls = getattr(unreal, nm, None)
+        if cls is not None:
+            return cls
+    return None
+
+
 def ensure_level() -> str:
     path = "%s/%s" % (MAP_DIR, LEVEL_NAME)
     if not unreal.EditorAssetLibrary.does_asset_exist(path):
+        factory = resolve_world_factory()
+        if factory is None:
+            raise RuntimeError(
+                "no WorldFactory class found - cannot create %s" % LEVEL_NAME)
         lib.ensure_dir(MAP_DIR)
         unreal.AssetToolsHelpers.get_asset_tools().create_asset(
-            LEVEL_NAME, MAP_DIR, unreal.World, unreal.WorldFactoryNew())
-        log("created level asset %s" % path)
+            LEVEL_NAME, MAP_DIR, unreal.World, factory())
+        log("created level asset %s (factory=%s)"
+            % (path, type(factory).__name__))
     else:
         log("level asset exists: %s" % path)
     unreal.EditorLevelLibrary.load_level(path)
@@ -402,7 +427,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-def log(m):
-    unreal.log("[GouacheLookdev] " + str(m))

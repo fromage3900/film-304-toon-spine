@@ -10,13 +10,15 @@ Everything below is from the files in this repo: `Content/` and `Python/`.
 
 ## What the spine is
 
-Two master materials, three material functions, **nineteen** toon profiles, **eighteen**
-instances and **nine** generated textures — a Substrate Toon shading spine that a film can
-shoot with, with no game-system dependencies.
+Two masters, three material functions, **nineteen** toon profiles, **twenty-four**
+instances and **fifteen** generated textures — a Substrate Toon shading spine that a
+film can shoot with, with no game-system dependencies.
 
 ```
 Content/Materials/
-  Masters/       M_Master_Toon_Universal      the spine
+  Masters/       M_Master_Toon_Universal      the spine (opaque surfaces)
+                 M_Master_Toon_Foliage        masked two-sided cards, sway WPO
+                 M_Master_Toon_Water          stylized water, scrolling ripple normal
                  M_Outline_InvertedHull       the outline pass
   Functions/     MF_ColorRamp3                 ramp / band generation
                  MF_RampLUT                    LUT-driven ramp lookup
@@ -27,15 +29,19 @@ Content/Materials/
                  TP_Office_{Carpet,Laminate,DropCeiling,Troffer,
                             PowderCoat,Screen,Polypropylene,Whiteboard}
   Instances/     MI_Toon_{Hero,Stone,Foliage,Gold,Hatched,TwoTone,Painterly,
-                            Environment,Office_*}
+                            Environment,Office_*,Melusina,Character,Scales,
+                            CrackedStone}
+                 MI_Foliage_{Fern,Hedge}      on the foliage master
+                 MI_Water_{Canal,Puddle}      on the water master
                  MI_Outline_{Thin,Heavy}
   Textures/      T_Dither_Bayer  T_Hatch_{Cross,Diagonal}  T_HatchPattern
                  T_Ramp_{2Band,3Band,4Band,Smooth}  T_Noise_White
-                 T_SDF_Strokes
+                 T_SDF_{Strokes,Cross,Dots,Scales,Cracks,Leaf}   tilable SDF map library
 ```
 
-Counts measured on disk 2026-10-02 and cross-checked against
-`Saved/Audit/spine_build_report_2026-10-02.json` (40 assertions, 0 failing).
+Counts measured on disk 2026-10-03 (headless spine build 10: 4/4 masters,
+24/24 instances, 21/21 profiles, 0 errors; texture report count 15,
+SDF map audit PASS).
 
 Two changes in the 2026-10-02 pass:
 

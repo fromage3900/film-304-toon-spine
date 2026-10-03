@@ -1,0 +1,115 @@
+{
+  "written": "2026-10-03",
+  "criterion": "wrap texel step must not exceed the tile worst interior step (period-correct tiling); R must span full contrast; G contrast >=40 except flat-128 spare channels; mark coverage >=0.5%",
+  "maps": {
+    "T_SDF_Strokes": {
+      "expect": "wavy diagonal stroke field",
+      "size": "256x256",
+      "r_range": [
+        0,
+        255
+      ],
+      "g_range": [
+        46,
+        209
+      ],
+      "mark_cover_0p9": 0.0957,
+      "wrap_h": 12,
+      "step_h": 12,
+      "wrap_v": 17,
+      "step_v": 17,
+      "ok": true
+    },
+    "T_SDF_Cross": {
+      "expect": "two-family engraving cross-hatch",
+      "size": "256x256",
+      "r_range": [
+        0,
+        255
+      ],
+      "g_range": [
+        0,
+        235
+      ],
+      "mark_cover_0p9": 0.1836,
+      "wrap_h": 16,
+      "step_h": 16,
+      "wrap_v": 28,
+      "step_v": 28,
+      "ok": true
+    },
+    "T_SDF_Dots": {
+      "expect": "soft half-offset halftone dots",
+      "size": "256x256",
+      "r_range": [
+        0,
+        255
+      ],
+      "g_range": [
+        0,
+        253
+      ],
+      "mark_cover_0p9": 0.0088,
+      "wrap_h": 20,
+      "step_h": 20,
+      "wrap_v": 19,
+      "step_v": 20,
+      "ok": true
+    },
+    "T_SDF_Scales": {
+      "expect": "scale/feather arcs (row above)",
+      "size": "256x256",
+      "r_range": [
+        0,
+        255
+      ],
+      "g_range": [
+        0,
+        253
+      ],
+      "mark_cover_0p9": 0.0156,
+      "wrap_h": 66,
+      "step_h": 66,
+      "wrap_v": 0,
+      "step_v": 133,
+      "ok": true
+    },
+    "T_SDF_Cracks": {
+      "expect": "Worley-border crack network",
+      "size": "256x256",
+      "r_range": [
+        0,
+        254
+      ],
+      "g_range": [
+        0,
+        253
+      ],
+      "mark_cover_0p9": 0.0295,
+      "wrap_h": 83,
+      "step_h": 86,
+      "wrap_v": 84,
+      "step_v": 86,
+      "ok": true
+    },
+    "T_SDF_Leaf": {
+      "expect": "capsule leaf cover (opacity source)",
+      "size": "256x256",
+      "r_range": [
+        0,
+        255
+      ],
+      "g_range": [
+        128,
+        128
+      ],
+      "mark_cover_0p9": 0.0989,
+      "wrap_h": 0,
+      "step_h": 10,
+      "wrap_v": 0,
+      "step_v": 10,
+      "ok": true
+    }
+  },
+  "ok": true
+}

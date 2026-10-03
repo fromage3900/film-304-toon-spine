@@ -31,6 +31,15 @@ WHAT THESE ARE FOR
                           MF_ProceduralPatterns CellIndex 12; R = continuous
                           triangle distance (bilinear-safe soft edges),
                           G = per-stroke width jitter hash
+    T_SDF_{Cross,Dots,Scales,Cracks,Leaf}
+                          the tilable SDF map library (2026-10-03): engraving
+                          cross-hatch, soft halftone dots, scale/feather
+                          arcs, Worley-border cracks, and the leaf cover
+                          field the foliage master cuts opacity on. All RG:
+                          R = mark field in the house polarity (1 at the
+                          mark, 0 clear) except Leaf (1 = inside cover),
+                          G = per-cell width jitter; sRGB off, wrap,
+                          lossless, no mips, tile-exact integer periods
 
 SETTINGS THAT MATTER (applied defensively and READ BACK into the report -
 enum member names move between engine versions, so nothing is assumed to have
@@ -192,6 +201,230 @@ def gen_noise(size: int = 64, seed: int = 1337):
     return size, size, rows
 
 
+def _hash01(a, b, ka, kb):
+    """frac(sin(a*ka + b*kb) * 43758.5453) - the standard cheap value hash.
+
+    python % already returns non-negative for positive modulus, but a negative
+    sin product would need the +1.0 correction, so it is explicit here.
+    """
+    v = (math.sin(a * ka + b * kb) * 43758.5453) % 1.0
+    return v if v >= 0.0 else v + 1.0
+
+
+def gen_sdf_cross(size: int = 256, strokes: int = 8,
+                  wave_amp: float = 0.30, wave_cycles: int = 3):
+    """Baked cross-hatch SDF - the nearest mark of two wavy line families.
+
+    The texture sibling of _crosshatch (CellIndex 5): family A runs along
+    (u+v), family B along (u-v), each sine-displaced so the crossing reads as
+    pen work rather than a wire grid. R = max of the two families' fields -
+    house polarity (1 at the stroke centre, 0 in clear space) - so it flows
+    through the same Density/Softness cut as every other pattern. G = family
+    A's per-stroke width hash. Tiles exactly: each family's coordinate
+    advances an integer number of strokes across u, and the wave completes
+    integer cycles across v.
+    """
+    rows = []
+    for y in range(size):
+        v = y / size
+        wv = wave_amp * math.sin(2.0 * math.pi * wave_cycles * v)
+        row = bytearray()
+        for x in range(size):
+            u = x / size
+            s_a = (u + v) * strokes + wv
+            s_b = (u - v) * strokes + wv
+            fa = abs(2.0 * (s_a - math.floor(s_a)) - 1.0)
+            fb = abs(2.0 * (s_b - math.floor(s_b)) - 1.0)
+            r = max(fa, fb)
+            cell = int(math.floor(s_a)) % strokes
+            g = _hash01(cell, 0.0, 12.9898, 78.233)
+            row += bytes((int(r * 255), int(g * 255), 128))
+        rows.append(bytes(row))
+    return size, size, rows
+
+
+def gen_sdf_dots(size: int = 256, rows_n: int = 10):
+    """Soft-edged dot field on a half-offset lattice - the baked halftone.
+
+    The texture sibling of _halftone (CellIndex 0): alternate rows offset by
+    half a cell, and the dot edge is a CONTINUOUS distance falloff, so
+    bilinear filtering yields soft screentone dots the analytic lattice
+    cannot produce without aliasing. R = 1 at the dot centre, saturating to 0
+    at half a cell out; G = per-dot width hash for the material's jitter.
+    rows_n must be EVEN - the half-offset pattern repeats after two rows.
+    """
+    if rows_n % 2:
+        raise ValueError("rows_n must be even for the offset lattice to tile")
+    rows = []
+    for y in range(size):
+        v = y / size
+        j = int(v * rows_n)
+        fv = v * rows_n - j
+        row = bytearray()
+        for x in range(size):
+            u = x / size
+            i = int(u * rows_n)
+            fu = u * rows_n - i
+            dx = fu - (0.5 + 0.5 * (j % 2))
+            dy = fv - 0.5
+            if dx > 0.5:        # the governing centre may sit one cell across
+                dx -= 1.0       # the half-offset seam - wrap the distance
+            elif dx < -0.5:
+                dx += 1.0
+            d = math.hypot(dx, dy)
+            r = 1.0 - d / 0.5
+            if r < 0.0:
+                r = 0.0
+            cell = (i + j * rows_n) % (rows_n * rows_n)
+            g = _hash01(cell, 0.0, 12.9898, 78.233)
+            row += bytes((int(r * 255), int(g * 255), 128))
+        rows.append(bytes(row))
+    return size, size, rows
+
+
+def gen_sdf_scales(size: int = 256, rows_n: int = 8):
+    """Scale/feather arcs - the baked mark for Melusina's tail and roof tiles.
+
+    Each row's visible boundary is the arc of the row ABOVE's circles
+    (half-offset rows), so the field is distance to that arc only - the
+    classic fish-scale / roof-tile rhythm. R = 1 ON the arc, fading to 0
+    within 6% of a cell (thin arcs; the Density cut thickens them); G =
+    per-cell width hash. Tiles with an integer rows_n.
+    """
+    rows = []
+    for y in range(size):
+        v = y / size
+        j = int(v * rows_n)
+        fv = v * rows_n - j
+        row = bytearray()
+        for x in range(size):
+            u = x / size
+            i = int(u * rows_n)
+            fu = u * rows_n - i
+            # the governing circle: row above (j+1), half-offset in x.
+            # row k's centres sit at x = i + 0.5 + 0.5*(k % 2) within the row;
+            # in row j's frame the centre above is at fv = -0.5 (one cell up,
+            # half a cell over) - BUGFIX 2026-10-03: this used fv - 1.5 (two
+            # rows up), which put the radius-0.5 ring tangent to the border
+            # and the field read all-zero.
+            cx = (0.5 + 0.5 * ((j + 1) % 2)) - fu
+            if cx > 0.5:
+                cx -= 1.0
+            elif cx < -0.5:
+                cx += 1.0
+            cy = fv + 0.5                   # centre of the row above
+            d = math.hypot(cx, cy)
+            r = 1.0 - abs(d - 1.0) / 0.06   # arc ring at radius 1.0 cell
+            if r < 0.0:
+                r = 0.0
+            cell = (i + j * rows_n) % (rows_n * rows_n)
+            g = _hash01(cell, 0.0, 12.9898, 78.233)
+            row += bytes((int(r * 255), int(g * 255), 128))
+        rows.append(bytes(row))
+    return size, size, rows
+
+
+def gen_sdf_cracks(size: int = 256, cells: int = 6, jitter: float = 0.35):
+    """Crack network - the baked Worley-border mark (stone, dry earth, plaster).
+
+    F2-F1 of a jittered lattice: zero on the cell border, so R is INVERTED to
+    the house mark polarity (1 ON the crack, fading out over the border
+    band). The 3x3 search tracks the two smallest SQUARED distances (sqrt is
+    monotonic, argmin unchanged) around per-cell feature points from the
+    standard hash, with per-cell jitter on the feature position. G = per-cell
+    width hash. Tiles with an integer `cells`.
+    """
+    pts = {}
+    for j in range(-1, cells + 1):
+        for i in range(-1, cells + 1):
+            ci, cj = i % cells, j % cells
+            h1 = _hash01(ci, cj, 127.1, 311.7)
+            h2 = _hash01(ci, cj, 269.5, 183.3)
+            pts[(i, j)] = (i + (h1 - 0.5) * 2.0 * jitter + 0.5,
+                           j + (h2 - 0.5) * 2.0 * jitter + 0.5)
+    rows = []
+    for y in range(size):
+        v = y / size * cells
+        cv = int(math.floor(v))
+        row = bytearray()
+        for x in range(size):
+            u = x / size * cells
+            cu = int(math.floor(u))
+            d1 = d2 = 1e9
+            for dj in (-1, 0, 1):
+                for di in (-1, 0, 1):
+                    fx, fy = pts[(cu + di, cv + dj)]
+                    dd = (u - fx) ** 2 + (v - fy) ** 2
+                    if dd < d1:
+                        d2 = d1
+                        d1 = dd
+                    elif dd < d2:
+                        d2 = dd
+            c = math.sqrt(d2) - math.sqrt(d1)
+            r = 1.0 - min(1.0, c / 0.14)
+            if r < 0.0:
+                r = 0.0
+            cell = (cu % cells) + (cv % cells) * cells
+            g = _hash01(cell, 0.0, 12.9898, 78.233)
+            row += bytes((int(r * 255), int(g * 255), 128))
+        rows.append(bytes(row))
+    return size, size, rows
+
+
+def gen_sdf_leaf(size: int = 256, leaves: int = 7, seed: int = 90210):
+    """Leaf-cluster cover field - the foliage master's opacity mask source.
+
+    Unioned capsules (a leaf = stalk segment with a radius), soft silhouette
+    edges, geometry from a seeded RNG so every regeneration is identical.
+    R = 1 INSIDE the cover, saturating to 0 at the silhouette - the master
+    cuts opacity on R; G = per-leaf hash, spare for width variation.
+    Leaves keep a margin from the tile edge so the cluster tiles without
+    clipped silhouettes; best used 1:1 per card rather than repeated across
+    a surface.
+    """
+    rng = random.Random(seed)
+    # margin must exceed radius + falloff so the soft silhouette stays inside
+    # the tile (radius up to 0.09 + 0.05 falloff = 0.14; 0.16 keeps slack).
+    # BUGFIX 2026-10-03: 0.12 let the falloff cross the tile edge (seam v=77).
+    margin = 0.16
+    segs = []
+    for _ in range(leaves):
+        cx = rng.uniform(margin, 1.0 - margin)
+        cy = rng.uniform(margin, 1.0 - margin)
+        ang = rng.uniform(0.0, 2.0 * math.pi)
+        ln = rng.uniform(0.18, 0.42)
+        rad = rng.uniform(0.045, 0.09)
+        segs.append((cx, cy, ang, ln, rad))
+    cosl = [(math.cos(a), math.sin(a)) for (_, _, a, _, _) in segs]
+    rows = []
+    for y in range(size):
+        py = y / size
+        row = bytearray()
+        for x in range(size):
+            px = x / size
+            cover = 0.0
+            for k, (cx, cy, _, ln, rad) in enumerate(segs):
+                ex = cx + cosl[k][0] * ln * 0.5
+                ey = cy + cosl[k][1] * ln * 0.5
+                sx = cx - cosl[k][0] * ln * 0.5
+                sy = cy - cosl[k][1] * ln * 0.5
+                vx, vy = px - sx, py - sy
+                wx, wy = ex - sx, ey - sy
+                l2 = wx * wx + wy * wy
+                t = 0.0 if l2 == 0.0 else (vx * wx + vy * wy) / l2
+                t = 0.0 if t < 0.0 else (1.0 if t > 1.0 else t)
+                dxp = px - (sx + wx * t)
+                dyp = py - (sy + wy * t)
+                d = math.hypot(dxp, dyp) - rad
+                c = 0.5 - d / 0.10
+                if c > cover:
+                    cover = c
+            r = 0.0 if cover < 0.0 else (1.0 if cover > 1.0 else cover)
+            row += bytes((int(r * 255), 128, 128))
+        rows.append(bytes(row))
+    return size, size, rows
+
+
 def gen_sdf_strokes(size: int = 256, strokes: int = 6,
                     wave_amp: float = 0.45, wave_cycles: int = 3):
     """Baked signed-distance stroke field - the texture sibling of _crosshatch.
@@ -278,6 +511,26 @@ CATALOG = [
      "CellIndex 12 (SDFMap). A continuous triangle of the wrapped stroke "
      "coordinate: bilinear-safe wide soft edges the analytic frac() chain "
      "cannot give without aliasing. G carries per-stroke width jitter."),
+    ("T_SDF_Cross", lambda: gen_sdf_cross(), False, "bilinear", "wrap",
+     "maskless", False,
+     "Baked cross-hatch SDF: max of two sine-displaced (u+v)/(u-v) line "
+     "families - CellIndex 12's engraving sibling. G = width jitter."),
+    ("T_SDF_Dots", lambda: gen_sdf_dots(), False, "bilinear", "wrap",
+     "maskless", False,
+     "Baked halftone SDF: soft-edged dots on a half-offset lattice "
+     "(rows_n even). G = per-dot size jitter."),
+    ("T_SDF_Scales", lambda: gen_sdf_scales(), False, "bilinear", "wrap",
+     "maskless", False,
+     "Baked scale/feather arcs (half-offset rows, arc of the row above): "
+     "Melusina's tail, roof tiles, feather rows. G = width jitter."),
+    ("T_SDF_Cracks", lambda: gen_sdf_cracks(), False, "bilinear", "wrap",
+     "maskless", False,
+     "Baked Worley-border crack network (F2-F1, inverted to mark polarity): "
+     "stone, dry earth, plaster. G = per-cell width jitter."),
+    ("T_SDF_Leaf", lambda: gen_sdf_leaf(), False, "bilinear", "wrap",
+     "maskless", False,
+     "Leaf-cluster cover SDF (unioned capsules, seeded RNG) - the foliage "
+     "master's opacity mask source. R = cover, soft silhouette edges."),
 ]
 
 # Coloured-shadow stops. #352D40 warm violet is the manifest's canonical
