@@ -35,8 +35,9 @@ Content/
   Materials/
     Masters/        M_*        the master materials (2)
     Functions/      MF_*       material functions (3)
-    ToonProfiles/   TP_*       art-direction data assets (11)
-    Instances/      MI_*       material instances (10)
+    ToonProfiles/   TP_*       art-direction data assets
+    Instances/      MI_*       material instances
+    Textures/       T_*        generated stylization textures (dither/hatch/ramp LUT)
   Maps/             L_*        levels
   Environment/
     Brutalist/      SM_*/BP_*  the procedural building set (desktop import step)
@@ -81,6 +82,25 @@ tells nobody anything.
 | `TP_Stone` / `TP_Gold` | hero materials that need a harder or shinier band |
 | `TP_SoftPainterly` / `TP_Warm` / `TP_Cool` | mood passes; keep one per shot so the palette is not fighting itself |
 | `TP_Hatched` / `TP_TwoTone` | deliberate graphic styles, not defaults |
+| `TP_Office_*` (8) | the interior-office set — see the table below |
+
+### The office set
+
+Eight profiles added 2026-10-02, one per interior surface recorded missing in the
+office brief. All eight obey one rule: **the darkest ramp stop never reaches 0** — a cel
+shadow that hits black reads as a hole punched in the frame. Hue lives in the material
+instance's `BaseTint`, because ToonProfile ramps are scalar-valued.
+
+| Profile | Surface | Character |
+|---|---|---|
+| `TP_Office_Carpet` | carpet tile | softest ramp, almost no spec, single hatch |
+| `TP_Office_Laminate` | desk laminate | mid sheen, narrow band |
+| `TP_Office_DropCeiling` | acoustic ceiling tile | flattest ramp in the set; noise offset only |
+| `TP_Office_Troffer` | recessed light panel | high floor, very low extinction (emissive) |
+| `TP_Office_PowderCoat` | powder-coated steel | hard two-tone, tight glint, cross-hatch |
+| `TP_Office_Screen` | monitor / screen emissive | deepest floor, low GI scale |
+| `TP_Office_Polypropylene` | moulded plastic | soft mid spec, no hard terminator |
+| `TP_Office_Whiteboard` | whiteboard gloss | brightest, crisp, reflective |
 
 Outlines are separate from the toon shader: `M_Outline_InvertedHull` plus
 `MI_Outline_Thin` / `MI_Outline_Heavy`. Use `_Thin` on characters and `_Heavy` on large

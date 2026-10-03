@@ -56,49 +56,127 @@ def asset_path(folder, name):
     return f"{folder}/{name}.{name}"
 
 
+def _wipe_expressions(owner, is_function):
+    """Remove every expression from an existing asset, in place.
+
+    The per-node deleter (delete_material_expression) takes a MATERIAL as its
+    first argument and raises for functions, so the loop variant wiped nothing
+    and a rebuild-in-place produced a doubled graph (30+30 nodes feeding two
+    sets of outputs). UE 5.8 ships bulk deleters for both containers - use
+    those and read the count back.
+    """
+    me = unreal.MaterialEditingLibrary
+    try:
+        # one bulk pass can leave a still-referenced generation behind
+        # (measured: 59 -> 29 with return None), so loop until the count stops
+        # moving or the graph is empty
+        prev = -1
+        for _ in range(24):
+            if is_function:
+                me.delete_all_material_expressions_in_function(owner)
+                remain = len(me.get_material_function_expressions(owner) or [])
+            else:
+                me.delete_all_material_expressions(owner)
+                remain = len(me.get_material_expressions(owner) or [])
+            if remain == 0 or remain == prev:
+                break
+            prev = remain
+        return remain
+    except Exception as exc:
+        log(f"wipe failed on {owner.get_name()}: {str(exc)[:100]}")
+        return -1
+
+
 def get_or_create_material(name, folder=MASTER_DIR, rebuild=False):
-    """Material, created if absent. rebuild=True deletes and recreates."""
+    """Material, created if absent. rebuild=True deletes and recreates.
+
+    Delete can be REFUSED while a loaded consumer (a level, an instance, the
+    previous build's objects) still references the asset; the old code ignored
+    delete_asset's return, so create-into-existing-name then returned None and
+    the whole spine failed with "could not create material". If deletion does
+    not take, repopulate the existing asset in place instead: same package,
+    same object identity, references stay valid, and the rebuild still starts
+    from an empty graph.
+    """
     path = asset_path(folder, name)
+    mat = None
     if unreal.EditorAssetLibrary.does_asset_exist(path):
         if not rebuild:
             return unreal.load_asset(path)
         log(f"rebuild: deleting {name}")
-        unreal.EditorAssetLibrary.delete_asset(path)
-    ensure_dir(folder)
-    tools = unreal.AssetToolsHelpers.get_asset_tools()
-    mat = tools.create_asset(name, folder, unreal.Material,
-                             unreal.MaterialFactoryNew())
+        if unreal.EditorAssetLibrary.delete_asset(path) and \
+                not unreal.EditorAssetLibrary.does_asset_exist(path):
+            pass
+        else:
+            log(f"rebuild: delete refused - repopulating {name} in place")
+            mat = unreal.load_asset(path)
+            remaining = _wipe_expressions(mat, is_function=False)
+            if remaining:
+                raise RuntimeError(
+                    f"{name}: wipe left {remaining} expressions - refusing to "
+                    f"build a doubled graph")
+            log(f"rebuild: {name} graph cleared")
+    if mat is None:
+        ensure_dir(folder)
+        tools = unreal.AssetToolsHelpers.get_asset_tools()
+        mat = tools.create_asset(name, folder, unreal.Material,
+                                 unreal.MaterialFactoryNew())
     if mat is None:
         raise RuntimeError(f"could not create material {name}")
     return mat
 
 
 def get_or_create_function(name, rebuild=False):
-    """MaterialFunction, created if absent."""
+    """MaterialFunction, created if absent (rebuild semantics as materials)."""
     path = asset_path(FUNCTION_DIR, name)
+    fn = None
     if unreal.EditorAssetLibrary.does_asset_exist(path):
         if not rebuild:
             return unreal.load_asset(path)
         log(f"rebuild: deleting function {name}")
-        unreal.EditorAssetLibrary.delete_asset(path)
-    ensure_dir(FUNCTION_DIR)
-    tools = unreal.AssetToolsHelpers.get_asset_tools()
-    fn = tools.create_asset(name, FUNCTION_DIR, unreal.MaterialFunction,
-                            unreal.MaterialFunctionFactoryNew())
+        if unreal.EditorAssetLibrary.delete_asset(path) and \
+                not unreal.EditorAssetLibrary.does_asset_exist(path):
+            pass
+        else:
+            log(f"rebuild: delete refused - repopulating {name} in place")
+            fn = unreal.load_asset(path)
+            remaining = _wipe_expressions(fn, is_function=True)
+            if remaining:
+                raise RuntimeError(
+                    f"{name}: wipe left {remaining} expressions - refusing to "
+                    f"build a doubled graph")
+            log(f"rebuild: {name} graph cleared")
+    if fn is None:
+        ensure_dir(FUNCTION_DIR)
+        tools = unreal.AssetToolsHelpers.get_asset_tools()
+        fn = tools.create_asset(name, FUNCTION_DIR, unreal.MaterialFunction,
+                                unreal.MaterialFunctionFactoryNew())
     if fn is None:
         raise RuntimeError(f"could not create material function {name}")
     return fn
 
 
 def try_set(obj, prop, value):
-    """Best-effort set_editor_property. UE hides many fields behind has_editor_property."""
+    """Set an editor property, tolerating UE fields that do not exist.
+
+    FIX 2026-10-02: this used to gate on `obj.has_editor_property(prop)` first.
+    That method DOES NOT EXIST on material expressions in this engine build
+    (measured: toon_surface_probe.json), so every call raised AttributeError
+    and was swallowed - `try_set(toon_node, "toon_profile", profile)` returned
+    False and bound nothing, silently, while the caller carried on. The build
+    only failed once verify_material learned to check the binding.
+
+    Attempting the set directly is both simpler and correct: UE raises a
+    descriptive error for an unknown property, which the except already
+    handles. Existence is then VERIFIED by reading the value back, which is the
+    only check that actually proves anything.
+    """
     try:
-        if obj.has_editor_property(prop):
-            obj.set_editor_property(prop, value)
-            return True
-    except Exception:
-        pass
-    return False
+        obj.set_editor_property(prop, value)
+        return True
+    except Exception as exc:
+        log(f"try_set {prop} failed: {str(exc)[:120]}")
+        return False
 
 
 def save(asset):
@@ -213,11 +291,41 @@ def add_function_output(fn, name, x=800, y=0):
 # Wiring
 # ---------------------------------------------------------------------------
 
+def _pin_names(dst):
+    """Ordered input pin names of `dst` as THIS build's binder expects them."""
+    try:
+        return [str(p) for p in
+                unreal.MaterialEditingLibrary
+                .get_material_expression_input_names(dst)]
+    except Exception:
+        return []
+
+
+def _resolve_pin(dst, wanted):
+    """Match a wanted pin name against the node's real pins.
+
+    The binder matches by exact display name, and this build's names are not
+    guessable: Power exposes Base/Exp (not A/B), Length has ONE unnamed pin,
+    If spells its result pins 'A > B' with spaces. Guessing produced silent
+    no-ops and a master that fell back to the default material. Probe first,
+    guess last.
+    """
+    pins = _pin_names(dst)
+    if not pins:
+        return wanted
+    norm = lambda s: s.replace(" ", "").lower()
+    for p in pins:
+        if norm(p) == norm(wanted):
+            return p
+    return wanted
+
+
 def connect(src, src_output, dst, dst_input):
     """Connect, trying a list of candidate pin names.
 
-    UE 5.8 exposes 'True'/'False' on StaticSwitchParameter (not A/B), and
-    generic pins are often just 'input' or ''. Returns True on first success.
+    UE 5.8 exposes 'True'/'False' on StaticSwitchParameter (not A/B), 'Base'/
+    'Exp' on Power (not A/B), and an unnamed single pin on Length. Returns True
+    on first success.
     """
     lib = unreal.MaterialEditingLibrary
     if src_output is None:
@@ -225,16 +333,34 @@ def connect(src, src_output, dst, dst_input):
     if isinstance(dst_input, (list, tuple)):
         for pin in dst_input:
             try:
-                if lib.connect_material_expressions(src, src_output, dst, pin) is not False:
+                if lib.connect_material_expressions(src, src_output, dst,
+                                                    _resolve_pin(dst, pin)) \
+                        is not False:
                     return True
             except Exception:
                 continue
         return False
     try:
         return lib.connect_material_expressions(src, src_output, dst,
-                                               dst_input) is not False
+                                               _resolve_pin(dst, dst_input)) \
+            is not False
     except Exception:
         return False
+
+
+def length2(fn, a, b, x=0, y=0):
+    """Length of a 2D pair built from two scalars.
+
+    Length exposes ONE unnamed input on this build ('' connects, 'A'/'B' do
+    not), so scalar pairs must go through AppendVector - the same lesson the
+    Voronoi feature-point path already learned.
+    """
+    pair = expr(fn, unreal.MaterialExpressionAppendVector, x, y)
+    connect(a, "", pair, ["A", "a"])
+    connect(b, "", pair, ["B", "b"])
+    ln = expr(fn, unreal.MaterialExpressionLength, x + 160, y)
+    connect(pair, "", ln, ["", "None"])
+    return ln
 
 
 def unary(src, dst):
@@ -259,16 +385,25 @@ def unary(src, dst):
 
 
 def binary(a, b, dst):
-    """Wire A/B on a two-input math node."""
-    ok_a = connect(a, "", dst, ["A", "a", "Input0"])
-    ok_b = connect(b, "", dst, ["B", "b", "Input1"])
+    """Wire A/B on a two-input math node, using the node's REAL pin names.
+
+    Most math nodes are A/B, but Power is Base/Exp on this build - probing the
+    names first is what makes one helper correct for both.
+    """
+    pins = _pin_names(dst) or ["A", "B"]
+    ok_a = connect(a, "", dst, [pins[0], "A", "a", "Input0"])
+    ok_b = connect(b, "", dst, [pins[1] if len(pins) > 1 else "B",
+                                "B", "b", "Input1"])
     return ok_a and ok_b
 
 
 def ternary(a, b, c, dst):
-    ok_a = connect(a, "", dst, ["A", "a"])
-    ok_b = connect(b, "", dst, ["B", "b"])
-    ok_c = connect(c, "", dst, ["Alpha", "C", "c"])
+    """Wire three inputs (Lerp: A/B/Alpha) using the node's REAL pin names."""
+    pins = _pin_names(dst) or ["A", "B", "Alpha"]
+    ok_a = connect(a, "", dst, [pins[0], "A", "a"])
+    ok_b = connect(b, "", dst, [pins[1] if len(pins) > 1 else "B", "B", "b"])
+    ok_c = connect(c, "", dst, [pins[2] if len(pins) > 2 else "Alpha",
+                                "Alpha", "C", "c"])
     return ok_a and ok_b and ok_c
 
 
@@ -360,6 +495,27 @@ def verify_material(name, expected_calls, min_expressions=10):
     missing = [c for c in expected_calls if c not in calls]
     result["missing_calls"] = missing
 
+    # Toon Profile binding, added 2026-10-02. A material can pass every check
+    # above and still be shading on ENGINE DEFAULTS: the profile is a property
+    # of the SubstrateToonBSDF node, not of the material, so an unbound profile
+    # leaves the graph structurally perfect and artistically inert. That is
+    # exactly the state this repo shipped in until 2026-10-02 - 19 TP_* assets,
+    # zero bound.
+    if name == "M_Master_Toon_Universal":
+        profile = None
+        try:
+            for n in unreal.MaterialEditingLibrary.get_material_expressions(mat) or []:
+                if type(n).__name__ == "MaterialExpressionSubstrateToonBSDF":
+                    profile = n.get_editor_property("toon_profile")
+                    break
+        except Exception as exc:
+            result["toon_profile_error"] = str(exc)[:120]
+        result["toon_profile"] = profile.get_name() if profile else None
+        if profile is None:
+            result["error"] = (result.get("error", "")
+                               + " | NO Toon Profile bound to the Substrate "
+                                 "Toon BSDF - renders on engine defaults")
+
     # a zero-count graph is empty, not clean
     if len(expected_calls) > 0 and len(calls) == 0:
         result["error"] = "ZERO function calls - graph is empty, not verified"
@@ -367,10 +523,12 @@ def verify_material(name, expected_calls, min_expressions=10):
         result["error"] = f"missing calls: {missing}"
     elif nexpr < min_expressions:
         result["error"] = f"only {nexpr} expressions (expected >= {min_expressions})"
+    elif result.get("error"):
+        pass  # keep the earlier profile error
 
     result["ok"] = not result.get("error")
     log(f"VERIFY {name}: ok={result['ok']} calls={len(calls)} exprs={nexpr} "
-        f"{result.get('error', '')}")
+        f"profile={result.get('toon_profile')} {result.get('error', '')}")
     return result
 
 

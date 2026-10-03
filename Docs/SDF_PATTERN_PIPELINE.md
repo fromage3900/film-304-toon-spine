@@ -51,6 +51,16 @@ Two consequences worth keeping in mind:
 | 5 | CrossHatch | `Min` of two 45° line fields (`u±v`) | engraving, pencil hatch, stone |
 | 6 | Stipple | `Frac(Sin(u*12.9898 + v*78.233)*43758.5453)` | dry-brush, graphite grain |
 | 7 | Rings | `Frac(Length(u, v))` | manga focal-line screentone burst |
+| 8 | Voronoi | F1: 3×3 cell search, per-cell feature point from `Frac(Sin(dot(cell,k)) * 43758.5453)`, squared distances through `Min`, one `Sqrt` at the end | true F1 cell breakup — concrete, plaster, exposed aggregate |
+| 9 | Grid | `Max` of `Abs(Frac(u)−0.5)` and `Abs(Frac(v)−0.5)`, ×2 | grout lines — drop-ceiling tile, carpet tile |
+| 10 | Perforation | `1 − Saturate(Length(cell centre offset) × 1.4142)` | round holes — acoustic panel, speaker grille |
+| 11 | Weave | warp/weft chosen by `Frac((Floor(u)+Floor(v))×0.5)×2` parity | over-under textile — cubicle fabric, acoustic cloth |
+
+Rows 8–11 were added 2026-10-02 for the office film. Row 8 closes the gap this document
+recorded in §8 ("No true Voronoi/F1 cell pattern yet"): the earlier single-cell
+approximation would only have been a jittered lattice, so the 3×3 neighbourhood search is
+the real thing. Squared distance through `Min` is exact — `Sqrt` is monotonic, so the
+argmin is unchanged — and it costs one square root instead of nine.
 
 `Softness` is the edge width of the threshold — the *only* knob that softens the line. Keep it near
 0.02 for cel work; raise it for a printed/painterly edge.
@@ -129,6 +139,8 @@ wiring cannot silently vanish the way the 2026-09-29 cross-project copy lost all
 - The shadow mask reads its own `PixelNormalWS` rather than reusing the master's later `normal`
   node — that node is defined after this block, and referencing it raised `NameError` on the first
   build attempt (caught by the spine report, not by a log line).
-- No true Voronoi/F1 cell pattern yet (Crackle approximates it with sine products).
+- A true Voronoi/F1 cell pattern is **no longer open** — added 2026-10-02 as
+  `CellIndex 8` (3×3 neighbourhood, feature point per cell). Crackle remains the cheap
+  approximation for surfaces that do not justify the ~90 extra nodes.
 - `MF_ProceduralPatterns` was previously **unreferenced** (audit F6); it is now called by the
   master. A profile that wants hatching sets `PatternIndex`/`PatternDensity` on its instance.

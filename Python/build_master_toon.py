@@ -22,45 +22,72 @@ import spine_lib as lib
 
 NAME = "M_Master_Toon_Universal"
 
+# The Toon Profile bound to the master's Substrate Toon BSDF. A profile is what
+# turns the surface into cel shading; with it unbound the whole spine renders on
+# engine defaults. TP_Default is the neutral fallback - CONTENT_CONVENTIONS.md
+# designates it "anything with no better answer".
+MASTER_PROFILE = "TP_Default"
+
 # (param_name, group, default, description) - recovered from the source master
 SURFACE_PARAMS = [
     ("BaseTint", "Palette", (0.55, 0.48, 0.42, 1.0), "Base surface colour"),
     ("AccentTint", "Palette", (0.72, 0.62, 0.52, 1.0), "Second colour for ramp/blend"),
     ("InkColor", "Palette", (0.05, 0.08, 0.15, 1.0), "Ink line / pooling colour"),
     ("GoldTint", "Palette", (0.85, 0.65, 0.25, 1.0), "Gilding colour"),
+    # Added 2026-10-02. Feeds the Substrate Toon closure's NATIVE EmissiveColor
+    # pin (probed on this build - see Saved/Audit/toon_surface_probe_v2.json),
+    # not MP_EMISSIVE_COLOR, so the emission stays inside the substrate closure
+    # instead of becoming a second legacy output path. Default 0 = off, so every
+    # pre-existing instance is unchanged until it opts in.
+    ("EmissiveColor", "Emissive", (0.0, 0.0, 0.0, 1.0),
+     "Emission colour for troffers, monitor screens, signage"),
 ]
 
 FLOAT_PARAMS = [
-    ("UVScale", "UV", 1.0, "Texture tiling"),
-    ("UVRotation", "UV", 0.0, "Texture rotation in degrees"),
+    # FIX 2026-10-03 - 19 of these 42 scalars never reached the Toon closure
+    # (live forward-reachability, Saved/Audit/lookdev_census.json): the artist
+    # dragged them and nothing changed. Actions taken here:
+    #   * UVScale / UVRotation DELETED - redundant with the LIVE PatternScale /
+    #     PatternAngle knobs (the pattern function already scales and rotates
+    #     internally), so keeping them was two controls for one behaviour.
+    #   * the remaining 17 unwired scalars moved to group "Parked" with an
+    #     UNWIRED description. Names kept: they mark lanes the film still wants
+    #     (2D-animation boil, audio-reactive banding, ornament, outline
+    #     reference) and re-wiring is tracked in Docs/SDF_PATTERN_PIPELINE.md.
+    #     In the MI editor they now sort into their own group instead of
+    #     masquerading as working controls.
     ("ParallaxScale", "Parallax", 0.04, "Height-map parallax amount"),
-    ("ParallaxSteps", "Parallax", 8.0, "Parallax step count"),
+    ("ParallaxSteps", "Parked", 8.0, "UNWIRED - parked parallax step count"),
     ("ParallaxHeight", "Parallax", 0.04, "Height contribution to WPO"),
     ("GildingStrength", "Gilding", 0.0, "Gold-leaf overlay amount"),
-    ("GoldEmissive", "Gilding", 0.0, "Gold emissive boost"),
+    ("GoldEmissive", "Parked", 0.0, "UNWIRED - parked gold emissive boost"),
     ("OilPaintStrength", "OilPaint", 0.0, "Impasto/oil blend amount"),
-    ("StrokeStrength", "OilPaint", 0.55, "Brush-stroke breakup"),
-    ("BrushScale", "OilPaint", 0.045, "Brush texture scale"),
+    ("StrokeStrength", "Parked", 0.55, "UNWIRED - parked brush-stroke breakup"),
+    ("BrushScale", "Parked", 0.045, "UNWIRED - parked brush texture scale"),
     ("TemporalStrength", "Temporal", 0.0, "Hand-drawn temporal wobble"),
-    ("WindSpeed", "Temporal", 0.15, "Wind animation speed"),
-    ("NoiseScale", "Temporal", 1.5, "Temporal noise scale"),
-    ("SmearStrength", "Temporal", 0.0, "Temporal smear"),
-    ("BoilIntensity", "Temporal", 0.0, "Line boil (hand-drawn shimmer)"),
+    ("WindSpeed", "Parked", 0.15, "UNWIRED - parked wind animation speed"),
+    ("NoiseScale", "Parked", 1.5, "UNWIRED - parked temporal noise scale"),
+    ("SmearStrength", "Parked", 0.0, "UNWIRED - parked temporal smear"),
+    ("BoilIntensity", "Parked", 0.0, "UNWIRED - parked line boil (hand-drawn shimmer)"),
     ("InkIntensity", "Surface", 0.0, "Ink line intensity"),
-    ("PoolingStrength", "Surface", 0.5, "Ink pooling in creases"),
+    ("PoolingStrength", "Parked", 0.5, "UNWIRED - parked ink pooling in creases"),
     ("Wetness", "Surface", 0.0, "Wetness: blends dry/wet roughness"),
-    ("OrnamentStyle", "Ornament", 0.0, "Ornament style index"),
-    ("OrnamentScale", "Ornament", 1.0, "Ornament scale"),
-    ("CurvatureSensitivity", "Ornament", 2.0, "Curvature response for ornament"),
-    ("AudioReactivity", "Audio", 0.0, "Audio-reactive amount"),
-    ("BassWeight", "Audio", 1.0, "Bass band weight"),
-    ("MidWeight", "Audio", 0.5, "Mid band weight"),
-    ("TrebleWeight", "Audio", 0.25, "Treble band weight"),
+    ("OrnamentStyle", "Parked", 0.0, "UNWIRED - parked ornament style index"),
+    ("OrnamentScale", "Parked", 1.0, "UNWIRED - parked ornament scale"),
+    ("CurvatureSensitivity", "Parked", 2.0, "UNWIRED - parked curvature response for ornament"),
+    ("AudioReactivity", "Parked", 0.0, "UNWIRED - parked audio-reactive amount"),
+    ("BassWeight", "Parked", 1.0, "UNWIRED - parked bass band weight"),
+    ("MidWeight", "Parked", 0.5, "UNWIRED - parked mid band weight"),
+    ("TrebleWeight", "Parked", 0.25, "UNWIRED - parked treble band weight"),
     ("DryRoughness", "Surface", 0.78, "Dry surface roughness"),
     ("WetRoughness", "Surface", 0.25, "Wet surface roughness"),
-    ("EdgeStrength", "Outline", 1.0, "Outline strength reference"),
+    ("EdgeStrength", "Parked", 1.0, "UNWIRED - parked outline strength reference"),
     ("BandScale", "SDF", 0.035, "World-space band frequency"),
     ("BandStrength", "SDF", 0.12, "World-space band depth"),
+    # Added 2026-10-02 with the EmissiveColor parameter. Scales EmissiveColor
+    # into the Toon closure; 0 disables emission entirely.
+    ("EmissiveIntensity", "Emissive", 0.0,
+     "Emission strength. 0 = unlit (default); raise for troffers/screens"),
 ]
 
 
@@ -114,7 +141,21 @@ def build(rebuild=True):
     # bUsePaintedRamp: 0 = MF_ColorRamp3 (slider bands), 1 = MF_RampLUT
     # (artist-painted 1D ramp). Both share the BaseColor/ColorRamp/Mask
     # signature, so the switch is a pure substitution.
-    mask_default = lib.scalar_const(mat, 0.0, -1000, 740)
+    #
+    # FIX 2026-10-02 - the ramp subsystem used to be INERT. Mask was wired to a
+    # hard constant 0.0, and both functions end in lerp(base_color, ramp_rgb,
+    # mask): at mask=0 that returns BaseColor unchanged, so bUsePaintedRamp
+    # toggled between two identical outputs and all six Ramp* parameters plus
+    # RampTexture were unreachable. verify_material still passed because it
+    # counts function CALLS, not their influence on the result - the exact
+    # "structurally valid, semantically empty" defect class the repo docs warn
+    # about. Promoting the constant to a parameter with default 0.0 keeps every
+    # existing instance pixel-identical while making the ramp reachable: an
+    # artist sets RampStrength > 0 to opt in.
+    ramp_strength = lib.scalar(mat, "RampStrength", "Ramp", 0.0, -1000, 740,
+                               desc="0 bypasses the ramp (legacy look); >0 "
+                                    "applies MF_ColorRamp3/MF_RampLUT shaping")
+    mask_default = ramp_strength
     # The ramp is a real MaterialFunctionCall, not inline math: that keeps one
     # authored source of truth for band shape across the whole spine, and it is
     # what the original master did.
@@ -192,16 +233,26 @@ def build(rebuild=True):
                            desc="Pattern rotation in degrees")
     pat_index = lib.scalar(mat, "PatternIndex", "Pattern", 0.0, -1240, 1880,
                            desc="0 halftone 1 checker 2 stripes 3 crackle 4 ink "
-                                "5 crosshatch 6 stipple 7 rings")
+                                "5 crosshatch 6 stipple 7 rings 8 voronoi 9 grid "
+                                "10 perforation 11 weave")
     pat_density = lib.scalar(mat, "PatternDensity", "Pattern", 0.5, -1240, 1960,
                              desc="Ink coverage 0..1 - raise in shadow")
     pat_strength = lib.scalar(mat, "PatternStrength", "Pattern", 0.0, -1240, 2040,
                               desc="Pattern ink strength; 0 = off")
+    # FIX 2026-10-03: the function's Softness input was never connected at the
+    # call site, and a function input with no caller connection compiles as a
+    # hard error ("Missing function input 'Softness'") - the master fell back
+    # to the default material and every surface rendered black. Promoted to an
+    # artist knob: 0 = razor-sharp cel edge, higher = softer screen-tone edge.
+    pat_softness = lib.scalar(mat, "PatternSoftness", "Pattern", 0.10,
+                              -1240, 2100,
+                              desc="Pattern edge softness; 0 = razor sharp")
 
     lib.connect(pat_uv, "", pat_call, "UV")
     lib.connect(pat_scale, "", pat_call, "Scale")
     lib.connect(pat_angle, "", pat_call, "Angle")
     lib.connect(pat_index, "", pat_call, "CellIndex")
+    lib.connect(pat_softness, "", pat_call, "Softness")
 
     # ---------------- shadow-driven hatch density ----------------
     # The hatch should densify into shadow the way a painter hatches into the
@@ -312,18 +363,38 @@ def build(rebuild=True):
     lib.connect(ao, "", contact, ["A"])
     lib.connect(ao_scale, "", contact, ["B"])
 
-    shaded = lib.expr(mat, unreal.MaterialExpressionLinearInterpolate,
-                      -400, 1150)
-    lib.connect(bContactShadow, "", shaded, ["True", "False"])
-    lib.connect(final_color, "", shaded, ["False"])
-    lib.connect(ao_tinted, "", shaded, ["True"])
-    final_color = shaded
+    # FIX 2026-10-03: the StaticSwitchParameter IS the mixer. The previous
+    # version built a LinearInterpolate and connected the switch INTO it using
+    # True/False pin names - a Lerp exposes A/B/Alpha, so all three connects
+    # failed, connect() swallowed the pin errors, and `final_color = shaded`
+    # handed the Toon BSDF an UNCONNECTED Lerp (constant 0 = black). Live
+    # evidence: Saved/Audit/master_chain_dump.json node 88, in=[], used_by=89.
+    # Every surface in the film rendered black with the graph "passing"
+    # verification, because graph_reachability seeds its walk at nodes with no
+    # consumers and ao_tinted/contact/bContactShadow qualified as sinks.
+    lib.connect(final_color, "", bContactShadow, ["False"])
+    lib.connect(ao_tinted, "", bContactShadow, ["True"])
+    final_color = bContactShadow
 
     # ---------------- Substrate Toon BSDF ----------------
     toon = lib.expr(mat, unreal.MaterialExpressionSubstrateToonBSDF, 700, 240)
     lib.connect(final_color, "", toon, ["BaseColor", "DiffuseColor"])
     lib.connect(rough, "", toon, ["Roughness"])
     lib.connect(normal, "", toon, ["Normal", "TangentNormal", "NormalMap"])
+
+    # ---------------- emissive (office: troffers, monitor screens) ----------
+    # Routed into the closure's own EmissiveColor pin. PROBED 2026-10-02
+    # (Saved/Audit/toon_surface_probe_v2.json): MaterialExpressionSubstrate
+    # ToonBSDF exposes BaseColor, Metallic, Specular, Roughness, Normal,
+    # EmissiveColor, PatternUVs, Anisotropy, Tangent on this build, and a
+    # FrontMaterial + MP_EMISSIVE_COLOR pair also recompiles. The pin is
+    # preferred: it keeps emission inside the substrate closure rather than
+    # adding a second legacy output path alongside FrontMaterial.
+    emissive_mul = lib.expr(mat, unreal.MaterialExpressionMultiply, 700, 60)
+    lib.connect(vec["EmissiveColor"], "", emissive_mul, ["A", "a"])
+    lib.connect(flt["EmissiveIntensity"], "", emissive_mul, ["B", "b"])
+    lib.connect(emissive_mul, "", toon, ["EmissiveColor"])
+
     lib.connect_property(toon, unreal.MaterialProperty.MP_FRONT_MATERIAL)
 
     try:
@@ -331,6 +402,113 @@ def build(rebuild=True):
     except Exception as exc:
         lib.log(f"recompile warning: {exc}")
 
+    # ---------------- the Toon Profile itself ----------------
+    # FIX 2026-10-02 - the spine was running with NO profile bound.
+    # `toon_profile` is a property of the SubstrateToonBSDF NODE, not of the
+    # material and not of the material instance. Nothing in this builder ever
+    # set it and nothing verified it, so every surface in the film was shading
+    # on engine defaults while 19 TP_* assets sat unused.
+    #
+    # It is bound HERE, after recompile and immediately before save, and the
+    # node is RE-FETCHED rather than reusing the handle from graph build time.
+    # Measured behaviour on this build:
+    #   * binding an EXISTING material: survives recompile and save (probe
+    #     toon_profile_recompile_probe.json, steps 1-5 all TP_Default)
+    #   * binding a FRESHLY CREATED material before recompile: the log printed
+    #     success and verify_material read None one second later - the value was
+    #     gone. Doing it last removes that ordering dependency entirely.
+    # verify_material now fails the build if this does not stick, so a
+    # regression here cannot pass silently again.
+    toon_node = None
+    for _n in unreal.MaterialEditingLibrary.get_material_expressions(mat) or []:
+        if type(_n).__name__ == "MaterialExpressionSubstrateToonBSDF":
+            toon_node = _n
+            break
+    master_profile = unreal.load_asset(
+        lib.asset_path(lib.PROFILE_DIR, MASTER_PROFILE))
+
+    def _profile_bound():
+        """Read the bound profile back off whichever handle answers."""
+        for handle in (toon_node, toon):
+            if handle is None:
+                continue
+            try:
+                p = handle.get_editor_property("toon_profile")
+                if p is not None:
+                    return p.get_name()
+            except Exception:
+                continue
+        return None
+
+    if toon_node is None:
+        lib.log(f"WARN {NAME}: no SubstrateToonBSDF node - cannot bind profile")
+    elif master_profile is None:
+        lib.log(f"WARN master profile {MASTER_PROFILE} not found - spine will "
+                f"render on a default Toon Profile")
+    else:
+        # Set on the construction handle AND the re-fetched one, then prove it
+        # by reading back. Setting reported success while verify_material read
+        # None, so the return value of set_editor_property is not evidence here
+        # and neither is a try_set() that does not raise - only a read-back is.
+        for handle in (toon, toon_node):
+            lib.try_set(handle, "toon_profile", master_profile)
+        bound = _profile_bound()
+        if bound is None:
+            # A material created in THIS session can hand out a detached
+            # expression object; retry against the live package expression.
+            live = unreal.load_asset(
+                lib.asset_path(lib.MASTER_DIR, NAME))
+            if live is not None:
+                for _n in unreal.MaterialEditingLibrary \
+                        .get_material_expressions(live) or []:
+                    if type(_n).__name__ == "MaterialExpressionSubstrateToonBSDF":
+                        lib.try_set(_n, "toon_profile", master_profile)
+                        toon_node = _n
+                        break
+            bound = _profile_bound()
+        lib.log(f"{NAME} Toon Profile -> {bound or 'UNBOUND'} "
+                f"(wanted {MASTER_PROFILE})")
+
     lib.save(mat)
+
+    # ---------------- post-save fixup ----------------
+    # The handle that build() wrote the profile to is not reliably the handle
+    # that verify_material reads from a second later: build() read back
+    # "TP_Default" and verify_material read None one second later, on the same
+    # path, in the same process. Re-fetching the material and re-asserting the
+    # binding on the node that comes back makes the saved asset the thing that
+    # was written, rather than the object build() happened to hold.
+    try:
+        fresh = unreal.load_asset(lib.asset_path(lib.MASTER_DIR, NAME))
+        fresh_node = None
+        for _n in unreal.MaterialEditingLibrary \
+                .get_material_expressions(fresh) or []:
+            if type(_n).__name__ == "MaterialExpressionSubstrateToonBSDF":
+                fresh_node = _n
+                break
+        if fresh_node is not None and master_profile is not None:
+            have = fresh_node.get_editor_property("toon_profile")
+            if have is None:
+                # modify() marks the object dirty so the change is actually
+                # serialised. set_editor_property alone updates the object but
+                # does not always flag the package, and a save then writes the
+                # pre-change bytes - which is consistent with everything measured:
+                # the value reads back in memory yet never appears in the file.
+                for target in (fresh_node, fresh):
+                    try:
+                        target.modify()
+                    except Exception:
+                        pass
+                lib.try_set(fresh_node, "toon_profile", master_profile)
+                lib.save(fresh)
+                after = fresh_node.get_editor_property("toon_profile")
+                lib.log(f"{NAME}: re-asserted Toon Profile -> "
+                        f"{after.get_name() if after else 'STILL UNBOUND'}")
+            else:
+                lib.log(f"{NAME}: Toon Profile persisted -> {have.get_name()}")
+        elif fresh_node is None:
+            lib.log(f"WARN {NAME}: re-fetch found no SubstrateToonBSDF node")
+    except Exception as exc:
+        lib.log(f"WARN {NAME} post-save fixup failed: {str(exc)[:140]}")
     lib.log(f"{NAME} built with {lib.expression_count(mat)} expressions")
     return mat
