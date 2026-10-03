@@ -1,6 +1,6 @@
 # Asset list (v0)
 
-Generated 2026-10-01 by `Tools/make_assetlist.py` - do not hand-edit, re-run it.
+Generated 2026-10-02 by `Tools/make_assetlist.py` - do not hand-edit, re-run it.
 
 This is the W4 `assetlist-v0` deliverable. `Owner` is deliberately blank: assign it in the group, per asset, before the first shared edit (see `Docs/GROUP_WORKFLOW.md`).
 
@@ -23,6 +23,14 @@ Machine-readable twin: `Docs/ASSETLIST_v0.csv`
 | `TP_Gold` | toon profile | `Python/build_toon_profiles.py` | `Content/Materials/ToonProfiles/TP_Gold.uasset` |
 | `TP_Hatched` | toon profile | `Python/build_toon_profiles.py` | `Content/Materials/ToonProfiles/TP_Hatched.uasset` |
 | `TP_Hero` | toon profile | `Python/build_toon_profiles.py` | `Content/Materials/ToonProfiles/TP_Hero.uasset` |
+| `TP_Office_Carpet` | toon profile | `Python/build_toon_profiles.py` | `Content/Materials/ToonProfiles/TP_Office_Carpet.uasset` |
+| `TP_Office_DropCeiling` | toon profile | `Python/build_toon_profiles.py` | `Content/Materials/ToonProfiles/TP_Office_DropCeiling.uasset` |
+| `TP_Office_Laminate` | toon profile | `Python/build_toon_profiles.py` | `Content/Materials/ToonProfiles/TP_Office_Laminate.uasset` |
+| `TP_Office_Polypropylene` | toon profile | `Python/build_toon_profiles.py` | `Content/Materials/ToonProfiles/TP_Office_Polypropylene.uasset` |
+| `TP_Office_PowderCoat` | toon profile | `Python/build_toon_profiles.py` | `Content/Materials/ToonProfiles/TP_Office_PowderCoat.uasset` |
+| `TP_Office_Screen` | toon profile | `Python/build_toon_profiles.py` | `Content/Materials/ToonProfiles/TP_Office_Screen.uasset` |
+| `TP_Office_Troffer` | toon profile | `Python/build_toon_profiles.py` | `Content/Materials/ToonProfiles/TP_Office_Troffer.uasset` |
+| `TP_Office_Whiteboard` | toon profile | `Python/build_toon_profiles.py` | `Content/Materials/ToonProfiles/TP_Office_Whiteboard.uasset` |
 | `TP_SoftPainterly` | toon profile | `Python/build_toon_profiles.py` | `Content/Materials/ToonProfiles/TP_SoftPainterly.uasset` |
 | `TP_Stone` | toon profile | `Python/build_toon_profiles.py` | `Content/Materials/ToonProfiles/TP_Stone.uasset` |
 | `TP_TwoTone` | toon profile | `Python/build_toon_profiles.py` | `Content/Materials/ToonProfiles/TP_TwoTone.uasset` |
@@ -34,48 +42,85 @@ Machine-readable twin: `Docs/ASSETLIST_v0.csv`
 | `MI_Toon_Gold` | material instance | `Python/build_instances.py` | `Content/Materials/Instances/MI_Toon_Gold.uasset` |
 | `MI_Toon_Hatched` | material instance | `Python/build_instances.py` | `Content/Materials/Instances/MI_Toon_Hatched.uasset` |
 | `MI_Toon_Hero` | material instance | `Python/build_instances.py` | `Content/Materials/Instances/MI_Toon_Hero.uasset` |
+| `MI_Toon_Office_Carpet` | material instance | `Python/build_instances.py` | `Content/Materials/Instances/MI_Toon_Office_Carpet.uasset` |
+| `MI_Toon_Office_DropCeiling` | material instance | `Python/build_instances.py` | `Content/Materials/Instances/MI_Toon_Office_DropCeiling.uasset` |
+| `MI_Toon_Office_Laminate` | material instance | `Python/build_instances.py` | `Content/Materials/Instances/MI_Toon_Office_Laminate.uasset` |
+| `MI_Toon_Office_Polypropylene` | material instance | `Python/build_instances.py` | `Content/Materials/Instances/MI_Toon_Office_Polypropylene.uasset` |
+| `MI_Toon_Office_PowderCoat` | material instance | `Python/build_instances.py` | `Content/Materials/Instances/MI_Toon_Office_PowderCoat.uasset` |
+| `MI_Toon_Office_Screen` | material instance | `Python/build_instances.py` | `Content/Materials/Instances/MI_Toon_Office_Screen.uasset` |
+| `MI_Toon_Office_Troffer` | material instance | `Python/build_instances.py` | `Content/Materials/Instances/MI_Toon_Office_Troffer.uasset` |
+| `MI_Toon_Office_Whiteboard` | material instance | `Python/build_instances.py` | `Content/Materials/Instances/MI_Toon_Office_Whiteboard.uasset` |
 | `MI_Toon_Painterly` | material instance | `Python/build_instances.py` | `Content/Materials/Instances/MI_Toon_Painterly.uasset` |
 | `MI_Toon_Stone` | material instance | `Python/build_instances.py` | `Content/Materials/Instances/MI_Toon_Stone.uasset` |
 | `MI_Toon_TwoTone` | material instance | `Python/build_instances.py` | `Content/Materials/Instances/MI_Toon_TwoTone.uasset` |
+| `T_Dither_Bayer` | texture | `Python/build_textures.py` | `Content/Materials/Textures/T_Dither_Bayer.uasset` |
+| `T_Hatch_Cross` | texture | `Python/build_textures.py` | `Content/Materials/Textures/T_Hatch_Cross.uasset` |
+| `T_Hatch_Diagonal` | texture | `Python/build_textures.py` | `Content/Materials/Textures/T_Hatch_Diagonal.uasset` |
+| `T_HatchPattern` | texture | `Python/build_textures.py` | `Content/Materials/Textures/T_HatchPattern.uasset` |
+| `T_Noise_White` | texture | `Python/build_textures.py` | `Content/Materials/Textures/T_Noise_White.uasset` |
+| `T_Ramp_2Band` | texture | `Python/build_textures.py` | `Content/Materials/Textures/T_Ramp_2Band.uasset` |
+| `T_Ramp_3Band` | texture | `Python/build_textures.py` | `Content/Materials/Textures/T_Ramp_3Band.uasset` |
+| `T_Ramp_4Band` | texture | `Python/build_textures.py` | `Content/Materials/Textures/T_Ramp_4Band.uasset` |
+| `T_Ramp_Smooth` | texture | `Python/build_textures.py` | `Content/Materials/Textures/T_Ramp_Smooth.uasset` |
+| `L_Brutalist_Layout` | level | `Python/stage_brutalist_layout.py` | `Content/Maps/L_Brutalist_Layout.umap` |
 | `L_Toon_Lookdev` | level | `Python/build_test_level.py` | `Content/Maps/L_Toon_Lookdev.umap` |
+| `L_Toon_Shot_Env` | level | `UNKNOWN - no builder mapped` | `Content/Maps/L_Toon_Shot_Env.umap` |
 | `L_Toon_Lookdev_HLOD0_Instancing` | generated data | `editor HLOD build` | `Content/Maps/L_Toon_Lookdev_HLOD0_Instancing.uasset` |
 
-**28 assets.**
+**55 assets.** Assets with no generator to decide on: `L_Toon_Shot_Env`.
 
 
-## Brutalist building set (staged, desktop import pending)
+## Brutalist building set (environment kit)
 
-| Object | Collection | Builder / preset | Verts | Materials |
-|---|---|---|---|---|
-| `CITY_TightEstate` | 01_CITY_PBR | Blender/GN_BRUTALIST_CityBlock / BR_CITY_TIGHT | 984 | BR_Concrete,BR_Asphalt,BR_Glazing |
-| `CITY_TowerCluster` | 01_CITY_PBR | Blender/GN_BRUTALIST_CityBlock / BR_CITY_TOWERS | 576 | BR_Concrete,BR_Asphalt,BR_Glazing |
-| `CITY_LowSprawl` | 01_CITY_PBR | Blender/GN_BRUTALIST_CityBlock / BR_CITY_SPRAWL | 1504 | BR_Concrete,BR_Asphalt,BR_Glazing |
-| `CITY_CivicSuperblock` | 01_CITY_PBR | Blender/GN_BRUTALIST_CityBlock / BR_CITY_CIVIC | 152 | BR_Concrete,BR_Asphalt,BR_Glazing |
-| `KMZ_TightEstate` | 02_CITY_KOMIKAZE | Blender/GN_BRUTALIST_CityBlock / BR_CITY_TIGHT | 984 | BR_Concrete_KOMIKAZE,BR_Asphalt_KOMIKAZE,BR_Glazing_KOMIKAZE |
-| `KMZ_TowerCluster` | 02_CITY_KOMIKAZE | Blender/GN_BRUTALIST_CityBlock / BR_CITY_TOWERS | 576 | BR_Concrete_KOMIKAZE,BR_Asphalt_KOMIKAZE,BR_Glazing_KOMIKAZE |
-| `KMZ_LowSprawl` | 02_CITY_KOMIKAZE | Blender/GN_BRUTALIST_CityBlock / BR_CITY_SPRAWL | 1504 | BR_Concrete_KOMIKAZE,BR_Asphalt_KOMIKAZE,BR_Glazing_KOMIKAZE |
-| `KMZ_CivicSuperblock` | 02_CITY_KOMIKAZE | Blender/GN_BRUTALIST_CityBlock / BR_CITY_CIVIC | 152 | BR_Concrete_KOMIKAZE,BR_Asphalt_KOMIKAZE,BR_Glazing_KOMIKAZE |
-| `OFFICE_CivicSlab` | 03_OFFICE_BLOCK | Blender/GN_BRUTALIST_OfficeBlock / BR_OFFICE_CIVIC | 904 | BR_Concrete |
-| `OFFICE_BarbicanScale` | 03_OFFICE_BLOCK | Blender/GN_BRUTALIST_OfficeBlock / BR_OFFICE_BARBICAN | 1224 | BR_Concrete |
-| `OFFICE_Bunker` | 03_OFFICE_BLOCK | Blender/GN_BRUTALIST_OfficeBlock / BR_OFFICE_BUNKER | 336 | BR_Concrete |
-| `OFFICE_SlenderTower` | 03_OFFICE_BLOCK | Blender/GN_BRUTALIST_OfficeBlock / BR_OFFICE_SLENDER | 888 | BR_Concrete |
-| `CUBICLE_Canonical` | 04_INTERIOR_CUBICLES | Blender/GN_BRUTALIST_CubicleFarm / BR_CUBICLE_CANON | 1898 | BR_Paving |
-| `CUBICLE_MazeShift` | 04_INTERIOR_CUBICLES | Blender/GN_BRUTALIST_CubicleFarm / BR_CUBICLE_MAZE | 3624 | BR_Paving |
-| `CUBICLE_OpenPlan` | 04_INTERIOR_CUBICLES | Blender/GN_BRUTALIST_CubicleFarm / BR_CUBICLE_OPEN | 2502 | BR_Paving |
-| `CUBICLE_Swarm` | 04_INTERIOR_CUBICLES | Blender/GN_BRUTALIST_CubicleFarm / BR_CUBICLE_SWARM | 6668 | BR_Paving |
-| `FAC_TowerRibbon` | 05_FACADE_VARIATION | Blender/GN_BRUTALIST_CityBlock / BR_CITY_TOWERS_GLASS | 1152 | BR_Concrete,BR_Asphalt,BR_Glazing |
-| `FAC_PunchedEstate` | 05_FACADE_VARIATION | Blender/GN_BRUTALIST_CityBlock / BR_CITY_PUNCHED | 1848 | BR_Concrete,BR_Asphalt,BR_Glazing |
-| `FAC_CivicColonnade` | 05_FACADE_VARIATION | Blender/GN_BRUTALIST_CityBlock / BR_CITY_COLONNADE | 552 | BR_Concrete,BR_Asphalt,BR_Glazing |
-| `ROOF_FlatParapet` | 06_ROOFS | Blender/GN_BRUTALIST_Roof / BR_ROOF_FLAT | 56 | BR_Concrete |
-| `ROOF_LowPitch` | 06_ROOFS | Blender/GN_BRUTALIST_Roof / BR_ROOF_PITCH | 24 | BR_Concrete |
-| `ROOF_Sawtooth` | 06_ROOFS | Blender/GN_BRUTALIST_Roof / BR_ROOF_SAWTOOTH | 248 | BR_Concrete |
-| `ROOF_BarrelVault` | 06_ROOFS | Blender/GN_BRUTALIST_Roof / BR_ROOF_BARREL | 48 | BR_Concrete |
-| `ROOF_PyramidHip` | 06_ROOFS | Blender/GN_BRUTALIST_Roof / BR_ROOF_HIP | 24 | BR_Concrete |
-| `ROOF_PlantDeck` | 06_ROOFS | Blender/GN_BRUTALIST_Roof / BR_ROOF_PLANT | 72 | BR_Concrete |
+| Object | Collection | Builder / preset | Verts | Materials | Status |
+|---|---|---|---|---|---|
+| `CITY_TightEstate` | 01_CITY_PBR | Blender/GN_BRUTALIST_CityBlock / BR_CITY_TIGHT | 984 | BR_Concrete,BR_Asphalt,BR_Glazing | in Content/ (SM_CITY_TightEstate) |
+| `CITY_TowerCluster` | 01_CITY_PBR | Blender/GN_BRUTALIST_CityBlock / BR_CITY_TOWERS | 576 | BR_Concrete,BR_Asphalt,BR_Glazing | in Content/ (SM_CITY_TowerCluster) |
+| `CITY_LowSprawl` | 01_CITY_PBR | Blender/GN_BRUTALIST_CityBlock / BR_CITY_SPRAWL | 1504 | BR_Concrete,BR_Asphalt,BR_Glazing | in Content/ (SM_CITY_LowSprawl) |
+| `CITY_CivicSuperblock` | 01_CITY_PBR | Blender/GN_BRUTALIST_CityBlock / BR_CITY_CIVIC | 152 | BR_Concrete,BR_Asphalt,BR_Glazing | in Content/ (SM_CITY_CivicSuperblock) |
+| `KMZ_TightEstate` | 02_CITY_KOMIKAZE | Blender/GN_BRUTALIST_CityBlock / BR_CITY_TIGHT | 984 | BR_Concrete_KOMIKAZE,BR_Asphalt_KOMIKAZE,BR_Glazing_KOMIKAZE | in Content/ (SM_KMZ_TightEstate) |
+| `KMZ_TowerCluster` | 02_CITY_KOMIKAZE | Blender/GN_BRUTALIST_CityBlock / BR_CITY_TOWERS | 576 | BR_Concrete_KOMIKAZE,BR_Asphalt_KOMIKAZE,BR_Glazing_KOMIKAZE | in Content/ (SM_KMZ_TowerCluster) |
+| `KMZ_LowSprawl` | 02_CITY_KOMIKAZE | Blender/GN_BRUTALIST_CityBlock / BR_CITY_SPRAWL | 1504 | BR_Concrete_KOMIKAZE,BR_Asphalt_KOMIKAZE,BR_Glazing_KOMIKAZE | in Content/ (SM_KMZ_LowSprawl) |
+| `KMZ_CivicSuperblock` | 02_CITY_KOMIKAZE | Blender/GN_BRUTALIST_CityBlock / BR_CITY_CIVIC | 152 | BR_Concrete_KOMIKAZE,BR_Asphalt_KOMIKAZE,BR_Glazing_KOMIKAZE | in Content/ (SM_KMZ_CivicSuperblock) |
+| `OFFICE_CivicSlab` | 03_OFFICE_BLOCK | Blender/GN_BRUTALIST_OfficeBlock / BR_OFFICE_CIVIC | 904 | BR_Concrete | in Content/ (SM_OFFICE_CivicSlab) |
+| `OFFICE_BarbicanScale` | 03_OFFICE_BLOCK | Blender/GN_BRUTALIST_OfficeBlock / BR_OFFICE_BARBICAN | 1224 | BR_Concrete | in Content/ (SM_OFFICE_BarbicanScale) |
+| `OFFICE_Bunker` | 03_OFFICE_BLOCK | Blender/GN_BRUTALIST_OfficeBlock / BR_OFFICE_BUNKER | 336 | BR_Concrete | in Content/ (SM_OFFICE_Bunker) |
+| `OFFICE_SlenderTower` | 03_OFFICE_BLOCK | Blender/GN_BRUTALIST_OfficeBlock / BR_OFFICE_SLENDER | 888 | BR_Concrete | in Content/ (SM_OFFICE_SlenderTower) |
+| `CUBICLE_Canonical` | 04_INTERIOR_CUBICLES | Blender/GN_BRUTALIST_CubicleFarm / BR_CUBICLE_CANON | 1898 | BR_Paving | in Content/ (SM_CUBICLE_Canonical) |
+| `CUBICLE_MazeShift` | 04_INTERIOR_CUBICLES | Blender/GN_BRUTALIST_CubicleFarm / BR_CUBICLE_MAZE | 3624 | BR_Paving | in Content/ (SM_CUBICLE_MazeShift) |
+| `CUBICLE_OpenPlan` | 04_INTERIOR_CUBICLES | Blender/GN_BRUTALIST_CubicleFarm / BR_CUBICLE_OPEN | 2502 | BR_Paving | in Content/ (SM_CUBICLE_OpenPlan) |
+| `CUBICLE_Swarm` | 04_INTERIOR_CUBICLES | Blender/GN_BRUTALIST_CubicleFarm / BR_CUBICLE_SWARM | 6668 | BR_Paving | in Content/ (SM_CUBICLE_Swarm) |
+| `FAC_TowerRibbon` | 05_FACADE_VARIATION | Blender/GN_BRUTALIST_CityBlock / BR_CITY_TOWERS_GLASS | 1152 | BR_Concrete,BR_Asphalt,BR_Glazing | in Content/ (SM_FAC_TowerRibbon) |
+| `FAC_PunchedEstate` | 05_FACADE_VARIATION | Blender/GN_BRUTALIST_CityBlock / BR_CITY_PUNCHED | 1848 | BR_Concrete,BR_Asphalt,BR_Glazing | in Content/ (SM_FAC_PunchedEstate) |
+| `FAC_CivicColonnade` | 05_FACADE_VARIATION | Blender/GN_BRUTALIST_CityBlock / BR_CITY_COLONNADE | 552 | BR_Concrete,BR_Asphalt,BR_Glazing | in Content/ (SM_FAC_CivicColonnade) |
+| `ROOF_FlatParapet` | 06_ROOFS | Blender/GN_BRUTALIST_Roof / BR_ROOF_FLAT | 56 | BR_Concrete | in Content/ (SM_ROOF_FlatParapet) |
+| `ROOF_LowPitch` | 06_ROOFS | Blender/GN_BRUTALIST_Roof / BR_ROOF_PITCH | 24 | BR_Concrete | in Content/ (SM_ROOF_LowPitch) |
+| `ROOF_Sawtooth` | 06_ROOFS | Blender/GN_BRUTALIST_Roof / BR_ROOF_SAWTOOTH | 248 | BR_Concrete | in Content/ (SM_ROOF_Sawtooth) |
+| `ROOF_BarrelVault` | 06_ROOFS | Blender/GN_BRUTALIST_Roof / BR_ROOF_BARREL | 48 | BR_Concrete | in Content/ (SM_ROOF_BarrelVault) |
+| `ROOF_PyramidHip` | 06_ROOFS | Blender/GN_BRUTALIST_Roof / BR_ROOF_HIP | 24 | BR_Concrete | in Content/ (SM_ROOF_PyramidHip) |
+| `ROOF_PlantDeck` | 06_ROOFS | Blender/GN_BRUTALIST_Roof / BR_ROOF_PLANT | 72 | BR_Concrete | in Content/ (SM_ROOF_PlantDeck) |
 
 **25 objects, 28,500 verts total**, staged under 6 collections. Contact sheets: `city_komikaze`, `city_pbr`, `facade`, `family`, `palette`, `roofs`.
 
-These live in `Blender/` as geometry-node builders and are staged headless into `Saved/`. They are **not yet in `Content/`**: that needs an FBX export and an import in the editor, which is the remaining desktop step. See `Docs/BRUTALIST_SET.md`.
+Exported by `Blender/export_brutalist_fbx.py` and imported into `Content/Environment/Brutalist/` by `Python/import_brutalist.py`: **25 of 25 objects imported**, 25 `SM_*` mesh assets on disk** (verified: `Saved/Audit/brutalist_import_report.json`). Assignment per object is per-surface (`MI_Toon_Environment` on every slot as the starting point); the id is the Blender object name and the asset adds the `SM_` prefix. See `Docs/BRUTALIST_SET.md`.
+
+Staged into `Content/Maps/L_Brutalist_Layout.umap` by `Python/stage_brutalist_layout.py` at the reviewed positions from the stage manifest: **25 actors, no overlaps**. That arrangement is a REVIEW GRID (six rows of variants for contact-sheet comparison), not a shot scene -- composing the kit into a shot is a separate creative step. Verified: `Saved/Audit/brutalist_layout_report.json`.
+
+
+## Shot deck (level sequences + cameras)
+
+| Sequence | Shot | Camera | Frames | Source |
+|---|---|---|---|---|
+| `LS_SH010` | establish_world | cam=Cam_Turntable.001 24.0mm | 0-95 @24 fps | `Python/build_shot_deck.py` |
+| `LS_SH020` | reveal_profile | cam=Cam_Back 35.0mm | 96-167 @24 fps | `Python/build_shot_deck.py` |
+| `LS_SH030` | water_rise | cam=Cam_Low 28.0mm | 168-251 @24 fps | `Python/build_shot_deck.py` |
+| `LS_SH040` | dialogue_medium | cam=Cam_Beauty 50.0mm | 252-347 @24 fps | `Python/build_shot_deck.py` |
+| `LS_SH050` | macro_emotion | cam=Cam_Macro 85.0mm | 348-419 @24 fps | `Python/build_shot_deck.py` |
+| `LS_SH060` | hero_rig_action | cam=Cam_Front 50.0mm | 420-539 @24 fps | `Python/build_shot_deck.py` |
+| `LS_SH070` | song_release | cam=Cam_Turntable 40.0mm | 540-623 @24 fps | `Python/build_shot_deck.py` |
+| `LS_SH080` | bow_finale | cam=Cam_Beauty 50.0mm | 624-719 @24 fps | `Python/build_shot_deck.py` |
+
+**8 `LS_*` sequences** built from `specs/humber_toon_spine/humber_toon_spine_manifest.v1.json` by `Python/build_shot_deck.py`; cameras are `CineCameraActor`s in `L_Toon_Lookdev`. Frames are the manifest's cut list, converted to Sequencer's 0-based range. Verified: `Saved/Audit/shot_deck_report.json`.
 
 
 ## Not yet started
@@ -84,6 +129,6 @@ These live in `Blender/` as geometry-node builders and are staged headless into 
 |---|---|---|
 | Characters (mesh, rig, materials) | every shot with a character | TBD |
 | Props / set dressing | environment shots | TBD |
-| Level Sequences + cameras | all shots | TBD |
 | MRQ render presets | final render | TBD |
 | Audio / score | final cut | TBD |
+| Shot camera moves / blocking | every shot | TBD |

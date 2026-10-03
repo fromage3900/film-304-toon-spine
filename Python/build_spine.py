@@ -24,6 +24,40 @@ def main():
 
     report = {"functions": {}, "materials": {}, "errors": []}
 
+    # ---------------- reload builder modules from disk ----------------
+    # CPython caches imported modules for the life of the process. When these
+    # scripts are run repeatedly inside ONE long-lived editor via Monolith
+    # run_python, every edit made between runs is silently ignored: __import__
+    # hands back the module loaded the first time. That is exactly what was
+    # observed - a newly added logging block never printed while older code in
+    # the same file kept running. Evicting them first makes a run reflect what
+    # is actually on disk, which is the whole contract of "assets are generated
+    # from Python, Python is the source of truth".
+    import importlib
+    for _mod in ("spine_lib", "build_textures", "build_mf_colorramp3",
+                 "build_mf_ramplut", "build_mf_patterns", "build_master_toon",
+                 "build_m_outline", "build_toon_profiles", "build_instances",
+                 "build_office_set_materials"):
+        sys.modules.pop(_mod, None)
+    for _mod in ("spine_lib",):
+        try:
+            importlib.import_module(_mod)
+        except Exception as exc:
+            log(f"WARN could not preload {_mod}: {exc}")
+
+    # ---- textures FIRST ----
+    # Build_toon_profiles imports ShadowHatchingPatternTexture /
+    # DiffuseRampOffsetTexture by object path, so the texture assets must
+    # exist before profiles are authored or those refs import as None and the
+    # profile verifies clean while rendering unhatched.
+    try:
+        import build_textures
+        report["textures"] = build_textures.build()
+    except Exception as exc:
+        lib.log(f"ERROR building textures: {exc}")
+        report["errors"].append(f"textures: {exc}")
+        report["textures"] = {"ok": False, "error": str(exc)}
+
     # ---- material functions, in dependency order ----
     # The master consumes both ramps, so both must exist before it is built.
     for mod_name, fn_name, min_expr in [
@@ -83,6 +117,26 @@ def main():
             lib.log(f"ERROR building instances: {exc}")
             report["errors"].append(f"instances: {exc}")
 
+    # ---- office set material assignment ----
+    # Run AFTER instances, because it assigns those instances to meshes. Kept
+    # inside the spine so the office meshes can never drift back to an
+    # unassigned slot - three of them shipped with material_interface=None and
+    # therefore rendered with no material at all.
+    if not report["errors"]:
+        try:
+            import build_office_set_materials
+            office = build_office_set_materials.build()
+            report["office_set"] = {
+                "ok": office["ok"],
+                "assigned": sum(1 for e in office["assigned"].values()
+                                if e.get("ok")),
+                "errors": office["errors"],
+                "awaiting_geometry": office["orphaned_office_instances"],
+            }
+        except Exception as exc:
+            lib.log(f"ERROR building office set materials: {exc}")
+            report["errors"].append(f"office_set: {exc}")
+
     lib.save_all()
     lib.write_report(report)
 
@@ -91,6 +145,11 @@ def main():
         + list(report["materials"].values())
         + list(report.get("profiles", {}).values())
         + list(report.get("instances", {}).values()))
+    # Textures gate the whole spine: a failed import leaves the profiles'
+    # hatching/offset refs unbound, and every profile below would still assert
+    # clean. Assert on the same rule the rest of the report uses.
+    if report.get("textures", {}).get("ok") is not True:
+        ok = False
     lib.log(f"OVERALL: {'PASS' if ok else 'FAIL'}")
     return 0 if ok else 1
 
