@@ -1,12 +1,12 @@
 ﻿MELODIA TOON FILM - verify_all
-run      : 2026-10-01 21:32:35
+run      : 2026-10-02 19:31:19
 repo     : P:\film-304-toon-spine
-bracket  : 8 checks, 0 failed
+bracket  : 8 checks, 1 failed
 
 
 Check                                         Result Detail                                                     
 -----                                         ------ ------                                                     
-fork sync (vendored vs upstream)              PASS   PASS - vendored set matches upstream                       
+fork sync (vendored vs upstream)              FAIL   DRIFT - 1 file(s) differ                                   
 Blender available                             PASS   C:\Program Files\Blender Foundation\Blender 5.2\blender.exe
 fork verifier (builders/presets/dials)        PASS   16 assertions passed, 0 failed                             
 external actors in levels are present on disk PASS   1 level(s) use external actors; 158 packages on disk       
@@ -23,7 +23,7 @@ RAW FORK SYNC
 FORK SYNC CHECK
   upstream : P:\MelodiaMelusinaV2-Laptop\deploy\surreal_arch\melodia_gn
   fork     : P:\film-304-toon-spine\Blender\surreal_arch\melodia_gn
-  commit   : 15687c87
+  commit   : de7d15ac
 ------------------------------------------------------------------------
   v brutalist_city.py          IN_SYNC
   v brutalist_cubicles.py      IN_SYNC
@@ -31,7 +31,7 @@ FORK SYNC CHECK
   v brutalist_office.py        IN_SYNC
   v brutalist_roofs.py         IN_SYNC
   v brutalist_uv.py            IN_SYNC
-  v core.py                    IN_SYNC
+  x core.py                    DRIFT
   v higgsas_pipeline.py        IN_SYNC
   v logging.py                 IN_SYNC
   v paris_common.py            IN_SYNC
@@ -39,7 +39,9 @@ FORK SYNC CHECK
   ~ presets.py                 THINNED
   ~ __init__.py                THINNED
 ------------------------------------------------------------------------
-RESULT: PASS - vendored set matches upstream
+RESULT: DRIFT - 1 file(s) differ
+   DRIFT: core.py
+   re-extract with:  python Tools/resync_fork.py --write
 
 
-RESULT: PASS
+RESULT: FAIL

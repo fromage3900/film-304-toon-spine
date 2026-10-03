@@ -111,9 +111,26 @@ foreach ($u in $umaps) {
     # A package literally named after its own parent folder - `/Game/Maps.Maps`.
     # That is the signature of new_level() being handed a FOLDER instead of a
     # level path, and how Content/Maps.umap got committed on 2026-09-30.
+    #
+    # REFINED 2026-10-02: a correct level legitimately contains a reference to
+    # its OWN package path. L_Brutalist_Layout holds 25 static-mesh actors, so
+    # its bytes carry `/Game/Maps/L_Brutalist_Layout.L_Brutalist_Layout` 28x.
+    # That is the level's own path, not a mis-named package, and it always equals
+    # the `expected` path computed above (folder + level name) - so anything
+    # matching it is the level referring to itself and is fine. What the defect
+    # actually leaves behind is a SIBLING: package `Maps` in folder `/Game/`,
+    # i.e. `/Game/Maps.Maps`, which mismatches `expected`. Excluding self keeps
+    # this check naming the CAUSE while 'levels resolve to their own package
+    # path' catches the mismatch; both run on purpose.
     foreach ($m in [regex]::Matches($txt, '/Game/([A-Za-z0-9_/]+)\.([A-Za-z0-9_]+)')) {
         $p1 = $m.Groups[1].Value; $p2 = $m.Groups[2].Value
-        if (($p1 -split '/')[-1] -eq $p2) { $nameHits += "$($u.Name) contains $($m.Value)" }
+        if (($p1 -split '/')[-1] -ne $p2) { continue }
+        # Exempt the level's own path in BOTH forms. `$expected` is the package
+        # path ('/Game/Maps/L_X'); the bytes carry the full object path
+        # ('/Game/Maps/L_X.L_X'). The match is always exactly one of these two,
+        # because the packet path is derived from the file location.
+        if (("$($m.Value)" -eq $expected) -or ("$($m.Value)" -eq "$expected.$p2")) { continue }
+        $nameHits += "$($u.Name) contains $($m.Value)"
     }
 }
 
