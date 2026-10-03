@@ -88,69 +88,59 @@ def _wipe_expressions(owner, is_function):
 
 
 def get_or_create_material(name, folder=MASTER_DIR, rebuild=False):
-    """Material, created if absent. rebuild=True deletes and recreates.
+    """Material, created if absent. rebuild=True wipes the graph in place.
 
-    Delete can be REFUSED while a loaded consumer (a level, an instance, the
-    previous build's objects) still references the asset; the old code ignored
-    delete_asset's return, so create-into-existing-name then returned None and
-    the whole spine failed with "could not create material". If deletion does
-    not take, repopulate the existing asset in place instead: same package,
-    same object identity, references stay valid, and the rebuild still starts
-    from an empty graph.
+    FIX 2026-10-03: the old path deleted the asset and created a fresh one.
+    Delete is refused while any loaded consumer holds a reference - and when it
+    is NOT refused, the new object leaves every in-memory consumer pointing at
+    the DEAD object: the master's function-call nodes broke the moment
+    MF_ColorRamp3 was recreated, and every instance failed with "(Node
+    StaticSwitchParameter) Missing A input". Worse, a refused delete left the
+    package flagged corrupt (ForceDeleteObject warning). Rebuilding IN PLACE -
+    wipe the graph to zero, then re-add - keeps object identity, so references
+    stay valid by construction and the graph still starts empty.
     """
     path = asset_path(folder, name)
-    mat = None
     if unreal.EditorAssetLibrary.does_asset_exist(path):
         if not rebuild:
             return unreal.load_asset(path)
-        log(f"rebuild: deleting {name}")
-        if unreal.EditorAssetLibrary.delete_asset(path) and \
-                not unreal.EditorAssetLibrary.does_asset_exist(path):
-            pass
-        else:
-            log(f"rebuild: delete refused - repopulating {name} in place")
-            mat = unreal.load_asset(path)
-            remaining = _wipe_expressions(mat, is_function=False)
-            if remaining:
-                raise RuntimeError(
-                    f"{name}: wipe left {remaining} expressions - refusing to "
-                    f"build a doubled graph")
-            log(f"rebuild: {name} graph cleared")
-    if mat is None:
-        ensure_dir(folder)
-        tools = unreal.AssetToolsHelpers.get_asset_tools()
-        mat = tools.create_asset(name, folder, unreal.Material,
-                                 unreal.MaterialFactoryNew())
+        log(f"rebuild: in-place wipe of {name}")
+        mat = unreal.load_asset(path)
+        remaining = _wipe_expressions(mat, is_function=False)
+        if remaining:
+            raise RuntimeError(
+                f"{name}: wipe left {remaining} expressions - refusing to "
+                f"build a doubled graph")
+        log(f"rebuild: {name} graph cleared")
+        return mat
+    ensure_dir(folder)
+    tools = unreal.AssetToolsHelpers.get_asset_tools()
+    mat = tools.create_asset(name, folder, unreal.Material,
+                             unreal.MaterialFactoryNew())
     if mat is None:
         raise RuntimeError(f"could not create material {name}")
     return mat
 
 
 def get_or_create_function(name, rebuild=False):
-    """MaterialFunction, created if absent (rebuild semantics as materials)."""
+    """MaterialFunction, created if absent (in-place rebuild semantics)."""
     path = asset_path(FUNCTION_DIR, name)
-    fn = None
     if unreal.EditorAssetLibrary.does_asset_exist(path):
         if not rebuild:
             return unreal.load_asset(path)
-        log(f"rebuild: deleting function {name}")
-        if unreal.EditorAssetLibrary.delete_asset(path) and \
-                not unreal.EditorAssetLibrary.does_asset_exist(path):
-            pass
-        else:
-            log(f"rebuild: delete refused - repopulating {name} in place")
-            fn = unreal.load_asset(path)
-            remaining = _wipe_expressions(fn, is_function=True)
-            if remaining:
-                raise RuntimeError(
-                    f"{name}: wipe left {remaining} expressions - refusing to "
-                    f"build a doubled graph")
-            log(f"rebuild: {name} graph cleared")
-    if fn is None:
-        ensure_dir(FUNCTION_DIR)
-        tools = unreal.AssetToolsHelpers.get_asset_tools()
-        fn = tools.create_asset(name, FUNCTION_DIR, unreal.MaterialFunction,
-                                unreal.MaterialFunctionFactoryNew())
+        log(f"rebuild: in-place wipe of function {name}")
+        fn = unreal.load_asset(path)
+        remaining = _wipe_expressions(fn, is_function=True)
+        if remaining:
+            raise RuntimeError(
+                f"{name}: wipe left {remaining} expressions - refusing to "
+                f"build a doubled graph")
+        log(f"rebuild: {name} graph cleared")
+        return fn
+    ensure_dir(FUNCTION_DIR)
+    tools = unreal.AssetToolsHelpers.get_asset_tools()
+    fn = tools.create_asset(name, FUNCTION_DIR, unreal.MaterialFunction,
+                            unreal.MaterialFunctionFactoryNew())
     if fn is None:
         raise RuntimeError(f"could not create material function {name}")
     return fn
@@ -364,13 +354,42 @@ def length2(fn, a, b, x=0, y=0):
 
 
 def unary(src, dst):
-    """Wire a single-input node (Abs, Saturate, OneMinus, Frac, Sine, ...)."""
+    """Wire a single-input node (Abs, Saturate, OneMinus, Frac, Sine, ...).
+
+    FIX 2026-10-03 - a silent-success bug that shipped a broken material.
+    MaterialEditingLibrary.get_material_expression_input_names() returns the
+    Python string "None" (not an empty string) for the unnamed input of
+    Saturate and OneMinus on UE 5.8:
+
+        MaterialExpressionSaturate  input_names == ["None"]
+        MaterialExpressionOneMinus  input_names == ["None"]
+
+    Connect() then resolves the literal name "None", which UE accepts and
+    silently treats as an UNSET pin, so connect() returned True while nothing
+    was wired. The material compiled to "(Node Saturate) Missing Saturate
+    input" and rendered as Default Material, with verify_material and the
+    dead-node census both reporting clean.
+
+    Measured pin names (Saved/Audit/pin_name_probe.json):
+        Saturate / OneMinus  -> "None"   (the literal, must be normalised)
+        Normalize            -> "VectorInput"
+        SmoothStep           -> Min, Max, Value
+        LinearInterpolate    -> A, B, Alpha
+        Multiply / Add / Sub -> A, B
+
+    A "None" pin name is normalised to the empty pin, which is what an unnamed
+    input actually is. Return value is still not trusted by callers that need
+    certainty - see connect() - but it now reflects reality.
+    """
     lib = unreal.MaterialEditingLibrary
     try:
         pins = [str(p) for p in lib.get_material_expression_input_names(dst)]
     except Exception:
         pins = []
-    candidates = pins + ["Input", "input", ""]
+    # "None" is a genuine UE artefact for unnamed pins, not a missing value.
+    # Leave "" alone - that IS the unnamed pin and connect() handles it.
+    pins = ["" if p == "None" else p for p in pins]
+    candidates = pins + ["Input", "input", "VectorInput", ""]
     for pin in candidates:
         if connect(src, "", dst, pin):
             return True
@@ -381,6 +400,8 @@ def unary(src, dst):
             return True
         except Exception:
             continue
+    log(f"WARN unary failed to wire {type(dst).__name__}: no pin accepted "
+        f"the connection (tried {candidates})")
     return False
 
 
