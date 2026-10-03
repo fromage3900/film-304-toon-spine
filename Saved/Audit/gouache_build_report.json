@@ -8,6 +8,10 @@
     "addr_wrap": "TA_WRAP",
     "mips_on": "TMGS_FROM_TEXTURE_GROUP"
   },
+  "deriv_nodes": {
+    "MaterialExpressionDDX": true,
+    "MaterialExpressionDDY": true
+  },
   "textures": {
     "generated": {
       "T_Gouache_PaperGrain": {
@@ -45,9 +49,9 @@
         ],
         "failed": [],
         "skipped": [],
-        "field_min": 1,
-        "field_max": 255,
-        "field_distinct": 255,
+        "field_min": 0,
+        "field_max": 253,
+        "field_distinct": 253,
         "why": "pigment pooling - Worley F1, the granulation cue",
         "size": "256x256",
         "readback": {
@@ -119,11 +123,11 @@
     "loads": true,
     "ok": true,
     "mf_calls": [],
-    "expression_count": 54,
+    "expression_count": 64,
     "missing_calls": []
   },
   "reachability": {
-    "live": 54,
+    "live": 64,
     "dead": 0,
     "outputs_wired": {}
   },
@@ -132,9 +136,9 @@
   "wire_failures": [],
   "persisted": {
     "loaded": true,
-    "expression_count": 54,
+    "expression_count": 64,
     "toon_profile": "TP_Default",
-    "texture_params": 4,
+    "texture_params": 3,
     "unassigned_textures": []
   }
 }

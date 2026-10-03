@@ -47,11 +47,21 @@ THE FOUR THINGS THAT MAKE IT READ AS GOUACHE
        colours are.
     2. OPAQUE MATTE RESPONSE. Roughness 0.92, Specular 0.06. Gouache has almost
        no specular response - the binder is matte and the pigment is opaque.
-    3. WET EDGE darkening (T_Gouache_BrushEdge). Pigment collects into a darker
-       rim where a stroke meets its own boundary. This is the single strongest
-       gouache cue and it is what separates this from plain flat cel shading.
-    4. GRANULATION (T_Gouache_Granulation). Heavy pigment settles into the tooth
-       of the paper, so the mottling follows the SURFACE and not the light.
+    3. WET EDGE darkening, DERIVED FROM THE WASH BOUNDARY. Pigment collects
+       where a wash meets its neighbour, so the edge must follow the form. It is
+       computed as the screen-space gradient of the band field (ddx/ddy of the
+       combined 0..1 wash), which is non-zero only at a wash boundary and zero
+       inside a flat wash. This is the single strongest gouache cue and it is
+       what separates this from plain flat cel shading.
+       The previous implementation sampled T_Gouache_BrushEdge - a UV-tiled
+       streak field - which stamped identical stripes over flat and curved
+       surfaces alike. That is a texture on the mesh, not a property of the
+       wash, and it read as dirt rather than pigment.
+    4. GRANULATION (T_Gouache_Granulation). Pigment settles into the tooth of
+       the paper, so the mottling follows the SURFACE and not the light. The
+       field is coupled to the paper-tooth field: sediment occupies the grain's
+       valleys and the peaks stay clean. Granulation at paper-tooth scale is
+       what makes a flat wash read as pigment rather than as digital gradient.
        Applied as a MULTIPLY toward a darker value rather than a lerp toward
        InkColor: pooling must preserve the local hue, and a lerp to a single
        dark colour drains the colour out of every pool.
@@ -162,6 +172,25 @@ def _set(tex, prop, value, entry, key):
         entry["set"].append(f"{key}={getattr(value, 'name', value)}")
     except Exception as exc:
         entry["failed"].append(f"{key}: {str(exc)[:120]}")
+
+
+# DDX/DDY are the wet-edge detector. They are PROBED, not assumed, for the same
+# reason ENUM_SPECS above is: this builder has already shipped once on a name
+# that resolved to None and silently disabled a control. DDX/DDY are also
+# worth probing specifically because they are editor-and-preview-derivation
+# nodes: they are valid in the material editor and in PIE, but compile to zero
+# in a cooked/shipping build. A film rendered in-editor is fine; anything
+# depending on the edge surviving a cook is NOT, and that is recorded in the
+# report so the limitation cannot be discovered from a black image later.
+DERIV_NODE_NAMES = ("MaterialExpressionDDX", "MaterialExpressionDDY")
+
+
+def resolve_deriv_nodes() -> dict:
+    resolved = {}
+    for nm in DERIV_NODE_NAMES:
+        cls = getattr(unreal, nm, None)
+        resolved[nm] = {"present": cls is not None, "class": nm if cls else None}
+    return resolved
 
 
 def import_gouache_textures(resolved: dict) -> dict:
@@ -300,6 +329,17 @@ def build(rebuild=True) -> dict:
                 f"enum unresolved: {key} ({meta['enum']}) - texture settings "
                 f"would be silently skipped")
 
+    deriv = resolve_deriv_nodes()
+    report["deriv_nodes"] = {k: v["present"] for k, v in deriv.items()}
+    missing_deriv = [k for k, v in deriv.items() if not v["present"]]
+    if missing_deriv:
+        # Hard failure. Without DDX/DDY there is no wet edge at all, and the
+        # material would otherwise build clean, render flat, and look like a
+        # tuning problem rather than a missing node.
+        report["errors"].append(
+            f"wet-edge derivative nodes unavailable: {missing_deriv} - the wet "
+            f"edge cannot be derived and the wash would render with no edge")
+
     report["textures"] = import_gouache_textures(resolved)
     report["errors"] += report["textures"]["errors"]
 
@@ -333,8 +373,22 @@ def build(rebuild=True) -> dict:
     gran_dark = lib.scalar(mat, "GouacheGranulationDarken", "Surface", 0.70,
                            -1500, 860,
                            desc="How dark a pigment pool gets; 1.0 = black pool")
-    edge = lib.scalar(mat, "GouacheEdgeStrength", "Surface", 0.30, -1500, 940,
-                      desc="Wet-edge darkening (T_Gouache_BrushEdge)")
+    edge = lib.scalar(mat, "GouacheEdgeStrength", "Surface", 0.55, -1500, 940,
+                      desc="Wet-edge darkening along wash boundaries")
+    # Width and intensity are SEPARATE controls, following Flair's production
+    # guidance that "a wider edge darkening will require an increase in intensity,
+    # as well". Collapsing them into one slider (as the previous version did) is
+    # why the edge could only ever be tuned in strength, never in how far it
+    # reached into the wash.
+    edge_width = lib.scalar(mat, "GouacheEdgeWidth", "Surface", 1.0, -1500, 980,
+                            desc="How far the wet edge reaches; higher = wider")
+    # Normalisation reference for the screen-space band gradient. The band's
+    # total transition is BandLight-BandShadow wide, and that whole span
+    # compresses into very few pixels, so the raw ddx magnitude is tiny. This
+    # divisor is the gradient magnitude a perfect edge produces; above it the
+    # edge saturates at full strength.
+    edge_ref = lib.scalar(mat, "GouacheEdgeReference", "Surface", 0.02, -1500, 1010,
+                          desc="Gradient magnitude that counts as a full edge")
     blotch = lib.scalar(mat, "GouacheBlotchStrength", "Surface", 0.18, -1500, 1020,
                         desc="Wash variation so a band is never perfectly flat")
     tooth_amt = lib.scalar(mat, "GouachePaperGrain", "Surface", 0.20, -1500, 1100,
@@ -347,6 +401,34 @@ def build(rebuild=True) -> dict:
                         desc="Texture repeats per UV unit")
     key_dir = lib.vector(mat, "KeyLightDir", "Wash", (0.0, 0.0, 1.0), -1500, 1420,
                          desc="Light direction the washes are laid against")
+
+    # FIXED KEY - A DELIBERATE ART-DIRECTION DECISION, NOT AN OVERSIGHT.
+    #
+    # The terminator is `dot(PixelNormalWS, normalize(KeyLightDir))`. It uses
+    # NO scene light and NO shadowing, which means an object standing in a cast
+    # shadow still receives its lit band. That is normally wrong, and it was
+    # chosen here on purpose (2026-10-03, lookdev pass) for two reasons:
+    #
+    #   * Predictability. The wash is art-directable from a single scalar. An
+    #     artist can guarantee what a lit face looks like without auditing every
+    #     light in the shot, and two MI_* instances on the same mesh stay
+    #     consistent regardless of where they are placed.
+    #   * Medium integrity. Gouache is a hand-laid illustration, not a
+    #     simulation of light. Letting the shot's sun drive the bands makes the
+    #     master light-dependent, so an MI retuned for one shot silently reads
+    #     wrong in the next.
+    #
+    # The cost is real and must be stated: cast shadows and the wash can
+    # DISAGREE, and on a shot with strong directional light that is the first
+    # thing a reviewer will notice. The remedy at shot level is to darken the
+    # material where the shadow falls (an override or a separate shadowed MI),
+    # not to reintroduce scene lighting here.
+    #
+    # KeyLightDir is (0,0,1) - straight up. That is a PLACEHOLDER chosen so the
+    # bands fall predictably; a top-down terminator puts the band boundary on
+    # the upper surfaces, which is not how any of these meshes are lit. This
+    # value has never been validated against a real render and is one of the
+    # first things Phase 1 lookdev should settle.
     emis_c = lib.vector(mat, "EmissiveColor", "Emissive", (0.0, 0.0, 0.0, 1.0),
                         -1500, 1500, desc="Emission colour (signage, screens)")
     emis_i = lib.scalar(mat, "EmissiveIntensity", "Emissive", 0.0, -1500, 1580,
@@ -371,10 +453,15 @@ def build(rebuild=True) -> dict:
         lib.connect(uv_scaled, "", s, "Coordinates")
         return s
 
+    # NOTE: T_Gouache_BrushEdge is deliberately NOT sampled any more. The wet
+    # edge is derived from the band gradient below, because a UV-tiled field
+    # cannot follow the form. The asset is still generated and imported (it is
+    # referenced by nothing, but deleting it would churn the texture set and the
+    # audit trail); sampling it here would create a dead node and fail the
+    # reachability census, which is the point of that census.
     s_blotch = sample("T_Gouache_WashBlotch", "T_Gouache_WashBlotch",
                       -780, 1800)
     s_gran = sample("T_Gouache_Granulation", "T_Gouache_Granulation", -780, 1960)
-    s_edge = sample("T_Gouache_BrushEdge", "T_Gouache_BrushEdge", -780, 2120)
     s_tooth = sample("T_Gouache_PaperGrain", "T_Gouache_PaperGrain", -780, 2280)
 
     # ---------------- terminator -> two hard thresholds ----------------
@@ -403,6 +490,20 @@ def build(rebuild=True) -> dict:
     t1 = threshold(b_shadow, -520, 2400)
     t2 = threshold(b_light, -520, 2640)
 
+    # band01: the combined wash field, 0 (all shadow) -> 1 (all lit).
+    # t1 and t2 are already hard 0/1 steps whose transitions ARE the two wash
+    # boundaries, so their sum is a single scalar that changes only at a
+    # boundary. Halving keeps it in 0..1. This is the input to the wet-edge
+    # gradient below and the reason the edge follows the form: it is a
+    # derivative of the wash itself, not a stamped texture.
+    band_sum = lib.expr(mat, unreal.MaterialExpressionAdd, -340, 2520)
+    lib.connect(t1, "", band_sum, ["A", "a"])
+    lib.connect(t2, "", band_sum, ["B", "b"])
+    band_half = lib.expr(mat, unreal.MaterialExpressionConstant, -340, 2620)
+    band_half.set_editor_property("r", 0.5)
+    band01 = lib.expr(mat, unreal.MaterialExpressionMultiply, -160, 2570)
+    L.binary(band_sum, band_half, band01)
+
     # The band INDEX is deliberately never built. Two hard steps feeding two
     # lerps produce three flat washes directly; an explicit 0/1/2 sum node would
     # sit in the graph driving nothing.
@@ -426,11 +527,61 @@ def build(rebuild=True) -> dict:
     c_gran = lib.expr(mat, unreal.MaterialExpressionLinearInterpolate, 60, 1960)
     L.ternary(c_lit, g_dark, g_amt, c_gran)
 
-    # ---------------- wet edge ----------------
-    e_amt = lib.expr(mat, unreal.MaterialExpressionMultiply, -340, 2120)
-    lib.connect(s_edge, "R", e_amt, ["A", "a"])
+    # ---------------- wet edge: DERIVED FROM THE BAND BOUNDARY ----------------
+    # REBUILT. This was previously a straight lerp of a sampled 2D texture
+    # (T_Gouache_BrushEdge) toward InkColor, which was wrong in a way no
+    # parameter sweep could rescue: a UV-tiled field stamps the same streaks
+    # across flat and curved surfaces alike, so the "wet edge" bore no relation
+    # to the form. Wet edge is pigment gathering at the BOUNDARY OF A WASH, so
+    # it has to be a function of where the wash changes, not of UV position.
+    #
+    # The band field `band01` is 0 in shadow, 1 in lit, and its two thresholds
+    # are exactly the wash boundaries. So the gradient of `band01` IS the edge
+    # detector: it is large only where a wash meets its neighbour, and zero
+    # everywhere else - including inside a single flat wash, which is correct.
+    #
+    # Implementation: scene-texture derivatives (ddx/ddy) of the band field give
+    # the true screen-space gradient in one node each, and Dot-ing them yields a
+    # scalar edge magnitude. EdgeWidth then scales how much of that magnitude
+    # counts as "the edge", so intensity and width are separate controls,
+    # matching Flair's production model where "a wider edge darkening will
+    # require an increase in intensity, as well".
+    ddx = lib.expr(mat, unreal.MaterialExpressionDDX, -340, 2260)
+    lib.connect(band01, "", ddx, ["Value", "Input", ""])
+    ddy = lib.expr(mat, unreal.MaterialExpressionDDY, -340, 2380)
+    lib.connect(band01, "", ddy, ["Value", "Input", ""])
+    # The gradient magnitude. Dot of the two derivative components is literally
+    # ddx^2 + ddy^2, which is already non-negative, so this IS a scalar
+    # magnitude. It is a squared magnitude rather than a true length (no Sqrt),
+    # which is harmless here because GouacheEdgeReference absorbs the scale and
+    # the result is saturated anyway - it only has to be monotonic in "how fast
+    # is the wash changing", and squared magnitude is.
+    grad = lib.expr(mat, unreal.MaterialExpressionDotProduct, -160, 2320)
+    lib.connect(ddx, "", grad, ["A", "a"])
+    lib.connect(ddy, "", grad, ["B", "b"])
+    grad_abs = lib.expr(mat, unreal.MaterialExpressionAbs, 20, 2320)
+    L.unary(grad, grad_abs)
+
+    # EdgeWidth as a multiplier on the gradient, so a wider edge captures more
+    # of the falloff rather than smearing a fixed-width blur.
+    e_wide = lib.expr(mat, unreal.MaterialExpressionMultiply, 200, 2320)
+    lib.connect(grad_abs, "", e_wide, ["A", "a"])
+    lib.connect(edge_width, "", e_wide, ["B", "b"])
+
+    # The terminator's own slope varies with surface curvature, so the raw
+    # gradient magnitude is not a usable 0..1 edge mask. Normalise it: the
+    # terminator on a unit-sphere reference is the worst case the band field
+    # can produce, so anything at or above that is a full-strength edge.
+    e_norm = lib.expr(mat, unreal.MaterialExpressionDivide, 380, 2320)
+    lib.connect(e_wide, "", e_norm, ["A", "a"])
+    lib.connect(edge_ref, "", e_norm, ["B", "b"])
+    e_sat = lib.expr(mat, unreal.MaterialExpressionSaturate, 540, 2320)
+    L.unary(e_norm, e_sat)
+
+    e_amt = lib.expr(mat, unreal.MaterialExpressionMultiply, 700, 2320)
+    lib.connect(e_sat, "", e_amt, ["A", "a"])
     lib.connect(edge, "", e_amt, ["B", "b"])
-    c_edge = lib.expr(mat, unreal.MaterialExpressionLinearInterpolate, 240, 2120)
+    c_edge = lib.expr(mat, unreal.MaterialExpressionLinearInterpolate, 860, 2320)
     L.ternary(c_gran, ink, e_amt, c_edge)
 
     # ---------------- wash blotch ----------------
@@ -447,15 +598,21 @@ def build(rebuild=True) -> dict:
     L.ternary(c_edge, b_col, blotch, c_blotch)
 
     # ---------------- tooth drives ROUGHNESS, not albedo ----------------
+    # RECENTRED. This was `roughness + (tooth * amount) - (amount * 0.5)`, i.e.
+    # a 0.5-centred tooth added to a 0.92 base: the negative half moved roughness
+    # to 0.87..0.92 but the positive half ran 0.92..1.02, and the following
+    # Saturate clipped every value above 1.0 flat. Half the tooth signal was
+    # therefore discarded, and the clipping also means GouacheRoughness above
+    # ~0.95 produces NO positive tooth at all - a silent dead control.
+    # Subtract 0.5 from the tooth FIRST, then add: the offset is now symmetric
+    # about zero and the whole signal survives.
     t_amt = lib.expr(mat, unreal.MaterialExpressionMultiply, -340, 2280)
     lib.connect(s_tooth, "R", t_amt, ["A", "a"])
     lib.connect(tooth_amt, "", t_amt, ["B", "b"])
     half = lib.expr(mat, unreal.MaterialExpressionConstant, -520, 2280)
     half.set_editor_property("r", 0.5)
-    half_amt = lib.expr(mat, unreal.MaterialExpressionMultiply, -520, 2400)
-    L.binary(tooth_amt, half, half_amt)
     t_off = lib.expr(mat, unreal.MaterialExpressionSubtract, -140, 2280)
-    L.binary(t_amt, half_amt, t_off)
+    L.binary(t_amt, half, t_off)
     rough_add = lib.expr(mat, unreal.MaterialExpressionAdd, 60, 2340)
     L.binary(roughness, t_off, rough_add)
     rough_clamped = lib.expr(mat, unreal.MaterialExpressionSaturate, 240, 2340)
