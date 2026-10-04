@@ -65,3 +65,16 @@ Thumbs.db
 # Regenerate it with Python/build_test_level.py, never by hand.
 !Content/__ExternalActors__/
 !Content/__ExternalObjects__/
+
+# --- vendored third-party content ---------------------------------------------
+# Ultra Dynamic Sky, dropped inside Content/ so it resolves as /Game content
+# rather than as an engine plugin. It is NOT part of the spine's contract and it
+# must never be committed: ~545 MB of assets against a 1 GB LFS budget, and
+# another indie cloning this repo has no reason to inherit it.
+#
+# It is also third-party marketplace content in a PUBLIC repo - redistributing
+# it may not be licensed. Check Docs/CREDITS_AND_LICENSES.md before staging.
+#
+# Prefix match, because the folder name carries the engine range:
+#   "UDS v9.7 UE 5.5-5.8"
+/Content/UDS*/
