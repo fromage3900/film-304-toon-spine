@@ -37,7 +37,7 @@ def main():
     for _mod in ("spine_lib", "build_textures", "build_mf_colorramp3",
                  "build_mf_ramplut", "build_mf_patterns", "build_master_toon",
                  "build_m_outline", "build_toon_profiles", "build_instances",
-                 "build_office_set_materials"):
+                 "build_office_set_materials", "build_mf_rimoffset"):
         sys.modules.pop(_mod, None)
     for _mod in ("spine_lib",):
         try:
@@ -64,11 +64,25 @@ def main():
         ("build_mf_colorramp3", "MF_ColorRamp3", 20),
         ("build_mf_ramplut", "MF_RampLUT", 8),
         ("build_mf_patterns", "MF_ProceduralPatterns", 40),
+        ("build_mf_rimoffset", "MF_RimOffset", 12),
     ]:
         try:
             mod = __import__(mod_name)
             mod.build()
-            report["functions"][fn_name] = lib.verify_function_graph(fn_name, max_dead=0)
+            res = lib.verify_function_graph(fn_name, max_dead=0)
+            # A builder may carry a structural check verify_function_graph cannot
+            # express (renamed outputs, a guard node that must not be deleted).
+            # It has to be able to FAIL the run, not just annotate it - otherwise
+            # a graph that compiles but is wired wrong reports clean, which is the
+            # defect pattern this repo exists to prevent.
+            extra = getattr(mod, "verify", None)
+            if callable(extra):
+                g = extra()
+                res["module"] = g
+                if not g.get("ok"):
+                    res["ok"] = False
+                    res["error"] = g.get("error", "module verify failed")
+            report["functions"][fn_name] = res
         except Exception as exc:
             lib.log(f"ERROR building {fn_name}: {exc}")
             report["errors"].append(f"{fn_name}: {exc}")
@@ -76,16 +90,25 @@ def main():
     # ---- materials ----
     for mod_name, mat_name, expected, min_expr in [
         ("build_master_toon", "M_Master_Toon_Universal",
-         ["MF_ColorRamp3", "MF_RampLUT", "MF_ProceduralPatterns"], 30),
-        ("build_m_outline", "M_Outline_InvertedHull", [], 5),
+         ["MF_ColorRamp3", "MF_RampLUT", "MF_ProceduralPatterns",
+          "MF_RimOffset"], 30),
+        ("build_m_outline", "M_Outline_InvertedHull", [], 15),
     ]:
         if report["errors"]:
             break
         try:
             mod = __import__(mod_name)
             mod.build()
-            report["materials"][mat_name] = lib.verify_material(
+            res = lib.verify_material(
                 mat_name, expected_calls=expected, min_expressions=min_expr)
+            extra = getattr(mod, "verify", None)
+            if callable(extra):
+                g = extra()
+                res["graph"] = g
+                if not g.get("ok"):
+                    res["ok"] = False
+                    res["error"] = g.get("error", "graph verify failed")
+            report["materials"][mat_name] = res
         except Exception as exc:
             lib.log(f"ERROR building {mat_name}: {exc}")
             report["errors"].append(f"{mat_name}: {exc}")

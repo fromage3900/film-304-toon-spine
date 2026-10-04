@@ -13,7 +13,7 @@
       "failed": [],
       "skipped": [],
       "ok": true,
-      "png": "P:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_Dither_Bayer.png",
+      "png": "D:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_Dither_Bayer.png",
       "pixels": "64x64",
       "readback": {
         "srgb": "False",
@@ -39,7 +39,7 @@
       "failed": [],
       "skipped": [],
       "ok": true,
-      "png": "P:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_Hatch_Cross.png",
+      "png": "D:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_Hatch_Cross.png",
       "pixels": "128x128",
       "readback": {
         "srgb": "False",
@@ -65,7 +65,7 @@
       "failed": [],
       "skipped": [],
       "ok": true,
-      "png": "P:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_Hatch_Diagonal.png",
+      "png": "D:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_Hatch_Diagonal.png",
       "pixels": "128x128",
       "readback": {
         "srgb": "False",
@@ -91,7 +91,7 @@
       "failed": [],
       "skipped": [],
       "ok": true,
-      "png": "P:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_HatchPattern.png",
+      "png": "D:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_HatchPattern.png",
       "pixels": "128x128",
       "readback": {
         "srgb": "False",
@@ -117,7 +117,7 @@
       "failed": [],
       "skipped": [],
       "ok": true,
-      "png": "P:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_Ramp_2Band.png",
+      "png": "D:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_Ramp_2Band.png",
       "pixels": "256x8",
       "readback": {
         "srgb": "True",
@@ -143,7 +143,7 @@
       "failed": [],
       "skipped": [],
       "ok": true,
-      "png": "P:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_Ramp_3Band.png",
+      "png": "D:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_Ramp_3Band.png",
       "pixels": "256x8",
       "readback": {
         "srgb": "True",
@@ -169,7 +169,7 @@
       "failed": [],
       "skipped": [],
       "ok": true,
-      "png": "P:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_Ramp_4Band.png",
+      "png": "D:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_Ramp_4Band.png",
       "pixels": "256x8",
       "readback": {
         "srgb": "True",
@@ -195,7 +195,7 @@
       "failed": [],
       "skipped": [],
       "ok": true,
-      "png": "P:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_Ramp_Smooth.png",
+      "png": "D:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_Ramp_Smooth.png",
       "pixels": "256x8",
       "readback": {
         "srgb": "True",
@@ -221,7 +221,7 @@
       "failed": [],
       "skipped": [],
       "ok": true,
-      "png": "P:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_Noise_White.png",
+      "png": "D:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_Noise_White.png",
       "pixels": "64x64",
       "readback": {
         "srgb": "False",
@@ -247,7 +247,7 @@
       "failed": [],
       "skipped": [],
       "ok": true,
-      "png": "P:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_SDF_Strokes.png",
+      "png": "D:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_SDF_Strokes.png",
       "pixels": "256x256",
       "readback": {
         "srgb": "False",

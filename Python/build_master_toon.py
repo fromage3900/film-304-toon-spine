@@ -41,6 +41,10 @@ SURFACE_PARAMS = [
     # pre-existing instance is unchanged until it opts in.
     ("EmissiveColor", "Emissive", (0.0, 0.0, 0.0, 1.0),
      "Emission colour for troffers, monitor screens, signage"),
+    # Rim lane. INERT: RimOffsetStrength defaults to 0.0, so every existing
+    # instance is pixel-identical until an artist raises it.
+    ("RimOffsetColor", "RimOffset", (1.00, 0.95, 0.88, 1.0),
+     "Edge-of-light colour for the MF_RimOffset lane"),
 ]
 
 FLOAT_PARAMS = [
@@ -65,7 +69,15 @@ FLOAT_PARAMS = [
     ("StrokeStrength", "Parked", 0.55, "UNWIRED - parked brush-stroke breakup"),
     ("BrushScale", "Parked", 0.045, "UNWIRED - parked brush texture scale"),
     ("TemporalStrength", "Temporal", 0.0, "Hand-drawn temporal wobble"),
-    ("WindSpeed", "Parked", 0.15, "UNWIRED - parked wind animation speed"),
+    # MF_RimOffset lane. INERT BY DEFAULT - see the wiring comment.
+    ("RimOffsetStrength", "RimOffset", 0.0,
+     "Offset rim amount. 0 = off, which is the default so existing instances "
+     "are unchanged until an artist opts in"),
+    ("RimOffsetStart", "RimOffset", 0.55, "Rim start along the facing term"),
+    ("RimOffsetEnd", "RimOffset", 0.92, "Rim end along the facing term"),
+    ("RimOffsetSharpness", "RimOffset", 2.20, "Rim edge tightness"),
+    ("RimOffsetBias", "RimOffset", 0.60,
+     "How far the rim is pushed to one side (0 = centred Fresnel rim)"),
     ("NoiseScale", "Parked", 1.5, "UNWIRED - parked temporal noise scale"),
     ("SmearStrength", "Parked", 0.0, "UNWIRED - parked temporal smear"),
     ("BoilIntensity", "Parked", 0.0, "UNWIRED - parked line boil (hand-drawn shimmer)"),
@@ -423,7 +435,41 @@ def build(rebuild=True):
     emissive_mul = lib.expr(mat, unreal.MaterialExpressionMultiply, 700, 60)
     lib.connect(vec["EmissiveColor"], "", emissive_mul, ["A", "a"])
     lib.connect(flt["EmissiveIntensity"], "", emissive_mul, ["B", "b"])
-    lib.connect(emissive_mul, "", toon, ["EmissiveColor"])
+
+    # ---------------- rim lane: MF_RimOffset, INERT BY DEFAULT -------------
+    # Added 2026-10-03. `MF_RimOffset` is the reusable offset rim-light term
+    # (see its docstring, and `Docs/FILM_PIPELINE.md` §7). It is wired here so
+    # the function has a real caller and cannot decay into an unreferenced
+    # orphan - but `RimOffsetStrength` defaults to 0.0, so every one of the
+    # existing instances renders EXACTLY as it did before this lane existed.
+    #
+    # That inert-by-default rule is not caution, it is a lesson: the ramp defect
+    # happened because a new lane defaulted ON and silently changed every surface
+    # in the film. A default of 1.0 here would put a rim on every wall in the
+    # office set and nobody would know until a shot came back wrong.
+    #
+    # Sums with the emissive above rather than replacing it, so a shot can be
+    # both emissive (screens, troffers) and rim-lit.
+    rim_call = lib.expr(mat, unreal.MaterialExpressionMaterialFunctionCall,
+                        700, -260)
+    rim_call.set_editor_property("material_function",
+        unreal.load_asset(lib.asset_path(lib.FUNCTION_DIR, "MF_RimOffset")))
+
+    rim_in = lib.expr(mat, unreal.MaterialExpressionMultiply, 460, -260)
+    lib.connect(flt["RimOffsetStrength"], "", rim_in, ["A", "a"])
+    lib.connect(rim_in, "", rim_call, "RimStrength")
+    lib.connect(flt["RimOffsetStart"], "", rim_call, "RimStart")
+    lib.connect(flt["RimOffsetEnd"], "", rim_call, "RimEnd")
+    lib.connect(flt["RimOffsetSharpness"], "", rim_call, "Sharpness")
+    lib.connect(flt["RimOffsetBias"], "", rim_call, "OffsetStrength")
+    lib.connect(vec["RimOffsetColor"], "", rim_call, "RimColor")
+
+    rim_scaled = lib.expr(mat, unreal.MaterialExpressionMultiply, 880, -160)
+    lib.binary(rim_call, rim_in, rim_scaled)
+
+    emissive_sum = lib.expr(mat, unreal.MaterialExpressionAdd, 880, 60)
+    lib.binary(emissive_mul, rim_scaled, emissive_sum)
+    lib.connect(emissive_sum, "", toon, ["EmissiveColor"])
 
     lib.connect_property(toon, unreal.MaterialProperty.MP_FRONT_MATERIAL)
 
