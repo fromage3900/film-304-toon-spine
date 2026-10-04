@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0.0",
+  "purpose": "Prototype still renders: a lean shot-environment level composed from a curated subset of the Brutalist kit, plus one camera per environment shot. Stills only; camera moves and video are a later tier.",
+  "authored_by": "Laptop (P:/film-304-toon-spine) -- asset-prep hub",
+  "composition_note": "The 25-piece kit is a REVIEW GRID of comparison variants, not a scene (see Saved/Audit/brutalist_stage_manifest.json and Python/stage_brutalist_layout.py). This file selects 8 pieces and places them as a depth-layered vista. Positions below are UE world centimetres, deliberately NOT the manifest's review positions: the Blender->UE axis mapping (x*100, -y*100, z*100) exists to REPRODUCE reviewed positions, and applying it to hand-composed coordinates would double-negate. Render-frame and focal data still come from the shot manifest.",
+
+  "render_tier": {
+    "name": "prototype",
+    "why": "Docs/FILM_PIPELINE.md section 9 specifies the FINAL tier (16-bit EXR, '256+ samples'). That is a 1-2 week render per the same document's budget. This machine is a GTX 1050 Ti (4 GB) with a 4-thread i5-7300HQ, so prototyping uses the cheapest settings that still show banding, sky and composition errors.",
+    "method": "unreal.AutomationLibrary.take_high_res_screenshot",
+    "method_note": "Chosen over MovieRenderPipeline because MRQ derives its frame range from the LevelSequence playback range, and the shipped LS_SH* sequences are 72-96 frames long -- a still would mean mutating a shared sequence. take_high_res_screenshot renders exactly one frame from a specific camera actor with no sequence involvement. MRQ remains the documented path for the video tier.",
+    "resolution": { "width": 1280, "height": 720 },
+    "filmback_mm": { "width": 35.0, "height": 19.6875 },
+    "filmback_note": "35 x 19.6875 mm is exactly 1.77778 (16:9), i.e. this resolution's aspect. It is NOT optional: take_high_res_screenshot constrains the captured frame to the CAMERA's filmback aspect, so an inherited 35 x 24.89 Academy back (1.40618:1) returned 1012 x 720 for a 1280 x 720 request -- measured 2026-10-01, engine log 'Tracing Screenshot \"COMP_SH010_proto_v01\" taken with size: 1012 x 720'. Derive the back from the resolution above; never hardcode a film default.",
+    "output_format": "png",
+    "bit_depth": 8,
+    "spatial_samples": 1,
+    "temporal_samples": 1,
+    "motion_blur": false,
+    "depth_of_field": false,
+    "lumen_gi": false,
+    "force_game_view": true,
+    "output_dir": "Saved/Renders/prototypes",
+    "output_note": ".gitignore excludes /Saved/* except Audit/Reports json|md|txt, and states 'a PNG on its own is not evidence'. Prototype stills are therefore regenerable local output and are NOT versioned; the JSON report IS. Docs/GROUP_STAGING_GUIDE.md reserves 04_Renders/ + LFS for hero/final frames."
+  },
+
+  "level": {
+    "name": "L_Toon_Shot_Env",
+    "package": "/Game/Maps/L_Toon_Shot_Env",
+    "builder": "Python/compose_shot_env_level.py",
+    "deliberately_separate_from": ["L_Brutalist_Layout", "L_Toon_Lookdev"],
+    "why_separate": "L_Brutalist_Layout stays the untouched review grid. L_Toon_Lookdev carries Landscape + 64 LandscapeStreamingProxy + 64 WorldPartitionHLOD + VolumetricCloud (measured via project_query get_stats); that is not a 4 GB budget to prototype in.",
+    "ground": {
+      "enabled": true,
+      "mesh": "/Engine/BasicShapes/Plane",
+      "size_uu": 200000,
+      "material": "/Game/Materials/Instances/MI_Toon_Environment",
+      "note": "Grounds the masses and catches the key-light shadow terminator, which is what makes toon banding readable."
+    },
+    "lights": { "sun_intensity": 3.2, "sun_rotation": [-46.0, 0.0, 35.0], "sky": true, "atmosphere": true }
+  },
+
+  "scene": [
+    { "object": "CITY_TowerCluster",     "collection": "01_CITY_PBR",         "role": "hero mass (85 m)",        "position_uu": [0, 26000, 0] },
+    { "object": "FAC_TowerRibbon",       "collection": "05_FACADE_VARIATION", "role": "second tower / skyline",  "position_uu": [-17000, 24000, 0] },
+    { "object": "CITY_CivicSuperblock",  "collection": "01_CITY_PBR",         "role": "slab mass",               "position_uu": [15000, 22000, 0] },
+    { "object": "CITY_TightEstate",      "collection": "01_CITY_PBR",         "role": "distant estate",          "position_uu": [31000, 34000, 0] },
+    { "object": "CITY_LowSprawl",        "collection": "01_CITY_PBR",         "role": "low sprawl (mid-ground)", "position_uu": [-3000, 11000, 0] },
+    { "object": "OFFICE_CivicSlab",      "collection": "03_OFFICE_BLOCK",     "role": "mid-left accent",         "position_uu": [-20000, 12000, 0] },
+    { "object": "OFFICE_BarbicanScale",  "collection": "03_OFFICE_BLOCK",     "role": "foreground, human scale", "position_uu": [-5500, 2500, 0] },
+    { "object": "OFFICE_SlenderTower",   "collection": "03_OFFICE_BLOCK",     "role": "foreground vertical accent", "position_uu": [4500, 1200, 0] }
+  ],
+
+  "shots": [
+    {
+      "shot_id": "SH010", "name": "establish_world", "focal_length_mm": 24.0,
+      "sequence": "/Game/Sequences/LS_SH010", "render_frame": 48,
+      "camera_label": "Cam_Env_SH010",
+      "location_uu": [-20000, -55000, 14000], "target_uu": [0, 20000, 6000],
+      "still_name": "COMP_SH010_proto_v01",
+      "framing_intent": "Deep wide establishing vista; hero mass against sky."
+    },
+    {
+      "shot_id": "SH020", "name": "reveal_profile", "focal_length_mm": 35.0,
+      "sequence": "/Game/Sequences/LS_SH020", "render_frame": 132,
+      "camera_label": "Cam_Env_SH020",
+      "location_uu": [-26000, -22000, 3000], "target_uu": [0, 18000, 5000],
+      "still_name": "COMP_SH020_proto_v01",
+      "framing_intent": "Wide follow; masses read against atmospheric depth."
+    },
+    {
+      "shot_id": "SH030", "name": "water_rise", "focal_length_mm": 28.0,
+      "sequence": "/Game/Sequences/LS_SH030", "render_frame": 210,
+      "camera_label": "Cam_Env_SH030",
+      "location_uu": [-9000, -14000, 300], "target_uu": [0, 16000, 7000],
+      "still_name": "COMP_SH030_proto_v01",
+      "framing_intent": "Low angle hero vista; ground contact and true horizon."
+    },
+    {
+      "shot_id": "SH070", "name": "song_release", "focal_length_mm": 40.0,
+      "sequence": "/Game/Sequences/LS_SH070", "render_frame": 582,
+      "camera_label": "Cam_Env_SH070",
+      "location_uu": [9000, -18000, 6000], "target_uu": [0, 24000, 7000],
+      "still_name": "COMP_SH070_proto_v01",
+      "framing_intent": "Orbiting medium; hero mass closer, sky above."
+    }
+  ],
+
+  "deferred": {
+    "camera_moves": "Spec carries per-shot framing only. Move curves belong in Python/build_shot_deck.py (the owner of LS_SH*), added when the video tier starts -- a still cannot validate a move, so building it now would be unverifiable work.",
+    "outlines": "No mesh has an outline material assigned (all 25 meshes carry MI_Toon_Environment in both slots, measured). Docs/FILM_PIPELINE.md section 8 prescribes the inverted-hull approach; the hull needs DUPLICATED actors with MI_Outline_Heavy (not a second material slot, which maps to a face group) and doubles draw calls. Gate it on the first still's read.",
+    "character_shots": "SH040/SH050/SH060/SH080 are character framings (waist-up, macro face, hero performance, bow). They are excluded from this environment pass on purpose -- no character is staged yet."
+  }
+}

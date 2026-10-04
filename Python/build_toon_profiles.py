@@ -85,13 +85,30 @@ SOFT = [(0.00, 0.18), (0.35, 0.45), (0.70, 0.80), (1.00, 1.00)]
 WARM = [(0.20, 0.22), (0.30, 0.38), (0.55, 0.52), (0.80, 0.82), (1.00, 1.00)]
 
 
+def _texture_path(asset_name):
+    """Object reference for import_text, or None when the slot stays empty.
+
+    import_text takes UE property text, where an object property is
+    Class'/Game/.../Name.Name'. PROBED 2026-10-02 that this form round-trips;
+    a bare path does not bind on import, which would leave the profile
+    asserting clean while the hatching texture silently stayed None.
+    """
+    if not asset_name:
+        return None
+    return f"Texture2D'/Game/Materials/Textures/{asset_name}.{asset_name}'"
+
+
 def _profile_text(diffuse, specular, extinction=10.0,
                   diffuse_indirect=1.0, specular_indirect=1.0,
-                  hatch_strength=1.0, include_shadow=False):
+                  hatch_strength=1.0, include_shadow=False,
+                  hatch_texture=None, offset_texture=None,
+                  offset_strength=0.0):
+    hatch = _texture_path(hatch_texture) or "None"
+    offset = _texture_path(offset_texture) or "None"
     return (
         f"(DiffuseRamp={_step4(diffuse)},"
-        f"DiffuseRampOffsetTexture=None,"
-        f"DiffuseRampOffsetStrength=0.000000,"
+        f"DiffuseRampOffsetTexture={offset},"
+        f"DiffuseRampOffsetStrength={offset_strength:.6f},"
         f"DiffuseRampOffsetSize=1.000000,"
         f"SpecularRamp={_step4(specular)},"
         f"SpecularRampOffsetTexture=None,"
@@ -99,7 +116,7 @@ def _profile_text(diffuse, specular, extinction=10.0,
         f"SpecularRampOffsetSize=1.000000,"
         f"ShadowExtinctionCoefficient={extinction:.6f},"
         f"ShadowHatchingPatternDistributionRamp={_scalar_curve([(1.00, 1.00)])},"
-        f"ShadowHatchingPatternTexture=None,"
+        f"ShadowHatchingPatternTexture={hatch},"
         f"ShadowHatchingPatternSize=1.000000,"
         f"ShadowHatchingPatternStrength={hatch_strength:.6f},"
         f"DiffuseIndirectScale={diffuse_indirect:.6f},"
@@ -108,6 +125,18 @@ def _profile_text(diffuse, specular, extinction=10.0,
         f"SpecularIndirectRampRepetition=0.000000,"
         f"bDiffuseRampIncludeShadow={'true' if include_shadow else 'false'})"
     )
+
+
+def _unpack(entry):
+    """Split a PROFILES row into 7 legacy fields + optional extras dict.
+
+    Backwards compatible on purpose: the 11 pre-existing rows are 7-tuples and
+    must keep working untouched, while new rows may append an 8th element
+    holding {"hatch_texture": ..., "offset_texture": ...}.
+    """
+    diffuse, specular, ext, dgi, sgi, hatch, note = entry[:7]
+    extras = entry[7] if len(entry) > 7 else {}
+    return diffuse, specular, ext, dgi, sgi, hatch, note, extras or {}
 
 
 # name -> (diffuse curve, specular curve, extinction, diffuse GI, spec GI, hatching, note)
@@ -172,12 +201,128 @@ PROFILES = {
         12.0, 0.8, 0.7, 1.0,
         "Strong shadow extinction, hatching strength at 1.0. Assign a hatch texture.",
     ),
+
+    # ---------------------------------------------------------------- office
+    # Added 2026-10-02 for the 304 office film. These 8 map 1:1 onto the eight
+    # interior surfaces recorded MISSING in Melodia's office brief
+    # (OFFICE_PROPS_WAVE0_WAVE1_2026-10-01.md, Wave 3: carpet, laminate,
+    # drop ceiling, troffer, powder coat, screen emissive, polypropylene,
+    # whiteboard gloss) - so every row here answers to a named gap.
+    #
+    # SHADOW FLOOR RULE (Infinity Nikki baroque rule, carried over from the
+    # Melodia lane): no ramp reaches 0. The darkest stop is lifted well above
+    # black because a toon shadow that hits zero reads as a hole in the film.
+    # Note the colour itself lives in the instance's BaseTint - ToonProfile
+    # ramps here are scalar-valued, so hue is authored per material, not here.
+
+    "TP_Office_Carpet": (
+        [(0.00, 0.30), (0.35, 0.42), (0.70, 0.72), (1.00, 1.00)],
+        [(0.80, None), (0.90, 0.15), (1.00, 0.18)],
+        3.0, 0.90, 0.25, 0.35,
+        "Carpet tile. Very soft, almost no specular; lifted floor so pile never "
+        "goes black. Single-direction hatch breaks the shadow without reading "
+        "as line art.",
+        {"hatch_texture": "T_Hatch_Diagonal"},
+    ),
+    "TP_Office_Laminate": (
+        [(0.00, 0.28), (0.30, 0.45), (0.65, 0.75), (1.00, 1.00)],
+        [(0.55, None), (0.68, 0.35), (1.00, 0.45)],
+        4.0, 0.85, 0.45, 0.0,
+        "Desk laminate. Mid sheen with a narrow band - the horizontal surfaces "
+        "that catch the window.",
+    ),
+    "TP_Office_DropCeiling": (
+        [(0.00, 0.34), (0.40, 0.52), (0.75, 0.80), (1.00, 1.00)],
+        [(0.88, None), (0.95, 0.12), (1.00, 0.14)],
+        2.5, 1.00, 0.30, 0.0,
+        "Acoustic drop-ceiling tile. Flattest ramp in the set: troffers light it "
+        "evenly, so band structure would be a lie. Noise offset stops the big "
+        "flat plane from reading as plastic.",
+        {"offset_texture": "T_Noise_White", "offset_strength": 0.08},
+    ),
+    "TP_Office_Troffer": (
+        [(0.00, 0.55), (0.35, 0.75), (0.70, 0.92), (1.00, 1.00)],
+        [(0.92, None), (0.97, 0.10), (1.00, 0.12)],
+        1.5, 1.30, 0.60, 0.0,
+        "Recessed light panel. High floor and very low extinction so the panel "
+        "stays lit; this is the surface the EmissiveColor lane feeds.",
+    ),
+    "TP_Office_PowderCoat": (
+        [(0.00, 0.22), (0.42, 0.50), (0.55, 0.85), (1.00, 1.00)],
+        [(0.60, None), (0.70, 1.00), (1.00, 1.00)],
+        8.0, 0.70, 0.80, 0.40,
+        "Powder-coated steel: desk frames, legs, lockers. Hard two-tone with a "
+        "tight glint; cross-hatch holds the shadow so the metal stays matte.",
+        {"hatch_texture": "T_Hatch_Cross"},
+    ),
+    "TP_Office_Screen": (
+        [(0.00, 0.10), (0.30, 0.22), (0.60, 0.60), (1.00, 1.00)],
+        [(0.35, None), (0.45, 0.90), (1.00, 1.00)],
+        6.0, 0.50, 0.90, 0.0,
+        "Monitor / screen emissive. Deepest floor in the set - it must read as "
+        "an emitter, and GI scale stays low so it does not light the room.",
+    ),
+    "TP_Office_Polypropylene": (
+        [(0.00, 0.26), (0.38, 0.48), (0.72, 0.80), (1.00, 1.00)],
+        [(0.62, None), (0.74, 0.50), (1.00, 0.60)],
+        4.5, 0.80, 0.50, 0.0,
+        "Moulded polypropylene: task chairs, monitor arms, bins. Soft mid "
+        "specular, no hard terminator.",
+    ),
+    "TP_Office_Whiteboard": (
+        [(0.00, 0.40), (0.25, 0.62), (0.50, 0.88), (1.00, 1.00)],
+        [(0.75, None), (0.83, 0.60), (1.00, 0.70)],
+        5.0, 1.00, 0.70, 0.0,
+        "Whiteboard gloss. Light, crisp and reflective; the brightest floor in "
+        "the set so marker ink and the room's key both read.",
+    ),
+
+    # ------------------------------------------------------- film / character
+    # Added 2026-10-03. TP_Melusina is the film's CANONICAL character profile
+    # and was the one named gap: the shot manifest declares
+    #   framing_standard.shading_pipeline.toon_profile = "TP_Melusina"
+    #   framing_standard.shading_pipeline.shadow_tint_hex = "#352D40"
+    # Humber_FinalYear_Prep/GROUP_STAGING_GUIDE.md section 3 mandates it for
+    # character shading, the slot-09 material brief requires it, and
+    # Tools/dogfood_toon_spine.py asserts it -- while no such asset existed in
+    # either repo. Authored here to close that gap.
+    #
+    # Hue note, same as the office block: ToonProfile ramps are SCALAR-valued
+    # (_step4 writes one Value into all three colour curves), so #352D40 cannot
+    # live here as a colour. This profile carries the warm-violet *value*
+    # structure; the hue itself belongs in the instance BaseTint.
+
+    "TP_Melusina": (
+        # Halftone transition, not hard banding - the guide asks for "halftone
+        # transitions without banding", so the stops are short but not instant.
+        # Floor lifted well off black: #352D40 is a value, never 0.
+        [(0.00, 0.24), (0.26, 0.34), (0.42, 0.50), (0.64, 0.66), (0.85, 0.87), (1.00, 1.00)],
+        # Specular lifted for the close-ups (SH050 macro_emotion) to hold.
+        [(0.55, None), (0.64, 0.62), (1.00, 0.95)],
+        6.0, 0.90, 1.20, 0.55,
+        "CANONICAL hero character profile. Warm-violet shadow family (#352D40), "
+        "halftone transition rather than hard banding, shadow floor lifted off "
+        "black. Specular lifted so facial close-ups hold. Binds the manifest's "
+        "declared hatching_pattern (T_HatchPattern).",
+        {"hatch_texture": "T_HatchPattern"},
+    ),
+    "TP_Character": (
+        # Sibling to TP_Melusina so a second/background character does not
+        # inherit hero contrast and blow out against the hero in the same frame.
+        [(0.00, 0.30), (0.34, 0.46), (0.68, 0.72), (1.00, 1.00)],
+        [(0.68, None), (0.78, 0.35), (1.00, 0.40)],
+        5.0, 1.00, 0.70, 0.30,
+        "Secondary / background characters. Lower contrast and much less "
+        "specular than TP_Melusina so background cast recedes behind the hero "
+        "instead of competing with them.",
+        {"hatch_texture": "T_Hatch_Diagonal"},
+    ),
 }
 
 
 def build_profile(name):
     """Create one ToonProfile and import its authored settings."""
-    diffuse, specular, ext, dgi, sgi, hatch, note = PROFILES[name]
+    diffuse, specular, ext, dgi, sgi, hatch, note, extras = _unpack(PROFILES[name])
 
     tools = unreal.AssetToolsHelpers.get_asset_tools()
     path = lib.asset_path(PROFILE_DIR, name)
@@ -191,7 +336,10 @@ def build_profile(name):
         raise RuntimeError(f"could not create ToonProfile {name}")
 
     settings = tp.get_editor_property("settings")
-    text = _profile_text(diffuse, specular, ext, dgi, sgi, hatch)
+    text = _profile_text(diffuse, specular, ext, dgi, sgi, hatch,
+                         hatch_texture=extras.get("hatch_texture"),
+                         offset_texture=extras.get("offset_texture"),
+                         offset_strength=extras.get("offset_strength", 0.0))
     if not settings.import_text(text):
         raise RuntimeError(f"import_text failed for {name}")
 
@@ -201,10 +349,39 @@ def build_profile(name):
     return tp
 
 
+def _field_value(text: str, field: str):
+    """Read one top-level field's value out of an exported property string.
+
+    Values may themselves contain commas, brackets and quotes (an object
+    reference does), so the value runs to the next `Name=` at nesting depth 0
+    rather than to the next comma.
+    """
+    marker = f"{field}="
+    start = text.find(marker)
+    if start == -1:
+        return None
+    i = start + len(marker)
+    depth, out = 0, []
+    while i < len(text):
+        ch = text[i]
+        if ch == "(":
+            depth += 1
+        elif ch == ")":
+            if depth == 0:
+                break
+            depth -= 1
+        elif ch == "," and depth == 0:
+            break
+        out.append(ch)
+        i += 1
+    return "".join(out).strip()
+
+
 def verify_profile(name):
     """Read settings back and confirm the import actually landed."""
     path = lib.asset_path(PROFILE_DIR, name)
     tp = unreal.load_asset(path)
+    _, _, _, _, _, _, _, extras = _unpack(PROFILES[name])
     result = {"name": name, "loads": tp is not None, "ok": False}
     if tp is None:
         lib.log(f"VERIFY FAIL {name}: does not load")
@@ -223,8 +400,31 @@ def verify_profile(name):
     expected_ext = f"ShadowExtinctionCoefficient={PROFILES[name][2]:.6f}"
     result["extinction_applied"] = expected_ext in text
 
+    # A row that ASKS for a hatching/offset texture must prove it bound.
+    # FIX 2026-10-02: the first version of this check compared against an
+    # invented exact string ("...=Texture2D'/Game/...'" with no quotes and no
+    # /Script/Engine prefix) and failed 3 healthy profiles. Probing
+    # (Saved/Audit/toon_texture_ref_probe.json) showed UE 5.8 exports object
+    # properties as a QUOTED, fully-qualified form:
+    #   ShadowHatchingPatternTexture="/Script/Engine.Texture2D'/Game/.../T.X'"
+    # so the field was bound all along and the ASSERTION was wrong. Check the
+    # field's own value instead: it must not be None and must name the asset.
+    result["hatch_texture_applied"] = True
+    for field, key in (("ShadowHatchingPatternTexture", "hatch_texture"),
+                       ("DiffuseRampOffsetTexture", "offset_texture")):
+        want = extras.get(key)
+        if not want:
+            continue
+        value = _field_value(text, field)
+        ok = value not in (None, "", "None") and want in value
+        if not ok:
+            result["hatch_texture_applied"] = False
+            result.setdefault("texture_mismatch", []).append(
+                f"{key}={want}: field reads {value!r}")
+
     result["ok"] = (result["has_diffuse_ramp"] and result["has_specular_ramp"]
-                    and result["extinction_applied"])
+                    and result["extinction_applied"]
+                    and result["hatch_texture_applied"])
     lib.log(f"VERIFY {name}: ok={result['ok']} chars={result['chars']} "
             f"ext_applied={result['extinction_applied']}")
     return result

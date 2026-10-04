@@ -1,0 +1,296 @@
+{
+  "textures": {
+    "T_Dither_Bayer": {
+      "why": "Ordered dither. Needs exact levels + nearest + no mips, or it is garbage.",
+      "set": [
+        "srgb=False",
+        "filter(nearest)=TF_NEAREST",
+        "address_x=TA_WRAP",
+        "address_y=TA_WRAP",
+        "compression=TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen(mips_off)=TMGS_NO_MIPMAPS"
+      ],
+      "failed": [],
+      "skipped": [],
+      "ok": true,
+      "png": "D:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_Dither_Bayer.png",
+      "pixels": "64x64",
+      "readback": {
+        "srgb": "False",
+        "filter": "TF_NEAREST",
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "64x64",
+      "asset": "/Game/Materials/Textures/T_Dither_Bayer.T_Dither_Bayer"
+    },
+    "T_Hatch_Cross": {
+      "why": "Cross-hatch ink for ToonProfile.ShadowHatchingPatternTexture.",
+      "set": [
+        "srgb=False",
+        "filter(bilinear)=TF_BILINEAR",
+        "address_x=TA_WRAP",
+        "address_y=TA_WRAP",
+        "compression=TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen(mips_off)=TMGS_NO_MIPMAPS"
+      ],
+      "failed": [],
+      "skipped": [],
+      "ok": true,
+      "png": "D:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_Hatch_Cross.png",
+      "pixels": "128x128",
+      "readback": {
+        "srgb": "False",
+        "filter": "TF_BILINEAR",
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "128x128",
+      "asset": "/Game/Materials/Textures/T_Hatch_Cross.T_Hatch_Cross"
+    },
+    "T_Hatch_Diagonal": {
+      "why": "Single-direction hatch - lighter than cross for mid-tone shadow.",
+      "set": [
+        "srgb=False",
+        "filter(bilinear)=TF_BILINEAR",
+        "address_x=TA_WRAP",
+        "address_y=TA_WRAP",
+        "compression=TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen(mips_off)=TMGS_NO_MIPMAPS"
+      ],
+      "failed": [],
+      "skipped": [],
+      "ok": true,
+      "png": "D:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_Hatch_Diagonal.png",
+      "pixels": "128x128",
+      "readback": {
+        "srgb": "False",
+        "filter": "TF_BILINEAR",
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "128x128",
+      "asset": "/Game/Materials/Textures/T_Hatch_Diagonal.T_Hatch_Diagonal"
+    },
+    "T_HatchPattern": {
+      "why": "Canonical name referenced by humber_toon_spine_manifest.v1.json (shading_pipeline.hatching_pattern) and Melodia tp_melusina.json - dangling in both repos until now.",
+      "set": [
+        "srgb=False",
+        "filter(bilinear)=TF_BILINEAR",
+        "address_x=TA_WRAP",
+        "address_y=TA_WRAP",
+        "compression=TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen(mips_off)=TMGS_NO_MIPMAPS"
+      ],
+      "failed": [],
+      "skipped": [],
+      "ok": true,
+      "png": "D:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_HatchPattern.png",
+      "pixels": "128x128",
+      "readback": {
+        "srgb": "False",
+        "filter": "TF_BILINEAR",
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "128x128",
+      "asset": "/Game/Materials/Textures/T_HatchPattern.T_HatchPattern"
+    },
+    "T_Ramp_2Band": {
+      "why": "Hard two-tone: violet shadow -> light. For bUsePaintedRamp.",
+      "set": [
+        "srgb=True",
+        "filter(bilinear)=TF_BILINEAR",
+        "address_x=TA_CLAMP",
+        "address_y=TA_CLAMP",
+        "compression=TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen(mips_off)=TMGS_NO_MIPMAPS"
+      ],
+      "failed": [],
+      "skipped": [],
+      "ok": true,
+      "png": "D:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_Ramp_2Band.png",
+      "pixels": "256x8",
+      "readback": {
+        "srgb": "True",
+        "filter": "TF_BILINEAR",
+        "address_x": "TA_CLAMP",
+        "address_y": "TA_CLAMP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "256x8",
+      "asset": "/Game/Materials/Textures/T_Ramp_2Band.T_Ramp_2Band"
+    },
+    "T_Ramp_3Band": {
+      "why": "Three plateau cel ramp - the stock UE cel shape.",
+      "set": [
+        "srgb=True",
+        "filter(bilinear)=TF_BILINEAR",
+        "address_x=TA_CLAMP",
+        "address_y=TA_CLAMP",
+        "compression=TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen(mips_off)=TMGS_NO_MIPMAPS"
+      ],
+      "failed": [],
+      "skipped": [],
+      "ok": true,
+      "png": "D:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_Ramp_3Band.png",
+      "pixels": "256x8",
+      "readback": {
+        "srgb": "True",
+        "filter": "TF_BILINEAR",
+        "address_x": "TA_CLAMP",
+        "address_y": "TA_CLAMP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "256x8",
+      "asset": "/Game/Materials/Textures/T_Ramp_3Band.T_Ramp_3Band"
+    },
+    "T_Ramp_4Band": {
+      "why": "Four plateau ramp for richer architecture falloff.",
+      "set": [
+        "srgb=True",
+        "filter(bilinear)=TF_BILINEAR",
+        "address_x=TA_CLAMP",
+        "address_y=TA_CLAMP",
+        "compression=TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen(mips_off)=TMGS_NO_MIPMAPS"
+      ],
+      "failed": [],
+      "skipped": [],
+      "ok": true,
+      "png": "D:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_Ramp_4Band.png",
+      "pixels": "256x8",
+      "readback": {
+        "srgb": "True",
+        "filter": "TF_BILINEAR",
+        "address_x": "TA_CLAMP",
+        "address_y": "TA_CLAMP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "256x8",
+      "asset": "/Game/Materials/Textures/T_Ramp_4Band.T_Ramp_4Band"
+    },
+    "T_Ramp_Smooth": {
+      "why": "No terminator at all - soft gradient for background/airbrushed depth.",
+      "set": [
+        "srgb=True",
+        "filter(bilinear)=TF_BILINEAR",
+        "address_x=TA_CLAMP",
+        "address_y=TA_CLAMP",
+        "compression=TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen(mips_off)=TMGS_NO_MIPMAPS"
+      ],
+      "failed": [],
+      "skipped": [],
+      "ok": true,
+      "png": "D:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_Ramp_Smooth.png",
+      "pixels": "256x8",
+      "readback": {
+        "srgb": "True",
+        "filter": "TF_BILINEAR",
+        "address_x": "TA_CLAMP",
+        "address_y": "TA_CLAMP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "256x8",
+      "asset": "/Game/Materials/Textures/T_Ramp_Smooth.T_Ramp_Smooth"
+    },
+    "T_Noise_White": {
+      "why": "Band-breakup noise for ToonProfile.DiffuseRampOffsetTexture.",
+      "set": [
+        "srgb=False",
+        "filter(bilinear)=TF_BILINEAR",
+        "address_x=TA_WRAP",
+        "address_y=TA_WRAP",
+        "compression=TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen(mips_on)=TMGS_SIMPLE_AVERAGE"
+      ],
+      "failed": [],
+      "skipped": [],
+      "ok": true,
+      "png": "D:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_Noise_White.png",
+      "pixels": "64x64",
+      "readback": {
+        "srgb": "False",
+        "filter": "TF_BILINEAR",
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_SIMPLE_AVERAGE"
+      },
+      "size": "64x64",
+      "asset": "/Game/Materials/Textures/T_Noise_White.T_Noise_White"
+    },
+    "T_SDF_Strokes": {
+      "why": "Baked signed-distance stroke field for MF_ProceduralPatterns CellIndex 12 (SDFMap). A continuous triangle of the wrapped stroke coordinate: bilinear-safe wide soft edges the analytic frac() chain cannot give without aliasing. G carries per-stroke width jitter.",
+      "set": [
+        "srgb=False",
+        "filter(bilinear)=TF_BILINEAR",
+        "address_x=TA_WRAP",
+        "address_y=TA_WRAP",
+        "compression=TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen(mips_off)=TMGS_NO_MIPMAPS"
+      ],
+      "failed": [],
+      "skipped": [],
+      "ok": true,
+      "png": "D:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_SDF_Strokes.png",
+      "pixels": "256x256",
+      "readback": {
+        "srgb": "False",
+        "filter": "TF_BILINEAR",
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "256x256",
+      "asset": "/Game/Materials/Textures/T_SDF_Strokes.T_SDF_Strokes"
+    }
+  },
+  "errors": [],
+  "resolved_enums": {
+    "filter_nearest": {
+      "enum": "TextureFilter",
+      "member": "TF_NEAREST"
+    },
+    "filter_bilinear": {
+      "enum": "TextureFilter",
+      "member": "TF_BILINEAR"
+    },
+    "addr_wrap": {
+      "enum": "TextureAddress",
+      "member": "TA_WRAP"
+    },
+    "addr_clamp": {
+      "enum": "TextureAddress",
+      "member": "TA_CLAMP"
+    },
+    "comp_lossless": {
+      "enum": "TextureCompressionSettings",
+      "member": "TC_VECTOR_DISPLACEMENTMAP"
+    },
+    "mips_off": {
+      "enum": "TextureMipGenSettings",
+      "member": "TMGS_NO_MIPMAPS"
+    },
+    "mips_on": {
+      "enum": "TextureMipGenSettings",
+      "member": "TMGS_SIMPLE_AVERAGE"
+    }
+  },
+  "ok": true
+}

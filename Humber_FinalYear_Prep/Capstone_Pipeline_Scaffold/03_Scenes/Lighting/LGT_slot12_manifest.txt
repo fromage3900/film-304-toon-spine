@@ -1,0 +1,4 @@
+# Team Member 12: Lighting & Lookdev Artist
+- Directory: `03_Scenes/Lighting/`
+- Required prefixes: `LGT_`
+- Responsibilities: 3-point key/fill/rim lighting setups, Nikki warm / Jewelry cool light rigs, EEVEE 64-sample configs.

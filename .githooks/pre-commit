@@ -1,0 +1,166 @@
+#!/bin/sh
+set -eu
+
+# Melodia Toon Film - pre-commit validation
+# Adapted 2026-09-30 from the source project's .githooks/pre-commit, which has
+# been in service since 2026-08-07 and already survived one false-positive
+# incident (documented inline below).
+#
+# Enable ONCE per clone:
+#     git config core.hooksPath .githooks
+#
+# WHY THIS EXISTS: this repo is about to be worked by a group, and every check
+# below corresponds to a failure that actually happened in the source project or
+# in this one - not a theoretical one. A hook nobody enables is decoration,
+# hence the one-liner above and the note in Docs/GROUP_WORKFLOW.md.
+
+# Hooks launched from PowerShell may inherit a Windows PATH that has git.exe but
+# omits Git for Windows' POSIX utilities. Git's sh maps /usr/bin to its bundle.
+PATH="/usr/bin:$PATH"
+export PATH
+
+for REQUIRED_TOOL in grep xargs sh wc head; do
+  command -v "$REQUIRED_TOOL" >/dev/null 2>&1 || {
+    echo "ERROR: [pre-commit] Required validator command is unavailable: $REQUIRED_TOOL"
+    exit 1
+  }
+done
+
+echo "==> [pre-commit] Running LFS/size/junk validation..."
+
+STAGED=$(git diff --cached --name-only || true)
+
+# 1. Large files not tracked by Git LFS.
+#
+# Test the STAGED BLOB, not HEAD. `git lfs ls-files <path>` lists what is in
+# HEAD, so a brand-new large file that IS correctly staged as an LFS pointer
+# reports as untracked and the commit is rejected. That false positive blocked a
+# real commit in the source project (five files, three of them 128 MB, every one
+# a valid pointer). A staged LFS pointer always begins with the spec URL.
+LARGE_FILES=$(git diff --cached --name-only -z | xargs -0 -I{} sh -c '
+  if [ -f "{}" ]; then
+    size=$(wc -c < "{}" 2>/dev/null || echo 0)
+    if [ "$size" -gt 52428800 ]; then
+      if ! git show ":{}" 2>/dev/null | head -n 1 | grep -q "git-lfs.github.com/spec"; then
+        echo "{}"
+      fi
+    fi
+  fi
+' 2>/dev/null || true)
+
+if [ -n "$LARGE_FILES" ]; then
+  echo "ERROR: [pre-commit] Large files not tracked by Git LFS:"
+  echo "$LARGE_FILES"
+  echo ""
+  echo "Fix: git lfs track \"<pattern>\" && git add <file>"
+  exit 1
+fi
+
+
+# 2. Engine packages that are large but NOT LFS.
+#
+# .uasset/.umap are deliberately plain objects in .gitattributes (they total
+# ~0.4 MB, and putting them behind LFS would make every teammate install LFS to
+# open a material). But one 40 MB cooked texture shipped as a normal blob bloats
+# every clone forever, and that cannot be undone without a history rewrite.
+# 5 MB is the line.
+BIG_PACKAGES=$(git diff --cached --name-only -z | xargs -0 -I{} sh -c '
+  case "{}" in
+    *.uasset|*.umap)
+      if [ -f "{}" ]; then
+        size=$(wc -c < "{}" 2>/dev/null || echo 0)
+        if [ "$size" -gt 5242880 ]; then
+          if ! git show ":{}" 2>/dev/null | head -n 1 | grep -q "git-lfs.github.com/spec"; then
+            echo "{}"
+          fi
+        fi
+      fi
+      ;;
+  esac
+' 2>/dev/null || true)
+
+if [ -n "$BIG_PACKAGES" ]; then
+  echo "ERROR: [pre-commit] Engine packages over 5 MB not tracked by Git LFS:"
+  echo "$BIG_PACKAGES"
+  echo ""
+  echo "Fix: git lfs track \"*.uasset\" (or the specific folder), then re-add."
+  exit 1
+fi
+
+# 3. World Partition external-actor plumbing — ALLOWED, deliberately.
+#
+# REVERSED 2026-10-01. This check used to BLOCK Content/__ExternalActors__/ on
+# the theory that those packages are regenerated noise. They are not: for a
+# World Partition level they ARE the actor data. Blocking them left
+# L_Toon_Lookdev with its actors missing on every clone (audit F1).
+#
+# The hook now permits them; instead of blocking the folder, the *gate*
+# (Tools/verify_all.ps1) fails if a level references external actors that are
+# not present on disk. That is the failure that actually matters.
+# See Docs/GROUP_WORKFLOW.md -> "The external-actors policy".
+
+# 4. Forbidden file types.
+FORBIDDEN=$(printf '%s\n' "$STAGED" | grep -E '\.(blend1|blend2|7z|zip|tmp|orig|rej)$' || true)
+if [ -n "$FORBIDDEN" ]; then
+  echo "ERROR: [pre-commit] Forbidden file types staged:"
+  printf '%s\n' "$FORBIDDEN"
+  echo ""
+  echo "Blender backups and archives should never be committed."
+  echo "Remove them: git rm --cached <file>"
+  exit 1
+fi
+
+# 5. UE build artifacts (belt and braces - .gitignore already covers these,
+#    but a `git add -f` bypasses .gitignore and does NOT bypass this hook).
+BUILD_ARTIFACTS=$(printf '%s\n' "$STAGED" \
+  | grep -E '^(Intermediate|Saved|Binaries|DerivedDataCache)/' \
+  | grep -Ev '^Saved/(Audit|Reports)/.*\.(json|md|txt)$' || true)
+if [ -n "$BUILD_ARTIFACTS" ]; then
+  echo "ERROR: [pre-commit] UE build artifacts staged:"
+  printf '%s\n' "$BUILD_ARTIFACTS"
+  echo ""
+  echo "Only Saved/Audit/** and Saved/Reports/** evidence is allowed."
+  echo "Remove them: git rm --cached <file>"
+  exit 1
+fi
+
+# 6. Zero-byte files (junk artifacts and interrupted writes).
+ZERO_BYTE=$(git diff --cached --name-only -z | xargs -0 -I{} sh -c '
+  if [ -f "{}" ]; then
+    size=$(wc -c < "{}" 2>/dev/null || echo 0)
+    if [ "$size" -eq 0 ]; then
+      echo "{}"
+    fi
+  fi
+' 2>/dev/null || true)
+
+if [ -n "$ZERO_BYTE" ]; then
+  echo "ERROR: [pre-commit] Zero-byte files staged (junk artifacts):"
+  printf '%s\n' "$ZERO_BYTE"
+  echo ""
+  echo "Remove them: git rm --cached <file>"
+  exit 1
+fi
+
+# 7. Protected files - these need a deliberate, reviewed change.
+#    Override:  SKIP_PROTECTION=1 git commit ...
+if [ "${SKIP_PROTECTION:-0}" != "1" ]; then
+  PROTECTED=$(printf '%s\n' "$STAGED" | grep -E \
+    '^(\.gitignore|\.gitattributes|Config/DefaultEngine\.ini|Config/DefaultGame\.ini|Tools/verify_all\.ps1)$' \
+    || true)
+  if [ -n "$PROTECTED" ]; then
+    echo "ERROR: [pre-commit] Protected files staged:"
+    printf '%s\n' "$PROTECTED"
+    echo ""
+    echo "  .gitignore      controls what art and evidence git can see"
+    echo "  .gitattributes  controls merge behaviour for every binary asset"
+    echo "  Config/*.ini    shared engine/game config; a wrong edit breaks every launch"
+    echo "  verify_all.ps1  the project gate; editing it bypasses every check"
+    echo ""
+    echo "If this change IS the reviewed one:  SKIP_PROTECTION=1 git commit ..."
+    exit 1
+  fi
+fi
+
+echo "==> [pre-commit] Validation passed."
+exit 0

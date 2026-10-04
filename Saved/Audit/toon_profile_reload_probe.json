@@ -1,0 +1,9 @@
+{
+  "ok": true,
+  "reload_apis": {
+    "EditorLoadingAndSavingUtils.reload_asset": false,
+    "EditorAssetLibrary.unload_asset": false
+  },
+  "1_current": "TP_Office_Carpet",
+  "2_after_reload": "TP_Office_Carpet"
+}

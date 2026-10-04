@@ -1,0 +1,140 @@
+{
+  "material": "M_PainterlyGouache",
+  "errors": [],
+  "warnings": [],
+  "wiring_helper": "checked unary/binary/ternary via Wiring",
+  "enums": {
+    "comp_lossless": "TC_VECTOR_DISPLACEMENTMAP",
+    "addr_wrap": "TA_WRAP",
+    "mips_on": "TMGS_FROM_TEXTURE_GROUP"
+  },
+  "textures": {
+    "generated": {
+      "T_Gouache_PaperGrain": {
+        "set": [
+          "srgb=False",
+          "address_x=TA_WRAP",
+          "address_y=TA_WRAP",
+          "compression=TC_VECTOR_DISPLACEMENTMAP",
+          "mipgen=TMGS_FROM_TEXTURE_GROUP"
+        ],
+        "failed": [],
+        "skipped": [],
+        "field_min": 0,
+        "field_max": 255,
+        "field_distinct": 256,
+        "why": "paper tooth substrate - high frequency, isotropic",
+        "size": "256x256",
+        "readback": {
+          "srgb": "False",
+          "address_x": "TA_WRAP",
+          "address_y": "TA_WRAP",
+          "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+          "mip_gen_settings": "TMGS_FROM_TEXTURE_GROUP"
+        },
+        "asset": "/Game/Materials/Textures/Gouache/T_Gouache_PaperGrain.T_Gouache_PaperGrain",
+        "ok": true
+      },
+      "T_Gouache_Granulation": {
+        "set": [
+          "srgb=False",
+          "address_x=TA_WRAP",
+          "address_y=TA_WRAP",
+          "compression=TC_VECTOR_DISPLACEMENTMAP",
+          "mipgen=TMGS_FROM_TEXTURE_GROUP"
+        ],
+        "failed": [],
+        "skipped": [],
+        "field_min": 1,
+        "field_max": 255,
+        "field_distinct": 255,
+        "why": "pigment pooling - Worley F1, the granulation cue",
+        "size": "256x256",
+        "readback": {
+          "srgb": "False",
+          "address_x": "TA_WRAP",
+          "address_y": "TA_WRAP",
+          "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+          "mip_gen_settings": "TMGS_FROM_TEXTURE_GROUP"
+        },
+        "asset": "/Game/Materials/Textures/Gouache/T_Gouache_Granulation.T_Gouache_Granulation",
+        "ok": true
+      },
+      "T_Gouache_BrushEdge": {
+        "set": [
+          "srgb=False",
+          "address_x=TA_WRAP",
+          "address_y=TA_WRAP",
+          "compression=TC_VECTOR_DISPLACEMENTMAP",
+          "mipgen=TMGS_FROM_TEXTURE_GROUP"
+        ],
+        "failed": [],
+        "skipped": [],
+        "field_min": 0,
+        "field_max": 255,
+        "field_distinct": 256,
+        "why": "wet edge / palette-knife ridges - the strongest gouache tell",
+        "size": "256x256",
+        "readback": {
+          "srgb": "False",
+          "address_x": "TA_WRAP",
+          "address_y": "TA_WRAP",
+          "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+          "mip_gen_settings": "TMGS_FROM_TEXTURE_GROUP"
+        },
+        "asset": "/Game/Materials/Textures/Gouache/T_Gouache_BrushEdge.T_Gouache_BrushEdge",
+        "ok": true
+      },
+      "T_Gouache_WashBlotch": {
+        "set": [
+          "srgb=False",
+          "address_x=TA_WRAP",
+          "address_y=TA_WRAP",
+          "compression=TC_VECTOR_DISPLACEMENTMAP",
+          "mipgen=TMGS_FROM_TEXTURE_GROUP"
+        ],
+        "failed": [],
+        "skipped": [],
+        "field_min": 0,
+        "field_max": 255,
+        "field_distinct": 256,
+        "why": "low-frequency wash variation so a wash is never flat",
+        "size": "256x256",
+        "readback": {
+          "srgb": "False",
+          "address_x": "TA_WRAP",
+          "address_y": "TA_WRAP",
+          "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+          "mip_gen_settings": "TMGS_FROM_TEXTURE_GROUP"
+        },
+        "asset": "/Game/Materials/Textures/Gouache/T_Gouache_WashBlotch.T_Gouache_WashBlotch",
+        "ok": true
+      }
+    },
+    "errors": []
+  },
+  "profile_bound": "TP_Default",
+  "verify_material": {
+    "path": "/Game/Materials/Masters/M_PainterlyGouache.M_PainterlyGouache",
+    "loads": true,
+    "ok": true,
+    "mf_calls": [],
+    "expression_count": 54,
+    "missing_calls": []
+  },
+  "reachability": {
+    "live": 54,
+    "dead": 0,
+    "outputs_wired": {}
+  },
+  "dead_nodes": 0,
+  "ok": true,
+  "wire_failures": [],
+  "persisted": {
+    "loaded": true,
+    "expression_count": 54,
+    "toon_profile": "TP_Default",
+    "texture_params": 4,
+    "unassigned_textures": []
+  }
+}

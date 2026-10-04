@@ -1,0 +1,108 @@
+{
+  "errors": [],
+  "shots": [
+    {
+      "shot_id": "SH010",
+      "name": "establish_world",
+      "sequence": "/Game/Sequences/LS_SH010",
+      "camera": "Cam_Turntable.001",
+      "focal_length_mm": 24.0,
+      "playback_start": 0,
+      "playback_end": 95
+    },
+    {
+      "shot_id": "SH020",
+      "name": "reveal_profile",
+      "sequence": "/Game/Sequences/LS_SH020",
+      "camera": "Cam_Back",
+      "focal_length_mm": 35.0,
+      "playback_start": 96,
+      "playback_end": 167
+    },
+    {
+      "shot_id": "SH030",
+      "name": "water_rise",
+      "sequence": "/Game/Sequences/LS_SH030",
+      "camera": "Cam_Low",
+      "focal_length_mm": 28.0,
+      "playback_start": 168,
+      "playback_end": 251
+    },
+    {
+      "shot_id": "SH040",
+      "name": "dialogue_medium",
+      "sequence": "/Game/Sequences/LS_SH040",
+      "camera": "Cam_Beauty",
+      "focal_length_mm": 50.0,
+      "playback_start": 252,
+      "playback_end": 347
+    },
+    {
+      "shot_id": "SH050",
+      "name": "macro_emotion",
+      "sequence": "/Game/Sequences/LS_SH050",
+      "camera": "Cam_Macro",
+      "focal_length_mm": 85.0,
+      "playback_start": 348,
+      "playback_end": 419
+    },
+    {
+      "shot_id": "SH060",
+      "name": "hero_rig_action",
+      "sequence": "/Game/Sequences/LS_SH060",
+      "camera": "Cam_Front",
+      "focal_length_mm": 50.0,
+      "playback_start": 420,
+      "playback_end": 539
+    },
+    {
+      "shot_id": "SH070",
+      "name": "song_release",
+      "sequence": "/Game/Sequences/LS_SH070",
+      "camera": "Cam_Turntable",
+      "focal_length_mm": 40.0,
+      "playback_start": 540,
+      "playback_end": 623
+    },
+    {
+      "shot_id": "SH080",
+      "name": "bow_finale",
+      "sequence": "/Game/Sequences/LS_SH080",
+      "camera": "Cam_Beauty",
+      "focal_length_mm": 50.0,
+      "playback_start": 624,
+      "playback_end": 719
+    }
+  ],
+  "level": "/Game/Maps/L_Toon_Lookdev",
+  "level_saved": true,
+  "expected_shots": 8,
+  "built_shots": 8,
+  "sequences_found": [
+    "/Game/Sequences/LS_SH010",
+    "/Game/Sequences/LS_SH020",
+    "/Game/Sequences/LS_SH030",
+    "/Game/Sequences/LS_SH040",
+    "/Game/Sequences/LS_SH050",
+    "/Game/Sequences/LS_SH060",
+    "/Game/Sequences/LS_SH070",
+    "/Game/Sequences/LS_SH080"
+  ],
+  "cameras_in_level": [
+    "Cam_Back",
+    "Cam_Beauty",
+    "Cam_Front",
+    "Cam_Low",
+    "Cam_Macro",
+    "Cam_Turntable",
+    "Cam_Turntable.001"
+  ],
+  "verify": {
+    "shot_count_ok": true,
+    "all_sequences_on_disk": true,
+    "level_saved": true,
+    "cameras_present": true,
+    "errors": [],
+    "ok": true
+  }
+}

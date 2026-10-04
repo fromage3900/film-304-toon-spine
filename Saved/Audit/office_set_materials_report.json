@@ -1,0 +1,99 @@
+{
+  "assigned": {
+    "SM_CUBICLE_Canonical": {
+      "instance": "MI_Toon_Office_Polypropylene",
+      "before": [
+        "None"
+      ],
+      "after": "MI_Toon_Office_Polypropylene",
+      "ok": true
+    },
+    "SM_CUBICLE_MazeShift": {
+      "instance": "MI_Toon_Office_Polypropylene",
+      "before": [
+        "None"
+      ],
+      "after": "MI_Toon_Office_Polypropylene",
+      "ok": true
+    },
+    "SM_CUBICLE_OpenPlan": {
+      "instance": "MI_Toon_Office_Polypropylene",
+      "before": [
+        "None"
+      ],
+      "after": "MI_Toon_Office_Polypropylene",
+      "ok": true
+    },
+    "SM_CUBICLE_Swarm": {
+      "instance": "MI_Toon_Office_Polypropylene",
+      "before": [
+        "None"
+      ],
+      "after": "MI_Toon_Office_Polypropylene",
+      "ok": true
+    },
+    "SM_OFFICE_BarbicanScale": {
+      "instance": "MI_Toon_Environment",
+      "before": [
+        "None"
+      ],
+      "after": "MI_Toon_Environment",
+      "ok": true
+    },
+    "SM_OFFICE_Bunker": {
+      "instance": "MI_Toon_Environment",
+      "before": [
+        "None"
+      ],
+      "after": "MI_Toon_Environment",
+      "ok": true
+    },
+    "SM_OFFICE_CivicSlab": {
+      "instance": "MI_Toon_Environment",
+      "before": [
+        "None"
+      ],
+      "after": "MI_Toon_Environment",
+      "ok": true
+    },
+    "SM_OFFICE_SlenderTower": {
+      "instance": "MI_Toon_Environment",
+      "before": [
+        "None"
+      ],
+      "after": "MI_Toon_Environment",
+      "ok": true
+    }
+  },
+  "errors": [],
+  "orphaned_office_instances": {
+    "MI_Toon_Office_Carpet": {
+      "referenced_by_office_meshes": false,
+      "reason": "carpet tile - no interior floor mesh yet"
+    },
+    "MI_Toon_Office_Laminate": {
+      "referenced_by_office_meshes": false,
+      "reason": "desk laminate - desk prop not built (Wave 1)"
+    },
+    "MI_Toon_Office_DropCeiling": {
+      "referenced_by_office_meshes": false,
+      "reason": "ceiling tile - no interior ceiling mesh yet"
+    },
+    "MI_Toon_Office_Troffer": {
+      "referenced_by_office_meshes": false,
+      "reason": "light panel - no troffer mesh yet"
+    },
+    "MI_Toon_Office_Whiteboard": {
+      "referenced_by_office_meshes": false,
+      "reason": "whiteboard - no prop mesh yet"
+    }
+  },
+  "awaiting_geometry": {
+    "MI_Toon_Office_Carpet": "carpet tile - no interior floor mesh yet",
+    "MI_Toon_Office_Laminate": "desk laminate - desk prop not built (Wave 1)",
+    "MI_Toon_Office_DropCeiling": "ceiling tile - no interior ceiling mesh yet",
+    "MI_Toon_Office_Troffer": "light panel - no troffer mesh yet",
+    "MI_Toon_Office_Whiteboard": "whiteboard - no prop mesh yet"
+  },
+  "ok": true
+}

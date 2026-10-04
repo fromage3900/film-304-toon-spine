@@ -1,0 +1,4 @@
+# Team Member 05: Environment & Architecture Modeler
+- Directory: `02_Assets/Models/Environments/`
+- Required prefixes: `EN_`
+- Responsibilities: Set pieces, modular architecture, terrain elements.

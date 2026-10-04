@@ -1,0 +1,27 @@
+{
+  "ok": true,
+  "errors": [],
+  "mi_accepted": [
+    {
+      "name": "override_toon_profile",
+      "value": "False"
+    }
+  ],
+  "mi_rejected": {
+    "toon_profile": "MaterialInstanceConstant: Failed to find property 'toon_profile' for attribute '",
+    "ToonProfile": "MaterialInstanceConstant: Failed to find property 'ToonProfile' for attribute 'T",
+    "toonProfile": "MaterialInstanceConstant: Failed to find property 'toonProfile' for attribute 't",
+    "toon_profile_asset": "MaterialInstanceConstant: Failed to find property 'toon_profile_asset' for attri",
+    "override_ToonProfile": "MaterialInstanceConstant: Failed to find property 'override_ToonProfile' for att",
+    "ToonProfileOverride": "MaterialInstanceConstant: Property 'ToonProfileOverride' for attribute 'ToonProf",
+    "toon_profile_override": "MaterialInstanceConstant: Failed to find property 'toon_profile_override' for at"
+  },
+  "bsdf_before": null,
+  "bsdf_before_path": null,
+  "set_result": {
+    "assigned": "TP_Office_Carpet",
+    "readback": "TP_Office_Carpet",
+    "identity_match": true
+  },
+  "restored_to": null
+}

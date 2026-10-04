@@ -1,0 +1,4 @@
+# Team Member 01: Director & Script/Beat Lead
+- Directory: `01_Preprod/Story/`
+- Required prefixes: `DOC_`, `STORY_`, `BEAT_`
+- Responsibilities: Master script, beat boards, logline sign-off, director's notes.

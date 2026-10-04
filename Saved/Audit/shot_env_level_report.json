@@ -1,0 +1,335 @@
+{
+  "aspect_mismatched_cameras": [],
+  "boxes": [
+    [
+      "CITY_TowerCluster",
+      -5701.2,
+      20598.9,
+      0.0,
+      11402.3,
+      10800.2,
+      8460.6
+    ],
+    [
+      "FAC_TowerRibbon",
+      -22701.2,
+      18598.9,
+      0.0,
+      11402.3,
+      10800.2,
+      8500.6
+    ],
+    [
+      "CITY_CivicSuperblock",
+      8698.8,
+      16098.9,
+      0.0,
+      12602.4,
+      11800.2,
+      2783.9
+    ],
+    [
+      "CITY_TightEstate",
+      26498.9,
+      29498.9,
+      0.0,
+      9002.1,
+      9000.2,
+      4196.9
+    ],
+    [
+      "CITY_LowSprawl",
+      -10801.2,
+      3698.9,
+      0.0,
+      15602.4,
+      14600.2,
+      1637.5
+    ],
+    [
+      "OFFICE_CivicSlab",
+      -21186.4,
+      11370.4,
+      0.0,
+      2117.1,
+      1257.0,
+      2560.0
+    ],
+    [
+      "OFFICE_BarbicanScale",
+      -7066.3,
+      1767.8,
+      0.0,
+      2799.9,
+      1462.2,
+      3480.0
+    ],
+    [
+      "OFFICE_SlenderTower",
+      3772.2,
+      771.1,
+      0.0,
+      1257.2,
+      855.6,
+      4240.0
+    ]
+  ],
+  "cameras": [
+    {
+      "filmback_aspect": 1.77778,
+      "filmback_mm": [
+        35.0,
+        19.6875
+      ],
+      "focal_length_mm": 24.0,
+      "label": "Cam_Env_SH010",
+      "location_uu": [
+        -20000,
+        -55000,
+        14000
+      ],
+      "render_frame": 48,
+      "shot_id": "SH010",
+      "still_name": "COMP_SH010_proto_v01"
+    },
+    {
+      "filmback_aspect": 1.77778,
+      "filmback_mm": [
+        35.0,
+        19.6875
+      ],
+      "focal_length_mm": 35.0,
+      "label": "Cam_Env_SH020",
+      "location_uu": [
+        -26000,
+        -22000,
+        3000
+      ],
+      "render_frame": 132,
+      "shot_id": "SH020",
+      "still_name": "COMP_SH020_proto_v01"
+    },
+    {
+      "filmback_aspect": 1.77778,
+      "filmback_mm": [
+        35.0,
+        19.6875
+      ],
+      "focal_length_mm": 28.0,
+      "label": "Cam_Env_SH030",
+      "location_uu": [
+        -9000,
+        -14000,
+        300
+      ],
+      "render_frame": 210,
+      "shot_id": "SH030",
+      "still_name": "COMP_SH030_proto_v01"
+    },
+    {
+      "filmback_aspect": 1.77778,
+      "filmback_mm": [
+        35.0,
+        19.6875
+      ],
+      "focal_length_mm": 40.0,
+      "label": "Cam_Env_SH070",
+      "location_uu": [
+        9000,
+        -18000,
+        6000
+      ],
+      "render_frame": 582,
+      "shot_id": "SH070",
+      "still_name": "COMP_SH070_proto_v01"
+    }
+  ],
+  "deliverable_aspect": 1.77778,
+  "deliverable_resolution": [
+    1280,
+    720
+  ],
+  "errors": [],
+  "expected_pieces": 8,
+  "expected_shots": 4,
+  "ground": "/Engine/BasicShapes/Plane @ 200000 uu",
+  "grounded_count": 8,
+  "grounding": [
+    {
+      "min_z_after_uu": 0.0,
+      "object": "CITY_TowerCluster",
+      "z_correction_uu": 40.0
+    },
+    {
+      "min_z_after_uu": 0.0,
+      "object": "FAC_TowerRibbon",
+      "z_correction_uu": 80.0
+    },
+    {
+      "min_z_after_uu": 0.0,
+      "object": "CITY_CivicSuperblock",
+      "z_correction_uu": 40.0
+    },
+    {
+      "min_z_after_uu": 0.0,
+      "object": "CITY_TightEstate",
+      "z_correction_uu": 40.0
+    },
+    {
+      "min_z_after_uu": 0.0,
+      "object": "CITY_LowSprawl",
+      "z_correction_uu": 40.0
+    },
+    {
+      "min_z_after_uu": 0.0,
+      "object": "OFFICE_CivicSlab",
+      "z_correction_uu": 0.0
+    },
+    {
+      "min_z_after_uu": 0.0,
+      "object": "OFFICE_BarbicanScale",
+      "z_correction_uu": 0.0
+    },
+    {
+      "min_z_after_uu": 0.0,
+      "object": "OFFICE_SlenderTower",
+      "z_correction_uu": 0.0
+    }
+  ],
+  "level": "/Game/Maps/L_Toon_Shot_Env",
+  "level_action": "reloaded",
+  "level_saved": true,
+  "ok": true,
+  "overlapping_pairs": [],
+  "placed": [
+    {
+      "asset": "/Game/Environment/Brutalist/01_CITY_PBR/SM_CITY_TowerCluster",
+      "object": "CITY_TowerCluster",
+      "requested_uu": [
+        0.0,
+        26000.0,
+        0.0
+      ],
+      "role": "hero mass (85 m)",
+      "size_uu": [
+        11402.3,
+        10800.2,
+        8460.6
+      ],
+      "z_correction_uu": 40.0
+    },
+    {
+      "asset": "/Game/Environment/Brutalist/05_FACADE_VARIATION/SM_FAC_TowerRibbon",
+      "object": "FAC_TowerRibbon",
+      "requested_uu": [
+        -17000.0,
+        24000.0,
+        0.0
+      ],
+      "role": "second tower / skyline",
+      "size_uu": [
+        11402.3,
+        10800.2,
+        8500.6
+      ],
+      "z_correction_uu": 80.0
+    },
+    {
+      "asset": "/Game/Environment/Brutalist/01_CITY_PBR/SM_CITY_CivicSuperblock",
+      "object": "CITY_CivicSuperblock",
+      "requested_uu": [
+        15000.0,
+        22000.0,
+        0.0
+      ],
+      "role": "slab mass",
+      "size_uu": [
+        12602.4,
+        11800.2,
+        2783.9
+      ],
+      "z_correction_uu": 40.0
+    },
+    {
+      "asset": "/Game/Environment/Brutalist/01_CITY_PBR/SM_CITY_TightEstate",
+      "object": "CITY_TightEstate",
+      "requested_uu": [
+        31000.0,
+        34000.0,
+        0.0
+      ],
+      "role": "distant estate",
+      "size_uu": [
+        9002.1,
+        9000.2,
+        4196.9
+      ],
+      "z_correction_uu": 40.0
+    },
+    {
+      "asset": "/Game/Environment/Brutalist/01_CITY_PBR/SM_CITY_LowSprawl",
+      "object": "CITY_LowSprawl",
+      "requested_uu": [
+        -3000.0,
+        11000.0,
+        0.0
+      ],
+      "role": "low sprawl (mid-ground)",
+      "size_uu": [
+        15602.4,
+        14600.2,
+        1637.5
+      ],
+      "z_correction_uu": 40.0
+    },
+    {
+      "asset": "/Game/Environment/Brutalist/03_OFFICE_BLOCK/SM_OFFICE_CivicSlab",
+      "object": "OFFICE_CivicSlab",
+      "requested_uu": [
+        -20000.0,
+        12000.0,
+        0.0
+      ],
+      "role": "mid-left accent",
+      "size_uu": [
+        2117.1,
+        1257.0,
+        2560.0
+      ],
+      "z_correction_uu": 0.0
+    },
+    {
+      "asset": "/Game/Environment/Brutalist/03_OFFICE_BLOCK/SM_OFFICE_BarbicanScale",
+      "object": "OFFICE_BarbicanScale",
+      "requested_uu": [
+        -5500.0,
+        2500.0,
+        0.0
+      ],
+      "role": "foreground, human scale",
+      "size_uu": [
+        2799.9,
+        1462.2,
+        3480.0
+      ],
+      "z_correction_uu": 0.0
+    },
+    {
+      "asset": "/Game/Environment/Brutalist/03_OFFICE_BLOCK/SM_OFFICE_SlenderTower",
+      "object": "OFFICE_SlenderTower",
+      "requested_uu": [
+        4500.0,
+        1200.0,
+        0.0
+      ],
+      "role": "foreground vertical accent",
+      "size_uu": [
+        1257.2,
+        855.6,
+        4240.0
+      ],
+      "z_correction_uu": 0.0
+    }
+  ],
+  "placed_count": 8
+}

@@ -1,0 +1,78 @@
+{
+  "date": "2026-10-03",
+  "branch": "feature/canon-pipeline-scaffold",
+  "material": "M_PainterlyGouache",
+  "compiles": true,
+  "compile_evidence": "MaterialStatistics from the live editor: <Struct 'MaterialStatistics' (0x0000016A43C1C4A0) {num_vertex_shader_instructions: 140, num_pixel_shader_instructions: 322, num_samplers: 7, num_vertex_texture_samples: 3, num_pixel_texture_samples: 4, num_virtual_texture_samples: 0, num_uv_scalars: 2, num_interpolator_scalars: 0}>. A failed compile returns no statistics at all. Corroborated in the log: the only 'Failed to compile Material' entry is at line 3051, which is the pre-existing on-disk asset compiled at editor startup; the rebuild is at line 6692 and after it there are zero failures.",
+  "build_ok": true,
+  "build_errors": [],
+  "wire_failures": [],
+  "dead_nodes": 0,
+  "expressions": null,
+  "profile_built": "TP_Default",
+  "profile_after_reload": "TP_Default",
+  "expressions_after_reload": 54,
+  "texture_params_after_reload": 4,
+  "unassigned_textures": [],
+  "enums": {
+    "comp_lossless": "TC_VECTOR_DISPLACEMENTMAP",
+    "addr_wrap": "TA_WRAP",
+    "mips_on": "TMGS_FROM_TEXTURE_GROUP"
+  },
+  "reachability_live": 54,
+  "reachability_dead": 0,
+  "bsdf_pins_exposed": [
+    "BaseColor",
+    "Metallic",
+    "Specular",
+    "Roughness",
+    "Normal",
+    "EmissiveColor",
+    "PatternUVs",
+    "Anisotropy",
+    "Tangent"
+  ],
+  "textures": [
+    {
+      "name": "T_Gouache_PaperGrain",
+      "ok": true,
+      "size": "256x256",
+      "field_distinct_values": 256,
+      "srgb": "False",
+      "compression": "TC_VECTOR_DISPLACEMENTMAP",
+      "address": "TA_WRAP",
+      "mip_gen": "TMGS_FROM_TEXTURE_GROUP"
+    },
+    {
+      "name": "T_Gouache_Granulation",
+      "ok": true,
+      "size": "256x256",
+      "field_distinct_values": 255,
+      "srgb": "False",
+      "compression": "TC_VECTOR_DISPLACEMENTMAP",
+      "address": "TA_WRAP",
+      "mip_gen": "TMGS_FROM_TEXTURE_GROUP"
+    },
+    {
+      "name": "T_Gouache_BrushEdge",
+      "ok": true,
+      "size": "256x256",
+      "field_distinct_values": 256,
+      "srgb": "False",
+      "compression": "TC_VECTOR_DISPLACEMENTMAP",
+      "address": "TA_WRAP",
+      "mip_gen": "TMGS_FROM_TEXTURE_GROUP"
+    },
+    {
+      "name": "T_Gouache_WashBlotch",
+      "ok": true,
+      "size": "256x256",
+      "field_distinct_values": 256,
+      "srgb": "False",
+      "compression": "TC_VECTOR_DISPLACEMENTMAP",
+      "address": "TA_WRAP",
+      "mip_gen": "TMGS_FROM_TEXTURE_GROUP"
+    }
+  ],
+  "ok": true
+}

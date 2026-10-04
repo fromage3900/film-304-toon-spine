@@ -1,0 +1,4 @@
+# Team Member 10: Lead Character Animator (Acting/Dialogue)
+- Directory: `03_Scenes/Animation/Acting/`
+- Required prefixes: `SC_ACT_`
+- Responsibilities: Character acting passes, facial sync, emotional keyframes.

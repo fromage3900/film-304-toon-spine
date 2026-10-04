@@ -1,0 +1,24 @@
+{
+  "ok": true,
+  "errors": [],
+  "toon_related_attrs": [
+    "neural_profile",
+    "override_specular_profile",
+    "override_subsurface_profile",
+    "override_toon_profile",
+    "subsurface_profile"
+  ],
+  "class": "MaterialInstanceConstant",
+  "candidates": {
+    "toon_profile": "<absent: MaterialInstanceConstant: Failed to find property 'toon_profile' for a>",
+    "override_toon_profile": "False",
+    "ToonProfile": "<absent: MaterialInstanceConstant: Failed to find property 'ToonProfile' for at>",
+    "override_ToonProfile": "<absent: MaterialInstanceConstant: Failed to find property 'override_ToonProfil>",
+    "toon_profile_override": "<absent: MaterialInstanceConstant: Failed to find property 'toon_profile_overri>"
+  },
+  "mel_setters": [],
+  "master_toon_attrs": [
+    "neural_profile",
+    "subsurface_profile"
+  ]
+}

@@ -1,0 +1,4 @@
+# Team Member 09: Toon Shader & Surfacing Tech Artist
+- Directory: `02_Assets/Materials/`
+- Required prefixes: `M_`, `MI_`, `TP_`, `T_`
+- Responsibilities: Substrate Toon BSDF materials, TP_Melusina warm-violet (#352D40) ramp enforcement, texture maps.
