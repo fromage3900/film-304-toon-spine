@@ -1,5 +1,5 @@
 ﻿MELODIA TOON FILM - verify_all
-run      : 2026-10-04 01:31:40
+run      : 2026-10-04 12:12:09
 repo     : D:\film-304-toon-spine
 bracket  : 9 checks, 0 failed
 
@@ -24,7 +24,7 @@ RAW FORK SYNC
 FORK SYNC CHECK
   upstream : P:\MelodiaMelusinaV2-Laptop\deploy\surreal_arch\melodia_gn
   fork     : D:\film-304-toon-spine\Blender\surreal_arch\melodia_gn
-  commit   : b0b58bb83
+  commit   : db1a8409a
 ------------------------------------------------------------------------
   v brutalist_city.py          IN_SYNC
   v brutalist_cubicles.py      IN_SYNC
