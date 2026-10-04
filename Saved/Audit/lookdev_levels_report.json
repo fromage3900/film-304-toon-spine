@@ -1,0 +1,39 @@
+{
+  "written": "2026-10-03",
+  "levels": {
+    "gouache": {
+      "key": "gouache",
+      "level": "L_Gouache_Lookdev",
+      "exit": 0,
+      "log": "P:\\film-304-toon-spine\\Saved\\Audit\\lookdev_level_gouache_2026-10-03.log",
+      "fatal": false,
+      "python_error": false,
+      "umap": "P:\\film-304-toon-spine\\Content\\Maps\\L_Gouache_Lookdev.umap",
+      "umap_bytes": 31590,
+      "ok": true
+    },
+    "foliage": {
+      "key": "foliage",
+      "level": "L_Foliage_Lookdev",
+      "exit": 0,
+      "log": "P:\\film-304-toon-spine\\Saved\\Audit\\lookdev_level_foliage_2026-10-03.log",
+      "fatal": false,
+      "python_error": false,
+      "umap": "P:\\film-304-toon-spine\\Content\\Maps\\L_Foliage_Lookdev.umap",
+      "umap_bytes": 26160,
+      "ok": true
+    },
+    "water": {
+      "key": "water",
+      "level": "L_Water_Lookdev",
+      "exit": 0,
+      "log": "P:\\film-304-toon-spine\\Saved\\Audit\\lookdev_level_water_2026-10-03.log",
+      "fatal": false,
+      "python_error": false,
+      "umap": "P:\\film-304-toon-spine\\Content\\Maps\\L_Water_Lookdev.umap",
+      "umap_bytes": 22683,
+      "ok": true
+    }
+  },
+  "ok": true
+}

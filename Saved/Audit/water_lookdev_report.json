@@ -1,0 +1,54 @@
+{
+  "level": "L_Water_Lookdev",
+  "errors": [],
+  "warnings": [],
+  "forms": [
+    {
+      "label": "WLD_BankCube",
+      "shape": "cube",
+      "material": null,
+      "spawned": true
+    },
+    {
+      "label": "WLD_GroundStock",
+      "shape": "plane",
+      "material": null,
+      "spawned": true
+    },
+    {
+      "label": "WLD_Canal",
+      "shape": "plane",
+      "material": "canal",
+      "spawned": true
+    },
+    {
+      "label": "WLD_Puddle",
+      "shape": "plane",
+      "material": "puddle",
+      "spawned": true
+    }
+  ],
+  "materials": {
+    "canal": {
+      "path": "/Game/Materials/Instances/MI_Water_Canal",
+      "loaded": true
+    },
+    "puddle": {
+      "path": "/Game/Materials/Instances/MI_Water_Puddle",
+      "loaded": true
+    }
+  },
+  "level_asset": "/Game/Maps/L_Water_Lookdev",
+  "level_saved": true,
+  "census": {
+    "total": 7,
+    "static_mesh": 4,
+    "all_forms_present": true
+  },
+  "notes": {
+    "flow_is_time": "Ripple fields scroll with Time - a still frame proves band placement only; two frames at t and t+2s prove the flow. Movie Render Queue on the desktop is the real instrument.",
+    "grazing_ink": "The fresnel edge ink is judged where the bank cube meets the canal plane; if the ink does not climb the bank, the ripple normal is not feeding it.",
+    "profile": "The water master binds TP_Water at the master level; instances cannot re-bind profiles on this build (measured 2026-10-02, toon_profile_binding_probe_v3)."
+  },
+  "ok": true
+}

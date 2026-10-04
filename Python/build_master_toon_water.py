@@ -35,7 +35,7 @@ import unreal
 import spine_lib as lib
 
 NAME = "M_Master_Toon_Water"
-MASTER_PROFILE = "TP_Default"
+MASTER_PROFILE = "TP_Water"
 TEX_DIR = "/Game/Materials/Textures"
 
 

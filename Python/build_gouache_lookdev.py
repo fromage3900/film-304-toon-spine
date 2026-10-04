@@ -81,9 +81,16 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 for _stale in ("build_gouache_material", "spine_lib"):
     sys.modules.pop(_stale, None)
 
-import unreal  # noqa: E402
+import unreal
+
+# The fixture builders are launched standalone (-ExecutePythonScript), so
+# Python/ is NOT on sys.path the way it is inside build_spine.py - without
+# this, `import spine_lib` dies with ModuleNotFoundError and the editor exits
+# 0 with no level built (measured 2026-10-03, lookdev driver run 2).
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import spine_lib as lib  # noqa: E402
+import lookdev_lib  # noqa: E402
 
 LEVEL_NAME = "L_Gouache_Lookdev"
 MAP_DIR = "/Game/Maps"
@@ -156,21 +163,13 @@ def resolve_world_factory():
 
 
 def ensure_level() -> str:
-    path = "%s/%s" % (MAP_DIR, LEVEL_NAME)
-    if not unreal.EditorAssetLibrary.does_asset_exist(path):
-        factory = resolve_world_factory()
-        if factory is None:
-            raise RuntimeError(
-                "no WorldFactory class found - cannot create %s" % LEVEL_NAME)
-        lib.ensure_dir(MAP_DIR)
-        unreal.AssetToolsHelpers.get_asset_tools().create_asset(
-            LEVEL_NAME, MAP_DIR, unreal.World, factory())
-        log("created level asset %s (factory=%s)"
-            % (path, type(factory).__name__))
-    else:
-        log("level asset exists: %s" % path)
-    unreal.EditorLevelLibrary.load_level(path)
-    return path
+    """Open the fixture level via lookdev_lib (phantom purge, create, save,
+    then load). The old local version is gone: it skipped creation when the
+    asset registry claimed the package existed while the .umap was not on
+    disk, which made load_level fatal (see lookdev_lib docstring)."""
+    status = lookdev_lib.ensure_level(LEVEL_NAME)
+    lib.log(f"level {LEVEL_NAME}: {' '.join(status['actions'])}")
+    return status["asset_path"]
 
 
 def resolve_materials() -> dict:
@@ -339,11 +338,7 @@ def build() -> dict:
     spawn_lights()
     spawn_camera()
 
-    saved = False
-    try:
-        saved = bool(unreal.EditorLevelLibrary.save_current_level())
-    except Exception as exc:                                       # noqa: BLE001
-        report["warnings"].append(f"save level: {str(exc)[:120]}")
+    saved = lookdev_lib.save_current_level(report["level_asset"])
     report["level_saved"] = saved
 
     # Census from the LEVEL, not from what we intended to spawn. This is what
