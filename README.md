@@ -1,8 +1,13 @@
-# Melodia Toon Film
+# Humber 304 UE Toon Shading Pipeline 
 
 Standalone UE 5.8 toon shading spine and brutalist building set for the Animation Art 5
 group film. Content-only project: no C++ module, no compiler, no third-party plugin
 dependency — clone it and open it.
+
+## Hello friends ~
+
+This is a base UE project that includes the shader pipeline we will be using for our indie
+film. If you don't have git experience, don't stress — the setup below is copy-paste.
 
 ## Start here
 
