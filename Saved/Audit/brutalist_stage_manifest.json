@@ -1,6 +1,6 @@
 {
- "stamp": "2026-09-30",
- "blend": "P:\\film-304-toon-spine\\Saved\\Blend\\BRUTALIST_CITY_REVIEW_2026-09-30.blend",
+ "stamp": "2026-10-04",
+ "blend": "D:\\film-304-toon-spine\\Saved\\Blend\\BRUTALIST_CITY_REVIEW_2026-10-04.blend",
  "collections": {
   "01_CITY_PBR": [
    {
@@ -691,15 +691,96 @@
      0.0
     ]
    }
+  ],
+  "07_OFFICE_PROPS": [
+   {
+    "object": "PROPS_OccupiedDesk",
+    "builder": "GN_OFFICE_DeskCluster",
+    "preset": "BR_OFFICE_OCCUPIED",
+    "nodes": 192,
+    "params": 17,
+    "verts": 294,
+    "material": "BR_Paving",
+    "materials": [
+     "BR_Paving"
+    ],
+    "material_sockets_set": [
+     "surface=BR_Paving"
+    ],
+    "material_sockets_missing": [],
+    "local_bbox": [
+     1.51,
+     0.71,
+     1.09
+    ],
+    "position": [
+     -240,
+     -960,
+     0.0
+    ]
+   },
+   {
+    "object": "PROPS_BareDesk",
+    "builder": "GN_OFFICE_DeskCluster",
+    "preset": "BR_OFFICE_BARE",
+    "nodes": 192,
+    "params": 17,
+    "verts": 56,
+    "material": "BR_Paving",
+    "materials": [
+     "BR_Paving"
+    ],
+    "material_sockets_set": [
+     "surface=BR_Paving"
+    ],
+    "material_sockets_missing": [],
+    "local_bbox": [
+     1.4,
+     0.7,
+     1.09
+    ],
+    "position": [
+     0,
+     -960,
+     0.0
+    ]
+   },
+   {
+    "object": "PROPS_PushedChair",
+    "builder": "GN_OFFICE_DeskCluster",
+    "preset": "BR_OFFICE_PUSHED",
+    "nodes": 192,
+    "params": 17,
+    "verts": 294,
+    "material": "BR_Paving",
+    "materials": [
+     "BR_Paving"
+    ],
+    "material_sockets_set": [
+     "surface=BR_Paving"
+    ],
+    "material_sockets_missing": [],
+    "local_bbox": [
+     1.51,
+     1.04,
+     1.09
+    ],
+    "position": [
+     240,
+     -960,
+     0.0
+    ]
+   }
   ]
  },
  "sheets": {
-  "city_pbr": "P:\\film-304-toon-spine\\Saved\\Audit\\brutalist_sheet_city_pbr.png",
-  "city_komikaze": "P:\\film-304-toon-spine\\Saved\\Audit\\brutalist_sheet_city_komikaze.png",
-  "facade": "P:\\film-304-toon-spine\\Saved\\Audit\\brutalist_sheet_facade.png",
-  "roofs": "P:\\film-304-toon-spine\\Saved\\Audit\\brutalist_sheet_roofs.png",
-  "family": "P:\\film-304-toon-spine\\Saved\\Audit\\brutalist_sheet_family.png",
-  "palette": "P:\\film-304-toon-spine\\Saved\\Audit\\brutalist_sheet_palette.png"
+  "city_pbr": "D:\\film-304-toon-spine\\Saved\\Audit\\brutalist_sheet_city_pbr.png",
+  "city_komikaze": "D:\\film-304-toon-spine\\Saved\\Audit\\brutalist_sheet_city_komikaze.png",
+  "facade": "D:\\film-304-toon-spine\\Saved\\Audit\\brutalist_sheet_facade.png",
+  "roofs": "D:\\film-304-toon-spine\\Saved\\Audit\\brutalist_sheet_roofs.png",
+  "office_props": "D:\\film-304-toon-spine\\Saved\\Audit\\brutalist_sheet_office_props.png",
+  "family": "D:\\film-304-toon-spine\\Saved\\Audit\\brutalist_sheet_family.png",
+  "palette": "D:\\film-304-toon-spine\\Saved\\Audit\\brutalist_sheet_palette.png"
  },
  "palette": [
   "BR_Concrete",

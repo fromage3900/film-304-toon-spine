@@ -23,6 +23,7 @@ So:
 | add a parameter to the builder | add a parameter in the editor only |
 | make a **material instance** for a variation | duplicate the master and tweak the copy |
 | fix `Blender/surreal_arch/` upstream, then `Tools/resync_fork.py --write` | edit the vendored fork in place |
+| keep shared helpers in one module (`Python/spine_lib.py`, `Python/level_lib.py`) and import them | copy a helper into each entry script |
 | run `Tools/verify_all.ps1` before calling it done | trust the editor's green tick |
 
 A material instance is the supported way to vary a look. `MI_Toon_*` inherit from

@@ -1,7 +1,7 @@
 {
- "stamp": "2026-09-30",
- "blend": "P:\\film-304-toon-spine\\Saved\\Blend\\BRUTALIST_CITY_REVIEW_2026-09-30.blend",
- "export_dir": "P:\\film-304-toon-spine\\Saved\\Export\\brutalist",
+ "stamp": "2026-10-04",
+ "blend": "D:\\film-304-toon-spine\\Saved\\Blend\\BRUTALIST_CITY_REVIEW_2026-10-04.blend",
+ "export_dir": "D:\\film-304-toon-spine\\Saved\\Export\\brutalist",
  "scale_note": "Blender metres x100 -> Unreal centimetres",
  "collections": {
   "01_CITY_PBR": [
@@ -40,6 +40,11 @@
    "ROOF_PlantDeck",
    "ROOF_PyramidHip",
    "ROOF_Sawtooth"
+  ],
+  "07_OFFICE_PROPS": [
+   "PROPS_BareDesk",
+   "PROPS_OccupiedDesk",
+   "PROPS_PushedChair"
   ]
  },
  "objects": [
@@ -464,10 +469,59 @@
    ],
    "bytes": 22204,
    "ok": true
+  },
+  {
+   "object": "PROPS_BareDesk",
+   "collection": "07_OFFICE_PROPS",
+   "fbx": "Saved/Export/brutalist/07_OFFICE_PROPS/PROPS_BareDesk.fbx",
+   "evaluated_verts": 56,
+   "dimensions_m": [
+    1.4,
+    0.7,
+    1.089
+   ],
+   "materials_blender": [
+    "BR_Paving"
+   ],
+   "bytes": 15596,
+   "ok": true
+  },
+  {
+   "object": "PROPS_OccupiedDesk",
+   "collection": "07_OFFICE_PROPS",
+   "fbx": "Saved/Export/brutalist/07_OFFICE_PROPS/PROPS_OccupiedDesk.fbx",
+   "evaluated_verts": 294,
+   "dimensions_m": [
+    1.505,
+    0.705,
+    1.089
+   ],
+   "materials_blender": [
+    "BR_Paving"
+   ],
+   "bytes": 20844,
+   "ok": true
+  },
+  {
+   "object": "PROPS_PushedChair",
+   "collection": "07_OFFICE_PROPS",
+   "fbx": "Saved/Export/brutalist/07_OFFICE_PROPS/PROPS_PushedChair.fbx",
+   "evaluated_verts": 294,
+   "dimensions_m": [
+    1.505,
+    1.04,
+    1.089
+   ],
+   "materials_blender": [
+    "BR_Paving"
+   ],
+   "bytes": 20876,
+   "ok": true
   }
  ],
  "errors": [],
- "object_count": 25,
- "total_evaluated_verts": 28500,
+ "object_count": 28,
+ "total_evaluated_verts": 29144,
+ "stage_manifest_objects": 28,
  "ok": true
 }

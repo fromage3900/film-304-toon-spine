@@ -223,7 +223,38 @@ def link_sockets(tree, from_socket, to_socket):
     It is caught here because a cycle is a defect at LINK time, and this is the
     only place that sees both endpoints. `find_link_cycles` (below) is the
     belt-and-braces check for cycles longer than one node.
+
+    NODE RESOLUTION: if either argument is a node (not a socket), resolve it
+    to its first output socket. This catches the common mistake of passing
+    `_combine(...)` (which returns a node) where a socket is expected.
     """
+    # Resolve nodes to their first output socket.
+    # Check for `outputs` attribute — nodes have it, sockets don't.
+    # (Checking `not hasattr(is_linked)` fails because nodes ALSO have is_linked.)
+    if from_socket is not None and hasattr(from_socket, "outputs") and from_socket.outputs:
+        from_socket = from_socket.outputs[0]
+    if to_socket is not None and hasattr(to_socket, "inputs") and to_socket.inputs:
+        to_socket = to_socket.inputs[0]
+    # A raw number where a socket is expected means "use this as the socket's
+    # default value" — e.g. `link_sockets(tree, box_w.outputs[0] if box_w else 0.4, ...)`.
+    # Writing it as a default keeps the builder's intent; dropping the call left
+    # the target socket on its own default and silently changed geometry.
+    if isinstance(from_socket, (int, float)):
+        if to_socket is not None and not isinstance(to_socket, (int, float)) \
+                and hasattr(to_socket, "default_value"):
+            try:
+                to_socket.default_value = from_socket
+                return
+            except Exception:
+                pass
+        log.warning("link_sockets: from_socket is a raw number (%s), not a socket", from_socket)
+        return
+    if isinstance(to_socket, (int, float)):
+        log.warning("link_sockets: to_socket is a raw number (%s), not a socket", to_socket)
+        return
+    # Resolve interface sockets to real node sockets
+    from_socket = _resolve_iface_sock(tree, from_socket)
+    to_socket = _resolve_iface_sock(tree, to_socket)
     if from_socket is None or to_socket is None:
         msg = "link_sockets: one or both sockets are None (tree=%s, from=%s, to=%s)" % (
             getattr(tree, "name", "?"), from_socket, to_socket,
@@ -866,6 +897,92 @@ def tree_input_names(tree) -> list[str]:
     return [getattr(s, "name", "") for s in iter_tree_input_items(tree)]
 
 
+def _interface_sockets_driven_by_parents(tree) -> set:
+    """Identifiers of this tree's interface sockets that a Group node links.
+
+    A parent builder that nests this tree keeps a live link into the matching
+    socket on its Group node. Those links are the ONLY evidence that a socket is
+    still wanted.
+    """
+    driven = set()
+    for ng in bpy.data.node_groups:
+        if ng is tree:
+            continue
+        for node in ng.nodes:
+            if getattr(node, "type", "") != "GROUP":
+                continue
+            if getattr(node, "node_tree", None) is not tree:
+                continue
+            for sock in list(node.inputs) + list(node.outputs):
+                try:
+                    if sock.is_linked:
+                        driven.add(getattr(sock, "identifier", ""))
+                except Exception:
+                    pass
+    return driven
+
+
+def _tree_is_nested(tree) -> bool:
+    """True if any other node group holds a Group node referencing this tree."""
+    for ng in bpy.data.node_groups:
+        if ng is tree:
+            continue
+        for node in ng.nodes:
+            if getattr(node, "type", "") == "GROUP" and getattr(node, "node_tree", None) is tree:
+                return True
+    return False
+
+
+def _prune_interface(tree):
+    """Clear the interface before a rebuild, without breaking parent links.
+
+    `interface.remove()` on an item destroys the matching socket on every Group
+    node that references this tree, and Blender drops that node's link with it --
+    silently. The parent then evaluates to ZERO geometry with no error, no
+    exception and no `link_failures()` entry. Measured 2026-10-02: rebuilding
+    MEL_chime_tube after MEL_chime_carillon_tier / _field_scatter / _mark_tree
+    zeroed all three (240/384/576 verts -> 0; parent->group links 3/3/1 -> 0),
+    because registry build order is alphabetical and MEL_chime_tube always
+    rebuilt last.
+
+    Two modes:
+      * Nothing nests this tree -> nothing can break, so purge fully (the
+        historical behaviour, which also clears params a builder stopped
+        declaring).
+      * A parent nests it -> keep every socket that parent drives and collapse
+        duplicate input names; only genuinely dead unique sockets are dropped.
+    """
+    iface = getattr(tree, "interface", None)
+    if iface is None:
+        return
+    nested = _tree_is_nested(tree)
+    driven = _interface_sockets_driven_by_parents(tree) if nested else set()
+    seen_inputs = set()
+    for item in list(iface.items_tree):
+        if getattr(item, "item_type", "") != "SOCKET":
+            continue
+        if getattr(item, "in_out", "") != "INPUT":
+            continue  # outputs are never pruned: a parent links FROM them
+        name = getattr(item, "name", "")
+        if name == "Geometry":
+            continue  # re-created immediately by new_geometry_tree
+        if getattr(item, "identifier", "") in driven:
+            seen_inputs.add(name)
+            continue
+        if name in seen_inputs:
+            pass  # duplicate input name -> remove (desyncs by-name writes)
+        elif nested:
+            seen_inputs.add(name)
+            continue  # nested: keep, the builder re-authors it by name
+        else:
+            pass  # standalone: purge
+        try:
+            iface.remove(item)
+        except Exception as exc:
+            log.debug("_prune_interface: cannot remove '%s' from '%s' — %s",
+                      name, getattr(tree, "name", "?"), exc)
+
+
 def new_geometry_tree(name):
     """Create a new GeometryNodeTree with input/output already wired.
 
@@ -880,8 +997,7 @@ def new_geometry_tree(name):
         try:
             for node in list(old.nodes):
                 old.nodes.remove(node)
-            for item in list(old.interface.items_tree):
-                old.interface.remove(item)
+            _prune_interface(old)
             tree = old
             log.debug("new_geometry_tree: reused and purged existing tree '%s'", name)
         except Exception as exc:
@@ -921,14 +1037,30 @@ def make_group_input(tree, socket_type, name, default=None, min_val=None, max_va
     """
     iface = getattr(tree, "interface", None)
     if iface is not None:
-        try:
-            iface_sock = iface.new_socket(name=name, in_out="INPUT", socket_type=socket_type)
-        except Exception as exc:
-            log.debug(
-                "make_group_input: interface.new_socket failed for '%s' (%s) \u2014 %s; falling back to legacy",
-                name, socket_type, exc,
-            )
-            iface_sock = None
+        # Look the name up FIRST. `interface.new_socket` does NOT raise on a
+        # duplicate name in Blender 5.2 — it silently appends a SECOND socket
+        # with a fresh identifier (measured: adding "Count" twice left
+        # [('Count','Socket_1'), ('Count','Socket_2')]). Since new_geometry_tree
+        # now preserves interface sockets a parent builder still drives, an
+        # unconditional new_socket would double every param on rebuild and leave
+        # the parent linked to the older, un-updated socket. Reuse instead; the
+        # builder re-authors the default on every build either way.
+        iface_sock = None
+        for item in iface.items_tree:
+            if (getattr(item, "item_type", "") == "SOCKET"
+                    and getattr(item, "in_out", "") == "INPUT"
+                    and getattr(item, "name", "") == name):
+                iface_sock = item
+                break
+        if iface_sock is None:
+            try:
+                iface_sock = iface.new_socket(name=name, in_out="INPUT", socket_type=socket_type)
+            except Exception as exc:
+                log.debug(
+                    "make_group_input: interface.new_socket failed for '%s' (%s) — %s; falling back to legacy",
+                    name, socket_type, exc,
+                )
+                iface_sock = None
     else:
         iface_sock = None
     if iface_sock is not None:
@@ -992,6 +1124,16 @@ def make_group_input(tree, socket_type, name, default=None, min_val=None, max_va
 def make_group_output(tree, socket_type, name):
     iface = getattr(tree, "interface", None)
     if iface is not None:
+        # Lookup first: `interface.new_socket` never raises on a duplicate name
+        # in 5.2, it appends a second socket (and the legacy tree.outputs
+        # fallback below does not exist in 4.0+, so the duplicate is what the
+        # caller would get). Measured: a standalone tree came back from a
+        # rebuild with TWO 'Geometry' outputs.
+        for item in iface.items_tree:
+            if (getattr(item, "item_type", "") == "SOCKET"
+                    and getattr(item, "in_out", "") == "OUTPUT"
+                    and getattr(item, "name", "") == name):
+                return item
         try:
             return iface.new_socket(name=name, in_out="OUTPUT", socket_type=socket_type)
         except Exception as exc:
@@ -1012,12 +1154,81 @@ def make_group_output(tree, socket_type, name):
     return None
 
 
+def iface_default(tree, name, fallback=None):
+    """Read an INPUT param's authored default from the tree INTERFACE.
+
+    Never read `gin.outputs["Name"].default_value` for this: the socket on the
+    Group Input *node* always reports the type's zero (0.0 / 0 / False), because
+    the authored default lives on `tree.interface`, not on the node socket.
+    `make_group_input` returns that node socket, so the two are easy to confuse.
+
+    Cost of getting it wrong (2026-10-02, MEL_melusina_house_round_interior):
+    `H.default_value if hasattr(H, "default_value") else 3.1` always took the
+    first branch, the outer drum was built with Depth 0 (a flat disc), and the
+    DIFFERENCE boolean emitted 256 degenerate faces -- 40% of its 640-face
+    result -- while every other part of the 20-part join measured clean. The
+    `hasattr` guard made the fallback dead code, so the defect was invisible.
+
+    Returns the interface default, else `fallback`, else the node socket's own
+    default (which is the type zero).
+    """
+    iface = getattr(tree, "interface", None)
+    if iface is not None:
+        try:
+            for item in iface.items_tree:
+                if getattr(item, "in_out", None) == "INPUT" and item.name == name:
+                    return getattr(item, "default_value", fallback)
+        except Exception:
+            pass
+    if fallback is not None:
+        return fallback
+    try:
+        for node in tree.nodes:
+            if node.type == "GROUP_INPUT":
+                for s in node.outputs:
+                    if s.name == name:
+                        return s.default_value
+    except Exception:
+        pass
+    return fallback
+
+
+def _resolve_iface_sock(tree, sock):
+    """Resolve a NodeTreeInterfaceSocket to the real node socket.
+
+    Interface sockets (from tree.interface.new_socket) cannot be passed
+    to tree.links.new().  Find the matching socket on the Group Input
+    (or Group Output) node and return that instead.
+    """
+    if sock is None:
+        return None
+    # Already a real node socket — return as-is
+    if hasattr(sock, "node") and sock.node is not None:
+        return sock
+    # Interface socket — find the matching node socket by name
+    sock_name = getattr(sock, "name", None)
+    if sock_name is None:
+        return sock
+    for node in tree.nodes:
+        if node.type in ("GROUP_INPUT", "GROUP_OUTPUT"):
+            for s in node.outputs:
+                if s.name == sock_name:
+                    return s
+            for s in node.inputs:
+                if s.name == sock_name:
+                    return s
+    return sock
+
+
 def link_float_to_vector(tree, source_sock, target_node, target_input_name, component=0, defaults=None):
     """Link a float socket to one component of a vector input.
 
     Blender 5.1 removed vector socket .inputs sub-sockets, so we must
     use a CombineXYZ node as bridge. `component` is 0=X, 1=Y, 2=Z.
     `defaults` is a 3-tuple for the other two components (None = (0,0,0)).
+
+    5.2 MeshLine has no Start/End Location sockets — it uses Offset.
+    Fall back to Offset when the named input is absent on a MeshLine.
     """
     if source_sock is None or target_node is None:
         log.debug(
@@ -1025,7 +1236,21 @@ def link_float_to_vector(tree, source_sock, target_node, target_input_name, comp
             source_sock, getattr(target_node, "name", None),
         )
         return
+    source_sock = _resolve_iface_sock(tree, source_sock)
+    # A raw number here means "use this constant for the component" — the
+    # builders call `link_float_to_vector(tree, 0.06, node, "End Location", 0)`
+    # when a dial is absent. Apply it as the component default instead of
+    # dropping the whole call (which left the axis at 0 and collapsed spans).
+    literal = None
+    if isinstance(source_sock, (int, float)):
+        literal = float(source_sock)
+        source_sock = None
     vec_sock = target_node.inputs.get(target_input_name)
+    if vec_sock is None and target_input_name in ("Start Location", "End Location"):
+        alt = target_node.inputs.get("Offset")
+        if alt is not None:
+            target_input_name = "Offset"
+            vec_sock = alt
     if vec_sock is None:
         msg = "link_float_to_vector: '%s' input not found on node '%s'" % (
             target_input_name, getattr(target_node, "name", "?"),
@@ -1075,10 +1300,33 @@ def link_float_to_vector(tree, source_sock, target_node, target_input_name, comp
     for link in list(tree.links):
         if link.to_socket == component_socket:
             tree.links.remove(link)
+    if literal is not None:
+        try:
+            component_socket.default_value = literal
+        except Exception:
+            log.warning("link_float_to_vector: cannot set literal %s on component %s",
+                        literal, component)
+        return
     try:
         tree.links.new(source_sock, component_socket)
     except Exception as exc:
         log.warning("link_float_to_vector: cannot link component %s -- %s", component, exc)
+
+
+def link_float_to_vector_uniform(tree, source_sock, target_node, target_input_name):
+    """Link a float socket to ALL THREE components of a vector input.
+
+    Use for any socket whose float means one uniform magnitude -- Scale,
+    Radius, Size. `link_float_to_vector(..., component=i)` sets only axis i and
+    leaves the other two at 0, which collapses the mesh onto a line.
+
+    Measured cost of the single-axis form on a `Scale`:
+      MEL_mh_aaa_scallop_uv -- 69120/69120 faces degenerate, ext [0.109, 0, 0]
+      MEL_castle_assembler  -- 201/201 faces degenerate, ext [0, 15, 0]
+    """
+    for i in (0, 1, 2):
+        link_float_to_vector(tree, source_sock, target_node, target_input_name,
+                             component=i)
 
 
 def add_float_param(tree, name, default=0.0, min_val=0.0, max_val=1.0, description=""):

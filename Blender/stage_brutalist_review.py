@@ -15,10 +15,11 @@ For the exterior-first film lane. Produces THREE deliverables from one run:
      showcase stager's pattern) so two presets never fight over the same socket
      defaults - drag a slider and only that object moves.
 
-  2. Contact sheets in Saved/Audit/brutalist_sheet_*.png
-     Cities in PBR and in Komikaze, the office/interior family, and a material
-     palette board. Tiles are camera-parented text, so they carry their own
-     labels instead of relying on a legend nobody keeps next to the image.
+   2. Contact sheets in Saved/Audit/brutalist_sheet_*.png
+      Cities in PBR and in Komikaze, the office/interior family, the office
+      props read (occupied / bare / pushed chair), and a material palette
+      board. Tiles are camera-parented text, so they carry their own labels
+      instead of relying on a legend nobody keeps next to the image.
 
   3. Saved/Audit/brutalist_stage_manifest.json - per object: builder, preset,
      nodes, params, verts, bbox, material. The numbers behind the pictures.
@@ -55,9 +56,11 @@ from mathutils import Vector  # noqa: E402
 from surreal_arch.melodia_gn import core  # noqa: E402
 from surreal_arch.melodia_gn import (  # noqa: E402,F401
     brutalist_city, brutalist_office, brutalist_cubicles, brutalist_roofs,
+    office_props,
 )
 from surreal_arch.melodia_gn import brutalist_materials as bmat  # noqa: E402
 from surreal_arch.melodia_gn.presets import BUILDERS_PRESETS  # noqa: E402
+from blender_utils import set_param  # noqa: E402
 
 STAMP = os.environ.get("BRUTALIST_STAMP", "2026-09-25")
 ROOT = "BRUTALIST_CITY_REVIEW_%s" % STAMP
@@ -136,6 +139,17 @@ LAYOUT = [
      300, -740, "concrete", "PBR"),
     ("GN_BRUTALIST_Roof", "06_ROOFS", "ROOF_PlantDeck", "BR_ROOF_PLANT",
      450, -740, "concrete", "PBR"),
+
+    # ---- 07 office props (2026-10-04) ---------------------------------------
+    # The film-interior prop layer (GN_OFFICE_DeskCluster): one shotable tree,
+    # every sub-prop behind its own toggle. Same row conventions - one object
+    # per preset, its own private node-group copy, frame solved per object.
+    ("GN_OFFICE_DeskCluster", "07_OFFICE_PROPS", "PROPS_OccupiedDesk",
+     "BR_OFFICE_OCCUPIED", -240, -960, "paving", "PBR"),
+    ("GN_OFFICE_DeskCluster", "07_OFFICE_PROPS", "PROPS_BareDesk",
+     "BR_OFFICE_BARE", 0, -960, "paving", "PBR"),
+    ("GN_OFFICE_DeskCluster", "07_OFFICE_PROPS", "PROPS_PushedChair",
+     "BR_OFFICE_PUSHED", 240, -960, "paving", "PBR"),
 ]
 
 # Showcase-only socket overrides, applied AFTER the preset so the shipped
@@ -154,9 +168,10 @@ REVIEW_OVERRIDES = {
 }
 
 # Builder id -> {group-input Material socket name: brutalist surface key}.
-# City exposes all three (massing / ground / glazing); roof exposes one.
-# Office and cubicle builders expose NO Material sockets yet, so their rows
-# are empty and the object keeps its single LAYOUT surface on slot 0.
+# City exposes all three (massing / ground / glazing); roof exposes one; the
+# office desk cluster exposes one (`surface`). Office and cubicle BUILDERS
+# (block + farm) expose NO Material sockets, so their rows are empty and the
+# object keeps its single LAYOUT surface on slot 0.
 BUILDER_SURFACES = {
     "GN_BRUTALIST_CityBlock": {
         "Massing Material": "concrete",
@@ -170,21 +185,15 @@ BUILDER_SURFACES = {
     "GN_BRUTALIST_Roof": {
         "Roof Material": "concrete",
     },
+    "GN_OFFICE_DeskCluster": {
+        # The cluster's whole prop layer is one surface socket; `paving` is the
+        # neutral interior read the cubicle farm rows already use. The film's
+        # per-prop material split (TP_Office_*) happens UE-side, not here.
+        "surface": "paving",
+    },
     "GN_BRUTALIST_OfficeBlock": {},
     "GN_BRUTALIST_CubicleFarm": {},
 }
-
-
-def set_param(tree, name, value):
-    for item in tree.interface.items_tree:
-        if (getattr(item, "name", "") == name
-                and getattr(item, "in_out", "") == "INPUT"):
-            try:
-                item.default_value = value
-                return True
-            except Exception:
-                return False
-    return False
 
 
 def eval_stats(ob):
@@ -634,6 +643,9 @@ if not SKIP_RENDER:
     # review. 2 cols keeps each tile near its native 720px.
     sheets["facade"] = sheet_for("FAC_", "brutalist_sheet_facade.png", 2)
     sheets["roofs"] = sheet_for("ROOF_", "brutalist_sheet_roofs.png", 2)
+    # Three tiles side by side: the occupied / bare / pushed reads of the same
+    # cluster are the shot options, so one row reads as a storyboard.
+    sheets["office_props"] = sheet_for("PROPS_", "brutalist_sheet_office_props.png", 3)
     sheets["family"] = compose_sheet(
         [rendered[o[1]] for o in staged if o[1].startswith(("OFFICE_", "CUBICLE_"))],
         os.path.join(SHEET_DIR, "brutalist_sheet_family.png"), 4)

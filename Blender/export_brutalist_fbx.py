@@ -21,10 +21,15 @@
 #     -- --combined             additionally write one merged kit FBX
 #
 # Outputs:
-#     Saved/Export/brutalist/<Collection>/<Object>.fbx   one per object (25)
+#     Saved/Export/brutalist/<Collection>/<Object>.fbx   one per staged object
 #     Saved/Export/brutalist/BRUTALIST_KIT.fbx           only with --combined
 #     Saved/Audit/brutalist_fbx_manifest.json            per-object evaluated
 #                                                        vert count + bbox
+#
+# COMPLETENESS: what gets exported is whatever the staged .blend's root
+# collection carries (minus the palette swatch board), cross-checked both
+# directions against the stager's manifest when that manifest names this blend.
+# There is no hand-maintained collection list or object count in this script.
 #
 # SCALE + AXIS, measured not assumed
 # --------------------------------
@@ -76,14 +81,14 @@ BLEND = os.path.join(REPO, "Saved", "Blend", "BRUTALIST_CITY_REVIEW_%s.blend" % 
 OUT_DIR = os.path.join(REPO, "Saved", "Export", "brutalist")
 MANIFEST_PATH = os.path.join(AUDIT, "brutalist_fbx_manifest.json")
 
-COLLECTIONS = [
-    "01_CITY_PBR",
-    "02_CITY_KOMIKAZE",
-    "03_OFFICE_BLOCK",
-    "04_INTERIOR_CUBICLES",
-    "05_FACADE_VARIATION",
-    "06_ROOFS",
-]
+# What ships is what the stager's LAYOUT laid out - the collections that exist
+# in the staged .blend. Listing them here BY HAND was the second copy of that
+# list: adding a row to the stager (e.g. 07_OFFICE_PROPS on 2026-10-04) left the
+# new objects un-exported until this list was edited in the same change. The
+# .blend's root collection IS the list now; the only exclusion is the palette
+# swatch board, which is a review aid, not an asset.
+PALETTE_COLLECTION = "05_MATERIAL_PALETTE"
+STAGE_MANIFEST = os.path.join(AUDIT, "brutalist_stage_manifest.json")
 
 
 def log(m):
@@ -95,6 +100,34 @@ def open_staged_blend():
         raise SystemExit("staged .blend not found: %s" % BLEND)
     bpy.ops.wm.open_mainfile(filepath=BLEND)
     log("opened %s" % BLEND)
+
+
+def layout_collections(root):
+    """Export-target collections: the staged root's children minus the
+    palette swatch board, in staged order.
+    """
+    return [c.name for c in root.children if c.name != PALETTE_COLLECTION]
+
+
+def stage_manifest_objects():
+    """Object names the stager staged for THIS exact blend, or None.
+
+    The stager writes Saved/Audit/brutalist_stage_manifest.json last, and it is
+    overwritten on every run, so it is only a valid cross-check when its
+    `blend` field points at the blend this exporter just opened.
+    """
+    if not os.path.exists(STAGE_MANIFEST):
+        return None
+    try:
+        with open(STAGE_MANIFEST, "r", encoding="utf-8") as fh:
+            m = json.load(fh)
+    except Exception:
+        return None
+    if m.get("blend") != BLEND:
+        return None
+    names = [e["object"] for coll in m.get("collections", {}).values()
+             for e in coll]
+    return names or None
 
 
 def evaluated_vert_count(obj):
@@ -160,6 +193,19 @@ def export_combined(objs, filepath):
 def main():
     open_staged_blend()
 
+    root = bpy.data.collections.get("BRUTALIST_CITY_REVIEW_%s" % STAMP)
+    if root is None:
+        raise SystemExit("staged root collection not found: "
+                         "BRUTALIST_CITY_REVIEW_%s" % STAMP)
+    target_collections = layout_collections(root)
+    if not target_collections:
+        raise SystemExit("root collection carries no exportable collections")
+
+    staged = stage_manifest_objects()
+    if staged is not None:
+        log("cross-checking against the stager manifest (%d objects)"
+            % len(staged))
+
     manifest = {
         "stamp": STAMP,
         "blend": BLEND,
@@ -173,7 +219,7 @@ def main():
     all_objs = []
     total_verts = 0
 
-    for coll_name in COLLECTIONS:
+    for coll_name in target_collections:
         coll = bpy.data.collections.get(coll_name)
         if coll is None:
             manifest["errors"].append("collection missing: %s" % coll_name)
@@ -226,8 +272,30 @@ def main():
 
     manifest["object_count"] = len(manifest["objects"])
     manifest["total_evaluated_verts"] = total_verts
+
+    # Completeness: the old `== 25` asserted against a HAND-COUNTED number, so
+    # the 2026-10-04 office-props addition (28 objects) would have failed this
+    # gate even though the export was complete. The stager's manifest is the
+    # count's source of truth; cross-check both directions when it is for this
+    # blend, and fall back to "something shipped and nothing failed" otherwise.
+    completeness_ok = bool(manifest["objects"])
+    if staged is not None:
+        exported = {o["object"] for o in manifest["objects"]}
+        missing = [n for n in staged if n not in exported]
+        extra = sorted(exported - set(staged))
+        if missing:
+            manifest["errors"].append("staged but not exported: %s"
+                                      % ", ".join(missing))
+            log("MISSING from export: %s" % ", ".join(missing))
+        if extra:
+            manifest["errors"].append("exported but not staged: %s"
+                                      % ", ".join(extra))
+            log("EXTRA in export: %s" % ", ".join(extra))
+        completeness_ok = not missing and not extra
+        manifest["stage_manifest_objects"] = len(staged)
+
     manifest["ok"] = (not manifest["errors"]
-                      and len(manifest["objects"]) == 25
+                      and completeness_ok
                       and all(o["ok"] for o in manifest["objects"]))
 
     os.makedirs(AUDIT, exist_ok=True)

@@ -1,7 +1,7 @@
 {
-  "written": "2026-10-01",
+  "written": "2026-10-04",
   "upstream": "P:\\MelodiaMelusinaV2-Laptop\\deploy\\surreal_arch\\melodia_gn",
-  "upstream_commit": "35ea2666",
+  "upstream_commit": "b0b58bb8",
   "verbatim": [
     "brutalist_city.py",
     "brutalist_cubicles.py",
@@ -12,6 +12,7 @@
     "core.py",
     "higgsas_pipeline.py",
     "logging.py",
+    "office_props.py",
     "paris_common.py",
     "time.py"
   ],
@@ -26,9 +27,10 @@
     "brutalist_office.py": "25278f942d656f37564891970cd4456c23829f688f5512245f7ea7e39c7d2439",
     "brutalist_roofs.py": "5eee94707ce0dc8b1040d92d095c31fe955c946c77dc11d1215be10cbfa40a8f",
     "brutalist_uv.py": "c89dae5efd462d87ee6d2a2db3549924cc8d0955ff34f37e81a1305485b06a4a",
-    "core.py": "3e52bb347fa5fa47ca8ddb3a0a5808213e19db8db05e226db0bcb233d52dbbed",
+    "core.py": "b845bdc06665f714fe1c98ea165510644a3d00b7de51fbdf1314004b374da84a",
     "higgsas_pipeline.py": "ae03900bf4348e7fef6ef5cac85cdc64e98bbecb8fced2ae4fc696b30ee592b7",
     "logging.py": "84efd5224efe94cd6dcafcdbebc4ece86d814c87a0de77a582916ffd77425e87",
+    "office_props.py": "6eda17fdb4a2a49c55561eba112fac58e02e5d46c3f473ef808434270fdc93e7",
     "paris_common.py": "d9bb61c0e27d848b91d2573850afd3f77685b5461a7674dc677fb9554abc3868",
     "time.py": "92cc6fd94fea05c0447518494bdfe183ba7df1ee694106390224dd277fee88fd"
   }

@@ -95,7 +95,19 @@ if (-not $blender) {
 Write-Host ''
 Write-Host '-- 3. level/package health' -ForegroundColor Yellow
 
-$umaps = Get-ChildItem -Path (Join-Path $repoRoot 'Content') -Recurse -Filter '*.umap' -File
+# Scan the levels git knows about, not every .umap on disk. Third-party content
+# can be vendored INSIDE Content/ (e.g. Ultra Dynamic Sky under Content/UDS* is
+# deliberately gitignored - see .gitignore and Docs/CREDITS_AND_LICENSES.md); a
+# raw Get-ChildItem picks up its DemoMap and fails the gate on a level this
+# project never ships. Tracked + untracked-but-not-ignored is exactly the set
+# a clone could open, so that is the set to audit.
+$trackedMaps = & git ls-files --cached -- 'Content/*.umap' 'Content/**/*.umap'
+$looseMaps   = & git ls-files --others --exclude-standard -- 'Content/*.umap' 'Content/**/*.umap'
+$umaps = @()
+foreach ($rel in (@($trackedMaps) + @($looseMaps)) | Select-Object -Unique) {
+    if (-not $rel) { continue }
+    $umaps += Get-Item -LiteralPath (Join-Path $repoRoot $rel)
+}
 $extHits = @(); $nameHits = @(); $missingExpected = @()
 foreach ($u in $umaps) {
     $txt = [System.Text.Encoding]::ASCII.GetString([System.IO.File]::ReadAllBytes($u.FullName))
@@ -171,6 +183,39 @@ foreach ($doc in @('README.md', 'Docs\TOON_SPINE.md', 'Docs\FILM_PIPELINE.md')) 
 }
 Record 'documented paths exist' ($docIssues.Count -eq 0) `
     $(if ($docIssues.Count -eq 0) { 'ok' } else { ($docIssues -join '; ') })
+
+# ---------------------------------------------------------------------------
+# 4b. duplicate files stay byte-identical
+# ---------------------------------------------------------------------------
+# Docs/GROUP_STAGING_GUIDE.md is copied into Humber_FinalYear_Prep/ because that
+# folder is the standalone capstone handover bundle (it must read on its own).
+# Two copies is acceptable ONLY while they are identical - the moment one is
+# edited and the other is not, the group follows the wrong staging rules and
+# nothing errors. Hash them; a mismatch names both files.
+Write-Host ''
+Write-Host '-- 4b. duplicate file drift' -ForegroundColor Yellow
+# NOTE: a hashtable, not an array of arrays - PowerShell unrolls @( @('a','b') )
+# into two scalars, and `$pair[0]` on a string is its first CHARACTER. That is
+# how this check first shipped reporting "D / o: missing one side".
+$dupPairs = [ordered]@{
+    'Docs\GROUP_STAGING_GUIDE.md' = 'Humber_FinalYear_Prep\GROUP_STAGING_GUIDE.md'
+}
+$dupIssues = @()
+foreach ($key in $dupPairs.Keys) {
+    $a = Join-Path $repoRoot $key
+    $b = Join-Path $repoRoot $dupPairs[$key]
+    if (-not (Test-Path $a) -or -not (Test-Path $b)) {
+        $dupIssues += "$key / $($dupPairs[$key]): missing one side"
+        continue
+    }
+    $ha = (Get-FileHash -LiteralPath $a -Algorithm SHA256).Hash
+    $hb = (Get-FileHash -LiteralPath $b -Algorithm SHA256).Hash
+    if ($ha -ne $hb) {
+        $dupIssues += "$key != $($dupPairs[$key]) (drifted)"
+    }
+}
+Record 'duplicate files are byte-identical' ($dupIssues.Count -eq 0) `
+    $(if ($dupIssues.Count -eq 0) { "$($dupPairs.Count) pair(s) checked" } else { ($dupIssues -join '; ') })
 
 # ---------------------------------------------------------------------------
 # 5. the pre-commit hook still behaves

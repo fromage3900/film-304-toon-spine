@@ -32,9 +32,18 @@ measured y=-32000 uu. The mapping below is that result.
 
 Run (editor open, via Monolith):
     editor_query run_python {command: "Python/stage_brutalist_layout.py",
-                             mode: execute_file}
+                              mode: execute_file}
 
 Assert on the report FILE, not the log.
+
+SHARED LEVEL PLUMBING
+---------------------
+Level open/create/cleanup, mesh spawn and light spawn live in
+`Python/level_lib.py`, shared with `compose_shot_env_level.py`. This script's
+own copies had drifted: they still carried the positional `Rotator(-46, 0, 35)`
+sun bug (sun on the horizon) that the shot-level script fixed on 2026-10-02,
+and they lacked the dirty-map guard that prevents the blocking save-changes
+modal (observed 2026-10-01). Both now come from the shared implementation.
 """
 from __future__ import annotations
 
@@ -46,6 +55,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import unreal  # noqa: E402
+
+import level_lib  # noqa: E402
 
 REPO = Path(__file__).resolve().parents[1]
 STAGE_MANIFEST = REPO / "Saved" / "Audit" / "brutalist_stage_manifest.json"
@@ -96,33 +107,6 @@ def load_manifest():
     return json.loads(STAGE_MANIFEST.read_text(encoding="utf-8"))
 
 
-def ensure_dir(path):
-    if not unreal.EditorAssetLibrary.does_directory_exist(path):
-        unreal.EditorAssetLibrary.make_directory(path)
-
-
-def open_or_create_level():
-    """Idempotent: an existing layout level is reloaded and cleaned, not rebuilt.
-
-    Re-running must not stack a second set of buildings. Only actors THIS script
-    owns (by label) are removed -- destroying every actor in a level is fatal
-    headless on an engine template map (documented in build_test_level.py).
-    """
-    ensure_dir(MAP_DIR)
-    sub = unreal.LevelEditorSubsystem()
-    if unreal.EditorAssetLibrary.does_asset_exist(LEVEL_PKG):
-        if not sub.load_level(LEVEL_PKG):
-            raise RuntimeError("could not load %s" % LEVEL_PKG)
-        log("reloaded existing level %s" % LEVEL_PKG)
-        removed = remove_owned_actors()
-        log("removed %d previously staged actor(s)" % removed)
-        return "reloaded"
-    if not sub.new_level(LEVEL_PKG):
-        raise RuntimeError("could not create %s" % LEVEL_PKG)
-    log("created level %s" % LEVEL_PKG)
-    return "created"
-
-
 def owned_labels():
     """Every actor label this script can create, so cleanup is safe and scoped."""
     data = load_manifest()
@@ -131,65 +115,6 @@ def owned_labels():
         for o in objs:
             labels.add(o["object"])
     return labels
-
-
-def remove_owned_actors():
-    mine = owned_labels()
-    removed = 0
-    for a in unreal.EditorLevelLibrary.get_all_level_actors():
-        try:
-            if a.get_actor_label() in mine:
-                unreal.EditorLevelLibrary.destroy_actor(a)
-                removed += 1
-        except Exception:                                      # noqa: BLE001
-            continue
-    return removed
-
-
-def spawn_mesh(object_name, collection, location):
-    """One StaticMeshActor carrying SM_<object>, labelled <object>."""
-    asset = "%s/%s/SM_%s" % (MESH_ROOT, collection, object_name)
-    mesh = unreal.load_asset(asset)
-    if mesh is None:
-        raise RuntimeError("mesh not found: %s" % asset)
-
-    actor = unreal.EditorLevelLibrary.spawn_actor_from_class(
-        unreal.StaticMeshActor, location, unreal.Rotator(0.0, 0.0, 0.0))
-    actor.set_actor_label(object_name)
-
-    comp = actor.get_component_by_class(unreal.StaticMeshComponent)
-    if comp is None:
-        raise RuntimeError("%s: no StaticMeshComponent" % object_name)
-    # Static mobility refuses a mesh swap mid-session; move it, set, move back.
-    comp.set_mobility(unreal.ComponentMobility.MOVABLE)
-    comp.set_static_mesh(mesh)
-    comp.set_mobility(unreal.ComponentMobility.STATIC)
-    return actor, asset
-
-
-def spawn_lights():
-    """Sun + sky + atmosphere, so the level reads on open."""
-    d = unreal.EditorLevelLibrary.spawn_actor_from_class(
-        unreal.DirectionalLight, unreal.Vector(0.0, 0.0, 2000.0),
-        unreal.Rotator(-46.0, 0.0, 35.0))
-    d.set_actor_label("LGT_Sun")
-    try:
-        c = d.get_component_by_class(unreal.DirectionalLightComponent)
-        c.set_mobility(unreal.ComponentMobility.MOVABLE)
-        c.set_intensity(3.2)
-        c.set_mobility(unreal.ComponentMobility.STATIC)
-    except Exception:                                          # noqa: BLE001
-        pass
-
-    s = unreal.EditorLevelLibrary.spawn_actor_from_class(
-        unreal.SkyLight, unreal.Vector(0.0, 0.0, 500.0))
-    s.set_actor_label("LGT_Sky")
-
-    try:
-        unreal.EditorLevelLibrary.spawn_actor_from_class(
-            unreal.SkyAtmosphere, unreal.Vector(0.0, 0.0, 0.0)).set_actor_label("Sky")
-    except Exception as e:                                     # noqa: BLE001
-        log("WARN SkyAtmosphere not spawned: %s" % e)
 
 
 def actor_bounds(actor):
@@ -207,14 +132,21 @@ def build():
               "mapping": "unreal = (x*100, -y*100, z*100) from Blender metres",
               "level_action": None}
 
-    report["level_action"] = open_or_create_level()
-    spawn_lights()
+    # The sun is 46 degrees above the horizon: (pitch, yaw, roll) applied in
+    # keyword form by level_lib.sun_rotator - the positional Rotator(-46, 0, 35)
+    # this script used to build is roll=-46/pitch=0/yaw=35, i.e. the sun on the
+    # horizon (the bug compose_shot_env_level.py fixed on 2026-10-02).
+    report["level_action"] = level_lib.open_or_create_level(
+        LEVEL_PKG, clean_labels=owned_labels())
+    level_lib.spawn_lights(sun_rotation=(-46.0, 35.0, 0.0), sun_height=2000.0,
+                           sun_intensity=3.2, sky_height=500.0)
 
     for coll, objs in data["collections"].items():
         for o in sorted(objs, key=lambda r: r["object"]):
             try:
                 loc = to_unreal_location(o["position"])
-                actor, asset = spawn_mesh(o["object"], coll, loc)
+                actor, _mesh, asset = level_lib.spawn_mesh(
+                    o["object"], coll, loc, MESH_ROOT)
                 report["placed"].append({
                     "object": o["object"],
                     "collection": coll,

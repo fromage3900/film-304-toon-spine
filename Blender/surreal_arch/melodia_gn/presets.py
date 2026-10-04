@@ -4,11 +4,17 @@ Source: P:/MelodiaMelusinaV2-Laptop/deploy/surreal_arch/melodia_gn/presets.py
         (upstream lines 4368-4636, copied VERBATIM below).
 
 The upstream file carries presets for every GN builder in the Melodia project
-(~4.6k lines). This vendored copy carries only the four brutalist builders so the
+(~4.6k lines). This vendored copy carries only the five vendored builders so the
 304 film repo stays readable:
 
     GN_BRUTALIST_CityBlock, GN_BRUTALIST_OfficeBlock,
-    GN_BRUTALIST_CubicleFarm, GN_BRUTALIST_Roof
+    GN_BRUTALIST_CubicleFarm, GN_BRUTALIST_Roof,
+    GN_OFFICE_DeskCluster
+
+The BR_* blocks above are the upstream text verbatim. The GN_OFFICE_DeskCluster
+block below is film-repo authored (upstream carries none for this builder yet):
+its preset keys are the builder's own group-input names, and the material socket
+(`surface`) is deliberately NOT a preset key - the stager wires it.
 
 Same data shape as upstream (see its module docstring). To refresh, re-extract
 those lines from the source file — do not hand-edit here.
@@ -288,3 +294,46 @@ BUILDERS_PRESETS["GN_BRUTALIST_CityBlock"]["preset_descriptions"].update({
     "BR_CITY_PUNCHED": "Punched openings on a bay grid, post-war housing read.",
     "BR_CITY_COLONNADE": "Deep vertical fins on a civic superblock.",
 })
+
+# OFFICE props family (2026-10-04): the film-interior prop layer that
+# BRUTALIST_CONVERGENCE_AUDIT §5f named - standalone desks/clusters the
+# cubicle farm cannot supply (it builds its desks inline per cell). Same
+# philosophy as the rest of the family: the system IS the parameter set, and
+# each preset is a frame a team can look at. `surface` (Material) is the
+# builder's only material socket and is wired by the stager, never a preset.
+BUILDERS_PRESETS["GN_OFFICE_DeskCluster"] = {
+    "label": "OFFICE Desk Cluster",
+    "preset_labels": {
+        "BR_OFFICE_OCCUPIED": "Occupied Workstation",
+        "BR_OFFICE_BARE": "Bare Workstation",
+        "BR_OFFICE_PUSHED": "Just Walked Away",
+    },
+    "preset_descriptions": {
+        "BR_OFFICE_OCCUPIED": "Full default cluster: worktop, pedestal, "
+                              "monitor, keyboard, mouse, pad, chair at rest.",
+        "BR_OFFICE_BARE": "Furniture only: no pedestal, no keyboard, no "
+                          "mouse, no pad, no chair - the desk as a prop.",
+        "BR_OFFICE_PUSHED": "Full cluster with the chair pushed back 0.35 - "
+                            "someone just stood up.",
+    },
+    "presets": {
+        "BR_OFFICE_OCCUPIED": {
+            "Desk Width": 1.4, "Desk Depth": 0.7, "Desk Height": 0.74,
+            "Pedestal": True, "Monitor": True, "Monitor Size": 0.531,
+            "Keyboard": True, "Mouse": True, "Mouse Pad": True,
+            "Chair": True, "Chair Push": 0.0,
+        },
+        "BR_OFFICE_BARE": {
+            "Desk Width": 1.4, "Desk Depth": 0.7, "Desk Height": 0.74,
+            "Pedestal": False, "Monitor": True, "Monitor Size": 0.531,
+            "Keyboard": False, "Mouse": False, "Mouse Pad": False,
+            "Chair": False, "Chair Push": 0.0,
+        },
+        "BR_OFFICE_PUSHED": {
+            "Desk Width": 1.4, "Desk Depth": 0.7, "Desk Height": 0.74,
+            "Pedestal": True, "Monitor": True, "Monitor Size": 0.531,
+            "Keyboard": True, "Mouse": True, "Mouse Pad": True,
+            "Chair": True, "Chair Push": 0.35,
+        },
+    },
+}

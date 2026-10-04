@@ -38,9 +38,15 @@ correction records 0.0.
 
 Run (editor open, via Monolith):
     editor_query run_python {command: "Python/compose_shot_env_level.py",
-                             mode: execute_file}
+                              mode: execute_file}
 
 Assert on the report FILE, not the log.
+
+SHARED LEVEL PLUMBING
+---------------------
+Level open/create/cleanup, mesh spawn and light spawn live in
+`Python/level_lib.py`, shared with `stage_brutalist_layout.py` - one
+implementation of the dirty-map guard and the bug-proof `sun_rotator`.
 """
 from __future__ import annotations
 
@@ -52,6 +58,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import unreal  # noqa: E402
+
+import level_lib  # noqa: E402
 
 REPO = Path(__file__).resolve().parents[1]
 SPEC = REPO / "specs" / "humber_toon_spine" / "prototype_renders.v1.json"
@@ -75,12 +83,6 @@ def load_spec():
     return json.loads(SPEC.read_text(encoding="utf-8-sig"))
 
 
-def ensure_dir(path):
-    """Create a content folder if absent (never fails on an existing one)."""
-    if not unreal.EditorAssetLibrary.does_directory_exist(path):
-        unreal.EditorAssetLibrary.make_directory(path)
-
-
 def owned_labels(spec):
     """Every actor label this script can create, so cleanup is safe and scoped.
 
@@ -94,69 +96,6 @@ def owned_labels(spec):
     for shot in spec["shots"]:
         labels.add(shot["camera_label"])
     return labels
-
-
-def remove_owned_actors(labels):
-    removed = 0
-    for a in unreal.EditorLevelLibrary.get_all_level_actors():
-        try:
-            if a.get_actor_label() in labels:
-                unreal.EditorLevelLibrary.destroy_actor(a)
-                removed += 1
-        except Exception:                                          # noqa: BLE001
-            continue
-    return removed
-
-
-def open_or_create_level(pkg):
-    """Idempotent: an existing set is reloaded and cleaned, never stacked."""
-    ensure_dir(pkg.rsplit("/", 1)[0])
-
-    # Switching levels while a map is dirty makes the editor raise a "save
-    # changes?" MODAL, which blocks the game thread and leaves MCP unresponsive
-    # (AGENTS.md rule 8 -- observed 2026-10-01 as MODAL_OPEN title='' text='').
-    # Fail closed and let a human resolve it rather than wedge the editor.
-    # get_dirty_MAP_packages only: the _content_ variant enumerates every loaded
-    # package and took >30 s, which is what abandoned the HTTP client that time.
-    dirty = [p.get_name() for p in
-             unreal.EditorLoadingAndSavingUtils.get_dirty_map_packages()]
-    if dirty:
-        raise RuntimeError(
-            "dirty map package(s) %s -- save or discard them in the editor "
-            "before composing; switching levels would open a blocking modal"
-            % dirty)
-
-    sub = unreal.LevelEditorSubsystem()
-    if unreal.EditorAssetLibrary.does_asset_exist(pkg):
-        if not sub.load_level(pkg):
-            raise RuntimeError("could not load %s" % pkg)
-        log("reloaded existing level %s" % pkg)
-        return "reloaded"
-    if not sub.new_level(pkg):
-        raise RuntimeError("could not create %s" % pkg)
-    log("created level %s" % pkg)
-    return "created"
-
-
-def spawn_mesh(object_name, collection, location):
-    """One StaticMeshActor carrying SM_<object>, labelled <object>."""
-    asset = "%s/%s/SM_%s" % (MESH_ROOT, collection, object_name)
-    mesh = unreal.load_asset(asset)
-    if mesh is None:
-        raise RuntimeError("mesh not found: %s" % asset)
-
-    actor = unreal.EditorLevelLibrary.spawn_actor_from_class(
-        unreal.StaticMeshActor, location, unreal.Rotator(0.0, 0.0, 0.0))
-    actor.set_actor_label(object_name)
-
-    comp = actor.get_component_by_class(unreal.StaticMeshComponent)
-    if comp is None:
-        raise RuntimeError("%s: no StaticMeshComponent" % object_name)
-    # Static mobility refuses a mesh swap mid-session; move it, set, move back.
-    comp.set_mobility(unreal.ComponentMobility.MOVABLE)
-    comp.set_static_mesh(mesh)
-    comp.set_mobility(unreal.ComponentMobility.STATIC)
-    return actor, mesh, asset
 
 
 def world_bounds(actor, mesh):
@@ -200,53 +139,10 @@ def spawn_ground(cfg):
     return actor, mesh
 
 
-def sun_rotator(cfg):
-    """Build the sun rotation from spec WITHOUT positional ambiguity.
-
-    BUG (2026-10-02): this used to be
-        unreal.Rotator(cfg["sun_rotation"][0], cfg["sun_rotation"][1],
-                       cfg["sun_rotation"][2])
-    but unreal.Rotator's positional constructor is (roll, pitch, yaw), while
-    the spec's `sun_rotation` is (pitch, yaw, roll). The spec value
-    [-46.0, 0.0, 35.0] - a sun 46 degrees ABOVE the horizon - was therefore
-    applied as roll=-46, pitch=0, yaw=35, i.e. the sun sat exactly ON the
-    horizon. Measured on the live light: {pitch: 0.000000, yaw: 35, roll: -46}.
-
-    Consequence: every up-facing surface (the 200 m ground plane and every roof)
-    received grazing light of effectively zero, so the 2026-10-02 prototype
-    stills rendered as near-black silhouettes with no readable terminator. The
-    spec's own ground note says the plane exists to make toon banding readable,
-    so this silently defeated the thing it was added for.
-
-    Keyword args make the ordering explicit and survive future edits.
-    """
-    pitch, yaw, roll = (cfg["sun_rotation"] + [0.0, 0.0, 0.0])[:3]
-    return unreal.Rotator(roll=float(roll), pitch=float(pitch), yaw=float(yaw))
-
-
-def spawn_lights(cfg):
-    """Sun + sky + atmosphere, so the set reads on open."""
-    d = unreal.EditorLevelLibrary.spawn_actor_from_class(
-        unreal.DirectionalLight, unreal.Vector(0.0, 0.0, 4000.0),
-        sun_rotator(cfg))
-    d.set_actor_label("LGT_Sun")
-    try:
-        c = d.get_component_by_class(unreal.DirectionalLightComponent)
-        c.set_mobility(unreal.ComponentMobility.MOVABLE)
-        c.set_intensity(float(cfg["sun_intensity"]))
-        c.set_mobility(unreal.ComponentMobility.STATIC)
-    except Exception:                                              # noqa: BLE001
-        pass
-
-    if cfg.get("sky"):
-        unreal.EditorLevelLibrary.spawn_actor_from_class(
-            unreal.SkyLight, unreal.Vector(0.0, 0.0, 1000.0)).set_actor_label("LGT_Sky")
-    if cfg.get("atmosphere"):
-        try:
-            unreal.EditorLevelLibrary.spawn_actor_from_class(
-                unreal.SkyAtmosphere, unreal.Vector(0.0, 0.0, 0.0)).set_actor_label("Sky")
-        except Exception as e:                                     # noqa: BLE001
-            log("WARN SkyAtmosphere not spawned: %s" % e)
+# Sun/sky/atmosphere spawn and the bug-proof sun_rotator live in level_lib.py:
+# `unreal.Rotator`'s positional constructor is (roll, pitch, yaw) while the spec
+# writes (pitch, yaw, roll) - a positional call put the sun ON the horizon on
+# 2026-10-02. level_lib.spawn_lights applies it in keyword form.
 
 
 def spawn_camera(shot, filmback):
@@ -291,8 +187,9 @@ def build():
     report = {"errors": [], "level": spec["level"]["package"],
               "placed": [], "cameras": [], "grounding": [], "boxes": []}
 
-    report["level_action"] = open_or_create_level(spec["level"]["package"])
-    removed = remove_owned_actors(owned_labels(spec))
+    report["level_action"] = level_lib.open_or_create_level(
+        spec["level"]["package"])
+    removed = level_lib.remove_owned_actors(owned_labels(spec))
     log("removed %d previously owned actor(s)" % removed)
 
     g = spec["level"].get("ground", {})
@@ -304,14 +201,18 @@ def build():
             report["errors"].append("ground: %s" % e)
             log("FAILED ground: %s" % e)
 
-    spawn_lights(spec["level"]["lights"])
+    L = spec["level"]["lights"]
+    level_lib.spawn_lights(sun_rotation=L["sun_rotation"],
+                           sun_intensity=float(L.get("sun_intensity", 3.2)),
+                           sky=bool(L.get("sky", True)),
+                           atmosphere=bool(L.get("atmosphere", True)))
 
     for piece in spec["scene"]:
         loc = [float(v) for v in piece["position_uu"]]
         try:
-            actor, mesh, asset = spawn_mesh(
+            actor, mesh, asset = level_lib.spawn_mesh(
                 piece["object"], piece["collection"],
-                unreal.Vector(loc[0], loc[1], loc[2]))
+                unreal.Vector(loc[0], loc[1], loc[2]), MESH_ROOT)
         except Exception as e:                                     # noqa: BLE001
             report["errors"].append("%s: %s" % (piece["object"], e))
             log("FAILED %s: %s" % (piece["object"], e))

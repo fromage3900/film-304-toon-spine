@@ -18,6 +18,7 @@ from . import (  # noqa: F401 - each module calls core.register_builder on impor
     brutalist_office,
     brutalist_roofs,
     brutalist_uv,
+    office_props,
 )
 
 _rebuild_derived_data()

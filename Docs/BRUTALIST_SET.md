@@ -6,7 +6,7 @@ nobody can edit.
 
 ## What's here
 
-Four builders, 21 art-direction presets:
+Five builders, 24 art-direction presets:
 
 | Builder id | Presets |
 |---|---|
@@ -14,11 +14,20 @@ Four builders, 21 art-direction presets:
 | `GN_BRUTALIST_OfficeBlock` | `BR_OFFICE_CIVIC`, `BR_OFFICE_BARBICAN`, `BR_OFFICE_BUNKER`, `BR_OFFICE_SLENDER` |
 | `GN_BRUTALIST_CubicleFarm` | `BR_CUBICLE_CANON`, `BR_CUBICLE_MAZE`, `BR_CUBICLE_OPEN`, `BR_CUBICLE_SWARM` |
 | `GN_BRUTALIST_Roof` | `BR_ROOF_FLAT`, `BR_ROOF_PITCH`, `BR_ROOF_SAWTOOTH`, `BR_ROOF_BARREL`, `BR_ROOF_HIP`, `BR_ROOF_PLANT` |
+| `GN_OFFICE_DeskCluster` | `BR_OFFICE_OCCUPIED`, `BR_OFFICE_BARE`, `BR_OFFICE_PUSHED` |
 
-That is 7 + 4 + 4 + 6 = **21 presets**, the full `BR_*` set. `Blender/surreal_arch/melodia_gn/presets.py`
+That is 7 + 4 + 4 + 6 + 3 = **24 presets**. `Blender/surreal_arch/melodia_gn/presets.py`
 is the authority — a run prints a warning if a preset a layout entry names is missing.
+The `GN_OFFICE_DeskCluster` block is film-repo authored (upstream carries none yet);
+the `BR_*` blocks are upstream verbatim.
 
-The stager lays the set out as six labelled collections:
+The office desk cluster is the film-interior prop layer named by
+`BRUTALIST_CONVERGENCE_AUDIT §5f`: one shotable tree (worktop, pedestal, monitor,
+keyboard, mouse, pad, 5-star task chair), every sub-prop behind its own
+`DeleteGeometry`-guarded toggle, real-world mm sizing, and one `surface` Material
+socket so the per-prop split can be assigned UE-side (`TP_Office_*`).
+
+The stager lays the set out as seven labelled collections:
 
 | Collection | Objects |
 |---|---|
@@ -28,12 +37,16 @@ The stager lays the set out as six labelled collections:
 | `04_INTERIOR_CUBICLES` | `CUBICLE_Canonical`, `CUBICLE_MazeShift`, `CUBICLE_OpenPlan`, `CUBICLE_Swarm` |
 | `05_FACADE_VARIATION` | `FAC_TowerRibbon`, `FAC_PunchedEstate`, `FAC_CivicColonnade` |
 | `06_ROOFS` | `ROOF_FlatParapet`, `ROOF_LowPitch`, `ROOF_Sawtooth`, `ROOF_BarrelVault`, `ROOF_PyramidHip`, `ROOF_PlantDeck` |
+| `07_OFFICE_PROPS` | `PROPS_OccupiedDesk`, `PROPS_BareDesk`, `PROPS_PushedChair` |
 
 ## Layout and provenance
 
 ```
 Blender/
   stage_brutalist_review.py          # the entry point (vendored, see header comments)
+  export_brutalist_fbx.py            # staged .blend -> one FBX per object (ships whatever the stager laid out)
+  blender_utils.py                   # shared headless probes (set_param) for the two Blender entry points
+  verify_brutalist_fork.py           # the fork gate: builders, presets, dials, office contract, cycle guard
   surreal_arch/
     __init__.py                      # regular package, so it wins sys.path resolution
     capabilities.py                  # library detection (Higgsas path, addon probes)
@@ -48,9 +61,10 @@ Blender/
       brutalist_city.py              # GN_BRUTALIST_CityBlock
       brutalist_office.py            # GN_BRUTALIST_OfficeBlock
       brutalist_cubicles.py          # GN_BRUTALIST_CubicleFarm
-      brutalist_roofs.py             # GN_BRUTALIST_Roof
-      brutalist_uv.py                # shared UV trimming used by all four
-      brutalist_materials.py         # BR_* material library (Concrete, Asphalt, Glazing, …)
+       brutalist_roofs.py             # GN_BRUTALIST_Roof
+       brutalist_uv.py                # shared UV trimming used by all four
+       brutalist_materials.py         # BR_* material library (Concrete, Asphalt, Glazing, …)
+       office_props.py                # GN_OFFICE_DeskCluster (film-interior prop layer, 2026-10-04)
 ```
 
 Source, for provenance: `P:/MelodiaMelusinaV2-Laptop/deploy/surreal_arch/` and
@@ -114,6 +128,44 @@ manifest-> Saved/Audit/brutalist_stage_manifest.json            (14 KB)
 - Import check inside Blender resolved the **vendored** package, not a Blender addons copy:
   `surreal_arch.__file__ == P:\film-304-toon-spine\Blender\surreal_arch\__init__.py`.
 
+## Verified run — 2026-10-04 (office props + fork resync)
+
+The fork gate found `core.py` **stale against upstream** (manifest recorded at upstream
+commit `35ea2666`; upstream had moved to `b0b58bb8` with three defect fixes: interface-socket
+dedup on rebuild, nested-tree `_prune_interface` protection, node-aware `link_sockets`).
+`python Tools/resync_fork.py --write` re-extracted it and vendored `office_props.py`
+(new VERBATIM entry), so the fork now matches upstream `b0b58bb8` byte-for-byte on all 12
+verbatim files.
+
+Blender 5.2, `--background --factory-startup`:
+
+| Check | Result |
+|---|---|
+| `Blender/verify_brutalist_fork.py` | **PASS, 0 failures** — 5 builders register + build acyclic (office cluster 192 nodes), 24 presets resolve, city/roof dials still live, cycle guard negative-tests pass |
+| Office contract | `surface` is a `NodeSocketMaterial` input; default build **294 verts**; all six toggles off → **24 verts** (desk remains, props GONE); `Chair` off → 182; `Chair Push` 0 → 0.35 moves the chair bounds `y [−0.355, 0.350] → [−0.350, 0.690]` |
+| `stage_brutalist_review.py` (stamp `2026-10-04`, with renders) | **DONE objects=28 sheets=7** — new `07_OFFICE_PROPS` collection (`PROPS_OccupiedDesk` 294v / `PROPS_BareDesk` 56v / `PROPS_PushedChair` 294v), new `brutalist_sheet_office_props.png` (3 tiles), node-group isolation OK (28 distinct groups) |
+| `export_brutalist_fbx.py --stamp 2026-10-04` | **objects=28 total_verts=29144 errors=0 ok=True**, cross-checked both directions against the stager manifest (28/28) |
+
+Convergences made in the same pass:
+
+- `Blender/export_brutalist_fbx.py` no longer re-lists the stager's collections by hand — it
+  exports whatever the staged `.blend`'s root collection carries (minus the palette board) and
+  cross-checks completeness against the stager manifest. The old `== 25` object-count assert was
+  a hand-counted number that this very change would have broken.
+- the identical `set_param` probe now lives once in `Blender/blender_utils.py`, imported by both
+  `stage_brutalist_review.py` and `verify_brutalist_fork.py`.
+- `Tools/verify_all.ps1` gained a duplicate-file drift gate: `Docs/GROUP_STAGING_GUIDE.md` and
+  its `Humber_FinalYear_Prep/` copy (byte-identical handover copy) are hashed on every run. Its
+  level scan now audits the `.umap` files git knows about (tracked + untracked-not-ignored)
+  instead of every `.umap` on disk, so deliberately gitignored vendored content (the `Content/UDS*`
+  Ultra Dynamic Sky drop) can no longer fail the gate on a level this project never ships.
+- `Python/level_lib.py` now carries the one implementation of level open/create/cleanup, mesh
+  spawn and light spawn, shared by `compose_shot_env_level.py` and `stage_brutalist_layout.py`.
+  The layout script's copies had drifted: they still carried the positional-`Rotator`
+  sun-on-the-horizon bug the shot script fixed on 2026-10-02, and they lacked the dirty-map
+  guard (blocking save-changes modal, observed 2026-10-01). Both now come from the shared
+  implementation.
+
 ## Optional: the Higgsas node library
 
 `higgsas_pipeline.available()` was **False** in this repo, and the run still completed — the
@@ -128,16 +180,20 @@ To enable it, any one of:
    (`P:/MelodiaMelusinaV2-Laptop`) before launching Blender;
 3. install the `surreal_arch` addon and set its **Higgsas library path** preference override.
 
-## Next step (desktop): getting the set into this UE project
+## Getting the set into this UE project
 
-Not done here — there is no Unreal Engine installed on the machine that ran this, and the
-builders are Blender-side only. On the desktop:
+The Blender side is headless on any machine; the UE side is editor work:
 
-1. run the stager with renders to get the contact sheets, then export the `01_CITY_PBR` /
-   `03_OFFICE_BLOCK` / `04_INTERIOR_CUBICLES` collections as FBX from the review `.blend`;
-2. import into `Content/` and assign `MI_Toon_*` instances from the toon spine
-   (the master expects material instances, see `Docs/TOON_SPINE.md`);
-3. keep the exported FBX small — this repo has no LFS yet, so a large binary will hurt the
+1. run the stager with renders to get the contact sheets, then
+   `Blender/export_brutalist_fbx.py` (ships whatever the stager laid out — 28 objects
+   as of 2026-10-04, cross-checked against the stager manifest);
+2. `Python/import_brutalist.py` imports the FBX set into `Content/Environment/Brutalist/`
+   and `Python/stage_brutalist_layout.py` reproduces the reviewed grid as
+   `L_Brutalist_Layout` — both read the manifests, no retyped lists;
+3. assign `MI_Toon_*` instances from the toon spine per material family
+   (the master expects material instances, see `Docs/TOON_SPINE.md`); the office desk
+   cluster takes the `TP_Office_*` set (`MI_Toon_Office_*`);
+4. keep the exported FBX small — this repo has no LFS yet, so a large binary will hurt the
    clone for everyone (see `Docs/AUDIT_2026-09-30.md`, finding F7).
 
 ## Not vendored (deliberately)

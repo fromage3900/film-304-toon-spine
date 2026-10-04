@@ -18,11 +18,12 @@ So drift is checked, not remembered.
 FILE POLICY - two lists, and the difference is load-bearing:
 
 VERBATIM  copied byte-for-byte from upstream. Any difference is drift.
-THINNED   deliberately trimmed for this repo (`presets.py` carries only the 21
-          BR_* preset blocks out of a 222 KB catalogue; `__init__.py` registers
-          only the vendored builders). These are NEVER overwritten - a blind
-          copy would drag ~200 KB of unrelated builders and their imports into
-          the film repo. Drift here is reported for a human decision only.
+THINNED   deliberately trimmed for this repo (`presets.py` carries only the BR_*
+          preset blocks - 24 as of 2026-10-04 - out of a 222 KB catalogue;
+          `__init__.py` registers only the vendored builders). These are NEVER
+          overwritten - a blind copy would drag ~200 KB of unrelated builders
+          and their imports into the film repo. Drift here is reported for a
+          human decision only.
 
 Anything not on either list is reported as UNTRACKED so a new dependency cannot
 ride in unnoticed.
@@ -54,6 +55,7 @@ VERBATIM = (
     "core.py",
     "higgsas_pipeline.py",
     "logging.py",
+    "office_props.py",
     "paris_common.py",
     "time.py",
 )
