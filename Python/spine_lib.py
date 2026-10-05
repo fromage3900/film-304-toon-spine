@@ -553,6 +553,64 @@ def verify_material(name, expected_calls, min_expressions=10):
     return result
 
 
+def bind_toon_profile(mat, profile_name):
+    """Bind profile_name to mat's SubstrateToonBSDF node(s) and PROVE it stuck.
+
+    The sequence measured on the character master (2026-10-03,
+    toon_profile_recompile_probe.json): set_editor_property alone does not
+    always flag the package dirty, so a save can write the pre-change bytes -
+    the value reads back in memory and never appears in the file. Call AFTER
+    recompile; if the first read-back is None, re-fetch the post-save object,
+    modify() it, re-bind, save, re-read.
+
+    Returns the bound profile name, or None. Callers log their own WARN on
+    None via the log line here; verify() in each master module asserts the
+    name against MASTER_PROFILE so an unbound profile fails the run.
+    """
+    profile = unreal.load_asset(asset_path(PROFILE_DIR, profile_name))
+    if profile is None:
+        log(f"WARN profile {profile_name} not found - {mat.get_name()} would "
+            f"render on engine-default Toon shading")
+        return None
+
+    def _toon_nodes(owner):
+        return [n for n in
+                unreal.MaterialEditingLibrary.get_material_expressions(owner) or []
+                if n is not None
+                and type(n).__name__ == "MaterialExpressionSubstrateToonBSDF"]
+
+    def _bound(owner):
+        for n in _toon_nodes(owner):
+            try:
+                p = n.get_editor_property("toon_profile")
+                if p is not None:
+                    return p.get_name()
+            except Exception:
+                continue
+        return None
+
+    for n in _toon_nodes(mat):
+        try_set(n, "toon_profile", profile)
+    bound = _bound(mat)
+
+    if bound is None:
+        save(mat)
+        fresh = unreal.load_asset(asset_path(MASTER_DIR, mat.get_name()))
+        if fresh is not None:
+            for n in _toon_nodes(fresh):
+                try:
+                    n.modify()
+                except Exception:
+                    pass
+                try_set(n, "toon_profile", profile)
+            save(fresh)
+            bound = _bound(fresh)
+
+    log(f"{mat.get_name()} Toon Profile -> {bound or 'UNBOUND'} "
+        f"(wanted {profile_name})")
+    return bound
+
+
 def save_all():
     try:
         unreal.EditorLoadingAndSavingUtils.save_dirty_packages(True, True)

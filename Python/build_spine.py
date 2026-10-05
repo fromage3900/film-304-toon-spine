@@ -37,11 +37,16 @@ def main():
     for _mod in ("spine_lib", "build_textures", "build_mf_colorramp3",
                  "build_mf_ramplut", "build_mf_patterns", "build_master_toon",
                  "build_master_toon_foliage", "build_master_toon_water",
-                 "build_master_toon_character",
+                 "build_master_toon_character", "build_m_toon_unlit",
                  "build_m_outline", "build_toon_profiles", "build_instances",
                  "build_pattern_overrides", "build_office_set_materials",
                  "build_gouache_lookdev", "build_foliage_lookdev",
-                 "build_water_lookdev", "build_mf_rimoffset"):
+                 "build_water_lookdev", "build_mf_rimoffset",
+                 # toon spine expansion 2026-10-05 (TOON_MASTERS_PLAN section 4)
+                 "build_m_toon_sky", "build_master_toon_landscape",
+                 "build_master_toon_face", "build_master_toon_hair",
+                 "build_master_toon_glass", "build_m_toon_emissivefx",
+                 "build_m_toon_particles", "build_m_toon_postcomposite"):
         sys.modules.pop(_mod, None)
     for _mod in ("spine_lib",):
         try:
@@ -132,6 +137,58 @@ def main():
         # repo no longer builds. See Docs/FILM_PIPELINE.md - the screen-space
         # line-weight fix is currently NOT in the spine and needs re-applying.
         ("build_m_outline", "M_Outline_InvertedHull", [], 10),
+        # Unlit character master (registered 2026-10-04, TOON_MASTERS_PLAN tier B).
+        # Flat SubstrateUnlitBSDF + MF_RimOffset on EMISSIVE, no Toon Profile by
+        # design - the module's own verify() asserts the profile is NOT set and
+        # that the rim lands on emissive, so those two failures fail the run.
+        # min_expressions 8: 2 vectors + 5 scalars + rim call + unlit BSDF = 9.
+        ("build_m_toon_unlit", "M_Toon_Unlit_Character",
+         ["MF_RimOffset"], 8),
+        # ---------------- toon spine expansion (2026-10-05) ----------------
+        # TOON_MASTERS_PLAN_2026-10-04.md section 4: the 8 missing masters,
+        # staged for the 2026-10-05 freeze. Each module's own verify() carries
+        # what lib.verify_material cannot express for it (profile read-back
+        # for the four TP masters, domain/BSDF/scene-input assertions for the
+        # unlit and post families) and fails the run through the `extra`
+        # hook above. expected_calls follow the same rule as the shipped
+        # masters: only functions this master actually calls.
+        #
+        # Sky: unlit gradient dome, stars UNDER clouds, no Toon BSDF - no
+        # ramp calls (an unlit surface has no lit/unlit structure to ramp).
+        # min 15: 10 params + texcoord + posterize chain + 2 noise samples.
+        ("build_m_toon_sky", "M_Master_Toon_Sky", [], 15),
+        # Landscape: full spine + macro variation (2 static noise reads) +
+        # band_lerp. No rim (character family only). Dead hatch-drive scalars
+        # from water deliberately NOT replicated.
+        ("build_master_toon_landscape", "M_Master_Toon_Landscape",
+         ["MF_ColorRamp3", "MF_RampLUT", "MF_ProceduralPatterns"], 30),
+        # Face: full spine + authored FaceShadowTint lerp + rim. No band_lerp
+        # (it would fight the authored shadow layer).
+        ("build_master_toon_face", "M_Master_Toon_Face",
+         ["MF_ColorRamp3", "MF_RampLUT", "MF_ProceduralPatterns",
+          "MF_RimOffset"], 30),
+        # Hair: full spine + UV.y root->tip gradient feeding BOTH ramp calls
+        # + one shared Fresnel (ink and sheen) + rim.
+        ("build_master_toon_hair", "M_Master_Toon_Hair",
+         ["MF_ColorRamp3", "MF_RampLUT", "MF_ProceduralPatterns",
+          "MF_RimOffset"], 30),
+        # Glass: spine WITHOUT rim, fresnel opacity with the defined
+        # water-lerp fallback (module verify() records which path took).
+        ("build_master_toon_glass", "M_Master_Toon_Glass",
+         ["MF_ColorRamp3", "MF_RampLUT", "MF_ProceduralPatterns"], 20),
+        # EmissiveFX: unlit + Time/Sine pulse + pattern gate. No ramp, no Toon
+        # BSDF - verify() asserts the BSDF is absent.
+        ("build_m_toon_emissivefx", "M_Master_Toon_EmissiveFX",
+         ["MF_ProceduralPatterns"], 12),
+        # Particles: unlit translucent sprite chain (ParticleColor x Sprite x
+        # DepthFade); opacity pin attempt is WARN-not-fail, verify() reports
+        # which input classes this engine build actually instantiated.
+        ("build_m_toon_particles", "M_Master_Toon_Particles", [], 8),
+        # PostComposite: MD_POST_PROCESS -> MP_EMISSIVE_COLOR, one shared
+        # writer for grade/grain/vignette/halftone. verify() asserts the
+        # domain and a resolved scene-colour input.
+        ("build_m_toon_postcomposite", "M_Master_Toon_PostComposite",
+         ["MF_ProceduralPatterns"], 15),
     ]:
         if report["errors"]:
             break

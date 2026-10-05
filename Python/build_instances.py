@@ -323,6 +323,84 @@ INSTANCES = {
         "bUsePaintedRamp": False,
         "bContactShadow": False,
     }, "M_Master_Toon_Water"),
+
+    # -------------------------------------- toon spine expansion (2026-10-05)
+    # Added 2026-10-05, TOON_MASTERS_PLAN_2026-10-04.md section 4 tier D.
+    # Each instance names its OWN parent master (third element): an instance
+    # cannot carry a Toon Profile (measured 2026-10-02), so the profile a row
+    # declares only reaches a pixel when the master binds it - TP_Landscape /
+    # TP_Face / TP_Hair / TP_Glass are bound inside their masters, and the
+    # four unlit-family rows declare "none (unlit)" because those masters
+    # have no Toon BSDF by design (their verify() asserts its absence).
+    # Only parameters that EXIST on the target master are overridden here;
+    # build_instances.build() logs "parent master ... missing" if a master
+    # did not build, and verify_instance reads every value back.
+    "MI_Toon_Sky": ("none (unlit)", {
+        "ZenithColor": (0.22, 0.40, 0.68, 1.0),
+        "HorizonColor": (0.74, 0.83, 0.88, 1.0),
+        "PosterizationBands": 6.0,
+        "CloudStrength": 0.4,
+    }, "M_Master_Toon_Sky"),
+    "MI_Toon_Landscape": ("TP_Landscape", {
+        "BaseTint": (0.30, 0.32, 0.28, 1.0),
+        "AccentTint": (0.55, 0.58, 0.50, 1.0),
+        # RampStrength 1.0 opts INTO the profile - the 2026-10-03 measurement:
+        # at 0 the profile's authored ramp is never consulted (MI_Toon_Melusina
+        # was the first instance to set this; the same rule applies here).
+        "RampStrength": 1.0,
+        "MacroStrength": 0.25,
+        "DryRoughness": 0.9,
+        "PatternStrength": 0.0,
+        "bUsePaintedRamp": False,
+    }, "M_Master_Toon_Landscape"),
+    "MI_Toon_Face": ("TP_Face", {
+        "BaseTint": (0.30, 0.24, 0.28, 1.0),
+        "AccentTint": (0.78, 0.68, 0.66, 1.0),
+        "FaceShadowTint": (0.42, 0.32, 0.38, 1.0),
+        "FaceShadowMask": 0.0,       # inert until a face MASK texture ships
+        "RampStrength": 1.0,
+        "InkIntensity": 0.15,
+        "DryRoughness": 0.75,
+        "RimStrength": 0.4,
+        "bUsePaintedRamp": False,
+    }, "M_Master_Toon_Face"),
+    "MI_Toon_Hair": ("TP_Hair", {
+        "RootTint": (0.22, 0.18, 0.26, 1.0),
+        "TipTint": (0.55, 0.48, 0.62, 1.0),
+        "SheenStrength": 0.5,
+        "RampStrength": 1.0,
+        "InkIntensity": 0.12,
+        "DryRoughness": 0.6,
+        "RimStrength": 0.35,
+        "bUsePaintedRamp": False,
+    }, "M_Master_Toon_Hair"),
+    "MI_Toon_Glass": ("TP_Glass", {
+        "BaseTint": (0.55, 0.72, 0.78, 1.0),
+        "AccentTint": (0.75, 0.88, 0.92, 1.0),
+        "FresnelColor": (0.75, 0.90, 1.00, 1.0),
+        "OpacityBase": 0.3,
+        "FresnelPower": 4.0,
+        "RampStrength": 0.8,
+        "DryRoughness": 0.08,
+        "bUsePaintedRamp": False,
+    }, "M_Master_Toon_Glass"),
+    "MI_Toon_EmissiveFX": ("none (unlit)", {
+        "EmissiveColor": (1.0, 0.7, 0.9, 1.0),
+        "EmissiveIntensity": 3.0,
+        "PulseRate": 1.0,
+        "PulseDepth": 0.4,
+        "PatternStrength": 0.6,
+    }, "M_Master_Toon_EmissiveFX"),
+    "MI_Toon_Particles": ("none (unlit)", {
+        "TintColor": (0.85, 0.9, 1.0, 1.0),
+        "Brightness": 1.5,
+    }, "M_Master_Toon_Particles"),
+    "MI_Toon_PostComposite": ("none (unlit)", {
+        "GradeTint": (1.02, 1.0, 0.98, 1.0),
+        "GrainStrength": 0.08,
+        "VignetteStrength": 0.35,
+        "HalftoneStrength": 0.0,     # inert until a shot opts into print dots
+    }, "M_Master_Toon_PostComposite"),
 }
 
 

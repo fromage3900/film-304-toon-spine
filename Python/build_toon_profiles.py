@@ -324,6 +324,61 @@ PROFILES = {
         "instead of competing with them.",
         {"hatch_texture": "T_Hatch_Diagonal"},
     ),
+    "TP_Landscape": (
+        # Ground planes. Macro variation lives in the master (two static noise
+        # reads), so the profile only needs to hold the band structure steady
+        # across that variation - hence a tight 4-key ramp and low extinction
+        # (soft terminator: the ground reads as one mass, not a hard split).
+        [(0.25, 0.26), (0.50, 0.48), (0.75, 0.76), (1.00, 1.00)],
+        [(0.70, None), (0.80, 0.30), (1.00, 0.40)],
+        3.5, 1.20, 0.40, 0.0,
+        "Ground / terrain. Low-contrast bands with a soft terminator so macro "
+        "tint variation (master-driven) carries the read instead of the "
+        "terminator, minimal specular - matches TP_Environment's recession "
+        "rule but with tighter band steps for closer ground contact shots.",
+    ),
+    "TP_Face": (
+        # Deliberately NARROW band spread around the terminator (keys crowded
+        # at 0.44-0.46): the face shadow must hold as a shape, not sweep
+        # across the cheek when the head turns. Specular lifted (close-up
+        # skin sheen) but extinction low so the terminator stays soft-edged -
+        # the anime trick this profile exists to encode.
+        [(0.35, 0.32), (0.44, 0.44), (0.46, 0.60), (1.00, 1.00)],
+        [(0.60, None), (0.70, 0.55), (1.00, 0.85)],
+        4.0, 0.95, 1.15, 0.0,
+        "Skin / face. Tight shadow-band keys so the terminator holds its "
+        "shape while the head turns, warm-lifted specular for close-up skin "
+        "read. The authored FaceShadowTint lerp in M_Master_Toon_Face is a "
+        "separate, grade-level layer above this band structure - this "
+        "profile owns the bands, the master owns the painted shadow.",
+    ),
+    "TP_Hair": (
+        # Longest diff ramp in the set (5 keys): hair is a vertical gradient
+        # surface, so the band structure has more room to step without
+        # reading as posterization on a curved mass. Highest specular in the
+        # set (sgi 1.4) with LOW extinction - the sheen streak is master-
+        # authored (lerp toward AccentTint), this profile just keeps the
+        # highlight broad and soft beneath it.
+        [(0.38, 0.30), (0.52, 0.52), (0.66, 0.72), (0.84, 0.90), (1.00, 1.00)],
+        [(0.45, None), (0.55, 0.70), (1.00, 1.00)],
+        5.0, 0.80, 1.40, 0.0,
+        "Hair. Broad soft highlight under the master's root->tip gradient "
+        "and sheen lerp; enough band steps to follow the gradient without "
+        "hard posterization on curved strands.",
+    ),
+    "TP_Glass": (
+        # Earliest terminator in the set (0.40): glass goes to its lit side
+        # fast so the interior stays clear-ish and the silhouette edge (the
+        # master's fresnel opacity/glow) dominates the read. Lowest specular
+        # extinction (0.35) + highest specular strength - a hard bright rim
+        # highlight is the whole point of glass.
+        [(0.40, 0.45), (0.60, 0.66), (0.82, 0.86), (1.00, 1.00)],
+        [(0.35, None), (0.45, 0.85), (1.00, 1.00)],
+        2.0, 0.90, 1.50, 0.0,
+        "Glass / crystal. Early soft terminator so the interior reads "
+        "transparent under the master's fresnel opacity, with the brightest "
+        "specular in the set for the hard window/bottle glint.",
+    ),
 }
 
 
