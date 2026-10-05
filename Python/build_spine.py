@@ -37,6 +37,7 @@ def main():
     for _mod in ("spine_lib", "build_textures", "build_mf_colorramp3",
                  "build_mf_ramplut", "build_mf_patterns", "build_master_toon",
                  "build_master_toon_foliage", "build_master_toon_water",
+                 "build_master_toon_character",
                  "build_m_outline", "build_toon_profiles", "build_instances",
                  "build_pattern_overrides", "build_office_set_materials",
                  "build_gouache_lookdev", "build_foliage_lookdev",
@@ -116,6 +117,13 @@ def main():
          ["MF_ColorRamp3", "MF_RampLUT", "MF_ProceduralPatterns"], 30),
         ("build_master_toon_water", "M_Master_Toon_Water",
          ["MF_ColorRamp3", "MF_RampLUT", "MF_ProceduralPatterns"], 30),
+        # Character spine: the same contract, plus MF_RimOffset as the domain
+        # behaviour, bound to the canonical TP_Melusina. Profile binding for
+        # this master is asserted by the module's own verify() - lib
+        # .verify_material only reads toon_profile for Universal.
+        ("build_master_toon_character", "M_Master_Toon_Character",
+         ["MF_ColorRamp3", "MF_RampLUT", "MF_ProceduralPatterns",
+          "MF_RimOffset"], 30),
         # min_expressions lowered 15 -> 10 on 2026-10-04. build_m_outline.py was
         # rewritten in parallel and no longer builds the distance-compensation
         # chain (no DistanceComp / CameraPositionWS / verify() in it), so the

@@ -40,6 +40,11 @@ MASTER_PROFILES = {
     "M_Master_Toon_Universal": "TP_Default",
     "M_Master_Toon_Foliage": "TP_Foliage",
     "M_Master_Toon_Water": "TP_Water",
+    # The character master exists to make the film's declared character
+    # contract real: TP_Melusina is named by the shot manifest, GROUP_
+    # STAGING_GUIDE.md section 3, and dogfood_toon_spine.py, but an instance
+    # cannot carry a profile, so before this master nothing could bind it.
+    "M_Master_Toon_Character": "TP_Melusina",
 }
 
 INSTANCE_MAPS = {

@@ -203,7 +203,18 @@ INSTANCES = {
         "RampStrength": 1.0,
         "bUsePaintedRamp": False,
         "bContactShadow": True,
-    }),
+        # Opt into the character master's offset rim. RimStrength defaults to
+        # 0.0 on the master so nothing changes until an instance asks for it;
+        # the hero is the instance that should demonstrate the edge of light.
+        "RimStrength": 0.45,
+        # THIRD ELEMENT = PARENT MASTER. Without it the default parent applies
+        # and this instance shades on TP_Default, because a material instance
+        # cannot carry its own Toon Profile on this engine build (measured
+        # 2026-10-02). TP_Melusina is named by the shot manifest, GROUP_
+        # STAGING_GUIDE.md section 3 and dogfood_toon_spine.py - and it only
+        # reaches a pixel when the MASTER binds it. That is what
+        # M_Master_Toon_Character does.
+    }, "M_Master_Toon_Character"),
     "MI_Toon_Character": ("TP_Character", {
         "BaseTint": (0.30, 0.27, 0.34, 1.0),      # lifted #352D40 family
         "AccentTint": (0.62, 0.57, 0.66, 1.0),
@@ -237,7 +248,9 @@ INSTANCES = {
         "PatternSoftness": 0.05,
         "bUsePaintedRamp": False,
         "bContactShadow": True,
-    }),
+        # Melusina's tail: declares TP_Melusina, so it belongs on the same
+        # character master - an instance cannot bind a profile itself.
+    }, "M_Master_Toon_Character"),
     "MI_Toon_CrackedStone": ("TP_Stone", {
         "BaseTint": (0.42, 0.40, 0.37, 1.0),
         "AccentTint": (0.58, 0.56, 0.52, 1.0),
