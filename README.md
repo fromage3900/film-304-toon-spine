@@ -34,10 +34,12 @@ Then read, in this order:
 ```
 Content/
   Materials/
-    Masters/          M_Master_Toon_Universal (the spine), M_Outline_InvertedHull
-    Functions/        MF_ColorRamp3, MF_RampLUT, MF_ProceduralPatterns
-    ToonProfiles/     TP_* art-direction assets (11)
-    Instances/        MI_Toon_* / MI_Outline_* instances (10)
+    Masters/          M_Master_Toon_Universal (the spine), M_Master_Toon_Foliage,
+                      M_Master_Toon_Water, M_Outline_InvertedHull, M_PainterlyGouache
+    Functions/        MF_ColorRamp3, MF_RampLUT, MF_ProceduralPatterns, MF_PBRDetail,
+                      MF_RimOffset
+    ToonProfiles/     TP_* art-direction assets (22)
+    Instances/        MI_Toon_* / MI_Foliage_* / MI_Water_* / MI_Outline_* (26)
   Maps/               L_Toon_Lookdev (look development level)
 Blender/              vendored brutalist GN builders + stage/verify entry points
 Python/               the code that GENERATES the materials in Content/

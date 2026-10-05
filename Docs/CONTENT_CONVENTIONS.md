@@ -34,8 +34,8 @@ A material instance is the supported way to vary a look. `MI_Toon_*` inherit fro
 ```
 Content/
   Materials/
-    Masters/        M_*        the master materials (2)
-    Functions/      MF_*       material functions (3)
+    Masters/        M_*        the master materials (5)
+    Functions/      MF_*       material functions (5)
     ToonProfiles/   TP_*       art-direction data assets
     Instances/      MI_*       material instances
     Textures/       T_*        generated stylization textures (dither/hatch/ramp LUT)

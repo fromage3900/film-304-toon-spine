@@ -10,9 +10,16 @@ Everything below is from the files in this repo: `Content/` and `Python/`.
 
 ## What the spine is
 
-Two masters, three material functions, **nineteen** toon profiles, **twenty-four**
-instances and **fifteen** generated textures — a Substrate Toon shading spine that a
+Five masters, five material functions, **twenty-two** toon profiles, **twenty-six**
+instances and **nineteen** generated textures — a Substrate Toon shading spine that a
 film can shoot with, with no game-system dependencies.
+
+Counts are the **tracked** set — what a fresh clone actually receives (`git ls-files`
+under `Content/Materials/`). A further 132 `.uasset` files sit untracked in
+`Masters/` and `Functions/`: they are a byte-identical copy of Melodia assets whose
+internal `/Game/...` paths still point at Melodia, so none of them resolve here.
+`specs/humber_toon_spine/melodia_intake_manifest.v1.json` records why raw `.uasset`
+copying is not an intake channel. Do not count them.
 
 ```
 Content/Materials/
@@ -20,9 +27,12 @@ Content/Materials/
                  M_Master_Toon_Foliage        masked two-sided cards, sway WPO
                  M_Master_Toon_Water          stylized water, scrolling ripple normal
                  M_Outline_InvertedHull       the outline pass
+                 M_PainterlyGouache           the gouache look (standalone)
   Functions/     MF_ColorRamp3                 ramp / band generation
                  MF_RampLUT                    LUT-driven ramp lookup
                  MF_ProceduralPatterns         analytic + baked pattern field (13 patterns)
+                 MF_PBRDetail                  detail/height shaping
+                 MF_RimOffset                  view/normal-space rim into EmissiveColor
   ToonProfiles/  TP_Default  TP_Stone  TP_Foliage  TP_Gold  TP_Hero
                  TP_Hatched  TP_TwoTone  TP_Environment  TP_SoftPainterly
                  TP_Warm  TP_Cool
@@ -39,9 +49,19 @@ Content/Materials/
                  T_SDF_{Strokes,Cross,Dots,Scales,Cracks,Leaf}   tilable SDF map library
 ```
 
-Counts measured on disk 2026-10-03 (headless spine build 10: 4/4 masters,
-24/24 instances, 21/21 profiles, 0 errors; texture report count 15,
-SDF map audit PASS).
+Counts at the top of this file are the tracked inventory as of 2026-10-04.
+The last headless spine build (10, 2026-10-03) reported 4/4 masters, 24/24
+instances, 21/21 profiles, 0 errors — reconcile on the next build.
+
+**`M_Master_Toon_Character` is code, not an asset yet.**
+`Python/build_master_toon_character.py` is committed and registered in
+`build_spine.py`, but the headless run that would write
+`Masters/M_Master_Toon_Character.uasset` has not happened, so that file is not
+in the tree above. `MI_Toon_Melusina` and `MI_Toon_Scales` are authored to
+parent to it; until the master is generated they do not pick up `TP_Melusina`,
+and the instance stage reports a failure rather than silently skipping. The
+build was held deliberately: a second Unreal process could not be started
+safely alongside a running editor.
 
 Two changes in the 2026-10-02 pass:
 
@@ -72,8 +92,8 @@ M_Master_Toon_Universal
 
 M_Outline_InvertedHull     standalone; no MF dependencies
 
-TP_*  (11)                 data assets read by the master's Toon Profile input
-MI_*  (18 instances)       inherit from the two masters
+TP_*  (22)                 data assets read by the master's Toon Profile input
+MI_*  (26 instances)       inherit from the five masters
 ```
 
 `MF_ProceduralPatterns` is called by the master since 2026-10-02 (hatch density is
