@@ -1,0 +1,161 @@
+{
+  "level": "L_Gouache_Lookdev",
+  "errors": [],
+  "warnings": [],
+  "forms": [
+    {
+      "label": "REF_GreyBall18",
+      "shape": "sphere",
+      "role": "grey",
+      "location": [
+        -600.0,
+        0.0,
+        100.0
+      ],
+      "spawned": true,
+      "mesh_asset": "/Engine/BasicShapes/Sphere"
+    },
+    {
+      "label": "GUA_Sphere",
+      "shape": "sphere",
+      "role": "gouache",
+      "location": [
+        -200.0,
+        0.0,
+        100.0
+      ],
+      "spawned": true,
+      "mesh_asset": "/Engine/BasicShapes/Sphere"
+    },
+    {
+      "label": "GUA_Cube",
+      "shape": "cube",
+      "role": "gouache",
+      "location": [
+        200.0,
+        0.0,
+        100.0
+      ],
+      "spawned": true,
+      "mesh_asset": "/Engine/BasicShapes/Cube"
+    },
+    {
+      "label": "GUA_Cone",
+      "shape": "cone",
+      "role": "gouache",
+      "location": [
+        600.0,
+        0.0,
+        100.0
+      ],
+      "spawned": true,
+      "mesh_asset": "/Engine/BasicShapes/Cone"
+    },
+    {
+      "label": "GUA_Plane",
+      "shape": "plane",
+      "role": "gouache",
+      "location": [
+        1000.0,
+        0.0,
+        100.0
+      ],
+      "spawned": true,
+      "mesh_asset": "/Engine/BasicShapes/Plane"
+    },
+    {
+      "label": "CMP_Stock_Sphere",
+      "shape": "sphere",
+      "role": "stock",
+      "location": [
+        -600.0,
+        600.0,
+        100.0
+      ],
+      "spawned": true,
+      "mesh_asset": "/Engine/BasicShapes/Sphere"
+    },
+    {
+      "label": "CMP_Gouache_Sphere",
+      "shape": "sphere",
+      "role": "gouache",
+      "location": [
+        -200.0,
+        600.0,
+        100.0
+      ],
+      "spawned": true,
+      "mesh_asset": "/Engine/BasicShapes/Sphere"
+    },
+    {
+      "label": "CMP_Stock_Cube",
+      "shape": "cube",
+      "role": "stock",
+      "location": [
+        200.0,
+        600.0,
+        100.0
+      ],
+      "spawned": true,
+      "mesh_asset": "/Engine/BasicShapes/Cube"
+    },
+    {
+      "label": "CMP_Gouache_Cube",
+      "shape": "cube",
+      "role": "gouache",
+      "location": [
+        600.0,
+        600.0,
+        100.0
+      ],
+      "spawned": true,
+      "mesh_asset": "/Engine/BasicShapes/Cube"
+    }
+  ],
+  "missing_meshes": [],
+  "materials": {
+    "gouache": {
+      "path": "/Game/Materials/Masters/M_PainterlyGouache",
+      "loaded": true
+    },
+    "stock": {
+      "path": "/Game/Materials/Masters/M_Master_Toon_Universal",
+      "loaded": true
+    }
+  },
+  "level_asset": "/Game/Maps/L_Gouache_Lookdev",
+  "level_saved": true,
+  "census": {
+    "total": 13,
+    "static_mesh": 10,
+    "directional": 1,
+    "skylight": 1,
+    "camera": 1,
+    "all_forms_present": true
+  },
+  "notes": {
+    "material_key_is_fixed": true,
+    "material_key_dir": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "sun_does_not_drive_bands": "M_PainterlyGouache derives its terminator from KeyLightDir, not from scene lights. The sun here drives cast shadow and specular only, so the bands and the shadow can disagree - that disagreement is the thing to inspect in this frame.",
+    "grey_ball_linear": 0.18,
+    "grey_ball_note": "REF_GreyBall18 carries no project material, so it renders with the engine default. Treat its value as indicative and set an explicit 0.18-linear material before trusting it as an exposure anchor.",
+    "ddx_ddy_resolution_dependent": "The wet edge is a screen-space derivative, so GouacheEdgeWidth and GouacheEdgeReference are resolution-dependent. Compare renders at one fixed resolution or the edge will not match."
+  },
+  "ok": true,
+  "verify": {
+    "level_saved": true,
+    "no_errors": true,
+    "all_meshes_found": true,
+    "all_forms_spawned": true,
+    "forms_in_level": true,
+    "camera_present": true,
+    "key_light_present": true,
+    "grey_ball_present": true,
+    "both_masters_loaded": true,
+    "ok": true
+  }
+}

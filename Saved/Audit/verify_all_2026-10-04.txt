@@ -1,12 +1,12 @@
 ﻿MELODIA TOON FILM - verify_all
-run      : 2026-10-04 12:12:09
-repo     : D:\film-304-toon-spine
+run      : 2026-10-04 22:18:04
+repo     : G:\film-304-toon-spine
 bracket  : 9 checks, 0 failed
 
 
 Check                                         Result Detail                                                     
 -----                                         ------ ------                                                     
-fork sync (vendored vs upstream)              PASS   PASS - vendored set matches upstream                       
+fork sync (vendored vs upstream)              PASS   PASS (manifest check only - upstream not available here)   
 Blender available                             PASS   C:\Program Files\Blender Foundation\Blender 5.2\blender.exe
 fork verifier (builders/presets/dials)        PASS   23 assertions passed, 0 failed                             
 external actors in levels are present on disk PASS   1 level(s) use external actors; 158 packages on disk       
@@ -23,25 +23,11 @@ RAW FORK SYNC
 ========================================================================
 FORK SYNC CHECK
   upstream : P:\MelodiaMelusinaV2-Laptop\deploy\surreal_arch\melodia_gn
-  fork     : D:\film-304-toon-spine\Blender\surreal_arch\melodia_gn
-  commit   : db1a8409a
-------------------------------------------------------------------------
-  v brutalist_city.py          IN_SYNC
-  v brutalist_cubicles.py      IN_SYNC
-  v brutalist_materials.py     IN_SYNC
-  v brutalist_office.py        IN_SYNC
-  v brutalist_roofs.py         IN_SYNC
-  v brutalist_uv.py            IN_SYNC
-  v core.py                    IN_SYNC
-  v higgsas_pipeline.py        IN_SYNC
-  v logging.py                 IN_SYNC
-  v office_props.py            IN_SYNC
-  v paris_common.py            IN_SYNC
-  v time.py                    IN_SYNC
-  ~ presets.py                 THINNED
-  ~ __init__.py                THINNED
-------------------------------------------------------------------------
-RESULT: PASS - vendored set matches upstream
+  fork     : G:\film-304-toon-spine\Blender\surreal_arch\melodia_gn
+  ! upstream not present here (normal for a group clone)
+  recorded : 2026-10-04 from commit db1a8409a
+  v all 12 vendored file(s) match the recorded manifest
+RESULT: PASS (manifest check only - upstream not available here)
 
 
 RESULT: PASS

@@ -10,13 +10,15 @@ Everything below is from the files in this repo: `Content/` and `Python/`.
 
 ## What the spine is
 
-Two master materials, three material functions, **nineteen** toon profiles, **eighteen**
-instances and **nine** generated textures — a Substrate Toon shading spine that a film can
-shoot with, with no game-system dependencies.
+Two masters, three material functions, **nineteen** toon profiles, **twenty-four**
+instances and **fifteen** generated textures — a Substrate Toon shading spine that a
+film can shoot with, with no game-system dependencies.
 
 ```
 Content/Materials/
-  Masters/       M_Master_Toon_Universal      the spine
+  Masters/       M_Master_Toon_Universal      the spine (opaque surfaces)
+                 M_Master_Toon_Foliage        masked two-sided cards, sway WPO
+                 M_Master_Toon_Water          stylized water, scrolling ripple normal
                  M_Outline_InvertedHull       the outline pass
   Functions/     MF_ColorRamp3                 ramp / band generation
                  MF_RampLUT                    LUT-driven ramp lookup
@@ -27,15 +29,19 @@ Content/Materials/
                  TP_Office_{Carpet,Laminate,DropCeiling,Troffer,
                             PowderCoat,Screen,Polypropylene,Whiteboard}
   Instances/     MI_Toon_{Hero,Stone,Foliage,Gold,Hatched,TwoTone,Painterly,
-                            Environment,Office_*}
+                            Environment,Office_*,Melusina,Character,Scales,
+                            CrackedStone}
+                 MI_Foliage_{Fern,Hedge}      on the foliage master
+                 MI_Water_{Canal,Puddle}      on the water master
                  MI_Outline_{Thin,Heavy}
   Textures/      T_Dither_Bayer  T_Hatch_{Cross,Diagonal}  T_HatchPattern
                  T_Ramp_{2Band,3Band,4Band,Smooth}  T_Noise_White
-                 T_SDF_Strokes
+                 T_SDF_{Strokes,Cross,Dots,Scales,Cracks,Leaf}   tilable SDF map library
 ```
 
-Counts measured on disk 2026-10-02 and cross-checked against
-`Saved/Audit/spine_build_report_2026-10-02.json` (40 assertions, 0 failing).
+Counts measured on disk 2026-10-03 (headless spine build 10: 4/4 masters,
+24/24 instances, 21/21 profiles, 0 errors; texture report count 15,
+SDF map audit PASS).
 
 Two changes in the 2026-10-02 pass:
 
@@ -165,6 +171,70 @@ Sequenced so each step lands in the builder + report, not the .uasset:
 3. **A true F1 Voronoi variant with distance output** — already satisfiable:
    the `Pattern` output of `CellIndex 8` IS the raw F1 distance (only `Mask`
    is thresholded). Add a dedicated output only when a real consumer appears.
+
+## Lookdev fixtures (2026-10-03)
+
+Three controlled fixture levels, each built by its own script and each with a
+fixed camera + one deliberate light rig, so a review compares pixels rather
+than impressions:
+
+| Level | Script | Judges |
+|---|---|---|
+| `L_Gouache_Lookdev` | `Python/build_gouache_lookdev.py` | the gouache master (sphere/cube/cone + stock baseline + grey exposure ball) |
+| `L_Foliage_Lookdev` | `Python/build_foliage_lookdev.py` | the foliage master (generated card meshes: quad/cross/fan, alpha cut by `T_SDF_Leaf`) |
+| `L_Water_Lookdev` | `Python/build_water_lookdev.py` | the water master (canal/puddle/bank: ripple scale, flow, grazing edge ink) |
+
+**ONE LEVEL LOAD PER PROCESS.** Loading a second level in the same headless
+process fatals — `World Memory Leaks: 2 leaks objects and packages`
+(`EditorServer.cpp:2544`) — and `collect_garbage()` does not clear it. The
+fixtures therefore build through `Tools/build_lookdev_levels.py`, which spawns
+one `UnrealEditor-Cmd` per level and gates each on **the .umap existing on
+disk**, not on the exit code: a Python exception makes the editor exit 0
+having built nothing, which happened twice before the gate was added.
+
+Two more traps that cost runs, both now handled in `Python/lookdev_lib.py`:
+`create_asset` does **not** put a level on disk (it makes an *untitled* world
+current, and a following `load_level` then fatals on that world), so creation
+goes `new_blank_map` → spawn → `save_map`; and a *phantom* registry entry
+(package name known, no file) must be purged first or the create path is
+skipped against a name the registry already claims.
+
+Fixtures are rebuildable, not art: one driver run re-creates all three
+deterministically. Their censuses are the evidence — gouache 13 actors / 10
+static meshes, foliage 9 / 6, water 7 / 4, all forms present
+(`Saved/Audit/{gouache,foliage,water}_lookdev_report.json`).
+
+**None of this is a render.** `-NullRHI` means no pixels; the fixtures prove
+the scenes are built and persisted correctly, and the frames still need the
+desktop (or an NVIDIA driver past 582.28) to be judged.
+
+## Per-shot pattern overrides (2026-10-03)
+
+`Python/build_pattern_overrides.py` is the DP's table: instance → parameter
+overrides (pattern index, SDF map, scale, density), applied *after*
+`build_instances` so a spine rebuild cannot wipe it, every entry verified by
+read-back. It is instance-level, not runtime — one look per instance per
+build; true per-shot swaps are a level-composition concern.
+
+First entries re-point three looks at the baked SDF maps where the map reads
+better than the analytic pattern for the same mark: PowderCoat → `T_SDF_Cross`,
+Carpet → `T_SDF_Dots`, Stone → `T_SDF_Cracks`. Everything else keeps its
+analytic pattern on purpose — the library is a choice, not a migration.
+
+## Verification (2026-10-03)
+
+Two independent paths, deliberately:
+
+* `build_spine.py` verifies what it builds, in-process (4/4 masters, 24/24
+  instances, 22/22 profiles, 3/3 pattern overrides, 0 errors).
+* `Python/verify_expansion.py` re-asserts the same facts from a **fresh
+  process that built nothing**, reading only saved assets — master→profile
+  bindings, instance→SDF-map assignments, the six maps' import settings
+  (sRGB off, wrap, lossless, no mips, 256²), and the domain masters' function
+  calls. Report: `Saved/Audit/expansion_verify_2026-10-03.json`.
+  A value can read back correctly in the process that wrote it and still not
+  be in the file; this repo has hit exactly that with the Toon Profile bind,
+  so the second path is not ceremony.
 
 ## How to re-derive any of this
 

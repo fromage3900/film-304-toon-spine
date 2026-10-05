@@ -190,6 +190,13 @@ PROFILES = {
         5.0, 0.9, 1.5, 0.0,
         "Metallic trim. Tight low-threshold specular for a hard metal glint.",
     ),
+    "TP_Water": (
+        [(0.30, 0.22), (0.50, 0.48), (0.72, 0.75), (1.00, 1.00)],
+        [(0.55, None), (0.62, 0.35), (1.00, 0.50)],
+        4.0, 1.10, 0.80, 0.0,
+        "Stylized water surface. Tight crest specular, lifted shadow floor - "
+        "the flow comes from the master's ripple normal, not this profile.",
+    ),
     "TP_Stone": (
         SOFT, [(0.75, None), (0.85, 0.25), (1.00, 0.3)],
         3.0, 1.25, 0.45, 0.0,

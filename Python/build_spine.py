@@ -36,8 +36,11 @@ def main():
     import importlib
     for _mod in ("spine_lib", "build_textures", "build_mf_colorramp3",
                  "build_mf_ramplut", "build_mf_patterns", "build_master_toon",
+                 "build_master_toon_foliage", "build_master_toon_water",
                  "build_m_outline", "build_toon_profiles", "build_instances",
-                 "build_office_set_materials", "build_mf_rimoffset"):
+                 "build_pattern_overrides", "build_office_set_materials",
+                 "build_gouache_lookdev", "build_foliage_lookdev",
+                 "build_water_lookdev", "build_mf_rimoffset"):
         sys.modules.pop(_mod, None)
     for _mod in ("spine_lib",):
         try:
@@ -87,9 +90,31 @@ def main():
             lib.log(f"ERROR building {fn_name}: {exc}")
             report["errors"].append(f"{fn_name}: {exc}")
 
+    # ---- toon profiles FIRST (2026-10-03) ----
+    # Masters bind a profile at the END of their build (the water master binds
+    # TP_Water), so profiles must exist before the masters stage. Profiles only
+    # need the textures (above) for their hatching/offset refs.
+    if not report["errors"]:
+        try:
+            import build_toon_profiles
+            made = build_toon_profiles.build()
+            for pname in made:
+                report.setdefault("profiles", {})[pname] = \
+                    build_toon_profiles.verify_profile(pname)
+        except Exception as exc:
+            lib.log(f"ERROR building profiles: {exc}")
+            report["errors"].append(f"profiles: {exc}")
+
     # ---- materials ----
     for mod_name, mat_name, expected, min_expr in [
         ("build_master_toon", "M_Master_Toon_Universal",
+         ["MF_ColorRamp3", "MF_RampLUT", "MF_ProceduralPatterns"], 30),
+        # domain masters share the spine functions; foliage cuts opacity from
+        # the generated leaf SDF and carries sway WPO, water carries the
+        # scrolling ripple normal (T_Noise_White reads, no function)
+        ("build_master_toon_foliage", "M_Master_Toon_Foliage",
+         ["MF_ColorRamp3", "MF_RampLUT", "MF_ProceduralPatterns"], 30),
+        ("build_master_toon_water", "M_Master_Toon_Water",
          ["MF_ColorRamp3", "MF_RampLUT", "MF_ProceduralPatterns"], 30),
         # min_expressions lowered 15 -> 10 on 2026-10-04. build_m_outline.py was
         # rewritten in parallel and no longer builds the distance-compensation
@@ -119,18 +144,7 @@ def main():
             lib.log(f"ERROR building {mat_name}: {exc}")
             report["errors"].append(f"{mat_name}: {exc}")
 
-    # ---- toon profiles + material instances ----
-    if not report["errors"]:
-        try:
-            import build_toon_profiles
-            made = build_toon_profiles.build()
-            for pname in made:
-                report.setdefault("profiles", {})[pname] = \
-                    build_toon_profiles.verify_profile(pname)
-        except Exception as exc:
-            lib.log(f"ERROR building profiles: {exc}")
-            report["errors"].append(f"profiles: {exc}")
-
+    # ---- material instances + the pattern override table ----
     if not report["errors"]:
         try:
             import build_instances
@@ -138,13 +152,32 @@ def main():
             for ipath in made:
                 iname = ipath.rsplit("/", 1)[-1].split(".", 1)[0]
                 expected = None
+                expected_parent = None
                 if iname in build_instances.INSTANCES:
-                    expected = build_instances.INSTANCES[iname][1]
+                    spec = build_instances.INSTANCES[iname]
+                    expected = spec[1]
+                    if len(spec) > 2:
+                        expected_parent = spec[2]
                 report.setdefault("instances", {})[iname] = \
-                    build_instances.verify_instance(iname, expected)
+                    build_instances.verify_instance(iname, expected,
+                                                    expected_parent)
         except Exception as exc:
             lib.log(f"ERROR building instances: {exc}")
             report["errors"].append(f"instances: {exc}")
+
+    # ---- per-shot pattern overrides (TOON_SPINE.md Next item 2) ----
+    # Runs AFTER instances so a spine rebuild cannot wipe the DP's table;
+    # every entry is verified by read-back inside the builder.
+    if not report["errors"]:
+        try:
+            import build_pattern_overrides
+            ov = build_pattern_overrides.build()
+            report.setdefault("pattern_overrides", {}).update(ov["applied"])
+            for err in ov["errors"]:
+                report["errors"].append(f"pattern_overrides: {err}")
+        except Exception as exc:
+            lib.log(f"ERROR building pattern overrides: {exc}")
+            report["errors"].append(f"pattern_overrides: {exc}")
 
     # ---- office set material assignment ----
     # Run AFTER instances, because it assigns those instances to meshes. Kept
@@ -165,6 +198,14 @@ def main():
         except Exception as exc:
             lib.log(f"ERROR building office set materials: {exc}")
             report["errors"].append(f"office_set: {exc}")
+
+    # ---- lookdev fixture levels: NOT built here ----
+    # ONE LEVEL LOAD PER PROCESS is a hard engine constraint in this headless
+    # path: loading a second level fatals with "World Memory Leaks: 2 leaks
+    # objects and packages" (EditorServer.cpp:2544) even after an explicit
+    # collect_garbage - measured twice, 2026-10-03 runs 12 and 13. The
+    # fixtures are therefore built by build_lookdev_levels.py, one process
+    # per level (see Docs/TOON_SPINE.md, "Lookdev fixtures").
 
     lib.save_all()
     lib.write_report(report)

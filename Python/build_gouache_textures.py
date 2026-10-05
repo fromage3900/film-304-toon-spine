@@ -192,15 +192,36 @@ def gen_paper_grain(size: int = 256, seed: int = 20261003):
     return size, size, rows
 
 
-def gen_granulation(size: int = 256, cells: int = 14, seed: int = 4242):
-    """Tileable Worley F1 - the pigment-pooling field.
+def gen_granulation(size: int = 256, cells: int = 96, seed: int = 4242,
+                    tooth_seed: int = 20261003):
+    """Fine pigment sediment that settles into the paper tooth's VALLEYS.
 
-    F1 (distance to the nearest feature point) inverted and shaped so each cell
-    interior is a soft blob while the cell walls stay crisp. Those walls are the
-    granulation edges a painter sees where one pool meets the next.
+    REBUILT - the previous field was a plain Worley F1 with `cells=14`, which at
+    the material's 6x tiling produced roughly six soft bubbles across the whole
+    surface. That is not granulation, it is a stain, and it is why the first
+    render read as generic and dirty: the effect was present at a scale the eye
+    files under "mottling" instead of "pigment".
+
+    Two changes, both grounded in how granulation actually works:
+
+    1. FREQUENCY. `cells` goes 14 -> 96. Granulation is particle settling, so it
+       lives at paper-tooth scale. The old field could not be tuned into working
+       by moving a strength slider; the frequency itself was wrong, which is why
+       the rebuild regenerates this texture instead of re-scaling it.
+
+    2. TOOTH COUPLING. The field is now multiplied by the INVERTED paper tooth,
+       so pigment pools in the grain's valleys and the peaks stay clean. The
+       previous version was explicitly independent of the tooth ("a painter can
+       have granulation without tooth"), and that independence is precisely why
+       it never read as pigment - real granulation IS the tooth catching pigment.
+
+    The tooth is generated here with the SAME parameters gen_paper_grain uses, so
+    the two fields describe one paper rather than two unrelated noises.
     """
     rng = random.Random(seed)
     pts = [(rng.random(), rng.random()) for _ in range(cells)]
+
+    tooth = make_fbm(size, octaves=4, base_period=16, seed=tooth_seed, gain=0.55)
 
     rows = []
     for y in range(size):
@@ -219,10 +240,20 @@ def gen_granulation(size: int = 256, cells: int = 14, seed: int = 4242):
                 d2 = dx * dx + dy * dy
                 if d2 < best:
                     best = d2
-            # remap so the cell centre (d=0) is heavy pigment, the wall light
-            t = 1.0 - min(1.0, math.sqrt(best) * 2.6)
+            # Worley F1 shaped into soft sediment clumps, now HIGH frequency
+            t = 1.0 - min(1.0, math.sqrt(best) * 3.4)
             t = t * t * (3.0 - 2.0 * t)
-            row.append(int(round(t * 255.0)))
+
+            # Valley mask: 1 where the grain is deep, 0 at the peaks.
+            valley = 1.0 - tooth(u, v)
+            # Bias toward the valleys but never fully zero the peaks - a hard
+            # product reads as dirt on the high points instead of clean paper.
+            valley = valley * 1.25 - 0.10
+            valley = min(1.0, max(0.0, valley))
+
+            sed = t * valley
+            sed = min(1.0, max(0.0, sed))
+            row.append(int(round(sed * 255.0)))
         rows.append(bytes(row))
     return size, size, rows
 

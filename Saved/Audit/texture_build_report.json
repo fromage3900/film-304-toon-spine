@@ -259,6 +259,136 @@
       },
       "size": "256x256",
       "asset": "/Game/Materials/Textures/T_SDF_Strokes.T_SDF_Strokes"
+    },
+    "T_SDF_Cross": {
+      "why": "Baked cross-hatch SDF: max of two sine-displaced (u+v)/(u-v) line families - CellIndex 12's engraving sibling. G = width jitter.",
+      "set": [
+        "srgb=False",
+        "filter(bilinear)=TF_BILINEAR",
+        "address_x=TA_WRAP",
+        "address_y=TA_WRAP",
+        "compression=TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen(mips_off)=TMGS_NO_MIPMAPS"
+      ],
+      "failed": [],
+      "skipped": [],
+      "ok": true,
+      "png": "P:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_SDF_Cross.png",
+      "pixels": "256x256",
+      "readback": {
+        "srgb": "False",
+        "filter": "TF_BILINEAR",
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "256x256",
+      "asset": "/Game/Materials/Textures/T_SDF_Cross.T_SDF_Cross"
+    },
+    "T_SDF_Dots": {
+      "why": "Baked halftone SDF: soft-edged dots on a half-offset lattice (rows_n even). G = per-dot size jitter.",
+      "set": [
+        "srgb=False",
+        "filter(bilinear)=TF_BILINEAR",
+        "address_x=TA_WRAP",
+        "address_y=TA_WRAP",
+        "compression=TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen(mips_off)=TMGS_NO_MIPMAPS"
+      ],
+      "failed": [],
+      "skipped": [],
+      "ok": true,
+      "png": "P:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_SDF_Dots.png",
+      "pixels": "256x256",
+      "readback": {
+        "srgb": "False",
+        "filter": "TF_BILINEAR",
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "256x256",
+      "asset": "/Game/Materials/Textures/T_SDF_Dots.T_SDF_Dots"
+    },
+    "T_SDF_Scales": {
+      "why": "Baked scale/feather arcs (half-offset rows, arc of the row above): Melusina's tail, roof tiles, feather rows. G = width jitter.",
+      "set": [
+        "srgb=False",
+        "filter(bilinear)=TF_BILINEAR",
+        "address_x=TA_WRAP",
+        "address_y=TA_WRAP",
+        "compression=TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen(mips_off)=TMGS_NO_MIPMAPS"
+      ],
+      "failed": [],
+      "skipped": [],
+      "ok": true,
+      "png": "P:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_SDF_Scales.png",
+      "pixels": "256x256",
+      "readback": {
+        "srgb": "False",
+        "filter": "TF_BILINEAR",
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "256x256",
+      "asset": "/Game/Materials/Textures/T_SDF_Scales.T_SDF_Scales"
+    },
+    "T_SDF_Cracks": {
+      "why": "Baked Worley-border crack network (F2-F1, inverted to mark polarity): stone, dry earth, plaster. G = per-cell width jitter.",
+      "set": [
+        "srgb=False",
+        "filter(bilinear)=TF_BILINEAR",
+        "address_x=TA_WRAP",
+        "address_y=TA_WRAP",
+        "compression=TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen(mips_off)=TMGS_NO_MIPMAPS"
+      ],
+      "failed": [],
+      "skipped": [],
+      "ok": true,
+      "png": "P:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_SDF_Cracks.png",
+      "pixels": "256x256",
+      "readback": {
+        "srgb": "False",
+        "filter": "TF_BILINEAR",
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "256x256",
+      "asset": "/Game/Materials/Textures/T_SDF_Cracks.T_SDF_Cracks"
+    },
+    "T_SDF_Leaf": {
+      "why": "Leaf-cluster cover SDF (unioned capsules, seeded RNG) - the foliage master's opacity mask source. R = cover, soft silhouette edges.",
+      "set": [
+        "srgb=False",
+        "filter(bilinear)=TF_BILINEAR",
+        "address_x=TA_WRAP",
+        "address_y=TA_WRAP",
+        "compression=TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen(mips_off)=TMGS_NO_MIPMAPS"
+      ],
+      "failed": [],
+      "skipped": [],
+      "ok": true,
+      "png": "P:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_SDF_Leaf.png",
+      "pixels": "256x256",
+      "readback": {
+        "srgb": "False",
+        "filter": "TF_BILINEAR",
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "256x256",
+      "asset": "/Game/Materials/Textures/T_SDF_Leaf.T_SDF_Leaf"
     }
   },
   "errors": [],
