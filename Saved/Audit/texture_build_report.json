@@ -389,6 +389,318 @@
       },
       "size": "256x256",
       "asset": "/Game/Materials/Textures/T_SDF_Leaf.T_SDF_Leaf"
+    },
+    "T_SDF_CarpetLoop": {
+      "why": "Loop-pile carpet: elliptical loops on a jittered lattice (trodden lean). The carpet look with actual pile read; T_SDF_Dots stays the generic halftone.",
+      "set": [
+        "srgb=False",
+        "filter(bilinear)=TF_BILINEAR",
+        "address_x=TA_WRAP",
+        "address_y=TA_WRAP",
+        "compression=TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen(mips_off)=TMGS_NO_MIPMAPS"
+      ],
+      "failed": [],
+      "skipped": [],
+      "ok": true,
+      "png": "G:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_SDF_CarpetLoop.png",
+      "pixels": "256x256",
+      "readback": {
+        "srgb": "False",
+        "filter": "TF_BILINEAR",
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "256x256",
+      "asset": "/Game/Materials/Textures/T_SDF_CarpetLoop.T_SDF_CarpetLoop"
+    },
+    "T_SDF_CeilingTile": {
+      "why": "Acoustic drop-ceiling: pin-perforation grid plus seeded mineral fissures (edged-margined, the seam lesson). Pairs with TP_Office_DropCeiling.",
+      "set": [
+        "srgb=False",
+        "filter(bilinear)=TF_BILINEAR",
+        "address_x=TA_WRAP",
+        "address_y=TA_WRAP",
+        "compression=TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen(mips_off)=TMGS_NO_MIPMAPS"
+      ],
+      "failed": [],
+      "skipped": [],
+      "ok": true,
+      "png": "G:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_SDF_CeilingTile.png",
+      "pixels": "256x256",
+      "readback": {
+        "srgb": "False",
+        "filter": "TF_BILINEAR",
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "256x256",
+      "asset": "/Game/Materials/Textures/T_SDF_CeilingTile.T_SDF_CeilingTile"
+    },
+    "T_SDF_WeaveFine": {
+      "why": "Fine plain weave, continuous thread crowns (bilinear-soft where analytic CellIndex 11 aliases): cubicle cloth, task-chair fabric.",
+      "set": [
+        "srgb=False",
+        "filter(bilinear)=TF_BILINEAR",
+        "address_x=TA_WRAP",
+        "address_y=TA_WRAP",
+        "compression=TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen(mips_off)=TMGS_NO_MIPMAPS"
+      ],
+      "failed": [],
+      "skipped": [],
+      "ok": true,
+      "png": "G:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_SDF_WeaveFine.png",
+      "pixels": "256x256",
+      "readback": {
+        "srgb": "False",
+        "filter": "TF_BILINEAR",
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "256x256",
+      "asset": "/Game/Materials/Textures/T_SDF_WeaveFine.T_SDF_WeaveFine"
+    },
+    "T_SDF_Blinds": {
+      "why": "Venetian slats with lift-cord shadows at u = 0.25/0.75. The window wall of every cubicle shot.",
+      "set": [
+        "srgb=False",
+        "filter(bilinear)=TF_BILINEAR",
+        "address_x=TA_WRAP",
+        "address_y=TA_WRAP",
+        "compression=TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen(mips_off)=TMGS_NO_MIPMAPS"
+      ],
+      "failed": [],
+      "skipped": [],
+      "ok": true,
+      "png": "G:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_SDF_Blinds.png",
+      "pixels": "256x256",
+      "readback": {
+        "srgb": "False",
+        "filter": "TF_BILINEAR",
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "256x256",
+      "asset": "/Game/Materials/Textures/T_SDF_Blinds.T_SDF_Blinds"
+    },
+    "T_SDF_PaperGrain": {
+      "why": "Paper fibre, deliberately low-contrast (peak ~0.5): tooth for close-ups (calendar insert, notes) that never prints a grid on wides.",
+      "set": [
+        "srgb=False",
+        "filter(bilinear)=TF_BILINEAR",
+        "address_x=TA_WRAP",
+        "address_y=TA_WRAP",
+        "compression=TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen(mips_off)=TMGS_NO_MIPMAPS"
+      ],
+      "failed": [],
+      "skipped": [],
+      "ok": true,
+      "png": "G:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_SDF_PaperGrain.png",
+      "pixels": "256x256",
+      "readback": {
+        "srgb": "False",
+        "filter": "TF_BILINEAR",
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "256x256",
+      "asset": "/Game/Materials/Textures/T_SDF_PaperGrain.T_SDF_PaperGrain"
+    },
+    "T_SDF_Woodgrain": {
+      "why": "Laminate desk grain: integer-spaced streaks warped by integer swell cycles. The tops the worker types on.",
+      "set": [
+        "srgb=False",
+        "filter(bilinear)=TF_BILINEAR",
+        "address_x=TA_WRAP",
+        "address_y=TA_WRAP",
+        "compression=TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen(mips_off)=TMGS_NO_MIPMAPS"
+      ],
+      "failed": [],
+      "skipped": [],
+      "ok": true,
+      "png": "G:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_SDF_Woodgrain.png",
+      "pixels": "256x256",
+      "readback": {
+        "srgb": "False",
+        "filter": "TF_BILINEAR",
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "256x256",
+      "asset": "/Game/Materials/Textures/T_SDF_Woodgrain.T_SDF_Woodgrain"
+    },
+    "T_SDF_Brushed": {
+      "why": "Brushed metal: full-length streaks, per-column hash phase (no band synchronisation). Coffee machine, filing, chair legs.",
+      "set": [
+        "srgb=False",
+        "filter(bilinear)=TF_BILINEAR",
+        "address_x=TA_WRAP",
+        "address_y=TA_WRAP",
+        "compression=TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen(mips_off)=TMGS_NO_MIPMAPS"
+      ],
+      "failed": [],
+      "skipped": [],
+      "ok": true,
+      "png": "G:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_SDF_Brushed.png",
+      "pixels": "256x256",
+      "readback": {
+        "srgb": "False",
+        "filter": "TF_BILINEAR",
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "256x256",
+      "asset": "/Game/Materials/Textures/T_SDF_Brushed.T_SDF_Brushed"
+    },
+    "T_SDF_Cork": {
+      "why": "Corkboard granules: fat jittered blobs that kiss. Bulletin boards, pin strips.",
+      "set": [
+        "srgb=False",
+        "filter(bilinear)=TF_BILINEAR",
+        "address_x=TA_WRAP",
+        "address_y=TA_WRAP",
+        "compression=TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen(mips_off)=TMGS_NO_MIPMAPS"
+      ],
+      "failed": [],
+      "skipped": [],
+      "ok": true,
+      "png": "G:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_SDF_Cork.png",
+      "pixels": "256x256",
+      "readback": {
+        "srgb": "False",
+        "filter": "TF_BILINEAR",
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "256x256",
+      "asset": "/Game/Materials/Textures/T_SDF_Cork.T_SDF_Cork"
+    },
+    "T_SDF_VCT": {
+      "why": "Vinyl composition tile: half-tile grout grid (border-peaked) plus quarry speckle. Break-room and corridor floors.",
+      "set": [
+        "srgb=False",
+        "filter(bilinear)=TF_BILINEAR",
+        "address_x=TA_WRAP",
+        "address_y=TA_WRAP",
+        "compression=TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen(mips_off)=TMGS_NO_MIPMAPS"
+      ],
+      "failed": [],
+      "skipped": [],
+      "ok": true,
+      "png": "G:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_SDF_VCT.png",
+      "pixels": "256x256",
+      "readback": {
+        "srgb": "False",
+        "filter": "TF_BILINEAR",
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "256x256",
+      "asset": "/Game/Materials/Textures/T_SDF_VCT.T_SDF_VCT"
+    },
+    "T_SDF_WhiteboardGhost": {
+      "why": "Eraser-ghost arcs, peak capped at 0.35 so no Density cut can ink them hard. What a wiped board leaves behind.",
+      "set": [
+        "srgb=False",
+        "filter(bilinear)=TF_BILINEAR",
+        "address_x=TA_WRAP",
+        "address_y=TA_WRAP",
+        "compression=TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen(mips_off)=TMGS_NO_MIPMAPS"
+      ],
+      "failed": [],
+      "skipped": [],
+      "ok": true,
+      "png": "G:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_SDF_WhiteboardGhost.png",
+      "pixels": "256x256",
+      "readback": {
+        "srgb": "False",
+        "filter": "TF_BILINEAR",
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "256x256",
+      "asset": "/Game/Materials/Textures/T_SDF_WhiteboardGhost.T_SDF_WhiteboardGhost"
+    },
+    "T_SDF_FrostBands": {
+      "why": "Frosted-glass privacy bands: the only smooth-sine map in the library, a true frost falloff for door glazing.",
+      "set": [
+        "srgb=False",
+        "filter(bilinear)=TF_BILINEAR",
+        "address_x=TA_WRAP",
+        "address_y=TA_WRAP",
+        "compression=TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen(mips_off)=TMGS_NO_MIPMAPS"
+      ],
+      "failed": [],
+      "skipped": [],
+      "ok": true,
+      "png": "G:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_SDF_FrostBands.png",
+      "pixels": "256x256",
+      "readback": {
+        "srgb": "False",
+        "filter": "TF_BILINEAR",
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "256x256",
+      "asset": "/Game/Materials/Textures/T_SDF_FrostBands.T_SDF_FrostBands"
+    },
+    "T_SDF_Cardboard": {
+      "why": "Kraft flute + recycled speckle for the donut box under TP_Cardboard.",
+      "set": [
+        "srgb=False",
+        "filter(bilinear)=TF_BILINEAR",
+        "address_x=TA_WRAP",
+        "address_y=TA_WRAP",
+        "compression=TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen(mips_off)=TMGS_NO_MIPMAPS"
+      ],
+      "failed": [],
+      "skipped": [],
+      "ok": true,
+      "png": "G:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_SDF_Cardboard.png",
+      "pixels": "256x256",
+      "readback": {
+        "srgb": "False",
+        "filter": "TF_BILINEAR",
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "256x256",
+      "asset": "/Game/Materials/Textures/T_SDF_Cardboard.T_SDF_Cardboard"
     }
   },
   "errors": [],
