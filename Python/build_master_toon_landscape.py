@@ -89,7 +89,9 @@ def build(rebuild=True):
         "PatternAngle": lib.scalar(mat, "PatternAngle", "Pattern", 0.0, -1400, 1370),
         "PatternIndex": lib.scalar(mat, "PatternIndex", "Pattern", 0.0, -1400, 1440,
                                    desc="0 halftone 1 checker 2 stripes 4 ink 5 crosshatch "
-                                        "6 stipple 12 sdfmap"),
+                                        "6 stipple 12 sdfmap 13 subway 14 blinds "
+                                        "15 paperfiber 16 brushed 17 chevron "
+                                        "18 frostbands"),
         "PatternDensity": lib.scalar(mat, "PatternDensity", "Pattern", 0.50, -1400, 1510),
         "PatternStrength": lib.scalar(mat, "PatternStrength", "Pattern", 0.0, -1400, 1580,
                                       desc="0 = off (default); surface hatches on demand"),

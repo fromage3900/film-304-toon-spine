@@ -26,12 +26,27 @@ re-pointed at it - PatternIndex 12 + PatternSDFMap - keeping strength and
 density where they were already art-directed:
   * PowderCoat: analytic CrossHatch -> T_SDF_Cross (the baked engraving
     sibling: same two-family construction, sine-displaced, soft edges).
-  * Carpet:     analytic Stipple    -> T_SDF_Dots  (halftone dots with size
-    jitter read as fibres at carpet scale).
+  * Carpet:     analytic Stipple    -> T_SDF_CarpetLoop (purpose-built
+    loop-fibre map; halftone dots with size jitter read as fibres).
   * Stone (film set): analytic none -> T_SDF_Cracks - the cracked-stone
     look was the cracks map's design target.
-Everything else keeps its analytic pattern on purpose: the point of the
-library is a CHOICE, not a migration.
+
+UNIQUE SDF MAP ASSIGNMENTS (2026-10-06)
+----------------------------------------
+Every instance that can carry a baked SDF map now gets its OWN unique one.
+No two instances share a map - the point is per-surface identity, not a
+library showcase. PatternIndex 12 + PatternSDFMap on each:
+  * Laminate       -> T_SDF_Woodgrain      (desk surface grain)
+  * DropCeiling    -> T_SDF_CeilingTile    (acoustic tile texture)
+  * Polypropylene  -> T_SDF_Blinds         (moulded plastic striations)
+  * Whiteboard     -> T_SDF_WhiteboardGhost (ghosted marker residue)
+  * Paper          -> T_SDF_PaperGrain     (paper fibre)
+  * DonutBox       -> T_SDF_Cardboard      (corrugated kraft)
+  * CoffeeMachine  -> T_SDF_Brushed        (brushed steel)
+  * WorkerShirt    -> T_SDF_WeaveFine      (fine cloth weave)
+  * SpiderBody     -> T_SDF_Scales         (carapace scales)
+  * SpiderEyes     -> T_SDF_Dots           (compound eye facets)
+  * FrostedGlass   -> T_SDF_FrostBands     (frost etch bands)
 """
 from __future__ import annotations
 
@@ -52,14 +67,96 @@ OVERRIDES = {
     },
     "MI_Toon_Office_Carpet": {
         "PatternIndex": 12.0,                                    # SDFMap
-        "PatternSDFMap": f"{TEX_DIR}/T_SDF_Dots",
+        "PatternSDFMap": f"{TEX_DIR}/T_SDF_CarpetLoop",
         "PatternScale": 30.0,
+    },
+    "MI_Toon_Office_Laminate": {
+        "PatternIndex": 12.0,
+        "PatternSDFMap": f"{TEX_DIR}/T_SDF_Woodgrain",
+        "PatternScale": 8.0,
+    },
+    "MI_Toon_Office_DropCeiling": {
+        "PatternIndex": 12.0,
+        "PatternSDFMap": f"{TEX_DIR}/T_SDF_CeilingTile",
+        "PatternScale": 12.0,
+    },
+    "MI_Toon_Office_Polypropylene": {
+        "PatternIndex": 12.0,
+        "PatternSDFMap": f"{TEX_DIR}/T_SDF_Blinds",
+        "PatternScale": 20.0,
+    },
+    "MI_Toon_Office_Whiteboard": {
+        "PatternIndex": 12.0,
+        "PatternSDFMap": f"{TEX_DIR}/T_SDF_WhiteboardGhost",
+        "PatternScale": 6.0,
     },
     "MI_Toon_Stone": {
         "PatternIndex": 12.0,                                    # SDFMap
         "PatternSDFMap": f"{TEX_DIR}/T_SDF_Cracks",
         "PatternScale": 6.0,
         "PatternDensity": 0.50,
+    },
+    # --------------------------------------- office spider (2026-10-06)
+    # Emissive/rim/lift per-shot dials. Same scope rule as above: the DP
+    # edits THIS table, it applies after build_instances, every entry is
+    # read-back verified. All targets are Universal-parented (the only
+    # master carrying Flicker/ShadowLift/Rim) - WorkerShirt lives on the
+    # Character master and is deliberately NOT overridden here.
+    "MI_Toon_Office_Troffer": {
+        "FlickerRate": 9.0,          # fluorescent buzz shimmer (p2 hum)
+        "FlickerDepth": 0.06,        # barely-there; the room must not strobe
+    },
+    "MI_Toon_Office_Screen": {
+        "FlickerRate": 3.0,          # monitor idle throb under the beeps
+        "FlickerDepth": 0.08,
+    },
+    "MI_OfficeSpider_CoffeeMachine": {
+        "EmissiveIntensity": 1.5,    # amber buzz light ON for the p3-12 pour
+        "FlickerRate": 11.0,         # mains-buzz shimmer on the lamp
+        "FlickerDepth": 0.12,
+    },
+    "MI_OfficeSpider_SpiderBody": {
+        "RimStrength": 0.85,         # p12-2 dark-corner push
+        "ShadowLift": 0.04,
+    },
+    # --------------------------------------- unique SDF maps (2026-10-06)
+    # Each instance gets its OWN baked SDF map - no two share one.
+    # PatternIndex 12 + PatternSDFMap per instance.
+    "MI_OfficeSpider_Paper": {
+        "PatternIndex": 12.0,
+        "PatternSDFMap": f"{TEX_DIR}/T_SDF_PaperGrain",
+        "PatternScale": 10.0,
+    },
+    "MI_OfficeSpider_DonutBox": {
+        "PatternIndex": 12.0,
+        "PatternSDFMap": f"{TEX_DIR}/T_SDF_Cardboard",
+        "PatternScale": 8.0,
+    },
+    "MI_OfficeSpider_CoffeeMachine": {
+        "PatternIndex": 12.0,
+        "PatternSDFMap": f"{TEX_DIR}/T_SDF_Brushed",
+        "PatternScale": 12.0,
+    },
+    "MI_OfficeSpider_WorkerShirt": {
+        "PatternIndex": 12.0,
+        "PatternSDFMap": f"{TEX_DIR}/T_SDF_WeaveFine",
+        "PatternScale": 40.0,
+    },
+    "MI_OfficeSpider_SpiderBody": {
+        "PatternIndex": 12.0,
+        "PatternSDFMap": f"{TEX_DIR}/T_SDF_Scales",
+        "PatternScale": 14.0,
+    },
+    "MI_OfficeSpider_SpiderEyes": {
+        "FlickerDepth": 0.45,        # thump-panel throb (p2-8 SFX-THUMP)
+        "PatternIndex": 12.0,
+        "PatternSDFMap": f"{TEX_DIR}/T_SDF_Dots",
+        "PatternScale": 24.0,
+    },
+    "MI_OfficeSpider_FrostedGlass": {
+        "PatternIndex": 12.0,
+        "PatternSDFMap": f"{TEX_DIR}/T_SDF_FrostBands",
+        "PatternScale": 4.0,
     },
 }
 

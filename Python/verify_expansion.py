@@ -34,7 +34,14 @@ AUDIT = Path(__file__).resolve().parents[1] / "Saved" / "Audit"
 M = "/Game/Materials"
 
 SDF_MAPS = ("T_SDF_Strokes", "T_SDF_Cross", "T_SDF_Dots", "T_SDF_Scales",
-            "T_SDF_Cracks", "T_SDF_Leaf")
+            "T_SDF_Cracks", "T_SDF_Leaf",
+            # office tilables 2026-10-06 - same import contract (sRGB off,
+            # wrap, lossless, no mips, 256x256), headless-proven tile-exact
+            # in texture_office_verify_2026-10-06.json before they bake here.
+            "T_SDF_CarpetLoop", "T_SDF_CeilingTile", "T_SDF_WeaveFine",
+            "T_SDF_Blinds", "T_SDF_PaperGrain", "T_SDF_Woodgrain",
+            "T_SDF_Brushed", "T_SDF_Cork", "T_SDF_VCT",
+            "T_SDF_WhiteboardGhost", "T_SDF_FrostBands", "T_SDF_Cardboard")
 
 MASTER_PROFILES = {
     "M_Master_Toon_Universal": "TP_Default",
@@ -130,9 +137,37 @@ def check_sdf_texture_settings(out):
         out[name] = entry
 
 
+# Office Spider 2026-10-06: Universal carries MF_RimOffset now (edge of
+# light for the p12-2 dark corner); the domain masters do not.
+MASTER_CALL_WANTS = {
+    "M_Master_Toon_Universal": ["MF_ColorRamp3", "MF_RampLUT",
+                                "MF_ProceduralPatterns", "MF_RimOffset"],
+    "M_Master_Toon_Foliage": ["MF_ColorRamp3", "MF_RampLUT",
+                              "MF_ProceduralPatterns"],
+    "M_Master_Toon_Water": ["MF_ColorRamp3", "MF_RampLUT",
+                            "MF_ProceduralPatterns"],
+}
+
+# Office Spider shelf: instance -> {scalar: value} spot read-backs. These
+# are the knobs the boards depend on (rim/lift/flicker/matte); full
+# override verification already happens in build_instances.verify_instance
+# and the override table's own read-back.
+OFFICESPIDER_SPOT = {
+    "MI_OfficeSpider_Paper": {"DryRoughness": 0.95, "ShadowLift": 0.02},
+    # SpiderBody reads POST-override: the DP table (build_pattern_overrides,
+    # applied after instances by design) pushes RimStrength 0.70 -> 0.85 and
+    # ShadowLift 0.03 -> 0.04 for the p12-2 dark corner. Asserting the
+    # pre-override values here would fight the table on every run.
+    "MI_OfficeSpider_SpiderBody": {"RimStrength": 0.85, "ShadowLift": 0.04},
+    "MI_OfficeSpider_SpiderEyes": {"EmissiveIntensity": 2.0,
+                                   "FlickerRate": 7.0},
+    "MI_OfficeSpider_CoffeeMachine": {"RimStrength": 0.50},
+    "MI_OfficeSpider_WorkerShirt": {"RimStrength": 0.30},
+}
+
+
 def check_master_calls(me, out):
-    want = ["MF_ColorRamp3", "MF_RampLUT", "MF_ProceduralPatterns"]
-    for master_name in ("M_Master_Toon_Foliage", "M_Master_Toon_Water"):
+    for master_name, want in MASTER_CALL_WANTS.items():
         entry = {"want": want, "ok": False}
         mat = unreal.load_asset(f"{M}/Masters/{master_name}")
         if mat is None:
@@ -150,30 +185,55 @@ def check_master_calls(me, out):
         out[master_name] = entry
 
 
+def check_officespider_spot(me, out):
+    for inst_name, wants in OFFICESPIDER_SPOT.items():
+        entry = {"want": wants, "ok": False}
+        inst = unreal.load_asset(f"{M}/Instances/{inst_name}")
+        if inst is None:
+            entry["error"] = "instance does not load"
+            out[inst_name] = entry
+            continue
+        try:
+            wrong = []
+            for key, want in wants.items():
+                got = round(float(
+                    me.get_material_instance_scalar_parameter_value(
+                        inst, key)), 4)
+                if got != round(float(want), 4):
+                    wrong.append(f"{key}: got {got} want {want}")
+            entry["wrong"] = wrong
+            entry["ok"] = not wrong
+        except Exception as exc:
+            entry["error"] = str(exc)[:80]
+        out[inst_name] = entry
+
+
 def main() -> int:
     me = unreal.MaterialEditingLibrary
-    report = {"written": "2026-10-03", "independent": True,
+    report = {"written": "2026-10-06", "independent": True,
               "master_profiles": {}, "instance_maps": {},
-              "sdf_texture_settings": {}, "master_calls": {}, "errors": []}
+              "sdf_texture_settings": {}, "master_calls": {},
+              "officespider_spot": {}, "errors": []}
 
     check_master_profiles(me, report["master_profiles"])
     check_instance_maps(me, report["instance_maps"])
     check_sdf_texture_settings(report["sdf_texture_settings"])
     check_master_calls(me, report["master_calls"])
+    check_officespider_spot(me, report["officespider_spot"])
 
     for group in ("master_profiles", "instance_maps", "sdf_texture_settings",
-                  "master_calls"):
+                  "master_calls", "officespider_spot"):
         for name, entry in report[group].items():
             if not entry.get("ok"):
                 report["errors"].append(f"{group}/{name}: {entry}")
 
     report["ok"] = not report["errors"]
     AUDIT.mkdir(parents=True, exist_ok=True)
-    out = AUDIT / "expansion_verify_2026-10-03.json"
+    out = AUDIT / "expansion_verify_2026-10-06.json"
     out.write_text(json.dumps(report, indent=2), encoding="utf-8")
     print(f"[verify] wrote {out}")
     for group in ("master_profiles", "instance_maps", "sdf_texture_settings",
-                  "master_calls"):
+                  "master_calls", "officespider_spot"):
         for name, entry in report[group].items():
             print(f"[verify] {group:<20} {name:<26} ok={entry.get('ok')}")
     print("RESULT:", "PASS" if report["ok"] else "FAIL")

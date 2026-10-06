@@ -84,6 +84,16 @@ tells nobody anything.
 | `TP_SoftPainterly` / `TP_Warm` / `TP_Cool` | mood passes; keep one per shot so the palette is not fighting itself |
 | `TP_Hatched` / `TP_TwoTone` | deliberate graphic styles, not defaults |
 | `TP_Office_*` (8) | the interior-office set — see the table below |
+| `TP_Paper` / `TP_Cardboard` / `TP_SteelDark` | Office Spider props: sheets/poster, donut box, coffee machine |
+| `TP_Spider_Body` / `TP_Spider_Eye` | the p12-2 reveal: lifted carapace + emissive throb eyes |
+| `TP_Face` / `TP_Hair` / `TP_Glass` / `TP_Character` | the worker: skin, scalp, glasses, shirt |
+
+New profiles reach pixels only through the master that binds them
+(Universal binds `TP_Default`) — author the profile AND carry the look
+in the instance's scalars until a family master binds it. Film instances
+use the `MI_OfficeSpider_*` shelf (`MI_` prefix rule kept); the DP's
+per-shot dials live in `Python/build_pattern_overrides.py`, never as
+hand-edits on the instance.
 
 ### The office set
 

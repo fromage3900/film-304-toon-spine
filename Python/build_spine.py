@@ -113,8 +113,13 @@ def main():
 
     # ---- materials ----
     for mod_name, mat_name, expected, min_expr in [
+        # Universal gained MF_RimOffset 2026-10-06 (Office Spider: the
+        # p12-2 spider needs an edge of light in the dark corner). The
+        # module's own verify() now asserts the RimEmissive pin is consumed,
+        # not just called - the call-count alone cannot see an inert rim.
         ("build_master_toon", "M_Master_Toon_Universal",
-         ["MF_ColorRamp3", "MF_RampLUT", "MF_ProceduralPatterns"], 30),
+         ["MF_ColorRamp3", "MF_RampLUT", "MF_ProceduralPatterns",
+          "MF_RimOffset"], 30),
         # domain masters share the spine functions; foliage cuts opacity from
         # the generated leaf SDF and carries sway WPO, water carries the
         # scrolling ripple normal (T_Noise_White reads, no function)

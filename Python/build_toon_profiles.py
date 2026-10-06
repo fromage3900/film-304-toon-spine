@@ -379,6 +379,63 @@ PROFILES = {
         "transparent under the master's fresnel opacity, with the brightest "
         "specular in the set for the hard window/bottle glint.",
     ),
+
+    # --------------------------------------------- office spider (2026-10-06)
+    # Five surfaces the storyboard needs that no profile describes: paper,
+    # cardboard, dark steel, spider carapace, spider eyes. All obey the
+    # shadow-floor rule (no ramp reaches 0). BINDING NOTE, read before
+    # assuming these shade anything: a profile reaches a pixel only through
+    # the MASTER that binds it (measured 2026-10-02 - instances cannot
+    # carry one). Universal binds TP_Default and Character binds
+    # TP_Melusina, so until a family master binds one of these, the
+    # MI_OfficeSpider_* instances carry the look in their scalars
+    # (BaseTint/roughness/rim/lift) on TP_Default's bands. These rows are
+    # the authored art-direction record - same status the 8 office
+    # profiles shipped in - and become load-bearing the day a master
+    # binds them. Do not "fix" this by hand-editing an instance.
+    "TP_Paper": (
+        [(0.00, 0.55), (0.40, 0.78), (0.75, 0.92), (1.00, 1.00)],
+        [(0.90, None), (0.97, 0.10), (1.00, 0.12)],
+        2.0, 1.00, 0.25, 0.0,
+        "Paper: desk sheets, calendar, cat poster. Brightest matte floor in "
+        "the set, near-zero specular; pair with bMatteFinish on the "
+        "instance for dead-matte roughness 1.0.",
+    ),
+    "TP_Cardboard": (
+        [(0.00, 0.32), (0.38, 0.52), (0.72, 0.78), (1.00, 1.00)],
+        [(0.70, None), (0.82, 0.25), (1.00, 0.30)],
+        3.5, 1.00, 0.40, 0.0,
+        "Cardboard: the donut box. Kraft mid floor, soft spec; noise offset "
+        "gives the corrugation tooth so the flat panels do not read plastic.",
+        {"offset_texture": "T_Noise_White", "offset_strength": 0.06},
+    ),
+    "TP_SteelDark": (
+        [(0.00, 0.18), (0.42, 0.48), (0.58, 0.85), (1.00, 1.00)],
+        [(0.55, None), (0.65, 1.00), (1.00, 1.00)],
+        9.0, 0.65, 0.90, 0.40,
+        "Dark steel: coffee machine body, chair legs. Hard near-two-tone "
+        "with a tight glint, cross-hatch holds the shadow; floor lifted "
+        "off black so the machine separates from the p12-2 corner.",
+        {"hatch_texture": "T_Hatch_Cross"},
+    ),
+    "TP_Spider_Body": (
+        [(0.00, 0.16), (0.35, 0.38), (0.62, 0.68), (1.00, 1.00)],
+        [(0.50, None), (0.60, 0.80), (1.00, 0.90)],
+        7.0, 0.60, 1.10, 0.50,
+        "Spider carapace. Deep-but-lifted floor, glossy carapace glint, "
+        "diagonal hatch for leg-segment read; designed to hold under "
+        "RimStrength + ShadowLift on the instance, not to carry the dark "
+        "corner alone.",
+        {"hatch_texture": "T_Hatch_Diagonal"},
+    ),
+    "TP_Spider_Eye": (
+        [(0.00, 0.08), (0.30, 0.20), (0.60, 0.55), (1.00, 1.00)],
+        [(0.30, None), (0.40, 1.00), (1.00, 1.00)],
+        8.0, 0.40, 1.30, 0.0,
+        "Spider eyes. Deepest floor in the set - the read comes from the "
+        "instance's red EmissiveColor + FlickerDepth throb, with a hard "
+        "wet glint on top.",
+    ),
 }
 
 

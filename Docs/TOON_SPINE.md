@@ -11,9 +11,15 @@ Everything below is from the files in this repo: `Content/` and `Python/`.
 ## What the spine is
 
 Sixteen masters (the fourteen `build_spine.py` builds plus the two Painterly
-assets), five material functions, **twenty-six** toon profiles, **thirty-four**
-instances and **nineteen** generated textures — a Substrate Toon shading spine that a
+assets), five material functions, **thirty-one** toon profiles, **forty-one**
+instances and **twenty-seven** generated textures — a Substrate Toon shading spine that a
 film can shoot with, with no game-system dependencies.
+
+(2026-10-06 Office Spider expansion, code-authored on
+`feat/office-spider-toon`, build pending: +5 profiles, +6 instances,
+Universal gains rim + ShadowLift/Flicker/bMatteFinish. See "Office Spider
+expansion (2026-10-06)" below. Until the spine rebuilds, the counts above
+describe the builders, not the saved assets.)
 
 Counts are the **tracked** set — what a fresh clone actually receives (`git ls-files`
 under `Content/Materials/`). A further 132 `.uasset` files sit untracked in
@@ -39,28 +45,70 @@ Content/Materials/
                  M_Toon_Unlit_Character       the shadowless character master
                  M_Outline_InvertedHull       the outline pass
                  M_PainterlyGouache           the gouache look (standalone, + _Inst)
-  Functions/     MF_ColorRamp3                 ramp / band generation
-                 MF_RampLUT                    LUT-driven ramp lookup
-                 MF_ProceduralPatterns         analytic + baked pattern field (13 patterns)
-                 MF_PBRDetail                  detail/height shaping
-                 MF_RimOffset                  view/normal-space rim into EmissiveColor
-  ToonProfiles/  TP_Default  TP_Stone  TP_Foliage  TP_Gold  TP_Hero
-                 TP_Hatched  TP_TwoTone  TP_Environment  TP_SoftPainterly
-                 TP_Warm  TP_Cool  TP_Water  TP_Melusina  TP_Character
-                 TP_Landscape  TP_Face  TP_Hair  TP_Glass
-                 TP_Office_{Carpet,Laminate,DropCeiling,Troffer,
-                            PowderCoat,Screen,Polypropylene,Whiteboard}
-  Instances/     MI_Toon_{Hero,Stone,Foliage,Gold,Hatched,TwoTone,Painterly,
-                            Environment,Office_*,Melusina,Character,Scales,
-                            CrackedStone,Sky,Landscape,Face,Hair,Glass,
-                            EmissiveFX,Particles,PostComposite}
-                 MI_Foliage_{Fern,Hedge}      on the foliage master
-                 MI_Water_{Canal,Puddle}      on the water master
-                 MI_Outline_{Thin,Heavy}
-  Textures/      T_Dither_Bayer  T_Hatch_{Cross,Diagonal}  T_HatchPattern
-                 T_Ramp_{2Band,3Band,4Band,Smooth}  T_Noise_White
-                 T_SDF_{Strokes,Cross,Dots,Scales,Cracks,Leaf}   tilable SDF map library
+   Functions/     MF_ColorRamp3                 ramp / band generation
+                  MF_RampLUT                    LUT-driven ramp lookup
+                  MF_ProceduralPatterns         analytic + baked pattern field (19 cells)
+                  MF_PBRDetail                  detail/height shaping
+                  MF_RimOffset                  view/normal-space rim into EmissiveColor
+   ToonProfiles/  TP_Default  TP_Stone  TP_Foliage  TP_Gold  TP_Hero
+                  TP_Hatched  TP_TwoTone  TP_Environment  TP_SoftPainterly
+                  TP_Warm  TP_Cool  TP_Water  TP_Melusina  TP_Character
+                  TP_Landscape  TP_Face  TP_Hair  TP_Glass
+                  TP_Office_{Carpet,Laminate,DropCeiling,Troffer,
+                             PowderCoat,Screen,Polypropylene,Whiteboard}
+                  TP_{Paper,Cardboard,SteelDark,Spider_Body,Spider_Eye}
+                             (Office Spider 2026-10-06, authored record -
+                             pixel-active only when a master binds them)
+   Instances/     MI_Toon_{Hero,Stone,Foliage,Gold,Hatched,TwoTone,Painterly,
+                             Environment,Office_*,Melusina,Character,Scales,
+                             CrackedStone,Sky,Landscape,Face,Hair,Glass,
+                             EmissiveFX,Particles,PostComposite}
+                  MI_OfficeSpider_{Paper,DonutBox,CoffeeMachine,WorkerShirt,
+                             SpiderBody,SpiderEyes}   (2026-10-06 shelf)
+                  MI_OfficeSpider_FrostedGlass on the glass master (door glazing)
+                  MI_Foliage_{Fern,Hedge}      on the foliage master
+                  MI_Water_{Canal,Puddle}      on the water master
+                  MI_Outline_{Thin,Heavy}
+   Textures/      T_Dither_Bayer  T_Hatch_{Cross,Diagonal}  T_HatchPattern
+                  T_Ramp_{2Band,3Band,4Band,Smooth}  T_Noise_White
+                  T_SDF_{Strokes,Cross,Dots,Scales,Cracks,Leaf}   tilable SDF map library
+                  T_SDF_{CarpetLoop,CeilingTile,WeaveFine,Blinds,PaperGrain,
+                          Woodgrain,Brushed,Cork,VCT,WhiteboardGhost,
+                          FrostBands,Cardboard}   office tilables (2026-10-06)
 ```
+
+## Office tilable + SDF expansion (2026-10-06, code-authored, build pending)
+
+Same branch (`feat/office-spider-toon`), same rule (builders only, bake
+when the editor cools).
+
+* `build_textures.py` — +12 baked office maps (table in
+  `Docs/SDF_PATTERN_PIPELINE.md` §3). Headless-proven BEFORE the bake:
+  stub-`unreal` run of every generator asserts determinism,
+  tile-exactness (wrap step ≤ worst interior step, the sdf_map_audit
+  criterion), polarity/range — 18/18 PASS — and the contact sheet was
+  read back by eye (leaf/weave/blinds/VCT/ghost zooms). Report:
+  `Saved/Audit/texture_office_verify_2026-10-06.json`. The harness
+  caught two real generator bugs pre-bake (whiteboard arcs reaching the
+  tile edge; cardboard speckle quantizing below its bar).
+* `build_mf_patterns.py` — +6 analytic cells (13 SubwayTile, 14 Blinds,
+  15 PaperFiber, 16 Brushed, 17 Chevron, 18 FrostBands) on the scalar
+  tx/ty axes, plus three repairs the expansion exposed:
+  1. **The selector was inverted** — `fields[idx]` sat on `A > B`, so
+     index 0 routed to the top field and every other index to field 0
+     (proven by trace against live-probed pin names; invisible because
+     PatternStrength defaults to 0 and lookdev is driver-blocked).
+     Now the induction-clean descending form; identity mapping proven
+     by the headless truth-table sim.
+  2. **Checker/weave/crosshatch-B were degenerate at Angle 0** (impulse,
+     parity ≡ 0, family = 0) from deriving independent axes off the
+     identical float2 frame. New `_axis` helper (Dot + Constant2Vector,
+     both proven) splits scalar tx/ty; the three cells plus all six new
+     ones build on it. Untouched cells keep the float2 frame exactly.
+  3. `PatternIndex` labels updated (Universal/Character/Landscape).
+  Cells 13–18 + checker/crosshatch/weave mirrors assert in the same
+  headless report (alternation, both families, offset rows, cord
+  positions, zigzag variance, smoothness, phase variance).
 
 Counts at the top of this file are the tracked inventory as of the 2026-10-05
 freeze commit. The latest headless spine build (run 2, 2026-10-05) reported
@@ -330,3 +378,36 @@ py "Python/extract_dependencies.py"
 ```
 
 If this file and method 1 disagree, **method 1 is right** and this file is the bug.
+
+## Office Spider expansion (2026-10-06, code-authored, build pending)
+
+Storyboard: office worker, Canonical cubicle, kitchen pour, spider reveal
+(p12-2 dark corner). Branch `feat/office-spider-toon`. Builders changed,
+no asset built yet - the headless rebuild waits for a cool editor (a
+second UE process alongside the live one is held unsafe).
+
+* `build_master_toon.py` — Universal gains the Character rim
+  (`MF_RimOffset`, 7 knobs, default OFF) plus three wired utility knobs:
+  `ShadowLift` (uniform floor lift, default 0), `FlickerRate` /
+  `FlickerDepth` (emissive throb, default 0 = steady, the EmissiveFX
+  Time/Sine pattern), and the `bMatteFinish` switch (True = roughness
+  1.0 for paper/poster). All defaults are pixel-identical to today.
+  New `verify()` asserts the rim call + RimEmissive consumption + knob
+  presence; `build_spine.py` Universal `expected_calls` gains the rim.
+* `build_toon_profiles.py` — +5 (`TP_Paper`, `TP_Cardboard`,
+  `TP_SteelDark`, `TP_Spider_Body`, `TP_Spider_Eye`), all obeying the
+  never-hits-0 floor. Binding caveat: profiles reach pixels only via
+  master binding (Universal = TP_Default), so these are authored records
+  until a family master binds them; the instances carry the visible look
+  in scalars meanwhile - same status the office 8 shipped in.
+* `build_instances.py` — +7 `MI_OfficeSpider_*` shelf (Paper, DonutBox,
+  CoffeeMachine, SpiderBody, SpiderEyes on Universal; WorkerShirt on the
+  Character master for the rim + bound TP_Melusina; FrostedGlass on the
+  glass master for the conference-door glazing, CellIndex 18 frost bands
+  at Angle 0). Unassigned until the prop/rig import lands
+  (`build_office_set_materials.py` reports them as awaiting geometry).
+* `build_pattern_overrides.py` — DP dials: troffer/screen flicker,
+  coffee-machine buzz lamp, spider rim+lift push, eye throb.
+* `verify_expansion.py` — Universal joins the call check (4 wants) +
+  `officespider_spot` scalar read-backs; report
+  `Saved/Audit/expansion_verify_2026-10-06.json`.

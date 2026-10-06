@@ -32,14 +32,19 @@ WHAT THESE ARE FOR
                           triangle distance (bilinear-safe soft edges),
                           G = per-stroke width jitter hash
     T_SDF_{Cross,Dots,Scales,Cracks,Leaf}
-                          the tilable SDF map library (2026-10-03): engraving
-                          cross-hatch, soft halftone dots, scale/feather
-                          arcs, Worley-border cracks, and the leaf cover
-                          field the foliage master cuts opacity on. All RG:
-                          R = mark field in the house polarity (1 at the
-                          mark, 0 clear) except Leaf (1 = inside cover),
-                          G = per-cell width jitter; sRGB off, wrap,
-                          lossless, no mips, tile-exact integer periods
+                            the tilable SDF map library (2026-10-03): engraving
+                            cross-hatch, soft halftone dots, scale/feather
+                            arcs, Worley-border cracks, and the leaf cover
+                            field the foliage master cuts opacity on. All RG:
+                            R = mark field in the house polarity (1 at the
+                            mark, 0 clear) except Leaf (1 = inside cover),
+                            G = per-cell width jitter; sRGB off, wrap,
+                            lossless, no mips, tile-exact integer periods
+    T_SDF_{CarpetLoop,CeilingTile,WeaveFine,Blinds,PaperGrain,Woodgrain,
+            Brushed,Cork,VCT,WhiteboardGhost,FrostBands,Cardboard}
+                            the office tilables (2026-10-06): same RG
+                            contract, consumed via CellIndex 12 +
+                            PatternSDFMap with no function change
 
 SETTINGS THAT MATTER (applied defensively and READ BACK into the report -
 enum member names move between engine versions, so nothing is assumed to have
@@ -467,6 +472,391 @@ def gen_sdf_strokes(size: int = 256, strokes: int = 6,
     return size, size, rows
 
 
+def gen_sdf_carpet_loop(size: int = 256, cells: int = 12):
+    """Loop-pile carpet - dense elliptical loops with per-loop lean.
+
+    The baked sibling of the office carpet look (T_SDF_Dots is the generic
+    halftone; this is actual pile): loop centres sit on a square lattice
+    with a per-cell hash offset (the lean of trodden pile), and each loop
+    is ELLIPTICAL (taller than wide, the pile direction), so the field
+    reads as fibre rather than print dots. R = 1 at the loop crown,
+    saturating to 0 at half a cell; G = per-loop lean/width hash. Tiles
+    with an integer cells; the offset wraps by construction (fractional
+    lattice math, same seam handling as gen_sdf_dots).
+    """
+    rows = []
+    for y in range(size):
+        v = y / size
+        j = int(v * cells)
+        fv = v * cells - j
+        row = bytearray()
+        for x in range(size):
+            u = x / size
+            i = int(u * cells)
+            fu = u * cells - i
+            ox = (_hash01(i % cells, j % cells, 19.19, 27.77) - 0.5) * 0.5
+            oy = (_hash01(i % cells, j % cells, 33.33, 47.47) - 0.5) * 0.3
+            dx = fu - 0.5 - ox
+            dy = (fv - 0.5 - oy) * 1.6
+            if dx > 0.5:
+                dx -= 1.0
+            elif dx < -0.5:
+                dx += 1.0
+            d = math.hypot(dx, dy)
+            r = 1.0 - d / 0.5
+            if r < 0.0:
+                r = 0.0
+            g = _hash01(i % cells, j % cells, 12.9898, 78.233)
+            row += bytes((int(r * 255), int(g * 255), 128))
+        rows.append(bytes(row))
+    return size, size, rows
+
+
+def gen_sdf_ceiling_tile(size: int = 256, cells: int = 8, fissures: int = 10,
+                         seed: int = 4242):
+    """Acoustic drop-ceiling tile - perforation grid plus sparse fissures.
+
+    Two marks unioned: crisp small holes on a square lattice (the pin-prick
+    of acoustic tile, tighter and harder than the halftone dots) and a
+    seeded set of short diagonal fissure segments (mineral-fibre cracks).
+    Segments keep a 0.1 margin from the tile edge (the leaf-seam lesson:
+    a field element crossing the edge shows as a wrap step the interior
+    never produces). R = max of both marks; G = lattice-cell hash.
+    """
+    rng = random.Random(seed)
+    segs = []
+    for _ in range(fissures):
+        cx = rng.uniform(0.1, 0.9)
+        cy = rng.uniform(0.1, 0.9)
+        ang = rng.uniform(-1.2, 1.2) + (0.0 if rng.random() < 0.5
+                                        else math.pi / 2.0)
+        ln = rng.uniform(0.04, 0.10)
+        segs.append((cx, cy, math.cos(ang), math.sin(ang), ln))
+    rows = []
+    for y in range(size):
+        v = y / size
+        row = bytearray()
+        for x in range(size):
+            u = x / size
+            i = int(u * cells)
+            fu = u * cells - i
+            j = int(v * cells)
+            fv = v * cells - j
+            d = math.hypot(fu - 0.5, fv - 0.5)
+            r = 1.0 - d / 0.14
+            if r < 0.0:
+                r = 0.0
+            for (cx, cy, dx, dy, ln) in segs:
+                ex, ey = cx + dx * ln * 0.5, cy + dy * ln * 0.5
+                sx, sy = cx - dx * ln * 0.5, cy - dy * ln * 0.5
+                wx, wy = ex - sx, ey - sy
+                l2 = wx * wx + wy * wy
+                t = ((u - sx) * wx + (v - sy) * wy) / l2 if l2 else 0.0
+                t = 0.0 if t < 0.0 else (1.0 if t > 1.0 else t)
+                dd = math.hypot(u - (sx + wx * t), v - (sy + wy * t))
+                f = 1.0 - dd / 0.012
+                if f > r:
+                    r = f
+            if r < 0.0:
+                r = 0.0
+            elif r > 1.0:
+                r = 1.0
+            g = _hash01(i % cells, j % cells, 12.9898, 78.233)
+            row += bytes((int(r * 255), int(g * 255), 128))
+        rows.append(bytes(row))
+    return size, size, rows
+
+
+def gen_sdf_weave_fine(size: int = 256, threads: int = 24):
+    """Fine plain weave - cubicle cloth and task-chair fabric, baked.
+
+    The baked sibling of analytic CellIndex 11: the over-under parity is
+    identical (alternating thread axis by cell parity), but the thread
+    profile is CONTINUOUS, so bilinear filtering gives soft thread crowns
+    the analytic frac() chain aliases on. R = 1 on the thread crown
+    (1 minus the selected axis triangle); G = per-cell hash. Tiles with
+    an integer threads.
+    """
+    rows = []
+    for y in range(size):
+        v = y / size
+        j = int(v * threads)
+        fv = v * threads - j
+        row = bytearray()
+        for x in range(size):
+            u = x / size
+            i = int(u * threads)
+            fu = u * threads - i
+            tri_u = abs(2.0 * fu - 1.0)
+            tri_v = abs(2.0 * fv - 1.0)
+            sel = tri_v if (i + j) % 2 else tri_u
+            r = 1.0 - sel
+            g = _hash01(i % threads, j % threads, 12.9898, 78.233)
+            row += bytes((int(r * 255), int(g * 255), 128))
+        rows.append(bytes(row))
+    return size, size, rows
+
+
+def gen_sdf_blinds(size: int = 256, slats: int = 10):
+    """Venetian blind slats - rounded slat faces plus lift-cord shadows.
+
+    R = slat face (full-bodied triangle to the 0.7, so the Density cut
+    reads louvres rather than wires) maxed with two thin vertical cord
+    lines at u = 0.25 / 0.75 (tile-exact rational positions). G = per-slat
+    hash for dust/tilt variance. The window wall of every cubicle shot.
+    """
+    rows = []
+    for y in range(size):
+        v = y / size
+        s = v * slats
+        fr = s - math.floor(s)
+        slat = abs(2.0 * fr - 1.0) ** 0.7
+        cell = int(math.floor(s)) % slats
+        g = _hash01(cell, 0.0, 12.9898, 78.233)
+        row = bytearray()
+        for x in range(size):
+            u = x / size
+            cord = min(abs(u - 0.25), abs(u - 0.75))
+            cline = 1.0 - min(1.0, cord / 0.008)
+            r = slat if slat > cline * 0.9 else cline * 0.9
+            row += bytes((int(r * 255), int(g * 255), 128))
+        rows.append(bytes(row))
+    return size, size, rows
+
+
+def gen_sdf_paper_grain(size: int = 256):
+    """Paper fibre - faint two-axis laid lines broken by hash.
+
+    Deliberately LOW contrast (peak ~0.5): paper tooth should lift a
+    close-up (calendar insert, donut-box note) without printing a grid
+    on every wide. Integer lattice frequencies tile exactly; the hash
+    breakup keeps it fibrous rather than ruled. R = fibre mark.
+    """
+    rows = []
+    for y in range(size):
+        v = y / size
+        row = bytearray()
+        for x in range(size):
+            u = x / size
+            fh = abs(2.0 * (u * 90 - math.floor(u * 90)) - 1.0)
+            fv = abs(2.0 * (v * 140 - math.floor(v * 140)) - 1.0)
+            f = fh * 0.65 + fv * 0.35
+            h = _hash01(int(u * 16) % 16, int(v * 16) % 16,
+                        12.9898, 78.233)
+            r = f * (0.55 + 0.45 * h) * 0.5
+            row += bytes((int(r * 255), int(h * 255), 128))
+        rows.append(bytes(row))
+    return size, size, rows
+
+
+def gen_sdf_woodgrain(size: int = 256):
+    """Laminate desk woodgrain - long streaks warped by low-frequency swell.
+
+    The grain coordinate advances an integer 6 across u (cathedral spacing)
+    plus a warp of integer 3 and 7 cycles across v, so the swell tiles;
+    fine streaks at integer 48 ride the same warp doubled. R = grain mark
+    (1 on the dark latewood line); G = streak hash. The desk tops the
+    worker actually types on.
+    """
+    rows = []
+    for y in range(size):
+        v = y / size
+        warp = (1.8 * math.sin(2.0 * math.pi * 3 * v)
+                + 0.9 * math.sin(2.0 * math.pi * 7 * v + 1.3))
+        row = bytearray()
+        for x in range(size):
+            u = x / size
+            s = u * 6 + warp
+            fr = s - math.floor(s)
+            r = abs(2.0 * fr - 1.0)
+            s2 = u * 48 + warp * 2.0
+            fr2 = s2 - math.floor(s2)
+            fine = abs(2.0 * fr2 - 1.0) * 0.3
+            if fine > r:
+                r = fine
+            cell = int(math.floor(s)) % 6
+            g = _hash01(cell, 0.0, 12.9898, 78.233)
+            row += bytes((int(r * 255), int(g * 255), 128))
+        rows.append(bytes(row))
+    return size, size, rows
+
+
+def gen_sdf_brushed(size: int = 256, streaks: int = 120):
+    """Brushed metal - long vertical streaks with per-column phase.
+
+    Each of the `streaks` columns carries its own hash phase, so streaks
+    run full-tile vertically without synchronising into bands (the failure
+    of a plain stripe at this frequency). R = streak line; G = column
+    hash. Coffee machine, filing cabinets, chair legs. Tiles: v advances
+    integer 4 cycles; columns wrap by modulo hash.
+    """
+    rows = []
+    for y in range(size):
+        v = y / size
+        row = bytearray()
+        for x in range(size):
+            u = x / size
+            col = int(u * streaks) % streaks
+            ph = _hash01(col, 0.0, 12.9898, 78.233)
+            s = v * 4 + ph
+            fr = s - math.floor(s)
+            r = abs(2.0 * fr - 1.0)
+            row += bytes((int(r * 255), int(ph * 255), 128))
+        rows.append(bytes(row))
+    return size, size, rows
+
+
+def gen_sdf_cork(size: int = 256, cells: int = 10):
+    """Corkboard granules - fat jittered blobs nearly touching.
+
+    Same lattice math as the halftone dots but no row offset, a fat radius
+    (0.45 cell, so granules kiss) and a per-cell centre jitter - the
+    bulletin-board and pin-strip read. R = 1 at the granule heart; G =
+    per-granule hash for tone variance when a look wants it.
+    """
+    rows = []
+    for y in range(size):
+        v = y / size
+        j = int(v * cells)
+        fv = v * cells - j
+        row = bytearray()
+        for x in range(size):
+            u = x / size
+            i = int(u * cells)
+            fu = u * cells - i
+            ox = (_hash01(i % cells, j % cells, 91.7, 47.3) - 0.5) * 0.3
+            oy = (_hash01(i % cells, j % cells, 53.9, 11.1) - 0.5) * 0.3
+            dx, dy = fu - 0.5 - ox, fv - 0.5 - oy
+            if dx > 0.5:
+                dx -= 1.0
+            elif dx < -0.5:
+                dx += 1.0
+            d = math.hypot(dx, dy)
+            r = 1.0 - d / 0.45
+            if r < 0.0:
+                r = 0.0
+            g = _hash01(i % cells, j % cells, 12.9898, 78.233)
+            row += bytes((int(r * 255), int(g * 255), 128))
+        rows.append(bytes(row))
+    return size, size, rows
+
+
+def gen_sdf_vct(size: int = 256):
+    """Vinyl composition tile - grout grid plus quarry speckle.
+
+    R = max(sparse hash-gated speckle flecks, grout lines at half-tile
+    periods weighted 0.6 so the Density cut reads speck first, grout
+    second). The break-room and corridor floor. All periods are halves
+    or 64ths - tile-exact by construction.
+    """
+    rows = []
+    for y in range(size):
+        v = y / size
+        row = bytearray()
+        for x in range(size):
+            u = x / size
+            h = _hash01(int(u * 64) % 64, int(v * 64) % 64,
+                        12.9898, 78.233)
+            speck = 1.0 if h > 0.93 else 0.0
+            # grout peaks AT the tile borders (frac near 0), not the centres:
+            # distance to the nearest integer lattice line, both axes.
+            fu = u * 2 - math.floor(u * 2)
+            fv = v * 2 - math.floor(v * 2)
+            grout = 1.0 - min(1.0, min(min(fu, 1.0 - fu),
+                                       min(fv, 1.0 - fv)) / 0.02)
+            r = speck if speck > grout * 0.6 else grout * 0.6
+            row += bytes((int(r * 255), int(h * 255), 128))
+        rows.append(bytes(row))
+    return size, size, rows
+
+
+def gen_sdf_whiteboard_ghost(size: int = 256, arcs: int = 7, seed: int = 5150):
+    """Whiteboard ghosting - faint wide eraser arcs, low peak.
+
+    Peak capped at 0.35 BY DESIGN: ghost marks must never survive a high
+    Density cut as hard ink - they are what a wiped board leaves behind.
+    Seeded segments with a 0.25 margin: half-length (max 0.10) plus the
+    0.12 falloff (0.22 reach) must stay clear of the edge, or the wrap
+    step exceeds the interior's (the leaf-seam lesson - caught by the
+    headless tiling harness 2026-10-06). Capsule distance with a wide
+    falloff for the wiped softness. G = arc hash.
+    """
+    rng = random.Random(seed)
+    segs = []
+    for _ in range(arcs):
+        cx = rng.uniform(0.25, 0.75)
+        cy = rng.uniform(0.25, 0.75)
+        ang = rng.uniform(0.0, 2.0 * math.pi)
+        ln = rng.uniform(0.10, 0.20)
+        segs.append((cx, cy, math.cos(ang), math.sin(ang), ln))
+    rows = []
+    for y in range(size):
+        v = y / size
+        row = bytearray()
+        for x in range(size):
+            u = x / size
+            r = 0.0
+            for k, (cx, cy, dx, dy, ln) in enumerate(segs):
+                ex, ey = cx + dx * ln * 0.5, cy + dy * ln * 0.5
+                sx, sy = cx - dx * ln * 0.5, cy - dy * ln * 0.5
+                wx, wy = ex - sx, ey - sy
+                l2 = wx * wx + wy * wy
+                t = ((u - sx) * wx + (v - sy) * wy) / l2 if l2 else 0.0
+                t = 0.0 if t < 0.0 else (1.0 if t > 1.0 else t)
+                dd = math.hypot(u - (sx + wx * t), v - (sy + wy * t))
+                f = 0.35 * (1.0 - min(1.0, dd / 0.12))
+                if f > r:
+                    r = f
+            g = _hash01(int(u * 8) % 8, int(v * 8) % 8, 12.9898, 78.233)
+            row += bytes((int(r * 255), int(g * 255), 128))
+        rows.append(bytes(row))
+    return size, size, rows
+
+
+def gen_sdf_frost_bands(size: int = 256, bands: int = 4):
+    """Frosted-glass bands - smooth sinusoidal privacy stripes.
+
+    The ONLY smooth-profile map in the library: R is a sine gradient, not
+    a triangle, so bilinear filtering renders a true frost falloff for
+    the conference-door glazing bands. Integer bands tile exactly.
+    G is flat hash (spare texture for future etch variance).
+    """
+    rows = []
+    for y in range(size):
+        v = y / size
+        r = 0.5 + 0.5 * math.sin(2.0 * math.pi * bands * v)
+        g = _hash01(int(v * bands) % bands, 0.0, 12.9898, 78.233)
+        row = bytes((int(r * 255), int(g * 255), 128)) * size
+        rows.append(bytes(row))
+    return size, size, rows
+
+
+def gen_sdf_cardboard(size: int = 256):
+    """Kraft cardboard - fine flute lines plus recycled speckle.
+
+    R = max(horizontal flute triangle at integer 64, hash-gated speckle
+    at FULL mark - the flecks are the contrast the Density cut reads, and
+    a 0.9 cap quantizes below its own bar (caught headless 2026-10-06))
+    so the donut box reads as fibreboard, not flat tan, under the
+    Cardboard profile. G = speckle hash. Tile-exact integer periods.
+    """
+    rows = []
+    for y in range(size):
+        v = y / size
+        fr = v * 64 - math.floor(v * 64)
+        flute = abs(2.0 * fr - 1.0) * 0.7
+        row = bytearray()
+        for x in range(size):
+            u = x / size
+            h = _hash01(int(u * 32) % 32, int(v * 32) % 32,
+                        12.9898, 78.233)
+            speck = 1.0 if h > 0.90 else 0.0
+            r = flute if flute > speck else speck
+            row += bytes((int(r * 255), int(h * 255), 128))
+        rows.append(bytes(row))
+    return size, size, rows
+
+
 # ---------------------------------------------------------------------------
 # Catalogue
 # ---------------------------------------------------------------------------
@@ -531,6 +921,60 @@ CATALOG = [
      "maskless", False,
      "Leaf-cluster cover SDF (unioned capsules, seeded RNG) - the foliage "
      "master's opacity mask source. R = cover, soft silhouette edges."),
+    # --------------------------------------- office tilables (2026-10-06)
+    # Twelve maps for the Office Spider set. Same contract as the six above
+    # (RG, house polarity, tile-exact, sRGB off, wrap, lossless, no mips),
+    # consumed through CellIndex 12 + per-instance PatternSDFMap - no
+    # function change needed to use any of them.
+    ("T_SDF_CarpetLoop", lambda: gen_sdf_carpet_loop(), False, "bilinear",
+     "wrap", "maskless", False,
+     "Loop-pile carpet: elliptical loops on a jittered lattice (trodden "
+     "lean). The carpet look with actual pile read; T_SDF_Dots stays the "
+     "generic halftone."),
+    ("T_SDF_CeilingTile", lambda: gen_sdf_ceiling_tile(), False, "bilinear",
+     "wrap", "maskless", False,
+     "Acoustic drop-ceiling: pin-perforation grid plus seeded mineral "
+     "fissures (edged-margined, the seam lesson). Pairs with "
+     "TP_Office_DropCeiling."),
+    ("T_SDF_WeaveFine", lambda: gen_sdf_weave_fine(), False, "bilinear",
+     "wrap", "maskless", False,
+     "Fine plain weave, continuous thread crowns (bilinear-soft where "
+     "analytic CellIndex 11 aliases): cubicle cloth, task-chair fabric."),
+    ("T_SDF_Blinds", lambda: gen_sdf_blinds(), False, "bilinear", "wrap",
+     "maskless", False,
+     "Venetian slats with lift-cord shadows at u = 0.25/0.75. The window "
+     "wall of every cubicle shot."),
+    ("T_SDF_PaperGrain", lambda: gen_sdf_paper_grain(), False, "bilinear",
+     "wrap", "maskless", False,
+     "Paper fibre, deliberately low-contrast (peak ~0.5): tooth for "
+     "close-ups (calendar insert, notes) that never prints a grid on wides."),
+    ("T_SDF_Woodgrain", lambda: gen_sdf_woodgrain(), False, "bilinear",
+     "wrap", "maskless", False,
+     "Laminate desk grain: integer-spaced streaks warped by integer swell "
+     "cycles. The tops the worker types on."),
+    ("T_SDF_Brushed", lambda: gen_sdf_brushed(), False, "bilinear", "wrap",
+     "maskless", False,
+     "Brushed metal: full-length streaks, per-column hash phase (no band "
+     "synchronisation). Coffee machine, filing, chair legs."),
+    ("T_SDF_Cork", lambda: gen_sdf_cork(), False, "bilinear", "wrap",
+     "maskless", False,
+     "Corkboard granules: fat jittered blobs that kiss. Bulletin boards, "
+     "pin strips."),
+    ("T_SDF_VCT", lambda: gen_sdf_vct(), False, "bilinear", "wrap",
+     "maskless", False,
+     "Vinyl composition tile: half-tile grout grid (border-peaked) plus "
+     "quarry speckle. Break-room and corridor floors."),
+    ("T_SDF_WhiteboardGhost", lambda: gen_sdf_whiteboard_ghost(), False,
+     "bilinear", "wrap", "maskless", False,
+     "Eraser-ghost arcs, peak capped at 0.35 so no Density cut can ink "
+     "them hard. What a wiped board leaves behind."),
+    ("T_SDF_FrostBands", lambda: gen_sdf_frost_bands(), False, "bilinear",
+     "wrap", "maskless", False,
+     "Frosted-glass privacy bands: the only smooth-sine map in the "
+     "library, a true frost falloff for door glazing."),
+    ("T_SDF_Cardboard", lambda: gen_sdf_cardboard(), False, "bilinear",
+     "wrap", "maskless", False,
+     "Kraft flute + recycled speckle for the donut box under TP_Cardboard."),
 ]
 
 # Coloured-shadow stops. #352D40 warm violet is the manifest's canonical

@@ -270,7 +270,9 @@ def build(rebuild=True):
     pat_index = lib.scalar(mat, "PatternIndex", "Pattern", 0.0, -1240, 1880,
                            desc="0 halftone 1 checker 2 stripes 3 crackle 4 ink "
                                 "5 crosshatch 6 stipple 7 rings 8 voronoi 9 grid "
-                                "10 perforation 11 weave 12 sdfmap")
+                                "10 perforation 11 weave 12 sdfmap 13 subway "
+                                "14 blinds 15 paperfiber 16 brushed 17 chevron "
+                                "18 frostbands")
     pat_density = lib.scalar(mat, "PatternDensity", "Pattern", 0.5, -1240, 1960,
                              desc="Ink coverage 0..1 - raise in shadow")
     pat_strength = lib.scalar(mat, "PatternStrength", "Pattern", 0.0, -1240, 2040,
