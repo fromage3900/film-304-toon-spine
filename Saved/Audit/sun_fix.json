@@ -1,0 +1,6 @@
+{
+  "before": "<Struct 'Rotator' (0x000002EC094B3030) {pitch: -0.000000, yaw: 35.000000, roll: -46.000000",
+  "after": "<Struct 'Rotator' (0x000002EC094B3030) {pitch: -46.000000, yaw: -0.000000, roll: 35.000000",
+  "saved": true,
+  "ok": true
+}

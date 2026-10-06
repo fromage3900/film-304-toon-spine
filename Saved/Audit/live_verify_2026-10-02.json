@@ -1,0 +1,126 @@
+{
+  "ok": true,
+  "errors": [],
+  "master_scalar_params": [
+    "AudioReactivity",
+    "BandScale",
+    "BandStrength",
+    "BassWeight",
+    "BoilIntensity",
+    "BrushScale",
+    "ContactShadowDistance",
+    "ContactShadowRadius",
+    "ContactShadowStrength",
+    "CurvatureSensitivity",
+    "DryRoughness",
+    "EdgeStrength",
+    "EmissiveIntensity",
+    "GildingStrength",
+    "GoldEmissive",
+    "InkIntensity",
+    "MidWeight",
+    "NoiseScale",
+    "OilPaintStrength",
+    "OrnamentScale",
+    "OrnamentStyle",
+    "ParallaxHeight",
+    "ParallaxScale",
+    "ParallaxSteps",
+    "PatternAngle",
+    "PatternDensity",
+    "PatternHatchShadowDensity",
+    "PatternHatchShadowDrive",
+    "PatternIndex",
+    "PatternScale",
+    "PatternStrength",
+    "PoolingStrength",
+    "RampStrength",
+    "SmearStrength",
+    "StrokeStrength",
+    "TemporalStrength",
+    "TrebleWeight",
+    "UVRotation",
+    "UVScale",
+    "WetRoughness",
+    "Wetness",
+    "WindSpeed"
+  ],
+  "master_vector_params": [
+    "AccentTint",
+    "BaseTint",
+    "EmissiveColor",
+    "GoldTint",
+    "InkColor",
+    "KeyLightDir"
+  ],
+  "has_RampStrength": true,
+  "has_EmissiveIntensity": true,
+  "has_EmissiveColor": true,
+  "toon_profile": "TP_Default",
+  "colorramp3_mask": "parameter-fed",
+  "profiles": {
+    "TP_Office_Carpet": {
+      "loads": true,
+      "hatch_field": "ShadowHatchingPatternTexture=\"/Script/Engine.Texture2D'/Game/Materials/Textures/T_Hatch_Diagonal.T_Hatch_Diagonal'\"",
+      "hatch_is_none": false
+    },
+    "TP_Office_PowderCoat": {
+      "loads": true,
+      "hatch_field": "ShadowHatchingPatternTexture=\"/Script/Engine.Texture2D'/Game/Materials/Textures/T_Hatch_Cross.T_Hatch_Cross'\"",
+      "hatch_is_none": false
+    },
+    "TP_Office_DropCeiling": {
+      "loads": true,
+      "hatch_field": "ShadowHatchingPatternTexture=None",
+      "hatch_is_none": true
+    },
+    "TP_Hero": {
+      "loads": true,
+      "hatch_field": "ShadowHatchingPatternTexture=None",
+      "hatch_is_none": true
+    }
+  },
+  "textures": {
+    "T_Hatch_Diagonal": {
+      "loads": true,
+      "srgb": "",
+      "filter": "TF_BILINEAR",
+      "address_x": "TA_WRAP"
+    },
+    "T_Hatch_Cross": {
+      "loads": true,
+      "srgb": "",
+      "filter": "TF_BILINEAR",
+      "address_x": "TA_WRAP"
+    },
+    "T_Noise_White": {
+      "loads": true,
+      "srgb": "",
+      "filter": "TF_BILINEAR",
+      "address_x": "TA_WRAP"
+    },
+    "T_Dither_Bayer": {
+      "loads": true,
+      "srgb": "",
+      "filter": "TF_NEAREST",
+      "address_x": "TA_WRAP"
+    }
+  },
+  "instances": {
+    "MI_Toon_Office_Troffer": {
+      "loads": true,
+      "parent": "M_Master_Toon_Universal",
+      "override_toon_profile": false
+    },
+    "MI_Toon_Office_Screen": {
+      "loads": true,
+      "parent": "M_Master_Toon_Universal",
+      "override_toon_profile": false
+    },
+    "MI_Toon_Hero": {
+      "loads": true,
+      "parent": "M_Master_Toon_Universal",
+      "override_toon_profile": false
+    }
+  }
+}

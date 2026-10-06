@@ -62,7 +62,11 @@ def build(rebuild=True):
     lib.connect(zero, "", uv, ["B", "b"])
 
     sample = lib.expr(fn, unreal.MaterialExpressionTextureSample, -660, 60)
-    lib.connect(ramp_tex, "", sample, ["TextureObject", ""])
+    # FIX 2026-10-03: the texture pin is named 'Tex' on this build; the old
+    # candidates ("TextureObject", "") both missed, so the sample compiled with
+    # no texture source and every bUsePaintedRamp instance failed to compile
+    # ("Missing input texture"). _resolve_pin matches the real name.
+    lib.connect(ramp_tex, "", sample, ["Tex", "TextureObject", ""])
     lib.connect(uv, "", sample, ["UVs", ""])
 
     # ---------------- lerp original over the ramped result ----------------

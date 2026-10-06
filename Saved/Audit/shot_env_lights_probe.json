@@ -1,0 +1,32 @@
+{
+  "level": "L_Toon_Shot_Env",
+  "lights": [
+    {
+      "actor": "DirectionalLight_1",
+      "class": "DirectionalLight",
+      "hidden": false,
+      "component": "DirectionalLightComponent",
+      "intensity": "3.200000047683716",
+      "light_color": "<Struct 'Color' (0x000002EB4F410EB8) {b: 255, g: 255, r: 255, a: 255}>",
+      "rotation": "<Struct 'Rotator' (0x000002EC0A5362C0) {pitch: -0.000000, yaw: 35.000000, roll: -46.000000"
+    },
+    {
+      "actor": "SkyLight_1",
+      "class": "SkyLight",
+      "hidden": false,
+      "component": "SkyLightComponent",
+      "intensity": "1.0",
+      "light_color": "<Struct 'Color' (0x000002EBB70607B8) {b: 255, g: 255, r: 255, a: 255}>",
+      "rotation": "<Struct 'Rotator' (0x000002EC0A5379E0) {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>"
+    },
+    {
+      "actor": "SkyAtmosphere_1",
+      "class": "SkyAtmosphere",
+      "hidden": false,
+      "component": "SkyAtmosphereComponent",
+      "rotation": "<Struct 'Rotator' (0x000002EC0A536540) {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>"
+    }
+  ],
+  "actors": 16,
+  "ok": true
+}

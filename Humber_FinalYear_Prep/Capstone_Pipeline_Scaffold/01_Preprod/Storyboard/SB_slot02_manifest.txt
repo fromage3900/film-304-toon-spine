@@ -1,0 +1,4 @@
+# Team Member 02: Storyboard & Animatic Artist
+- Directory: `01_Preprod/Storyboard/`
+- Required prefixes: `SB_`, `PNL_`
+- Responsibilities: Storyboard panels, 2D animatics, timing sheets.

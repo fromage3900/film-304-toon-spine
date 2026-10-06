@@ -1,0 +1,92 @@
+{
+  "ok": true,
+  "meshes": {
+    "SM_OFFICE_BarbicanScale": {
+      "asset": "/Game/Environment/Brutalist/03_OFFICE_BLOCK/SM_OFFICE_BarbicanScale.SM_OFFICE_BarbicanScale",
+      "family_hint": null,
+      "loads": true,
+      "slot_count": 1,
+      "slots": [
+        "<Struct 'StaticMaterial' (0x000002EB45FD9980) {material_interface: None, material_slot_name: \"Material_0\", uv_channel_data: {}, overlay_material_interface: None}>"
+      ],
+      "num_materials_error": "'StaticMesh' object has no attribute 'get_num_materials'"
+    },
+    "SM_OFFICE_Bunker": {
+      "asset": "/Game/Environment/Brutalist/03_OFFICE_BLOCK/SM_OFFICE_Bunker.SM_OFFICE_Bunker",
+      "family_hint": null,
+      "loads": true,
+      "slot_count": 1,
+      "slots": [
+        "<Struct 'StaticMaterial' (0x000002EB45FDC200) {material_interface: \"/Script/Engine.MaterialInstanceConstant'/Game/Materials/Instances/MI_Toon_Environment.MI_Toon_Environment'\", material_slot_name: \"Material_0\", uv_channel_data: {}, overlay_material_interface: None}>"
+      ],
+      "num_materials_error": "'StaticMesh' object has no attribute 'get_num_materials'"
+    },
+    "SM_OFFICE_CivicSlab": {
+      "asset": "/Game/Environment/Brutalist/03_OFFICE_BLOCK/SM_OFFICE_CivicSlab.SM_OFFICE_CivicSlab",
+      "family_hint": null,
+      "loads": true,
+      "slot_count": 1,
+      "slots": [
+        "<Struct 'StaticMaterial' (0x000002EB45FDC780) {material_interface: None, material_slot_name: \"Material_0\", uv_channel_data: {}, overlay_material_interface: None}>"
+      ],
+      "num_materials_error": "'StaticMesh' object has no attribute 'get_num_materials'"
+    },
+    "SM_OFFICE_SlenderTower": {
+      "asset": "/Game/Environment/Brutalist/03_OFFICE_BLOCK/SM_OFFICE_SlenderTower.SM_OFFICE_SlenderTower",
+      "family_hint": null,
+      "loads": true,
+      "slot_count": 1,
+      "slots": [
+        "<Struct 'StaticMaterial' (0x000002EB45FDF400) {material_interface: None, material_slot_name: \"Material_0\", uv_channel_data: {}, overlay_material_interface: None}>"
+      ],
+      "num_materials_error": "'StaticMesh' object has no attribute 'get_num_materials'"
+    },
+    "SM_CUBICLE_Canonical": {
+      "asset": "/Game/Environment/Brutalist/04_INTERIOR_CUBICLES/SM_CUBICLE_Canonical.SM_CUBICLE_Canonical",
+      "family_hint": null,
+      "loads": true,
+      "slot_count": 1,
+      "slots": [
+        "<Struct 'StaticMaterial' (0x000002EB45FDAB40) {material_interface: \"/Script/Engine.MaterialInstanceConstant'/Game/Materials/Instances/MI_Toon_Environment.MI_Toon_Environment'\", material_slot_name: \"Material_0\", uv_channel_data: {}, overlay_material_interface: None}>"
+      ],
+      "num_materials_error": "'StaticMesh' object has no attribute 'get_num_materials'"
+    },
+    "SM_CUBICLE_MazeShift": {
+      "asset": "/Game/Environment/Brutalist/04_INTERIOR_CUBICLES/SM_CUBICLE_MazeShift.SM_CUBICLE_MazeShift",
+      "family_hint": null,
+      "loads": true,
+      "slot_count": 1,
+      "slots": [
+        "<Struct 'StaticMaterial' (0x000002EB45FDD040) {material_interface: \"/Script/Engine.MaterialInstanceConstant'/Game/Materials/Instances/MI_Toon_Environment.MI_Toon_Environment'\", material_slot_name: \"Material_0\", uv_channel_data: {}, overlay_material_interface: None}>"
+      ],
+      "num_materials_error": "'StaticMesh' object has no attribute 'get_num_materials'"
+    },
+    "SM_CUBICLE_OpenPlan": {
+      "asset": "/Game/Environment/Brutalist/04_INTERIOR_CUBICLES/SM_CUBICLE_OpenPlan.SM_CUBICLE_OpenPlan",
+      "family_hint": null,
+      "loads": true,
+      "slot_count": 1,
+      "slots": [
+        "<Struct 'StaticMaterial' (0x000002EB45FDE7C0) {material_interface: \"/Script/Engine.MaterialInstanceConstant'/Game/Materials/Instances/MI_Toon_Environment.MI_Toon_Environment'\", material_slot_name: \"Material_0\", uv_channel_data: {}, overlay_material_interface: None}>"
+      ],
+      "num_materials_error": "'StaticMesh' object has no attribute 'get_num_materials'"
+    },
+    "SM_CUBICLE_Swarm": {
+      "asset": "/Game/Environment/Brutalist/04_INTERIOR_CUBICLES/SM_CUBICLE_Swarm.SM_CUBICLE_Swarm",
+      "family_hint": null,
+      "loads": true,
+      "slot_count": 1,
+      "slots": [
+        "<Struct 'StaticMaterial' (0x000002EB45FD9D00) {material_interface: \"/Script/Engine.MaterialInstanceConstant'/Game/Materials/Instances/MI_Toon_Environment.MI_Toon_Environment'\", material_slot_name: \"Material_0\", uv_channel_data: {}, overlay_material_interface: None}>"
+      ],
+      "num_materials_error": "'StaticMesh' object has no attribute 'get_num_materials'"
+    }
+  },
+  "api": {
+    "StaticMesh.get_material_slots": false,
+    "StaticMesh.static_materials": true,
+    "StaticMesh.set_material": true,
+    "MeshDescriptionSupport": false,
+    "StaticMeshComponent_exists": true
+  }
+}

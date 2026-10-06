@@ -13,8 +13,13 @@ from pathlib import Path
 
 import unreal
 
-MASTER_PATH = "/Game/EnvSandbox/Materials/Masters/M_Master_Toon_Universal"
-REPORT_PATH = Path(__file__).resolve().parents[2] / "Saved" / "DependencyMap.json"
+MASTER_PATH = "/Game/Materials/Masters/M_Master_Toon_Universal"
+
+# parents[1] is THIS REPO's root (parents[0] is Python/). It used to be
+# parents[2], which walks one level ABOVE the repo: from
+# P:\film-304-toon-spine\Python it resolved to P:\Saved\DependencyMap.json, i.e.
+# it tried to write a report to the root of the drive. Reported 2026-09-30.
+REPORT_PATH = Path(__file__).resolve().parents[1] / "Saved" / "DependencyMap.json"
 
 
 def get_mf_calls(material) -> list[str]:

@@ -1,0 +1,4 @@
+# Team Member 03: Concept Art & Visual Reference Lead
+- Directory: `01_Preprod/References/`
+- Required prefixes: `REF_`, `CON_`
+- Responsibilities: Moodboards, visual references, lighting keys, color palettes.

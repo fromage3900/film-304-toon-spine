@@ -1,0 +1,33 @@
+{
+  "material": "M_PainterlyGouache",
+  "errors": [],
+  "loads": true,
+  "expression_count": 54,
+  "toon_bsdf_nodes": 1,
+  "toon_profile": "TP_Default",
+  "bsdf_pins_exposed": [
+    "BaseColor",
+    "Metallic",
+    "Specular",
+    "Roughness",
+    "Normal",
+    "EmissiveColor",
+    "PatternUVs",
+    "Anisotropy",
+    "Tangent"
+  ],
+  "reachability_live": 54,
+  "reachability_dead": 0,
+  "missing_pins": [],
+  "texture_params": {
+    "T_Gouache_WashBlotch": "/Game/Materials/Textures/Gouache/T_Gouache_WashBlotch.T_Gouache_WashBlotch",
+    "T_Gouache_Granulation": "/Game/Materials/Textures/Gouache/T_Gouache_Granulation.T_Gouache_Granulation",
+    "T_Gouache_BrushEdge": "/Game/Materials/Textures/Gouache/T_Gouache_BrushEdge.T_Gouache_BrushEdge",
+    "T_Gouache_PaperGrain": "/Game/Materials/Textures/Gouache/T_Gouache_PaperGrain.T_Gouache_PaperGrain"
+  },
+  "unassigned_textures": [],
+  "recompile_called": true,
+  "shader_statistics": "<Struct 'MaterialStatistics' (0x0000016A43C1C4A0) {num_vertex_shader_instructions: 140, num_pixel_shader_instructions: 322, num_samplers: 7, num_vertex_texture_samples: 3, num_pixel_texture_samples: 4, num_virtual_texture_samples: 0, num_uv_scalars: 2, num_interpolator_scalars: 0}>",
+  "has_shader_stats": true,
+  "ok": true
+}

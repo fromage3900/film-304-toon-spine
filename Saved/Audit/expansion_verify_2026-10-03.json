@@ -1,0 +1,157 @@
+{
+  "written": "2026-10-03",
+  "independent": true,
+  "master_profiles": {
+    "M_Master_Toon_Universal": {
+      "want": "TP_Default",
+      "ok": true,
+      "bound": "TP_Default"
+    },
+    "M_Master_Toon_Foliage": {
+      "want": "TP_Foliage",
+      "ok": true,
+      "bound": "TP_Foliage"
+    },
+    "M_Master_Toon_Water": {
+      "want": "TP_Water",
+      "ok": true,
+      "bound": "TP_Water"
+    }
+  },
+  "instance_maps": {
+    "MI_Toon_Scales": {
+      "want": "T_SDF_Scales",
+      "ok": true,
+      "got": "T_SDF_Scales",
+      "pattern_index": 12.0
+    },
+    "MI_Toon_CrackedStone": {
+      "want": "T_SDF_Cracks",
+      "ok": true,
+      "got": "T_SDF_Cracks",
+      "pattern_index": 12.0
+    },
+    "MI_Foliage_Fern": {
+      "want": "T_SDF_Strokes",
+      "ok": true,
+      "got": "T_SDF_Strokes",
+      "pattern_index": 12.0
+    },
+    "MI_Toon_Office_PowderCoat": {
+      "want": "T_SDF_Cross",
+      "ok": true,
+      "got": "T_SDF_Cross",
+      "pattern_index": 12.0
+    },
+    "MI_Toon_Office_Carpet": {
+      "want": "T_SDF_Dots",
+      "ok": true,
+      "got": "T_SDF_Dots",
+      "pattern_index": 12.0
+    },
+    "MI_Toon_Stone": {
+      "want": "T_SDF_Cracks",
+      "ok": true,
+      "got": "T_SDF_Cracks",
+      "pattern_index": 12.0
+    }
+  },
+  "sdf_texture_settings": {
+    "T_SDF_Strokes": {
+      "ok": true,
+      "got": {
+        "srgb": false,
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "256x256"
+    },
+    "T_SDF_Cross": {
+      "ok": true,
+      "got": {
+        "srgb": false,
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "256x256"
+    },
+    "T_SDF_Dots": {
+      "ok": true,
+      "got": {
+        "srgb": false,
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "256x256"
+    },
+    "T_SDF_Scales": {
+      "ok": true,
+      "got": {
+        "srgb": false,
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "256x256"
+    },
+    "T_SDF_Cracks": {
+      "ok": true,
+      "got": {
+        "srgb": false,
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "256x256"
+    },
+    "T_SDF_Leaf": {
+      "ok": true,
+      "got": {
+        "srgb": false,
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "256x256"
+    }
+  },
+  "master_calls": {
+    "M_Master_Toon_Foliage": {
+      "want": [
+        "MF_ColorRamp3",
+        "MF_RampLUT",
+        "MF_ProceduralPatterns"
+      ],
+      "ok": true,
+      "found": [
+        "MF_ColorRamp3",
+        "MF_ProceduralPatterns",
+        "MF_RampLUT"
+      ]
+    },
+    "M_Master_Toon_Water": {
+      "want": [
+        "MF_ColorRamp3",
+        "MF_RampLUT",
+        "MF_ProceduralPatterns"
+      ],
+      "ok": true,
+      "found": [
+        "MF_ColorRamp3",
+        "MF_ProceduralPatterns",
+        "MF_RampLUT"
+      ]
+    }
+  },
+  "errors": [],
+  "ok": true
+}

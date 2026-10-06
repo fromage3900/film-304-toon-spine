@@ -1,0 +1,45 @@
+﻿MELODIA TOON FILM - verify_all
+run      : 2026-10-03 21:36:21
+repo     : P:\film-304-toon-spine
+bracket  : 8 checks, 0 failed
+
+
+Check                                         Result Detail                                                     
+-----                                         ------ ------                                                     
+fork sync (vendored vs upstream)              PASS   PASS - vendored set matches upstream                       
+Blender available                             PASS   C:\Program Files\Blender Foundation\Blender 5.2\blender.exe
+fork verifier (builders/presets/dials)        PASS   16 assertions passed, 0 failed                             
+external actors in levels are present on disk PASS   1 level(s) use external actors; 158 packages on disk       
+no self-named packages                        PASS   ok                                                         
+levels resolve to their own package path      PASS   ok                                                         
+documented paths exist                        PASS   ok                                                         
+pre-commit hook self-test                     PASS   PASS  (8 passed, 0 failed)                                 
+
+
+
+
+RAW FORK SYNC
+========================================================================
+FORK SYNC CHECK
+  upstream : P:\MelodiaMelusinaV2-Laptop\deploy\surreal_arch\melodia_gn
+  fork     : P:\film-304-toon-spine\Blender\surreal_arch\melodia_gn
+  commit   : 5000baf6
+------------------------------------------------------------------------
+  v brutalist_city.py          IN_SYNC
+  v brutalist_cubicles.py      IN_SYNC
+  v brutalist_materials.py     IN_SYNC
+  v brutalist_office.py        IN_SYNC
+  v brutalist_roofs.py         IN_SYNC
+  v brutalist_uv.py            IN_SYNC
+  v core.py                    IN_SYNC
+  v higgsas_pipeline.py        IN_SYNC
+  v logging.py                 IN_SYNC
+  v paris_common.py            IN_SYNC
+  v time.py                    IN_SYNC
+  ~ presets.py                 THINNED
+  ~ __init__.py                THINNED
+------------------------------------------------------------------------
+RESULT: PASS - vendored set matches upstream
+
+
+RESULT: PASS

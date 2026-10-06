@@ -1,0 +1,4 @@
+# Team Member 11: Action & Camera Layout Animator
+- Directory: `03_Scenes/Animation/Action/`
+- Required prefixes: `SC_ACTN_`
+- Responsibilities: Camera choreographies, dynamic blocking, reel shot 6 hero rig action.

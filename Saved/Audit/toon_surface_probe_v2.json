@@ -1,0 +1,39 @@
+{
+  "ok": true,
+  "errors": [],
+  "probe": "v2",
+  "substrate_node_count": 1,
+  "substrate_pins": [
+    "BaseColor",
+    "Metallic",
+    "Specular",
+    "Roughness",
+    "Normal",
+    "EmissiveColor",
+    "PatternUVs",
+    "Anisotropy",
+    "Tangent"
+  ],
+  "substrate_has_emissive_pin": true,
+  "emissive_front_material": {
+    "asset": "/Game/Materials/Masters/__Probe_Toon_Emissive.__Probe_Toon_Emissive",
+    "front_material_set": true,
+    "emissive_property_set": true,
+    "recompiled": true,
+    "expression_count": 3
+  },
+  "transform": {
+    "present": true,
+    "properties": [],
+    "note": "set properties via try/except, not has_editor_property"
+  },
+  "api": {
+    "connect_material_property": true,
+    "connect_material_expressions": true,
+    "input_names": true,
+    "AssetImportTask": true,
+    "TextureSampleParam2D": true,
+    "import_asset_tasks": true,
+    "TextureFactory": true
+  }
+}

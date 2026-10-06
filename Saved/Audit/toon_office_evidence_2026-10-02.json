@@ -1,0 +1,131 @@
+﻿{
+    "generated":  "2026-10-02 21:23:51",
+    "purpose":  "Companion evidence for the 304 toon office suite: mesh -\u003e material -\u003e bound toon profile, plus the stills that show it.",
+    "sun_fix":  {
+                    "bug":  "unreal.Rotator positional constructor is (roll,pitch,yaw); the spec sun_rotation is (pitch,yaw,roll), so -46 landed in roll and pitch became 0",
+                    "measured_before":  "pitch 0.000000, yaw 35.000000, roll -46.000000",
+                    "measured_after":  "pitch -46.000000, yaw -0.000000, roll 35.000000",
+                    "fixed_in":  [
+                                     "Python/compose_shot_env_level.py",
+                                     "Saved/Audit/fix_sun_rotation.py"
+                                 ],
+                    "effect":  "Stills went from near-black silhouettes to correctly lit frames; file size SH020 280KB -\u003e 850KB."
+                },
+    "office_assignments":  {
+                               "SM_CUBICLE_Canonical":  {
+                                                            "instance":  "MI_Toon_Office_Polypropylene",
+                                                            "before":  [
+                                                                           "None"
+                                                                       ],
+                                                            "after":  "MI_Toon_Office_Polypropylene",
+                                                            "ok":  true
+                                                        },
+                               "SM_CUBICLE_MazeShift":  {
+                                                            "instance":  "MI_Toon_Office_Polypropylene",
+                                                            "before":  [
+                                                                           "None"
+                                                                       ],
+                                                            "after":  "MI_Toon_Office_Polypropylene",
+                                                            "ok":  true
+                                                        },
+                               "SM_CUBICLE_OpenPlan":  {
+                                                           "instance":  "MI_Toon_Office_Polypropylene",
+                                                           "before":  [
+                                                                          "None"
+                                                                      ],
+                                                           "after":  "MI_Toon_Office_Polypropylene",
+                                                           "ok":  true
+                                                       },
+                               "SM_CUBICLE_Swarm":  {
+                                                        "instance":  "MI_Toon_Office_Polypropylene",
+                                                        "before":  [
+                                                                       "None"
+                                                                   ],
+                                                        "after":  "MI_Toon_Office_Polypropylene",
+                                                        "ok":  true
+                                                    },
+                               "SM_OFFICE_BarbicanScale":  {
+                                                               "instance":  "MI_Toon_Environment",
+                                                               "before":  [
+                                                                              "None"
+                                                                          ],
+                                                               "after":  "MI_Toon_Environment",
+                                                               "ok":  true
+                                                           },
+                               "SM_OFFICE_Bunker":  {
+                                                        "instance":  "MI_Toon_Environment",
+                                                        "before":  [
+                                                                       "None"
+                                                                   ],
+                                                        "after":  "MI_Toon_Environment",
+                                                        "ok":  true
+                                                    },
+                               "SM_OFFICE_CivicSlab":  {
+                                                           "instance":  "MI_Toon_Environment",
+                                                           "before":  [
+                                                                          "None"
+                                                                      ],
+                                                           "after":  "MI_Toon_Environment",
+                                                           "ok":  true
+                                                       },
+                               "SM_OFFICE_SlenderTower":  {
+                                                              "instance":  "MI_Toon_Environment",
+                                                              "before":  [
+                                                                             "None"
+                                                                         ],
+                                                              "after":  "MI_Toon_Environment",
+                                                              "ok":  true
+                                                          }
+                           },
+    "awaiting_geometry":  {
+                              "MI_Toon_Office_Carpet":  "carpet tile - no interior floor mesh yet",
+                              "MI_Toon_Office_Laminate":  "desk laminate - desk prop not built (Wave 1)",
+                              "MI_Toon_Office_DropCeiling":  "ceiling tile - no interior ceiling mesh yet",
+                              "MI_Toon_Office_Troffer":  "light panel - no troffer mesh yet",
+                              "MI_Toon_Office_Whiteboard":  "whiteboard - no prop mesh yet"
+                          },
+    "stills":  [
+                   {
+                       "png":  "COMP_SH010_proto_v01.png",
+                       "bytes":  945414,
+                       "local":  "2026-10-02 21:21:31",
+                       "width":  1280,
+                       "height":  720,
+                       "resolution_matches_spec":  true
+                   },
+                   {
+                       "png":  "COMP_SH020_proto_v01.png",
+                       "bytes":  870280,
+                       "local":  "2026-10-02 21:20:39",
+                       "width":  1280,
+                       "height":  720,
+                       "resolution_matches_spec":  true
+                   },
+                   {
+                       "png":  "COMP_SH030_proto_v01.png",
+                       "bytes":  670790,
+                       "local":  "2026-10-02 21:22:19",
+                       "width":  1280,
+                       "height":  720,
+                       "resolution_matches_spec":  true
+                   },
+                   {
+                       "png":  "COMP_SH070_proto_v01.png",
+                       "bytes":  656995,
+                       "local":  "2026-10-02 21:23:01",
+                       "width":  1280,
+                       "height":  720,
+                       "resolution_matches_spec":  true
+                   }
+               ],
+    "profile_note":  "ALL instances share the master M_Master_Toon_Universal bound to TP_Default. TP_Office_* profiles are authored but NOT runtime-bound - UE 5.8 exposes override_toon_profile on MaterialInstanceConstant but no assignable profile reference. Still the open owner decision.",
+    "honest_limits":  [
+                          "Toon BANDS/terminators are not clearly legible in these frames - most building faces read near-black. Lighting is fixed, but band structure and shadow-side value need a lookdev pass before these can be called final lookdev proof.",
+                          "MI_Toon_Office_* (5 instances) remain unreferenced because their interior geometry does not exist yet (prop brief Wave 1 is 1 of 8 builders done).",
+                          "Stills are gitignored regenerable output; this JSON is the versioned evidence."
+                      ],
+    "open_decisions":  [
+                           "Profile strategy: shared TP_Default (recommended), one master per family, or manual editor assignment.",
+                           "Fork drift on vendored core.py: resync with approval, or record as accepted baseline."
+                       ]
+}

@@ -80,7 +80,14 @@ def _new_map():
     # last breadcrumb was "new_level-done"). Deleting the package first is
     # enough to keep the run idempotent.
     unreal.EditorAssetLibrary.delete_asset(path)
-    unreal.EditorLevelLibrary.new_level(MAP_DIR)
+    # PASS THE LEVEL PATH, NOT THE FOLDER. This read `new_level(MAP_DIR)` and
+    # MAP_DIR is "/Game/Maps" - the FOLDER. new_level() then creates the package
+    # "/Game/Maps.Maps", i.e. a level literally named after its own folder, and
+    # _save_map() writes the real content to /Game/Maps/L_Toon_Lookdev as well.
+    # The result was TWO levels on disk, and the stray Content/Maps.umap was
+    # committed to this repo on 2026-09-30 (found by reading the package name
+    # out of the binary). Reported and fixed 2026-09-30.
+    unreal.EditorLevelLibrary.new_level(lib.asset_path(MAP_DIR, LEVEL_NAME))
     return path
 
 

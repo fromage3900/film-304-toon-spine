@@ -21,6 +21,11 @@ Inputs
     Softness    scalar - edge width of the hard threshold (0 = razor sharp)
     Angle       scalar - pattern rotation in degrees
     CellIndex   scalar - selects which pattern to return
+    Density     scalar - ink coverage 0..1; the level the field is cut against
+    SDFMap      texture2D - baked stroke field for CellIndex 12; MUST be
+                connected by every caller or the function fails to compile
+                ("Missing function input", the same hard error an unwired
+                Softness produced 2026-10-03)
 
 Outputs
     Pattern     scalar - 0..1 field for the selected pattern
@@ -32,6 +37,35 @@ Patterns
     2  Stripes    - hard parallel bars
     3  Crackle    - Worley-ish cell breakup from fractional sine distance
     4  InkSplat   - radial falloff rings, high contrast
+    5  CrossHatch - two 45-degree line families; engraving / pencil hatch
+    6  Stipple    - hashed points; dry-brush / graphite grain
+    7  Rings      - concentric focal lines; manga screentone burst
+    8  Voronoi    - F1 distance to nearest jittered feature point (3x3 search);
+                    concrete / plaster cell breakup. Added 2026-10-02, closing
+                    the SDF_PATTERN_PIPELINE.md S8 "no true Voronoi" gap.
+    9  Grid       - grout lines on a square lattice; drop-ceiling and
+                    carpet-tile rhythm
+    10 Perforation- round holes on a square lattice; acoustic panel / grille
+    11 Weave      - warp/weft over-under by cell parity; cubicle fabric
+    12 SDFMap     - baked signed-distance stroke field (T_SDF_Strokes via the
+                    SDFMap input); continuous triangle distance so bilinear
+                    filtering gives wide soft edges the analytic fields cannot
+                    without aliasing, plus per-stroke width jitter from the
+                    map's G channel. Added 2026-10-03.
+
+Density is what makes these usable in a film rather than as a flat overlay: it
+is the cut level, so raising it densifies the hatch the way a painter hatches
+into shadow. Drive it from a shadow mask or a Toon Profile and the pattern
+becomes automatic shadow hatching.
+
+Research basis (2026-10-01)
+    UE 5.8's Substrate Toon BSDF is experimental and its Toon Profile already
+    carries ShadowHatchingPattern{Texture,Size,Strength}. This function is the
+    art-directable companion: analytic, texture-free, and densifiable per
+    instance. Constructions follow the 2D signed-distance literature (Inigo
+    Quilez, "2D distance functions") - every pattern is a distance field on a
+    UV lattice, hard-thresholded. No SDF node exists in UE 5.8, so the fields
+    are composed from Sine/Frac/Abs/Floor/Length/Add/Mul.
 """
 from __future__ import annotations
 
@@ -45,6 +79,7 @@ NAME = "MF_ProceduralPatterns"
 
 FI_SCALAR = unreal.FunctionInputType.FUNCTION_INPUT_SCALAR
 FI_VECTOR2 = unreal.FunctionInputType.FUNCTION_INPUT_VECTOR2
+FI_TEXTURE = unreal.FunctionInputType.FUNCTION_INPUT_TEXTURE2D
 
 
 def _uv_basis(fn, angle_source, x=-2000):
@@ -130,9 +165,7 @@ def _halftone(fn, uv, scale, x=-1100):
     cy = lib.expr(fn, unreal.MaterialExpressionSubtract, x + 710, 40)
     lib.binary(frac_v, lib.scalar_const(fn, 0.5, x + 710, -20), cy)
 
-    len_n = lib.expr(fn, unreal.MaterialExpressionLength, x + 850, 100)
-    lib.connect(cx, "", len_n, ["A", "a"])
-    lib.connect(cy, "", len_n, ["B", "b"])
+    len_n = lib.length2(fn, cx, cy, x + 850, 100)
     return len_n
 
 
@@ -217,7 +250,7 @@ def _inksplat(fn, uv, scale, x=-1100, y_offset=1900):
     lib.binary(fr, lib.scalar_const(fn, 0.5, x + 290, y_offset + 80), cx)
 
     len_n = lib.expr(fn, unreal.MaterialExpressionLength, x + 430, y_offset)
-    lib.connect(cx, "", len_n, ["A", "a"])
+    lib.connect(cx, "", len_n, ["", "None"])
 
     ring = lib.expr(fn, unreal.MaterialExpressionSine, x + 570, y_offset)
     ring.set_editor_property("period", 1.0)
@@ -231,12 +264,378 @@ def _inksplat(fn, uv, scale, x=-1100, y_offset=1900):
     return biased
 
 
+def _crosshatch(fn, u, v, scale, x=-1100, y_offset=2450):
+    """Cross-hatch: two 45-degree line families, the engraving / pencil hatch.
+
+    Lines at -45 come from (u+v); lines at +45 from (u-v). Each is a 1D
+    distance field (abs of the fractional part), and the ink sits where either
+    family is near its line - so the two families cross into a lattice.
+    """
+    a = lib.expr(fn, unreal.MaterialExpressionAdd, x, y_offset)
+    lib.binary(u, v, a)
+    b = lib.expr(fn, unreal.MaterialExpressionSubtract, x, y_offset + 220)
+    lib.binary(u, v, b)
+
+    fa = lib.expr(fn, unreal.MaterialExpressionMultiply, x + 150, y_offset)
+    lib.connect(a, "", fa, ["A", "a"])
+    lib.connect(scale, "", fa, ["B", "b"])
+    fr_a = lib.expr(fn, unreal.MaterialExpressionFrac, x + 300, y_offset)
+    lib.unary(fa, fr_a)
+    da = lib.expr(fn, unreal.MaterialExpressionAbs, x + 450, y_offset)
+    lib.unary(fr_a, da)
+
+    fb = lib.expr(fn, unreal.MaterialExpressionMultiply, x + 150, y_offset + 220)
+    lib.connect(b, "", fb, ["A", "a"])
+    lib.connect(scale, "", fb, ["B", "b"])
+    fr_b = lib.expr(fn, unreal.MaterialExpressionFrac, x + 300, y_offset + 220)
+    lib.unary(fb, fr_b)
+    db = lib.expr(fn, unreal.MaterialExpressionAbs, x + 450, y_offset + 220)
+    lib.unary(fr_b, db)
+
+    mn = lib.expr(fn, unreal.MaterialExpressionMin, x + 600, y_offset + 110)
+    lib.binary(da, db, mn)
+    return mn
+
+
+def _stipple(fn, u, v, scale, x=-1100, y_offset=3000):
+    """Stipple: hashed points (dry-brush / graphite grain).
+
+    A value hash frac(sin(u*12.9898 + v*78.233) * 43758.5453) - the standard
+    GLSL hash, which is why it uses those irrational constants. Thresholded
+    downstream, it reads as sparse ink flecks rather than a regular lattice.
+    """
+    su = lib.expr(fn, unreal.MaterialExpressionMultiply, x, y_offset)
+    lib.binary(u, scale, su)
+    fu = lib.expr(fn, unreal.MaterialExpressionFrac, x + 150, y_offset)
+    lib.unary(su, fu)
+
+    sv = lib.expr(fn, unreal.MaterialExpressionMultiply, x, y_offset + 220)
+    lib.binary(v, scale, sv)
+    fv = lib.expr(fn, unreal.MaterialExpressionFrac, x + 150, y_offset + 220)
+    lib.unary(sv, fv)
+
+    h1 = lib.expr(fn, unreal.MaterialExpressionMultiply, x + 300, y_offset)
+    lib.binary(fu, lib.scalar_const(fn, 12.9898, x + 300, y_offset + 80), h1)
+    h2 = lib.expr(fn, unreal.MaterialExpressionMultiply, x + 300, y_offset + 220)
+    lib.binary(fv, lib.scalar_const(fn, 78.233, x + 300, y_offset + 300), h2)
+
+    hs = lib.expr(fn, unreal.MaterialExpressionAdd, x + 450, y_offset + 110)
+    lib.binary(h1, h2, hs)
+
+    sn = lib.expr(fn, unreal.MaterialExpressionSine, x + 600, y_offset + 110)
+    sn.set_editor_property("period", 1.0)
+    lib.unary(hs, sn)
+
+    hm = lib.expr(fn, unreal.MaterialExpressionMultiply, x + 750, y_offset + 110)
+    lib.binary(sn, lib.scalar_const(fn, 43758.5453, x + 750, y_offset + 190), hm)
+
+    hf = lib.expr(fn, unreal.MaterialExpressionFrac, x + 900, y_offset + 110)
+    lib.unary(hm, hf)
+    return hf
+
+
+def _rings(fn, u, v, scale, x=-1100, y_offset=3700):
+    """Rings: concentric focal lines around the UV origin (screentone burst)."""
+    su = lib.expr(fn, unreal.MaterialExpressionMultiply, x, y_offset)
+    lib.binary(u, scale, su)
+    sv = lib.expr(fn, unreal.MaterialExpressionMultiply, x, y_offset + 220)
+    lib.binary(v, scale, sv)
+
+    ln = lib.length2(fn, su, sv, x + 180, y_offset + 110)
+
+    fr = lib.expr(fn, unreal.MaterialExpressionFrac, x + 340, y_offset + 110)
+    lib.unary(ln, fr)
+    return fr
+
+
+def _hash2(fn, a, b, ka, kb, x, y):
+    """frac(sin(a*ka + b*kb) * 43758.5453) - the cheap scalar value hash.
+
+    Same construction and constants as _stipple, generalised to two inputs so
+    a cell-coordinate pair can seed two independent random channels.
+    """
+    pa = lib.expr(fn, unreal.MaterialExpressionMultiply, x, y)
+    lib.binary(a, lib.scalar_const(fn, ka, x, y + 80), pa)
+    pb = lib.expr(fn, unreal.MaterialExpressionMultiply, x, y + 140)
+    lib.binary(b, lib.scalar_const(fn, kb, x, y + 220), pb)
+    s = lib.expr(fn, unreal.MaterialExpressionAdd, x + 160, y + 70)
+    lib.binary(pa, pb, s)
+    sn = lib.expr(fn, unreal.MaterialExpressionSine, x + 320, y + 70)
+    sn.set_editor_property("period", 1.0)
+    lib.unary(s, sn)
+    m = lib.expr(fn, unreal.MaterialExpressionMultiply, x + 480, y + 70)
+    lib.binary(sn, lib.scalar_const(fn, 43758.5453, x + 480, y + 150), m)
+    fr = lib.expr(fn, unreal.MaterialExpressionFrac, x + 640, y + 70)
+    lib.unary(m, fr)
+    return fr
+
+
+def _voronoi(fn, u, v, scale, x=-1100, y_offset=4400):
+    """F1 Worley/Voronoi - distance to the nearest jittered feature point.
+
+    A TRUE 3x3 neighbourhood search. The single-cell version would be a
+    jittered lattice, not a Voronoi; SDF_PATTERN_PIPELINE.md S8 lists "a true
+    F1 Voronoi cell pattern" as the explicit next addition - this is it, used
+    for concrete/plaster cell breakup on the brutalist office set.
+
+    Distances stay SQUARED through the 9-way min (sqrt is monotonic so the
+    argmin is unchanged) and are square-rooted once at the end: 1 sqrt, not 9.
+    Feature points use AppendVector -> Length rather than Length(A,B), because
+    Append is the construction MF_RampLUT already proves on this build.
+    """
+    su = lib.expr(fn, unreal.MaterialExpressionMultiply, x, y_offset)
+    lib.binary(u, scale, su)
+    sv = lib.expr(fn, unreal.MaterialExpressionMultiply, x, y_offset + 140)
+    lib.binary(v, scale, sv)
+
+    cu = lib.expr(fn, unreal.MaterialExpressionFloor, x + 160, y_offset)
+    lib.unary(su, cu)
+    cv = lib.expr(fn, unreal.MaterialExpressionFloor, x + 160, y_offset + 140)
+    lib.unary(sv, cv)
+
+    best = None
+    for dy in (-1, 0, 1):
+        for dx in (-1, 0, 1):
+            yy = y_offset + 320 + (dy + 1) * 760 + (dx + 1) * 240
+            nu = lib.expr(fn, unreal.MaterialExpressionAdd, x + 320, yy)
+            lib.binary(cu, lib.scalar_const(fn, float(dx), x + 320, yy + 80), nu)
+            nv = lib.expr(fn, unreal.MaterialExpressionAdd, x + 320, yy + 150)
+            lib.binary(cv, lib.scalar_const(fn, float(dy), x + 320, yy + 230), nv)
+
+            hx = _hash2(fn, nu, nv, 127.1, 311.7, x + 500, yy)
+            hy = _hash2(fn, nu, nv, 269.5, 183.3, x + 500, yy + 420)
+
+            fu = lib.expr(fn, unreal.MaterialExpressionAdd, x + 1180, yy)
+            lib.binary(nu, hx, fu)                      # feature point x
+            fv = lib.expr(fn, unreal.MaterialExpressionAdd, x + 1180, yy + 150)
+            lib.binary(nv, hy, fv)                      # feature point y
+
+            du = lib.expr(fn, unreal.MaterialExpressionSubtract, x + 1340, yy)
+            lib.binary(su, fu, du)
+            dv = lib.expr(fn, unreal.MaterialExpressionSubtract, x + 1340, yy + 150)
+            lib.binary(sv, fv, dv)
+
+            du2 = lib.expr(fn, unreal.MaterialExpressionMultiply, x + 1500, yy)
+            lib.binary(du, du, du2)
+            dv2 = lib.expr(fn, unreal.MaterialExpressionMultiply, x + 1500, yy + 150)
+            lib.binary(dv, dv, dv2)
+            d2 = lib.expr(fn, unreal.MaterialExpressionAdd, x + 1660, yy + 75)
+            lib.binary(du2, dv2, d2)
+
+            if best is None:
+                best = d2
+            else:
+                mn = lib.expr(fn, unreal.MaterialExpressionMin, x + 1820, yy + 75)
+                lib.binary(best, d2, mn)
+                best = mn
+
+    dist = lib.expr(fn, unreal.MaterialExpressionSquareRoot,
+                    x + 1980, y_offset + 900)
+    lib.unary(best, dist)
+    return dist
+
+
+def _grid(fn, u, v, scale, x=-1100, y_offset=7400):
+    """Grout / ceiling tile - ink along cell boundaries, clear in the tile.
+
+    Field is high AT the grout line (|frac - 0.5| peaks where frac is 0 or 1),
+    so a low Density inks only the lines. This is the 600mm drop-ceiling and
+    carpet-tile rhythm of the office set.
+    """
+    su = lib.expr(fn, unreal.MaterialExpressionMultiply, x, y_offset)
+    lib.binary(u, scale, su)
+    sv = lib.expr(fn, unreal.MaterialExpressionMultiply, x, y_offset + 140)
+    lib.binary(v, scale, sv)
+
+    fu = lib.expr(fn, unreal.MaterialExpressionFrac, x + 160, y_offset)
+    lib.unary(su, fu)
+    fv = lib.expr(fn, unreal.MaterialExpressionFrac, x + 160, y_offset + 140)
+    lib.unary(sv, fv)
+
+    eu = lib.expr(fn, unreal.MaterialExpressionSubtract, x + 320, y_offset)
+    lib.binary(fu, lib.scalar_const(fn, 0.5, x + 320, y_offset + 80), eu)
+    au = lib.expr(fn, unreal.MaterialExpressionAbs, x + 480, y_offset)
+    lib.unary(eu, au)
+
+    ev = lib.expr(fn, unreal.MaterialExpressionSubtract, x + 320, y_offset + 140)
+    lib.binary(fv, lib.scalar_const(fn, 0.5, x + 320, y_offset + 220), ev)
+    av = lib.expr(fn, unreal.MaterialExpressionAbs, x + 480, y_offset + 140)
+    lib.unary(ev, av)
+
+    mx = lib.expr(fn, unreal.MaterialExpressionMax, x + 640, y_offset + 70)
+    lib.binary(au, av, mx)
+    twice = lib.expr(fn, unreal.MaterialExpressionMultiply, x + 800, y_offset + 70)
+    lib.binary(mx, lib.scalar_const(fn, 2.0, x + 800, y_offset + 150), twice)
+    return twice
+
+
+def _perforation(fn, u, v, scale, x=-1100, y_offset=8200):
+    """Office panel perforations - holes on a square lattice.
+
+    Field peaks AT the hole centre (1 - scaled distance), so ink lands on the
+    holes and a high Density closes them. Distinct from _halftone: that offsets
+    every other row into a triangular lattice for screen-print dots; this is a
+    square grid of round holes - an acoustic panel or speaker grille, both real
+    objects in the office prop brief.
+    """
+    su = lib.expr(fn, unreal.MaterialExpressionMultiply, x, y_offset)
+    lib.binary(u, scale, su)
+    sv = lib.expr(fn, unreal.MaterialExpressionMultiply, x, y_offset + 140)
+    lib.binary(v, scale, sv)
+
+    fu = lib.expr(fn, unreal.MaterialExpressionFrac, x + 160, y_offset)
+    lib.unary(su, fu)
+    fv = lib.expr(fn, unreal.MaterialExpressionFrac, x + 160, y_offset + 140)
+    lib.unary(sv, fv)
+
+    cu = lib.expr(fn, unreal.MaterialExpressionSubtract, x + 320, y_offset)
+    lib.binary(fu, lib.scalar_const(fn, 0.5, x + 320, y_offset + 80), cu)
+    cv = lib.expr(fn, unreal.MaterialExpressionSubtract, x + 320, y_offset + 140)
+    lib.binary(fv, lib.scalar_const(fn, 0.5, x + 320, y_offset + 220), cv)
+
+    pair = lib.expr(fn, unreal.MaterialExpressionAppendVector,
+                    x + 480, y_offset + 70)
+    lib.connect(cu, "", pair, ["A", "a"])
+    lib.connect(cv, "", pair, ["B", "b"])
+    ln = lib.expr(fn, unreal.MaterialExpressionLength, x + 640, y_offset + 70)
+    lib.connect(pair, "", ln, ["", "None"])
+
+    # centre (0) -> 1, corner (0.707) -> 0: so 1 - saturate(len * 1.4142).
+    scaled = lib.expr(fn, unreal.MaterialExpressionMultiply,
+                      x + 800, y_offset + 70)
+    lib.binary(ln, lib.scalar_const(fn, 1.4142, x + 800, y_offset + 150), scaled)
+    sat = lib.expr(fn, unreal.MaterialExpressionSaturate, x + 960, y_offset + 70)
+    lib.unary(scaled, sat)
+    inv = lib.expr(fn, unreal.MaterialExpressionOneMinus, x + 1120, y_offset + 70)
+    lib.unary(sat, inv)
+    return inv
+
+
+def _weave(fn, u, v, scale, x=-1100, y_offset=9000):
+    """Warp/weft weave - cubicle fabric and acoustic cloth.
+
+    Alternates which axis carries the thread profile by the parity of the cell
+    (floor(u) + floor(v)), so consecutive cells read as over-under weaving
+    rather than a plain grid - that is _grid's job, not this one.
+    """
+    su = lib.expr(fn, unreal.MaterialExpressionMultiply, x, y_offset)
+    lib.binary(u, scale, su)
+    sv = lib.expr(fn, unreal.MaterialExpressionMultiply, x, y_offset + 140)
+    lib.binary(v, scale, sv)
+
+    fu = lib.expr(fn, unreal.MaterialExpressionFrac, x + 160, y_offset)
+    lib.unary(su, fu)
+    fv = lib.expr(fn, unreal.MaterialExpressionFrac, x + 160, y_offset + 140)
+    lib.unary(sv, fv)
+
+    pu = lib.expr(fn, unreal.MaterialExpressionAbs, x + 320, y_offset)
+    lib.unary(fu, pu)
+    cu = lib.expr(fn, unreal.MaterialExpressionSubtract, x + 480, y_offset)
+    lib.binary(pu, lib.scalar_const(fn, 0.5, x + 480, y_offset + 80), cu)
+
+    pv = lib.expr(fn, unreal.MaterialExpressionAbs, x + 320, y_offset + 140)
+    lib.unary(fv, pv)
+    cv = lib.expr(fn, unreal.MaterialExpressionSubtract, x + 480, y_offset + 140)
+    lib.binary(pv, lib.scalar_const(fn, 0.5, x + 480, y_offset + 220), cv)
+
+    # parity = frac((floor(su) + floor(sv)) * 0.5) * 2  -> 0 or 1
+    gu = lib.expr(fn, unreal.MaterialExpressionFloor, x + 640, y_offset + 300)
+    lib.unary(su, gu)
+    gv = lib.expr(fn, unreal.MaterialExpressionFloor, x + 640, y_offset + 440)
+    lib.unary(sv, gv)
+    gsum = lib.expr(fn, unreal.MaterialExpressionAdd, x + 800, y_offset + 370)
+    lib.binary(gu, gv, gsum)
+    half = lib.expr(fn, unreal.MaterialExpressionMultiply,
+                    x + 960, y_offset + 370)
+    lib.binary(gsum, lib.scalar_const(fn, 0.5, x + 960, y_offset + 450), half)
+    par_f = lib.expr(fn, unreal.MaterialExpressionFrac, x + 1120, y_offset + 370)
+    lib.unary(half, par_f)
+    parity = lib.expr(fn, unreal.MaterialExpressionMultiply,
+                      x + 1280, y_offset + 370)
+    lib.binary(par_f, lib.scalar_const(fn, 2.0, x + 1280, y_offset + 450), parity)
+
+    pick = lib.expr(fn, unreal.MaterialExpressionIf, x + 1440, y_offset + 200)
+    lib.connect(parity, "", pick, ["A"])
+    lib.connect(lib.scalar_const(fn, 0.5, x + 1440, y_offset + 300),
+                "", pick, ["B"])
+    lib.connect(cv, "", pick, ["A > B"])
+    lib.connect(cv, "", pick, ["A == B"])
+    lib.connect(cu, "", pick, ["A < B"])
+    return pick
+
+
+def _sdfmap(fn, u, v, scale, sdf_in, x=-1100, y_offset=9800):
+    """Baked SDF stroke map (T_SDF_Strokes) - CellIndex 12.
+
+    Samples the map's R field at the rotated/scaled UV and shifts it by the
+    per-stroke width jitter carried in G, then returns it through the shared
+    Density/Softness cut like every other pattern. The baked field is a
+    continuous triangle of the wrapped stroke coordinate, so bilinear
+    filtering gives wide soft edges the analytic frac() fields cannot
+    produce without aliasing - that is the reason this one is a texture.
+    """
+    su = lib.expr(fn, unreal.MaterialExpressionMultiply, x, y_offset)
+    lib.binary(u, scale, su)
+
+    # NOTE: u from _uv_basis is the rotated TEXCOORD (float2), and su = u*scale
+    # is already the float2 sample UV - the same componentwise convention the
+    # analytic fields use. Appending su and sv would build a float4 and trip
+    # "Cannot cast from larger type float4 to smaller type float2" at the
+    # sample's UVs pin (caught by the 2026-10-03 build).
+
+    sample = lib.expr(fn, unreal.MaterialExpressionTextureSample,
+                      x + 320, y_offset + 70)
+    # The texture pin is 'Tex' on this build - measured for MF_RampLUT
+    # 2026-10-03 ("Missing input texture" when the old candidates missed).
+    lib.connect(sdf_in, "", sample, ["Tex", "TextureObject", ""])
+    lib.connect(su, "", sample, ["UVs", ""])
+
+    # Channel split via ComponentMask on the RGB output: no reliance on the
+    # sample's per-channel pin names, which are not stable across builds.
+    r_ch = lib.expr(fn, unreal.MaterialExpressionComponentMask,
+                    x + 520, y_offset)
+    r_ch.set_editor_property("r", True)
+    r_ch.set_editor_property("g", False)
+    r_ch.set_editor_property("b", False)
+    r_ch.set_editor_property("a", False)
+    lib.connect(sample, "", r_ch, ["", "None"])
+
+    g_ch = lib.expr(fn, unreal.MaterialExpressionComponentMask,
+                    x + 520, y_offset + 220)
+    g_ch.set_editor_property("r", False)
+    g_ch.set_editor_property("g", True)
+    g_ch.set_editor_property("b", False)
+    g_ch.set_editor_property("a", False)
+    lib.connect(sample, "", g_ch, ["", "None"])
+
+    # Width jitter: field -+ (G - 0.5) * 0.22 shifts each stroke's effective
+    # half-width by up to ~11% of the stroke spacing, hand-inked variance the
+    # analytic line families do not have.
+    centred = lib.expr(fn, unreal.MaterialExpressionSubtract,
+                       x + 700, y_offset + 220)
+    lib.binary(g_ch, lib.scalar_const(fn, 0.5, x + 700, y_offset + 300),
+               centred)
+
+    jitter = lib.expr(fn, unreal.MaterialExpressionMultiply,
+                      x + 860, y_offset + 220)
+    lib.binary(centred, lib.scalar_const(fn, 0.22, x + 860, y_offset + 300),
+               jitter)
+
+    shifted = lib.expr(fn, unreal.MaterialExpressionAdd,
+                       x + 1020, y_offset + 110)
+    lib.binary(r_ch, jitter, shifted)
+    return shifted
+
+
 def build(rebuild=True):
     lib.log(f"=== {NAME} ===")
     fn = lib.get_or_create_function(NAME, rebuild=rebuild)
     lib.try_set(fn, "description",
-                "SDF-style procedural patterns (halftone/checker/stripes/crackle/ink). "
-                "UE 5.8 has no SDF node; these are analytic distance constructions.")
+                "SDF-style procedural patterns (halftone/checker/stripes/crackle/ink/"
+                "crosshatch/stipple/rings/voronoi/grid/perforation/weave/sdfmap) with "
+                "a Density coverage knob. "
+                "UE 5.8 has no SDF node; 0-11 are analytic distance constructions, "
+                "12 samples a baked signed-distance stroke texture.")
 
     # ---------------- inputs ----------------
     uv_in = lib.add_function_input(fn, "UV", FI_VECTOR2, x=-2200, y=0)
@@ -248,11 +647,21 @@ def build(rebuild=True):
                                       preview=(0.0, 0, 0, 0), x=-2200, y=460)
     cell_in = lib.add_function_input(fn, "CellIndex", FI_SCALAR,
                                      preview=(0.0, 0, 0, 0), x=-2200, y=600)
+    # Density = ink coverage. It is the level the field is cut against, so it
+    # densifies the pattern the way a painter hatching into shadow does.
+    dens_in = lib.add_function_input(fn, "Density", FI_SCALAR,
+                                     preview=(0.5, 0, 0, 0), x=-2200, y=740)
+    # Baked SDF stroke field for CellIndex 12. A texture2D function input has
+    # no preview default, so this MUST be wired by the caller - the master
+    # connects a TextureObjectParameter (PatternSDFMap) the same way it feeds
+    # MF_RampLUT's RampTexture.
+    sdf_in = lib.add_function_input(fn, "SDFMap", FI_TEXTURE,
+                                    x=-2200, y=880)
 
     # per-pattern scale multipliers so one Scale knob still gives each pattern
     # its natural frequency
     scales = {}
-    for i, mult in enumerate([1.0, 1.0, 1.0, 1.0, 1.0]):
+    for i, mult in enumerate([1.0] * 13):
         scales[i] = lib.expr(fn, unreal.MaterialExpressionMultiply, -1900, 700 + i * 60)
         lib.connect(scale_in, "", scales[i], ["A"])
         lib.connect(lib.scalar_const(fn, mult, -1900, 780 + i * 60), "", scales[i], ["B"])
@@ -262,12 +671,22 @@ def build(rebuild=True):
     tex, u, v = _uv_basis(fn, angle_in)
 
     # ---------------- pattern fields ----------------
+    # 0-7 are the 2026-10-01 set; 8-11 added 2026-10-02 for the office film
+    # (SDF_PATTERN_PIPELINE.md S3 table is the authority for what each is for).
     fields = {
         0: _halftone(fn, u, scales[0]),
         1: _checker(fn, u, scales[1]),
         2: _stripes(fn, u, scales[2]),
         3: _crackle(fn, u, scales[3]),
         4: _inksplat(fn, u, scales[4]),
+        5: _crosshatch(fn, u, v, scales[5]),
+        6: _stipple(fn, u, v, scales[6]),
+        7: _rings(fn, u, v, scales[7]),
+        8: _voronoi(fn, u, v, scales[8]),
+        9: _grid(fn, u, v, scales[9]),
+        10: _perforation(fn, u, v, scales[10]),
+        11: _weave(fn, u, v, scales[11]),
+        12: _sdfmap(fn, u, v, scales[12], sdf_in),
     }
 
     # ---------------- pattern selector (nested static-free If chain) ----------------
@@ -296,12 +715,14 @@ def build(rebuild=True):
     lib.connect(soft_in, "", half_soft, ["A"])
     lib.connect(lib.scalar_const(fn, 0.5, -100, 2480), "", half_soft, ["B"])
 
+    # The cut level is Density, not a fixed 0.5: raising Density inks more of
+    # the surface, which is how the pattern reads as shadow hatching.
     lo = lib.expr(fn, unreal.MaterialExpressionSubtract, 40, 2360)
-    lib.connect(lib.scalar_const(fn, 0.5, -100, 2560), "", lo, ["A"])
+    lib.connect(dens_in, "", lo, ["A"])
     lib.connect(half_soft, "", lo, ["B"])
 
     hi = lib.expr(fn, unreal.MaterialExpressionAdd, 40, 2560)
-    lib.connect(lib.scalar_const(fn, 0.5, -100, 2640), "", hi, ["A"])
+    lib.connect(dens_in, "", hi, ["A"])
     lib.connect(half_soft, "", hi, ["B"])
 
     edge = lib.expr(fn, unreal.MaterialExpressionSmoothStep, 200, 2200)

@@ -3,6 +3,9 @@
 	"EngineAssociation": "5.8",
 	"Category": "Film",
 	"Description": "Animation Art 5 group film - stylized look development. Content-only project: no C++ module, no third-party plugins.",
+	"AdditionalPluginDirectories": [
+		"P:/MelodiaSharedPlugins"
+	],
 	"Plugins": [
 		{
 			"Name": "MovieRenderPipeline",
@@ -10,6 +13,26 @@
 		},
 		{
 			"Name": "PythonScriptPlugin",
+			"Enabled": true
+		},
+		{
+			"Name": "Monolith",
+			"Enabled": true
+		},
+		{
+			"Name": "Claireon",
+			"Enabled": true
+		},
+		{
+			"Name": "MCPClientToolset",
+			"Enabled": true
+		},
+		{
+			"Name": "AllToolsets",
+			"Enabled": true
+		},
+		{
+			"Name": "EditorScriptingUtilities",
 			"Enabled": true
 		}
 	]

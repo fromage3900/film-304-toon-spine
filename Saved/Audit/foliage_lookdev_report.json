@@ -1,0 +1,68 @@
+{
+  "level": "L_Foliage_Lookdev",
+  "errors": [],
+  "warnings": [],
+  "cards": {
+    "SM_Foliage_CardQuad": {
+      "verts": 4,
+      "tris": 2,
+      "imported": true
+    },
+    "SM_Foliage_CardCross": {
+      "verts": 8,
+      "tris": 4,
+      "imported": true
+    },
+    "SM_Foliage_CardFan": {
+      "verts": 12,
+      "tris": 6,
+      "imported": true
+    }
+  },
+  "scene": [
+    {
+      "label": "FLD_Fern_Quad",
+      "card": "SM_Foliage_CardQuad",
+      "instance": "fern",
+      "spawned": true
+    },
+    {
+      "label": "FLD_Fern_Cross",
+      "card": "SM_Foliage_CardCross",
+      "instance": "fern",
+      "spawned": true
+    },
+    {
+      "label": "FLD_Hedge_Cross",
+      "card": "SM_Foliage_CardCross",
+      "instance": "hedge",
+      "spawned": true
+    },
+    {
+      "label": "FLD_Hedge_Fan",
+      "card": "SM_Foliage_CardFan",
+      "instance": "hedge",
+      "spawned": true
+    },
+    {
+      "label": "FLD_Fan_Tilted",
+      "card": "SM_Foliage_CardFan",
+      "instance": "fern",
+      "spawned": true
+    }
+  ],
+  "materials": {},
+  "level_asset": "/Game/Maps/L_Foliage_Lookdev",
+  "level_saved": true,
+  "census": {
+    "total": 9,
+    "static_mesh": 6,
+    "all_cards_present": true
+  },
+  "notes": {
+    "sway": "SwayAmount/SwaySpeed/SwayPhase are instance-level on MI_Foliage_*/the master; sway is a WPO term, so stills prove the mask and shading only - motion needs PIE.",
+    "silhouette_is_mask": "The cards are plain quads; the silhouette is T_SDF_Leaf cut by MaskCutoff/MaskSharpness. A ragged edge here is a mask/opacity problem, never a mesh problem.",
+    "two_sided": "The master is two-sided; the cross/fan topologies exist precisely to expose back-face shading."
+  },
+  "ok": true
+}

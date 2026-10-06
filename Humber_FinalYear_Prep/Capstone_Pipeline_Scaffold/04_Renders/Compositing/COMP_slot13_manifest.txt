@@ -1,0 +1,4 @@
+# Team Member 13: VFX & Compositing Artist
+- Directory: `04_Renders/Compositing/`
+- Required prefixes: `FX_`, `COMP_`
+- Responsibilities: Cymatic particles, halftone paper overlay, render passes comp, title cards.

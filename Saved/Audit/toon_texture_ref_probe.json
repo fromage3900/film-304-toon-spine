@@ -1,0 +1,31 @@
+{
+  "ok": true,
+  "results": {
+    "class_quoted": {
+      "ref": "Texture2D'/Game/Materials/Textures/T_Hatch_Cross.T_Hatch_Cross'",
+      "exported_line": "Keys=,DefaultValue=340282346638528859811704183484516925440.000000,PreInfinityExtrap=RCCE_Constant,PostInfinityExtrap=RCCE_Constant),ExternalCurve=None),ShadowHatchingPatternTexture=\"/Script/Engine.Texture2D'/Game/Materia",
+      "import_returned": true,
+      "bound": false
+    },
+    "bare_path": {
+      "ref": "/Game/Materials/Textures/T_Hatch_Cross.T_Hatch_Cross",
+      "exported_line": "Keys=,DefaultValue=340282346638528859811704183484516925440.000000,PreInfinityExtrap=RCCE_Constant,PostInfinityExtrap=RCCE_Constant),ExternalCurve=None),ShadowHatchingPatternTexture=\"/Script/Engine.Texture2D'/Game/Materia",
+      "import_returned": true,
+      "bound": false
+    },
+    "class_quoted_no_suffix": {
+      "ref": "Texture2D'/Game/Materials/Textures/T_Hatch_Cross'",
+      "exported_line": "Keys=,DefaultValue=340282346638528859811704183484516925440.000000,PreInfinityExtrap=RCCE_Constant,PostInfinityExtrap=RCCE_Constant),ExternalCurve=None),ShadowHatchingPatternTexture=\"/Script/Engine.Texture2D'/Game/Materia",
+      "import_returned": true,
+      "bound": false
+    },
+    "object_colon_form": {
+      "ref": "Texture2D'/Game/Materials/Textures/T_Hatch_Cross.T_Hatch_Cross'",
+      "exported_line": "Keys=,DefaultValue=340282346638528859811704183484516925440.000000,PreInfinityExtrap=RCCE_Constant,PostInfinityExtrap=RCCE_Constant),ExternalCurve=None),ShadowHatchingPatternTexture=\"/Script/Engine.Texture2D'/Game/Materia",
+      "import_returned": true,
+      "bound": false
+    }
+  },
+  "errors": [],
+  "winning_syntax": null
+}

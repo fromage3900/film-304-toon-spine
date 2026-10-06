@@ -1,0 +1,2354 @@
+{
+  "generated_utc": "2026-10-04",
+  "source_repo": "C:/EnvironmentPortfolio/BS_GodFile",
+  "target_repo": "G:\\film-304-toon-spine",
+  "method": "binary package-path scan of untracked Content/Materials/*.uasset against toon-project package index",
+  "totals": {
+    "untracked_materials": 132,
+    "clean": 0,
+    "partial": 0,
+    "broken": 132,
+    "no_refs": 0,
+    "hash_identical_source": 132
+  },
+  "dangling_by_package": {
+    "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index": 91,
+    "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_7_-_512x512": 38,
+    "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_1_-_512x512": 25,
+    "/Game/_PROJECT/04_Materials/MPC_Melodia_Palette": 21,
+    "/Game/_PROJECT/04_Materials/Textures/Swirl/Swirl_1_-_512x512": 21,
+    "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_2_-_512x512": 20,
+    "/Game/_PROJECT/04_Materials/Textures/Voronoi/Voronoi_2_-_512x512": 14,
+    "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_1_-_512x512": 12,
+    "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_3_-_512x512": 12,
+    "/Game/_PROJECT/04_Materials/Textures/Grainy/Grainy_1_-_512x512": 11,
+    "/Game/_PROJECT/04_Materials/Textures/Voronoi/Voronoi_3_-_512x512": 8,
+    "/Game/_PROJECT/04_Materials/Textures/Voronoi/Voronoi_11_-_512x512": 5,
+    "/Game/_PROJECT/04_Materials/Textures/Vein/Vein_8_-_512x512": 4,
+    "/Game/_PROJECT/04_Materials/Textures/Swirl/Swirl_2_-_512x512": 4,
+    "/Game/_PROJECT/04_Materials/Textures/Vein/Vein_5_-_512x512": 4,
+    "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_4_-_512x512": 4,
+    "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_6_-_512x512": 4,
+    "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_9_-_512x512": 4,
+    "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_2_-_512x512": 4,
+    "/Game/_PROJECT/04_Materials/Textures/Cracks/Cracks_3_-_512x512": 3,
+    "/Game/_PROJECT/04_Materials/Textures/Vein/Vein_6_-_512x512": 3,
+    "/Game/_PROJECT/04_Materials/Textures/T_Starryfabric_albedo": 3,
+    "/Game/_PROJECT/04_Materials/Textures/T_Starryfabric_normal": 3,
+    "/Game/MaterialFunctions/MF_BlendModeSwitch": 2,
+    "/Game/EnvSandbox/Materials/Functions/MF_ColorRamp3": 2,
+    "/Game/_PROJECT/04_Materials/Textures/Voronoi/Voronoi_1_-_512x512": 2,
+    "/Game/MaterialFunctions/MF_MooaEncodeAttributes": 2,
+    "/Game/MaterialFunctions/MF_UVChannelSwitch": 2,
+    "/Game/_PROJECT/04_Materials/Textures/Vein/Vein_7_-_512x512": 2,
+    "/Game/_PROJECT/04_Materials/Textures/Vein/Vein_9_-_512x512": 2,
+    "/Game/_PROJECT/04_Materials/Textures/Swirl/Swirl_9_-_512x512": 2,
+    "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_3_-_512x512": 2,
+    "/Game/_PROJECT/04_Materials/Textures/Voronoi/Voronoi_9_-_512x512": 2,
+    "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_5_-_512x512": 2,
+    "/Game/_PROJECT/04_Materials/Textures/Swirl/Swirl_6_-_512x512": 2,
+    "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_5_-_512x512": 2,
+    "/Game/EnvSandbox/Materials/Functions/MF_AnimeSkinWrap": 1,
+    "/Game/EnvSandbox/Materials/Functions/MF_AudioReactiveBlend": 1,
+    "/Game/EnvSandbox/Materials/Functions/MF_ClothWindDrape": 1,
+    "/Game/EnvSandbox/Materials/Functions/MF_ConstellationField": 1,
+    "/Game/EnvSandbox/Materials/Space/Textures/T_NASA_MilkyWay_4K": 1,
+    "/Game/EnvSandbox/Materials/Space/Textures/T_NASA_StarMap_4K": 1,
+    "/Game/EnvSandbox/Materials/Functions/MF_CurvatureOrnament": 1,
+    "/Game/EnvSandbox/Materials/Functions/MF_DF_ContactBlend": 1,
+    "/Game/EnvSandbox/Materials/Functions/MF_FabricMountainWPO": 1,
+    "/Game/EnvSandbox/Materials/Functions/MF_GemstoneAbsorption": 1,
+    "/Game/EnvSandbox/Materials/Functions/MF_GemstoneCymatics": 1,
+    "/Game/EnvSandbox/Materials/Functions/MF_GemstoneDispersion": 1,
+    "/Game/EnvSandbox/Materials/Functions/MF_GemstoneInternalFacet": 1,
+    "/Game/EnvSandbox/Materials/Functions/MF_GildingOverlay": 1,
+    "/Game/EnvSandbox/Materials/Functions/MF_HeightToNormal": 1,
+    "/Game/EnvSandbox/Materials/Functions/MF_Impressionist_BrushStroke": 1,
+    "/Game/EnvSandbox/Materials/Functions/MF_Impressionist_Impasto": 1,
+    "/Game/EnvSandbox/Materials/Functions/MF_Impressionist_InkPool": 1,
+    "/Game/EnvSandbox/Materials/Functions/MF_Impressionist_Temporal": 1,
+    "/Game/EnvSandbox/Materials/Functions/MF_InkAccumulation": 1,
+    "/Game/EnvSandbox/Materials/Functions/MF_Itto": 1,
+    "/Game/EnvSandbox/Materials/Functions/MF_LandscapeDistanceBands": 1,
+    "/Game/EnvSandbox/Materials/Functions/MF_LandscapeHeightCompete": 1,
+    "/Game/EnvSandbox/Materials/Functions/MF_LandscapeMacroVariation": 1,
+    "/Game/EnvSandbox/Materials/Functions/MF_LandscapeStorybookSDF": 1,
+    "/Game/EnvSandbox/Materials/Functions/MF_Madoka": 1,
+    "/Game/Melodia/_PROJECT/04_Materials/MPC_Melodia_Palette": 1,
+    "/Game/EnvSandbox/Materials/Functions/MF_MelodiaGlitterPile": 1,
+    "/Game/EnvSandbox/Materials/Functions/MF_MelodiaIridescenceSheen": 1,
+    "/Game/EnvSandbox/VFX/Materials/Functions/MF_MelodiaPetalLifecycle": 1,
+    "/Game/Melodia/_PROJECT/04_Materials/Functions/MF_MelodiaWindHueReveal": 1,
+    "/Game/_PROJECT/04_Materials/Functions/MF_MeluPaintBase": 1,
+    "/Game/_PROJECT/04_Materials/Functions/MF_MeluPaletteColors": 1,
+    "/Game/_PROJECT/04_Materials/Functions/MF_MeluSparkle": 1,
+    "/Game/_PROJECT/04_Materials/Functions/MF_MeluTemporalJitter": 1,
+    "/Game/_PROJECT/04_Materials/Functions/MF_MeluTriplanar": 1,
+    "/Game/EnvSandbox/Materials/Functions/MF_Melusina_SDFIris": 1,
+    "/Game/MaterialFunctions/MF_MooaDecodeAttributes": 1,
+    "/Game/Assets/Textures/T_Black_Linear": 1,
+    "/Game/Assets/Textures/T_Gray_Linear": 1,
+    "/Game/Assets/Textures/T_White_Linear": 1,
+    "/Game/MaterialFunctions/MF_MooaToonBaseInput": 1,
+    "/Game/MaterialFunctions/MF_MooaToonBaseInput_2": 1,
+    "/Game/Materials/MF_MeshBlend_Activator_Index": 1,
+    "/Game/MaterialFunctions/MF_TranslucencyShadowToOpacityMask": 1,
+    "/Game/MaterialFunctions/MF_UberBlendMode": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/Advanced/M_AdvBio_LuminescentVeins": 1,
+    "/Game/_PROJECT/04_Materials/Textures/Vein/Vein_10_-_512x512": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/Advanced/M_AdvCelestial_StarMap": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/Advanced/M_AdvCrystal_Fracturing": 1,
+    "/Game/_PROJECT/04_Materials/Textures/Vein/Vein_3_-_512x512": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/Advanced/M_AdvErosion_DecayingRealm": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/Advanced/M_AdvFabric_EtherealFlow": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/Advanced/M_AdvMembrane_OrganicTissue": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/Advanced/M_AdvMetal_LivingAlloy": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/Advanced/M_AdvMirage_HeatDistortion": 1,
+    "/Game/_PROJECT/04_Materials/Textures/Turbulence/Turbulence_11_-_512x512": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/Advanced/M_AdvNebula_CosmicDust": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/Advanced/M_AdvPortal_FlowingEnergy": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/Advanced/M_AdvQuantum_RealtiyFoam": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/Advanced/M_AdvShimmer_Hypnotic": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/Advanced/M_AdvVoid_AntiLight": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_AdvVortex_DepthInfinity": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/Asteroids/M_Asteroid_Carbonaceous": 1,
+    "/Game/_PROJECT/04_Materials/Textures/Grainy/Grainy_4_-_512x512": 1,
+    "/Game/_PROJECT/04_Materials/Textures/Turbulence/Turbulence_3_-_512x512": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/Asteroids/M_Asteroid_Chondrite": 1,
+    "/Game/_PROJECT/04_Materials/Textures/Cracks/Cracks_1_-_512x512": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/Asteroids/M_Asteroid_Field_Niagara": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/Asteroids/M_Asteroid_Metallic": 1,
+    "/Game/_PROJECT/04_Materials/Textures/Cracks/Cracks_5_-_512x512": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/AudioReactive/M_AudioReactive_BaseMaster": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_AudioReactive_CrystalChime": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_BeatSync_EmissionGlow": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_Bookshelf_Standard": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/Character/M_Character_Clothing": 1,
+    "/Game/_PROJECT/04_Materials/Textures/Grainy/Grainy_2_-_512x512": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/Landscape/M_Cloud_Atmospheric": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/ColorPalette/M_ColorPalette_Reverse1999": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_Crystal_Clear_Toon": 1,
+    "/Game/_PROJECT/04_Materials/Textures/512x512/Circular/Circular_6_-_512x512": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_Crystal_Colored_Toon": 1,
+    "/Game/_PROJECT/04_Materials/Textures/Voronoi/Voronoi_13_-_512x512": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_DayCycle_Atmosphere": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_Fabric_Toon": 1,
+    "/Game/_PROJECT/04_Materials/Textures/T_Starryfabric_displace": 1,
+    "/Game/_PROJECT/04_Materials/Textures/Voronoi/Voronoi_5_-_512x512": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/LOD/M_Gallery_LOD_High": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/LOD/M_Gallery_LOD_Low": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/LOD/M_Gallery_LOD_Medium": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_Glass_Refract_Toon": 1,
+    "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_4_-_512x512": 1,
+    "/Game/_PROJECT/04_Materials/Textures/Voronoi/Voronoi_12_-_512x512": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/Glitter/M_Glitter_UltimateSparkling": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/Glitter/M_Glitter_WorldAligned": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_InkWash_Impressionist": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_IridescentMystical": 1,
+    "/Game/_PROJECT/04_Materials/Textures/Swirl/Swirl_7_-_512x512": 1,
+    "/Game/_PROJECT/04_Materials/Textures/Voronoi/Voronoi_14_-_512x512": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_Leather_Toon": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_AuroraSong": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Base": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_CrystalChime": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Facade_Baroque_Enhanced": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Gallery": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_GhostFlame": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_GildedMolding_v2": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Glitter_Iridescent": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_GoldLeaf": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Halftone_Enhanced": 1,
+    "/Game/_PROJECT/04_Materials/Textures/__op9p__o90_diffuseOriginal": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Halftone_Universal": 1,
+    "/Game/_PROJECT/04_Materials/Textures/Grainy/Grainy_3_-_512x512": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Halftone_Vortex": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Hybrid_LayeredVortex": 1,
+    "/Game/_PROJECT/04_Materials/Textures/Melt/Melt_8_-_512x512": 1,
+    "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_6_-_512x512": 1,
+    "/Game/_PROJECT/04_Materials/Textures/Swirl/Swirl_4_-_512x512": 1,
+    "/Game/_PROJECT/04_Materials/Textures/Turbulence/Turbulence_4_-_512x512": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Hybrid_VortexVeins": 1,
+    "/Game/_PROJECT/04_Materials/Textures/Swirl/Swirl_8_-_512x512": 1,
+    "/Game/_PROJECT/04_Materials/Textures/Turbulence/Turbulence_5_-_512x512": 1,
+    "/Game/_PROJECT/04_Materials/Textures/Voronoi/Voronoi_10_-_512x512": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_InkSplash": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Layered_Aquamarine": 1,
+    "/Game/_PROJECT/04_Materials/Textures/interiorwalltrim_aquamarine_BaseColor": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Layered_Master": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Layered_Nebula": 1,
+    "/Game/_PROJECT/04_Materials/Textures/sbs_-_seamless_space_backgrounds_-_large_1024x1024/Large_1024x1024/Blue_Nebula/Blue_Nebula_3_-_1024x1024": 1,
+    "/Game/_PROJECT/04_Materials/Textures/sbs_-_seamless_space_backgrounds_-_large_1024x1024/Large_1024x1024/Green_Nebula/Green_Nebula_1_-_1024x1024": 1,
+    "/Game/_PROJECT/04_Materials/Textures/sbs_-_seamless_space_backgrounds_-_large_1024x1024/Large_1024x1024/Purple_Nebula/Purple_Nebula_2_-_1024x1024": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Layered_Terracotta": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Marble_Veined_v2": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Master": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Parallax_Baroque": 1,
+    "/Game/_PROJECT/04_Materials/Textures/Textures/T_Cobble_BSS": 1,
+    "/Game/_PROJECT/04_Materials/Textures/Textures/T_FloralBrickGrayScale/T_FloralBrickGrayScale_BaseColor": 1,
+    "/Game/_PROJECT/04_Materials/Textures/Textures/T_FloralBrickGrayScale/T_FloralBrickGrayScale_Height": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_SoundWave_Pulse": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Veins_Facade": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Veins_Marble": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Veins_Master": 1,
+    "/Game/_PROJECT/04_Materials/Textures/Vein/Vein_2_-_512x512": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Veins_Organic": 1,
+    "/Game/_PROJECT/04_Materials/Textures/Vein/Vein_11_-_512x512": 1,
+    "/Game/_PROJECT/04_Materials/Textures/Voronoi/Voronoi_4_-_512x512": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_VinylGroove": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Vortex_Master": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Vortex_Radial": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Vortex_Spoke": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Vortex_Swirl": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/OilPainting/M_OilPaint_Advanced_WorldAligned": 1,
+    "/Game/_PROJECT/04_Materials/Textures/Streak/Streak_11_-_512x512": 1,
+    "/Game/_PROJECT/04_Materials/Textures/Streak/Streak_14_-_512x512": 1,
+    "/Game/_PROJECT/04_Materials/Textures/Streak/Streak_1_-_512x512": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/OilPainting/M_OilPainting_Bio_Organic": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/OilPainting/M_OilPainting_Celestial_Cosmic": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/OilPainting/M_OilPainting_Gold_Baroque": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/OilPainting/M_OilPainting_MasterBase": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/OilPainting/M_OilPainting_Portal_Impressionist": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/OilPainting/M_OilPainting_Void_Dark": 1,
+    "/Game/_PROJECT/04_Materials/Textures/Super_Perlin/Super_Perlin_12_-_512x512": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_Parallax_Depth": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_Parallax_Displacement": 1,
+    "/Game/_PROJECT/04_Materials/Textures/Vein/Vein_4_-_512x512": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_RhythmSurface_Pulse": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_Sand_Toon": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_SeasonBlend_Nature": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_Sky_StarryNight_Impressionist": 1,
+    "/Game/Alphas_Sparkles/T_Spark_Sparkle4": 1,
+    "/Game/EnvSandbox/VFX/MPC/MPC_SakuraDream": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_StardustParticle_Glow": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_Stone_Rough_Toon": 1,
+    "/Game/_PROJECT/04_Materials/Textures/Cracks/Cracks_7_-_512x512": 1,
+    "/Game/_PROJECT/04_Materials/Textures/Grainy/Grainy_12_-_512x512": 1,
+    "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_10_-_512x512": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_Stone_Smooth_Toon": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_Surreal_FlowWarp": 1,
+    "/Game/_PROJECT/04_Materials/Textures/Turbulence/Turbulence_2_-_512x512": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_Toon_Base": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_Vegetation_Grass_Toon": 1,
+    "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_24_-_512x512": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_VolumetricInk_Accumulation/M_VolumetricInk_Accumulation": 1,
+    "/Game/_PROJECT/04_Materials/Textures/Grainy/Grainy_9_-_512x512": 1,
+    "/Game/_PROJECT/04_Materials/Textures/Voronoi/Voronoi_8_-_512x512": 1,
+    "/Game/_PROJECT/04_Materials/MooaToon/M_Wood_Toon": 1
+  },
+  "assets": [
+    {
+      "target": "Content/Materials/Functions/MF_AnimeSkinWrap.uasset",
+      "bytes": 79767,
+      "sha256": "46cf72f43d15618bc4e14bde0d38840df1bc9ced328e3b19460f3e30c85d00a7",
+      "n_refs": 1,
+      "n_resolved": 0,
+      "n_dangling": 1,
+      "dangling": [
+        "/Game/EnvSandbox/Materials/Functions/MF_AnimeSkinWrap"
+      ],
+      "source_pkg": "/Game/EnvSandbox/Materials/Functions/MF_AnimeSkinWrap",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Functions/MF_AudioReactiveBlend.uasset",
+      "bytes": 132955,
+      "sha256": "a70ccfd6d33c9d4648f18f1c89fac25cb19cfbc36ddb8fee1d32bb596bc5f9c2",
+      "n_refs": 1,
+      "n_resolved": 0,
+      "n_dangling": 1,
+      "dangling": [
+        "/Game/EnvSandbox/Materials/Functions/MF_AudioReactiveBlend"
+      ],
+      "source_pkg": "/Game/EnvSandbox/Materials/Functions/MF_AudioReactiveBlend",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Functions/MF_BlendModeSwitch.uasset",
+      "bytes": 10977,
+      "sha256": "9851d09f34fb64517b430e6f4c09c97588112f2030b40db58b0e5c387077dd99",
+      "n_refs": 1,
+      "n_resolved": 0,
+      "n_dangling": 1,
+      "dangling": [
+        "/Game/MaterialFunctions/MF_BlendModeSwitch"
+      ],
+      "source_pkg": "/Game/EnvSandbox/Materials/Functions/MF_BlendModeSwitch",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Functions/MF_ClothWindDrape.uasset",
+      "bytes": 13735,
+      "sha256": "9cdcfb10c0c2fde6bf23c549434b6e40abdf6f85e2d4245f7beddcf2814302df",
+      "n_refs": 1,
+      "n_resolved": 0,
+      "n_dangling": 1,
+      "dangling": [
+        "/Game/EnvSandbox/Materials/Functions/MF_ClothWindDrape"
+      ],
+      "source_pkg": "/Game/EnvSandbox/Materials/Functions/MF_ClothWindDrape",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Functions/MF_ConstellationField.uasset",
+      "bytes": 28397,
+      "sha256": "cc0a1c45b5490c862c738cbe40dc098f13db6c48321dec71e64da56abe6e0e8c",
+      "n_refs": 3,
+      "n_resolved": 0,
+      "n_dangling": 3,
+      "dangling": [
+        "/Game/EnvSandbox/Materials/Functions/MF_ConstellationField",
+        "/Game/EnvSandbox/Materials/Space/Textures/T_NASA_MilkyWay_4K",
+        "/Game/EnvSandbox/Materials/Space/Textures/T_NASA_StarMap_4K"
+      ],
+      "source_pkg": "/Game/EnvSandbox/Materials/Functions/MF_ConstellationField",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Functions/MF_CurvatureOrnament.uasset",
+      "bytes": 150817,
+      "sha256": "f20039f54db19f7333f64d787f64adf9f657c2dbc1476d7369d1da2a5efead83",
+      "n_refs": 1,
+      "n_resolved": 0,
+      "n_dangling": 1,
+      "dangling": [
+        "/Game/EnvSandbox/Materials/Functions/MF_CurvatureOrnament"
+      ],
+      "source_pkg": "/Game/EnvSandbox/Materials/Functions/MF_CurvatureOrnament",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Functions/MF_DF_ContactBlend.uasset",
+      "bytes": 30760,
+      "sha256": "ad84598540a34aafcd73d504206f8077ffacd2efee44c8fe1918838b96eceac1",
+      "n_refs": 1,
+      "n_resolved": 0,
+      "n_dangling": 1,
+      "dangling": [
+        "/Game/EnvSandbox/Materials/Functions/MF_DF_ContactBlend"
+      ],
+      "source_pkg": "/Game/EnvSandbox/Materials/Functions/MF_DF_ContactBlend",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Functions/MF_FabricMountainWPO.uasset",
+      "bytes": 26593,
+      "sha256": "6d0e5202c445c55d5a6d80bef7edfaa310f154c6199aaa37abb86ed74415e372",
+      "n_refs": 1,
+      "n_resolved": 0,
+      "n_dangling": 1,
+      "dangling": [
+        "/Game/EnvSandbox/Materials/Functions/MF_FabricMountainWPO"
+      ],
+      "source_pkg": "/Game/EnvSandbox/Materials/Functions/MF_FabricMountainWPO",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Functions/MF_GemstoneAbsorption.uasset",
+      "bytes": 11770,
+      "sha256": "fc3ce8bc1f258bf10585e470255c2288bc2c85afbf55bdbd4a4b8b8cdb46de47",
+      "n_refs": 1,
+      "n_resolved": 0,
+      "n_dangling": 1,
+      "dangling": [
+        "/Game/EnvSandbox/Materials/Functions/MF_GemstoneAbsorption"
+      ],
+      "source_pkg": "/Game/EnvSandbox/Materials/Functions/MF_GemstoneAbsorption",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Functions/MF_GemstoneCymatics.uasset",
+      "bytes": 12062,
+      "sha256": "0c9ae3cade143924dd56c2d7056b96457036a2eab44083dd53ee3a72506cf371",
+      "n_refs": 1,
+      "n_resolved": 0,
+      "n_dangling": 1,
+      "dangling": [
+        "/Game/EnvSandbox/Materials/Functions/MF_GemstoneCymatics"
+      ],
+      "source_pkg": "/Game/EnvSandbox/Materials/Functions/MF_GemstoneCymatics",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Functions/MF_GemstoneDispersion.uasset",
+      "bytes": 13041,
+      "sha256": "2d43ba1a9e04484c44dc147ea9c8f7249ff2416e27b8b7e9af09edc0d34256a7",
+      "n_refs": 1,
+      "n_resolved": 0,
+      "n_dangling": 1,
+      "dangling": [
+        "/Game/EnvSandbox/Materials/Functions/MF_GemstoneDispersion"
+      ],
+      "source_pkg": "/Game/EnvSandbox/Materials/Functions/MF_GemstoneDispersion",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Functions/MF_GemstoneInternalFacet.uasset",
+      "bytes": 14977,
+      "sha256": "385ed35409447c79be81d0213c79fc48528bc5efd62d600cf049932d541f1da2",
+      "n_refs": 1,
+      "n_resolved": 0,
+      "n_dangling": 1,
+      "dangling": [
+        "/Game/EnvSandbox/Materials/Functions/MF_GemstoneInternalFacet"
+      ],
+      "source_pkg": "/Game/EnvSandbox/Materials/Functions/MF_GemstoneInternalFacet",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Functions/MF_GildingOverlay.uasset",
+      "bytes": 101378,
+      "sha256": "64826ae51ed04b072c4c977c493b53e8988e40ea2ca3cbe07185bf1b7ffb0fd0",
+      "n_refs": 1,
+      "n_resolved": 0,
+      "n_dangling": 1,
+      "dangling": [
+        "/Game/EnvSandbox/Materials/Functions/MF_GildingOverlay"
+      ],
+      "source_pkg": "/Game/EnvSandbox/Materials/Functions/MF_GildingOverlay",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Functions/MF_HeightToNormal.uasset",
+      "bytes": 10633,
+      "sha256": "4895de22f0cf8f20ca5c8786d1e37abaf0ae448cddf987c12bdd372d62e33f1b",
+      "n_refs": 1,
+      "n_resolved": 0,
+      "n_dangling": 1,
+      "dangling": [
+        "/Game/EnvSandbox/Materials/Functions/MF_HeightToNormal"
+      ],
+      "source_pkg": "/Game/EnvSandbox/Materials/Functions/MF_HeightToNormal",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Functions/MF_Impressionist_BrushStroke.uasset",
+      "bytes": 19499,
+      "sha256": "b1c7237420c4813c1a0eac19b046e66a000d110dda323f0040b70047473480d1",
+      "n_refs": 1,
+      "n_resolved": 0,
+      "n_dangling": 1,
+      "dangling": [
+        "/Game/EnvSandbox/Materials/Functions/MF_Impressionist_BrushStroke"
+      ],
+      "source_pkg": "/Game/EnvSandbox/Materials/Functions/MF_Impressionist_BrushStroke",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Functions/MF_Impressionist_Impasto.uasset",
+      "bytes": 36074,
+      "sha256": "665dc7c3c4ffcef84a8237b89fe7fef8eb4beb01c9dee9dc43e678dad23e508f",
+      "n_refs": 1,
+      "n_resolved": 0,
+      "n_dangling": 1,
+      "dangling": [
+        "/Game/EnvSandbox/Materials/Functions/MF_Impressionist_Impasto"
+      ],
+      "source_pkg": "/Game/EnvSandbox/Materials/Functions/MF_Impressionist_Impasto",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Functions/MF_Impressionist_InkPool.uasset",
+      "bytes": 20185,
+      "sha256": "4357cf59152f439205afd4e1b1061480a3236d83178f997185c8b36fd3039475",
+      "n_refs": 1,
+      "n_resolved": 0,
+      "n_dangling": 1,
+      "dangling": [
+        "/Game/EnvSandbox/Materials/Functions/MF_Impressionist_InkPool"
+      ],
+      "source_pkg": "/Game/EnvSandbox/Materials/Functions/MF_Impressionist_InkPool",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Functions/MF_Impressionist_Temporal.uasset",
+      "bytes": 23395,
+      "sha256": "3fbec1538da13f7d5901ec69aa977418f0310bd116004246e4f7f1958af85df4",
+      "n_refs": 1,
+      "n_resolved": 0,
+      "n_dangling": 1,
+      "dangling": [
+        "/Game/EnvSandbox/Materials/Functions/MF_Impressionist_Temporal"
+      ],
+      "source_pkg": "/Game/EnvSandbox/Materials/Functions/MF_Impressionist_Temporal",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Functions/MF_InkAccumulation.uasset",
+      "bytes": 16076,
+      "sha256": "ac193c1a8f14e322eba0d52ef302781dd9f03b75af5739e26da82f15ba0296e0",
+      "n_refs": 1,
+      "n_resolved": 0,
+      "n_dangling": 1,
+      "dangling": [
+        "/Game/EnvSandbox/Materials/Functions/MF_InkAccumulation"
+      ],
+      "source_pkg": "/Game/EnvSandbox/Materials/Functions/MF_InkAccumulation",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Functions/MF_Itto.uasset",
+      "bytes": 95308,
+      "sha256": "153ffb3ee1b00cdc55a0cee9cee3171f1f0d8c9cc1a6e3be5257b7c19b77238c",
+      "n_refs": 2,
+      "n_resolved": 0,
+      "n_dangling": 2,
+      "dangling": [
+        "/Game/EnvSandbox/Materials/Functions/MF_ColorRamp3",
+        "/Game/EnvSandbox/Materials/Functions/MF_Itto"
+      ],
+      "source_pkg": "/Game/EnvSandbox/Materials/Functions/MF_Itto",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Functions/MF_LandscapeDistanceBands.uasset",
+      "bytes": 10088,
+      "sha256": "5835860e4fb34300eeabc1c46332999bcd258ee2614474de470691086e1c24ae",
+      "n_refs": 1,
+      "n_resolved": 0,
+      "n_dangling": 1,
+      "dangling": [
+        "/Game/EnvSandbox/Materials/Functions/MF_LandscapeDistanceBands"
+      ],
+      "source_pkg": "/Game/EnvSandbox/Materials/Functions/MF_LandscapeDistanceBands",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Functions/MF_LandscapeHeightCompete.uasset",
+      "bytes": 14829,
+      "sha256": "1bf610303c25057fc295c08f1bc454fea92f1cf6d4a20ff485301938f0202d33",
+      "n_refs": 1,
+      "n_resolved": 0,
+      "n_dangling": 1,
+      "dangling": [
+        "/Game/EnvSandbox/Materials/Functions/MF_LandscapeHeightCompete"
+      ],
+      "source_pkg": "/Game/EnvSandbox/Materials/Functions/MF_LandscapeHeightCompete",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Functions/MF_LandscapeMacroVariation.uasset",
+      "bytes": 6218,
+      "sha256": "b2545df6aa4ccb82feca13d3c4b5169941f4fc3e6f0ea4bb3557e9acbe1f3b3f",
+      "n_refs": 1,
+      "n_resolved": 0,
+      "n_dangling": 1,
+      "dangling": [
+        "/Game/EnvSandbox/Materials/Functions/MF_LandscapeMacroVariation"
+      ],
+      "source_pkg": "/Game/EnvSandbox/Materials/Functions/MF_LandscapeMacroVariation",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Functions/MF_LandscapeStorybookSDF.uasset",
+      "bytes": 11832,
+      "sha256": "4fb138e66e78256fe6d9a3a4e4334ee797a1175b02e03789b7dbffb86d168685",
+      "n_refs": 1,
+      "n_resolved": 0,
+      "n_dangling": 1,
+      "dangling": [
+        "/Game/EnvSandbox/Materials/Functions/MF_LandscapeStorybookSDF"
+      ],
+      "source_pkg": "/Game/EnvSandbox/Materials/Functions/MF_LandscapeStorybookSDF",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Functions/MF_Madoka.uasset",
+      "bytes": 142107,
+      "sha256": "26fc5e2902f9263df4721e073474d53bc55542ec300147c2dac70187b8ff3c05",
+      "n_refs": 3,
+      "n_resolved": 0,
+      "n_dangling": 3,
+      "dangling": [
+        "/Game/EnvSandbox/Materials/Functions/MF_ColorRamp3",
+        "/Game/EnvSandbox/Materials/Functions/MF_Madoka",
+        "/Game/Melodia/_PROJECT/04_Materials/MPC_Melodia_Palette"
+      ],
+      "source_pkg": "/Game/EnvSandbox/Materials/Functions/MF_Madoka",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Functions/MF_MelodiaGlitterPile.uasset",
+      "bytes": 22558,
+      "sha256": "505a82d46a4653b539a70aa4c4fb49f943eb0258dd80f0956aa69c57035f6e85",
+      "n_refs": 1,
+      "n_resolved": 0,
+      "n_dangling": 1,
+      "dangling": [
+        "/Game/EnvSandbox/Materials/Functions/MF_MelodiaGlitterPile"
+      ],
+      "source_pkg": "/Game/EnvSandbox/Materials/Functions/MF_MelodiaGlitterPile",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Functions/MF_MelodiaIridescenceSheen.uasset",
+      "bytes": 18470,
+      "sha256": "9688b2dc72b2085dcb04ad3c8ffc29aaa960ad1deabac63d829d86e5623c7bde",
+      "n_refs": 1,
+      "n_resolved": 0,
+      "n_dangling": 1,
+      "dangling": [
+        "/Game/EnvSandbox/Materials/Functions/MF_MelodiaIridescenceSheen"
+      ],
+      "source_pkg": "/Game/EnvSandbox/Materials/Functions/MF_MelodiaIridescenceSheen",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Functions/MF_MelodiaPetalLifecycle.uasset",
+      "bytes": 17174,
+      "sha256": "bc6ccba84691e56284f4c51df00b777ecf56f55a7f6a31a1736544f5fef5a035",
+      "n_refs": 1,
+      "n_resolved": 0,
+      "n_dangling": 1,
+      "dangling": [
+        "/Game/EnvSandbox/VFX/Materials/Functions/MF_MelodiaPetalLifecycle"
+      ],
+      "source_pkg": "/Game/EnvSandbox/VFX/Materials/Functions/MF_MelodiaPetalLifecycle",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Functions/MF_MelodiaWindHueReveal.uasset",
+      "bytes": 15722,
+      "sha256": "1eafac0270b79d3b1139e57d8fa78137a293417b26fae24aedf2ac6e4ee4d5d9",
+      "n_refs": 1,
+      "n_resolved": 0,
+      "n_dangling": 1,
+      "dangling": [
+        "/Game/Melodia/_PROJECT/04_Materials/Functions/MF_MelodiaWindHueReveal"
+      ],
+      "source_pkg": "/Game/Melodia/_PROJECT/04_Materials/Functions/MF_MelodiaWindHueReveal",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Functions/MF_MeluPaintBase.uasset",
+      "bytes": 20650,
+      "sha256": "854fcf43e1f2ff041cd3ad3427cadb62879acc74fe462e969ff75969179b8755",
+      "n_refs": 6,
+      "n_resolved": 0,
+      "n_dangling": 6,
+      "dangling": [
+        "/Game/_PROJECT/04_Materials/Functions/MF_MeluPaintBase",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_3_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_7_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Voronoi/Voronoi_1_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/Functions/MF_MeluPaintBase",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Functions/MF_MeluPaletteColors.uasset",
+      "bytes": 10757,
+      "sha256": "cd61f2c19f1334647354ace866e052082b20988161384e82dd8bf46aca88c91e",
+      "n_refs": 2,
+      "n_resolved": 0,
+      "n_dangling": 2,
+      "dangling": [
+        "/Game/_PROJECT/04_Materials/Functions/MF_MeluPaletteColors",
+        "/Game/_PROJECT/04_Materials/MPC_Melodia_Palette"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/Functions/MF_MeluPaletteColors",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Functions/MF_MeluSparkle.uasset",
+      "bytes": 16313,
+      "sha256": "f77142c80750a739b9863cf94152e3a96db8916211b9219c04bbde23e459049e",
+      "n_refs": 3,
+      "n_resolved": 0,
+      "n_dangling": 3,
+      "dangling": [
+        "/Game/_PROJECT/04_Materials/Functions/MF_MeluSparkle",
+        "/Game/_PROJECT/04_Materials/MPC_Melodia_Palette",
+        "/Game/_PROJECT/04_Materials/Textures/Voronoi/Voronoi_3_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/Functions/MF_MeluSparkle",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Functions/MF_MeluTemporalJitter.uasset",
+      "bytes": 12641,
+      "sha256": "cb636093d80ac6994625beb152e4fd5dc953154cf21693c268b84eaf014f92db",
+      "n_refs": 1,
+      "n_resolved": 0,
+      "n_dangling": 1,
+      "dangling": [
+        "/Game/_PROJECT/04_Materials/Functions/MF_MeluTemporalJitter"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/Functions/MF_MeluTemporalJitter",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Functions/MF_MeluTriplanar.uasset",
+      "bytes": 15983,
+      "sha256": "468da5b124c49b00218c78da9608ee9475138836d212016bb18ec5b1f873b1d6",
+      "n_refs": 1,
+      "n_resolved": 0,
+      "n_dangling": 1,
+      "dangling": [
+        "/Game/_PROJECT/04_Materials/Functions/MF_MeluTriplanar"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/Functions/MF_MeluTriplanar",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Functions/MF_Melusina_SDFIris.uasset",
+      "bytes": 19562,
+      "sha256": "3df0db70c7594c7af241ff507f7b859b47ab59839700e2ee41c34c76f4318f28",
+      "n_refs": 1,
+      "n_resolved": 0,
+      "n_dangling": 1,
+      "dangling": [
+        "/Game/EnvSandbox/Materials/Functions/MF_Melusina_SDFIris"
+      ],
+      "source_pkg": "/Game/EnvSandbox/Materials/Functions/MF_Melusina_SDFIris",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Functions/MF_MooaDecodeAttributes.uasset",
+      "bytes": 27324,
+      "sha256": "75fada0574cb7085fee6da01cedec4337326949704f51be2e1a1ded936390c28",
+      "n_refs": 1,
+      "n_resolved": 0,
+      "n_dangling": 1,
+      "dangling": [
+        "/Game/MaterialFunctions/MF_MooaDecodeAttributes"
+      ],
+      "source_pkg": "/Game/EnvSandbox/Materials/Functions/MF_MooaDecodeAttributes",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Functions/MF_MooaEncodeAttributes.uasset",
+      "bytes": 25686,
+      "sha256": "de707f222498b6e84e9bc7aaff8e3594d59f00dd4b01b0b97a0af3a1797beadf",
+      "n_refs": 1,
+      "n_resolved": 0,
+      "n_dangling": 1,
+      "dangling": [
+        "/Game/MaterialFunctions/MF_MooaEncodeAttributes"
+      ],
+      "source_pkg": "/Game/EnvSandbox/Materials/Functions/MF_MooaEncodeAttributes",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Functions/MF_MooaToonBaseInput_2.uasset",
+      "bytes": 250301,
+      "sha256": "85468ddfaf9c3302996e8597586d3d7b134063164b9ccb2a578b4ad2aee69615",
+      "n_refs": 8,
+      "n_resolved": 0,
+      "n_dangling": 8,
+      "dangling": [
+        "/Game/Assets/Textures/T_Black_Linear",
+        "/Game/Assets/Textures/T_Gray_Linear",
+        "/Game/Assets/Textures/T_White_Linear",
+        "/Game/MaterialFunctions/MF_MooaEncodeAttributes",
+        "/Game/MaterialFunctions/MF_MooaToonBaseInput",
+        "/Game/MaterialFunctions/MF_MooaToonBaseInput_2",
+        "/Game/MaterialFunctions/MF_UVChannelSwitch",
+        "/Game/Materials/MF_MeshBlend_Activator_Index"
+      ],
+      "source_pkg": "/Game/EnvSandbox/Materials/Functions/MF_MooaToonBaseInput_2",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Functions/MF_TranslucencyShadowToOpacityMask.uasset",
+      "bytes": 31551,
+      "sha256": "211f5ac6738cec1819ba545f9fa17ab8e13af67c1e37f9051d7ecea28eeda2b8",
+      "n_refs": 2,
+      "n_resolved": 0,
+      "n_dangling": 2,
+      "dangling": [
+        "/Game/MaterialFunctions/MF_BlendModeSwitch",
+        "/Game/MaterialFunctions/MF_TranslucencyShadowToOpacityMask"
+      ],
+      "source_pkg": "/Game/EnvSandbox/Materials/Functions/MF_TranslucencyShadowToOpacityMask",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Functions/MF_UVChannelSwitch.uasset",
+      "bytes": 11424,
+      "sha256": "5c4855a327334983d61928b6a61f8f6230d619750d747c2ab39467794de28cc4",
+      "n_refs": 1,
+      "n_resolved": 0,
+      "n_dangling": 1,
+      "dangling": [
+        "/Game/MaterialFunctions/MF_UVChannelSwitch"
+      ],
+      "source_pkg": "/Game/EnvSandbox/Materials/Functions/MF_UVChannelSwitch",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Functions/MF_UberBlendMode.uasset",
+      "bytes": 14233,
+      "sha256": "c68da1bf1dfa02e8cb8e2e07659b18e945728db117e3d3dc92d07eb0654fda01",
+      "n_refs": 1,
+      "n_resolved": 0,
+      "n_dangling": 1,
+      "dangling": [
+        "/Game/MaterialFunctions/MF_UberBlendMode"
+      ],
+      "source_pkg": "/Game/EnvSandbox/Materials/Functions/MF_UberBlendMode",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_AdvBio_LuminescentVeins.uasset",
+      "bytes": 28422,
+      "sha256": "dbbb866dc9d720d35bf7542cac6a4b93183304c9dceff828d252581637512598",
+      "n_refs": 4,
+      "n_resolved": 0,
+      "n_dangling": 4,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/Advanced/M_AdvBio_LuminescentVeins",
+        "/Game/_PROJECT/04_Materials/Textures/Vein/Vein_10_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Vein/Vein_8_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/Advanced/M_AdvBio_LuminescentVeins",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_AdvCelestial_StarMap.uasset",
+      "bytes": 24709,
+      "sha256": "d8f3d001dcb181f1d17e4ae04a00e183de02d146470e73dffb5a867009550625",
+      "n_refs": 4,
+      "n_resolved": 0,
+      "n_dangling": 4,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/Advanced/M_AdvCelestial_StarMap",
+        "/Game/_PROJECT/04_Materials/Textures/Swirl/Swirl_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Swirl/Swirl_2_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/Advanced/M_AdvCelestial_StarMap",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_AdvCrystal_Fracturing.uasset",
+      "bytes": 18133,
+      "sha256": "6c7caeca24a8fed390d861765f9888de8e3c6db82d08a6beebf909ba1e675f07",
+      "n_refs": 4,
+      "n_resolved": 0,
+      "n_dangling": 4,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/Advanced/M_AdvCrystal_Fracturing",
+        "/Game/_PROJECT/04_Materials/Textures/Cracks/Cracks_3_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Vein/Vein_3_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/Advanced/M_AdvCrystal_Fracturing",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_AdvErosion_DecayingRealm.uasset",
+      "bytes": 19433,
+      "sha256": "1ec5befd051e5f4ee729153b5ab1ad1054d7f29154f54f105cc99c110ee8041b",
+      "n_refs": 5,
+      "n_resolved": 0,
+      "n_dangling": 5,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/Advanced/M_AdvErosion_DecayingRealm",
+        "/Game/_PROJECT/04_Materials/Textures/Vein/Vein_5_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Vein/Vein_7_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Vein/Vein_9_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/Advanced/M_AdvErosion_DecayingRealm",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_AdvFabric_EtherealFlow.uasset",
+      "bytes": 17715,
+      "sha256": "765ee8e091c84fc782297e9bf575f97ec939fc0dd3602f27f39fd8c167e2f663",
+      "n_refs": 4,
+      "n_resolved": 0,
+      "n_dangling": 4,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/Advanced/M_AdvFabric_EtherealFlow",
+        "/Game/_PROJECT/04_Materials/Textures/Swirl/Swirl_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Swirl/Swirl_2_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/Advanced/M_AdvFabric_EtherealFlow",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_AdvMembrane_OrganicTissue.uasset",
+      "bytes": 30947,
+      "sha256": "4441ba5567d4c4696aa21b3469276f17357aa351fb8193003b444f8c776408e5",
+      "n_refs": 4,
+      "n_resolved": 0,
+      "n_dangling": 4,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/Advanced/M_AdvMembrane_OrganicTissue",
+        "/Game/_PROJECT/04_Materials/Textures/Vein/Vein_7_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Vein/Vein_9_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/Advanced/M_AdvMembrane_OrganicTissue",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_AdvMetal_LivingAlloy.uasset",
+      "bytes": 17576,
+      "sha256": "c4b65c46be317b20201d5b300cee32a3d73ffbc47b95b5cbfd275e898a2afa93",
+      "n_refs": 4,
+      "n_resolved": 0,
+      "n_dangling": 4,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/Advanced/M_AdvMetal_LivingAlloy",
+        "/Game/_PROJECT/04_Materials/Textures/Vein/Vein_6_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Vein/Vein_8_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/Advanced/M_AdvMetal_LivingAlloy",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_AdvMirage_HeatDistortion.uasset",
+      "bytes": 25842,
+      "sha256": "08fc76674a08429c76218e85bab6eaa575d4cb1da97fc5c85fde7516a03559c6",
+      "n_refs": 4,
+      "n_resolved": 0,
+      "n_dangling": 4,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/Advanced/M_AdvMirage_HeatDistortion",
+        "/Game/_PROJECT/04_Materials/Textures/Swirl/Swirl_9_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Turbulence/Turbulence_11_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/Advanced/M_AdvMirage_HeatDistortion",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_AdvNebula_CosmicDust.uasset",
+      "bytes": 20274,
+      "sha256": "212215f82eaf132da7a77d28f4a5943e7bb6efbdd0820d39b927b07225735647",
+      "n_refs": 4,
+      "n_resolved": 0,
+      "n_dangling": 4,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/Advanced/M_AdvNebula_CosmicDust",
+        "/Game/_PROJECT/04_Materials/Textures/Swirl/Swirl_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Swirl/Swirl_2_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/Advanced/M_AdvNebula_CosmicDust",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_AdvPortal_FlowingEnergy.uasset",
+      "bytes": 21329,
+      "sha256": "5330927fcc9d4074dd9d792f16edd06eff8182ca811e69391213c781aa050d7a",
+      "n_refs": 3,
+      "n_resolved": 0,
+      "n_dangling": 3,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/Advanced/M_AdvPortal_FlowingEnergy",
+        "/Game/_PROJECT/04_Materials/Textures/Swirl/Swirl_1_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/Advanced/M_AdvPortal_FlowingEnergy",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_AdvQuantum_RealtiyFoam.uasset",
+      "bytes": 23949,
+      "sha256": "65aff4c1a408b82bb035a9d02ca04c29b19396a5020e3013d87ab53ff3c337e0",
+      "n_refs": 4,
+      "n_resolved": 0,
+      "n_dangling": 4,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/Advanced/M_AdvQuantum_RealtiyFoam",
+        "/Game/_PROJECT/04_Materials/Textures/Swirl/Swirl_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Swirl/Swirl_2_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/Advanced/M_AdvQuantum_RealtiyFoam",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_AdvShimmer_Hypnotic.uasset",
+      "bytes": 17301,
+      "sha256": "28cef63b184b5339cb97fc43463ad6db3cb007f78a6765ccf54d6c9d02ccdc9d",
+      "n_refs": 2,
+      "n_resolved": 0,
+      "n_dangling": 2,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/Advanced/M_AdvShimmer_Hypnotic"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/Advanced/M_AdvShimmer_Hypnotic",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_AdvVoid_AntiLight.uasset",
+      "bytes": 18044,
+      "sha256": "cc1f31cc8c4c2042187443fd7644ceed5224fc7a9d5066074e3d037fab650fb5",
+      "n_refs": 3,
+      "n_resolved": 0,
+      "n_dangling": 3,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/Advanced/M_AdvVoid_AntiLight",
+        "/Game/_PROJECT/04_Materials/Textures/Swirl/Swirl_1_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/Advanced/M_AdvVoid_AntiLight",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_AdvVortex_DepthInfinity.uasset",
+      "bytes": 25427,
+      "sha256": "b10a6d3fce20d38abd4e30305800062ac4b304b967fd4c842ee44e006214aa22",
+      "n_refs": 7,
+      "n_resolved": 0,
+      "n_dangling": 7,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_AdvVortex_DepthInfinity",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_3_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_7_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_2_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Swirl/Swirl_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Voronoi/Voronoi_2_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_AdvVortex_DepthInfinity",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_Asteroid_Carbonaceous.uasset",
+      "bytes": 18623,
+      "sha256": "cd3c457c6e8efaf6468b6708bd2997980808c03b5cc90f9f3800a3f90de86312",
+      "n_refs": 5,
+      "n_resolved": 0,
+      "n_dangling": 5,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/Asteroids/M_Asteroid_Carbonaceous",
+        "/Game/_PROJECT/04_Materials/Textures/Grainy/Grainy_4_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_3_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Turbulence/Turbulence_3_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/Asteroids/M_Asteroid_Carbonaceous",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_Asteroid_Chondrite.uasset",
+      "bytes": 18665,
+      "sha256": "d6c09db230fb068d65aa0e8dcc7df04eb54fb8673f15bfaa20286f93aa1f400f",
+      "n_refs": 5,
+      "n_resolved": 0,
+      "n_dangling": 5,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/Asteroids/M_Asteroid_Chondrite",
+        "/Game/_PROJECT/04_Materials/Textures/Cracks/Cracks_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_4_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Voronoi/Voronoi_9_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/Asteroids/M_Asteroid_Chondrite",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_Asteroid_Field_Niagara.uasset",
+      "bytes": 17535,
+      "sha256": "4e1f3258f9e1eeeef5d9db0c06fcb5c01b2413d2e93cbee484d28109a4161987",
+      "n_refs": 3,
+      "n_resolved": 0,
+      "n_dangling": 3,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/Asteroids/M_Asteroid_Field_Niagara",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_7_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/Asteroids/M_Asteroid_Field_Niagara",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_Asteroid_Metallic.uasset",
+      "bytes": 17487,
+      "sha256": "2fbbc91ae33136f760bd60d06bf9d13b1983ed3719ff07002e90682f0bcf917f",
+      "n_refs": 5,
+      "n_resolved": 0,
+      "n_dangling": 5,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/Asteroids/M_Asteroid_Metallic",
+        "/Game/_PROJECT/04_Materials/Textures/Cracks/Cracks_5_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_6_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Voronoi/Voronoi_1_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/Asteroids/M_Asteroid_Metallic",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_AudioReactive_BaseMaster.uasset",
+      "bytes": 23776,
+      "sha256": "ec133a8ae4184c2f4b41fb64adcdd49629f873037feeb2f066069e7829d66cff",
+      "n_refs": 2,
+      "n_resolved": 0,
+      "n_dangling": 2,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/AudioReactive/M_AudioReactive_BaseMaster"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/AudioReactive/M_AudioReactive_BaseMaster",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_AudioReactive_CrystalChime.uasset",
+      "bytes": 21689,
+      "sha256": "a4365d49560c2712c44dee42f54bc3ed9289a6f0733be5dae34ac3e6c50e7805",
+      "n_refs": 6,
+      "n_resolved": 0,
+      "n_dangling": 6,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MPC_Melodia_Palette",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_AudioReactive_CrystalChime",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_7_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_2_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_AudioReactive_CrystalChime",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_BeatSync_EmissionGlow.uasset",
+      "bytes": 21446,
+      "sha256": "a9bf380afd15d92c49f00db2a84f5975463b3eb242e200b6aaf7bf266ace1086",
+      "n_refs": 6,
+      "n_resolved": 0,
+      "n_dangling": 6,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MPC_Melodia_Palette",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_BeatSync_EmissionGlow",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_3_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_2_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_BeatSync_EmissionGlow",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_Bookshelf_Standard.uasset",
+      "bytes": 32029,
+      "sha256": "bec7c8a973fe190020613cf881309b444e1f6a8d51726be8a8dd12d85cd0a5aa",
+      "n_refs": 4,
+      "n_resolved": 0,
+      "n_dangling": 4,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_Bookshelf_Standard",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_3_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_7_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_Bookshelf_Standard",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_Character_Clothing.uasset",
+      "bytes": 20904,
+      "sha256": "c915fb0c8e11b19493d20effe218841331a6bc9398a8aeb68e4cfeddf70ad719",
+      "n_refs": 4,
+      "n_resolved": 0,
+      "n_dangling": 4,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/Character/M_Character_Clothing",
+        "/Game/_PROJECT/04_Materials/Textures/Grainy/Grainy_2_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Voronoi/Voronoi_2_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/Character/M_Character_Clothing",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_Cloud_Atmospheric.uasset",
+      "bytes": 9266,
+      "sha256": "7f14bfc6b9b5a99b814eb0eb7d96db5e948c32b4d0538109ca3d9f1ec11378e9",
+      "n_refs": 2,
+      "n_resolved": 0,
+      "n_dangling": 2,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/Landscape/M_Cloud_Atmospheric"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/Landscape/M_Cloud_Atmospheric",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_ColorPalette_Reverse1999.uasset",
+      "bytes": 15603,
+      "sha256": "9a92599940a91f5215044a4f877eb44bb25a954f5af41ea7fa93bda4357c1b47",
+      "n_refs": 2,
+      "n_resolved": 0,
+      "n_dangling": 2,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/ColorPalette/M_ColorPalette_Reverse1999"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/ColorPalette/M_ColorPalette_Reverse1999",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_Crystal_Clear_Toon.uasset",
+      "bytes": 36572,
+      "sha256": "58e6edbea206cc368c2959af55a0aa273e8206e09096ff24a1870b895fc8be76",
+      "n_refs": 6,
+      "n_resolved": 0,
+      "n_dangling": 6,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MPC_Melodia_Palette",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_Crystal_Clear_Toon",
+        "/Game/_PROJECT/04_Materials/Textures/512x512/Circular/Circular_6_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_7_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Voronoi/Voronoi_2_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_Crystal_Clear_Toon",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_Crystal_Colored_Toon.uasset",
+      "bytes": 22051,
+      "sha256": "a439e524f1de6d4a75ad9ba4ee93cf4f9c7971d89ab9c353b82fe0a89ec36ed8",
+      "n_refs": 4,
+      "n_resolved": 0,
+      "n_dangling": 4,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_Crystal_Colored_Toon",
+        "/Game/_PROJECT/04_Materials/Textures/Cracks/Cracks_3_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Voronoi/Voronoi_13_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_Crystal_Colored_Toon",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_DayCycle_Atmosphere.uasset",
+      "bytes": 23015,
+      "sha256": "15e682f7e8d6b32d13951379205655965d07cfd09b3ef2121c0f38974d6840a2",
+      "n_refs": 7,
+      "n_resolved": 0,
+      "n_dangling": 7,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MPC_Melodia_Palette",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_DayCycle_Atmosphere",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_3_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_7_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_2_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_DayCycle_Atmosphere",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_Fabric_Toon.uasset",
+      "bytes": 40560,
+      "sha256": "1304bd92115640d4d51525a885edf8b98b52c9fdbe448730cfa96904617ec0aa",
+      "n_refs": 10,
+      "n_resolved": 0,
+      "n_dangling": 10,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MPC_Melodia_Palette",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_Fabric_Toon",
+        "/Game/_PROJECT/04_Materials/Textures/Grainy/Grainy_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/T_Starryfabric_albedo",
+        "/Game/_PROJECT/04_Materials/Textures/T_Starryfabric_displace",
+        "/Game/_PROJECT/04_Materials/Textures/T_Starryfabric_normal",
+        "/Game/_PROJECT/04_Materials/Textures/Voronoi/Voronoi_5_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_Fabric_Toon",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_Gallery_LOD_High.uasset",
+      "bytes": 21137,
+      "sha256": "a995c9660f60d9fcc5d8e180e641823369ae543ac26452083d4d39fc8d6842f0",
+      "n_refs": 2,
+      "n_resolved": 0,
+      "n_dangling": 2,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/LOD/M_Gallery_LOD_High"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/LOD/M_Gallery_LOD_High",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_Gallery_LOD_Low.uasset",
+      "bytes": 13775,
+      "sha256": "ab4e5535283dcfea7c803edb8cbe3843df583f6a7b1c9ea7ac304dcf5ab4c5e4",
+      "n_refs": 2,
+      "n_resolved": 0,
+      "n_dangling": 2,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/LOD/M_Gallery_LOD_Low"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/LOD/M_Gallery_LOD_Low",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_Gallery_LOD_Medium.uasset",
+      "bytes": 17215,
+      "sha256": "2fc3f0543e9c306b96c16ade48a4bee537b95555f88ce70832ea1acf069f51d2",
+      "n_refs": 2,
+      "n_resolved": 0,
+      "n_dangling": 2,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/LOD/M_Gallery_LOD_Medium"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/LOD/M_Gallery_LOD_Medium",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_Glass_Refract_Toon.uasset",
+      "bytes": 21622,
+      "sha256": "d7be881f07fd6cde7c28e88e21897b6d9c358a743bfddb087cb156a929f5cc56",
+      "n_refs": 5,
+      "n_resolved": 0,
+      "n_dangling": 5,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_Glass_Refract_Toon",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_4_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Voronoi/Voronoi_12_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_Glass_Refract_Toon",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_Glitter_UltimateSparkling.uasset",
+      "bytes": 24419,
+      "sha256": "d351d71f4dd5b251efce79b30170fcc33c0867457fdb1b3abd29839c45e15550",
+      "n_refs": 2,
+      "n_resolved": 0,
+      "n_dangling": 2,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/Glitter/M_Glitter_UltimateSparkling"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/Glitter/M_Glitter_UltimateSparkling",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_Glitter_WorldAligned.uasset",
+      "bytes": 26694,
+      "sha256": "b72844836b355f3d76210fe4dea4aa8d17be76401955d0709536bc9d7715da62",
+      "n_refs": 2,
+      "n_resolved": 0,
+      "n_dangling": 2,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/Glitter/M_Glitter_WorldAligned"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/Glitter/M_Glitter_WorldAligned",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_InkWash_Impressionist.uasset",
+      "bytes": 22725,
+      "sha256": "849d8090a09a4744fa53a1df0146890f7bda9f3388c96380f37a179383e39505",
+      "n_refs": 7,
+      "n_resolved": 0,
+      "n_dangling": 7,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MPC_Melodia_Palette",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_InkWash_Impressionist",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_3_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_7_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_2_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_InkWash_Impressionist",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_IridescentMystical.uasset",
+      "bytes": 28973,
+      "sha256": "519cb2f2bf0b9918b127720a69f774bbb97b590996bb8d9e235a486e360a5a51",
+      "n_refs": 5,
+      "n_resolved": 0,
+      "n_dangling": 5,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MPC_Melodia_Palette",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_IridescentMystical",
+        "/Game/_PROJECT/04_Materials/Textures/Swirl/Swirl_7_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Voronoi/Voronoi_14_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_IridescentMystical",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_Leather_Toon.uasset",
+      "bytes": 42161,
+      "sha256": "8ad70d6f5daaa656e67a4a18891a9232dd08e90774b1fcd8daf99e89343e3efe",
+      "n_refs": 9,
+      "n_resolved": 0,
+      "n_dangling": 9,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MPC_Melodia_Palette",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_Leather_Toon",
+        "/Game/_PROJECT/04_Materials/Textures/Grainy/Grainy_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_6_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_7_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_2_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Swirl/Swirl_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Voronoi/Voronoi_3_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_Leather_Toon",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_MooaToon_AuroraSong.uasset",
+      "bytes": 18105,
+      "sha256": "0f3944bff86d959054b5a4452c920590b319f79bb76d4ba36ac21c931b6b6d45",
+      "n_refs": 3,
+      "n_resolved": 0,
+      "n_dangling": 3,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_AuroraSong",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_2_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_AuroraSong",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_MooaToon_Base.uasset",
+      "bytes": 21838,
+      "sha256": "6d06b60f41b88a37f719486445081ac0431648f7b4b528ece60b1255fb566561",
+      "n_refs": 2,
+      "n_resolved": 0,
+      "n_dangling": 2,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Base"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Base",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_MooaToon_CrystalChime.uasset",
+      "bytes": 22899,
+      "sha256": "eb7ca83ad039a021f179021c1617891204c306c2b87f1e741d3ac01f2d244013",
+      "n_refs": 4,
+      "n_resolved": 0,
+      "n_dangling": 4,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_CrystalChime",
+        "/Game/_PROJECT/04_Materials/Textures/Grainy/Grainy_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_1_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_CrystalChime",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_MooaToon_Facade_Baroque_Enhanced.uasset",
+      "bytes": 27075,
+      "sha256": "9288ac4f250ebec3607fd042be94e19f83f6b71e5eb7c8b49e6e533974cc5526",
+      "n_refs": 5,
+      "n_resolved": 0,
+      "n_dangling": 5,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Facade_Baroque_Enhanced",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_7_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_9_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Voronoi/Voronoi_11_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Facade_Baroque_Enhanced",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_MooaToon_Gallery.uasset",
+      "bytes": 29400,
+      "sha256": "5889afd9a413d107ba467af459e1ddade255b9cb8bf363159c12c8a02fac9ff0",
+      "n_refs": 4,
+      "n_resolved": 0,
+      "n_dangling": 4,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Gallery",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_7_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Voronoi/Voronoi_2_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Gallery",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_MooaToon_GhostFlame.uasset",
+      "bytes": 18279,
+      "sha256": "1693b1cd8c75096997278b08d9a3d63a64059e373396f8e6bc15376f321efad7",
+      "n_refs": 3,
+      "n_resolved": 0,
+      "n_dangling": 3,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_GhostFlame",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_1_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_GhostFlame",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_MooaToon_GildedMolding_v2.uasset",
+      "bytes": 29187,
+      "sha256": "4813fa58c2f91ae2453e2e22544978c7494b27bc138968447097932c3d8974e6",
+      "n_refs": 6,
+      "n_resolved": 0,
+      "n_dangling": 6,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MPC_Melodia_Palette",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_GildedMolding_v2",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_7_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_9_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Voronoi/Voronoi_11_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_GildedMolding_v2",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_MooaToon_Glitter_Iridescent.uasset",
+      "bytes": 39264,
+      "sha256": "b1689043766d5935dfd74b36d33435d6e134b750fc8d5d55ad72ffab46e0f1a7",
+      "n_refs": 6,
+      "n_resolved": 0,
+      "n_dangling": 6,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MPC_Melodia_Palette",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Glitter_Iridescent",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_2_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Voronoi/Voronoi_3_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Glitter_Iridescent",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_MooaToon_GoldLeaf.uasset",
+      "bytes": 31883,
+      "sha256": "939b841834bb05423f305ad182aad4a43ad9bb22d4366ddd6d103707a7cbf705",
+      "n_refs": 5,
+      "n_resolved": 0,
+      "n_dangling": 5,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MPC_Melodia_Palette",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_GoldLeaf",
+        "/Game/_PROJECT/04_Materials/Textures/Swirl/Swirl_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Voronoi/Voronoi_3_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_GoldLeaf",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_MooaToon_Halftone_Enhanced.uasset",
+      "bytes": 29048,
+      "sha256": "7369647fe16a59563ca655e4592fa7c4dd6445ccc68f3e323c5da5830282106d",
+      "n_refs": 6,
+      "n_resolved": 0,
+      "n_dangling": 6,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Halftone_Enhanced",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_7_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_9_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Voronoi/Voronoi_11_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/__op9p__o90_diffuseOriginal"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Halftone_Enhanced",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_MooaToon_Halftone_Universal.uasset",
+      "bytes": 34048,
+      "sha256": "cd83726b4c4d3e5d1ec856ad7be0ee119cdf0c72617de53e869b53da629e697e",
+      "n_refs": 9,
+      "n_resolved": 0,
+      "n_dangling": 9,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MPC_Melodia_Palette",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Halftone_Universal",
+        "/Game/_PROJECT/04_Materials/Textures/Grainy/Grainy_3_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_7_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_5_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Swirl/Swirl_6_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Voronoi/Voronoi_11_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Halftone_Universal",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_MooaToon_Halftone_Vortex.uasset",
+      "bytes": 25615,
+      "sha256": "8bb90702c4470f57b7905a5536daf0a1976c4e8d2f21b02efeac2e488aacb7e7",
+      "n_refs": 8,
+      "n_resolved": 0,
+      "n_dangling": 8,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Halftone_Vortex",
+        "/Game/_PROJECT/04_Materials/Textures/Grainy/Grainy_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_7_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_2_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Swirl/Swirl_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Voronoi/Voronoi_2_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Halftone_Vortex",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_MooaToon_Hybrid_LayeredVortex.uasset",
+      "bytes": 25449,
+      "sha256": "5c06d353f4e397448529ee0541906f5390c797e483c88ac81bfac2a74e1f5248",
+      "n_refs": 6,
+      "n_resolved": 0,
+      "n_dangling": 6,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Hybrid_LayeredVortex",
+        "/Game/_PROJECT/04_Materials/Textures/Melt/Melt_8_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_6_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Swirl/Swirl_4_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Turbulence/Turbulence_4_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Hybrid_LayeredVortex",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_MooaToon_Hybrid_VortexVeins.uasset",
+      "bytes": 27055,
+      "sha256": "8691e5e1c06ff8afa0d86464439f763cb443a497f2228cf8f898a4080c3a49b6",
+      "n_refs": 8,
+      "n_resolved": 0,
+      "n_dangling": 8,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Hybrid_VortexVeins",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_7_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_3_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Swirl/Swirl_8_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Turbulence/Turbulence_5_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Vein/Vein_6_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Voronoi/Voronoi_10_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Hybrid_VortexVeins",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_MooaToon_InkSplash.uasset",
+      "bytes": 17297,
+      "sha256": "0dc25e95184dc9f2b1cad898ed06a41af3b09f0967d9d5665d56a98605628b80",
+      "n_refs": 3,
+      "n_resolved": 0,
+      "n_dangling": 3,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_InkSplash",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_1_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_InkSplash",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_MooaToon_Layered_Aquamarine.uasset",
+      "bytes": 24105,
+      "sha256": "5bf15c47f810899e3b9c340a959de331905fb9c3e14e474bee9b73bb5b729b33",
+      "n_refs": 5,
+      "n_resolved": 0,
+      "n_dangling": 5,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Layered_Aquamarine",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_6_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Swirl/Swirl_9_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/interiorwalltrim_aquamarine_BaseColor"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Layered_Aquamarine",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_MooaToon_Layered_Master.uasset",
+      "bytes": 23047,
+      "sha256": "c235fc6cd389b22e2fd12f1ddfa55ba8e8223753bef4dc2a0a88798e21022942",
+      "n_refs": 5,
+      "n_resolved": 0,
+      "n_dangling": 5,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Layered_Master",
+        "/Game/_PROJECT/04_Materials/Textures/Grainy/Grainy_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_1_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Layered_Master",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_MooaToon_Layered_Nebula.uasset",
+      "bytes": 22098,
+      "sha256": "06051a2aa4efb5657a95c5cdb3d19c03bff8efd8250bc688db1a69f97434f1e2",
+      "n_refs": 7,
+      "n_resolved": 0,
+      "n_dangling": 7,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Layered_Nebula",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_7_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_2_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/sbs_-_seamless_space_backgrounds_-_large_1024x1024/Large_1024x1024/Blue_Nebula/Blue_Nebula_3_-_1024x1024",
+        "/Game/_PROJECT/04_Materials/Textures/sbs_-_seamless_space_backgrounds_-_large_1024x1024/Large_1024x1024/Green_Nebula/Green_Nebula_1_-_1024x1024",
+        "/Game/_PROJECT/04_Materials/Textures/sbs_-_seamless_space_backgrounds_-_large_1024x1024/Large_1024x1024/Purple_Nebula/Purple_Nebula_2_-_1024x1024"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Layered_Nebula",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_MooaToon_Layered_Terracotta.uasset",
+      "bytes": 9230,
+      "sha256": "43e80e788a9cae5eee485ed02ca01a82a313f54330c095a89d61beb1726ea787",
+      "n_refs": 2,
+      "n_resolved": 0,
+      "n_dangling": 2,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Layered_Terracotta"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Layered_Terracotta",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_MooaToon_Marble_Veined_v2.uasset",
+      "bytes": 27565,
+      "sha256": "ca0bdc0ef96aba6efeb11eabea0711acb0a58261804c94bb27876adfa6322da7",
+      "n_refs": 5,
+      "n_resolved": 0,
+      "n_dangling": 5,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Marble_Veined_v2",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_7_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_9_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Voronoi/Voronoi_11_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Marble_Veined_v2",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_MooaToon_Master.uasset",
+      "bytes": 31246,
+      "sha256": "cb7ad6e3f39dd8a7deac842d76034bbfa89f6dd46ab2a0639f559b80dcca27f9",
+      "n_refs": 7,
+      "n_resolved": 0,
+      "n_dangling": 7,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Master",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_2_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_2_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Swirl/Swirl_1_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Master",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_MooaToon_Parallax_Baroque.uasset",
+      "bytes": 23943,
+      "sha256": "d6fecfd9ec4623f8278a24a02109585fb740ea1631b5ebe4f660410bcd67a362",
+      "n_refs": 6,
+      "n_resolved": 0,
+      "n_dangling": 6,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MPC_Melodia_Palette",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Parallax_Baroque",
+        "/Game/_PROJECT/04_Materials/Textures/Textures/T_Cobble_BSS",
+        "/Game/_PROJECT/04_Materials/Textures/Textures/T_FloralBrickGrayScale/T_FloralBrickGrayScale_BaseColor",
+        "/Game/_PROJECT/04_Materials/Textures/Textures/T_FloralBrickGrayScale/T_FloralBrickGrayScale_Height"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Parallax_Baroque",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_MooaToon_SoundWave_Pulse.uasset",
+      "bytes": 23366,
+      "sha256": "f222950b29a819f4f594b3b361b541fc80c21d39306913da888f2b1fb748cd78",
+      "n_refs": 3,
+      "n_resolved": 0,
+      "n_dangling": 3,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_SoundWave_Pulse",
+        "/Game/_PROJECT/04_Materials/Textures/Swirl/Swirl_1_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_SoundWave_Pulse",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_MooaToon_Veins_Facade.uasset",
+      "bytes": 23331,
+      "sha256": "8e85f6e31857da3137852e90f79849dd792424403f2a062b0591087daa0c0a43",
+      "n_refs": 6,
+      "n_resolved": 0,
+      "n_dangling": 6,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Veins_Facade",
+        "/Game/_PROJECT/04_Materials/Textures/Cracks/Cracks_3_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_3_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_7_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Vein/Vein_8_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Veins_Facade",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_MooaToon_Veins_Marble.uasset",
+      "bytes": 17710,
+      "sha256": "70820db12be9e56dedb88d9a309d4e5a5f3e6b13225b83f1e2263d18eaaa7156",
+      "n_refs": 4,
+      "n_resolved": 0,
+      "n_dangling": 4,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Veins_Marble",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_2_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Vein/Vein_5_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Veins_Marble",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_MooaToon_Veins_Master.uasset",
+      "bytes": 25218,
+      "sha256": "0f5bfe4a6e7f7e0a4d2a7f4014823c9a03a654c92022f26671709dcef05b52a5",
+      "n_refs": 5,
+      "n_resolved": 0,
+      "n_dangling": 5,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Veins_Master",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Vein/Vein_2_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Vein/Vein_5_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Veins_Master",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_MooaToon_Veins_Organic.uasset",
+      "bytes": 20300,
+      "sha256": "734a90437b3969c2bd83973ac5f12fc198d085d5eeffd111e707d18df88fbd8a",
+      "n_refs": 6,
+      "n_resolved": 0,
+      "n_dangling": 6,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Veins_Organic",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_7_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Vein/Vein_11_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Voronoi/Voronoi_2_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Voronoi/Voronoi_4_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Veins_Organic",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_MooaToon_VinylGroove.uasset",
+      "bytes": 23130,
+      "sha256": "1d3637883dc5d5e365374d0e02b1ba12228918adc654adc46708f9604cb65ecf",
+      "n_refs": 3,
+      "n_resolved": 0,
+      "n_dangling": 3,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_VinylGroove",
+        "/Game/_PROJECT/04_Materials/Textures/Swirl/Swirl_1_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_VinylGroove",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_MooaToon_Vortex_Master.uasset",
+      "bytes": 20636,
+      "sha256": "4a90a12cc443be16919a45d6d25ef703c362f43f23e601167c8fa44f15456ac6",
+      "n_refs": 3,
+      "n_resolved": 0,
+      "n_dangling": 3,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Vortex_Master",
+        "/Game/_PROJECT/04_Materials/Textures/Swirl/Swirl_1_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Vortex_Master",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_MooaToon_Vortex_Radial.uasset",
+      "bytes": 23919,
+      "sha256": "c29bbefafc0ea509f281087d4c105a88a2087cb3556a837bdce845d5b6159413",
+      "n_refs": 4,
+      "n_resolved": 0,
+      "n_dangling": 4,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Vortex_Radial",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_7_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Swirl/Swirl_1_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Vortex_Radial",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_MooaToon_Vortex_Spoke.uasset",
+      "bytes": 24489,
+      "sha256": "f2db335dc9974de1ccbb0dc4f46c64b9a20861283521b358b8041018e62432c3",
+      "n_refs": 4,
+      "n_resolved": 0,
+      "n_dangling": 4,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Vortex_Spoke",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_7_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Swirl/Swirl_1_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Vortex_Spoke",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_MooaToon_Vortex_Swirl.uasset",
+      "bytes": 25604,
+      "sha256": "0d8e86e4de069777a6ab017e3db2052b437e74b8224d74aa75b712dc466ba1f3",
+      "n_refs": 4,
+      "n_resolved": 0,
+      "n_dangling": 4,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Vortex_Swirl",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_7_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Swirl/Swirl_1_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_MooaToon_Vortex_Swirl",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_OilPaint_Advanced_WorldAligned.uasset",
+      "bytes": 31649,
+      "sha256": "cb20976438eeafb692d78218c8970f13095ade26a0c5986c4847511dcf381c15",
+      "n_refs": 5,
+      "n_resolved": 0,
+      "n_dangling": 5,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/OilPainting/M_OilPaint_Advanced_WorldAligned",
+        "/Game/_PROJECT/04_Materials/Textures/Streak/Streak_11_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Streak/Streak_14_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Streak/Streak_1_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/OilPainting/M_OilPaint_Advanced_WorldAligned",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_OilPainting_Bio_Organic.uasset",
+      "bytes": 25452,
+      "sha256": "640598943ac034175845db7296efadc539c2ab3de5ad9a22eb86548401cb8cfe",
+      "n_refs": 7,
+      "n_resolved": 0,
+      "n_dangling": 7,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/OilPainting/M_OilPainting_Bio_Organic",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_4_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_6_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_7_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Voronoi/Voronoi_2_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/OilPainting/M_OilPainting_Bio_Organic",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_OilPainting_Celestial_Cosmic.uasset",
+      "bytes": 36729,
+      "sha256": "07a2711df44fd035d33f1b3feb5ac1a8574a5467d8feb4267ccbdc8539a193c1",
+      "n_refs": 8,
+      "n_resolved": 0,
+      "n_dangling": 8,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/OilPainting/M_OilPainting_Celestial_Cosmic",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_5_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_7_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_2_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/T_Starryfabric_albedo",
+        "/Game/_PROJECT/04_Materials/Textures/T_Starryfabric_normal",
+        "/Game/_PROJECT/04_Materials/Textures/Voronoi/Voronoi_2_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/OilPainting/M_OilPainting_Celestial_Cosmic",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_OilPainting_Gold_Baroque.uasset",
+      "bytes": 25457,
+      "sha256": "20ed0a67aebacf123f2da58e2682969ab8d0de1070751e8e53cd019b1f03125d",
+      "n_refs": 7,
+      "n_resolved": 0,
+      "n_dangling": 7,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/OilPainting/M_OilPainting_Gold_Baroque",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_2_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_3_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_7_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Swirl/Swirl_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Voronoi/Voronoi_2_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/OilPainting/M_OilPainting_Gold_Baroque",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_OilPainting_MasterBase.uasset",
+      "bytes": 19961,
+      "sha256": "1b2c741c7e8389b7163120e12c98e45f74b2db8da027b60c1576df6e98bf8a51",
+      "n_refs": 5,
+      "n_resolved": 0,
+      "n_dangling": 5,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/OilPainting/M_OilPainting_MasterBase",
+        "/Game/_PROJECT/04_Materials/Textures/Grainy/Grainy_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_1_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/OilPainting/M_OilPainting_MasterBase",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_OilPainting_Portal_Impressionist.uasset",
+      "bytes": 25458,
+      "sha256": "68f0195b63fcc6310b8856b3fc0e3b3668691bd98cbaa2faf5818cf42090cc9e",
+      "n_refs": 7,
+      "n_resolved": 0,
+      "n_dangling": 7,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/OilPainting/M_OilPainting_Portal_Impressionist",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_7_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_2_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Swirl/Swirl_1_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/OilPainting/M_OilPainting_Portal_Impressionist",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_OilPainting_Void_Dark.uasset",
+      "bytes": 35342,
+      "sha256": "fdbb8d0c19952e7365b7a595840d8d598a9bc77cee48e25adf5b90ab3596511b",
+      "n_refs": 8,
+      "n_resolved": 0,
+      "n_dangling": 8,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/OilPainting/M_OilPainting_Void_Dark",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_7_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_2_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Super_Perlin/Super_Perlin_12_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Voronoi/Voronoi_2_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/OilPainting/M_OilPainting_Void_Dark",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_Parallax_Depth.uasset",
+      "bytes": 18239,
+      "sha256": "1de0381a2ea34077a5183885fb4a2bf0b2270f1f188378dde06ff7391e786aa5",
+      "n_refs": 5,
+      "n_resolved": 0,
+      "n_dangling": 5,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_Parallax_Depth",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_3_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_4_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Voronoi/Voronoi_3_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_Parallax_Depth",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_Parallax_Displacement.uasset",
+      "bytes": 22066,
+      "sha256": "3743f4af40a22b7b6fe07d70616474e409a4b03c1f60ad0798a985e82aa73d91",
+      "n_refs": 8,
+      "n_resolved": 0,
+      "n_dangling": 8,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_Parallax_Displacement",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_3_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_7_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Vein/Vein_4_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Vein/Vein_5_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Vein/Vein_6_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Vein/Vein_8_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_Parallax_Displacement",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_RhythmSurface_Pulse.uasset",
+      "bytes": 19626,
+      "sha256": "749651a629448283d608937073e7abcc57bde1db3f05ff0ad761f830cc4274fd",
+      "n_refs": 6,
+      "n_resolved": 0,
+      "n_dangling": 6,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MPC_Melodia_Palette",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_RhythmSurface_Pulse",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_2_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Swirl/Swirl_1_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_RhythmSurface_Pulse",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_Sand_Toon.uasset",
+      "bytes": 39109,
+      "sha256": "79027a5047e3fcaa8c8c803b2affa5b5d10cfc6fa937c39e353295550128d666",
+      "n_refs": 10,
+      "n_resolved": 0,
+      "n_dangling": 10,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MPC_Melodia_Palette",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_Sand_Toon",
+        "/Game/_PROJECT/04_Materials/Textures/Grainy/Grainy_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_7_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_2_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Swirl/Swirl_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Voronoi/Voronoi_3_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_Sand_Toon",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_SeasonBlend_Nature.uasset",
+      "bytes": 21915,
+      "sha256": "f58c57e090a482a2bcd5cb5e17f9dc3d83df9aa6f5ea99fba5720e09aaad2044",
+      "n_refs": 7,
+      "n_resolved": 0,
+      "n_dangling": 7,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MPC_Melodia_Palette",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_SeasonBlend_Nature",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_3_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_7_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_2_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_SeasonBlend_Nature",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_Sky_StarryNight_Impressionist.uasset",
+      "bytes": 36534,
+      "sha256": "98107490d20c8e1f9a33e14131542dabe034ea3bd5fd7daf0a7bb19ba3629ba4",
+      "n_refs": 8,
+      "n_resolved": 0,
+      "n_dangling": 8,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_Sky_StarryNight_Impressionist",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_7_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_2_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/T_Starryfabric_albedo",
+        "/Game/_PROJECT/04_Materials/Textures/T_Starryfabric_normal",
+        "/Game/_PROJECT/04_Materials/Textures/Voronoi/Voronoi_2_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_Sky_StarryNight_Impressionist",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_StardustParticle_Glow.uasset",
+      "bytes": 19332,
+      "sha256": "60b7b6fbcdd68dfc9799b0ab0d67f0ba53448b5ea7b30546474b22c3b52cc4ed",
+      "n_refs": 4,
+      "n_resolved": 0,
+      "n_dangling": 4,
+      "dangling": [
+        "/Game/Alphas_Sparkles/T_Spark_Sparkle4",
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/EnvSandbox/VFX/MPC/MPC_SakuraDream",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_StardustParticle_Glow"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_StardustParticle_Glow",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_Stone_Rough_Toon.uasset",
+      "bytes": 44446,
+      "sha256": "3306dced1809e76fe48c760c27becf49ef98df3ea272e111e3ac0bce3466ed05",
+      "n_refs": 8,
+      "n_resolved": 0,
+      "n_dangling": 8,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MPC_Melodia_Palette",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_Stone_Rough_Toon",
+        "/Game/_PROJECT/04_Materials/Textures/Cracks/Cracks_7_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Grainy/Grainy_12_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_10_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_7_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Voronoi/Voronoi_2_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_Stone_Rough_Toon",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_Stone_Smooth_Toon.uasset",
+      "bytes": 39136,
+      "sha256": "12e12b7bb550f43546908e0630753443ad54df0a6d319bad77773fd37855f830",
+      "n_refs": 10,
+      "n_resolved": 0,
+      "n_dangling": 10,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MPC_Melodia_Palette",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_Stone_Smooth_Toon",
+        "/Game/_PROJECT/04_Materials/Textures/Grainy/Grainy_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_2_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_3_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_7_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Voronoi/Voronoi_2_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Voronoi/Voronoi_3_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_Stone_Smooth_Toon",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_Surreal_FlowWarp.uasset",
+      "bytes": 23833,
+      "sha256": "abbcd02429f0008495bdc0db8b48d80ebe68911794bbb962a4040c7c91eaa6c9",
+      "n_refs": 6,
+      "n_resolved": 0,
+      "n_dangling": 6,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_Surreal_FlowWarp",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_7_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Swirl/Swirl_6_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Turbulence/Turbulence_2_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Voronoi/Voronoi_9_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_Surreal_FlowWarp",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_Toon_Base.uasset",
+      "bytes": 24887,
+      "sha256": "77edafc151e21385d73dd39f66f88a4ec7ed8726780bf5a4cea40a2955acdde7",
+      "n_refs": 6,
+      "n_resolved": 0,
+      "n_dangling": 6,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_Toon_Base",
+        "/Game/_PROJECT/04_Materials/Textures/Grainy/Grainy_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_7_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_1_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_Toon_Base",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_Vegetation_Grass_Toon.uasset",
+      "bytes": 28225,
+      "sha256": "c20da37c360fae2cd66efd771b65e89c10dbbef378844e95179608b25492681e",
+      "n_refs": 8,
+      "n_resolved": 0,
+      "n_dangling": 8,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_Vegetation_Grass_Toon",
+        "/Game/_PROJECT/04_Materials/Textures/Grainy/Grainy_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_7_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_24_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_2_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Voronoi/Voronoi_2_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_Vegetation_Grass_Toon",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_VolumetricInk_Accumulation.uasset",
+      "bytes": 19653,
+      "sha256": "37c82aa3e4708d7d32ee86618401d5e32d4c361f90e5aa8b21820c2cefcb4f22",
+      "n_refs": 5,
+      "n_resolved": 0,
+      "n_dangling": 5,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_VolumetricInk_Accumulation/M_VolumetricInk_Accumulation",
+        "/Game/_PROJECT/04_Materials/Textures/Grainy/Grainy_9_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_5_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Voronoi/Voronoi_8_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_VolumetricInk_Accumulation/M_VolumetricInk_Accumulation",
+      "source_hash_match": true
+    },
+    {
+      "target": "Content/Materials/Masters/M_Wood_Toon.uasset",
+      "bytes": 40528,
+      "sha256": "f14a77b192f30703e14263b55a3dfe6be362c14808fd991e10c7c14b942f2b9a",
+      "n_refs": 10,
+      "n_resolved": 0,
+      "n_dangling": 10,
+      "dangling": [
+        "/Game/Art/Materials/Master/Materials/MF_MeshBlend_Activator_Index",
+        "/Game/_PROJECT/04_Materials/MPC_Melodia_Palette",
+        "/Game/_PROJECT/04_Materials/MooaToon/M_Wood_Toon",
+        "/Game/_PROJECT/04_Materials/Textures/Grainy/Grainy_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_4_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_5_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Marble/Marble_7_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_1_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Perlin/Perlin_2_-_512x512",
+        "/Game/_PROJECT/04_Materials/Textures/Voronoi/Voronoi_3_-_512x512"
+      ],
+      "source_pkg": "/Game/_PROJECT/04_Materials/MooaToon/M_Wood_Toon",
+      "source_hash_match": true
+    }
+  ]
+}

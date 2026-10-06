@@ -97,7 +97,12 @@ def build(rebuild=True):
     lib.binary(one, ramp_pos_mid, inv_pos)
 
     inv_scaled = lib.expr(fn, unreal.MaterialExpressionMultiply, -400, 360)
-    lib.binary(contrasted, inv_scaled, inv_scaled)
+    # FIX 2026-10-03: this was lib.binary(contrasted, inv_scaled, inv_scaled) -
+    # a self-loop. The compiler rejects it as a Reentrant expression and the
+    # whole master falls back to the default material. Intent (by symmetry with
+    # the lower half at pos_scaled): the upper segment is scaled by the REMAINING
+    # range, i.e. contrasted * (1 - RampPosMid).
+    lib.binary(contrasted, inv_pos, inv_scaled)
 
     hi_scale = lib.expr(fn, unreal.MaterialExpressionSaturate, -240, 360)
     lib.unary(inv_scaled, hi_scale)
