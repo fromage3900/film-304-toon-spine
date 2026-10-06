@@ -4,7 +4,7 @@ WHY ITS OWN MASTER
 ------------------
 Sigil glyphs, cymbal rings, beat markers (SH060/SH070): these glow, they do
 not receive light. Routing them through a Toon BSDF would shade them by the
-scene - wrong by definition. M_Master_Toon_Unlit is the plain emissive base;
+scene - wrong by definition. M_Toon_Unlit_Character is the plain unlit base;
 this master ADDS the two things FX asks for that the plain unlit does not
 have: a pattern mask (halftone / strokes / SDF via MF_ProceduralPatterns,
 shared with the surface masters so the FX reads in the same ink family) and
@@ -12,8 +12,10 @@ a time pulse (sine over Time, the same node proven by M_Master_Toon_Water).
 
 WHAT IT REUSES
 --------------
-unlit BSDF + MP_FRONT_MATERIAL (M_Master_Toon_Unlit pattern), Time node +
-Sine proven on water, MF_ProceduralPatterns proven across the surface spine.
+unlit BSDF (MaterialExpressionSubstrateUnlitBSDF, BaseColor in) +
+MP_FRONT_MATERIAL (M_Toon_Unlit_Character / M_Master_Toon_Sky pattern), Time
+node + Sine proven on water, MF_ProceduralPatterns proven across the surface
+spine.
 NO Toon BSDF, NO Toon Profile - bind_toon_profile is deliberately not called;
 verify() asserts the absence. NO ramp family: ramp needs lit/unlit structure
 that does not exist on an unlit surface (and RampStrength would then be a
@@ -130,12 +132,16 @@ def build(rebuild=True):
     lib.connect(c_i, "", final, ["A", "a"])
     lib.connect(p_g, "", final, ["B", "b"])
 
-    # ---------------- unlit BSDF (M_Master_Toon_Unlit pattern) --------------
-    unlit = lib.expr(mat, unreal.MaterialExpressionMaterialFunctionCall, 300, 0)
-    unlit.set_editor_property("material_function",
-        unreal.load_asset("/Engine/Functions/Engine_MaterialFunctions02/"
-                          "Shading/BasicShading/Unlit.Unlit"))
-    lib.connect(final, "", unlit, ["EmissiveColor"])
+    # ---------------- unlit BSDF (M_Toon_Unlit_Character / Sky pattern) ------
+    # SubstrateUnlitBSDF directly, BaseColor in - the pattern build_m_toon_sky
+    # and build_m_toon_unlit already prove. The earlier MaterialFunctionCall to
+    # /Engine/Functions/Engine_MaterialFunctions02/Shading/BasicShading/Unlit
+    # was wrong: no such function exists in UE 5.8 ("Failed to find object",
+    # build log 2026-10-06), the call saved with a null function, and verify()
+    # correctly failed "glow unreachable". Instantiation success is not
+    # engine truth; this node is.
+    unlit = lib.expr(mat, unreal.MaterialExpressionSubstrateUnlitBSDF, 300, 0)
+    lib.connect(final, "", unlit, "BaseColor")
     lib.connect_property(unlit, unreal.MaterialProperty.MP_FRONT_MATERIAL)
 
     try:
@@ -168,20 +174,15 @@ def verify():
         t = type(n).__name__
         if t == "MaterialExpressionSubstrateToonBSDF":
             have_toon = True
-        if t == "MaterialExpressionMaterialFunctionCall":
-            try:
-                mf = n.get_editor_property("material_function")
-                if mf is not None and "Unlit" in mf.get_name():
-                    have_unlit = True
-            except Exception:
-                pass
+        if t == "MaterialExpressionSubstrateUnlitBSDF":
+            have_unlit = True
     result["expression_count"] = lib.expression_count(mat)
 
     if have_toon:
         result["error"] = "Toon BSDF present on an unlit FX master - it would "\
                           "receive light it must not"
     elif not have_unlit:
-        result["error"] = "Unlit function call not found - glow unreachable"
+        result["error"] = "no Substrate Unlit BSDF in the graph - glow unreachable"
 
     if result["error"] is None:
         result["ok"] = True

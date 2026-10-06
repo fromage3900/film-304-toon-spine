@@ -10,7 +10,8 @@ Everything below is from the files in this repo: `Content/` and `Python/`.
 
 ## What the spine is
 
-Five masters, five material functions, **twenty-two** toon profiles, **twenty-six**
+Sixteen masters (the fourteen `build_spine.py` builds plus the two Painterly
+assets), five material functions, **twenty-six** toon profiles, **thirty-four**
 instances and **nineteen** generated textures — a Substrate Toon shading spine that a
 film can shoot with, with no game-system dependencies.
 
@@ -24,10 +25,20 @@ copying is not an intake channel. Do not count them.
 ```
 Content/Materials/
   Masters/       M_Master_Toon_Universal      the spine (opaque surfaces)
+                 M_Master_Toon_Character      the character spine master (TP_Melusina)
                  M_Master_Toon_Foliage        masked two-sided cards, sway WPO
                  M_Master_Toon_Water          stylized water, scrolling ripple normal
+                 M_Master_Toon_Sky            banded sky dome (unlit, no Toon Profile)
+                 M_Master_Toon_Landscape      ground planes with macro variation
+                 M_Master_Toon_Face           skin shading with an authored shadow layer
+                 M_Master_Toon_Hair           anisotropic read from a root-to-tip ramp
+                 M_Master_Toon_Glass          toon interior + fresnel-only edge
+                 M_Master_Toon_EmissiveFX     unlit pattern glow, optional pulse
+                 M_Master_Toon_Particles      unlit sprite chain, translucent
+                 M_Master_Toon_PostComposite  the film-wide grade, one shared writer
+                 M_Toon_Unlit_Character       the shadowless character master
                  M_Outline_InvertedHull       the outline pass
-                 M_PainterlyGouache           the gouache look (standalone)
+                 M_PainterlyGouache           the gouache look (standalone, + _Inst)
   Functions/     MF_ColorRamp3                 ramp / band generation
                  MF_RampLUT                    LUT-driven ramp lookup
                  MF_ProceduralPatterns         analytic + baked pattern field (13 patterns)
@@ -35,12 +46,14 @@ Content/Materials/
                  MF_RimOffset                  view/normal-space rim into EmissiveColor
   ToonProfiles/  TP_Default  TP_Stone  TP_Foliage  TP_Gold  TP_Hero
                  TP_Hatched  TP_TwoTone  TP_Environment  TP_SoftPainterly
-                 TP_Warm  TP_Cool
+                 TP_Warm  TP_Cool  TP_Water  TP_Melusina  TP_Character
+                 TP_Landscape  TP_Face  TP_Hair  TP_Glass
                  TP_Office_{Carpet,Laminate,DropCeiling,Troffer,
                             PowderCoat,Screen,Polypropylene,Whiteboard}
   Instances/     MI_Toon_{Hero,Stone,Foliage,Gold,Hatched,TwoTone,Painterly,
                             Environment,Office_*,Melusina,Character,Scales,
-                            CrackedStone}
+                            CrackedStone,Sky,Landscape,Face,Hair,Glass,
+                            EmissiveFX,Particles,PostComposite}
                  MI_Foliage_{Fern,Hedge}      on the foliage master
                  MI_Water_{Canal,Puddle}      on the water master
                  MI_Outline_{Thin,Heavy}
@@ -49,25 +62,28 @@ Content/Materials/
                  T_SDF_{Strokes,Cross,Dots,Scales,Cracks,Leaf}   tilable SDF map library
 ```
 
-Counts at the top of this file are the tracked inventory as of 2026-10-04.
-The last headless spine build (10, 2026-10-03) reported 4/4 masters, 24/24
-instances, 21/21 profiles, 0 errors — reconcile on the next build.
+Counts at the top of this file are the tracked inventory as of the 2026-10-05
+freeze commit. The latest headless spine build (run 2, 2026-10-05) reported
+4/4 functions, 14/14 masters, 26/26 profiles, 32/32 instances, 15/15 textures,
+3/3 pattern overrides, office set 8/8 assigned, `errors: []` —
+**`OVERALL: PASS`** (the instance stage covers the 32 `MI_Toon_*`/`MI_Foliage_*`/
+`MI_Water_*`; the two `MI_Outline_*` are built by `build_m_outline.py`, giving
+the 34 on disk).
 
-**`M_Master_Toon_Character` is code, not an asset yet.**
-`Python/build_master_toon_character.py` is committed and registered in
-`build_spine.py`, but the headless run that would write
-`Masters/M_Master_Toon_Character.uasset` has not happened, so that file is not
-in the tree above. `MI_Toon_Melusina` and `MI_Toon_Scales` are authored to
-parent to it; until the master is generated they do not pick up `TP_Melusina`,
-and the instance stage reports a failure rather than silently skipping. The
-build was held deliberately: a second Unreal process could not be started
-safely alongside a running editor.
+**`M_Master_Toon_Character` now exists.** It was previously "code, not an
+asset": `Python/build_master_toon_character.py` was committed and registered in
+`build_spine.py`, but the headless run had been held deliberately because a
+second Unreal process could not be started safely alongside a running editor.
+The 2026-10-05 staging build generated it, so `MI_Toon_Melusina` and
+`MI_Toon_Scales` now pick up `TP_Melusina` through it as authored.
 
 Two changes in the 2026-10-02 pass:
 
-- **`MF_ProceduralPatterns` carries 12 patterns, not 8.** `Voronoi`, `Grid`,
-  `Perforation` and `Weave` were added for the office film; the table in
-  `Docs/SDF_PATTERN_PIPELINE.md` §3 is the authority for each.
+- **`MF_ProceduralPatterns` gained four patterns in this pass** — `Voronoi`, `Grid`,
+  `Perforation` and `Weave` were added for the office film, taking the set to 12 at
+  that point; the 2026-10-03 SDF work added a 13th (`_sdfmap`, CellIndex 12), which
+  is what the tree above counts. The table in `Docs/SDF_PATTERN_PIPELINE.md` §3 is
+  the authority for each.
 - **The `ToonProfile` texture fields now resolve.** `ShadowHatchingPatternTexture` and
   `DiffuseRampOffsetTexture` were `None` on every profile here; they now bind against
   `Content/Materials/Textures/`, generated by `Python/build_textures.py`, which runs
@@ -92,8 +108,8 @@ M_Master_Toon_Universal
 
 M_Outline_InvertedHull     standalone; no MF dependencies
 
-TP_*  (22)                 data assets read by the master's Toon Profile input
-MI_*  (26 instances)       inherit from the five masters
+TP_*  (26)                 data assets read by the master's Toon Profile input
+MI_*  (34 instances)       inherit from the masters
 ```
 
 `MF_ProceduralPatterns` is called by the master since 2026-10-02 (hatch density is
@@ -143,6 +159,48 @@ Outlines are **not** part of the toon shader. This repo ships the inverted-hull 
 
 The post-process alternative (depth/normal edge detection) is described in
 `Docs/FILM_PIPELINE.md` and is not implemented here.
+
+## State 2026-10-05: staging build — run 1 FAIL, three fixes, run 2 PASS
+
+The 2026-10-05 staging run was the first full 14-master headless build. Run 1
+reported `OVERALL: FAIL`: two builders failed their own verify and PostComposite
+failed its shader compile, and in both cases the defect was invisible to the
+in-process checks because the broken node instantiated without error — only the
+shader compile rejected it.
+
+1. **Dead Unlit function (`M_Master_Toon_EmissiveFX`, `M_Master_Toon_Particles`).**
+   Both builders called `/Engine/Functions/Engine_MaterialFunctions02/Shading/
+   BasicShading/Unlit.Unlit`, which does not exist in UE 5.8: `load_asset`
+   returns `None`, a null `MaterialFunctionCall` is saved, verify's `calls=1`
+   counted the dead call, and the report read "Unlit function call not found".
+   Both now terminate in `MaterialExpressionSubstrateUnlitBSDF` wired from
+   BaseColor — the pattern `M_Toon_Unlit_Character` and `M_Master_Toon_Sky`
+   already used (those two never failed).
+2. **`M_Master_Toon_PostComposite` shader failure.** The report read ok=true at
+   graph level, but the shader compile failed twice:
+   `SceneColor lookups are only available when MaterialDomain = Surface` —
+   a `MaterialExpressionSceneColor` node Python can instantiate is still illegal
+   in `MD_POST_PROCESS`; the scene source is now
+   `MaterialExpressionSceneTexture` with `InputId = PPI_POST_PROCESS_INPUT0`
+   (the dreamprint pattern) — and `Arithmetic between types float2 and float3`
+   in the vignette, which used the float3 `lib.constant`; it is now a
+   `MaterialExpressionConstant2Vector`.
+
+Run 2 (`Saved/Logs/build_spine_run2_unlit_pp_fix.log`): **`OVERALL: PASS`** —
+4/4 functions, 14/14 masters, 26/26 profiles, 32/32 instances, 15/15 textures,
+3/3 pattern overrides, office set 8/8 assigned, `errors: []`, and no
+post-rebuild `LogMaterial` compile failure (the single `Failed to compile`
+line in the log is the startup load of run 1's stale on-disk PostComposite,
+before the rebuild). Binary checks on the saved `.uasset` files confirm
+`SubstrateUnlitBSDF` present in EmissiveFX/Particles with no `BasicShading`
+reference, and `SceneTexture` + `Constant2Vector` present with no
+`MaterialExpressionSceneColor` in PostComposite. Gates after the build:
+`Tools/verify_all.ps1` 9/9 PASS, `Tools/dogfood_toon_spine.py --all` 6/6 PASS.
+
+The run-2 editor process exited 3 on a teardown-only crash
+(`EXCEPTION_ACCESS_VIOLATION` in `UnrealEditor-SemanticSearch.dll`, ~7 s after
+`saved dirty packages` and the report write) — post-save shutdown noise, not a
+build defect; run 1 had exited 0.
 
 ## State 2026-10-03: six graph defects fixed, full rebuild PASS
 

@@ -34,7 +34,7 @@ A material instance is the supported way to vary a look. `MI_Toon_*` inherit fro
 ```
 Content/
   Materials/
-    Masters/        M_*        the master materials (5)
+    Masters/        M_*        the master materials (16 tracked: the 14 spine builds + 2 Painterly)
     Functions/      MF_*       material functions (5)
     ToonProfiles/   TP_*       art-direction data assets
     Instances/      MI_*       material instances

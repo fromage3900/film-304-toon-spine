@@ -6,12 +6,14 @@ Niagara emitters (petals, beat dust, cymbal rings - see the Niagara/
 melusina lanes) sample a sprite texture, take a per-particle color from the
 system, and fade at the camera. None of that survives contact with a lit
 surface master: the material domain of a particle is a sprite, not a mesh.
-M_Master_Toon_Unlit has no opacity chain and no sprite parameter; this master
-IS that chain - the unlit surface spine plus the particle inputs.
+M_Toon_Unlit_Character has no opacity chain and no sprite parameter; this
+master IS that chain - the unlit surface spine plus the particle inputs.
 
 WHAT IT REUSES
 --------------
-unlit BSDF + MP_FRONT_MATERIAL (M_Master_Toon_Unlit pattern), MaterialExpressionDepthFade
+unlit BSDF (MaterialExpressionSubstrateUnlitBSDF, BaseColor in) +
+MP_FRONT_MATERIAL (M_Toon_Unlit_Character / M_Master_Toon_Sky pattern),
+MaterialExpressionDepthFade
 proven (setup_sakura_niagara.py:787, input pin "Distance"), sprite texture as
 a TextureObjectParameter so instances swap the sheet. NO Toon BSDF, NO Toon
 Profile, NO ramp - same reasoning as M_Master_Toon_EmissiveFX; verify()
@@ -24,7 +26,7 @@ rgb  = TintColor * ParticleColor.rgb * Sprite.rgb * Brightness  -> unlit BaseCol
 alpha = ParticleColor.a * Sprite.a * DepthFade(Distance=FadeDistance)
         -> attempted on the unlit "Opacity" pin
 Per the owner's rule the opacity connect FAILURE IS A WARN, NOT A FAIL: the
-unlit function may not expose an Opacity pin in this engine build. In that
+unlit BSDF may not expose an Opacity pin in this engine build. In that
 case verify() records wired-input count (rgb-only still renders; alpha just
 stays 1) and the run reports it - the engine truth is read back, never
 assumed. ParticleColor class name uncertainty (MaterialExpressionParticleColor
@@ -161,12 +163,12 @@ def build(rebuild=True):
             lib.connect(dfade, "", alpha2, ["B", "b"])
             alpha = alpha2
 
-    # ---------------- unlit BSDF (M_Master_Toon_Unlit pattern) --------------
-    unlit = lib.expr(mat, unreal.MaterialExpressionMaterialFunctionCall, 300, 0)
-    unlit.set_editor_property("material_function",
-        unreal.load_asset("/Engine/Functions/Engine_MaterialFunctions02/"
-                          "Shading/BasicShading/Unlit.Unlit"))
-    lib.connect(rgb, "", unlit, ["EmissiveColor"])
+    # ---------------- unlit BSDF (M_Toon_Unlit_Character / Sky pattern) ------
+    # SubstrateUnlitBSDF directly - same fix as build_m_toon_emissivefx: the
+    # /Engine/.../BasicShading/Unlit function does not exist in UE 5.8, the
+    # null-function call saved, and verify() failed "sprite unreachable".
+    unlit = lib.expr(mat, unreal.MaterialExpressionSubstrateUnlitBSDF, 300, 0)
+    lib.connect(rgb, "", unlit, "BaseColor")
 
     # --- opacity pin attempt (WARN, not fail - see module docstring) --------
     if alpha is not None:
@@ -178,9 +180,10 @@ def build(rebuild=True):
             wired = False
         _state["opacity_wired"] = bool(wired)
         if not wired:
-            lib.log(f"WARN {NAME}: Unlit function exposes no Opacity pin - "
+            lib.log(f"WARN {NAME}: Unlit BSDF exposes no Opacity pin - "
                     f"alpha chain BUILT BUT UNWIRED; sprites will render at "
-                    f"alpha 1 until the engine build exposes the pin.")
+                    f"alpha 1 (opaque translucency) until a usable pin is "
+                    f"confirmed on this engine build.")
     else:
         lib.log(f"WARN {NAME}: no ParticleColor node - alpha chain skipped, "
                 f"sprites render at alpha 1")
@@ -218,13 +221,8 @@ def verify():
         t = type(n).__name__
         if t == "MaterialExpressionSubstrateToonBSDF":
             have_toon = True
-        if t == "MaterialExpressionMaterialFunctionCall":
-            try:
-                mf = n.get_editor_property("material_function")
-                if mf is not None and "Unlit" in mf.get_name():
-                    have_unlit = True
-            except Exception:
-                pass
+        if t == "MaterialExpressionSubstrateUnlitBSDF":
+            have_unlit = True
     result["expression_count"] = lib.expression_count(mat)
     result["particle_color_node"] = _state["particle_color"]
     result["depth_fade_node"] = _state["depth_fade"]
@@ -233,7 +231,7 @@ def verify():
     if have_toon:
         result["error"] = "Toon BSDF present on an unlit particle material"
     elif not have_unlit:
-        result["error"] = "Unlit function call not found - sprite unreachable"
+        result["error"] = "no Substrate Unlit BSDF in the graph - sprite unreachable"
 
     if result["error"] is None:
         result["ok"] = True

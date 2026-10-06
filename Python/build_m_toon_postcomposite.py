@@ -23,7 +23,7 @@ MF_ProceduralPatterns reused as a FRAME halftone (UV = screen * HalftoneScale).
 
 THE DOMAIN BEHAVIOUR: GRADE * GRAIN * VIGNETTE * HALFTONE
 ---------------------------------------------------------
-scene  = SceneColor (PPI_POST_PROCESS_INPUT0, fallback chain per dreamprint)
+scene  = SceneTexture PPI_POST_PROCESS_INPUT0 (dreamprint `_pp_input_id()`)
 graded = scene * GradeTint
 grain  = (noise_r - 0.5) * GrainStrength           -- signed, so it dithers both ways
 vign   = 1 - saturate(length2(uv - 0.5) * VignetteStrength)
@@ -32,11 +32,14 @@ out    -> MP_EMISSIVE_COLOR
 HalftoneStrength 0 = pass-through grade (inert-until-instance); GrainScale
 drives the noise sample frequency.
 
-Scene-color uncertainty is handled with a defined fallback chain (exactly the
-dreamprint pattern): try MaterialExpressionSceneColor first (direct scene
-input where the engine offers it), else SceneTexture with candidate ids
-[PPI_POST_PROCESS_INPUT0 first], candidate output pins ["Color", ""]. Loud
+Scene-colour source: SceneTexture with candidate ids [PPI_POST_PROCESS_INPUT0
+first, PPI_SCENE_COLOR second], candidate output pins ["Color", ""]. Loud
 WARN on total failure - the run reports which path took via verify().
+MaterialExpressionSceneColor is REMOVED (2026-10-06): it instantiates from
+Python but the shader compiler rejects it in MD_POST_PROCESS ("Only 'surface'
+material domain can use the scene color node", build log 2026-10-06) - both
+the master and MI_Toon_PostComposite failed to compile and fell back to
+Default Material. Instantiation success is not engine truth.
 """
 from __future__ import annotations
 
@@ -54,21 +57,16 @@ _state = {"scene_input": None, "scene_output_pin": None}
 def _scene_color_source(mat, x, y):
     """Return (node, description) for the current-frame colour.
 
-    Order mirrors build_dreamprint_material.py `_pp_input_id()`:
-      1. MaterialExpressionSceneColor, if this build instantiates it;
-      2. MaterialExpressionSceneTexture + scene_texture_id candidates, with
-         PPI_POST_PROCESS_INPUT0 first (the proven dreamprint fallback);
-      3. None - caller logs loud and continues (grade would run on black).
-    """
-    # 1. direct scene color node
-    try:
-        node = lib.expr(mat, unreal.MaterialExpressionSceneColor, x, y)
-        if node is not None:
-            return node, "MaterialExpressionSceneColor"
-    except Exception:
-        pass
+    Mirrors build_dreamprint_material.py `_pp_input_id()`:
+      1. MaterialExpressionSceneTexture + scene_texture_id candidates, with
+         PPI_POST_PROCESS_INPUT0 first (the proven dreamprint path);
+      2. None - caller logs loud and continues (grade would run on black).
 
-    # 2. SceneTexture with candidate ids
+    MaterialExpressionSceneColor is deliberately NOT attempted: it
+    instantiates fine from Python but is shader-illegal in MD_POST_PROCESS
+    (build log 2026-10-06), which is exactly the "instantiation success is
+    not engine truth" failure mode this repo guards against.
+    """
     ids = ["PPI_POST_PROCESS_INPUT0", "PPI_SCENE_COLOR"]
     for id_name in ids:
         try:
@@ -202,8 +200,15 @@ def build(rebuild=True):
     # (build_mf_patterns.py:168,344: AppendVector + Length on two scalars).
     # dx/dy are masked out of (uv - 0.5) first so the append is a plain float2
     # and Length returns sqrt(dx^2 + dy^2), not a doubled-component length.
+    # Constant2Vector (float2), NOT lib.constant (float3): Subtract of the
+    # float2 ScreenPosition against a float3 failed shader compile with
+    # "Arithmetic between types float2 and float3 are undefined" (build log
+    # 2026-10-06). Dreamprint:297 uses the same Constant2Vector pattern.
     uv_c = lib.expr(mat, unreal.MaterialExpressionSubtract, -1440, 700)
-    lib.binary(uv, lib.constant(mat, (0.5, 0.5, 0.0, 1.0), -1440, 780), uv_c)
+    half_uv = lib.expr(mat, unreal.MaterialExpressionConstant2Vector, -1440, 780)
+    half_uv.set_editor_property("r", 0.5)
+    half_uv.set_editor_property("g", 0.5)
+    lib.binary(uv, half_uv, uv_c)
     dx = lib.expr(mat, unreal.MaterialExpressionComponentMask, -1280, 640)
     dx.set_editor_property("r", True)
     dx.set_editor_property("g", False)
