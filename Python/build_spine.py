@@ -52,7 +52,7 @@ def main():
         try:
             importlib.import_module(_mod)
         except Exception as exc:
-            log(f"WARN could not preload {_mod}: {exc}")
+            lib.log(f"WARN could not preload {_mod}: {exc}")
 
     # ---- textures FIRST ----
     # Build_toon_profiles imports ShadowHatchingPatternTexture /
