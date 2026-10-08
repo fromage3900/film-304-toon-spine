@@ -85,6 +85,11 @@ def load_request(spec):
     req.setdefault("mode", "stills")
     if req["mode"] == "stills" and not req.get("shots"):
         req["shots"] = default["shots"]
+    # 2026-10-08: optional spec override lets run the SAME harness against a
+    # second composed set level (e.g. the office stage) without a second
+    # copy of the harness - the request names the spec; out_dir, level,
+    # cameras and output stems ALL come from the selected spec.
+    req.setdefault("spec", None)
     return req
 
 
@@ -179,7 +184,7 @@ def fire_shot(shot, tier):
         "requested_resolution": [int(res["width"]), int(res["height"])],
         "camera_label": shot["camera_label"],
         "focal_length_mm": shot["focal_length_mm"],
-        "render_frame": shot["render_frame"],
+        "render_frame": shot.get("render_frame"),  # optional on stage specs
         "call_started_epoch": t0,
         "call_started_local": time.strftime("%Y-%m-%d %H:%M:%S",
                                             time.localtime(t0)),
@@ -250,8 +255,30 @@ def build_report(spec, requested):
 
 
 if __name__ == "__main__" or "unreal" in sys.modules:
-    spec = load_spec()
-    req = load_request(spec)
+    default_spec = load_spec()
+    req = load_request(default_spec)
+    spec = default_spec
+    if req.get("spec"):
+        # The request may point the harness at a second composed-set spec
+        # (its own level, own output_dir, own cameras). Everything below
+        # reads the.selected spec, so one harness serves both sets.
+        try:
+            spec = json.loads(Path(req["spec"]).read_text(
+                encoding="utf-8-sig"))
+            OUT_DIR = REPO / spec["render_tier"]["output_dir"]
+            REQUEST = OUT_DIR / "_request.json"
+        except Exception as e:                                     # noqa: BLE001
+            raise RuntimeError(
+                "request spec %r did not load: %s" % (req["spec"], e))
+        # Only ONE spec switch per run: a batch that mixes levels needs one
+        # process per level (the one-level-per-process rule) - name the
+        # spec's shots in the same request that names the spec.
+        if req["mode"] == "stills" and not req.get("shots"):
+            req["shots"] = [spec["shots"][0]["shot_id"]]
+        log("spec override -> %s (level %s, out %s)"
+            % (req["spec"], spec["level"]["package"],
+               spec["render_tier"].get("output_dir")))
+
     OUT_DIR.mkdir(parents=True, exist_ok=True)
 
     if req["mode"] == "report":

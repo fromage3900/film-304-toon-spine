@@ -23,6 +23,19 @@ the **Substrate Toon Shader**. This is a game-changer for indie animation becaus
 
 ## Pre-Production
 
+### 0. Storyboards
+
+**Office Spider** — 3-page hand-drawn storyboard by Jeffrey Dawn (2026-10-05)
+
+Location: `Humber_FinalYear_Prep/Capstone_Pipeline_Scaffold/01_Preprod/Storyboard/`
+
+- `SB_OfficeSpider_Page1.png` — Establishing & Setup (12 panels)
+- `SB_OfficeSpider_Page2.png` — Disruption & Search (12 panels)
+- `SB_OfficeSpider_Page3.png` — Confrontation & Reveal (12 panels)
+- `SB_OfficeSpider_notes.md` — Full panel breakdown and themes
+
+**Summary:** A comedic slice-of-life short about an office worker whose day is interrupted by a spider. Three-act structure: mundane routine → disruption → confrontation. Key visual motif: "Donut Day" calendar creates dramatic irony.
+
 ### 1. Style Guide
 
 Define your toon style before touching the engine:

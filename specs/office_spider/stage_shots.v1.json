@@ -1,0 +1,272 @@
+{
+  "schema_version": "1.0.0",
+  "purpose": "Office Spider stage-spec: storyboard-derived camera set + a compact cubicle-corner interior set for shader render tests. Companion to specs/humber_toon_spine/prototype_renders.v1.json (which owns the brutalist exterior vista level).",
+  "source_of_truth": [
+    "Humber_FinalYear_Prep/Capstone_Pipeline_Scaffold/01_Preprod/Storyboard/SB_OfficeSpider_notes.md (3 pages, 12 shot-groups, Jeffrey Dawn 2026-10-05)",
+    "Docs/OFFICE_SPIDER_SHOT_PLAN.md section 2 (Act I, materials-realized rows)",
+    "Docs/OFFICE_SPIDER_SHOT_PLAN.md section 7 (open gaps -- what is deliberately deferred)"
+  ],
+  "orchestrator_note": "12 owner sequences (Content/Sequences/Shots/SH*, 30fps 0-150 shells) + OfficeSpider_Master are the owner's staged shells and are NOT touched by this pass: this spec stages the CAMERAS + SET for still render tests. Break-room/kitchen shell and the worker/spider rigs are the plan's queued gaps (7.11/7.12) -- shots that need them are listed defer_reason, not staged.",
+
+  "levels": [
+    {
+      "name": "exterior (already staged)",
+      "package": "/Game/Maps/L_Toon_Shot_Env",
+      "builder": "Python/compose_shot_env_level.py (specs/humber_toon_spine/prototype_renders.v1.json)",
+      "shots_here": ["SH010"],
+      "note": "The composed brutalist exterior vista already carries Cam_Env_SH010 at 24mm per the boards' opening framing. Not rebuilt by this pass."
+    },
+    {
+      "name": "office interior stage",
+      "package": "/Game/Maps/L_Toon_Shot_Office",
+      "builder": "Python/build_shot_stage.py (reads THIS spec)",
+      "shots_here": ["SH020", "SH030", "SH040", "SH050", "SH060"],
+      "note": "Lean cubicle-corner set: floor + back/side walls (open top for light), the Canonical cubicle unit, paper props, drop-ceiling troffer glows. One set, five storyboard cameras."
+    }
+  ],
+
+  "render_tier": {
+    "name": "prototype",
+    "method": "unreal.AutomationLibrary.take_high_res_screenshot",
+    "resolution": { "width": 1280, "height": 720 },
+    "filmback_mm": { "width": 35.0, "height": 19.6875 },
+    "filmback_note": "Required 16:9; the capture reframes silently otherwise (measured 2026-10-01).",
+    "output_format": "png",
+    "bit_depth": 8,
+    "spatial_samples": 1,
+    "temporal_samples": 1,
+    "motion_blur": false,
+    "depth_of_field": false,
+    "lumen_gi": false,
+    "force_game_view": true,
+    "output_dir": "Saved/Renders/office_stage",
+    "output_note": "Prototype stills are regenerable local output; the JSON report is the committed evidence."
+  },
+
+  "level": {
+    "name": "L_Toon_Shot_Office",
+    "package": "/Game/Maps/L_Toon_Shot_Office",
+    "builder": "Python/build_shot_stage.py",
+    "why_separate": "L_Brutalist_Layout stays the untouched review grid; L_Toon_Shot_Env stays the exterior vista. A bay-sized interior is neither.",
+    "ground": {
+      "enabled": true,
+      "asset": "/Engine/BasicShapes/Cube",
+      "scale_uu": [12000, 12000, 20],
+      "material": "/Game/Materials/Instances/MI_OfficeSpider_VCTFloor",
+      "note": "VCT floor reads grout grid + forge the toon bands; min.z lifted to 0 by the builder's measured grounding pass."
+    },
+    "lights": {
+      "sun_intensity": 5.0,
+      "sun_rotation": [-40.0, 115.0, 0.0],
+      "sun_height": 2600,
+      "sky": true,
+      "sky_height": 3200,
+      "atmosphere": false,
+      "fill_light": true,
+      "fill_intensity": 1.6,
+      "fill_rotation": [-25.0, -105.0, 0.0],
+      "lighting_note": "Open-top studio cube. The key light comes FROM the camera side so the visible wall/cubicle/desk faces catch direct sun (the first staged render, 2026-10-08, was black - the key was aimed at the wall's back). The fill is a second directional against the key, and the troffers are the interior emitters."
+    }
+  },
+
+  "scene": [
+    {
+      "object": "Floor", "asset": "/Engine/BasicShapes/Cube",
+      "role": "office bay floor (VCT)",
+      "position_uu": [0, 0, -10],
+      "scale_uu": [12, 12, 0.2],
+      "material": "/Game/Materials/Instances/MI_OfficeSpider_VCTFloor",
+      "ground_correction": "skip",
+      "note": "Thin slab: 12x12 m, 20 cm thick, top face at z=0. The native cube is 100 uu per side, so the scale value IS the extent in metres."
+    },
+    {
+      "object": "CarpetPatch", "asset": "/Engine/BasicShapes/Cube",
+      "role": "cubicle carpet zone",
+      "position_uu": [0, -1050, 15],
+      "scale_uu": [6, 4.5, 0.3],
+      "material": "/Game/Materials/Instances/MI_Toon_Office_Carpet",
+      "sits_on": "Floor",
+      "note": "Bottom z=0, top ~+30: the zone every sits-on prop lands on."
+    },
+    {
+      "object": "BackWall", "asset": "/Engine/BasicShapes/Cube",
+      "role": "bay rear wall",
+      "position_uu": [0, -1550, 155],
+      "scale_uu": [12, 0.2, 3.1],
+      "material": "/Game/Materials/Instances/MI_Toon_Environment",
+      "ground_correction": "auto",
+      "overlap_ok_with": ["SideWallLeft"],
+      "note": "Slim wall cubes (bottom 0, top +310) so a level tilt has room against a windowless interior."
+    },
+    {
+      "object": "SideWallLeft", "asset": "/Engine/BasicShapes/Cube",
+      "role": "bay side wall (camera left)",
+      "position_uu": [-1150, 0, 155],
+      "scale_uu": [0.2, 12, 3.1],
+      "material": "/Game/Materials/Instances/MI_Toon_Environment",
+      "ground_correction": "auto",
+      "overlap_ok_with": ["BackWall"]
+    },
+    {
+      "object": "OfficeCubicle", "asset": "/Game/Environment/Brutalist/04_INTERIOR_CUBICLES/SM_CUBICLE_Canonical",
+      "role": "hero workstation (partitions already assigned MI_Toon_Office_Polypropylene via the office-set builder)",
+      "position_uu": [0, -700, 0],
+      "ground_correction": "auto",
+      "overlap_ok_with": ["CarpetPatch", "BackWall"],
+      "note": "Measured 1023 x 660 x 219 uu in run 5 - the Canonical unit carries its own desk/partitions."
+    },
+    {
+      "object": "DeskChair", "asset": "/Game/Meshes/Office/Props/P_Chair_KS",
+      "role": "worker's task chair (board pg1 shots 2-3)",
+      "position_uu": [-140, -1050, 15],
+      "rotation_z_deg": 155.0,
+      "sits_on": "CarpetPatch",
+      "overlap_ok_with": ["CarpetPatch", "OfficeCubicle"],
+      "note": "Prop material gap: the staged prop FBX row is unassigned; a placeholder-grey read on this prop is the record, not a pass."
+    },
+    {
+      "object": "PaperStackA", "asset": "/Game/Meshes/Office/Props/SM_Paper_PMB",
+      "role": "typing-mode paper pile",
+      "position_uu": [-480, -900, 0],
+      "rotation_z_deg": 12.0,
+      "material": "/Game/Materials/Instances/MI_OfficeSpider_Paper",
+      "sits_on": "CarpetPatch",
+      "overlap_ok_with": ["CarpetPatch", "OfficeCubicle"],
+      "note": "MI_OfficeSpider_Paper carries T_SDF_PaperGrain + bMatteFinish. The cubicle's AABB spans its own furniture, so paper/sticky/chair/lamp rows carry overlap_ok_with for the immediate zone."
+    },
+    {
+      "object": "PaperSheetB", "asset": "/Game/Meshes/Office/Props/SM_Paper_PMB001",
+      "role": "loose sheet, second insert",
+      "position_uu": [-455, -730, 0],
+      "rotation_z_deg": -30.0,
+      "material": "/Game/Materials/Instances/MI_OfficeSpider_Paper",
+      "sits_on": "CarpetPatch",
+      "overlap_ok_with": ["CarpetPatch", "OfficeCubicle"]
+    },
+    {
+      "object": "PaperLooseC", "asset": "/Game/Meshes/Office/Props/paper_sheet",
+      "role": "third loose sheet, flung",
+      "position_uu": [-760, -570, 0],
+      "rotation_z_deg": 74.0,
+      "material": "/Game/Materials/Instances/MI_OfficeSpider_Paper",
+      "sits_on": "CarpetPatch",
+      "overlap_ok_with": ["CarpetPatch", "OfficeCubicle"]
+    },
+    {
+      "object": "DeskLamp", "asset": "/Game/Meshes/Office/Props/P_Lamp_EF",
+      "role": "desk lamp, cubicle hero",
+      "position_uu": [420, -700, 0],
+      "ground_correction": "auto",
+      "overlap_ok_with": ["OfficeCubicle", "CarpetPatch"],
+      "note": "No desk surface measured yet; the lamp stands on the floor this pass (the cubicle's own furniture is its content)."
+    },
+    {
+      "object": "StickyNoteRow", "asset": "/Game/Meshes/Office/Props/SM_StickyNote_PMB_001",
+      "role": "sticky notes row (board pg1 shot 9 supplies)",
+      "position_uu": [190, -900, 0],
+      "rotation_z_deg": 8.0,
+      "material": "/Game/Materials/Instances/MI_OfficeSpider_Paper",
+      "sits_on": "CarpetPatch",
+      "overlap_ok_with": ["CarpetPatch", "OfficeCubicle"]
+    },
+    {
+      "object": "DropCeiling", "asset": "/Engine/BasicShapes/Cube",
+      "role": "drop-ceiling rail (a gall, not a lid -- never blocks the key light)",
+      "position_uu": [0, 0, 320],
+      "scale_uu": [12, 3, 0.6],
+      "material": "/Game/Materials/Instances/MI_Toon_Office_DropCeiling",
+      "ground_correction": "skip",
+      "note": "Bottom at +290 m... bottom at +290 uu, top at +350: reads as ceiling depth behind the level-framed shots."
+    },
+    {
+      "object": "TrofferA", "asset": "/Engine/BasicShapes/Cube",
+      "role": "troffer emissive slab 1 (MI_Toon_Office_Troffer: steady emissive)",
+      "position_uu": [-350, -1050, 295],
+      "scale_uu": [1.2, 0.6, 0.2],
+      "material": "/Game/Materials/Instances/MI_Toon_Office_Troffer",
+      "ground_correction": "skip",
+      "overlap_ok_with": ["DropCeiling"]
+    },
+    {
+      "object": "TrofferB", "asset": "/Engine/BasicShapes/Cube",
+      "role": "troffer emissive slab 2",
+      "position_uu": [350, 0, 295],
+      "scale_uu": [1.2, 0.6, 0.2],
+      "material": "/Game/Materials/Instances/MI_Toon_Office_Troffer",
+      "ground_correction": "skip",
+      "overlap_ok_with": ["DropCeiling"]
+    }
+  ],
+
+  "shots": [
+    {
+      "shot_id": "SH010", "name": "establish_office",
+      "sequence": "/Game/Sequences/Shots/SH010_Establish_Office",
+      "focal_length_mm": 24.0,
+      "render_frame": 24,
+      "camera_label": "Cam_Env_SH010",
+      "reuse_level": "/Game/Maps/L_Toon_Shot_Env",
+      "still_name": "OS_SH010_proto_v01",
+      "framing_intent": "Board pg1 shot 1: establishing, slow zoom into the office building -- brutalist exterior wide, the office block confronting the frame. Already staged (Cam_Env_SH010 in the composition spec), rendered through the COMPOSER spec's exterior still."
+    },
+    {
+      "shot_id": "SH020", "name": "worker_typing_OTS",
+      "sequence": "/Game/Sequences/Shots/SH020_Worker_Typing",
+      "camera_label": "Cam_WS_SH020",
+      "focal_length_mm": 32.0,
+      "location_uu": [-260, -2850, 135], "target_uu": [-140, -1700, 96],
+      "still_name": "OS_SH020_proto_v01",
+      "framing_intent": "Board pg1 shots 2-3: worker typing at the desk -- OTS desk over the cubicle, partitions + desk lamplight, worker seat direction preserved."
+    },
+    {
+      "shot_id": "SH030", "name": "paper_shuffle_insert",
+      "sequence": "/Game/Sequences/Shots/SH030_Paper_Shuffle",
+      "camera_label": "Cam_WS_SH030",
+      "focal_length_mm": 50.0,
+      "location_uu": [-620, -1420, 128], "target_uu": [-520, -1290, 60],
+      "still_name": "OS_SH030_proto_v01",
+      "framing_intent": "Board pg1 shot 4: paper shuffle insert -- low angle on the paper pile, bMatteFinish paper grain front and centre."
+    },
+    {
+      "shot_id": "SH040", "name": "desk_supplies_medium",
+      "sequence": "/Game/Sequences/Shots/SH040_Notification_Alert",
+      "camera_label": "Cam_WS_SH040",
+      "focal_length_mm": 50.0,
+      "location_uu": [-420, -2500, 150], "target_uu": [40, -1500, 90],
+      "still_name": "OS_SH040_proto_v01",
+      "framing_intent": "Board pg1 shot 9 (SH040 in the owner's 12): desk medium across surface supplies -- sticky-notes row + lamp + papers read depth."
+    },
+    {
+      "shot_id": "SH050", "name": "stretch_break_medium",
+      "sequence": "/Game/Sequences/Shots/SH050_Stretch_Break",
+      "camera_label": "Cam_WS_SH050",
+      "focal_length_mm": 50.0,
+      "location_uu": [-780, -3050, 145], "target_uu": [180, -1500, 112],
+      "still_name": "OS_SH050_proto_v01",
+      "framing_intent": "Board pg1 shot 6: worker stretches and leans back -- head/shoulder height medium against the partition wall."
+    },
+    {
+      "shot_id": "SH060", "name": "calendar_macro",
+      "sequence": "/Game/Sequences/Shots/SH060_Donut_Day_Reveal",
+      "camera_label": "Cam_WS_SH060",
+      "focal_length_mm": 85.0,
+      "location_uu": [80, -1580, 108], "target_uu": [185, -1374, 90],
+      "still_name": "OS_SH060_proto_v01",
+      "framing_intent": "Board pg1 shots 9-10: 'Donut Day' macro -- 85mm on the partition supplies region (calendar/sticky-note zone)."
+    }
+  ],
+
+  "deferred": [
+    { "shot_id": "SH070", "reason": "spider sighted at desk needs the spider rig (plan gap 7.11, owner)" },
+    { "shot_id": "SH080", "reason": "worker standing/carry needs the rig bind (plan gap 7.11)" },
+    { "shot_id": "SH090", "reason": "break room wide needs the kitchen build-out (plan gap 7.12)" },
+    { "shot_id": "SH100", "reason": "coffee-machine ECU is a break-room set + counter (plan gap 7.12)" },
+    { "shot_id": "SH110", "reason": "the money-shot wide needs the worker L / spider R rig placement (plan gap 7.11)" },
+    { "shot_id": "SH120", "reason": "confrontation needs the rigs (plan gap 7.11)" }
+  ],
+
+  "evidence_contract": {
+    "stills_note": "Each still committed to the JSON report at Saved/Audit/render_prototype_report.json via the shared harness (render_prototypes.py with the request's spec override). The PNG is evidence only through the REPORT's measured IHDR dimensions + the camera's filmback aspect; the images themselves are read in review.",
+    "shader_read_note": "On this machine D3D12 now reports Max Feature Level SM6 (owner's config), so the Substrate toon read is expected REAL; a render that comes back default-material-looking is treated as a defect, not as the machine. The minimum passes are: VCT grout + toon bands on the floor, paper matte grain, partition polypropylene hatching, troffer emissive. A still missing them fails the render test."
+  }
+}

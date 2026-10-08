@@ -11,9 +11,21 @@ Everything below is from the files in this repo: `Content/` and `Python/`.
 ## What the spine is
 
 Sixteen masters (the fourteen `build_spine.py` builds plus the two Painterly
-assets), five material functions, **twenty-six** toon profiles, **thirty-four**
-instances and **nineteen** generated textures — a Substrate Toon shading spine that a
-film can shoot with, with no game-system dependencies.
+assets), **eleven** material functions (the October core: MF_ColorRamp3
+MF_RampLUT MF_ProceduralPatterns MF_PBRDetail MF_RimOffset MF_SpaceParallax
+MF_ClothWindDrape, plus the 2026-10-07 film-core lane additions MF_NormalAdjust
+MF_SurfaceWear MF_DF_ContactBlend MF_Impasto and the neutral MF_FilmGrade),
+**thirty-one** toon profiles, **fifty-one** instances (including the 2026-10-07
+static deep-night preset `MI_Toon_Sky_DeepNight`) and **twenty-seven**
+generated textures — a Substrate Toon shading spine that a film can shoot with,
+with no game-system dependencies. What each 2026-10-07 lane does, and its
+default-off gate, is `Docs/MELODIA_TOON_CONVERGENCE.md` §4/§5.
+
+(2026-10-06 Office Spider expansion, code-authored on
+`feat/office-spider-toon`, build pending: +5 profiles, +6 instances,
+Universal gains rim + ShadowLift/Flicker/bMatteFinish. See "Office Spider
+expansion (2026-10-06)" below. Until the spine rebuilds, the counts above
+describe the builders, not the saved assets.)
 
 Counts are the **tracked** set — what a fresh clone actually receives (`git ls-files`
 under `Content/Materials/`). A further 132 `.uasset` files sit untracked in
@@ -25,42 +37,91 @@ copying is not an intake channel. Do not count them.
 ```
 Content/Materials/
   Masters/       M_Master_Toon_Universal      the spine (opaque surfaces)
-                 M_Master_Toon_Character      the character spine master (TP_Melusina)
-                 M_Master_Toon_Foliage        masked two-sided cards, sway WPO
-                 M_Master_Toon_Water          stylized water, scrolling ripple normal
-                 M_Master_Toon_Sky            banded sky dome (unlit, no Toon Profile)
-                 M_Master_Toon_Landscape      ground planes with macro variation
-                 M_Master_Toon_Face           skin shading with an authored shadow layer
-                 M_Master_Toon_Hair           anisotropic read from a root-to-tip ramp
-                 M_Master_Toon_Glass          toon interior + fresnel-only edge
-                 M_Master_Toon_EmissiveFX     unlit pattern glow, optional pulse
-                 M_Master_Toon_Particles      unlit sprite chain, translucent
-                 M_Master_Toon_PostComposite  the film-wide grade, one shared writer
-                 M_Toon_Unlit_Character       the shadowless character master
-                 M_Outline_InvertedHull       the outline pass
-                 M_PainterlyGouache           the gouache look (standalone, + _Inst)
-  Functions/     MF_ColorRamp3                 ramp / band generation
-                 MF_RampLUT                    LUT-driven ramp lookup
-                 MF_ProceduralPatterns         analytic + baked pattern field (13 patterns)
-                 MF_PBRDetail                  detail/height shaping
-                 MF_RimOffset                  view/normal-space rim into EmissiveColor
-  ToonProfiles/  TP_Default  TP_Stone  TP_Foliage  TP_Gold  TP_Hero
-                 TP_Hatched  TP_TwoTone  TP_Environment  TP_SoftPainterly
-                 TP_Warm  TP_Cool  TP_Water  TP_Melusina  TP_Character
-                 TP_Landscape  TP_Face  TP_Hair  TP_Glass
-                 TP_Office_{Carpet,Laminate,DropCeiling,Troffer,
-                            PowderCoat,Screen,Polypropylene,Whiteboard}
-  Instances/     MI_Toon_{Hero,Stone,Foliage,Gold,Hatched,TwoTone,Painterly,
-                            Environment,Office_*,Melusina,Character,Scales,
-                            CrackedStone,Sky,Landscape,Face,Hair,Glass,
-                            EmissiveFX,Particles,PostComposite}
-                 MI_Foliage_{Fern,Hedge}      on the foliage master
-                 MI_Water_{Canal,Puddle}      on the water master
-                 MI_Outline_{Thin,Heavy}
-  Textures/      T_Dither_Bayer  T_Hatch_{Cross,Diagonal}  T_HatchPattern
-                 T_Ramp_{2Band,3Band,4Band,Smooth}  T_Noise_White
-                 T_SDF_{Strokes,Cross,Dots,Scales,Cracks,Leaf}   tilable SDF map library
+                  M_Master_Toon_Character      the character spine master (TP_Melusina)
+                  M_Master_Toon_Foliage        masked two-sided cards, sway WPO
+                  M_Master_Toon_Water          stylized water, scrolling ripple normal
+                  M_Master_Toon_Sky            banded sky dome (unlit, no Toon Profile)
+                  M_Master_Toon_Landscape      ground planes with macro variation
+                  M_Master_Toon_Face           skin shading with an authored shadow layer
+                  M_Master_Toon_Hair           anisotropic read from a root-to-tip ramp
+                  M_Master_Toon_Glass          toon interior + fresnel-only edge
+                  M_Master_Toon_EmissiveFX     unlit pattern glow, optional pulse
+                  M_Master_Toon_Particles      unlit sprite chain, translucent
+                  M_Master_Toon_PostComposite  the film-wide grade, one shared writer
+                  M_Toon_Unlit_Character       the shadowless character master
+                  M_Outline_InvertedHull       the outline pass
+                  M_PainterlyGouache           the gouache look (standalone, + _Inst)
+    Functions/     MF_ColorRamp3                 ramp / band generation
+                   MF_RampLUT                    LUT-driven ramp lookup
+                   MF_ProceduralPatterns         analytic + baked pattern field (19 cells)
+                   MF_PBRDetail                  detail/height shaping
+                   MF_RimOffset                  view/normal-space rim into EmissiveColor
+                   MF_SpaceParallax              cosmic-depth parallax (additive emissive, gate 0)
+                   MF_ClothWindDrape             cloth wind WPO (gate: WindStrength+Folding 0)
+                   MF_NormalAdjust               world normal shaping (identity at 1.0)
+                   MF_SurfaceWear                truchet cracks + wear masks (gates 0)
+                   MF_DF_ContactBlend            distance-field contact tint (gate 0)
+                   MF_Impasto                    painterly relief WPO (gate 0)
+                   MF_FilmGrade                  neutral film grade (identity at defaults)
+    ToonProfiles/  TP_Default  TP_Stone  TP_Foliage  TP_Gold  TP_Hero
+                   TP_Hatched  TP_TwoTone  TP_Environment  TP_SoftPainterly
+                   TP_Warm  TP_Cool  TP_Water  TP_Melusina  TP_Character
+                   TP_Landscape  TP_Face  TP_Hair  TP_Glass
+                   TP_Office_{Carpet,Laminate,DropCeiling,Troffer,
+                              PowderCoat,Screen,Polypropylene,Whiteboard}
+                   TP_{Paper,Cardboard,SteelDark,Spider_Body,Spider_Eye}
+                              (Office Spider 2026-10-06, authored record -
+                              pixel-active only when a master binds them)
+    Instances/     MI_Toon_{Hero,Stone,Foliage,Gold,Hatched,TwoTone,Painterly,
+                              Environment,Office_*,Melusina,Character,Scales,
+                              CrackedStone,Sky,Sky_DeepNight,Landscape,Face,Hair,
+                              Glass,EmissiveFX,Particles,PostComposite}
+                   MI_OfficeSpider_{Paper,DonutBox,CoffeeMachine,WorkerShirt,
+                              SpiderBody,SpiderEyes}   (2026-10-06 shelf)
+                   MI_OfficeSpider_FrostedGlass on the glass master (door glazing)
+                   MI_Foliage_{Fern,Hedge}      on the foliage master
+                   MI_Water_{Canal,Puddle}      on the water master
+                   MI_Outline_{Thin,Heavy}
+    Textures/      T_Dither_Bayer  T_Hatch_{Cross,Diagonal}  T_HatchPattern
+                   T_Ramp_{2Band,3Band,4Band,Smooth}  T_Noise_White
+                   T_SDF_{Strokes,Cross,Dots,Scales,Cracks,Leaf}   tilable SDF map library
+                   T_SDF_{CarpetLoop,CeilingTile,WeaveFine,Blinds,PaperGrain,
+                           Woodgrain,Brushed,Cork,VCT,WhiteboardGhost,
+                           FrostBands,Cardboard}   office tilables (2026-10-06)
 ```
+
+## Office tilable + SDF expansion (2026-10-06, code-authored, build pending)
+
+Same branch (`feat/office-spider-toon`), same rule (builders only, bake
+when the editor cools).
+
+* `build_textures.py` — +12 baked office maps (table in
+  `Docs/SDF_PATTERN_PIPELINE.md` §3). Headless-proven BEFORE the bake:
+  stub-`unreal` run of every generator asserts determinism,
+  tile-exactness (wrap step ≤ worst interior step, the sdf_map_audit
+  criterion), polarity/range — 18/18 PASS — and the contact sheet was
+  read back by eye (leaf/weave/blinds/VCT/ghost zooms). Report:
+  `Saved/Audit/texture_office_verify_2026-10-06.json`. The harness
+  caught two real generator bugs pre-bake (whiteboard arcs reaching the
+  tile edge; cardboard speckle quantizing below its bar).
+* `build_mf_patterns.py` — +6 analytic cells (13 SubwayTile, 14 Blinds,
+  15 PaperFiber, 16 Brushed, 17 Chevron, 18 FrostBands) on the scalar
+  tx/ty axes, plus three repairs the expansion exposed:
+  1. **The selector was inverted** — `fields[idx]` sat on `A > B`, so
+     index 0 routed to the top field and every other index to field 0
+     (proven by trace against live-probed pin names; invisible because
+     PatternStrength defaults to 0 and lookdev is driver-blocked).
+     Now the induction-clean descending form; identity mapping proven
+     by the headless truth-table sim.
+  2. **Checker/weave/crosshatch-B were degenerate at Angle 0** (impulse,
+     parity ≡ 0, family = 0) from deriving independent axes off the
+     identical float2 frame. New `_axis` helper (Dot + Constant2Vector,
+     both proven) splits scalar tx/ty; the three cells plus all six new
+     ones build on it. Untouched cells keep the float2 frame exactly.
+  3. `PatternIndex` labels updated (Universal/Character/Landscape).
+  Cells 13–18 + checker/crosshatch/weave mirrors assert in the same
+  headless report (alternation, both families, offset rows, cord
+  positions, zigzag variance, smoothness, phase variance).
 
 Counts at the top of this file are the tracked inventory as of the 2026-10-05
 freeze commit. The latest headless spine build (run 2, 2026-10-05) reported
@@ -330,3 +391,117 @@ py "Python/extract_dependencies.py"
 ```
 
 If this file and method 1 disagree, **method 1 is right** and this file is the bug.
+
+## Office Spider expansion (2026-10-06, code-authored, build pending)
+
+Storyboard: office worker, Canonical cubicle, kitchen pour, spider reveal
+(p12-2 dark corner). Branch `feat/office-spider-toon`. Builders changed,
+no asset built yet - the headless rebuild waits for a cool editor (a
+second UE process alongside the live one is held unsafe).
+
+* `build_master_toon.py` — Universal gains the Character rim
+  (`MF_RimOffset`, 7 knobs, default OFF) plus three wired utility knobs:
+  `ShadowLift` (uniform floor lift, default 0), `FlickerRate` /
+  `FlickerDepth` (emissive throb, default 0 = steady, the EmissiveFX
+  Time/Sine pattern), and the `bMatteFinish` switch (True = roughness
+  1.0 for paper/poster). All defaults are pixel-identical to today.
+  New `verify()` asserts the rim call + RimEmissive consumption + knob
+  presence; `build_spine.py` Universal `expected_calls` gains the rim.
+* `build_toon_profiles.py` — +5 (`TP_Paper`, `TP_Cardboard`,
+  `TP_SteelDark`, `TP_Spider_Body`, `TP_Spider_Eye`), all obeying the
+  never-hits-0 floor. Binding caveat: profiles reach pixels only via
+  master binding (Universal = TP_Default), so these are authored records
+  until a family master binds them; the instances carry the visible look
+  in scalars meanwhile - same status the office 8 shipped in.
+* `build_instances.py` — +7 `MI_OfficeSpider_*` shelf (Paper, DonutBox,
+  CoffeeMachine, SpiderBody, SpiderEyes on Universal; WorkerShirt on the
+  Character master for the rim + bound TP_Melusina; FrostedGlass on the
+  glass master for the conference-door glazing, CellIndex 18 frost bands
+  at Angle 0). Unassigned until the prop/rig import lands
+  (`build_office_set_materials.py` reports them as awaiting geometry).
+* `build_pattern_overrides.py` — DP dials: troffer/screen flicker,
+  coffee-machine buzz lamp, spider rim+lift push, eye throb.
+* `verify_expansion.py` — Universal joins the call check (4 wants) +
+  `officespider_spot` scalar read-backs; report
+  `Saved/Audit/expansion_verify_2026-10-06.json`.
+
+## Neutral-default textures (2026-10-06)
+
+`build_textures.py` also generates a five-map **neutral default** set —
+`T_Neutral_{Normal,Roughness,Height,Metallic,ORM}` — flat stand-ins a texture
+slot falls back to when its intended map is **missing**, so a slot renders flat
+instead of Unreal's "missing texture" checkerboard. They are project assets
+(never `/Engine/*`), which is the grey-default policy `spine_lib.texture_param()`
+states. `spine_lib.resolve_texture(path, key=...)` is the single swap point
+(picks the neutral from the parameter name; a mark/sprite slot falls back to the
+black map, a zero field). The silent holes routed through it are the
+instance-override path (`build_instances._apply`, used by
+`build_pattern_overrides`) and the gouache sampler. The master builders keep
+their own loud `RuntimeError` guards for a *required* map (`T_Noise_White`,
+`T_Ramp_Smooth`, `T_SDF_Strokes`) — a missing required map is still a build
+failure, by design.
+
+## State 2026-10-07: the film material core (owner-briefed six utilities + sky preset)
+
+Owner brief: audit the eight unfinished source functions first, converge the six
+selected utilities and the static deep-night sky preset, keep iridescence /
+sparkle / vein-glow / radial-rings out, and only then add a new function.
+
+* The eight-function audit and the delivered lane map live in
+  `Docs/MELODIA_TOON_CONVERGENCE.md` (2026-10-07): MF_NormalAdjust (world-space,
+  identity at strength 1), MF_SurfaceWear (the Itto lane successor),
+  MF_DF_ContactBlend (drop package rebuilt in place), MF_Impasto (the
+  Impressionist lane successor; BrushScale/StrokeStrength now genuinely wired),
+  MF_FilmGrade (the NikkiDreamGrade lane re-scoped to a NEUTRAL film grade on
+  PostComposite), and the stabilized MF_ClothWindDrape (+ internal Time read -
+  the source HLSL's `Time` identifier failed the first real shader compile of
+  the graph; Custom nodes carry no Time uniform in the vertex context).
+* The master routing: Universal carries the four surface lanes (normal /
+  wear / contact / impasto), Landscape the wear-contact pair on the ground,
+  PostComposite the neutral grade, and the deep-night preset
+  `MI_Toon_Sky_DeepNight` rides the unlit sky master. Iridescence, sparkle,
+  vein-glow/rings (`MF_Madoka`) stay OUT - the drop binaries are neither
+  counted nor called; the spine expected-call lists cannot be satisfied by
+  them.
+* Gates on 2026-10-07: spine run 4 `OVERALL: PASS` (errors: []), the
+  fresh-process load-compile gate clean across 15 masters + 12 functions
+  (`Python/check_master_compile.py` -> `Saved/Audit/loadonly_gate_20261007.json`
+  - a same-session recompile after an in-place rebuild can announce a
+  transient Missing-A input that is NOT in the file; the FRESH LOAD is the
+  compile authority), `Tools/verify_all.ps1` 9/9, `Tools/dogfood_toon_spine.py`
+  passing except the two pre-existing owner staging-slot naming violations
+  (Slot #01/#03 raw drops).
+* OPEN (environment): a machine-local texture fresh-load decay - textures that
+  read 256x256 in the build process load as the 32x32 default under a fresh
+  process, for untouched committed assets too (minimal probes + reproduction
+  in `Docs/MELODIA_TOON_CONVERGENCE.md` section 6). The texture .uassets are
+  deliberately left in the working tree uncommitted by this state; the owner
+  decides the repair furnace (interactive editor first / desktop machine).
+* OPEN (film): the visual review of `MI_Toon_Sky_DeepNight` inside SH010 and
+  SH020 before any new film-specific function is authored - this laptop is
+  driver-blocked for Substrate lookdev (SM5 vs SM6, see "Verification" above).
+
+## State 2026-10-08: laptop render path - the SM6 note supersedes the SM5 note
+
+The 2026-10-03 SM5-cap note is OUT OF DATE: the owner's config change added
+`PCD3D_SM6` to the D3D12 shader formats and this machine now logs
+`LogD3D12RHI: Creating D3D12 RHI with Max Feature Level SM6`. With that, the
+render path CHANGED form, and the new form is measured and documented in
+`Saved/Audit/render_test_20261008.json`:
+
+* the sky/atmosphere and non-Substrate content light and render correctly;
+* the Substrate toon surfaces COMPILE and EXECUTE but render BLACK - a
+  re-aimed/strengthened key (intensity 6, skylight 2.0 + recapture) does not
+  lift them (the light-bisect still is in the same audit JSON);
+* the same harness on the other workstation (P:, 2026-10-05) produced real
+  reads (`COMP_SH020/SH030_proto_v01.png` - tinted ground, ambient building
+  reads).
+
+So: **the shader render tests belong on the desktop until this laptop's
+driver moves past the SM5-era 527.56**, and the staged camera set
+(`specs/office_spider/stage_shots.v1.json` + `L_Toon_Shot_Office`) is exactly
+what those tests consume unchanged - the request file selects the spec, the
+harness is machine-portable. Camera staging for Act I interior + the exterior
+establishing shot is staged and verified (14/14 pieces, 0 overlaps, 16:9
+filmbacks); SH070-120 cameras defer to the rig bind and the kitchen build-out
+(plan gaps 7.11/7.12).

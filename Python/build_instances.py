@@ -341,6 +341,28 @@ INSTANCES = {
         "PosterizationBands": 6.0,
         "CloudStrength": 0.4,
     }, "M_Master_Toon_Sky"),
+    # -------------------------------------- static deep-night sky preset
+    # 2026-10-07, film material core. ONE reusable look for the night
+    # exteriors (SH010 opens on a silhouette against sky, SH020 atmospheric
+    # depth). Deliberately NOT a time-of-day system: this is a fixed
+    # parameter set on the sky master's existing three-colour + bands +
+    # clouds + stars controls (TOON_MASTERS_PLAN section 4 row 8, and the
+    # master builder's own "Not a time-of-day system" contract). Every
+    # value stays inside the control ranges the master documents; the
+    # stars sit under the clouds, so CloudStrength 0.28 keeps a few lit
+    # bands through which stars do not shine.
+    "MI_Toon_Sky_DeepNight": ("none (unlit)", {
+        "ZenithColor": (0.020, 0.032, 0.075, 1.0),   # deep indigo-black
+        "HorizonColor": (0.115, 0.150, 0.235, 1.0),  # city-glow horizon
+        "CloudColor": (0.28, 0.31, 0.40, 1.0),       # moonlit cloud bands
+        "StarColor": (0.90, 0.94, 1.00, 1.0),
+        "PosterizationBands": 4.0,                   # flatter night bands
+        "CloudScale": 2.6,
+        "CloudStrength": 0.28,
+        "StarScale": 120.0,                          # sparse points
+        "StarIntensity": 2.4,
+        "bStarsOn": True,
+    }, "M_Master_Toon_Sky"),
     "MI_Toon_Landscape": ("TP_Landscape", {
         "BaseTint": (0.30, 0.32, 0.28, 1.0),
         "AccentTint": (0.55, 0.58, 0.50, 1.0),
@@ -384,6 +406,152 @@ INSTANCES = {
         "DryRoughness": 0.08,
         "bUsePaintedRamp": False,
     }, "M_Master_Toon_Glass"),
+    # --------------------------------------- office spider glass (2026-10-06)
+    # ONE new glass look: frosted conference-door glazing. Frost lives in
+    # analytic CellIndex 18 (smooth sine bands - Softness is deliberately
+    # raised here, the one place a soft edge is the design) with the baked
+    # T_SDF_FrostBands behind it for etch variance; OpacityBase 0.55 reads
+    # frosted against MI_Toon_Glass's clear 0.30. PatternAngle forced to
+    # 0.0 (the glass master defaults to 45) so bands run horizontal.
+    "MI_OfficeSpider_FrostedGlass": ("TP_Glass", {
+        "BaseTint": (0.62, 0.72, 0.76, 1.0),
+        "AccentTint": (0.82, 0.90, 0.93, 1.0),
+        "InkColor": (0.08, 0.10, 0.12, 1.0),
+        "InkIntensity": 0.20,
+        "FresnelColor": (0.85, 0.94, 1.00, 1.0),
+        "FresnelPower": 3.0,
+        "OpacityBase": 0.55,
+        "RampStrength": 0.8,
+        "DryRoughness": 0.35,
+        "PatternIndex": 18.0,            # FrostBands
+        "PatternScale": 3.0,
+        "PatternAngle": 0.0,
+        "PatternDensity": 0.55,
+        "PatternStrength": 0.35,
+        "PatternSoftness": 0.15,
+        "bUsePaintedRamp": False,
+    }, "M_Master_Toon_Glass"),
+    # --------------------------------------- office spider gaps (2026-10-06)
+    # Shot-plan §7 gaps 1-9 + VCTFloor: mug, swatter, blinds, shoes, spray
+    # can + cap, broom wood, sprinkler streaks, fire glow, boss suit, vinyl
+    # floor. All on proven parents/params (Universal glass/steel profiles,
+    # Particles Tint/Brightness/Fade, EmissiveFX pulse). Unassigned until
+    # the prop meshes land (awaiting geometry, same as the first shelf).
+    "MI_OfficeSpider_Mug": ("TP_Office_Whiteboard", {
+        "BaseTint": (0.88, 0.86, 0.82, 1.0),    # glazed warm white
+        "AccentTint": (0.96, 0.94, 0.90, 1.0),
+        "InkIntensity": 0.05,
+        "DryRoughness": 0.15,
+        "RampStrength": 1.0,
+        "bUsePaintedRamp": False,
+        "bContactShadow": False,
+    }),
+    "MI_OfficeSpider_Swatter": ("TP_Office_Polypropylene", {
+        "BaseTint": (0.75, 0.10, 0.08, 1.0),    # signal red plastic
+        "AccentTint": (0.90, 0.25, 0.18, 1.0),
+        "InkIntensity": 0.15,
+        "DryRoughness": 0.50,
+        "RampStrength": 1.0,
+        "PatternIndex": 9.0,            # Grid: the swat mesh
+        "PatternScale": 18.0,
+        "PatternStrength": 0.60,
+        "PatternDensity": 0.50,
+        "bUsePaintedRamp": False,
+        "bContactShadow": False,
+    }),
+    "MI_OfficeSpider_Blinds": ("TP_Office_PowderCoat", {
+        "BaseTint": (0.80, 0.78, 0.72, 1.0),    # coated slat off-white
+        "AccentTint": (0.92, 0.90, 0.84, 1.0),
+        "InkIntensity": 0.08,
+        "DryRoughness": 0.50,
+        "RampStrength": 1.0,
+        "PatternIndex": 14.0,           # Blinds analytic
+        "PatternScale": 6.0,
+        "PatternStrength": 0.50,
+        "PatternDensity": 0.50,
+        "bUsePaintedRamp": False,
+        "bContactShadow": False,
+    }),
+    "MI_OfficeSpider_Shoes": ("TP_Character", {
+        "BaseTint": (0.16, 0.12, 0.10, 1.0),    # dark leather brown
+        "AccentTint": (0.35, 0.28, 0.22, 1.0),
+        "InkIntensity": 0.15,
+        "DryRoughness": 0.55,
+        "RampStrength": 0.85,           # below hero (same rule as Shirt)
+        "bUsePaintedRamp": False,
+        "bContactShadow": True,
+    }),
+    "MI_OfficeSpider_SprayCan": ("TP_SteelDark", {
+        "BaseTint": (0.70, 0.72, 0.75, 1.0),    # aluminum body
+        "AccentTint": (0.88, 0.90, 0.93, 1.0),
+        "InkIntensity": 0.20,
+        "DryRoughness": 0.30,
+        "RampStrength": 1.0,
+        "RimStrength": 0.30,            # hero-prop edge
+        "bUsePaintedRamp": False,
+        "bContactShadow": True,
+    }),
+    "MI_OfficeSpider_SprayCap": ("TP_Office_Polypropylene", {
+        "BaseTint": (0.70, 0.08, 0.06, 1.0),    # exterminator-red cap
+        "AccentTint": (0.86, 0.20, 0.14, 1.0),
+        "InkIntensity": 0.12,
+        "DryRoughness": 0.55,
+        "RampStrength": 1.0,
+        "bUsePaintedRamp": False,
+        "bContactShadow": False,
+    }),
+    "MI_OfficeSpider_BroomWood": ("TP_Office_Laminate", {
+        "BaseTint": (0.55, 0.40, 0.25, 1.0),    # broom handle wood
+        "AccentTint": (0.72, 0.56, 0.36, 1.0),
+        "InkIntensity": 0.10,
+        "DryRoughness": 0.70,
+        "RampStrength": 1.0,
+        "PatternIndex": 12.0,           # SDFMap
+        "PatternSDFMap": "/Game/Materials/Textures/T_SDF_Woodgrain",
+        "PatternScale": 2.0,
+        "PatternStrength": 0.45,
+        "bUsePaintedRamp": False,
+        "bContactShadow": False,
+    }),
+    "MI_OfficeSpider_Sprinkler": ("none (unlit)", {
+        "TintColor": (0.75, 0.87, 1.00, 1.0),   # cold sprinkler white-blue
+        "Brightness": 1.8,
+        "FadeDistance": 80.0,
+    }, "M_Master_Toon_Particles"),
+    "MI_OfficeSpider_FireGlow": ("none (unlit)", {
+        "EmissiveColor": (1.0, 0.45, 0.10, 1.0),
+        "EmissiveIntensity": 3.0,
+        "PulseRate": 6.0,
+        "PulseDepth": 0.5,
+        "PatternIndex": 4.0,            # InkSplat rings for flame licks
+        "PatternScale": 5.0,
+        "PatternStrength": 0.4,
+    }, "M_Master_Toon_EmissiveFX"),
+    "MI_OfficeSpider_BossSuit": ("TP_Character", {
+        "BaseTint": (0.12, 0.13, 0.18, 1.0),    # charcoal-navy suit
+        "AccentTint": (0.30, 0.32, 0.40, 1.0),
+        "InkColor": (0.03, 0.03, 0.05, 1.0),
+        "InkIntensity": 0.20,
+        "DryRoughness": 0.75,
+        "RampStrength": 0.85,
+        "RimStrength": 0.25,
+        "bUsePaintedRamp": False,
+        "bContactShadow": False,
+    }, "M_Master_Toon_Character"),
+    "MI_OfficeSpider_VCTFloor": ("TP_Office_Laminate", {
+        "BaseTint": (0.55, 0.53, 0.50, 1.0),    # warm vinyl grey
+        "AccentTint": (0.72, 0.70, 0.66, 1.0),
+        "InkIntensity": 0.10,
+        "DryRoughness": 0.40,
+        "RampStrength": 1.0,
+        "PatternIndex": 12.0,           # SDFMap
+        "PatternSDFMap": "/Game/Materials/Textures/T_SDF_VCT",
+        "PatternScale": 2.0,
+        "PatternStrength": 0.50,
+        "PatternDensity": 0.50,
+        "bUsePaintedRamp": False,
+        "bContactShadow": False,
+    }),
     "MI_Toon_EmissiveFX": ("none (unlit)", {
         "EmissiveColor": (1.0, 0.7, 0.9, 1.0),
         "EmissiveIntensity": 3.0,
@@ -401,6 +569,91 @@ INSTANCES = {
         "VignetteStrength": 0.35,
         "HalftoneStrength": 0.0,     # inert until a shot opts into print dots
     }, "M_Master_Toon_PostComposite"),
+
+    # --------------------------------------- office spider shelf (2026-10-06)
+    # Six looks for the Canonical-cubicle boards. PROFILE BINDING NOTE (see
+    # build_toon_profiles.py): Universal binds TP_Default, so the TP_* named
+    # here is the authored art-direction record, NOT the shading in effect -
+    # the visible look is carried by the scalars below on TP_Default's
+    # bands, exactly how the 8 office instances already work. WorkerShirt
+    # parents to the Character master (rim available, TP_Melusina bound)
+    # because the worker needs an edge of light in shared frames; the rest
+    # stay on Universal where ShadowLift / Flicker / bMatteFinish live.
+    # None of these are assigned to geometry yet - the prop meshes land
+    # with the rig/prop import, and build_office_set_materials.py reports
+    # them as awaiting geometry until then (same as the office orphans).
+    "MI_OfficeSpider_Paper": ("TP_Paper", {
+        "BaseTint": (0.88, 0.86, 0.80, 1.0),    # warm desk-paper white
+        "AccentTint": (0.96, 0.94, 0.88, 1.0),
+        "InkIntensity": 0.10,
+        "DryRoughness": 0.95,
+        "RampStrength": 1.0,        # opt INTO the profile bands (2026-10-03
+                                    # rule: at 0 the ramp is never consulted)
+        "ShadowLift": 0.02,         # paper never goes grey in shadow
+        "bMatteFinish": True,       # dead-matte 1.0 roughness
+        "bUsePaintedRamp": False,
+        "bContactShadow": False,
+    }),
+    "MI_OfficeSpider_DonutBox": ("TP_Cardboard", {
+        "BaseTint": (0.72, 0.52, 0.32, 1.0),    # kraft
+        "AccentTint": (0.85, 0.68, 0.46, 1.0),
+        "InkIntensity": 0.12,
+        "DryRoughness": 0.85,
+        "RampStrength": 1.0,
+        "bUsePaintedRamp": False,
+        "bContactShadow": True,
+    }),
+    "MI_OfficeSpider_CoffeeMachine": ("TP_SteelDark", {
+        "BaseTint": (0.16, 0.16, 0.18, 1.0),
+        "AccentTint": (0.38, 0.38, 0.42, 1.0),
+        "InkIntensity": 0.25,
+        "DryRoughness": 0.35,
+        "RampStrength": 1.0,
+        "RimStrength": 0.50,        # separates the dark body from the
+                                    # kitchen corner (p3-11 hero)
+        "EmissiveColor": (1.0, 0.60, 0.25, 1.0),   # amber buzz light;
+        "EmissiveIntensity": 0.0,   # OFF until the shot table opts in
+        "bUsePaintedRamp": False,
+        "bContactShadow": True,
+    }),
+    "MI_OfficeSpider_WorkerShirt": ("TP_Character", {
+        "BaseTint": (0.55, 0.60, 0.66, 1.0),    # pale office blue
+        "AccentTint": (0.75, 0.80, 0.86, 1.0),
+        "InkIntensity": 0.15,
+        "DryRoughness": 0.80,
+        "RampStrength": 0.85,       # held below the hero's 1.0 (same rule
+                                    # as MI_Toon_Character)
+        "PatternIndex": 11.0,       # Weave: shirt cloth at close range
+        "PatternScale": 60.0,
+        "PatternStrength": 0.12,
+        "RimStrength": 0.30,
+        "bUsePaintedRamp": False,
+        "bContactShadow": False,
+    }, "M_Master_Toon_Character"),
+    "MI_OfficeSpider_SpiderBody": ("TP_Spider_Body", {
+        "BaseTint": (0.08, 0.07, 0.09, 1.0),    # near-black violet
+        "AccentTint": (0.30, 0.26, 0.34, 1.0),  # violet lift on the lit side
+        "InkColor": (0.02, 0.02, 0.03, 1.0),
+        "InkIntensity": 0.30,
+        "DryRoughness": 0.35,       # glossy carapace
+        "RampStrength": 1.0,
+        "RimStrength": 0.70,        # THE dark-corner separation (p12-2)
+        "ShadowLift": 0.03,         # carapace floor stays off black
+        "bUsePaintedRamp": False,
+        "bContactShadow": True,
+    }),
+    "MI_OfficeSpider_SpiderEyes": ("TP_Spider_Eye", {
+        "BaseTint": (0.10, 0.02, 0.02, 1.0),
+        "AccentTint": (0.55, 0.10, 0.08, 1.0),
+        "DryRoughness": 0.15,       # wet glint
+        "RampStrength": 1.0,
+        "EmissiveColor": (1.0, 0.15, 0.08, 1.0),   # signal red
+        "EmissiveIntensity": 2.0,
+        "FlickerRate": 7.0,         # uneasy throb under the buzz
+        "FlickerDepth": 0.25,
+        "bUsePaintedRamp": False,
+        "bContactShadow": False,
+    }),
 }
 
 
@@ -442,11 +695,15 @@ def _apply(inst, profile_name, overrides):
             elif isinstance(value, str):
                 # texture parameter override (e.g. PatternSDFMap) - the value
                 # is the asset path; resolved and read back by name so a
-                # broken path fails the verify, not the render
-                tex = unreal.load_asset(value)
-                if tex is None:
-                    lib.log(f"WARN {inst.get_name()}.{key}: texture not found "
-                            f"{value}")
+                # broken path fails the verify, not the render.
+                # 2026-10-06: a MISSING map now swaps to a NEUTRAL DEFAULT
+                # (spine_lib.resolve_texture) instead of assigning None, which
+                # rendered Unreal's missing-texture checkerboard. The neutral
+                # is a project asset (T_Neutral_*), never /Engine content.
+                tex, swapped = lib.resolve_texture(value, key=key)
+                if swapped:
+                    lib.log(f"WARN {inst.get_name()}.{key}: missing -> neutral "
+                            f"default")
                 me.set_material_instance_texture_parameter_value(inst, key, tex)
             elif isinstance(value, tuple):
                 me.set_material_instance_vector_parameter_value(

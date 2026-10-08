@@ -1,0 +1,10 @@
+/Game/Materials/Textures/T_SDF_Strokes: tags:
+/Game/Materials/Textures/T_SDF_Strokes: 'AssetData' object has no attribute 'get_tags'
+/Game/Materials/Masters_Diag/D_SaveProbe: tags:
+/Game/Materials/Masters_Diag/D_SaveProbe: 'AssetData' object has no attribute 'get_tags'
+load /Game/Materials/Textures/T_SDF_Strokes: size 32x32
+   import_data: <Object '/Game/Materials/Textures/T_SDF_Strokes.T_SDF_Strokes:InterchangeAssetImportData_0' (0x000001DEDCCA5C80) Class 'InterchangeAssetImportData'>
+   sfp: InterchangeAssetImportData: Failed to find property 'source_file_path'
+load /Game/Materials/Masters_Diag/D_SaveProbe: size 32x32
+   import_data: <Object '/Game/Materials/Masters_Diag/D_SaveProbe.D_SaveProbe:InterchangeAssetImportData_0' (0x000001DEDCCA9600) Class 'InterchangeAssetImportData'>
+   sfp: InterchangeAssetImportData: Failed to find property 'source_file_path'

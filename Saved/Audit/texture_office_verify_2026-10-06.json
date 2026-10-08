@@ -1,0 +1,280 @@
+{
+  "maps": {
+    "T_SDF_Strokes": {
+      "ok": true,
+      "deterministic": true,
+      "range": [
+        0.0,
+        1.0
+      ],
+      "in01": true,
+      "wrap": 0.06666666666666676,
+      "interior_max": 0.06666666666666676,
+      "tiles": true,
+      "peak": true
+    },
+    "T_SDF_Cross": {
+      "ok": true,
+      "deterministic": true,
+      "range": [
+        0.0,
+        1.0
+      ],
+      "in01": true,
+      "wrap": 0.10980392156862746,
+      "interior_max": 0.1098039215686275,
+      "tiles": true,
+      "peak": true
+    },
+    "T_SDF_Dots": {
+      "ok": true,
+      "deterministic": true,
+      "range": [
+        0.0,
+        1.0
+      ],
+      "in01": true,
+      "wrap": 0.07843137254901966,
+      "interior_max": 0.07843137254901966,
+      "tiles": true,
+      "peak": true
+    },
+    "T_SDF_Scales": {
+      "ok": true,
+      "deterministic": true,
+      "range": [
+        0.0,
+        1.0
+      ],
+      "in01": true,
+      "wrap": 0.25882352941176473,
+      "interior_max": 0.5215686274509803,
+      "tiles": true,
+      "peak": true
+    },
+    "T_SDF_Cracks": {
+      "ok": true,
+      "deterministic": true,
+      "range": [
+        0.0,
+        0.996078431372549
+      ],
+      "in01": true,
+      "wrap": 0.3294117647058824,
+      "interior_max": 0.33725490196078434,
+      "tiles": true,
+      "peak": true
+    },
+    "T_SDF_Leaf": {
+      "ok": true,
+      "deterministic": true,
+      "range": [
+        0.0,
+        1.0
+      ],
+      "in01": true,
+      "wrap": 0.0,
+      "interior_max": 0.03921568627450989,
+      "tiles": true,
+      "peak": true
+    },
+    "T_SDF_CarpetLoop": {
+      "ok": true,
+      "deterministic": true,
+      "range": [
+        0.0,
+        0.996078431372549
+      ],
+      "in01": true,
+      "wrap": 0.49411764705882355,
+      "interior_max": 0.5647058823529412,
+      "tiles": true,
+      "peak": true
+    },
+    "T_SDF_CeilingTile": {
+      "ok": true,
+      "deterministic": true,
+      "range": [
+        0.0,
+        1.0
+      ],
+      "in01": true,
+      "wrap": 0.0,
+      "interior_max": 0.32549019607843144,
+      "tiles": true,
+      "peak": true
+    },
+    "T_SDF_WeaveFine": {
+      "ok": true,
+      "deterministic": true,
+      "range": [
+        0.0,
+        1.0
+      ],
+      "in01": true,
+      "wrap": 1.0,
+      "interior_max": 1.0,
+      "tiles": true,
+      "peak": true
+    },
+    "T_SDF_Blinds": {
+      "ok": true,
+      "deterministic": true,
+      "range": [
+        0.0,
+        1.0
+      ],
+      "in01": true,
+      "wrap": 0.05882352941176472,
+      "interior_max": 0.43921568627450985,
+      "tiles": true,
+      "peak": true
+    },
+    "T_SDF_PaperGrain": {
+      "ok": true,
+      "deterministic": true,
+      "range": [
+        0.0,
+        0.49019607843137253
+      ],
+      "in01": true,
+      "wrap": 0.28627450980392155,
+      "interior_max": 0.30196078431372547,
+      "tiles": true,
+      "peak": true
+    },
+    "T_SDF_Woodgrain": {
+      "ok": true,
+      "deterministic": true,
+      "range": [
+        0.0,
+        0.996078431372549
+      ],
+      "in01": true,
+      "wrap": 0.3764705882352941,
+      "interior_max": 0.5607843137254902,
+      "tiles": true,
+      "peak": true
+    },
+    "T_SDF_Brushed": {
+      "ok": true,
+      "deterministic": true,
+      "range": [
+        0.0,
+        1.0
+      ],
+      "in01": true,
+      "wrap": 0.0313725490196079,
+      "interior_max": 0.9882352941176471,
+      "tiles": true,
+      "peak": true
+    },
+    "T_SDF_Cork": {
+      "ok": true,
+      "deterministic": true,
+      "range": [
+        0.0,
+        0.9921568627450981
+      ],
+      "in01": true,
+      "wrap": 0.2235294117647059,
+      "interior_max": 0.3058823529411765,
+      "tiles": true,
+      "peak": true
+    },
+    "T_SDF_VCT": {
+      "ok": true,
+      "deterministic": true,
+      "range": [
+        0.0,
+        1.0
+      ],
+      "in01": true,
+      "wrap": 0.6352941176470588,
+      "interior_max": 1.0,
+      "tiles": true,
+      "peak": true
+    },
+    "T_SDF_WhiteboardGhost": {
+      "ok": true,
+      "deterministic": true,
+      "range": [
+        0.0,
+        0.34901960784313724
+      ],
+      "in01": true,
+      "wrap": 0.0,
+      "interior_max": 0.011764705882352955,
+      "tiles": true,
+      "peak": true
+    },
+    "T_SDF_FrostBands": {
+      "ok": true,
+      "deterministic": true,
+      "range": [
+        0.0,
+        1.0
+      ],
+      "in01": true,
+      "wrap": 0.047058823529411764,
+      "interior_max": 0.050980392156862786,
+      "tiles": true,
+      "peak": true
+    },
+    "T_SDF_Cardboard": {
+      "ok": true,
+      "deterministic": true,
+      "range": [
+        0.0,
+        1.0
+      ],
+      "in01": true,
+      "wrap": 1.0,
+      "interior_max": 1.0,
+      "tiles": true,
+      "peak": true
+    }
+  },
+  "errors": [],
+  "selector_fixed_identity": true,
+  "selector_old_mapping": {
+    "0": 18,
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 0,
+    "6": 0,
+    "7": 0,
+    "8": 0,
+    "9": 0,
+    "10": 0,
+    "11": 0,
+    "12": 0,
+    "13": 0,
+    "14": 0,
+    "15": 0,
+    "16": 0,
+    "17": 0,
+    "18": 0
+  },
+  "cell_sims": {
+    "checker_binary": true,
+    "checker_alternates": true,
+    "crosshatch_both_families": true,
+    "crosshatch_range": [
+      0.0,
+      0.9375
+    ],
+    "weave_parity_both": true,
+    "subway_rows_offset": true,
+    "blinds_face_center": true,
+    "blinds_cord_at_quarter": true,
+    "chevron_line_exists": true,
+    "chevron_zigzags": true,
+    "frost_range01": true,
+    "frost_smooth": true,
+    "brushed_phase_varies": true
+  },
+  "ok": true
+}

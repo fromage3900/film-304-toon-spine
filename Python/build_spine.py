@@ -41,7 +41,14 @@ def main():
                  "build_m_outline", "build_toon_profiles", "build_instances",
                  "build_pattern_overrides", "build_office_set_materials",
                  "build_gouache_lookdev", "build_foliage_lookdev",
-                 "build_water_lookdev", "build_mf_rimoffset",
+                 "build_water_lookdev",                  "build_mf_rimoffset",
+                 "build_mf_spaceparallax", "build_mf_clothwinddrape",
+                 # film material core 2026-10-07 (normal adjust, surface
+                 # wear, DF contact blend, impasto, neutral film grade).
+                 # See Docs/MELODIA_TOON_CONVERGENCE.md section 6.
+                 "build_mf_normaladjust", "build_mf_surfacewear",
+                 "build_mf_contactblend", "build_mf_impasto",
+                 "build_mf_filmgrade",
                  # toon spine expansion 2026-10-05 (TOON_MASTERS_PLAN section 4)
                  "build_m_toon_sky", "build_master_toon_landscape",
                  "build_master_toon_face", "build_master_toon_hair",
@@ -74,6 +81,21 @@ def main():
         ("build_mf_ramplut", "MF_RampLUT", 8),
         ("build_mf_patterns", "MF_ProceduralPatterns", 40),
         ("build_mf_rimoffset", "MF_RimOffset", 12),
+        # Melodia convergence 2026-10-06 - verbatim Custom-HLSL functions.
+        # See Docs/MELODIA_TOON_CONVERGENCE.md.
+        ("build_mf_spaceparallax", "MF_SpaceParallax", 14),
+        # 2026-10-07: cloth gained an INTERNAL Time read (the source HLSL's
+        # `Time` identifier must come from a node; vertex-shader Custom has
+        # none). 6 function inputs + Time node + Custom + output = 9.
+        ("build_mf_clothwinddrape", "MF_ClothWindDrape", 9),
+        # Film material core 2026-10-07 - the six converged utilities.
+        # min_expressions match what each builder actually produces
+        # (function inputs + Custom/mask nodes + outputs).
+        ("build_mf_normaladjust", "MF_NormalAdjust", 5),
+        ("build_mf_surfacewear", "MF_SurfaceWear", 11),
+        ("build_mf_contactblend", "MF_DF_ContactBlend", 28),
+        ("build_mf_impasto", "MF_Impasto", 11),
+        ("build_mf_filmgrade", "MF_FilmGrade", 7),
     ]:
         try:
             mod = __import__(mod_name)
@@ -113,8 +135,24 @@ def main():
 
     # ---- materials ----
     for mod_name, mat_name, expected, min_expr in [
+        # Universal gained MF_RimOffset 2026-10-06 (Office Spider: the
+        # p12-2 spider needs an edge of light in the dark corner). The
+        # module's own verify() now asserts the RimEmissive pin is consumed,
+        # not just called - the call-count alone cannot see an inert rim.
+        # 2026-10-06 (Melodia convergence): Universal also calls
+        # MF_ClothWindDrape (additive WPO) and MF_SpaceParallax (additive
+        # emissive), both default-OFF - the module's verify() asserts the two
+        # calls AND their parameter surface are present.
+        # 2026-10-07 (film material core): + MF_NormalAdjust (BSDF normal
+        # staging, identity at strength 1), MF_SurfaceWear (colour +
+        # roughness gates at 0), MF_DF_ContactBlend (colour + roughness
+        # gates at 0), MF_Impasto (additive WPO, gate at 0). The module's
+        # verify() covers the calls + the parameter surface.
         ("build_master_toon", "M_Master_Toon_Universal",
-         ["MF_ColorRamp3", "MF_RampLUT", "MF_ProceduralPatterns"], 30),
+         ["MF_ColorRamp3", "MF_RampLUT", "MF_ProceduralPatterns",
+          "MF_RimOffset", "MF_ClothWindDrape", "MF_SpaceParallax",
+          "MF_NormalAdjust", "MF_SurfaceWear", "MF_DF_ContactBlend",
+          "MF_Impasto"], 30),
         # domain masters share the spine functions; foliage cuts opacity from
         # the generated leaf SDF and carries sway WPO, water carries the
         # scrolling ripple normal (T_Noise_White reads, no function)
@@ -159,9 +197,12 @@ def main():
         ("build_m_toon_sky", "M_Master_Toon_Sky", [], 15),
         # Landscape: full spine + macro variation (2 static noise reads) +
         # band_lerp. No rim (character family only). Dead hatch-drive scalars
-        # from water deliberately NOT replicated.
+        # from water deliberately NOT replicated. 2026-10-07 (film core): +
+        # MF_SurfaceWear + MF_DF_ContactBlend (ground-wear marks + wall/prop
+        # contact grime; both identity at their 0 gates).
         ("build_master_toon_landscape", "M_Master_Toon_Landscape",
-         ["MF_ColorRamp3", "MF_RampLUT", "MF_ProceduralPatterns"], 30),
+         ["MF_ColorRamp3", "MF_RampLUT", "MF_ProceduralPatterns",
+          "MF_SurfaceWear", "MF_DF_ContactBlend"], 30),
         # Face: full spine + authored FaceShadowTint lerp + rim. No band_lerp
         # (it would fight the authored shadow layer).
         ("build_master_toon_face", "M_Master_Toon_Face",
@@ -185,10 +226,12 @@ def main():
         # which input classes this engine build actually instantiated.
         ("build_m_toon_particles", "M_Master_Toon_Particles", [], 8),
         # PostComposite: MD_POST_PROCESS -> MP_EMISSIVE_COLOR, one shared
-        # writer for grade/grain/vignette/halftone. verify() asserts the
-        # domain and a resolved scene-colour input.
+        # writer for grade/grain/vignette/halftone. 2026-10-07: the neutral
+        # MF_FilmGrade stages the scene colour before GradeTint (identity at
+        # its defaults). verify() asserts the domain, a resolved
+        # scene-colour input, and the film-grade wiring.
         ("build_m_toon_postcomposite", "M_Master_Toon_PostComposite",
-         ["MF_ProceduralPatterns"], 15),
+         ["MF_ProceduralPatterns", "MF_FilmGrade"], 15),
     ]:
         if report["errors"]:
             break

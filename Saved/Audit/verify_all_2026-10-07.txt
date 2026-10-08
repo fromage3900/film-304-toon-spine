@@ -1,0 +1,33 @@
+﻿MELODIA TOON FILM - verify_all
+run      : 2026-10-07 20:10:01
+repo     : G:\film-304-toon-spine
+bracket  : 9 checks, 0 failed
+
+
+Check                                         Result Detail                                                     
+-----                                         ------ ------                                                     
+fork sync (vendored vs upstream)              PASS   PASS (manifest check only - upstream not available here)   
+Blender available                             PASS   C:\Program Files\Blender Foundation\Blender 5.2\blender.exe
+fork verifier (builders/presets/dials)        PASS   23 assertions passed, 0 failed                             
+external actors in levels are present on disk PASS   2 level(s) use external actors; 298 packages on disk       
+no self-named packages                        PASS   ok                                                         
+levels resolve to their own package path      PASS   ok                                                         
+documented paths exist                        PASS   ok                                                         
+duplicate files are byte-identical            PASS   1 pair(s) checked                                          
+pre-commit hook self-test                     PASS   PASS  (8 passed, 0 failed)                                 
+
+
+
+
+RAW FORK SYNC
+========================================================================
+FORK SYNC CHECK
+  upstream : P:\MelodiaMelusinaV2-Laptop\deploy\surreal_arch\melodia_gn
+  fork     : G:\film-304-toon-spine\Blender\surreal_arch\melodia_gn
+  ! upstream not present here (normal for a group clone)
+  recorded : 2026-10-04 from commit db1a8409a
+  v all 12 vendored file(s) match the recorded manifest
+RESULT: PASS (manifest check only - upstream not available here)
+
+
+RESULT: PASS

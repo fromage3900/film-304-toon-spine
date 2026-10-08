@@ -1,0 +1,10 @@
+T_SDF_Strokes: 32x32 bless=None
+T_SDF_Dots: 32x32 bless=None
+T_SDF_CarpetLoop: 32x32 bless=None
+T_Neutral_Normal: 32x32 bless=None
+T_Dither_Bayer: 32x32 bless=None
+props.sizeX: Texture2D: Failed to find property 'sizeX' for attribute 'si
+props.sizeY: Texture2D: Failed to find property 'sizeY' for attribute 'si
+props.source_compute_stats: Texture2D: Failed to find property 'source_compute_stats' fo
+props.dither_mip_value: Texture2D: Failed to find property 'dither_mip_value' for at
+props.bDirtyForCook: Texture2D: Failed to find property 'bDirtyForCook' for attri

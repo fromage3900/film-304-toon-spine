@@ -1,0 +1,2040 @@
+{
+ "M_Master_Toon_Character": {
+  "group": "fail",
+  "switches": [
+   {
+    "t": "MaterialExpressionStaticSwitchParameter",
+    "param": "bUsePaintedRamp",
+    "wired": {
+     "True": "MaterialExpressionMaterialFunctionCall_1",
+     "False": "MaterialExpressionMaterialFunctionCall_0"
+    },
+    "sv": "False"
+   },
+   {
+    "t": "MaterialExpressionStaticSwitchParameter",
+    "param": "bContactShadow",
+    "wired": {
+     "True": "MaterialExpressionLinearInterpolate_7",
+     "False": "MaterialExpressionLinearInterpolate_5"
+    },
+    "sv": "False"
+   }
+  ],
+  "calls": [
+   {
+    "fn": "MF_ColorRamp3",
+    "inline": null
+   },
+   {
+    "fn": "MF_RampLUT",
+    "inline": null
+   },
+   {
+    "fn": "MF_ProceduralPatterns",
+    "inline": null
+   },
+   {
+    "fn": "MF_RimOffset",
+    "inline": null
+   }
+  ],
+  "top_types": [
+   {
+    "t": "MaterialExpressionTextureObjectParameter",
+    "p": "RampTexture"
+   },
+   {
+    "t": "MaterialExpressionVectorParameter",
+    "p": "BaseTint"
+   },
+   {
+    "t": "MaterialExpressionVectorParameter",
+    "p": "AccentTint"
+   },
+   {
+    "t": "MaterialExpressionVectorParameter",
+    "p": "InkColor"
+   },
+   {
+    "t": "MaterialExpressionVectorParameter",
+    "p": "GoldTint"
+   },
+   {
+    "t": "MaterialExpressionVectorParameter",
+    "p": "EmissiveColor"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "ParallaxScale"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "ParallaxSteps"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "ParallaxHeight"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "GildingStrength"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "GoldEmissive"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "OilPaintStrength"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "TemporalStrength"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "NoiseScale"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "SmearStrength"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "BoilIntensity"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "InkIntensity"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "PoolingStrength"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "Wetness"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "BrushScale"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "StrokeStrength"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "OrnamentStyle"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "OrnamentScale"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "CurvatureSensitivity"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "AudioReactivity"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "BassWeight"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "MidWeight"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "TrebleWeight"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "DryRoughness"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "WetRoughness"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "EdgeStrength"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "BandScale"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "BandStrength"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "EmissiveIntensity"
+   },
+   {
+    "t": "MaterialExpressionVectorParameter",
+    "p": "RimColor"
+   },
+   {
+    "t": "MaterialExpressionVectorParameter",
+    "p": "RimOffsetDir"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "RimOffsetStrength"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "RimStart"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "RimEnd"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "RimSharpness"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "RimStrength"
+   },
+   {
+    "t": "MaterialExpressionWorldPosition",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionComponentMask",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMultiply",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionSine",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionAbs",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMultiply",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "RampStrength"
+   },
+   {
+    "t": "MaterialExpressionMaterialFunctionCall",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMaterialFunctionCall",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionStaticSwitchParameter",
+    "p": "bUsePaintedRamp"
+   },
+   {
+    "t": "MaterialExpressionLinearInterpolate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionLinearInterpolate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionLinearInterpolate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMultiply",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionAdd",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionLinearInterpolate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionConstant3Vector",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMultiply",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionAdd",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionTextureCoordinate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMaterialFunctionCall",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "PatternScale"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "PatternAngle"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "PatternIndex"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "PatternDensity"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "PatternStrength"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "PatternSoftness"
+   },
+   {
+    "t": "MaterialExpressionTextureObjectParameter",
+    "p": "PatternSDFMap"
+   },
+   {
+    "t": "MaterialExpressionVectorParameter",
+    "p": "KeyLightDir"
+   },
+   {
+    "t": "MaterialExpressionNormalize",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionDotProduct",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionPixelNormalWS",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionSaturate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionOneMinus",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "PatternHatchShadowDrive"
+   },
+   {
+    "t": "MaterialExpressionMultiply",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionSaturate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "PatternHatchShadowDensity"
+   },
+   {
+    "t": "MaterialExpressionLinearInterpolate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMultiply",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionLinearInterpolate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionLinearInterpolate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionPixelNormalWS",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMultiply",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionVertexNormalWS",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMultiply",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionStaticSwitchParameter",
+    "p": "bContactShadow"
+   },
+   {
+    "t": "MaterialExpressionDistanceFieldApproxAO",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "ContactShadowDistance"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "ContactShadowRadius"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "ContactShadowStrength"
+   },
+   {
+    "t": "MaterialExpressionLinearInterpolate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionSubstrateToonBSDF",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMaterialFunctionCall",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionPixelNormalWS",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMultiply",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionAdd",
+    "p": ""
+   }
+  ],
+  "recompile": false
+ },
+ "M_Master_Toon_Landscape": {
+  "group": "fail",
+  "switches": [
+   {
+    "t": "MaterialExpressionStaticSwitchParameter",
+    "param": "bUsePaintedRamp",
+    "wired": {
+     "True": "MaterialExpressionMaterialFunctionCall_1",
+     "False": "MaterialExpressionMaterialFunctionCall_0"
+    },
+    "sv": "False"
+   }
+  ],
+  "calls": [
+   {
+    "fn": "MF_ColorRamp3",
+    "inline": null
+   },
+   {
+    "fn": "MF_RampLUT",
+    "inline": null
+   },
+   {
+    "fn": "MF_ProceduralPatterns",
+    "inline": null
+   },
+   {
+    "fn": "MF_SurfaceWear",
+    "inline": null
+   },
+   {
+    "fn": "MF_DF_ContactBlend",
+    "inline": null
+   }
+  ],
+  "top_types": [
+   {
+    "t": "MaterialExpressionVectorParameter",
+    "p": "BaseTint"
+   },
+   {
+    "t": "MaterialExpressionVectorParameter",
+    "p": "AccentTint"
+   },
+   {
+    "t": "MaterialExpressionVectorParameter",
+    "p": "InkColor"
+   },
+   {
+    "t": "MaterialExpressionVectorParameter",
+    "p": "EmissiveColor"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "RampStrength"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "InkIntensity"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "DryRoughness"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "EmissiveIntensity"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "MacroScale1"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "MacroScale2"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "MacroStrength"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "BandStrength"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "PatternScale"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "PatternAngle"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "PatternIndex"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "PatternDensity"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "PatternStrength"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "PatternSoftness"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "WearScale"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "CrackWidth"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "WearThreshold"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "WearStrength"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "CrackStrength"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "WearRoughness"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "DFContactStrength"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "DFContactDistance"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "DFContactSharpness"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "DFContactNoiseScale"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "DFContactNoiseBreakup"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "DFContactGroundHeight"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "DFContactHeightFalloff"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "DFContactRoughness"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "DFContactOffset"
+   },
+   {
+    "t": "MaterialExpressionVectorParameter",
+    "p": "DFContactTint"
+   },
+   {
+    "t": "MaterialExpressionTextureObjectParameter",
+    "p": "RampTexture"
+   },
+   {
+    "t": "MaterialExpressionTextureObjectParameter",
+    "p": "PatternSDFMap"
+   },
+   {
+    "t": "MaterialExpressionTextureCoordinate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMultiply",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionTextureSample",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionComponentMask",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMultiply",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionTextureSample",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionComponentMask",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionAdd",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMultiply",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionConstant",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMultiply",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionLinearInterpolate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMaterialFunctionCall",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMaterialFunctionCall",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionStaticSwitchParameter",
+    "p": "bUsePaintedRamp"
+   },
+   {
+    "t": "MaterialExpressionSubtract",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionConstant",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionAbs",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMultiply",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionLinearInterpolate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionFresnel",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionLinearInterpolate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionConstant",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionLinearInterpolate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionTextureCoordinate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMaterialFunctionCall",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMultiply",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionLinearInterpolate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionPixelNormalWS",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMaterialFunctionCall",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMultiply",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionSaturate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMultiply",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionSaturate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionAdd",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionSaturate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMaterialFunctionCall",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionConstant",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionConstant",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMultiply",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionSaturate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionLinearInterpolate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionLinearInterpolate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionLinearInterpolate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionLinearInterpolate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionSubstrateToonBSDF",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionPixelNormalWS",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMultiply",
+    "p": ""
+   }
+  ],
+  "recompile": false
+ },
+ "M_Master_Toon_Face": {
+  "group": "fail",
+  "switches": [
+   {
+    "t": "MaterialExpressionStaticSwitchParameter",
+    "param": "bUsePaintedRamp",
+    "wired": {
+     "True": "MaterialExpressionMaterialFunctionCall_5",
+     "False": "MaterialExpressionMaterialFunctionCall_4"
+    },
+    "sv": "False"
+   }
+  ],
+  "calls": [
+   {
+    "fn": "MF_ColorRamp3",
+    "inline": null
+   },
+   {
+    "fn": "MF_RampLUT",
+    "inline": null
+   },
+   {
+    "fn": "MF_ProceduralPatterns",
+    "inline": null
+   },
+   {
+    "fn": "MF_RimOffset",
+    "inline": null
+   }
+  ],
+  "top_types": [
+   {
+    "t": "MaterialExpressionVectorParameter",
+    "p": "BaseTint"
+   },
+   {
+    "t": "MaterialExpressionVectorParameter",
+    "p": "AccentTint"
+   },
+   {
+    "t": "MaterialExpressionVectorParameter",
+    "p": "InkColor"
+   },
+   {
+    "t": "MaterialExpressionVectorParameter",
+    "p": "FaceShadowTint"
+   },
+   {
+    "t": "MaterialExpressionVectorParameter",
+    "p": "EmissiveColor"
+   },
+   {
+    "t": "MaterialExpressionVectorParameter",
+    "p": "RimColor"
+   },
+   {
+    "t": "MaterialExpressionVectorParameter",
+    "p": "RimOffsetDir"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "RampStrength"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "InkIntensity"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "DryRoughness"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "FaceShadowMask"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "EmissiveIntensity"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "RimOffsetStrength"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "RimStart"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "RimEnd"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "RimSharpness"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "RimStrength"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "PatternScale"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "PatternAngle"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "PatternIndex"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "PatternDensity"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "PatternStrength"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "PatternSoftness"
+   },
+   {
+    "t": "MaterialExpressionTextureObjectParameter",
+    "p": "RampTexture"
+   },
+   {
+    "t": "MaterialExpressionTextureObjectParameter",
+    "p": "PatternSDFMap"
+   },
+   {
+    "t": "MaterialExpressionMaterialFunctionCall",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMaterialFunctionCall",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionStaticSwitchParameter",
+    "p": "bUsePaintedRamp"
+   },
+   {
+    "t": "MaterialExpressionLinearInterpolate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionFresnel",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionLinearInterpolate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionConstant",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionLinearInterpolate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionTextureCoordinate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMaterialFunctionCall",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMultiply",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionLinearInterpolate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionSubstrateToonBSDF",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionPixelNormalWS",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMaterialFunctionCall",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionPixelNormalWS",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMultiply",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionAdd",
+    "p": ""
+   }
+  ],
+  "recompile": false
+ },
+ "M_Master_Toon_Hair": {
+  "group": "fail",
+  "switches": [
+   {
+    "t": "MaterialExpressionStaticSwitchParameter",
+    "param": "bUsePaintedRamp",
+    "wired": {
+     "True": "MaterialExpressionMaterialFunctionCall_5",
+     "False": "MaterialExpressionMaterialFunctionCall_4"
+    },
+    "sv": "False"
+   }
+  ],
+  "calls": [
+   {
+    "fn": "MF_ColorRamp3",
+    "inline": null
+   },
+   {
+    "fn": "MF_RampLUT",
+    "inline": null
+   },
+   {
+    "fn": "MF_ProceduralPatterns",
+    "inline": null
+   },
+   {
+    "fn": "MF_RimOffset",
+    "inline": null
+   }
+  ],
+  "top_types": [
+   {
+    "t": "MaterialExpressionVectorParameter",
+    "p": "RootTint"
+   },
+   {
+    "t": "MaterialExpressionVectorParameter",
+    "p": "TipTint"
+   },
+   {
+    "t": "MaterialExpressionVectorParameter",
+    "p": "AccentTint"
+   },
+   {
+    "t": "MaterialExpressionVectorParameter",
+    "p": "InkColor"
+   },
+   {
+    "t": "MaterialExpressionVectorParameter",
+    "p": "EmissiveColor"
+   },
+   {
+    "t": "MaterialExpressionVectorParameter",
+    "p": "RimColor"
+   },
+   {
+    "t": "MaterialExpressionVectorParameter",
+    "p": "RimOffsetDir"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "RampStrength"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "InkIntensity"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "DryRoughness"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "SheenStrength"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "EmissiveIntensity"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "RimOffsetStrength"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "RimStart"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "RimEnd"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "RimSharpness"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "RimStrength"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "PatternScale"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "PatternAngle"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "PatternIndex"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "PatternDensity"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "PatternStrength"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "PatternSoftness"
+   },
+   {
+    "t": "MaterialExpressionTextureObjectParameter",
+    "p": "RampTexture"
+   },
+   {
+    "t": "MaterialExpressionTextureObjectParameter",
+    "p": "PatternSDFMap"
+   },
+   {
+    "t": "MaterialExpressionTextureCoordinate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionComponentMask",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionLinearInterpolate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMaterialFunctionCall",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMaterialFunctionCall",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionStaticSwitchParameter",
+    "p": "bUsePaintedRamp"
+   },
+   {
+    "t": "MaterialExpressionFresnel",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionLinearInterpolate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionConstant",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionLinearInterpolate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMultiply",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionLinearInterpolate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionTextureCoordinate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMaterialFunctionCall",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMultiply",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionLinearInterpolate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionSubstrateToonBSDF",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionPixelNormalWS",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMaterialFunctionCall",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionPixelNormalWS",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMultiply",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionAdd",
+    "p": ""
+   }
+  ],
+  "recompile": false
+ },
+ "M_Master_Toon_Glass": {
+  "group": "fail",
+  "switches": [
+   {
+    "t": "MaterialExpressionStaticSwitchParameter",
+    "param": "bUsePaintedRamp",
+    "wired": {
+     "True": "MaterialExpressionMaterialFunctionCall_4",
+     "False": "MaterialExpressionMaterialFunctionCall_3"
+    },
+    "sv": "False"
+   }
+  ],
+  "calls": [
+   {
+    "fn": "MF_ColorRamp3",
+    "inline": null
+   },
+   {
+    "fn": "MF_RampLUT",
+    "inline": null
+   },
+   {
+    "fn": "MF_ProceduralPatterns",
+    "inline": null
+   }
+  ],
+  "top_types": [
+   {
+    "t": "MaterialExpressionVectorParameter",
+    "p": "BaseTint"
+   },
+   {
+    "t": "MaterialExpressionVectorParameter",
+    "p": "AccentTint"
+   },
+   {
+    "t": "MaterialExpressionVectorParameter",
+    "p": "InkColor"
+   },
+   {
+    "t": "MaterialExpressionVectorParameter",
+    "p": "FresnelColor"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "FresnelPower"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "OpacityBase"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "RampStrength"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "InkIntensity"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "DryRoughness"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "PatternScale"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "PatternAngle"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "PatternIndex"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "PatternDensity"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "PatternStrength"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "PatternSoftness"
+   },
+   {
+    "t": "MaterialExpressionTextureObjectParameter",
+    "p": "RampTexture"
+   },
+   {
+    "t": "MaterialExpressionTextureObjectParameter",
+    "p": "PatternSDFMap"
+   },
+   {
+    "t": "MaterialExpressionMaterialFunctionCall",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMaterialFunctionCall",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionStaticSwitchParameter",
+    "p": "bUsePaintedRamp"
+   },
+   {
+    "t": "MaterialExpressionFresnel",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionLinearInterpolate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionConstant",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionLinearInterpolate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionTextureCoordinate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMaterialFunctionCall",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMultiply",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionLinearInterpolate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionPower",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionLinearInterpolate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionConstant",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMultiply",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionSubstrateToonBSDF",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionPixelNormalWS",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionLinearInterpolate",
+    "p": ""
+   }
+  ],
+  "recompile": false
+ },
+ "M_Master_Toon_Foliage": {
+  "group": "pass",
+  "switches": [
+   {
+    "t": "MaterialExpressionStaticSwitchParameter",
+    "param": "bUsePaintedRamp",
+    "wired": {
+     "True": "MaterialExpressionMaterialFunctionCall_1",
+     "False": "MaterialExpressionMaterialFunctionCall_0"
+    },
+    "sv": "False"
+   }
+  ],
+  "calls": [
+   {
+    "fn": "MF_ColorRamp3",
+    "inline": null
+   },
+   {
+    "fn": "MF_RampLUT",
+    "inline": null
+   },
+   {
+    "fn": "MF_ProceduralPatterns",
+    "inline": null
+   }
+  ],
+  "top_types": [
+   {
+    "t": "MaterialExpressionVectorParameter",
+    "p": "BaseTint"
+   },
+   {
+    "t": "MaterialExpressionVectorParameter",
+    "p": "AccentTint"
+   },
+   {
+    "t": "MaterialExpressionVectorParameter",
+    "p": "InkColor"
+   },
+   {
+    "t": "MaterialExpressionVectorParameter",
+    "p": "EmissiveColor"
+   },
+   {
+    "t": "MaterialExpressionVectorParameter",
+    "p": "KeyLightDir"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "RampStrength"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "InkIntensity"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "DryRoughness"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "BandScale"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "BandStrength"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "EmissiveIntensity"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "MaskCutoff"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "MaskSharpness"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "SwayAmount"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "SwaySpeed"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "SwayPhase"
+   },
+   {
+    "t": "MaterialExpressionTextureObjectParameter",
+    "p": "CoverMask"
+   },
+   {
+    "t": "MaterialExpressionTextureObjectParameter",
+    "p": "RampTexture"
+   },
+   {
+    "t": "MaterialExpressionTextureObjectParameter",
+    "p": "PatternSDFMap"
+   },
+   {
+    "t": "MaterialExpressionMaterialFunctionCall",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMaterialFunctionCall",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionStaticSwitchParameter",
+    "p": "bUsePaintedRamp"
+   },
+   {
+    "t": "MaterialExpressionWorldPosition",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionComponentMask",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMultiply",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionSine",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionAbs",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMultiply",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionLinearInterpolate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionLinearInterpolate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionTextureCoordinate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMaterialFunctionCall",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "PatternScale"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "PatternAngle"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "PatternIndex"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "PatternDensity"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "PatternStrength"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "PatternSoftness"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "PatternHatchShadowDrive"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "PatternHatchShadowDensity"
+   },
+   {
+    "t": "MaterialExpressionNormalize",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionPixelNormalWS",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionDotProduct",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionSaturate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionOneMinus",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMultiply",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionSaturate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionLinearInterpolate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMultiply",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionLinearInterpolate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionPixelNormalWS",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionTime",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMultiply",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionDotProduct",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionConstant3Vector",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMultiply",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionAdd",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionSine",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMultiply",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionVertexNormalWS",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMultiply",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionTextureSample",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionComponentMask",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionSubtract",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMultiply",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionSaturate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionSubstrateToonBSDF",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMultiply",
+    "p": ""
+   }
+  ],
+  "recompile": false
+ },
+ "M_Master_Toon_Water": {
+  "group": "pass",
+  "switches": [
+   {
+    "t": "MaterialExpressionStaticSwitchParameter",
+    "param": "bUsePaintedRamp",
+    "wired": {
+     "True": "MaterialExpressionMaterialFunctionCall_1",
+     "False": "MaterialExpressionMaterialFunctionCall_0"
+    },
+    "sv": "False"
+   }
+  ],
+  "calls": [
+   {
+    "fn": "MF_ColorRamp3",
+    "inline": null
+   },
+   {
+    "fn": "MF_RampLUT",
+    "inline": null
+   },
+   {
+    "fn": "MF_ProceduralPatterns",
+    "inline": null
+   }
+  ],
+  "top_types": [
+   {
+    "t": "MaterialExpressionVectorParameter",
+    "p": "BaseTint"
+   },
+   {
+    "t": "MaterialExpressionVectorParameter",
+    "p": "AccentTint"
+   },
+   {
+    "t": "MaterialExpressionVectorParameter",
+    "p": "InkColor"
+   },
+   {
+    "t": "MaterialExpressionVectorParameter",
+    "p": "EmissiveColor"
+   },
+   {
+    "t": "MaterialExpressionVectorParameter",
+    "p": "KeyLightDir"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "RampStrength"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "InkIntensity"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "DryRoughness"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "BandScale"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "BandStrength"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "RippleScale1"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "RippleSpeed1"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "RippleScale2"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "RippleSpeed2"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "RippleStrength"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "EmissiveIntensity"
+   },
+   {
+    "t": "MaterialExpressionTextureObjectParameter",
+    "p": "RampTexture"
+   },
+   {
+    "t": "MaterialExpressionTextureObjectParameter",
+    "p": "PatternSDFMap"
+   },
+   {
+    "t": "MaterialExpressionTime",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionTextureCoordinate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMultiply",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMultiply",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMultiply",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionConstant",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionAppendVector",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionAdd",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionTextureSample",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMultiply",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMultiply",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMultiply",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionConstant",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionAppendVector",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionAdd",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionTextureSample",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionComponentMask",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionComponentMask",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionSubtract",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionConstant",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionSubtract",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionConstant",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionAppendVector",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionAppendVector",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionConstant",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionNormalize",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionAdd",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMultiply",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionConstant",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionSine",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMultiply",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionAbs",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMultiply",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMaterialFunctionCall",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMaterialFunctionCall",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionStaticSwitchParameter",
+    "p": "bUsePaintedRamp"
+   },
+   {
+    "t": "MaterialExpressionLinearInterpolate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionFresnel",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionLinearInterpolate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionConstant",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionLinearInterpolate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionTextureCoordinate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMaterialFunctionCall",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "PatternScale"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "PatternAngle"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "PatternIndex"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "PatternDensity"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "PatternStrength"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "PatternSoftness"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "PatternHatchShadowDrive"
+   },
+   {
+    "t": "MaterialExpressionScalarParameter",
+    "p": "PatternHatchShadowDensity"
+   },
+   {
+    "t": "MaterialExpressionMultiply",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionLinearInterpolate",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionSubstrateToonBSDF",
+    "p": ""
+   },
+   {
+    "t": "MaterialExpressionMultiply",
+    "p": ""
+   }
+  ],
+  "recompile": false
+ }
+}

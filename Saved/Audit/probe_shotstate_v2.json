@@ -1,0 +1,37 @@
+{
+ "OfficeSpider_Master": {
+  "class": "LevelSequence",
+  "playback_start": "0",
+  "playback_end": "150",
+  "display_rate": "<Struct 'FrameRate' (0x0000021F5BC9F038) {numerator: 30, denominator: 1}>",
+  "movie_scene_error": "LevelSequence: Failed to find property 'movie_scene' for attribute 'movie_scene' on 'LevelSequence'"
+ },
+ "SH010_Establish_Office": {
+  "class": "LevelSequence",
+  "playback_start": "0",
+  "playback_end": "150",
+  "display_rate": "<Struct 'FrameRate' (0x0000021F5BC9F5D0) {numerator: 30, denominator: 1}>",
+  "movie_scene_error": "LevelSequence: Failed to find property 'movie_scene' for attribute 'movie_scene' on 'LevelSequence'"
+ },
+ "SH020_Worker_Typing": {
+  "class": "LevelSequence",
+  "playback_start": "0",
+  "playback_end": "150",
+  "display_rate": "<Struct 'FrameRate' (0x0000021F5BC9F668) {numerator: 30, denominator: 1}>",
+  "movie_scene_error": "LevelSequence: Failed to find property 'movie_scene' for attribute 'movie_scene' on 'LevelSequence'"
+ },
+ "SH110_Spider_Reveal": {
+  "class": "LevelSequence",
+  "playback_start": "0",
+  "playback_end": "150",
+  "display_rate": "<Struct 'FrameRate' (0x0000021F5BC9F3F8) {numerator: 30, denominator: 1}>",
+  "movie_scene_error": "LevelSequence: Failed to find property 'movie_scene' for attribute 'movie_scene' on 'LevelSequence'"
+ },
+ "LS_SH010": {
+  "class": "LevelSequence",
+  "playback_start": "0",
+  "playback_end": "95",
+  "display_rate": "<Struct 'FrameRate' (0x0000021F5BC9FDB8) {numerator: 24, denominator: 1}>",
+  "movie_scene_error": "LevelSequence: Failed to find property 'movie_scene' for attribute 'movie_scene' on 'LevelSequence'"
+ }
+}

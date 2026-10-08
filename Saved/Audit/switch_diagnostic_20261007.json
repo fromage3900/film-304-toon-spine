@@ -1,0 +1,253 @@
+{
+ "M_Master_Toon_Face": {
+  "switches": [
+   {
+    "param": "bUsePaintedRamp",
+    "pins": [
+     "True",
+     "False"
+    ],
+    "wired": {
+     "True": "MaterialExpressionMaterialFunctionCall_1",
+     "False": "MaterialExpressionMaterialFunctionCall_0"
+    }
+   }
+  ],
+  "calls": [
+   {
+    "fn": "MF_ColorRamp3",
+    "outputs": [
+     "<unreadable: type object 'MaterialEditingLibrary' has no attribute 'get_m>"
+    ]
+   },
+   {
+    "fn": "MF_RampLUT",
+    "outputs": [
+     "<unreadable: type object 'MaterialEditingLibrary' has no attribute 'get_m>"
+    ]
+   },
+   {
+    "fn": "MF_ProceduralPatterns",
+    "outputs": [
+     "<unreadable: type object 'MaterialEditingLibrary' has no attribute 'get_m>"
+    ]
+   },
+   {
+    "fn": "MF_RimOffset",
+    "outputs": [
+     "<unreadable: type object 'MaterialEditingLibrary' has no attribute 'get_m>"
+    ]
+   }
+  ]
+ },
+ "M_Master_Toon_Hair": {
+  "switches": [
+   {
+    "param": "bUsePaintedRamp",
+    "pins": [
+     "True",
+     "False"
+    ],
+    "wired": {
+     "True": "MaterialExpressionMaterialFunctionCall_1",
+     "False": "MaterialExpressionMaterialFunctionCall_0"
+    }
+   }
+  ],
+  "calls": [
+   {
+    "fn": "MF_ColorRamp3",
+    "outputs": [
+     "<unreadable: type object 'MaterialEditingLibrary' has no attribute 'get_m>"
+    ]
+   },
+   {
+    "fn": "MF_RampLUT",
+    "outputs": [
+     "<unreadable: type object 'MaterialEditingLibrary' has no attribute 'get_m>"
+    ]
+   },
+   {
+    "fn": "MF_ProceduralPatterns",
+    "outputs": [
+     "<unreadable: type object 'MaterialEditingLibrary' has no attribute 'get_m>"
+    ]
+   },
+   {
+    "fn": "MF_RimOffset",
+    "outputs": [
+     "<unreadable: type object 'MaterialEditingLibrary' has no attribute 'get_m>"
+    ]
+   }
+  ]
+ },
+ "M_Master_Toon_Glass": {
+  "switches": [
+   {
+    "param": "bUsePaintedRamp",
+    "pins": [
+     "True",
+     "False"
+    ],
+    "wired": {
+     "True": "MaterialExpressionMaterialFunctionCall_1",
+     "False": "MaterialExpressionMaterialFunctionCall_0"
+    }
+   }
+  ],
+  "calls": [
+   {
+    "fn": "MF_ColorRamp3",
+    "outputs": [
+     "<unreadable: type object 'MaterialEditingLibrary' has no attribute 'get_m>"
+    ]
+   },
+   {
+    "fn": "MF_RampLUT",
+    "outputs": [
+     "<unreadable: type object 'MaterialEditingLibrary' has no attribute 'get_m>"
+    ]
+   },
+   {
+    "fn": "MF_ProceduralPatterns",
+    "outputs": [
+     "<unreadable: type object 'MaterialEditingLibrary' has no attribute 'get_m>"
+    ]
+   }
+  ]
+ },
+ "M_Master_Toon_Universal": {
+  "switches": [
+   {
+    "param": "bUsePaintedRamp",
+    "pins": [
+     "True",
+     "False"
+    ],
+    "wired": {
+     "True": "MaterialExpressionMaterialFunctionCall_8",
+     "False": "MaterialExpressionMaterialFunctionCall_7"
+    }
+   },
+   {
+    "param": "bMatteFinish",
+    "pins": [
+     "True",
+     "False"
+    ],
+    "wired": {
+     "True": "MaterialExpressionConstant_6",
+     "False": "MaterialExpressionLinearInterpolate_20"
+    }
+   },
+   {
+    "param": "bContactShadow",
+    "pins": [
+     "True",
+     "False"
+    ],
+    "wired": {
+     "True": "MaterialExpressionLinearInterpolate_21",
+     "False": "MaterialExpressionLinearInterpolate_17"
+    }
+   }
+  ],
+  "calls": [
+   {
+    "fn": "MF_ColorRamp3",
+    "outputs": [
+     "<unreadable: type object 'MaterialEditingLibrary' has no attribute 'get_m>"
+    ]
+   },
+   {
+    "fn": "MF_RampLUT",
+    "outputs": [
+     "<unreadable: type object 'MaterialEditingLibrary' has no attribute 'get_m>"
+    ]
+   },
+   {
+    "fn": "MF_ProceduralPatterns",
+    "outputs": [
+     "<unreadable: type object 'MaterialEditingLibrary' has no attribute 'get_m>"
+    ]
+   },
+   {
+    "fn": "MF_SurfaceWear",
+    "outputs": [
+     "<unreadable: type object 'MaterialEditingLibrary' has no attribute 'get_m>"
+    ]
+   },
+   {
+    "fn": "MF_DF_ContactBlend",
+    "outputs": [
+     "<unreadable: type object 'MaterialEditingLibrary' has no attribute 'get_m>"
+    ]
+   },
+   {
+    "fn": "MF_ClothWindDrape",
+    "outputs": [
+     "<unreadable: type object 'MaterialEditingLibrary' has no attribute 'get_m>"
+    ]
+   },
+   {
+    "fn": "MF_Impasto",
+    "outputs": [
+     "<unreadable: type object 'MaterialEditingLibrary' has no attribute 'get_m>"
+    ]
+   },
+   {
+    "fn": "MF_NormalAdjust",
+    "outputs": [
+     "<unreadable: type object 'MaterialEditingLibrary' has no attribute 'get_m>"
+    ]
+   },
+   {
+    "fn": "MF_RimOffset",
+    "outputs": [
+     "<unreadable: type object 'MaterialEditingLibrary' has no attribute 'get_m>"
+    ]
+   },
+   {
+    "fn": "MF_SpaceParallax",
+    "outputs": [
+     "<unreadable: type object 'MaterialEditingLibrary' has no attribute 'get_m>"
+    ]
+   }
+  ]
+ },
+ "M_Master_Toon_Water": {
+  "switches": [
+   {
+    "param": "bUsePaintedRamp",
+    "pins": [
+     "True",
+     "False"
+    ],
+    "wired": {
+     "True": "MaterialExpressionMaterialFunctionCall_4",
+     "False": "MaterialExpressionMaterialFunctionCall_3"
+    }
+   }
+  ],
+  "calls": [
+   {
+    "fn": "MF_ColorRamp3",
+    "outputs": [
+     "<unreadable: type object 'MaterialEditingLibrary' has no attribute 'get_m>"
+    ]
+   },
+   {
+    "fn": "MF_RampLUT",
+    "outputs": [
+     "<unreadable: type object 'MaterialEditingLibrary' has no attribute 'get_m>"
+    ]
+   },
+   {
+    "fn": "MF_ProceduralPatterns",
+    "outputs": [
+     "<unreadable: type object 'MaterialEditingLibrary' has no attribute 'get_m>"
+    ]
+   }
+  ]
+ }
+}
