@@ -51,7 +51,8 @@ another PC).
    | `office_gioff_falsifier.py` -- the same frame with GI off via MoviePipelineConsoleVariableSetting (`OS_EBisect_GIoff.png`) | essentially unchanged -- the tier's intended `lumen_gi: false` would not change the black class |
    | `_piecefix_progress.txt` render | still black -- piece-mobility alone did not revive direct light |
    | **the one divergence found** | inside the office level, direct sun reaches exactly ONE surface: the carpet patch's top strip (also visible lit in both bisects). Everything else in the same frame shades ambient-only |
-   | **movable-sun falsifier (fired at close, `_movablesun_progress.txt`)** | `level_lib.spawn_lights` now sets the sun EXPLICITLY MOVABLE (stationary spawn defaults lean on built-shadow data the unbaked levels do not have); the office re-staged + re-rendered -- READ THE PNG FIRST THING |
+   | **movable-sun falsifier (fired, `_movablesun_progress.txt`)** | sun set EXPLICITLY `ComponentMobility.MOVABLE` + office re-staged: STILL ambient-only (the re-staged lights verify STATIONARY spawn-default; mobility is conclusively NOT the lever, and the first two "mobility fix" commits are corrections-of-record, not cures) |
+   | **the surviving discriminator** | every bay that rendered direct-lit TODAY (control `L_CTRL_ABC_Diag`, probe `L_OfficeMaterialProbe`) was created via `EditorLevelLibrary.new_level` on the template world; the office + env levels were created via `LevelEditorSubsystem.new_level` (level_lib.open_or_create_level). Next falsifier: restage the office on the EditorLevelLibrary path (work order 2b) |
 4. **The render harness is truly headless** (`build_render_queue.py` +
    the recorded `-game` commands; see the morning half of this doc), the
    **Toon shader path works** (control A/B/C: direct Toon BSDF + TP_Default
