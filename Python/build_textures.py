@@ -150,6 +150,23 @@ def gen_hatch(size: int = 128, spacing: int = 16, width_px: int = 3,
     return size, size, rows
 
 
+def gen_solid(colour, size: int = 8):
+    """Flat single-colour map - the NEUTRAL DEFAULT set (2026-10-06).
+
+    These are the generated stand-ins a texture slot falls back to when its
+    intended map is missing, so a slot never renders Unreal's checkerboard
+    "missing texture" AND the repo stays free of /Engine placeholder content
+    (the grey-default policy - see spine_lib.texture_param). Values follow the
+    Melodia neutral set (Saved/Audit/melodia_toon_master_scan_2026-10-06.json):
+    flat tangent normal (128,128,255), 0.5 roughness/height, 0 metallic,
+    unit-AO / 0.5-rough / 0-metal ORM. Small (8x8) - a flat colour needs no
+    resolution, and these are data maps (sRGB off, lossless, no mips).
+    """
+    r, g, b = colour
+    row = bytes((r, g, b)) * size
+    return size, size, [row] * size
+
+
 def _lut_colour(t, stops):
     """Piecewise colour along 0..1 against [(pos, (r,g,b)), ...]."""
     if t <= stops[0][0]:
@@ -975,6 +992,30 @@ CATALOG = [
     ("T_SDF_Cardboard", lambda: gen_sdf_cardboard(), False, "bilinear",
      "wrap", "maskless", False,
      "Kraft flute + recycled speckle for the donut box under TP_Cardboard."),
+    # --------------------------------------- neutral defaults (2026-10-06)
+    # Flat fallbacks so a MISSING texture slot resolves to a neutral map
+    # rather than Unreal's checkerboard. Project-generated (not /Engine/*), so
+    # the grey-default policy holds. Consumed by spine_lib.resolve_texture();
+    # nothing references them as art. Names mirror the Melodia neutral set.
+    ("T_Neutral_Normal", lambda: gen_solid((128, 128, 255)), False,
+     "bilinear", "wrap", "maskless", False,
+     "Flat tangent-space normal (0,0,1) - neutral default for a missing "
+     "normal map."),
+    ("T_Neutral_Roughness", lambda: gen_solid((128, 128, 128)), False,
+     "bilinear", "wrap", "maskless", False,
+     "Mid-grey 0.5 roughness - neutral default for a missing roughness map."),
+    ("T_Neutral_Height", lambda: gen_solid((128, 128, 128)), False,
+     "bilinear", "wrap", "maskless", False,
+     "Mid-grey 0.5 height - neutral default for a missing height/parallax "
+     "map."),
+    ("T_Neutral_Metallic", lambda: gen_solid((0, 0, 0)), False,
+     "bilinear", "wrap", "maskless", False,
+     "Black 0.0 metallic - neutral default for a missing metallic map (also "
+     "the zero mark field a missing PatternSDFMap falls back to)."),
+    ("T_Neutral_ORM", lambda: gen_solid((255, 128, 0)), False,
+     "bilinear", "wrap", "maskless", False,
+     "Unit-AO / 0.5-rough / 0.0-metal ORM - neutral default for a missing "
+     "packed ORM map."),
 ]
 
 # Coloured-shadow stops. #352D40 warm violet is the manifest's canonical
@@ -1076,13 +1117,22 @@ def _readback(tex, props, rep):
 
 
 def _import_png(name: str, png: Path) -> unreal.Texture2D:
-    """Import one PNG into TEX_DIR, replacing any previous copy."""
+    """Import one PNG into TEX_DIR, replacing any previous copy.
+
+    FIX 2026-10-07 (film material core stability gate): `task.save = True`
+    on this build made the SAVED .uasset a 32x32 stub while the in-memory
+    texture read 256x256 - the spine report said ok, the verify_expansion
+    fresh read said 32x32, and Saved/Audit/reimport_probe_20261007.json is
+    the reproduction (TaskImport with save=False -> 256x256; one explicit
+    save afterwards -> 256x256 persists). The import task must NOT save;
+    the one save after settings are applied below is the single writer.
+    """
     task = unreal.AssetImportTask()
     task.filename = str(png)
     task.destination_path = TEX_DIR
     task.destination_name = name
     task.automated = True
-    task.save = True
+    task.save = False
     task.replace_existing = True
     # NOT set: automated_import_should_be_imported - that attribute does not
     # exist on this build (measured 2026-10-02: raising it failed every import).
@@ -1157,6 +1207,16 @@ def build() -> dict:
                                     f"{tex.get_editor_property('sizeY')}"
                 except Exception as exc:
                     entry["size"] = f"<{str(exc)[:60]}>"
+
+            # HARD GATE 2026-10-07: a saved smaller-than-generated texture is
+            # the 32x32-stub class (see _import_png). The build must fail on
+            # it instead of shipping a degraded library while the report
+            # claims green - the exact "in-process success is not engine
+            # truth" failure mode this file already documents.
+            if entry["size"] != entry["pixels"]:
+                entry["failed"].append(
+                    f"texture size {entry['size']} != generated "
+                    f"{entry['pixels']}")
 
             unreal.EditorAssetLibrary.save_loaded_asset(tex, only_if_is_dirty=False)
             entry["asset"] = f"{TEX_DIR}/{name}.{name}"

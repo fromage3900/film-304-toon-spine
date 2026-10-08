@@ -10,13 +10,16 @@ build_master_toon.py). This script asserts the same facts from a FRESH
 process that built nothing, reading only saved assets.
 
 Asserts:
-  * both domain masters bind the intended Toon Profile (water -> TP_Water,
-    foliage -> TP_Foliage) on the SubstrateToonBSDF node
-  * the three SDF showcase instances carry the right PatternSDFMap texture
-  * the pattern override table's three entries are on the saved instances
-  * every SDF map asset carries the import settings the contract requires
-    (sRGB off, wrap, lossless, no mips)
-  * both domain masters are wired to the shared spine functions
+   * both domain masters bind the intended Toon Profile (water -> TP_Water,
+     foliage -> TP_Foliage) on the SubstrateToonBSDF node
+   * the three SDF showcase instances carry the right PatternSDFMap texture
+   * the pattern override table's three entries are on the saved instances
+   * every SDF map asset carries the import settings the contract requires
+     (sRGB off, wrap, lossless, no mips)
+   * both domain masters are wired to the shared spine functions
+   * film material core 2026-10-07: the converged utility lanes are on the
+     saved masters (Universal, Landscape, PostComposite) and the static
+     deep-night sky preset reads back with its authored values
 
 Run:  UnrealEditor-Cmd ... -ExecutePythonScript=<abs path to this file>
 """
@@ -59,7 +62,10 @@ INSTANCE_MAPS = {
     "MI_Toon_CrackedStone": "T_SDF_Cracks",
     "MI_Foliage_Fern": "T_SDF_Strokes",
     "MI_Toon_Office_PowderCoat": "T_SDF_Cross",
-    "MI_Toon_Office_Carpet": "T_SDF_Dots",
+    # 2026-10-07: the override table's carpet row now carries T_SDF_CarpetLoop
+    # (the duplicate-key repair - the old T_SDF_Dots expectation predates
+    # the purpose-built loop-fibre map).
+    "MI_Toon_Office_Carpet": "T_SDF_CarpetLoop",
     "MI_Toon_Stone": "T_SDF_Cracks",
 }
 
@@ -139,13 +145,25 @@ def check_sdf_texture_settings(out):
 
 # Office Spider 2026-10-06: Universal carries MF_RimOffset now (edge of
 # light for the p12-2 dark corner); the domain masters do not.
+# 2026-10-07 (film material core): Universal gains the five converged
+# utility lanes; Landscape carries the wear/contact pair on the ground;
+# PostComposite routes the neutral film grade. THE SKY MASTER IS INTENTIONALLY
+# ABSENT - banded sky is unlit, carries no MFs, and verifying it here would
+# imply a contract it does not have.
 MASTER_CALL_WANTS = {
     "M_Master_Toon_Universal": ["MF_ColorRamp3", "MF_RampLUT",
-                                "MF_ProceduralPatterns", "MF_RimOffset"],
+                                "MF_ProceduralPatterns", "MF_RimOffset",
+                                "MF_ClothWindDrape", "MF_SpaceParallax",
+                                "MF_NormalAdjust", "MF_SurfaceWear",
+                                "MF_DF_ContactBlend", "MF_Impasto"],
     "M_Master_Toon_Foliage": ["MF_ColorRamp3", "MF_RampLUT",
                               "MF_ProceduralPatterns"],
     "M_Master_Toon_Water": ["MF_ColorRamp3", "MF_RampLUT",
                             "MF_ProceduralPatterns"],
+    "M_Master_Toon_Landscape": ["MF_ColorRamp3", "MF_RampLUT",
+                                "MF_ProceduralPatterns",
+                                "MF_SurfaceWear", "MF_DF_ContactBlend"],
+    "M_Master_Toon_PostComposite": ["MF_ProceduralPatterns", "MF_FilmGrade"],
 }
 
 # Office Spider shelf: instance -> {scalar: value} spot read-backs. These
@@ -159,10 +177,29 @@ OFFICESPIDER_SPOT = {
     # ShadowLift 0.03 -> 0.04 for the p12-2 dark corner. Asserting the
     # pre-override values here would fight the table on every run.
     "MI_OfficeSpider_SpiderBody": {"RimStrength": 0.85, "ShadowLift": 0.04},
-    "MI_OfficeSpider_SpiderEyes": {"EmissiveIntensity": 2.0,
-                                   "FlickerRate": 7.0},
+    "MI_OfficeSpider_SpiderEyes": {"EmissiveIntensity": 3.0,
+                                  "FlickerRate": 7.0},
+    # 2026-10-07: EmissiveIntensity reads 3.0 POST-override (the rage-burn
+    # ECU row in build_pattern_overrides supersedes the instance's 2.0; same
+    # post-override rule as SpiderBody above). FlickerRate stays the
+    # instance-authored 7.0 - only Depth/Intensity/Pattern are overridden.
     "MI_OfficeSpider_CoffeeMachine": {"RimStrength": 0.50},
     "MI_OfficeSpider_WorkerShirt": {"RimStrength": 0.30},
+}
+
+# Film material core 2026-10-07: the reusable static deep-night sky preset.
+# Spot read-backs on the SAVED instance: the four Sky tint vectors plus the
+# star switch. The master itself is covered by its no-Toon-BSDF contract in
+# its own verify(); the PRESET is the thing this pass ships, so the preset
+# is what gets asserted from a fresh process.
+FILM_SKY_PRESET_SPOT = {
+    "MI_Toon_Sky_DeepNight": {
+        "ZenithColor": (0.020, 0.032, 0.075, 1.0),
+        "HorizonColor": (0.115, 0.150, 0.235, 1.0),
+        "CloudColor": (0.28, 0.31, 0.40, 1.0),
+        "StarColor": (0.90, 0.94, 1.00, 1.0),
+        "bStarsOn": True,
+    },
 }
 
 
@@ -208,32 +245,67 @@ def check_officespider_spot(me, out):
         out[inst_name] = entry
 
 
+def check_film_preset_spot(me, out):
+    """Static deep-night sky preset (2026-10-07): vectors + the star
+    switch, read back from the saved instance."""
+    for inst_name, wants in FILM_SKY_PRESET_SPOT.items():
+        entry = {"want": wants, "ok": False}
+        inst = unreal.load_asset(f"{M}/Instances/{inst_name}")
+        if inst is None:
+            entry["error"] = "preset instance does not load"
+            out[inst_name] = entry
+            continue
+        try:
+            wrong = []
+            for key, want in wants.items():
+                if isinstance(want, bool):
+                    got = bool(
+                        me.get_material_instance_static_switch_parameter_value(
+                            inst, key))
+                    if got != want:
+                        wrong.append(f"{key}: got {got} want {want}")
+                    continue
+                lc = me.get_material_instance_vector_parameter_value(
+                    inst, key)
+                got = (round(float(lc.r), 4), round(float(lc.g), 4),
+                       round(float(lc.b), 4), round(float(lc.a), 4))
+                wanted = tuple(round(float(c), 4) for c in want)
+                if got != wanted:
+                    wrong.append(f"{key}: got {got} want {wanted}")
+            entry["wrong"] = wrong
+            entry["ok"] = not wrong
+        except Exception as exc:
+            entry["error"] = str(exc)[:80]
+        out[inst_name] = entry
+
+
 def main() -> int:
     me = unreal.MaterialEditingLibrary
-    report = {"written": "2026-10-06", "independent": True,
+    report = {"written": "2026-10-07", "independent": True,
               "master_profiles": {}, "instance_maps": {},
               "sdf_texture_settings": {}, "master_calls": {},
-              "officespider_spot": {}, "errors": []}
+              "officespider_spot": {}, "film_preset_spot": {}, "errors": []}
 
     check_master_profiles(me, report["master_profiles"])
     check_instance_maps(me, report["instance_maps"])
     check_sdf_texture_settings(report["sdf_texture_settings"])
     check_master_calls(me, report["master_calls"])
     check_officespider_spot(me, report["officespider_spot"])
+    check_film_preset_spot(me, report["film_preset_spot"])
 
     for group in ("master_profiles", "instance_maps", "sdf_texture_settings",
-                  "master_calls", "officespider_spot"):
+                  "master_calls", "officespider_spot", "film_preset_spot"):
         for name, entry in report[group].items():
             if not entry.get("ok"):
                 report["errors"].append(f"{group}/{name}: {entry}")
 
     report["ok"] = not report["errors"]
     AUDIT.mkdir(parents=True, exist_ok=True)
-    out = AUDIT / "expansion_verify_2026-10-06.json"
+    out = AUDIT / "expansion_verify_2026-10-07.json"
     out.write_text(json.dumps(report, indent=2), encoding="utf-8")
     print(f"[verify] wrote {out}")
     for group in ("master_profiles", "instance_maps", "sdf_texture_settings",
-                  "master_calls", "officespider_spot"):
+                  "master_calls", "officespider_spot", "film_preset_spot"):
         for name, entry in report[group].items():
             print(f"[verify] {group:<20} {name:<26} ok={entry.get('ok')}")
     print("RESULT:", "PASS" if report["ok"] else "FAIL")

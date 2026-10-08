@@ -1,0 +1,91 @@
+{
+ "M_Master_Toon_Character": {
+  "True": "MF_RampLUT",
+  "False": "MF_ColorRamp3",
+  "calls": {
+   "MaterialExpressionMaterialFunctionCall_0": "MF_ColorRamp3",
+   "MaterialExpressionMaterialFunctionCall_1": "MF_RampLUT",
+   "MaterialExpressionMaterialFunctionCall_2": "MF_ProceduralPatterns",
+   "MaterialExpressionMaterialFunctionCall_3": "MF_RimOffset"
+  },
+  "consumers": [
+   "MaterialExpressionLinearInterpolate"
+  ]
+ },
+ "M_Master_Toon_Landscape": {
+  "True": "MF_RampLUT",
+  "False": "MF_ColorRamp3",
+  "calls": {
+   "MaterialExpressionMaterialFunctionCall_0": "MF_ColorRamp3",
+   "MaterialExpressionMaterialFunctionCall_1": "MF_RampLUT",
+   "MaterialExpressionMaterialFunctionCall_2": "MF_ProceduralPatterns",
+   "MaterialExpressionMaterialFunctionCall_3": "MF_SurfaceWear",
+   "MaterialExpressionMaterialFunctionCall_4": "MF_DF_ContactBlend"
+  },
+  "consumers": [
+   "MaterialExpressionLinearInterpolate"
+  ]
+ },
+ "M_Master_Toon_Face": {
+  "True": "MF_RampLUT",
+  "False": "MF_ColorRamp3",
+  "calls": {
+   "MaterialExpressionMaterialFunctionCall_4": "MF_ColorRamp3",
+   "MaterialExpressionMaterialFunctionCall_5": "MF_RampLUT",
+   "MaterialExpressionMaterialFunctionCall_6": "MF_ProceduralPatterns",
+   "MaterialExpressionMaterialFunctionCall_7": "MF_RimOffset"
+  },
+  "consumers": [
+   "MaterialExpressionLinearInterpolate"
+  ]
+ },
+ "M_Master_Toon_Hair": {
+  "True": "MF_RampLUT",
+  "False": "MF_ColorRamp3",
+  "calls": {
+   "MaterialExpressionMaterialFunctionCall_4": "MF_ColorRamp3",
+   "MaterialExpressionMaterialFunctionCall_5": "MF_RampLUT",
+   "MaterialExpressionMaterialFunctionCall_6": "MF_ProceduralPatterns",
+   "MaterialExpressionMaterialFunctionCall_7": "MF_RimOffset"
+  },
+  "consumers": [
+   "MaterialExpressionLinearInterpolate"
+  ]
+ },
+ "M_Master_Toon_Glass": {
+  "True": "MF_RampLUT",
+  "False": "MF_ColorRamp3",
+  "calls": {
+   "MaterialExpressionMaterialFunctionCall_3": "MF_ColorRamp3",
+   "MaterialExpressionMaterialFunctionCall_4": "MF_RampLUT",
+   "MaterialExpressionMaterialFunctionCall_5": "MF_ProceduralPatterns"
+  },
+  "consumers": [
+   "MaterialExpressionLinearInterpolate"
+  ]
+ },
+ "M_Master_Toon_Water": {
+  "True": "MF_RampLUT",
+  "False": "MF_ColorRamp3",
+  "calls": {
+   "MaterialExpressionMaterialFunctionCall_0": "MF_ColorRamp3",
+   "MaterialExpressionMaterialFunctionCall_1": "MF_RampLUT",
+   "MaterialExpressionMaterialFunctionCall_2": "MF_ProceduralPatterns"
+  },
+  "consumers": [
+   "MaterialExpressionLinearInterpolate"
+  ]
+ },
+ "M_Master_Toon_Foliage": {
+  "True": "MF_RampLUT",
+  "False": "MF_ColorRamp3",
+  "calls": {
+   "MaterialExpressionMaterialFunctionCall_0": "MF_ColorRamp3",
+   "MaterialExpressionMaterialFunctionCall_1": "MF_RampLUT",
+   "MaterialExpressionMaterialFunctionCall_2": "MF_ProceduralPatterns"
+  },
+  "consumers": [
+   "MaterialExpressionLinearInterpolate"
+  ]
+ }
+}

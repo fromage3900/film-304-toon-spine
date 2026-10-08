@@ -1,0 +1,3 @@
+before: T_SDF_Strokes size = 32x32
+after TaskImport replace (save=False): 256x256
+save_loaded_asset -> True; disk size now 256x256

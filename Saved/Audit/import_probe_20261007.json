@@ -1,0 +1,5 @@
+after import (load_asset): size=256x256
+save result: True
+after save (load_asset): size=256x256
+import_asset probe: type object 'EditorAssetLibrary' has no attribute 'import_asset'
+cleanup done

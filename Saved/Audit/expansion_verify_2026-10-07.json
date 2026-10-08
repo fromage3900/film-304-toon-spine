@@ -1,0 +1,441 @@
+{
+  "written": "2026-10-07",
+  "independent": true,
+  "master_profiles": {
+    "M_Master_Toon_Universal": {
+      "want": "TP_Default",
+      "ok": true,
+      "bound": "TP_Default"
+    },
+    "M_Master_Toon_Foliage": {
+      "want": "TP_Foliage",
+      "ok": true,
+      "bound": "TP_Foliage"
+    },
+    "M_Master_Toon_Water": {
+      "want": "TP_Water",
+      "ok": true,
+      "bound": "TP_Water"
+    },
+    "M_Master_Toon_Character": {
+      "want": "TP_Melusina",
+      "ok": true,
+      "bound": "TP_Melusina"
+    }
+  },
+  "instance_maps": {
+    "MI_Toon_Scales": {
+      "want": "T_SDF_Scales",
+      "ok": true,
+      "got": "T_SDF_Scales",
+      "pattern_index": 12.0
+    },
+    "MI_Toon_CrackedStone": {
+      "want": "T_SDF_Cracks",
+      "ok": true,
+      "got": "T_SDF_Cracks",
+      "pattern_index": 12.0
+    },
+    "MI_Foliage_Fern": {
+      "want": "T_SDF_Strokes",
+      "ok": true,
+      "got": "T_SDF_Strokes",
+      "pattern_index": 12.0
+    },
+    "MI_Toon_Office_PowderCoat": {
+      "want": "T_SDF_Cross",
+      "ok": true,
+      "got": "T_SDF_Cross",
+      "pattern_index": 12.0
+    },
+    "MI_Toon_Office_Carpet": {
+      "want": "T_SDF_CarpetLoop",
+      "ok": true,
+      "got": "T_SDF_CarpetLoop",
+      "pattern_index": 12.0
+    },
+    "MI_Toon_Stone": {
+      "want": "T_SDF_Cracks",
+      "ok": true,
+      "got": "T_SDF_Cracks",
+      "pattern_index": 12.0
+    }
+  },
+  "sdf_texture_settings": {
+    "T_SDF_Strokes": {
+      "ok": false,
+      "got": {
+        "srgb": false,
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "32x32"
+    },
+    "T_SDF_Cross": {
+      "ok": false,
+      "got": {
+        "srgb": false,
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "32x32"
+    },
+    "T_SDF_Dots": {
+      "ok": false,
+      "got": {
+        "srgb": false,
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "32x32"
+    },
+    "T_SDF_Scales": {
+      "ok": false,
+      "got": {
+        "srgb": false,
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "32x32"
+    },
+    "T_SDF_Cracks": {
+      "ok": false,
+      "got": {
+        "srgb": false,
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "32x32"
+    },
+    "T_SDF_Leaf": {
+      "ok": false,
+      "got": {
+        "srgb": false,
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "32x32"
+    },
+    "T_SDF_CarpetLoop": {
+      "ok": false,
+      "got": {
+        "srgb": false,
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "32x32"
+    },
+    "T_SDF_CeilingTile": {
+      "ok": false,
+      "got": {
+        "srgb": false,
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "32x32"
+    },
+    "T_SDF_WeaveFine": {
+      "ok": false,
+      "got": {
+        "srgb": false,
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "32x32"
+    },
+    "T_SDF_Blinds": {
+      "ok": false,
+      "got": {
+        "srgb": false,
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "32x32"
+    },
+    "T_SDF_PaperGrain": {
+      "ok": false,
+      "got": {
+        "srgb": false,
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "32x32"
+    },
+    "T_SDF_Woodgrain": {
+      "ok": false,
+      "got": {
+        "srgb": false,
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "32x32"
+    },
+    "T_SDF_Brushed": {
+      "ok": false,
+      "got": {
+        "srgb": false,
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "32x32"
+    },
+    "T_SDF_Cork": {
+      "ok": false,
+      "got": {
+        "srgb": false,
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "32x32"
+    },
+    "T_SDF_VCT": {
+      "ok": false,
+      "got": {
+        "srgb": false,
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "32x32"
+    },
+    "T_SDF_WhiteboardGhost": {
+      "ok": false,
+      "got": {
+        "srgb": false,
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "32x32"
+    },
+    "T_SDF_FrostBands": {
+      "ok": false,
+      "got": {
+        "srgb": false,
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "32x32"
+    },
+    "T_SDF_Cardboard": {
+      "ok": false,
+      "got": {
+        "srgb": false,
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "32x32"
+    }
+  },
+  "master_calls": {
+    "M_Master_Toon_Universal": {
+      "want": [
+        "MF_ColorRamp3",
+        "MF_RampLUT",
+        "MF_ProceduralPatterns",
+        "MF_RimOffset",
+        "MF_ClothWindDrape",
+        "MF_SpaceParallax",
+        "MF_NormalAdjust",
+        "MF_SurfaceWear",
+        "MF_DF_ContactBlend",
+        "MF_Impasto"
+      ],
+      "ok": true,
+      "found": [
+        "MF_ClothWindDrape",
+        "MF_ColorRamp3",
+        "MF_DF_ContactBlend",
+        "MF_Impasto",
+        "MF_NormalAdjust",
+        "MF_ProceduralPatterns",
+        "MF_RampLUT",
+        "MF_RimOffset",
+        "MF_SpaceParallax",
+        "MF_SurfaceWear"
+      ]
+    },
+    "M_Master_Toon_Foliage": {
+      "want": [
+        "MF_ColorRamp3",
+        "MF_RampLUT",
+        "MF_ProceduralPatterns"
+      ],
+      "ok": true,
+      "found": [
+        "MF_ColorRamp3",
+        "MF_ProceduralPatterns",
+        "MF_RampLUT"
+      ]
+    },
+    "M_Master_Toon_Water": {
+      "want": [
+        "MF_ColorRamp3",
+        "MF_RampLUT",
+        "MF_ProceduralPatterns"
+      ],
+      "ok": true,
+      "found": [
+        "MF_ColorRamp3",
+        "MF_ProceduralPatterns",
+        "MF_RampLUT"
+      ]
+    },
+    "M_Master_Toon_Landscape": {
+      "want": [
+        "MF_ColorRamp3",
+        "MF_RampLUT",
+        "MF_ProceduralPatterns",
+        "MF_SurfaceWear",
+        "MF_DF_ContactBlend"
+      ],
+      "ok": true,
+      "found": [
+        "MF_ColorRamp3",
+        "MF_DF_ContactBlend",
+        "MF_ProceduralPatterns",
+        "MF_RampLUT",
+        "MF_SurfaceWear"
+      ]
+    },
+    "M_Master_Toon_PostComposite": {
+      "want": [
+        "MF_ProceduralPatterns",
+        "MF_FilmGrade"
+      ],
+      "ok": true,
+      "found": [
+        "MF_FilmGrade",
+        "MF_ProceduralPatterns"
+      ]
+    }
+  },
+  "officespider_spot": {
+    "MI_OfficeSpider_Paper": {
+      "want": {
+        "DryRoughness": 0.95,
+        "ShadowLift": 0.02
+      },
+      "ok": true,
+      "wrong": []
+    },
+    "MI_OfficeSpider_SpiderBody": {
+      "want": {
+        "RimStrength": 0.85,
+        "ShadowLift": 0.04
+      },
+      "ok": true,
+      "wrong": []
+    },
+    "MI_OfficeSpider_SpiderEyes": {
+      "want": {
+        "EmissiveIntensity": 3.0,
+        "FlickerRate": 7.0
+      },
+      "ok": true,
+      "wrong": []
+    },
+    "MI_OfficeSpider_CoffeeMachine": {
+      "want": {
+        "RimStrength": 0.5
+      },
+      "ok": true,
+      "wrong": []
+    },
+    "MI_OfficeSpider_WorkerShirt": {
+      "want": {
+        "RimStrength": 0.3
+      },
+      "ok": true,
+      "wrong": []
+    }
+  },
+  "film_preset_spot": {
+    "MI_Toon_Sky_DeepNight": {
+      "want": {
+        "ZenithColor": [
+          0.02,
+          0.032,
+          0.075,
+          1.0
+        ],
+        "HorizonColor": [
+          0.115,
+          0.15,
+          0.235,
+          1.0
+        ],
+        "CloudColor": [
+          0.28,
+          0.31,
+          0.4,
+          1.0
+        ],
+        "StarColor": [
+          0.9,
+          0.94,
+          1.0,
+          1.0
+        ],
+        "bStarsOn": true
+      },
+      "ok": true,
+      "wrong": []
+    }
+  },
+  "errors": [
+    "sdf_texture_settings/T_SDF_Strokes: {'ok': False, 'got': {'srgb': False, 'address_x': 'TA_WRAP', 'address_y': 'TA_WRAP', 'compression_settings': 'TC_VECTOR_DISPLACEMENTMAP', 'mip_gen_settings': 'TMGS_NO_MIPMAPS'}, 'size': '32x32'}",
+    "sdf_texture_settings/T_SDF_Cross: {'ok': False, 'got': {'srgb': False, 'address_x': 'TA_WRAP', 'address_y': 'TA_WRAP', 'compression_settings': 'TC_VECTOR_DISPLACEMENTMAP', 'mip_gen_settings': 'TMGS_NO_MIPMAPS'}, 'size': '32x32'}",
+    "sdf_texture_settings/T_SDF_Dots: {'ok': False, 'got': {'srgb': False, 'address_x': 'TA_WRAP', 'address_y': 'TA_WRAP', 'compression_settings': 'TC_VECTOR_DISPLACEMENTMAP', 'mip_gen_settings': 'TMGS_NO_MIPMAPS'}, 'size': '32x32'}",
+    "sdf_texture_settings/T_SDF_Scales: {'ok': False, 'got': {'srgb': False, 'address_x': 'TA_WRAP', 'address_y': 'TA_WRAP', 'compression_settings': 'TC_VECTOR_DISPLACEMENTMAP', 'mip_gen_settings': 'TMGS_NO_MIPMAPS'}, 'size': '32x32'}",
+    "sdf_texture_settings/T_SDF_Cracks: {'ok': False, 'got': {'srgb': False, 'address_x': 'TA_WRAP', 'address_y': 'TA_WRAP', 'compression_settings': 'TC_VECTOR_DISPLACEMENTMAP', 'mip_gen_settings': 'TMGS_NO_MIPMAPS'}, 'size': '32x32'}",
+    "sdf_texture_settings/T_SDF_Leaf: {'ok': False, 'got': {'srgb': False, 'address_x': 'TA_WRAP', 'address_y': 'TA_WRAP', 'compression_settings': 'TC_VECTOR_DISPLACEMENTMAP', 'mip_gen_settings': 'TMGS_NO_MIPMAPS'}, 'size': '32x32'}",
+    "sdf_texture_settings/T_SDF_CarpetLoop: {'ok': False, 'got': {'srgb': False, 'address_x': 'TA_WRAP', 'address_y': 'TA_WRAP', 'compression_settings': 'TC_VECTOR_DISPLACEMENTMAP', 'mip_gen_settings': 'TMGS_NO_MIPMAPS'}, 'size': '32x32'}",
+    "sdf_texture_settings/T_SDF_CeilingTile: {'ok': False, 'got': {'srgb': False, 'address_x': 'TA_WRAP', 'address_y': 'TA_WRAP', 'compression_settings': 'TC_VECTOR_DISPLACEMENTMAP', 'mip_gen_settings': 'TMGS_NO_MIPMAPS'}, 'size': '32x32'}",
+    "sdf_texture_settings/T_SDF_WeaveFine: {'ok': False, 'got': {'srgb': False, 'address_x': 'TA_WRAP', 'address_y': 'TA_WRAP', 'compression_settings': 'TC_VECTOR_DISPLACEMENTMAP', 'mip_gen_settings': 'TMGS_NO_MIPMAPS'}, 'size': '32x32'}",
+    "sdf_texture_settings/T_SDF_Blinds: {'ok': False, 'got': {'srgb': False, 'address_x': 'TA_WRAP', 'address_y': 'TA_WRAP', 'compression_settings': 'TC_VECTOR_DISPLACEMENTMAP', 'mip_gen_settings': 'TMGS_NO_MIPMAPS'}, 'size': '32x32'}",
+    "sdf_texture_settings/T_SDF_PaperGrain: {'ok': False, 'got': {'srgb': False, 'address_x': 'TA_WRAP', 'address_y': 'TA_WRAP', 'compression_settings': 'TC_VECTOR_DISPLACEMENTMAP', 'mip_gen_settings': 'TMGS_NO_MIPMAPS'}, 'size': '32x32'}",
+    "sdf_texture_settings/T_SDF_Woodgrain: {'ok': False, 'got': {'srgb': False, 'address_x': 'TA_WRAP', 'address_y': 'TA_WRAP', 'compression_settings': 'TC_VECTOR_DISPLACEMENTMAP', 'mip_gen_settings': 'TMGS_NO_MIPMAPS'}, 'size': '32x32'}",
+    "sdf_texture_settings/T_SDF_Brushed: {'ok': False, 'got': {'srgb': False, 'address_x': 'TA_WRAP', 'address_y': 'TA_WRAP', 'compression_settings': 'TC_VECTOR_DISPLACEMENTMAP', 'mip_gen_settings': 'TMGS_NO_MIPMAPS'}, 'size': '32x32'}",
+    "sdf_texture_settings/T_SDF_Cork: {'ok': False, 'got': {'srgb': False, 'address_x': 'TA_WRAP', 'address_y': 'TA_WRAP', 'compression_settings': 'TC_VECTOR_DISPLACEMENTMAP', 'mip_gen_settings': 'TMGS_NO_MIPMAPS'}, 'size': '32x32'}",
+    "sdf_texture_settings/T_SDF_VCT: {'ok': False, 'got': {'srgb': False, 'address_x': 'TA_WRAP', 'address_y': 'TA_WRAP', 'compression_settings': 'TC_VECTOR_DISPLACEMENTMAP', 'mip_gen_settings': 'TMGS_NO_MIPMAPS'}, 'size': '32x32'}",
+    "sdf_texture_settings/T_SDF_WhiteboardGhost: {'ok': False, 'got': {'srgb': False, 'address_x': 'TA_WRAP', 'address_y': 'TA_WRAP', 'compression_settings': 'TC_VECTOR_DISPLACEMENTMAP', 'mip_gen_settings': 'TMGS_NO_MIPMAPS'}, 'size': '32x32'}",
+    "sdf_texture_settings/T_SDF_FrostBands: {'ok': False, 'got': {'srgb': False, 'address_x': 'TA_WRAP', 'address_y': 'TA_WRAP', 'compression_settings': 'TC_VECTOR_DISPLACEMENTMAP', 'mip_gen_settings': 'TMGS_NO_MIPMAPS'}, 'size': '32x32'}",
+    "sdf_texture_settings/T_SDF_Cardboard: {'ok': False, 'got': {'srgb': False, 'address_x': 'TA_WRAP', 'address_y': 'TA_WRAP', 'compression_settings': 'TC_VECTOR_DISPLACEMENTMAP', 'mip_gen_settings': 'TMGS_NO_MIPMAPS'}, 'size': '32x32'}"
+  ],
+  "ok": false
+}

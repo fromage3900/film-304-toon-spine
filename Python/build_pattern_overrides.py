@@ -69,6 +69,7 @@ OVERRIDES = {
         "PatternIndex": 12.0,                                    # SDFMap
         "PatternSDFMap": f"{TEX_DIR}/T_SDF_CarpetLoop",
         "PatternScale": 30.0,
+        "Wetness": 0.5,          # soaked-floor push, shot 67 (merged)
     },
     "MI_Toon_Office_Laminate": {
         "PatternIndex": 12.0,
@@ -114,10 +115,16 @@ OVERRIDES = {
         "EmissiveIntensity": 1.5,    # amber buzz light ON for the p3-12 pour
         "FlickerRate": 11.0,         # mains-buzz shimmer on the lamp
         "FlickerDepth": 0.12,
+        "PatternIndex": 12.0,        # (merged 2026-10-06: was a duplicate
+        "PatternSDFMap": f"{TEX_DIR}/T_SDF_Brushed",  # key below that
+        "PatternScale": 12.0,        # silently killed this lamp row)
     },
     "MI_OfficeSpider_SpiderBody": {
         "RimStrength": 0.85,         # p12-2 dark-corner push
         "ShadowLift": 0.04,
+        "PatternIndex": 12.0,        # (merged 2026-10-06: duplicate key
+        "PatternSDFMap": f"{TEX_DIR}/T_SDF_Scales",   # below killed rim/lift)
+        "PatternScale": 14.0,
     },
     # --------------------------------------- unique SDF maps (2026-10-06)
     # Each instance gets its OWN baked SDF map - no two share one.
@@ -132,26 +139,32 @@ OVERRIDES = {
         "PatternSDFMap": f"{TEX_DIR}/T_SDF_Cardboard",
         "PatternScale": 8.0,
     },
-    "MI_OfficeSpider_CoffeeMachine": {
-        "PatternIndex": 12.0,
-        "PatternSDFMap": f"{TEX_DIR}/T_SDF_Brushed",
-        "PatternScale": 12.0,
-    },
+
     "MI_OfficeSpider_WorkerShirt": {
         "PatternIndex": 12.0,
         "PatternSDFMap": f"{TEX_DIR}/T_SDF_WeaveFine",
         "PatternScale": 40.0,
     },
-    "MI_OfficeSpider_SpiderBody": {
-        "PatternIndex": 12.0,
-        "PatternSDFMap": f"{TEX_DIR}/T_SDF_Scales",
-        "PatternScale": 14.0,
-    },
     "MI_OfficeSpider_SpiderEyes": {
-        "FlickerDepth": 0.45,        # thump-panel throb (p2-8 SFX-THUMP)
+        # Rage burn for the battle-rage ECU (shots 56/63): full burn + hard
+        # throb. Supersedes the earlier thump-panel throb (0.45) - one look
+        # per instance per build, latest story state wins.
+        "EmissiveIntensity": 3.0,
+        "FlickerDepth": 0.6,
         "PatternIndex": 12.0,
         "PatternSDFMap": f"{TEX_DIR}/T_SDF_Dots",
         "PatternScale": 24.0,
+    },
+    # --------------------------------------- soaked floor (2026-10-06)
+    # Sprinkler aftermath (shot 67): Wetness pushes on the vinyl + carpet.
+    # MERGED 2026-10-07 (film material core): the carpet's SDF row and its
+    # Wetness row were DUPLICATE KEYS - the late Wetness row silently
+    # REPLACED the SDF row in the dict literal, the same kill-class the
+    # coffee-machine merge note records, so the carpet's baked loop-fibre
+    # map never shipped behind its Wetness dial. The single Carpet row now
+    # carries both.
+    "MI_OfficeSpider_VCTFloor": {
+        "Wetness": 0.6,
     },
     "MI_OfficeSpider_FrostedGlass": {
         "PatternIndex": 12.0,
@@ -187,6 +200,11 @@ def build(rebuild=True) -> dict:
                         inst, key)
                     got = tex.get_name() if tex else ""
                     want_name = want.rsplit("/", 1)[-1].split(".")[0]
+                    # _apply swaps a MISSING map to a NEUTRAL DEFAULT; accept
+                    # the resolved name so a swap is not read as a typo
+                    resolved, swapped = lib.resolve_texture(want, key=key)
+                    if swapped and resolved is not None:
+                        want_name = resolved.get_name()
                 else:
                     got = round(float(
                         me.get_material_instance_scalar_parameter_value(

@@ -341,6 +341,28 @@ INSTANCES = {
         "PosterizationBands": 6.0,
         "CloudStrength": 0.4,
     }, "M_Master_Toon_Sky"),
+    # -------------------------------------- static deep-night sky preset
+    # 2026-10-07, film material core. ONE reusable look for the night
+    # exteriors (SH010 opens on a silhouette against sky, SH020 atmospheric
+    # depth). Deliberately NOT a time-of-day system: this is a fixed
+    # parameter set on the sky master's existing three-colour + bands +
+    # clouds + stars controls (TOON_MASTERS_PLAN section 4 row 8, and the
+    # master builder's own "Not a time-of-day system" contract). Every
+    # value stays inside the control ranges the master documents; the
+    # stars sit under the clouds, so CloudStrength 0.28 keeps a few lit
+    # bands through which stars do not shine.
+    "MI_Toon_Sky_DeepNight": ("none (unlit)", {
+        "ZenithColor": (0.020, 0.032, 0.075, 1.0),   # deep indigo-black
+        "HorizonColor": (0.115, 0.150, 0.235, 1.0),  # city-glow horizon
+        "CloudColor": (0.28, 0.31, 0.40, 1.0),       # moonlit cloud bands
+        "StarColor": (0.90, 0.94, 1.00, 1.0),
+        "PosterizationBands": 4.0,                   # flatter night bands
+        "CloudScale": 2.6,
+        "CloudStrength": 0.28,
+        "StarScale": 120.0,                          # sparse points
+        "StarIntensity": 2.4,
+        "bStarsOn": True,
+    }, "M_Master_Toon_Sky"),
     "MI_Toon_Landscape": ("TP_Landscape", {
         "BaseTint": (0.30, 0.32, 0.28, 1.0),
         "AccentTint": (0.55, 0.58, 0.50, 1.0),
@@ -409,6 +431,127 @@ INSTANCES = {
         "PatternSoftness": 0.15,
         "bUsePaintedRamp": False,
     }, "M_Master_Toon_Glass"),
+    # --------------------------------------- office spider gaps (2026-10-06)
+    # Shot-plan §7 gaps 1-9 + VCTFloor: mug, swatter, blinds, shoes, spray
+    # can + cap, broom wood, sprinkler streaks, fire glow, boss suit, vinyl
+    # floor. All on proven parents/params (Universal glass/steel profiles,
+    # Particles Tint/Brightness/Fade, EmissiveFX pulse). Unassigned until
+    # the prop meshes land (awaiting geometry, same as the first shelf).
+    "MI_OfficeSpider_Mug": ("TP_Office_Whiteboard", {
+        "BaseTint": (0.88, 0.86, 0.82, 1.0),    # glazed warm white
+        "AccentTint": (0.96, 0.94, 0.90, 1.0),
+        "InkIntensity": 0.05,
+        "DryRoughness": 0.15,
+        "RampStrength": 1.0,
+        "bUsePaintedRamp": False,
+        "bContactShadow": False,
+    }),
+    "MI_OfficeSpider_Swatter": ("TP_Office_Polypropylene", {
+        "BaseTint": (0.75, 0.10, 0.08, 1.0),    # signal red plastic
+        "AccentTint": (0.90, 0.25, 0.18, 1.0),
+        "InkIntensity": 0.15,
+        "DryRoughness": 0.50,
+        "RampStrength": 1.0,
+        "PatternIndex": 9.0,            # Grid: the swat mesh
+        "PatternScale": 18.0,
+        "PatternStrength": 0.60,
+        "PatternDensity": 0.50,
+        "bUsePaintedRamp": False,
+        "bContactShadow": False,
+    }),
+    "MI_OfficeSpider_Blinds": ("TP_Office_PowderCoat", {
+        "BaseTint": (0.80, 0.78, 0.72, 1.0),    # coated slat off-white
+        "AccentTint": (0.92, 0.90, 0.84, 1.0),
+        "InkIntensity": 0.08,
+        "DryRoughness": 0.50,
+        "RampStrength": 1.0,
+        "PatternIndex": 14.0,           # Blinds analytic
+        "PatternScale": 6.0,
+        "PatternStrength": 0.50,
+        "PatternDensity": 0.50,
+        "bUsePaintedRamp": False,
+        "bContactShadow": False,
+    }),
+    "MI_OfficeSpider_Shoes": ("TP_Character", {
+        "BaseTint": (0.16, 0.12, 0.10, 1.0),    # dark leather brown
+        "AccentTint": (0.35, 0.28, 0.22, 1.0),
+        "InkIntensity": 0.15,
+        "DryRoughness": 0.55,
+        "RampStrength": 0.85,           # below hero (same rule as Shirt)
+        "bUsePaintedRamp": False,
+        "bContactShadow": True,
+    }),
+    "MI_OfficeSpider_SprayCan": ("TP_SteelDark", {
+        "BaseTint": (0.70, 0.72, 0.75, 1.0),    # aluminum body
+        "AccentTint": (0.88, 0.90, 0.93, 1.0),
+        "InkIntensity": 0.20,
+        "DryRoughness": 0.30,
+        "RampStrength": 1.0,
+        "RimStrength": 0.30,            # hero-prop edge
+        "bUsePaintedRamp": False,
+        "bContactShadow": True,
+    }),
+    "MI_OfficeSpider_SprayCap": ("TP_Office_Polypropylene", {
+        "BaseTint": (0.70, 0.08, 0.06, 1.0),    # exterminator-red cap
+        "AccentTint": (0.86, 0.20, 0.14, 1.0),
+        "InkIntensity": 0.12,
+        "DryRoughness": 0.55,
+        "RampStrength": 1.0,
+        "bUsePaintedRamp": False,
+        "bContactShadow": False,
+    }),
+    "MI_OfficeSpider_BroomWood": ("TP_Office_Laminate", {
+        "BaseTint": (0.55, 0.40, 0.25, 1.0),    # broom handle wood
+        "AccentTint": (0.72, 0.56, 0.36, 1.0),
+        "InkIntensity": 0.10,
+        "DryRoughness": 0.70,
+        "RampStrength": 1.0,
+        "PatternIndex": 12.0,           # SDFMap
+        "PatternSDFMap": "/Game/Materials/Textures/T_SDF_Woodgrain",
+        "PatternScale": 2.0,
+        "PatternStrength": 0.45,
+        "bUsePaintedRamp": False,
+        "bContactShadow": False,
+    }),
+    "MI_OfficeSpider_Sprinkler": ("none (unlit)", {
+        "TintColor": (0.75, 0.87, 1.00, 1.0),   # cold sprinkler white-blue
+        "Brightness": 1.8,
+        "FadeDistance": 80.0,
+    }, "M_Master_Toon_Particles"),
+    "MI_OfficeSpider_FireGlow": ("none (unlit)", {
+        "EmissiveColor": (1.0, 0.45, 0.10, 1.0),
+        "EmissiveIntensity": 3.0,
+        "PulseRate": 6.0,
+        "PulseDepth": 0.5,
+        "PatternIndex": 4.0,            # InkSplat rings for flame licks
+        "PatternScale": 5.0,
+        "PatternStrength": 0.4,
+    }, "M_Master_Toon_EmissiveFX"),
+    "MI_OfficeSpider_BossSuit": ("TP_Character", {
+        "BaseTint": (0.12, 0.13, 0.18, 1.0),    # charcoal-navy suit
+        "AccentTint": (0.30, 0.32, 0.40, 1.0),
+        "InkColor": (0.03, 0.03, 0.05, 1.0),
+        "InkIntensity": 0.20,
+        "DryRoughness": 0.75,
+        "RampStrength": 0.85,
+        "RimStrength": 0.25,
+        "bUsePaintedRamp": False,
+        "bContactShadow": False,
+    }, "M_Master_Toon_Character"),
+    "MI_OfficeSpider_VCTFloor": ("TP_Office_Laminate", {
+        "BaseTint": (0.55, 0.53, 0.50, 1.0),    # warm vinyl grey
+        "AccentTint": (0.72, 0.70, 0.66, 1.0),
+        "InkIntensity": 0.10,
+        "DryRoughness": 0.40,
+        "RampStrength": 1.0,
+        "PatternIndex": 12.0,           # SDFMap
+        "PatternSDFMap": "/Game/Materials/Textures/T_SDF_VCT",
+        "PatternScale": 2.0,
+        "PatternStrength": 0.50,
+        "PatternDensity": 0.50,
+        "bUsePaintedRamp": False,
+        "bContactShadow": False,
+    }),
     "MI_Toon_EmissiveFX": ("none (unlit)", {
         "EmissiveColor": (1.0, 0.7, 0.9, 1.0),
         "EmissiveIntensity": 3.0,
@@ -552,11 +695,15 @@ def _apply(inst, profile_name, overrides):
             elif isinstance(value, str):
                 # texture parameter override (e.g. PatternSDFMap) - the value
                 # is the asset path; resolved and read back by name so a
-                # broken path fails the verify, not the render
-                tex = unreal.load_asset(value)
-                if tex is None:
-                    lib.log(f"WARN {inst.get_name()}.{key}: texture not found "
-                            f"{value}")
+                # broken path fails the verify, not the render.
+                # 2026-10-06: a MISSING map now swaps to a NEUTRAL DEFAULT
+                # (spine_lib.resolve_texture) instead of assigning None, which
+                # rendered Unreal's missing-texture checkerboard. The neutral
+                # is a project asset (T_Neutral_*), never /Engine content.
+                tex, swapped = lib.resolve_texture(value, key=key)
+                if swapped:
+                    lib.log(f"WARN {inst.get_name()}.{key}: missing -> neutral "
+                            f"default")
                 me.set_material_instance_texture_parameter_value(inst, key, tex)
             elif isinstance(value, tuple):
                 me.set_material_instance_vector_parameter_value(

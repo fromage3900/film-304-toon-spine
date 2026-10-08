@@ -411,3 +411,19 @@ second UE process alongside the live one is held unsafe).
 * `verify_expansion.py` — Universal joins the call check (4 wants) +
   `officespider_spot` scalar read-backs; report
   `Saved/Audit/expansion_verify_2026-10-06.json`.
+
+## Neutral-default textures (2026-10-06)
+
+`build_textures.py` also generates a five-map **neutral default** set —
+`T_Neutral_{Normal,Roughness,Height,Metallic,ORM}` — flat stand-ins a texture
+slot falls back to when its intended map is **missing**, so a slot renders flat
+instead of Unreal's "missing texture" checkerboard. They are project assets
+(never `/Engine/*`), which is the grey-default policy `spine_lib.texture_param()`
+states. `spine_lib.resolve_texture(path, key=...)` is the single swap point
+(picks the neutral from the parameter name; a mark/sprite slot falls back to the
+black map, a zero field). The silent holes routed through it are the
+instance-override path (`build_instances._apply`, used by
+`build_pattern_overrides`) and the gouache sampler. The master builders keep
+their own loud `RuntimeError` guards for a *required* map (`T_Noise_White`,
+`T_Ramp_Smooth`, `T_SDF_Strokes`) — a missing required map is still a build
+failure, by design.

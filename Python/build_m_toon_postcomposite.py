@@ -24,7 +24,12 @@ MF_ProceduralPatterns reused as a FRAME halftone (UV = screen * HalftoneScale).
 THE DOMAIN BEHAVIOUR: GRADE * GRAIN * VIGNETTE * HALFTONE
 ---------------------------------------------------------
 scene  = SceneTexture PPI_POST_PROCESS_INPUT0 (dreamprint `_pp_input_id()`)
-graded = scene * GradeTint
+graded = MF_FilmGrade(scene, FilmContrast/FilmWarmth/FilmSaturation/
+                      FilmLift). Neutral photographic grade re-scoped from
+                      the Melodia NikkiDreamGrade lane (2026-10-07); every
+                      control defaults to identity, so the frame is
+                      unchanged until a shot opts in. then multiplied by
+                      GradeTint (per-shot tint).
 grain  = (noise_r - 0.5) * GrainStrength           -- signed, so it dithers both ways
 vign   = 1 - saturate(length2(uv - 0.5) * VignetteStrength)
 half   = lerp(graded * vign * (1+grain), 0.75 * ..., mask * HalftoneStrength)
@@ -101,6 +106,10 @@ def build(rebuild=True):
         "GradeTint": lib.vector(mat, "GradeTint", "Grade", (1.0, 1.0, 1.0, 1.0),
                                 -1600, -400,
                                 desc="Per-shot colour grade multiplier"),
+        "FilmLift": lib.vector(mat, "FilmLift", "Film", (0.0, 0.0, 0.0, 1.0),
+                               -1600, -280,
+                               desc="Shadow pedestal (neutral film grade; "
+                                    "0,0,0 = off)"),
     }
     flt = {
         "GrainStrength": lib.scalar(mat, "GrainStrength", "Grade", 0.06, -1000, -400,
@@ -116,6 +125,19 @@ def build(rebuild=True):
                                             ">0 = print-dot blend"),
         "HalftoneScale": lib.scalar(mat, "HalftoneScale", "Grade", 240.0, -1000, -120,
                                     desc="Dots per frame scale (UV multiplier)"),
+        # Neutral film grade 2026-10-07 (MF_FilmGrade). Identity at the
+        # defaults below: Contrast 1 / Warmth 0 / Saturation 1 / Lift 0
+        # reduce the call to its input, so the existing frame is unchanged.
+        "FilmContrast": lib.scalar(mat, "FilmContrast", "Film", 1.0, -1000, -50,
+                                   desc="Film contrast about the 0.18 pivot "
+                                        "(1.0 = unchanged; useful 0.8..1.4)"),
+        "FilmWarmth": lib.scalar(mat, "FilmWarmth", "Film", 0.0, -1000, 20,
+                                 desc="Blue..amber shift (0 = neutral; "
+                                      "useful -0.5 cool .. 0.5 amber)"),
+        "FilmSaturation": lib.scalar(mat, "FilmSaturation", "Film", 1.0,
+                                     -1000, 90,
+                                     desc="Colour saturation (1.0 = unchanged; "
+                                          "0 = mono)"),
     }
 
     pat_sdf_tex = lib.expr(mat, unreal.MaterialExpressionTextureObjectParameter,
@@ -155,9 +177,24 @@ def build(rebuild=True):
                 f"scene_input=FAILED so the run does not claim success.")
 
     # ---------------- grade -------------------------------------------------
+    # film grade (2026-10-07): scene colour runs through the neutral
+    # MF_FilmGrade (contrast/warmth/saturation/lift - all identity at the
+    # defaults), then the per-shot GradeTint multiplier. GradeTint stays the
+    # final multiply so shot tint semantics are unchanged.
     if scene_rgb is not None:
+        grade_call = lib.expr(mat, unreal.MaterialExpressionMaterialFunctionCall,
+                              -1440, 160)
+        grade_call.set_editor_property("material_function",
+            unreal.load_asset(lib.asset_path(lib.FUNCTION_DIR,
+                                             "MF_FilmGrade")))
+        lib.connect(scene_rgb, "", grade_call, "Color")
+        lib.connect(flt["FilmContrast"], "", grade_call, "Contrast")
+        lib.connect(flt["FilmWarmth"], "", grade_call, "Warmth")
+        lib.connect(flt["FilmSaturation"], "", grade_call, "Saturation")
+        lib.connect(vec["FilmLift"], "", grade_call, "Lift")
+
         graded = lib.expr(mat, unreal.MaterialExpressionMultiply, -1280, 60)
-        lib.connect(scene_rgb, "", graded, ["A", "a"])
+        lib.connect(grade_call, "Color", graded, ["A", "a"])
         lib.connect(vec["GradeTint"], "", graded, ["B", "b"])
         current = graded
     else:
@@ -319,6 +356,37 @@ def verify():
     if result["error"] is None and _state["scene_input"] == "FAILED":
         result["error"] = "no scene-colour source resolved (grade runs on black)"
 
+    # -- neutral film grade (2026-10-07): MF_FilmGrade called + its parameter
+    # surface present. At the identity defaults the call reduces to its
+    # input, so verify() checks the wiring exists, not that pixels moved.
+    if result["error"] is None:
+        exprs = [e for e in
+                 unreal.MaterialEditingLibrary.get_material_expressions(mat)
+                 or [] if e is not None]
+        called = set()
+        for c in exprs:
+            if type(c).__name__ == "MaterialExpressionMaterialFunctionCall":
+                try:
+                    mf = c.get_editor_property("material_function")
+                    if mf is not None:
+                        called.add(mf.get_name())
+                except Exception:
+                    continue
+        if "MF_FilmGrade" not in called:
+            result["error"] = "MF_FilmGrade is not called"
+        else:
+            params = set()
+            for e in exprs:
+                try:
+                    params.add(str(e.get_editor_property("parameter_name")))
+                except Exception:
+                    continue
+            want_params = {"FilmContrast", "FilmWarmth", "FilmSaturation",
+                           "FilmLift"}
+            miss_params = sorted(want_params - params)
+            if miss_params:
+                result["error"] = f"film grade params missing: {miss_params}"
+
     result["expression_count"] = lib.expression_count(mat)
     if result["error"] is None:
         result["ok"] = True
@@ -331,7 +399,8 @@ def verify():
 def main() -> int:
     mat = build()
     res = lib.verify_material(NAME,
-                              expected_calls=["MF_ProceduralPatterns"],
+                              expected_calls=["MF_ProceduralPatterns",
+                                              "MF_FilmGrade"],
                               min_expressions=15)
     graph = verify()
     ok = mat is not None and res.get("ok") and graph.get("ok")

@@ -47,6 +47,17 @@ NAME = "M_Master_Toon_Landscape"
 MASTER_PROFILE = "TP_Landscape"
 TEX_DIR = "/Game/Materials/Textures"
 
+# Film-core lane parameter names (film material core 2026-10-07). Module
+# level because verify() runs OUTSIDE build() scope - referencing the
+# build() local dicts there raised NameError and failed the spine run.
+WEAR_PARAM_NAMES = ("WearScale", "CrackWidth", "WearThreshold",
+                    "WearStrength", "CrackStrength", "WearRoughness")
+CONTACTDF_PARAM_NAMES = ("DFContactStrength", "DFContactDistance",
+                         "DFContactSharpness", "DFContactNoiseScale",
+                         "DFContactNoiseBreakup", "DFContactGroundHeight",
+                         "DFContactHeightFalloff", "DFContactRoughness",
+                         "DFContactOffset", "DFContactTint")
+
 
 def build(rebuild=True):
     lib.log(f"=== {NAME} ===")
@@ -96,6 +107,57 @@ def build(rebuild=True):
         "PatternStrength": lib.scalar(mat, "PatternStrength", "Pattern", 0.0, -1400, 1580,
                                       desc="0 = off (default); surface hatches on demand"),
         "PatternSoftness": lib.scalar(mat, "PatternSoftness", "Pattern", 0.10, -1400, 1650),
+    }
+    # film material core (2026-10-07): surface wear + distance-field contact.
+    # The same parameter surface as Universal, so one instance vocabulary
+    # covers walls and ground. Both gates default 0 = identity.
+    wear = {
+        "WearScale": lib.scalar(mat, "WearScale", "Wear", 0.02, -1400, 3200,
+                                desc="Wear tile frequency (cells per cm; 0.02 = ~50 cm)"),
+        "CrackWidth": lib.scalar(mat, "CrackWidth", "Wear", 0.04, -1400, 3270,
+                                 desc="Crack width in tile units"),
+        "WearThreshold": lib.scalar(mat, "WearThreshold", "Wear", 0.55, -1400, 3340,
+                                    desc="Wear patch onset"),
+        "WearStrength": lib.scalar(mat, "WearStrength", "Wear", 0.0, -1400, 3410,
+                                   desc="Colour wear amount; 0 = off (default)"),
+        "CrackStrength": lib.scalar(mat, "CrackStrength", "Wear", 0.0, -1400, 3480,
+                                    desc="Crack ink amount; 0 = off (default)"),
+        "WearRoughness": lib.scalar(mat, "WearRoughness", "Wear", 0.95, -1400, 3550,
+                                    desc="Roughness target under the wear mask"),
+    }
+    contact = {
+        "DFContactStrength": lib.scalar(mat, "DFContactStrength", "ContactDF",
+                                        0.0, -1400, 3620,
+                                        desc="Distance-field contact tint; 0 = off (default)"),
+        "DFContactDistance": lib.scalar(mat, "DFContactDistance", "ContactDF",
+                                        18.0, -1400, 3690,
+                                        desc="Contact falloff distance (cm)"),
+        "DFContactSharpness": lib.scalar(mat, "DFContactSharpness", "ContactDF",
+                                         3.0, -1400, 3760,
+                                         desc="Contact transition steepness"),
+        "DFContactNoiseScale": lib.scalar(mat, "DFContactNoiseScale", "ContactDF",
+                                          0.015, -1400, 3830,
+                                          desc="Contact breakup noise frequency (1/cm)"),
+        "DFContactNoiseBreakup": lib.scalar(mat, "DFContactNoiseBreakup",
+                                            "ContactDF", 0.0, -1400, 3900,
+                                            desc="Noise breakup in the contact mask"),
+        "DFContactGroundHeight": lib.scalar(mat, "DFContactGroundHeight",
+                                            "ContactDF", 0.0, -1400, 3970,
+                                            desc="Ground height envelope reference (cm)"),
+        "DFContactHeightFalloff": lib.scalar(mat, "DFContactHeightFalloff",
+                                             "ContactDF", 28.0, -1400, 4040,
+                                             desc="Height envelope falloff (cm)"),
+        "DFContactRoughness": lib.scalar(mat, "DFContactRoughness", "ContactDF",
+                                         0.82, -1400, 4110,
+                                         desc="Roughness target inside the contact mask"),
+        "DFContactOffset": lib.scalar(mat, "DFContactOffset", "ContactDF",
+                                      12.0, -1400, 4180,
+                                      desc="Sample offset below the surface (cm)"),
+    }
+    contact_vec = {
+        "DFContactTint": lib.vector(mat, "DFContactTint", "ContactDF",
+                                    (0.24, 0.30, 0.34, 1.0), -2000, 1400,
+                                    desc="Contact grime colour"),
     }
 
     ramp_lut_tex = lib.expr(mat, unreal.MaterialExpressionTextureObjectParameter,
@@ -227,10 +289,84 @@ def build(rebuild=True):
     lib.connect(pat_amt, "", patterned, "Alpha")
     final_color = patterned
 
+    # ---------------- surface wear + DF contact (film core 2026-10-07) ---
+    # The same two lanes Universal carries. Guides are the worn courtyard
+    # marks (SH010 ground) near walls; both gates default 0 = identity.
+    wear_n = lib.expr(mat, unreal.MaterialExpressionPixelNormalWS,
+                      -1400, 4600)
+    wear_call = lib.expr(mat, unreal.MaterialExpressionMaterialFunctionCall,
+                         -1200, 4540)
+    wear_call.set_editor_property("material_function",
+        unreal.load_asset(lib.asset_path(lib.FUNCTION_DIR,
+                                         "MF_SurfaceWear")))
+    lib.connect(wear_n, "", wear_call, "Normal")
+    lib.connect(wear["WearScale"], "", wear_call, "WearScale")
+    lib.connect(wear["CrackWidth"], "", wear_call, "CrackWidth")
+    lib.connect(wear["WearThreshold"], "", wear_call, "WearThreshold")
+
+    crack_amt = lib.expr(mat, unreal.MaterialExpressionMultiply, -700, 4380)
+    lib.connect(wear_call, "CrackMask", crack_amt, ["A", "a"])
+    lib.connect(wear["CrackStrength"], "", crack_amt, ["B", "b"])
+    crack_sat = lib.expr(mat, unreal.MaterialExpressionSaturate, -540, 4380)
+    lib.unary(crack_amt, crack_sat)
+
+    wear_amt = lib.expr(mat, unreal.MaterialExpressionMultiply, -700, 4520)
+    lib.connect(wear_call, "WearMask", wear_amt, ["A", "a"])
+    lib.connect(wear["WearStrength"], "", wear_amt, ["B", "b"])
+    wear_sat = lib.expr(mat, unreal.MaterialExpressionSaturate, -540, 4520)
+    lib.unary(wear_amt, wear_sat)
+
+    wear_sum = lib.expr(mat, unreal.MaterialExpressionAdd, -380, 4450)
+    lib.binary(crack_sat, wear_sat, wear_sum)
+    wear_gate = lib.expr(mat, unreal.MaterialExpressionSaturate, -220, 4450)
+    lib.unary(wear_sum, wear_gate)
+
+    df_call = lib.expr(mat, unreal.MaterialExpressionMaterialFunctionCall,
+                       -1200, 4960)
+    df_call.set_editor_property("material_function",
+        unreal.load_asset(lib.asset_path(lib.FUNCTION_DIR,
+                                         "MF_DF_ContactBlend")))
+    lib.connect(contact["DFContactOffset"], "", df_call, "WorldPositionOffset")
+    lib.connect(contact["DFContactDistance"], "", df_call, "BlendDistance")
+    lib.connect(contact["DFContactSharpness"], "", df_call, "BlendSharpness")
+    lib.connect(contact["DFContactNoiseScale"], "", df_call, "NoiseScale")
+    lib.connect(contact["DFContactNoiseBreakup"], "", df_call, "NoiseBreakup")
+    lib.connect(contact["DFContactGroundHeight"], "", df_call, "GroundHeight")
+    lib.connect(contact["DFContactHeightFalloff"], "", df_call,
+                "HeightFalloff")
+    df_active_1 = lib.scalar_const(mat, 1.0, -970, 5440)
+    lib.connect(df_active_1, "", df_call, "DistanceFieldBlendActive")
+    df_blend_1 = lib.scalar_const(mat, 1.0, -970, 5510)
+    lib.connect(df_blend_1, "", df_call, "BlendStrength")
+
+    df_raw = lib.expr(mat, unreal.MaterialExpressionMultiply, -700, 4870)
+    lib.connect(df_call, "Result", df_raw, ["A", "a"])
+    lib.connect(contact["DFContactStrength"], "", df_raw, ["B", "b"])
+    df_gate = lib.expr(mat, unreal.MaterialExpressionSaturate, -540, 4870)
+    lib.unary(df_raw, df_gate)
+
+    worn_color = lib.expr(mat, unreal.MaterialExpressionLinearInterpolate,
+                          340, 240)
+    lib.ternary(final_color, vec["InkColor"], wear_gate, worn_color)
+    df_color = lib.expr(mat, unreal.MaterialExpressionLinearInterpolate,
+                        500, 240)
+    lib.ternary(worn_color, contact_vec["DFContactTint"], df_gate, df_color)
+    final_color = df_color
+
     # ---------------- Substrate Toon BSDF ----------------
+    # Roughness chain: DryRoughness -> wear lerp -> DF contact lerp. Both
+    # lerps are identity at their gates' 0 defaults.
+    rough_wear = lib.expr(mat, unreal.MaterialExpressionLinearInterpolate,
+                          500, 480)
+    lib.ternary(flt["DryRoughness"], wear["WearRoughness"], wear_gate,
+                rough_wear)
+    rough_df = lib.expr(mat, unreal.MaterialExpressionLinearInterpolate,
+                        660, 480)
+    lib.ternary(rough_wear, contact["DFContactRoughness"], df_gate, rough_df)
+
     toon = lib.expr(mat, unreal.MaterialExpressionSubstrateToonBSDF, 500, 200)
     lib.connect(final_color, "", toon, ["BaseColor", "DiffuseColor"])
-    lib.connect(flt["DryRoughness"], "", toon, ["Roughness"])
+    lib.connect(rough_df, "", toon, ["Roughness"])
     normal = lib.expr(mat, unreal.MaterialExpressionPixelNormalWS, 300, 420)
     lib.connect(normal, "", toon, ["Normal", "TangentNormal", "NormalMap"])
 
@@ -256,7 +392,8 @@ def build(rebuild=True):
 
 def verify():
     """The profile read-back lib.verify_material cannot do for this master
-    (its toon_profile branch is hard-coded to M_Master_Toon_Universal)."""
+    (its toon_profile branch is hard-coded to M_Master_Toon_Universal), plus
+    the film-core lane calls + their parameter surface (2026-10-07)."""
     path = lib.asset_path(lib.MASTER_DIR, NAME)
     mat = unreal.load_asset(path)
     result = {"name": NAME, "ok": False, "error": None}
@@ -266,8 +403,11 @@ def verify():
         lib.log(f"VERIFY {NAME}: FAIL {result['error']}")
         return result
 
+    exprs = [e for e in unreal.MaterialEditingLibrary.get_material_expressions(mat) or []
+             if e is not None]
+
     profile = None
-    for n in unreal.MaterialEditingLibrary.get_material_expressions(mat) or []:
+    for n in exprs:
         if type(n).__name__ == "MaterialExpressionSubstrateToonBSDF":
             try:
                 p = n.get_editor_property("toon_profile")
@@ -282,6 +422,34 @@ def verify():
         result["error"] = (f"bound profile is {profile!r}, want "
                            f"{MASTER_PROFILE!r} - the landscape contract would "
                            f"not be in effect")
+
+    # -- film core lanes (film material core 2026-10-07): call + params --
+    if result["error"] is None:
+        want_lanes = {"MF_SurfaceWear", "MF_DF_ContactBlend"}
+        called = set()
+        for c in exprs:
+            if type(c).__name__ == "MaterialExpressionMaterialFunctionCall":
+                try:
+                    mf = c.get_editor_property("material_function")
+                    if mf is not None:
+                        called.add(mf.get_name())
+                except Exception:
+                    continue
+        missing = sorted(want_lanes - called)
+        if missing:
+            result["error"] = f"film core lanes not called: {missing}"
+        else:
+            params = set()
+            for e in exprs:
+                try:
+                    params.add(str(e.get_editor_property("parameter_name")))
+                except Exception:
+                    continue
+            want_params = set(WEAR_PARAM_NAMES) | set(CONTACTDF_PARAM_NAMES)
+            miss_params = sorted(want_params - params)
+            if miss_params:
+                result["error"] = f"film core params missing: {miss_params}"
+
     if result["error"] is None:
         result["ok"] = True
 
@@ -294,7 +462,9 @@ def main() -> int:
     mat = build()
     res = lib.verify_material(NAME,
                               expected_calls=["MF_ColorRamp3", "MF_RampLUT",
-                                              "MF_ProceduralPatterns"],
+                                              "MF_ProceduralPatterns",
+                                              "MF_SurfaceWear",
+                                              "MF_DF_ContactBlend"],
                               min_expressions=30)
     graph = verify()
     ok = mat is not None and res.get("ok") and graph.get("ok")
