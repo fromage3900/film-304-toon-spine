@@ -73,6 +73,29 @@ another PC).
 | 5 | **Package** once #1–#3 are green | `RunUAT.bat BuildCookRun -project=<proj> -platform=Win64 -clientconfig=Development -cook -allmaps -pak -archivedirectory=<dist>` | a Windows build opening `GameDefaultMap=/Game/Maps/L_Toon_Shot_Env` |
 | 6 | **Laptop driver upgrade** — worth it for laptop-side lookdev, NOT the black-render cure | see `Docs/LAPTOP_DRIVER_FIX_2026-10-08.md` (R580 = last Pascal line) | laptop passes the control matrix |
 
+## Git state at close (portable git: `D:\_PortableTools\MinGit\cmd\git.exe`)
+
+- Committed + pushed: branch **`feature/render-harness-20261008`** (46 files:
+  the harness builders, probes, judge, rig fix, audit JSONs, the two diag
+  levels + control materials + CFG/LS_R diagnostic assets, the two session
+  docs, `Config/DefaultGame.ini` [URL] packaging block). Commit subject:
+  `feat(render): headless MRQ still harness + office-rig fix + the judged black-render verdicts`.
+- Open the PR here: https://github.com/fromage3900/film-304-toon-spine/pull/new/feature/render-harness-20261008
+  (the repo's pre-push hook refuses direct main pushes and requires the
+  feature/ branch prefix — both guards behaved correctly during push).
+- Local `main` was re-based onto `origin/main` first (1 ahead / 2 behind;
+  the two remote-only commits were path-empty PR merges); the owner's dirty
+  tree was stashed + POPPED during the rebase and is intact untouched.
+- Portable-git one-time setup per machine:
+  `git config --global --add safe.directory D:/film-304-toon-spine` and put
+  `C:\Program Files\Epic Games\UE_5.8\Engine\Binaries\ThirdParty\Python3\Win64`
+  on PATH before pushes (the pre-push hook shells out to `python`, and the
+  WindowsApps Store stub breaks it).
+- Gate state on this desktop: 8/9 — hooks PASS (8/8 self-test with the
+  portable git wired), `fork sync (vendored vs upstream)` FAILs here (fork
+  state belongs to the fork-owning machine — same class as the two known
+  dogfood slot FAILs; see the morning handoff).
+
 ## Explicit notes for the next machine
 
 - This tree is shared by three machines (laptop `P:` / desktops). Commit your
