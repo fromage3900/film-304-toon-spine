@@ -1,0 +1,591 @@
+{
+  "aspect_mismatched_cameras": [],
+  "boxes": [
+    [
+      "Floor",
+      -600.0,
+      -600.0,
+      -20.0,
+      1200.0,
+      1200.0,
+      20.0
+    ],
+    [
+      "CarpetPatch",
+      -300.0,
+      -1275.0,
+      0.0,
+      600.0,
+      450.0,
+      30.0
+    ],
+    [
+      "BackWall",
+      -600.0,
+      -1560.0,
+      0.0,
+      1200.0,
+      20.0,
+      310.0
+    ],
+    [
+      "SideWallLeft",
+      -1160.0,
+      -600.0,
+      0.0,
+      20.0,
+      1200.0,
+      310.0
+    ],
+    [
+      "OfficeCubicle",
+      -511.7,
+      -1031.1,
+      0.0,
+      1023.5,
+      660.1,
+      219.0
+    ],
+    [
+      "DeskChair",
+      -212.9,
+      -1076.7,
+      30.0,
+      100.7,
+      58.4,
+      122.4
+    ],
+    [
+      "PaperStackA",
+      -557.7,
+      -912.9,
+      30.0,
+      182.0,
+      25.7,
+      131.7
+    ],
+    [
+      "PaperSheetB",
+      -462.5,
+      -739.5,
+      30.0,
+      14.8,
+      19.8,
+      22.5
+    ],
+    [
+      "PaperLooseC",
+      -758.6,
+      -505.1,
+      30.0,
+      32.0,
+      2.3,
+      19.2
+    ],
+    [
+      "DeskLamp",
+      399.0,
+      -721.0,
+      0.0,
+      42.0,
+      42.0,
+      63.0
+    ],
+    [
+      "StickyNoteRow",
+      186.2,
+      -902.9,
+      30.0,
+      7.6,
+      3.8,
+      5.2
+    ],
+    [
+      "DropCeiling",
+      -600.0,
+      -150.0,
+      290.0,
+      1200.0,
+      300.0,
+      60.0
+    ],
+    [
+      "TrofferA",
+      -410.0,
+      -1080.0,
+      285.0,
+      120.0,
+      60.0,
+      20.0
+    ],
+    [
+      "TrofferB",
+      290.0,
+      -30.0,
+      285.0,
+      120.0,
+      60.0,
+      20.0
+    ]
+  ],
+  "cameras": [
+    {
+      "label": "Cam_Env_SH010",
+      "note": "camera staged by the exterior composition spec; rendered through that level",
+      "reuse_level": "/Game/Maps/L_Toon_Shot_Env",
+      "shot_id": "SH010"
+    },
+    {
+      "filmback_aspect": 1.77778,
+      "filmback_mm": [
+        35.0,
+        19.6875
+      ],
+      "focal_length_mm": 32.0,
+      "label": "Cam_WS_SH020",
+      "location_uu": [
+        -260,
+        -2850,
+        135
+      ],
+      "render_frame": null,
+      "shot_id": "SH020",
+      "still_name": "OS_SH020_proto_v01",
+      "target_uu": [
+        -140,
+        -1700,
+        96
+      ]
+    },
+    {
+      "filmback_aspect": 1.77778,
+      "filmback_mm": [
+        35.0,
+        19.6875
+      ],
+      "focal_length_mm": 50.0,
+      "label": "Cam_WS_SH030",
+      "location_uu": [
+        -620,
+        -1420,
+        128
+      ],
+      "render_frame": null,
+      "shot_id": "SH030",
+      "still_name": "OS_SH030_proto_v01",
+      "target_uu": [
+        -520,
+        -1290,
+        60
+      ]
+    },
+    {
+      "filmback_aspect": 1.77778,
+      "filmback_mm": [
+        35.0,
+        19.6875
+      ],
+      "focal_length_mm": 50.0,
+      "label": "Cam_WS_SH040",
+      "location_uu": [
+        -420,
+        -2500,
+        150
+      ],
+      "render_frame": null,
+      "shot_id": "SH040",
+      "still_name": "OS_SH040_proto_v01",
+      "target_uu": [
+        40,
+        -1500,
+        90
+      ]
+    },
+    {
+      "filmback_aspect": 1.77778,
+      "filmback_mm": [
+        35.0,
+        19.6875
+      ],
+      "focal_length_mm": 50.0,
+      "label": "Cam_WS_SH050",
+      "location_uu": [
+        -780,
+        -3050,
+        145
+      ],
+      "render_frame": null,
+      "shot_id": "SH050",
+      "still_name": "OS_SH050_proto_v01",
+      "target_uu": [
+        180,
+        -1500,
+        112
+      ]
+    },
+    {
+      "filmback_aspect": 1.77778,
+      "filmback_mm": [
+        35.0,
+        19.6875
+      ],
+      "focal_length_mm": 85.0,
+      "label": "Cam_WS_SH060",
+      "location_uu": [
+        80,
+        -1580,
+        108
+      ],
+      "render_frame": null,
+      "shot_id": "SH060",
+      "still_name": "OS_SH060_proto_v01",
+      "target_uu": [
+        185,
+        -1374,
+        90
+      ]
+    }
+  ],
+  "deliverable_aspect": 1.77778,
+  "deliverable_resolution": [
+    1280,
+    720
+  ],
+  "errors": [],
+  "expected_pieces": 14,
+  "expected_shots": 6,
+  "level": "/Game/Maps/L_Toon_Shot_Office",
+  "level_action": "reloaded",
+  "level_saved": true,
+  "ok": true,
+  "overlapping_pairs": [],
+  "pieces_top_z": {
+    "CarpetPatch": 30.0,
+    "DeskChair": 152.4,
+    "DeskLamp": 63.0,
+    "DropCeiling": 350.0,
+    "Floor": 0.0,
+    "OfficeCubicle": 219.0,
+    "PaperLooseC": 49.2,
+    "PaperSheetB": 52.5,
+    "PaperStackA": 161.7,
+    "StickyNoteRow": 35.2,
+    "TrofferA": 305.0,
+    "TrofferB": 305.0
+  },
+  "placed": [
+    {
+      "asset": "/Engine/BasicShapes/Cube",
+      "bounds_min": [
+        -600.0,
+        -600.0,
+        -20.0
+      ],
+      "material": "/Game/Materials/Instances/MI_OfficeSpider_VCTFloor",
+      "object": "Floor",
+      "requested_uu": [
+        0.0,
+        0.0,
+        -10.0
+      ],
+      "role": "office bay floor (VCT)",
+      "size_uu": [
+        1200.0,
+        1200.0,
+        20.0
+      ],
+      "z_correction_uu": 0.0
+    },
+    {
+      "asset": "/Engine/BasicShapes/Cube",
+      "bounds_min": [
+        -600.0,
+        -1560.0,
+        0.0
+      ],
+      "material": "/Game/Materials/Instances/MI_Toon_Environment",
+      "object": "BackWall",
+      "requested_uu": [
+        0.0,
+        -1550.0,
+        155.0
+      ],
+      "role": "bay rear wall",
+      "size_uu": [
+        1200.0,
+        20.0,
+        310.0
+      ],
+      "z_correction_uu": 0.0
+    },
+    {
+      "asset": "/Engine/BasicShapes/Cube",
+      "bounds_min": [
+        -1160.0,
+        -600.0,
+        0.0
+      ],
+      "material": "/Game/Materials/Instances/MI_Toon_Environment",
+      "object": "SideWallLeft",
+      "requested_uu": [
+        -1150.0,
+        0.0,
+        155.0
+      ],
+      "role": "bay side wall (camera left)",
+      "size_uu": [
+        20.0,
+        1200.0,
+        310.0
+      ],
+      "z_correction_uu": 0.0
+    },
+    {
+      "asset": "/Game/Environment/Brutalist/04_INTERIOR_CUBICLES/SM_CUBICLE_Canonical",
+      "bounds_min": [
+        -511.7,
+        -1031.1,
+        0.0
+      ],
+      "material": null,
+      "object": "OfficeCubicle",
+      "requested_uu": [
+        0.0,
+        -700.0,
+        0.0
+      ],
+      "role": "hero workstation (partitions already assigned MI_Toon_Office_Polypropylene via the office-set builder)",
+      "size_uu": [
+        1023.5,
+        660.1,
+        219.0
+      ],
+      "z_correction_uu": 12.0
+    },
+    {
+      "asset": "/Game/Meshes/Office/Props/P_Lamp_EF",
+      "bounds_min": [
+        399.0,
+        -721.0,
+        0.0
+      ],
+      "material": null,
+      "object": "DeskLamp",
+      "requested_uu": [
+        420.0,
+        -700.0,
+        0.0
+      ],
+      "role": "desk lamp, cubicle hero",
+      "size_uu": [
+        42.0,
+        42.0,
+        63.0
+      ],
+      "z_correction_uu": 38.0
+    },
+    {
+      "asset": "/Engine/BasicShapes/Cube",
+      "bounds_min": [
+        -600.0,
+        -150.0,
+        290.0
+      ],
+      "material": "/Game/Materials/Instances/MI_Toon_Office_DropCeiling",
+      "object": "DropCeiling",
+      "requested_uu": [
+        0.0,
+        0.0,
+        320.0
+      ],
+      "role": "drop-ceiling rail (a gall, not a lid -- never blocks the key light)",
+      "size_uu": [
+        1200.0,
+        300.0,
+        60.0
+      ],
+      "z_correction_uu": 0.0
+    },
+    {
+      "asset": "/Engine/BasicShapes/Cube",
+      "bounds_min": [
+        -410.0,
+        -1080.0,
+        285.0
+      ],
+      "material": "/Game/Materials/Instances/MI_Toon_Office_Troffer",
+      "object": "TrofferA",
+      "requested_uu": [
+        -350.0,
+        -1050.0,
+        295.0
+      ],
+      "role": "troffer emissive slab 1 (MI_Toon_Office_Troffer: steady emissive)",
+      "size_uu": [
+        120.0,
+        60.0,
+        20.0
+      ],
+      "z_correction_uu": 0.0
+    },
+    {
+      "asset": "/Engine/BasicShapes/Cube",
+      "bounds_min": [
+        290.0,
+        -30.0,
+        285.0
+      ],
+      "material": "/Game/Materials/Instances/MI_Toon_Office_Troffer",
+      "object": "TrofferB",
+      "requested_uu": [
+        350.0,
+        0.0,
+        295.0
+      ],
+      "role": "troffer emissive slab 2",
+      "size_uu": [
+        120.0,
+        60.0,
+        20.0
+      ],
+      "z_correction_uu": 0.0
+    },
+    {
+      "asset": "/Engine/BasicShapes/Cube",
+      "bounds_min": [
+        -300.0,
+        -1275.0,
+        0.0
+      ],
+      "material": "/Game/Materials/Instances/MI_Toon_Office_Carpet",
+      "object": "CarpetPatch",
+      "requested_uu": [
+        0.0,
+        -1050.0,
+        15.0
+      ],
+      "role": "cubicle carpet zone",
+      "size_uu": [
+        600.0,
+        450.0,
+        30.0
+      ],
+      "z_correction_uu": 0.0
+    },
+    {
+      "asset": "/Game/Meshes/Office/Props/P_Chair_KS",
+      "bounds_min": [
+        -212.9,
+        -1076.7,
+        30.0
+      ],
+      "material": null,
+      "object": "DeskChair",
+      "requested_uu": [
+        -140.0,
+        -1050.0,
+        15.0
+      ],
+      "role": "worker's task chair (board pg1 shots 2-3)",
+      "size_uu": [
+        100.7,
+        58.4,
+        122.4
+      ],
+      "z_correction_uu": 124.5
+    },
+    {
+      "asset": "/Game/Meshes/Office/Props/SM_Paper_PMB",
+      "bounds_min": [
+        -557.7,
+        -912.9,
+        30.0
+      ],
+      "material": "/Game/Materials/Instances/MI_OfficeSpider_Paper",
+      "object": "PaperStackA",
+      "requested_uu": [
+        -480.0,
+        -900.0,
+        0.0
+      ],
+      "role": "typing-mode paper pile",
+      "size_uu": [
+        182.0,
+        25.7,
+        131.7
+      ],
+      "z_correction_uu": 90.8
+    },
+    {
+      "asset": "/Game/Meshes/Office/Props/SM_Paper_PMB001",
+      "bounds_min": [
+        -462.5,
+        -739.5,
+        30.0
+      ],
+      "material": "/Game/Materials/Instances/MI_OfficeSpider_Paper",
+      "object": "PaperSheetB",
+      "requested_uu": [
+        -455.0,
+        -730.0,
+        0.0
+      ],
+      "role": "loose sheet, second insert",
+      "size_uu": [
+        14.8,
+        19.8,
+        22.5
+      ],
+      "z_correction_uu": 41.3
+    },
+    {
+      "asset": "/Game/Meshes/Office/Props/paper_sheet",
+      "bounds_min": [
+        -758.6,
+        -505.1,
+        30.0
+      ],
+      "material": "/Game/Materials/Instances/MI_OfficeSpider_Paper",
+      "object": "PaperLooseC",
+      "requested_uu": [
+        -760.0,
+        -570.0,
+        0.0
+      ],
+      "role": "third loose sheet, flung",
+      "size_uu": [
+        32.0,
+        2.3,
+        19.2
+      ],
+      "z_correction_uu": -75.5
+    },
+    {
+      "asset": "/Game/Meshes/Office/Props/SM_StickyNote_PMB_001",
+      "bounds_min": [
+        186.2,
+        -902.9,
+        30.0
+      ],
+      "material": "/Game/Materials/Instances/MI_OfficeSpider_Paper",
+      "object": "StickyNoteRow",
+      "requested_uu": [
+        190.0,
+        -900.0,
+        0.0
+      ],
+      "role": "sticky notes row (board pg1 shot 9 supplies)",
+      "size_uu": [
+        7.6,
+        3.8,
+        5.2
+      ],
+      "z_correction_uu": 32.4
+    }
+  ],
+  "placed_count": 14,
+  "spec_levels": [
+    "exterior (already staged)",
+    "office interior stage"
+  ]
+}

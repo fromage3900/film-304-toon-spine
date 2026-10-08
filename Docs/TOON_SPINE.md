@@ -480,3 +480,28 @@ sparkle / vein-glow / radial-rings out, and only then add a new function.
 * OPEN (film): the visual review of `MI_Toon_Sky_DeepNight` inside SH010 and
   SH020 before any new film-specific function is authored - this laptop is
   driver-blocked for Substrate lookdev (SM5 vs SM6, see "Verification" above).
+
+## State 2026-10-08: laptop render path - the SM6 note supersedes the SM5 note
+
+The 2026-10-03 SM5-cap note is OUT OF DATE: the owner's config change added
+`PCD3D_SM6` to the D3D12 shader formats and this machine now logs
+`LogD3D12RHI: Creating D3D12 RHI with Max Feature Level SM6`. With that, the
+render path CHANGED form, and the new form is measured and documented in
+`Saved/Audit/render_test_20261008.json`:
+
+* the sky/atmosphere and non-Substrate content light and render correctly;
+* the Substrate toon surfaces COMPILE and EXECUTE but render BLACK - a
+  re-aimed/strengthened key (intensity 6, skylight 2.0 + recapture) does not
+  lift them (the light-bisect still is in the same audit JSON);
+* the same harness on the other workstation (P:, 2026-10-05) produced real
+  reads (`COMP_SH020/SH030_proto_v01.png` - tinted ground, ambient building
+  reads).
+
+So: **the shader render tests belong on the desktop until this laptop's
+driver moves past the SM5-era 527.56**, and the staged camera set
+(`specs/office_spider/stage_shots.v1.json` + `L_Toon_Shot_Office`) is exactly
+what those tests consume unchanged - the request file selects the spec, the
+harness is machine-portable. Camera staging for Act I interior + the exterior
+establishing shot is staged and verified (14/14 pieces, 0 overlaps, 16:9
+filmbacks); SH070-120 cameras defer to the rig bind and the kitchen build-out
+(plan gaps 7.11/7.12).

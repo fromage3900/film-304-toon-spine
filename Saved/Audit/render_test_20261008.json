@@ -1,0 +1,40 @@
+{
+  "written": "2026-10-08",
+  "purpose": "Office Spider shot staging + shader render tests, headless session record (lane branch feat/agent-material-core-20261007).",
+  "staging": {
+    "spec": "specs/office_spider/stage_shots.v1.json",
+    "builder": "Python/build_shot_stage.py",
+    "level": "/Game/Maps/L_Toon_Shot_Office",
+    "result": "PASS - 14/14 pieces staged, 6 cameras (SH010 reuse exterior Cam_Env_SH010 + Cam_WS_SH020..SH060), 0 overlaps, level saved, filmback 35x19.6875 (16:9) on every camera",
+    "sits_on_note": "rug-zone props (chair/papers/sticky notes) stack on the measured carpet-patch top; walls/cubicle ground-lifted; ceiling fixtures skip-lift at their authored heights",
+    "evidence": "Saved/Audit/shot_stage_report.json"
+  },
+  "render_tests": {
+    "harness": "Python/render_prototypes.py (single still per invocation; request file selects the spec: the stage spec override was added 2026-10-08)",
+    "fired": [
+      {"still": "OS_SH020_proto_v01.png", "spec": "stage_shots.v1.json (office interior)", "camera": "Cam_WS_SH020", "png_bytes": 28241, "read": "BLACK - geometry silhouette only, no light"},
+      {"still": "COMP_SH010_proto_v01.png", "spec": "prototype_renders.v1.json (exterior)", "camera": "Cam_Env_SH010", "png_bytes": 397013, "read": "sky gradient + cream horizon render, buildings and ground render black"},
+      {"still": "BISECT_SH010_light.png", "spec": "prototype_renders.v1.json (exterior, in-memory light surgery: sun -50/140 int 6, skylight 2.0 + recapture, stray directional muted)", "png_bytes": 393956, "read": "buildings faintly readable (internal window detail), ground still black; direct light still not reaching the Substrate shader"}
+    ],
+    "verdict": "FAIL on this laptop - and it is a MACHINE defect, not a set/material defect:",
+    "basis": [
+      "SM6 compiles and executes here now (LogD3D12RHI Max Feature Level SM6 since the owner's config change; the Oct-3 'SM5-cap' note is superseded)",
+      "non-Substrate content lights correctly (the Oct-5 _prev still's engine-grid ground rendered pale/lit on this machine; the atmosphere renders both days)",
+      "Substrate toon surfaces render BLACK regardless of light aim/intensity/skylight - the known driver-blocked class in a new form (compiled, executes, black)",
+      "the same harness produced the real read on the P: workstation 2026-10-05 (COMP_SH020/SH030 - tinted ground + ambient buildings, pre-banding lookdev)"
+    ],
+    "owner_actions": [
+      "run the SAME request file on the desktop (or G: copy) for the real shader render tests - no code changes needed, the harness is machine-portable",
+      "or update this laptop's NVIDIA driver past the SM5-era 527.56 and re-fire one exterior still as the control"
+    ]
+  },
+  "sequence_relation": {
+    "owner_shells": "Content/Sequences/Shots/SH010-120 + OfficeSpider_Master (30 fps, 0-150, committed placeholders) untouched; camera cut bindings remain owner territory",
+    "manifest_deck": "LS_SH010-080 (24 fps, manifest-driven) on L_Toon_Lookdev untouched",
+    "staged_cameras": "the render tests shoot CineCameraActors directly (the prototype tier contract); sequence bindings are the video-tier step"
+  },
+  "deferred_with_reason": [
+    {"shot_id": "SH070/SH080/SH110/SH120", "reason": "worker/spider rigs not imported (plan gap 7.11)"},
+    {"shot_id": "SH090/SH100", "reason": "break-room shell not built (plan gap 7.12); coffee machine is a break-room set piece"}
+  ]
+}
