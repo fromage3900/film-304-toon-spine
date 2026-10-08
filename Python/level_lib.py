@@ -120,11 +120,21 @@ def spawn_mesh(object_name, collection, location, mesh_root):
 
 def spawn_lights(sun_rotation=(0.0, 0.0, 0.0), sun_height=4000.0,
                  sun_intensity=3.2, sky_height=1000.0, sky=True,
-                 atmosphere=True):
+                 atmosphere=True, light_mobility="movable"):
     """Sun + sky + atmosphere, so the level reads on open.
 
     `sun_rotation` is (pitch, yaw, roll) - the spec convention, applied in
     keyword form by `sun_rotator` (see its docstring for the bug this prevents).
+
+    2026-10-08: lights spawn MOVABLE by default and STAY movable. The old
+    spawn-static dance (MOVABLE -> set intensity -> STATIC) produced levels
+    whose unbaked static geometry received NO direct light under the headless
+    -game/MRQ render path (lightmap-only evaluation without BuiltData) -- the
+    black-render class recorded in Saved/Audit/render_test_20261008.json and
+    bisected to mobility in the office_asset_bisect pass. Movable lights
+    evaluate per-pixel everywhere, including cooked builds. Pass
+    light_mobility="static" only for a level that is certain to ship with
+    built lighting.
     """
     pitch, yaw, roll = (list(sun_rotation) + [0.0, 0.0, 0.0])[:3]
     d = unreal.EditorLevelLibrary.spawn_actor_from_class(
@@ -133,9 +143,10 @@ def spawn_lights(sun_rotation=(0.0, 0.0, 0.0), sun_height=4000.0,
     d.set_actor_label("LGT_Sun")
     try:
         c = d.get_component_by_class(unreal.DirectionalLightComponent)
-        c.set_mobility(unreal.ComponentMobility.MOVABLE)
         c.set_intensity(float(sun_intensity))
-        c.set_mobility(unreal.ComponentMobility.STATIC)
+        if light_mobility == "static":
+            c.set_mobility(unreal.ComponentMobility.MOVABLE)
+            c.set_mobility(unreal.ComponentMobility.STATIC)
     except Exception:                                              # noqa: BLE001
         pass
 

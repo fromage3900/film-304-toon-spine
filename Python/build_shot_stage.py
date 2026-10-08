@@ -197,9 +197,11 @@ def build():
         fill.set_actor_label("LGT_Fill")
         fc = fill.get_component_by_class(unreal.DirectionalLightComponent)
         try:
-            fc.set_mobility(unreal.ComponentMobility.MOVABLE)
+            # 2026-10-08 v03 fix (mobility, matching level_lib.spawn_lights):
+            # a STATIC fill light delivered NO direct light under the headless
+            # -game/MRQ path on unbaked static geometry (the office_asset_
+            # bisect probe's fresh mobs lit while the staged surfaces did not).
             fc.set_intensity(float(L.get("fill_intensity", 1.5)))
-            fc.set_mobility(unreal.ComponentMobility.STATIC)
         except Exception as e:                          # noqa: BLE001
             log("WARN fill intensity: %s" % e)
 

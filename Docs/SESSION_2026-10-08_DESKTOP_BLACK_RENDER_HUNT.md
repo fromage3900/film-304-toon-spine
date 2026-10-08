@@ -12,9 +12,39 @@ another PC).
    The black renders reproduce on THIS machine. `Saved/Audit/render_test_20261008.json`
    and `Docs/TOON_SPINE.md` line ~493 blame the laptop's driver; the MRQ
    `-game` control render proves the pipeline renders fine HERE.
-2. **The render harness is now truly headless and re-runnable.** The editor's
+2. **ROOT CAUSE OF THE BLACK OFFICE/ENV GEOMETRY (found 2026-10-08 evening):**
+   the builders spawned sun/fill lights with a `MOVABLE -> set intensity ->
+   STATIC` dance. In an unbaked level on the headless `-game`/MRQ path, a
+   STATIC directional light is lightmap-only: with no BuiltData, **static
+   geometry receives zero direct light** (shadows never form; only skylight
+  /atmospheric ambient survives -- the faint sky-blue readings). The
+   evidence chain:
+     - `Python/office_asset_bisect.py` rendered FRESH cubes carrying the
+       SAME .uasset instances INSIDE `L_Toon_Shot_Office`
+       (`OS_EBisect_v01.png`): the fresh cubes + floor VCT speckles +
+       cubicle partitions all LIT (ambient + texture execution alive);
+       the staged environment around them (spawned with static lights)
+       showed no direct-light response. Same instances, same bay,
+       different light spawner = the mobility switch.
+     - The levels that lit correctly all day (control bay
+       `L_CTRL_ABC_Diag`, material probe `L_OfficeMaterialProbe`) were
+       spawned with *fresh* (movable) lights.
+     - `Python/_office_light_census2_20261008.py` rules out clouds, fog,
+       light channels, and enabled-ness in the office level.
+   **Fix applied (builder-owned):** `Python/level_lib.spawn_lights` now
+   spawns/stays MOVABLE by default (`light_mobility="movable"`,
+   documented WHY in-line); `Python/build_shot_stage.py`'s fill dropped the
+   static dance. **L_Toon_Shot_Office was re-staged tonight** (14/14
+   pieces, 0 errors) and the mobility-fix verification render of SH020 is
+   the first work order for tomorrow morning (command recorded in
+   `Saved/Audit/render_queue_report.json`; see `_mobilityfix_progress.txt`).
+   NOTE: the static-dance pattern lives in `level_lib.spawn_lights` which
+   also built `L_Toon_Shot_Env` and the lookdev levels -- after the office
+   verification passes, re-stage + re-render those lanes with the same fix
+   (the env buildings' black is expected to fall with it).
+3. **The render harness is now truly headless and re-runnable.** The editor's
    `-ExecutePythonScript` closes the editor ~0.4 s after the script returns
-   (measured 3×: `Cmd: QUIT_EDITOR`), so the old post-tick/caller-poll pattern
+   (measured 3×: `Cmd: QUIT_EDITOR`), so a post-tick/caller-poll pattern
    cannot run headless. The working path is the engine's own CLI (Option 1 of
    `MovieRenderPipelineCommandLine.cpp`):
      - `Python/build_render_queue.py` builds + saves, per still:
@@ -25,33 +55,16 @@ another PC).
        else the shot builds with 0 passes and writes nothing);
      - then one `-game` process per still renders it and exits itself:
        `UnrealEditor-Cmd.exe <proj> L_Toon_Shot_Office -game -LevelSequence="/Game/Sequences/ProtoDiag/LS_R_SH020.LS_R_SH020" -MoviePipelineConfig="/Game/MoviePipelines/CFG_OS_SH020_proto_v02.CFG_OS_SH020_proto_v02" -windowed -unattended`
-3. **The Toon shader path works.** The A/B/C control
+4. **The Toon shader path works.** The A/B/C control
    (`Saved/Renders/controls/CTRL_ABC_20261008.png`, level
-   `penthouse L_CTRL_ABC_Diag`): direct Substrate Toon BSDF + `TP_Default`
+   `L_CTRL_ABC_Diag`): direct Substrate Toon BSDF + `TP_Default`
    bound in-material renders RED with visible banding in the `-game` MRQ
    path. Environment/lighting/exposure all alive.
-4. **The office stage's defect is the LEVEL'S LIGHTING RIG, exactly the
-   owner's call.** `Python/_office_light_dump_20261008.py` dumps
-   `L_Toon_Shot_Office`'s rig: it matched the spec on paper (sun 5.0, fill
-   1.6, `SLS_CapturedScene` Skylight 1.0) — but with `atmosphere: false`
-   the captured scene had NOTHING to capture → zero ambient; with the
-   project's fixed exposure (`r.DefaultFeature.AutoExposure=False`) sun-lit
-   faces blew white at 5.0 while shadows went black (the v02 white-wash/
-   black-silhouette stills).
-   **Fix applied (builder-owned):**
-   - `specs/office_spider/stage_shots.v1.json`: `atmosphere: true` + the WHY
-     recorded in `lighting_note`;
-   - `Python/build_shot_stage.py`: skylight `recapture_sky()` AFTER the
-     atmosphere spawns ("sky seal") + an unbounded `LGT_PPV` so the exposure
-     law lives in the level; `LGT_PPV`/`Sky` added to `owned_labels`
-     (re-run idempotency);
-   - `L_Toon_Shot_Office` re-staged 14/14 pieces, 0 errors, and the v02
-     renders are re-fired (see `Saved/Renders/_v03_progress.txt`).
-5. **The material probe** (`Python/build_material_probe.py`,
-   `L_OfficeMaterialProbe`, still at
-   `Saved/Renders/office_stage/OS_PROBE_materials_v01.png`): under a
-   working rig, master instances light and read (B taupe, D tan with
-   hatch). The black was never the materials.
+5. **Materials are NOT the defect.** The material probe
+   (`Python/build_material_probe.py`, `L_OfficeMaterialProbe`, still at
+   `Saved/Renders/office_stage/OS_PROBE_materials_v01.png`) and the office
+   asset bisect prove master instances light and carry their looks (taupe /
+   tan / hatch / paper) under a working rig.
 
 ## Resume points (next session, in order)
 
@@ -66,11 +79,11 @@ another PC).
 
 | # | Work order | First concrete step | Done when |
 |---|---|---|---|
-| 1 | **Bisect the master's Oct-7 material core** — the sharpened diagnosis: master-derived Substrate instances receive ambient (faint sky-blue on the cubicle face in `OS_SH020_proto_v02`) but ZERO direct light, on BOTH machines, since the material-core landed (the Oct-5 real reads predate it). The direct BSDF control (cube C) works, so the data is not the suspect — the master's integration is. Highest-priority suspects in order: `MF_NormalAdjust`'s world-space normal weld (a NaN/collapsed normal kills N·L == no direct diffuse, while sky-IBL survives); the master's profile-bind path (`override_toon_profile=False` + the BSDF-carried binding, see `toon_profile_binding_probe_v3.json`); ShadowLift's zero-field. | rebuild the master WITHOUT the four surface-lane calls into a throwaway `M_Master_Toon_NoLanes` + one instance + one probe cube in `L_OfficeMaterialProbe` (via `build_render_queue.py`'s config/sequence helpers), render, compare against `M_Master_Toon_Universal` | the single lane/Knob that returns direct light to master instances is named |
-| 2 | **Re-render the batch** with the named lane fixed (builders own the master; re-run the builders) | loop `Saved/Audit/render_queue_report.json` `jobs[].command` | every staged still passes the stage spec's reads: VCT grout + toon bands, paper matte grain, polypropylene hatch, troffer emissive |
-| 3 | **The exterior black follows the same lead** — `L_Toon_Shot_Env` buildings carry `MI_Toon_Environment` in both slots; same master instance class, same zero-direct signature | re-render `COMP_SH010` after #1 lands | Brutalist exterior reads VALUE, not black |
-| 4 | **Control A/B/C rebuild** — cube A (legacy lit red) rendered BLACK in the control; it was authored inside a re-entrant storm (drivers now guarded; materials possibly half-saved). Not load-bearing for #1, but keep the matrix honest | delete + rebuild `M_CTRL_Lit_Red` via `build_render_queue.py::build_ctrl_materials`, re-fire the `CTRL_ABC` job | A red, B documented (no-profile state), C red |
-| 5 | **Package** once #1–#3 are green | `RunUAT.bat BuildCookRun -project=<proj> -platform=Win64 -clientconfig=Development -cook -allmaps -pak -archivedirectory=<dist>` | a Windows build opening `GameDefaultMap=/Game/Maps/L_Toon_Shot_Env` |
+| 1 | **Verify tonight's mobility fix** (render of SH020 fired at close; see `_mobilityfix_progress.txt` + the refreshed judge file) | inspect `OS_SH020_proto_v02.png`: bands + grout + shadows present? | office stills carry the stage spec's minimum passes (VCT grout + bands, paper matte grain, polypropylene hatch, troffer emissive) |
+| 2 | **Policy the same fix into the other lanes rendered black**: `L_Toon_Shot_Env` (compose_shot_env_level.py uses level_lib.spawn_lights) + lookdev levels; re-stage + re-render | loop `Saved/Audit/render_queue_report.json` `jobs[].command` | Brutalist exterior reads VALUE, not black; the shot list is presentation-ready |
+| 3 | **Cleanup of bisect artifacts in `L_Toon_Shot_Office`** (leave-or-remove decision, owner): EB_Env/EB_Paper/EB_Poly cubes + EB_Cam (the asset-bisect actors), `LS_R_EBisect` + `CFG_OS_EBisect_v01` | delete the labels + re-run `build_shot_stage.py` | the staged level record is clean |
+| 4 | **Control A/B/C rebuild** — cube A (legacy lit red) rendered BLACK in the control; it was authored inside a re-entrant storm. Keep the matrix honest | delete + rebuild `M_CTRL_Lit_Red` via `build_render_queue.py::build_ctrl_materials`, re-fire the `CTRL_ABC` job | A red, B documented (no-profile state), C red |
+| 5 | **Package** once #1–#2 are green | `RunUAT.bat BuildCookRun -project=<proj> -platform=Win64 -clientconfig=Development -cook -allmaps -pak -archivedirectory=<dist>` | a Windows build opening `GameDefaultMap=/Game/Maps/L_Toon_Shot_Env` |
 | 6 | **Laptop driver upgrade** — worth it for laptop-side lookdev, NOT the black-render cure | see `Docs/LAPTOP_DRIVER_FIX_2026-10-08.md` (R580 = last Pascal line) | laptop passes the control matrix |
 
 ## Git state at close (portable git: `D:\_PortableTools\MinGit\cmd\git.exe`)
