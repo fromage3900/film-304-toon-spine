@@ -12,36 +12,37 @@ another PC).
    The black renders reproduce on THIS machine. `Saved/Audit/render_test_20261008.json`
    and `Docs/TOON_SPINE.md` line ~493 blame the laptop's driver; the MRQ
    `-game` control render proves the pipeline renders fine HERE.
-2. **ROOT CAUSE OF THE BLACK OFFICE/ENV GEOMETRY (found 2026-10-08 evening):**
-   the builders spawned sun/fill lights with a `MOVABLE -> set intensity ->
-   STATIC` dance. In an unbaked level on the headless `-game`/MRQ path, a
-   STATIC directional light is lightmap-only: with no BuiltData, **static
-   geometry receives zero direct light** (shadows never form; only skylight
-  /atmospheric ambient survives -- the faint sky-blue readings). The
-   evidence chain:
-     - `Python/office_asset_bisect.py` rendered FRESH cubes carrying the
-       SAME .uasset instances INSIDE `L_Toon_Shot_Office`
-       (`OS_EBisect_v01.png`): the fresh cubes + floor VCT speckles +
-       cubicle partitions all LIT (ambient + texture execution alive);
-       the staged environment around them (spawned with static lights)
-       showed no direct-light response. Same instances, same bay,
-       different light spawner = the mobility switch.
-     - The levels that lit correctly all day (control bay
-       `L_CTRL_ABC_Diag`, material probe `L_OfficeMaterialProbe`) were
-       spawned with *fresh* (movable) lights.
-     - `Python/_office_light_census2_20261008.py` rules out clouds, fog,
-       light channels, and enabled-ness in the office level.
-   **Fix applied (builder-owned):** `Python/level_lib.spawn_lights` now
-   spawns/stays MOVABLE by default (`light_mobility="movable"`,
-   documented WHY in-line); `Python/build_shot_stage.py`'s fill dropped the
-   static dance. **L_Toon_Shot_Office was re-staged tonight** (14/14
-   pieces, 0 errors) and the mobility-fix verification render of SH020 is
-   the first work order for tomorrow morning (command recorded in
-   `Saved/Audit/render_queue_report.json`; see `_mobilityfix_progress.txt`).
-   NOTE: the static-dance pattern lives in `level_lib.spawn_lights` which
-   also built `L_Toon_Shot_Env` and the lookdev levels -- after the office
-   verification passes, re-stage + re-render those lanes with the same fix
-   (the env buildings' black is expected to fall with it).
+2. **ROOT CAUSE OF THE BLACK OFFICE/ENV GEOMETRY (found + corrected 2026-10-08 evening):**
+   the staged pieces are parked at **STATIC component mobility** after their
+   mesh swap (`spawn_piece` / `level_lib.spawn_mesh` both ended
+   `set_mobility(STATIC)`), while every render that LIT today used freshly
+   spawned components at their default mobility. Static-mobility static
+   meshes + Stationary lights + no built lighting data
+   (`L_Toon_Shot_Office` has none) evaluate **lightmap-only** under the
+   -game/MRQ path: no BuiltData = no baked direct light = black geometry,
+   with skylight/atmospheric ambient still surviving (the faint sky-blue).
+   Evidence:
+     - **Bisect 1 (same level, same lights, same instance .uassets):**
+       `office_asset_bisect.py` added three fresh cubes carrying the exact
+       same `MI_*` assets INSIDE `L_Toon_Shot_Office`
+       (`OS_EBisect_v01.png`); their faces shade and carry the looks
+       (gray-blue ambient, polypropylene hatch VISIBLE) while the staged
+       pieces around them stayed black.
+     - **Bisect 2 (the census)**: `_office_light_census2_20261008.py` shows
+       the office level has NO clouds/fog/channel blockers; the re-staged
+       lights are Stationary spawn defaults (`mobility:
+       ComponentMobility.STATIONARY`) -- so a first fix attempt that only
+       touched light mobility (commit 1c169b0) did NOT change the render.
+       The successful renders all day (control `L_CTRL_ABC_Diag`, probe
+       `L_OfficeMaterialProbe`, the EBisect cubes) are exactly the ones
+       whose components were never parked STATIC.
+   **Fix applied (builder-owned):** both `Python/build_shot_stage.py
+   spawn_piece` and `Python/level_lib.py spawn_mesh` keep the mesh-swap
+   dance but END at the spawned default mobility (documented inline).
+   Verification render of SH020 fired at close (`_piecefix_progress.txt`);
+   re-run the spec's minimum-pass read on it first thing tomorrow.
+   NOTE: `compose_shot_env_level.py` and the other lanes using
+   `level_lib.spawn_mesh` inherit the fix on their next re-stage.
 3. **The render harness is now truly headless and re-runnable.** The editor's
    `-ExecutePythonScript` closes the editor ~0.4 s after the script returns
    (measured 3×: `Cmd: QUIT_EDITOR`), so a post-tick/caller-poll pattern

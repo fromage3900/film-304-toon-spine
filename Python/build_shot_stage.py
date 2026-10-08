@@ -94,6 +94,12 @@ def spawn_piece(piece, spec_pos):
         raise RuntimeError("%s: no StaticMeshComponent" % piece["object"])
     comp.set_mobility(unreal.ComponentMobility.MOVABLE)
     comp.set_static_mesh(mesh)
+    # 2026-10-08: END at the spawn default, NOT STATIC. The earlier dance
+    # swapped the mesh then parked the component at STATIC; for static-mobility
+    # components + stationary lights with no built lighting data, the
+    # -game/MRQ render path evaluates direct light from the lightmap only ->
+    # black geometry (the bisect pair: same instance .uassets light on a
+    # fresh spawn, stay black on the parked-static staged pieces).
     actor.set_actor_scale3d(unreal.Vector(float(scale[0]), float(scale[1]),
                                           float(scale[2])))
     mat_path = piece.get("material")

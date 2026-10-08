@@ -35,6 +35,10 @@ for a in unreal.EditorLevelLibrary.get_all_level_actors():
             comp = a.get_component_by_class(INTEREST[cls])
             row = {"label": label, "class": cls}
             if comp:
+                try:
+                    row["mobility"] = str(comp.get_editor_property("mobility"))
+                except Exception:
+                    pass
                 for prop in ("intensity", "b_enabled", "cast_shadows",
                              "cast_static_shadows", "use_light_shafts",
                              "lighting_channels", "b_use_temperature",

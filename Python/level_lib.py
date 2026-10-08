@@ -111,10 +111,14 @@ def spawn_mesh(object_name, collection, location, mesh_root):
     comp = actor.get_component_by_class(unreal.StaticMeshComponent)
     if comp is None:
         raise RuntimeError("%s: no StaticMeshComponent" % object_name)
-    # Static mobility refuses a mesh swap mid-session; move it, set, move back.
+    # Static mobility refuses a mesh swap mid-session; move it, set, KEEP THE
+    # SPAWN DEFAULT: parking the component at STATIC (the pre-2026-10-08
+    # behavior) forced static-mobility static geometry onto the lightmap-only
+    # evaluation path under the -game/MRQ renderer -- unbaked geometry then
+    # receives NO direct light (the black-render class bisected in the
+    # 2026-10-08 session; see Docs/SESSION_2026-10-08_DESKTOP_BLACK_RENDER_HUNT.md).
     comp.set_mobility(unreal.ComponentMobility.MOVABLE)
     comp.set_static_mesh(mesh)
-    comp.set_mobility(unreal.ComponentMobility.STATIC)
     return actor, mesh, asset
 
 
