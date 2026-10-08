@@ -1,0 +1,14 @@
+{
+  "errors": [],
+  "cubes": [
+    "PROBE_A_default",
+    "PROBE_B_Env",
+    "PROBE_C_Paper",
+    "PROBE_D_Poly"
+  ],
+  "ok": true,
+  "sequence": "/Game/Sequences/ProtoDiag/LS_R_PROBE",
+  "config": "/Game/MoviePipelines/CFG_OS_PROBE_materials_v01",
+  "command": "\"C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-Cmd.exe\" \"D:\\film-304-toon-spine\\HumberToonShader.uproject\" L_OfficeMaterialProbe -game -LevelSequence=\"/Game/Sequences/ProtoDiag/LS_R_PROBE.LS_R_PROBE\" -MoviePipelineConfig=\"/Game/MoviePipelines/CFG_OS_PROBE_materials_v01.CFG_OS_PROBE_materials_v01\" -windowed -log -unattended",
+  "level_saved": true
+}

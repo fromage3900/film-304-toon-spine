@@ -1,0 +1,311 @@
+{
+  "basis": {
+    "black_reference": "Saved/Renders/office_stage/OS_SH020_proto_v01.png (2026-10-07 laptop: 28KB, mean~0)",
+    "real_reference": "Saved/Renders/prototypes/COMP_SH020_proto_v01.png (2026-10-05, lit)"
+  },
+  "batch_verdict": "FAIL -- 3 still(s) black on the desktop",
+  "control_verdict": "CONTROL_MATRIX_UNEXPECTED (A not red, B=other, C=red) -- read thirds",
+  "hardware": "RTX 3080 Ti 12GB / i9-12900KF (8P+8E, 24 threads) / 128GB / NVIDIA 610.88",
+  "machine": "desktop (Alienware Aurora R13) -- MRQ -game command-line render path",
+  "purpose": "judged pixel-measured verdict for the desktop MRQ -game still batch (the black-render resolution evidence for tomorrow's presentation)",
+  "render_method": "UnrealEditor-Cmd -game -LevelSequence=<LS_R_*> -MoviePipelineConfig=<CFG_*>, MoviePipelineDeferredPassBase + PNG",
+  "rows": [
+    {
+      "bright_frac": 0.985,
+      "bytes": 1110269,
+      "dir": "controls",
+      "height": 720,
+      "mean_luma": 144.64,
+      "path": "D:\\film-304-toon-spine\\Saved\\Renders\\controls\\CTRL_ABC_20261008.png",
+      "role": "control A/B/C",
+      "stem": "CTRL_ABC_20261008",
+      "thirds": [
+        {
+          "dark_frac": 0.0,
+          "mean_luma": 139.19,
+          "red_frac": 0.0
+        },
+        {
+          "dark_frac": 0.0,
+          "mean_luma": 153.08,
+          "red_frac": 0.0
+        },
+        {
+          "dark_frac": 0.0,
+          "mean_luma": 141.49,
+          "red_frac": 0.0453
+        }
+      ],
+      "thirds_class": [
+        "other",
+        "other",
+        "red"
+      ],
+      "verdict": "REAL",
+      "width": 1280
+    },
+    {
+      "bright_frac": 0.4558,
+      "bytes": 790903,
+      "dir": "office_stage",
+      "height": 720,
+      "mean_luma": 75.14,
+      "path": "D:\\film-304-toon-spine\\Saved\\Renders\\office_stage\\OS_SH020_proto_v02.png",
+      "role": "office worker typing OTS",
+      "stem": "OS_SH020_proto_v02",
+      "thirds": [
+        {
+          "dark_frac": 0.5006,
+          "mean_luma": 73.41,
+          "red_frac": 0.0
+        },
+        {
+          "dark_frac": 0.542,
+          "mean_luma": 76.54,
+          "red_frac": 0.0
+        },
+        {
+          "dark_frac": 0.4891,
+          "mean_luma": 75.45,
+          "red_frac": 0.0
+        }
+      ],
+      "verdict": "REAL",
+      "width": 1280
+    },
+    {
+      "bright_frac": 0.4558,
+      "bytes": 791052,
+      "dir": "office_stage",
+      "height": 720,
+      "mean_luma": 75.14,
+      "path": "D:\\film-304-toon-spine\\Saved\\Renders\\office_stage\\OS_SH030_proto_v02.png",
+      "role": "paper shuffle insert",
+      "stem": "OS_SH030_proto_v02",
+      "thirds": [
+        {
+          "dark_frac": 0.5006,
+          "mean_luma": 73.41,
+          "red_frac": 0.0
+        },
+        {
+          "dark_frac": 0.542,
+          "mean_luma": 76.54,
+          "red_frac": 0.0
+        },
+        {
+          "dark_frac": 0.4891,
+          "mean_luma": 75.45,
+          "red_frac": 0.0
+        }
+      ],
+      "verdict": "REAL",
+      "width": 1280
+    },
+    {
+      "bright_frac": 0.0,
+      "bytes": 32702,
+      "dir": "office_stage",
+      "height": 720,
+      "mean_luma": 0.0,
+      "path": "D:\\film-304-toon-spine\\Saved\\Renders\\office_stage\\OS_SH040_proto_v02.png",
+      "role": "desk supplies medium",
+      "stem": "OS_SH040_proto_v02",
+      "thirds": [
+        {
+          "dark_frac": 1.0,
+          "mean_luma": 0.0,
+          "red_frac": 0.0
+        },
+        {
+          "dark_frac": 1.0,
+          "mean_luma": 0.0,
+          "red_frac": 0.0
+        },
+        {
+          "dark_frac": 1.0,
+          "mean_luma": 0.0,
+          "red_frac": 0.0
+        }
+      ],
+      "verdict": "BLACK",
+      "width": 1280
+    },
+    {
+      "bright_frac": 0.0,
+      "bytes": 35609,
+      "dir": "office_stage",
+      "height": 720,
+      "mean_luma": 0.0,
+      "path": "D:\\film-304-toon-spine\\Saved\\Renders\\office_stage\\OS_SH050_proto_v02.png",
+      "role": "stretch break medium",
+      "stem": "OS_SH050_proto_v02",
+      "thirds": [
+        {
+          "dark_frac": 1.0,
+          "mean_luma": 0.0,
+          "red_frac": 0.0
+        },
+        {
+          "dark_frac": 1.0,
+          "mean_luma": 0.0,
+          "red_frac": 0.0
+        },
+        {
+          "dark_frac": 1.0,
+          "mean_luma": 0.0,
+          "red_frac": 0.0
+        }
+      ],
+      "verdict": "BLACK",
+      "width": 1280
+    },
+    {
+      "bright_frac": 0.0,
+      "bytes": 17709,
+      "dir": "office_stage",
+      "height": 720,
+      "mean_luma": 0.0,
+      "path": "D:\\film-304-toon-spine\\Saved\\Renders\\office_stage\\OS_SH060_proto_v02.png",
+      "role": "calendar macro",
+      "stem": "OS_SH060_proto_v02",
+      "thirds": [
+        {
+          "dark_frac": 1.0,
+          "mean_luma": 0.0,
+          "red_frac": 0.0
+        },
+        {
+          "dark_frac": 1.0,
+          "mean_luma": 0.0,
+          "red_frac": 0.0
+        },
+        {
+          "dark_frac": 1.0,
+          "mean_luma": 0.0,
+          "red_frac": 0.0
+        }
+      ],
+      "verdict": "BLACK",
+      "width": 1280
+    },
+    {
+      "bright_frac": 0.3981,
+      "bytes": 765606,
+      "dir": "prototypes",
+      "height": 720,
+      "mean_luma": 51.22,
+      "path": "D:\\film-304-toon-spine\\Saved\\Renders\\prototypes\\COMP_SH010_proto_v02.png",
+      "role": "exterior establishing",
+      "stem": "COMP_SH010_proto_v02",
+      "thirds": [
+        {
+          "dark_frac": 0.5379,
+          "mean_luma": 50.83,
+          "red_frac": 0.0
+        },
+        {
+          "dark_frac": 0.5356,
+          "mean_luma": 52.77,
+          "red_frac": 0.0
+        },
+        {
+          "dark_frac": 0.5444,
+          "mean_luma": 50.03,
+          "red_frac": 0.0
+        }
+      ],
+      "verdict": "REAL",
+      "width": 1280
+    },
+    {
+      "bright_frac": 0.5135,
+      "bytes": 825854,
+      "dir": "prototypes",
+      "height": 720,
+      "mean_luma": 59.85,
+      "path": "D:\\film-304-toon-spine\\Saved\\Renders\\prototypes\\COMP_SH020_proto_v02.png",
+      "role": "exterior reveal profile",
+      "stem": "COMP_SH020_proto_v02",
+      "thirds": [
+        {
+          "dark_frac": 0.4199,
+          "mean_luma": 68.01,
+          "red_frac": 0.0
+        },
+        {
+          "dark_frac": 0.4852,
+          "mean_luma": 61.24,
+          "red_frac": 0.0
+        },
+        {
+          "dark_frac": 0.5145,
+          "mean_luma": 50.29,
+          "red_frac": 0.0
+        }
+      ],
+      "verdict": "REAL",
+      "width": 1280
+    },
+    {
+      "bright_frac": 0.6307,
+      "bytes": 914254,
+      "dir": "prototypes",
+      "height": 720,
+      "mean_luma": 54.8,
+      "path": "D:\\film-304-toon-spine\\Saved\\Renders\\prototypes\\COMP_SH030_proto_v02.png",
+      "role": "exterior water rise",
+      "stem": "COMP_SH030_proto_v02",
+      "thirds": [
+        {
+          "dark_frac": 0.3015,
+          "mean_luma": 58.87,
+          "red_frac": 0.0
+        },
+        {
+          "dark_frac": 0.373,
+          "mean_luma": 52.73,
+          "red_frac": 0.0
+        },
+        {
+          "dark_frac": 0.3564,
+          "mean_luma": 52.83,
+          "red_frac": 0.0
+        }
+      ],
+      "verdict": "REAL",
+      "width": 1280
+    },
+    {
+      "bright_frac": 0.5312,
+      "bytes": 842370,
+      "dir": "prototypes",
+      "height": 720,
+      "mean_luma": 68.5,
+      "path": "D:\\film-304-toon-spine\\Saved\\Renders\\prototypes\\COMP_SH070_proto_v02.png",
+      "role": "exterior song release",
+      "stem": "COMP_SH070_proto_v02",
+      "thirds": [
+        {
+          "dark_frac": 0.3958,
+          "mean_luma": 70.68,
+          "red_frac": 0.0
+        },
+        {
+          "dark_frac": 0.4605,
+          "mean_luma": 68.57,
+          "red_frac": 0.0
+        },
+        {
+          "dark_frac": 0.4616,
+          "mean_luma": 66.25,
+          "red_frac": 0.0
+        }
+      ],
+      "verdict": "REAL",
+      "width": 1280
+    }
+  ],
+  "seconds": 2.9,
+  "written": "2026-10-08"
+}

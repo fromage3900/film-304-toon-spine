@@ -66,7 +66,7 @@ def load_spec():
 
 def owned_labels(spec):
     """Every actor label this script owns, so re-run cleanup stays scoped."""
-    labels = {"LGT_Sun", "LGT_Sky", "LGT_Fill"}
+    labels = {"LGT_Sun", "LGT_Sky", "LGT_Fill", "LGT_PPV", "Sky"}
     for piece in spec["scene"]:
         labels.add(piece["object"])
     for shot in spec["shots"]:
@@ -202,6 +202,41 @@ def build():
             fc.set_mobility(unreal.ComponentMobility.STATIC)
         except Exception as e:                          # noqa: BLE001
             log("WARN fill intensity: %s" % e)
+
+    # 2026-10-08 v02 fix (the white-wash/black-split of the -game stills):
+    # the SLS_CapturedScene Skylight had NO sky content to capture (no
+    # SkyAtmosphere in this level) -> zero ambient, and fixed project
+    # exposure (r.DefaultFeature.AutoExposure=False) blew sun-lit faces
+    # white at sun 5.0 while shadows went black. The spec now carries
+    # atmosphere:true (spawned by spawn_lights above); seal it in: re-
+    # capture the skylight AFTER the atmosphere exists, and give the bay
+    # an unbounded PPV so the exposure law lives in the level.
+    try:
+        for a in unreal.EditorLevelLibrary.get_all_level_actors():
+            if a.get_actor_label() == "LGT_Sky":
+                skc = a.get_component_by_class(unreal.SkyLightComponent)
+                skc.set_intensity(float(L.get("sky_intensity", 1.0)))
+                skc.call_method("recapture_sky")
+                log("skylight recaptured after atmosphere spawn")
+                break
+    except Exception as e:                              # noqa: BLE001
+        log("WARN skylight seal: %s" % e)
+    try:
+        ppv = None
+        for a in unreal.EditorLevelLibrary.get_all_level_actors():
+            if a.get_actor_label() == "LGT_PPV":
+                ppv = a
+                break
+        if ppv is None:
+            ppv = unreal.EditorLevelLibrary.spawn_actor_from_class(
+                unreal.PostProcessVolume,
+                unreal.Vector(0.0, 0.0, float(L.get("sky_height", 1000.0))),
+                unreal.Rotator(0.0, 0.0, 0.0))
+            ppv.set_actor_label("LGT_PPV")
+        ppv.set_editor_property("unbounded", True)
+        log("PPV unbounded (auto exposure law in level)")
+    except Exception as e:                              # noqa: BLE001
+        log("WARN PPV: %s" % e)
 
     actors = {}
     meshes = {}

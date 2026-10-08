@@ -61,11 +61,11 @@
       "sun_height": 2600,
       "sky": true,
       "sky_height": 3200,
-      "atmosphere": false,
+      "atmosphere": true,
       "fill_light": true,
       "fill_intensity": 1.6,
       "fill_rotation": [-25.0, -105.0, 0.0],
-      "lighting_note": "Open-top studio cube. The key light comes FROM the camera side so the visible wall/cubicle/desk faces catch direct sun (the first staged render, 2026-10-08, was black - the key was aimed at the wall's back). The fill is a second directional against the key, and the troffers are the interior emitters."
+      "lighting_note": "Open-top studio cube. The key light comes FROM the camera side so the visible wall/cubicle/desk faces catch direct sun (the first staged render, 2026-10-08, was black - the key was aimed at the wall's back). The fill is a second directional against the key, and the troffers are the interior emitters. 2026-10-08 v02 fix: the SLS_CapturedScene Skylight captured a BLACK VOID (no sky content to capture) -> zero ambient under sun-lit faces; with the project's fixed exposure (r.DefaultFeature.AutoExposure=False) sun 5.0 blew the lit faces white while shadows went black. atmosphere:true gives the capture real sky; the builder re-captures after the atmosphere exists and adds an unbounded PPV so the exposure law lives in the level."
     }
   },
 

@@ -1,0 +1,98 @@
+{
+  "errors": [],
+  "jobs": [
+    {
+      "job": "CTRL_ABC",
+      "out_dir": "controls",
+      "stem": "CTRL_ABC_20261008",
+      "level": "L_CTRL_ABC_Diag",
+      "sequence": "/Game/Sequences/ProtoDiag/LS_R_CTRL",
+      "config": "/Game/MoviePipelines/CFG_CTRL_ABC_20261008",
+      "command": "\"C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-Cmd.exe\" \"D:\\film-304-toon-spine\\HumberToonShader.uproject\" L_CTRL_ABC_Diag -game -LevelSequence=\"/Game/Sequences/ProtoDiag/LS_R_CTRL.LS_R_CTRL\" -MoviePipelineConfig=\"/Game/MoviePipelines/CFG_CTRL_ABC_20261008.CFG_CTRL_ABC_20261008\" -windowed -log -unattended"
+    },
+    {
+      "job": "SH020",
+      "out_dir": "Saved/Renders/office_stage",
+      "stem": "OS_SH020_proto_v02",
+      "level": "L_Toon_Shot_Office",
+      "sequence": "/Game/Sequences/ProtoDiag/LS_R_SH020",
+      "config": "/Game/MoviePipelines/CFG_OS_SH020_proto_v02",
+      "command": "\"C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-Cmd.exe\" \"D:\\film-304-toon-spine\\HumberToonShader.uproject\" L_Toon_Shot_Office -game -LevelSequence=\"/Game/Sequences/ProtoDiag/LS_R_SH020.LS_R_SH020\" -MoviePipelineConfig=\"/Game/MoviePipelines/CFG_OS_SH020_proto_v02.CFG_OS_SH020_proto_v02\" -windowed -log -unattended"
+    },
+    {
+      "job": "SH030",
+      "out_dir": "Saved/Renders/office_stage",
+      "stem": "OS_SH030_proto_v02",
+      "level": "L_Toon_Shot_Office",
+      "sequence": "/Game/Sequences/ProtoDiag/LS_R_SH030",
+      "config": "/Game/MoviePipelines/CFG_OS_SH030_proto_v02",
+      "command": "\"C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-Cmd.exe\" \"D:\\film-304-toon-spine\\HumberToonShader.uproject\" L_Toon_Shot_Office -game -LevelSequence=\"/Game/Sequences/ProtoDiag/LS_R_SH030.LS_R_SH030\" -MoviePipelineConfig=\"/Game/MoviePipelines/CFG_OS_SH030_proto_v02.CFG_OS_SH030_proto_v02\" -windowed -log -unattended"
+    },
+    {
+      "job": "SH040",
+      "out_dir": "Saved/Renders/office_stage",
+      "stem": "OS_SH040_proto_v02",
+      "level": "L_Toon_Shot_Office",
+      "sequence": "/Game/Sequences/ProtoDiag/LS_R_SH040",
+      "config": "/Game/MoviePipelines/CFG_OS_SH040_proto_v02",
+      "command": "\"C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-Cmd.exe\" \"D:\\film-304-toon-spine\\HumberToonShader.uproject\" L_Toon_Shot_Office -game -LevelSequence=\"/Game/Sequences/ProtoDiag/LS_R_SH040.LS_R_SH040\" -MoviePipelineConfig=\"/Game/MoviePipelines/CFG_OS_SH040_proto_v02.CFG_OS_SH040_proto_v02\" -windowed -log -unattended"
+    },
+    {
+      "job": "SH050",
+      "out_dir": "Saved/Renders/office_stage",
+      "stem": "OS_SH050_proto_v02",
+      "level": "L_Toon_Shot_Office",
+      "sequence": "/Game/Sequences/ProtoDiag/LS_R_SH050",
+      "config": "/Game/MoviePipelines/CFG_OS_SH050_proto_v02",
+      "command": "\"C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-Cmd.exe\" \"D:\\film-304-toon-spine\\HumberToonShader.uproject\" L_Toon_Shot_Office -game -LevelSequence=\"/Game/Sequences/ProtoDiag/LS_R_SH050.LS_R_SH050\" -MoviePipelineConfig=\"/Game/MoviePipelines/CFG_OS_SH050_proto_v02.CFG_OS_SH050_proto_v02\" -windowed -log -unattended"
+    },
+    {
+      "job": "SH060",
+      "out_dir": "Saved/Renders/office_stage",
+      "stem": "OS_SH060_proto_v02",
+      "level": "L_Toon_Shot_Office",
+      "sequence": "/Game/Sequences/ProtoDiag/LS_R_SH060",
+      "config": "/Game/MoviePipelines/CFG_OS_SH060_proto_v02",
+      "command": "\"C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-Cmd.exe\" \"D:\\film-304-toon-spine\\HumberToonShader.uproject\" L_Toon_Shot_Office -game -LevelSequence=\"/Game/Sequences/ProtoDiag/LS_R_SH060.LS_R_SH060\" -MoviePipelineConfig=\"/Game/MoviePipelines/CFG_OS_SH060_proto_v02.CFG_OS_SH060_proto_v02\" -windowed -log -unattended"
+    },
+    {
+      "job": "SH010",
+      "out_dir": "Saved/Renders/prototypes",
+      "stem": "COMP_SH010_proto_v02",
+      "level": "L_Toon_Shot_Env",
+      "sequence": "/Game/Sequences/ProtoDiag/LS_R_SH010",
+      "config": "/Game/MoviePipelines/CFG_COMP_SH010_proto_v02",
+      "command": "\"C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-Cmd.exe\" \"D:\\film-304-toon-spine\\HumberToonShader.uproject\" L_Toon_Shot_Env -game -LevelSequence=\"/Game/Sequences/ProtoDiag/LS_R_SH010.LS_R_SH010\" -MoviePipelineConfig=\"/Game/MoviePipelines/CFG_COMP_SH010_proto_v02.CFG_COMP_SH010_proto_v02\" -windowed -log -unattended"
+    },
+    {
+      "job": "SH020",
+      "out_dir": "Saved/Renders/prototypes",
+      "stem": "COMP_SH020_proto_v02",
+      "level": "L_Toon_Shot_Env",
+      "sequence": "/Game/Sequences/ProtoDiag/LS_R_SH020",
+      "config": "/Game/MoviePipelines/CFG_COMP_SH020_proto_v02",
+      "command": "\"C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-Cmd.exe\" \"D:\\film-304-toon-spine\\HumberToonShader.uproject\" L_Toon_Shot_Env -game -LevelSequence=\"/Game/Sequences/ProtoDiag/LS_R_SH020.LS_R_SH020\" -MoviePipelineConfig=\"/Game/MoviePipelines/CFG_COMP_SH020_proto_v02.CFG_COMP_SH020_proto_v02\" -windowed -log -unattended"
+    },
+    {
+      "job": "SH030",
+      "out_dir": "Saved/Renders/prototypes",
+      "stem": "COMP_SH030_proto_v02",
+      "level": "L_Toon_Shot_Env",
+      "sequence": "/Game/Sequences/ProtoDiag/LS_R_SH030",
+      "config": "/Game/MoviePipelines/CFG_COMP_SH030_proto_v02",
+      "command": "\"C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-Cmd.exe\" \"D:\\film-304-toon-spine\\HumberToonShader.uproject\" L_Toon_Shot_Env -game -LevelSequence=\"/Game/Sequences/ProtoDiag/LS_R_SH030.LS_R_SH030\" -MoviePipelineConfig=\"/Game/MoviePipelines/CFG_COMP_SH030_proto_v02.CFG_COMP_SH030_proto_v02\" -windowed -log -unattended"
+    },
+    {
+      "job": "SH070",
+      "out_dir": "Saved/Renders/prototypes",
+      "stem": "COMP_SH070_proto_v02",
+      "level": "L_Toon_Shot_Env",
+      "sequence": "/Game/Sequences/ProtoDiag/LS_R_SH070",
+      "config": "/Game/MoviePipelines/CFG_COMP_SH070_proto_v02",
+      "command": "\"C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-Cmd.exe\" \"D:\\film-304-toon-spine\\HumberToonShader.uproject\" L_Toon_Shot_Env -game -LevelSequence=\"/Game/Sequences/ProtoDiag/LS_R_SH070.LS_R_SH070\" -MoviePipelineConfig=\"/Game/MoviePipelines/CFG_COMP_SH070_proto_v02.CFG_COMP_SH070_proto_v02\" -windowed -log -unattended"
+    }
+  ],
+  "ctrl_level": "/Game/Maps/L_CTRL_ABC_Diag",
+  "ctrl_level_saved": true,
+  "ok": true
+}
