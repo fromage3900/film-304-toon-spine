@@ -148,7 +148,14 @@ def spawn_lights(sun_rotation=(0.0, 0.0, 0.0), sun_height=4000.0,
     try:
         c = d.get_component_by_class(unreal.DirectionalLightComponent)
         c.set_intensity(float(sun_intensity))
-        if light_mobility == "static":
+        if light_mobility == "movable":
+            # 2026-10-08: EXPLICIT MOVABLE, not just 'skip the static dance'.
+            # Spawned lights default to STATIONARY; a stationary sun still
+            # leans on built-shadow data for static geometry, which unbaked
+            # levels do not have (the black-render class). A movable sun
+            # evaluates per-pixel everywhere, including cooked builds.
+            c.set_mobility(unreal.ComponentMobility.MOVABLE)
+        elif light_mobility == "static":
             c.set_mobility(unreal.ComponentMobility.MOVABLE)
             c.set_mobility(unreal.ComponentMobility.STATIC)
     except Exception:                                              # noqa: BLE001

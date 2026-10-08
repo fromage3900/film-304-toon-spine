@@ -1,0 +1,6 @@
+{
+  "errors": [],
+  "ok": true,
+  "config": "/Game/MoviePipelines/CFG_OS_EBisect_GIoff",
+  "command": "\"C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-Cmd.exe\" \"D:\\film-304-toon-spine\\HumberToonShader.uproject\" L_Toon_Shot_Office -game -LevelSequence=\"/Game/Sequences/ProtoDiag/LS_R_EBisect.LS_R_EBisect\" -MoviePipelineConfig=\"/Game/MoviePipelines/CFG_OS_EBisect_GIoff.CFG_OS_EBisect_GIoff\" -windowed -unattended"
+}

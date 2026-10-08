@@ -43,6 +43,20 @@ another PC).
    re-run the spec's minimum-pass read on it first thing tomorrow.
    NOTE: `compose_shot_env_level.py` and the other lanes using
    `level_lib.spawn_mesh` inherit the fix on their next re-stage.
+3. **The evening falsifier matrix (all fired, all evidence on disk):**
+   | falsifier | result |
+   |---|---|
+   | `office_freshmi_bisect.py` -- fresh MI straight from the master vs staged MI vs staged VCT, same bay (`OS_EBisect_freshMI_v01.png`) | fresh == staged: the instance .uassets are NOT the defect; all Substrate surfaces shade AMBIENT-only, direct sun absent |
+   | `office_keydir_test.py` -- KeyLightDir flipped +Y/-Y on fresh instances (`OS_EBisect_keydir_v01.png`) | NO visible change -- the hand-set toon key is not the lever |
+   | `office_gioff_falsifier.py` -- the same frame with GI off via MoviePipelineConsoleVariableSetting (`OS_EBisect_GIoff.png`) | essentially unchanged -- the tier's intended `lumen_gi: false` would not change the black class |
+   | `_piecefix_progress.txt` render | still black -- piece-mobility alone did not revive direct light |
+   | **the one divergence found** | inside the office level, direct sun reaches exactly ONE surface: the carpet patch's top strip (also visible lit in both bisects). Everything else in the same frame shades ambient-only |
+   | **movable-sun falsifier (fired at close, `_movablesun_progress.txt`)** | `level_lib.spawn_lights` now sets the sun EXPLICITLY MOVABLE (stationary spawn defaults lean on built-shadow data the unbaked levels do not have); the office re-staged + re-rendered -- READ THE PNG FIRST THING |
+4. **The render harness is truly headless** (`build_render_queue.py` +
+   the recorded `-game` commands; see the morning half of this doc), the
+   **Toon shader path works** (control A/B/C: direct Toon BSDF + TP_Default
+   = red + banded), and **materials are not the defect** (probe + asset
+   bisect).
 3. **The render harness is now truly headless and re-runnable.** The editor's
    `-ExecutePythonScript` closes the editor ~0.4 s after the script returns
    (measured 3×: `Cmd: QUIT_EDITOR`), so a post-tick/caller-poll pattern
@@ -80,12 +94,12 @@ another PC).
 
 | # | Work order | First concrete step | Done when |
 |---|---|---|---|
-| 1 | **Verify tonight's mobility fix** (render of SH020 fired at close; see `_mobilityfix_progress.txt` + the refreshed judge file) | inspect `OS_SH020_proto_v02.png`: bands + grout + shadows present? | office stills carry the stage spec's minimum passes (VCT grout + bands, paper matte grain, polypropylene hatch, troffer emissive) |
-| 2 | **Policy the same fix into the other lanes rendered black**: `L_Toon_Shot_Env` (compose_shot_env_level.py uses level_lib.spawn_lights) + lookdev levels; re-stage + re-render | loop `Saved/Audit/render_queue_report.json` `jobs[].command` | Brutalist exterior reads VALUE, not black; the shot list is presentation-ready |
-| 3 | **Cleanup of bisect artifacts in `L_Toon_Shot_Office`** (leave-or-remove decision, owner): EB_Env/EB_Paper/EB_Poly cubes + EB_Cam (the asset-bisect actors), `LS_R_EBisect` + `CFG_OS_EBisect_v01` | delete the labels + re-run `build_shot_stage.py` | the staged level record is clean |
-| 4 | **Control A/B/C rebuild** — cube A (legacy lit red) rendered BLACK in the control; it was authored inside a re-entrant storm. Keep the matrix honest | delete + rebuild `M_CTRL_Lit_Red` via `build_render_queue.py::build_ctrl_materials`, re-fire the `CTRL_ABC` job | A red, B documented (no-profile state), C red |
-| 5 | **Package** once #1–#2 are green | `RunUAT.bat BuildCookRun -project=<proj> -platform=Win64 -clientconfig=Development -cook -allmaps -pak -archivedirectory=<dist>` | a Windows build opening `GameDefaultMap=/Game/Maps/L_Toon_Shot_Env` |
-| 6 | **Laptop driver upgrade** — worth it for laptop-side lookdev, NOT the black-render cure | see `Docs/LAPTOP_DRIVER_FIX_2026-10-08.md` (R580 = last Pascal line) | laptop passes the control matrix |
+| 1 | **Read the movable-sun falsifier PNG** (`Saved/Renders/office_stage/OS_EBisect_freshMI_v01.png`, re-fired after the movable-sun re-stage; chain `_movablesun_progress.txt`) | open the PNG: do the fresh/staged cubes + floor + walls now receive direct light (bands + cast shadows)? | office surfaces carry the stage spec's minimum passes: VCT grout + bands, paper matte grain, polypropylene hatch, troffer emissive |
+| 2 | **If #1 is still black**, the next two levers, in order: (a) `cast_static_shadows=False` on sun/fill via the builder (static shadows need built data the level does not have); (b) re-stage with the TEMPLATE-level trick that demonstrably lit all day: create the office bay from `EditorLevelLibrary.new_level` (Open-World template default environment, the proven-lit spawn path) instead of `LevelEditorSubsystem.new_level` | one falsifier render per lever, same EBisect rig | the lever that restores direct light is named |
+| 3 | **Full batch** once #1/#2 go green: re-stage ENV + lookdev lanes with the same light fixes, then loop `Saved/Audit/render_queue_report.json` `jobs[].command` | per the morning half of this doc | every staged still passes the spec reads; the deck is presentation-ready |
+| 4 | **Cleanup of bisect artifacts in `L_Toon_Shot_Office`** (owner decision): EB_FRESHMI/EB_STAGEDENV/EB_STAGEDVCT/EB_KEY_A/EB_KEY_B/EB_Env/EB_Paper/EB_Poly cubes + EB_Cam + `LS_R_EBisect` + the EB CFGs | delete the labels, then re-run `build_shot_stage.py` | the staged level record is clean |
+| 5 | **Package** once reads are green | `RunUAT.bat BuildCookRun -project=<proj> -platform=Win64 -clientconfig=Development -cook -allmaps -pak -archivedirectory=<dist>` | a Windows build opening `GameDefaultMap=/Game/Maps/L_Toon_Shot_Env` |
+| 6 | **Laptop driver upgrade** — laptop-side lookdev only, NOT a black-render cure | see `Docs/LAPTOP_DRIVER_FIX_2026-10-08.md` | laptop passes the control matrix |
 
 ## Git state at close (portable git: `D:\_PortableTools\MinGit\cmd\git.exe`)
 

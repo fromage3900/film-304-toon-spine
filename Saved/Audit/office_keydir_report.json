@@ -1,0 +1,15 @@
+{
+  "errors": [],
+  "cube": [
+    {
+      "label": "EB_KEY_A",
+      "material": "/Game/Materials/Controls_Diag/MI_KEYDIR_A"
+    },
+    {
+      "label": "EB_KEY_B",
+      "material": "/Game/Materials/Controls_Diag/MI_KEYDIR_B"
+    }
+  ],
+  "ok": true,
+  "command": "\"C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-Cmd.exe\" \"D:\\film-304-toon-spine\\HumberToonShader.uproject\" L_Toon_Shot_Office -game -LevelSequence=\"/Game/Sequences/ProtoDiag/LS_R_EBisect.LS_R_EBisect\" -MoviePipelineConfig=\"/Game/MoviePipelines/CFG_OS_EBisect_keydir_v01.CFG_OS_EBisect_keydir_v01\" -windowed -unattended"
+}

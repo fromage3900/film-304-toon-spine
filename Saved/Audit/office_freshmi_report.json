@@ -1,0 +1,19 @@
+{
+  "errors": [],
+  "cube": [
+    {
+      "label": "EB_FRESHMI",
+      "material": "/Game/Materials/Controls_Diag/MI_EBisect_Fresh.MI_EBisect_Fr"
+    },
+    {
+      "label": "EB_STAGEDENV",
+      "material": "/Game/Materials/Instances/MI_Toon_Environment.MI_Toon_Enviro"
+    },
+    {
+      "label": "EB_STAGEDVCT",
+      "material": "/Game/Materials/Instances/MI_OfficeSpider_VCTFloor.MI_Office"
+    }
+  ],
+  "ok": true,
+  "command": "\"C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-Cmd.exe\" \"D:\\film-304-toon-spine\\HumberToonShader.uproject\" L_Toon_Shot_Office -game -LevelSequence=\"/Game/Sequences/ProtoDiag/LS_R_EBisect.LS_R_EBisect\" -MoviePipelineConfig=\"/Game/MoviePipelines/CFG_OS_EBisect_freshMI_v01.CFG_OS_EBisect_freshMI_v01\" -windowed -unattended"
+}
