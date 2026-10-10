@@ -567,7 +567,7 @@ def compose_sheet(tile_paths, out_path, cols, gap=6):
         w, h = img.size
         buf = np.empty(w * h * 4, dtype=np.float32)
         img.pixels.foreach_get(buf)
-        a = buf.reshape(h, w, 4)
+        a = buf.reshape((h, w, 4))
         # nearest-fit crop into the tile box (rows are bottom-up in Blender)
         if h > TILE_H:
             a = a[(h - TILE_H) // 2:(h - TILE_H) // 2 + TILE_H, :]

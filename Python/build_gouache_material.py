@@ -312,9 +312,8 @@ def build(rebuild=True) -> dict:
     L = types.SimpleNamespace(
         **{k: getattr(lib, k) for k in dir(lib) if not k.startswith("__")})
     wiring.install(L)
-    L.unary = wiring.unary
-    L.binary = wiring.binary
-    L.ternary = wiring.ternary
+    for name in ("unary", "binary", "ternary"):
+        setattr(L, name, getattr(wiring, name))
     report["wiring_helper"] = "checked unary/binary/ternary via Wiring"
 
     resolved = resolve_enums()

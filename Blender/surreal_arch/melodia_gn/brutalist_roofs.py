@@ -63,9 +63,10 @@ def _higg(tree, name, x, y, geometry_in=None, inputs=None, fallback_type=None):
             try:
                 src = out_name(geometry_in, 'Geometry', 'Mesh') \
                     if not isinstance(geometry_in, str) else geometry_in
-                L(tree, src, node, 'Geometry')
+                L(tree, src, 'Geometry', node, 'Geometry')
             except Exception:
                 pass
+        return node
 def _style_is(tree, x, y, n, style_socket):
     """Boolean socket: True when Roof Style == n.
 

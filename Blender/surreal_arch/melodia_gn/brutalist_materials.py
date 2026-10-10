@@ -280,6 +280,7 @@ def build_brutalist_material(surface, look="PBR"):
     # flat authored default stands. Komikaze mixes ink over THIS, not over a re-typed
     # colour literal, so the two looks cannot drift in their base tone.
     base = None
+    bump = None
     if surface in BOARD_FORM:
         bump, base = _board_form(nt, colour)
     elif surface in VEINED:
