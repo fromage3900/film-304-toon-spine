@@ -58,6 +58,11 @@
 *.ztl        filter=lfs diff=lfs merge=lfs -text
 *.spp        filter=lfs diff=lfs merge=lfs -text
 
+# Dana's imported skeletal mesh and animation exceed the 5 MB package gate.
+# Keep this exception exact so ordinary Unreal packages remain plain Git blobs.
+/Content/Meshes/Office/Props/C_DanaRenderTest_OSC.uasset      filter=lfs diff=lfs merge=lfs -text
+/Content/Meshes/Office/Props/C_DanaRenderTest_OSC_Anim.uasset filter=lfs diff=lfs merge=lfs -text
+
 # ------------------------------------------------------------- generated files
 # These are regenerated from the Python builders; a merge conflict in them is
 # meaningless, so never attempt one.
