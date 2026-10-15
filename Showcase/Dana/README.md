@@ -19,8 +19,3 @@ These are static material and lighting previews. Dana is in the source T-pose. T
 
 The two comparison maps use **Ultra Dynamic Sky**, which must be installed separately by a licensed user at `/Game/UltraDynamicSky`. Vendor content is not included in this commit. The PNGs can be reviewed without UDS.
 
-## FBX handoff
-
-The original imported skeletal mesh remains `/Game/Meshes/Office/Props/C_DanaRenderTest_OSC`. A read-only FBX audit found 37 mesh geometries: 14 intended render meshes (37,822 triangles) and 23 helper or alternate meshes (274,731 triangles). A filtered FBX trial still produced multiple-root and zero-scale-control import errors. A further pruned trial imported only 11,298 triangles of weighted clothing; neither trial replaced the production mesh. The body has zero skin clusters in the source FBX. The next rig step is to bind and export the body from Dana's Maya source, then verify deformation in Unreal.
-
-The asset authoring and capture entry points are `Python/build_dana_refined_uds.py` and `Python/render_dana_in_editor.py`. The read-only FBX tools and guarded Maya exporter are in `Tools/`. The three stills were rendered again with a successful private Unreal render queue; no camera edits were made for this package.
