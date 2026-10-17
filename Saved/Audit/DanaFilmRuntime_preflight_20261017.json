@@ -1,0 +1,27 @@
+{
+  "candidate": "Dana_CleanSkin_v08",
+  "candidate_sha256": "BB995BAFA312E2E351538DB84E3EBDC002715179AD5ED848E7F63841B51C31F9",
+  "hash_matches": true,
+  "import_path": "/Game/Staging/DanaFilmRuntime_20261016/Dana_CleanSkin_v08",
+  "mesh_loaded": true,
+  "morph_targets": [
+    "Blink_L",
+    "Blink_R"
+  ],
+  "material_slots_assigned": 10,
+  "skeleton_target_bones_present": [
+    "Root_M",
+    "Spine1_M",
+    "Chest_M",
+    "Head_M",
+    "Shoulder_L",
+    "Elbow_L",
+    "Wrist_L",
+    "Hip_L",
+    "Knee_L",
+    "Ankle_L"
+  ],
+  "deformation_checks": "pending_manual",
+  "retarget_status": "pending_manual",
+  "notes": "Morph targets imported via InterchangeMeshUtilities.scripted_import_morph_target. Materials assigned to DanaFilm instances; pants slot temporarily uses MI_DanaFilm_Skirt."
+}
