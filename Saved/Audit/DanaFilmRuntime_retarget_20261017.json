@@ -1,0 +1,11 @@
+{
+  "retarget_asset": "/Game/Retarget/IKRetargeter_SparrowToDana",
+  "source_anim": "/Game/ParagonSparrow/Characters/Heroes/Sparrow/Animations/Jog_Fwd",
+  "target_anim": "/Game/Staging/DanaFilmRuntime_20261016/Animations/Jog_Fwd_Retargeted",
+  "target_skeleton": "/Game/Staging/DanaFilmRuntime_20261016/Dana_CleanSkin_v08_Skeleton",
+  "length_seconds": 2.133333444595337,
+  "num_frames": 63,
+  "status": "retargeted",
+  "deformation_checks": "pending_manual",
+  "notes": "IK Rigs created with auto-generated retarget definition and auto-mapped chains. Batch retarget succeeded. Visual deformation checks still required."
+}
