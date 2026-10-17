@@ -1,0 +1,31 @@
+{
+  "shot_id": "SH010",
+  "production": "OfficeSpider",
+  "act": "I",
+  "preset": "CFG_OS_SH010_proto_v01",
+  "status": "proto",
+  "candidate": {
+    "name": "Dana_CleanSkin_v08",
+    "sha256": "bb995bafa312e2e351538db84e3ebdc002715179ad5ed848e7f63841b51c31f9"
+  },
+  "meshes_present": 19,
+  "morph_channels": ["Blink_L", "Blink_R"],
+  "retarget_clip": "/Game/.../Dana_Jog_Fwd",
+  "floor_contact_cm": 0.0,
+  "exposure_ok": false,
+  "checks": {
+    "no_tpose_fallback": false,
+    "no_body_or_lash_loss": false,
+    "no_sliding": false,
+    "no_clipping": false,
+    "outlines_present": false,
+    "no_pink_shaders": false,
+    "post_composite_applied": false,
+    "mrq_preset_used": false
+  },
+  "rendered_frame": "Saved/Audit/OS_SH010_proto_v01.exr",
+  "failure_log": "Saved/Audit/OS_SH010_proto_v01_failure.json",
+  "reviewer": "",
+  "date": "",
+  "notes": ""
+}
