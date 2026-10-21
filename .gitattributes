@@ -68,3 +68,9 @@
 # meaningless, so never attempt one.
 /Content/__ExternalActors__/  linguist-generated=true
 /Content/__ExternalObjects__/ linguist-generated=true
+
+# ------------------------------------------------------- Houdini (LFS)
+*.hip       filter=lfs diff=lfs merge=lfs -text
+*.hda       filter=lfs diff=lfs merge=lfs -text
+*.bgeo      filter=lfs diff=lfs merge=lfs -text
+*.bgeo.sc   filter=lfs diff=lfs merge=lfs -text

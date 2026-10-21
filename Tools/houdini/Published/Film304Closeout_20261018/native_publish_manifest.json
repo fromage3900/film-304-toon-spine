@@ -1,0 +1,133 @@
+{
+  "root": "G:\\film-304-toon-spine\\Tools\\houdini\\Published\\Film304Closeout_20261018",
+  "deliverables": [
+    "Ceiling (HVAC grid + metal/tiles)",
+    "ContinuousHorizon",
+    "FacadeGlow",
+    "MeasuredFloor",
+    "MainOfficeFit_v05",
+    "WindowLightRig"
+  ],
+  "files": [
+    {
+      "path": "Ceiling/OfficeCeiling_Final_v03.hip",
+      "bytes": 70068,
+      "sha256": "09520710a5d1a454a41ccf00064a731249ecebb20a1484a377aed6148b01d3fc"
+    },
+    {
+      "path": "Ceiling/exports/SM_Houdini_Office_Ceiling_Metal.fbx",
+      "bytes": 24320,
+      "sha256": "81a89f1513e5bcf5dfe199b77b3a1e4604ca65e3c6db0d91d6e37414a0b41451"
+    },
+    {
+      "path": "Ceiling/exports/SM_Houdini_Office_Ceiling_Tiles.fbx",
+      "bytes": 44512,
+      "sha256": "75d8cef8fd726fbb05ed347d3acdc77472f767b1f04fdb8118a5ca480734c873"
+    },
+    {
+      "path": "Ceiling/geometry/CeilMetal.bgeo.sc",
+      "bytes": 10489,
+      "sha256": "a8648eb801e0b4a744d5e00226c126e60fe998587a79eb44234a0dc7e342899d"
+    },
+    {
+      "path": "Ceiling/geometry/CeilTiles.bgeo.sc",
+      "bytes": 28354,
+      "sha256": "531257c6f7c066135a706d1a288058a16753c5aeb12273f3543fbaad32cc54c8"
+    },
+    {
+      "path": "ContinuousHorizon/Film304_ContinuousHorizon_v01.hda",
+      "bytes": 3062,
+      "sha256": "5f1ebf287089bb96fb5d069a63b8a2cb220401beae39ac9523f8d972efbc0e93"
+    },
+    {
+      "path": "ContinuousHorizon/Film304_ContinuousHorizon_v01.hip",
+      "bytes": 40370,
+      "sha256": "e91c5cf884ce326049d2308e45825fa10446bc1c9eccf48a87354b80aad2e432"
+    },
+    {
+      "path": "ContinuousHorizon/native_continuous_horizon_proof.json",
+      "bytes": 510,
+      "sha256": "54732436f14bd4a378cc4b4e2015f740d4cc0f5ee4fe3017df8893b1e265c892"
+    },
+    {
+      "path": "FacadeGlow/Film304_FacadeGlow_v01.hda",
+      "bytes": 17037,
+      "sha256": "6c55f2a78025e4a2324d85178241b7097c49f17d9863ffd4be4600d51625f14c"
+    },
+    {
+      "path": "FacadeGlow/Film304_FacadeGlow_v01.hip",
+      "bytes": 122758,
+      "sha256": "45ad054e9bd1ad3ad9fed0e28425f3f1d29d68c2657323b098d2a5de5fe9af29"
+    },
+    {
+      "path": "FacadeGlow/facade_raycasts.json",
+      "bytes": 123954,
+      "sha256": "ea17bd25519a1acee06542ecfe1fe57d376a60b26c8c7ac951553a00c7ed00d3"
+    },
+    {
+      "path": "Floor/Film304_MeasuredFloor_v01.hda",
+      "bytes": 2469,
+      "sha256": "e3e393a621abbabf8079a242fc6b544c12c8076601d4952089ed2168cdeb2632"
+    },
+    {
+      "path": "Floor/Film304_MeasuredFloor_v01.hip",
+      "bytes": 39079,
+      "sha256": "43a86023964e48888dd6c6bcce8ae76ef93c860be35982ff25bc6f4705066218"
+    },
+    {
+      "path": "Floor/native_floor_proof.json",
+      "bytes": 298,
+      "sha256": "d2c282bdc85aaa03f9767fb4cd1fec3355f309e851b2a88ec6ecd63541747084"
+    },
+    {
+      "path": "MainOfficeFit_v05/MainOffice_CeilingFit_v05.hip",
+      "bytes": 70561,
+      "sha256": "3153afa5c2323cbfdf85b9a6eb962f550af7422ef478c8dd9345994e20b17ce9"
+    },
+    {
+      "path": "MainOfficeFit_v05/Metal.bgeo.sc",
+      "bytes": 10366,
+      "sha256": "b2806c4aae161564d579b332e2299925e3b333dd2b6a94e01c7ad53968df749e"
+    },
+    {
+      "path": "MainOfficeFit_v05/Metal.fbx",
+      "bytes": 56433,
+      "sha256": "dd9c109296cbc57a906a59d9eaa254ddc16a3992391d089a8ff63ce4ad5193e5"
+    },
+    {
+      "path": "MainOfficeFit_v05/Metal_UE_Target.bgeo.sc",
+      "bytes": 10454,
+      "sha256": "a5e2352ca8b4fd08882e7b286de45a50c05f4827fcafbf8703ab5c8ce120fbca"
+    },
+    {
+      "path": "MainOfficeFit_v05/Tiles.bgeo.sc",
+      "bytes": 13336,
+      "sha256": "1eb4d35219fdaf805f1995d2bb4238f25f0c23bc918205e52e4169776318f2ec"
+    },
+    {
+      "path": "MainOfficeFit_v05/Tiles.fbx",
+      "bytes": 82218,
+      "sha256": "1d6b49556a05d60acc5d462b9506af84029de6869eb3ee166a1645708e436600"
+    },
+    {
+      "path": "MainOfficeFit_v05/Tiles_UE_Target.bgeo.sc",
+      "bytes": 13304,
+      "sha256": "b012931fef70bbbdb37fa5c9871ea9a0d4983495b13fee9213fbd8e48f5d201c"
+    },
+    {
+      "path": "MainOfficeFit_v05/main_room_fit.json",
+      "bytes": 1703,
+      "sha256": "67cec88f50f35bf40ea518a7b36911006a02f73174f65930e0e178526a7f055d"
+    },
+    {
+      "path": "WindowRig/Film304_WindowLightRig_v01.hda",
+      "bytes": 6068,
+      "sha256": "c8697b303a2a79dea9b64dcc0351639e88c6d19f97863cc7962bfd2eecfdc0bb"
+    },
+    {
+      "path": "WindowRig/Film304_WindowLightRig_v01.hip",
+      "bytes": 40706,
+      "sha256": "de846824756436083f696cff0cdc5aa73511a734ee89a72bf9d10d96d0870c4d"
+    }
+  ]
+}
