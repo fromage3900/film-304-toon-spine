@@ -32,6 +32,28 @@ The script marks every edge as a seam before unwrapping so that no face collapse
 zero-area UV island (the UVPM engine rejects those). UV Packmaster then packs the
 resulting islands into the 0-1 space.
 
+
+## Headless limitation (verified 2026-10-21)
+
+UV Packmaster 3.4.4's engine process returns FATAL_ERROR in Blender
+--background mode even on a trivial cube with CPU-only device selection.
+The addon reports Engine: 3.4.4 PRO and engine_initialized = True, and topology
+analysis completes to 100%, but the engine subprocess exits with code 1 before
+producing a packed result.
+
+**The same operation succeeds in Blender's GUI.** Run the pack step without
+--background (or from the Scripting editor) to complete UV packing:
+
+`
+"C:\Program Files\Blender Foundation\Blender 5.2\blender.exe" \
+  --python Tools/blender/pack_uv_with_uvpm.py -- \
+  --input  path/in.fbx \
+  --output path/out.fbx
+`
+
+The headless script remains useful for CI/import validation and for meshes that
+already carry acceptable UVs; UV Packmaster packing itself requires a GUI session.
+
 ## 3. Known limit
 
 UV Packmaster's engine returns a fatal error when a single mesh contains more than
@@ -47,3 +69,4 @@ python Tools/verify_git_consistency.py
 
 Check the exported FBX opens in Blender with a non-empty UV layer and that the packed
 UVs lie inside 0-1.
+
