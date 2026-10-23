@@ -97,6 +97,12 @@ FLOAT_PARAMS = [
     # into the Toon closure; 0 disables emission entirely.
     ("EmissiveIntensity", "Emissive", 0.0,
      "Emission strength. 0 = unlit (default); raise for troffers/screens"),
+    ("EmissiveFresnelStrength", "Emissive", 0.0,
+     "How much Fresnel modulates emissive (0 = flat uniform, >0 shapes emission by viewing angle)"),
+    ("EmissiveFresnelPower", "Emissive", 2.0,
+     "Fresnel tightness exponent on emissive falloff"),
+    ("EmissiveFresnelInvert", "Emissive", 0.0,
+     "0 = diffuser rolloff (1 at normal, 0 at grazing); 1 = edge rim glow (0 at normal, 1 at grazing)"),
 ]
 
 # UTILITY PARAMS - Office Spider expansion, 2026-10-06.
@@ -884,8 +890,29 @@ def build(rebuild=True):
     lib.connect(emissive_mul, "", emissive_flick, ["A", "a"])
     lib.connect(flick_factor, "", emissive_flick, ["B", "b"])
 
-    emissive_total = lib.expr(mat, unreal.MaterialExpressionAdd, 900, 60)
-    lib.connect(emissive_flick, "", emissive_total, ["A", "a"])
+    # ---------------- Fresnel on Emissive ----------------
+    # Softens harsh emissive fixtures with angle-dependent falloff (diffuser rolloff
+    # or edge rim). Gated by EmissiveFresnelStrength = 0 (exact identity at default).
+    fresnel_e = lib.expr(mat, unreal.MaterialExpressionFresnel, 620, -120)
+    fres_pow = lib.expr(mat, unreal.MaterialExpressionPower, 760, -120)
+    lib.binary(fresnel_e, flt["EmissiveFresnelPower"], fres_pow)
+
+    fres_inv = lib.expr(mat, unreal.MaterialExpressionOneMinus, 900, -120)
+    lib.unary(fres_pow, fres_inv)
+
+    fres_choice = lib.expr(mat, unreal.MaterialExpressionLinearInterpolate, 1040, -120)
+    lib.ternary(fres_inv, fres_pow, flt["EmissiveFresnelInvert"], fres_choice)
+
+    fres_factor = lib.expr(mat, unreal.MaterialExpressionLinearInterpolate, 1180, -120)
+    lib.ternary(lib.scalar_const(mat, 1.0, 1180, -200), fres_choice,
+                flt["EmissiveFresnelStrength"], fres_factor)
+
+    emissive_shaped = lib.expr(mat, unreal.MaterialExpressionMultiply, 1320, 60)
+    lib.connect(emissive_flick, "", emissive_shaped, ["A", "a"])
+    lib.connect(fres_factor, "", emissive_shaped, ["B", "b"])
+
+    emissive_total = lib.expr(mat, unreal.MaterialExpressionAdd, 1460, 60)
+    lib.connect(emissive_shaped, "", emissive_total, ["A", "a"])
     lib.connect(rim_call, "RimEmissive", emissive_total, ["B", "b"])
 
     # space parallax -> ADDITIVE emissive (Melodia convergence 2026-10-06).

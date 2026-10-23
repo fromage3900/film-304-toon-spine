@@ -36,8 +36,12 @@ glass opacity only.
 """
 from __future__ import annotations
 
-import unreal
+import sys
+for p in ["g:/film-304-toon-spine/Python", "g:/film-304-toon-spine"]:
+    if p not in sys.path:
+        sys.path.insert(0, p)
 
+import unreal
 import spine_lib as lib
 
 NAME = "M_Master_Toon_Glass"
@@ -73,14 +77,16 @@ def build(rebuild=True):
                                    desc="Edge-of-silhouette glow colour"),
     }
     flt = {
-        "FresnelPower": lib.scalar(mat, "FresnelPower", "Surface", 4.0, -1400, 100,
+        "FresnelPower": lib.scalar(mat, "FresnelPower", "Surface", 2.2, -1400, 100,
                                    desc="Edge tightness (Power exponent)"),
-        "OpacityBase": lib.scalar(mat, "OpacityBase", "Surface", 0.30, -1400, 170,
+        "OpacityBase": lib.scalar(mat, "OpacityBase", "Surface", 0.06, -1400, 170,
                                   desc="Body opacity at the centre (0 = fully clear)"),
         "RampStrength": lib.scalar(mat, "RampStrength", "Ramp", 0.70, -1400, 240,
                                    desc="0 bypasses the ramp; >0 applies the profile"),
         "InkIntensity": lib.scalar(mat, "InkIntensity", "Ink", 0.10, -1400, 310),
-        "DryRoughness": lib.scalar(mat, "DryRoughness", "Surface", 0.08, -1400, 380),
+        "DryRoughness": lib.scalar(mat, "DryRoughness", "Surface", 0.02, -1400, 380),
+        "GlassSpecular": lib.scalar(mat, "GlassSpecular", "Surface", 1.0, -1400, 450,
+                                    desc="Glossy specular reflection intensity"),
     }
     pat = {}
     for pname, pdef, py in (("PatternScale", 14.0, 1300),
@@ -184,39 +190,20 @@ def build(rebuild=True):
     toon = lib.expr(mat, unreal.MaterialExpressionSubstrateToonBSDF, 500, 200)
     lib.connect(final_color, "", toon, ["BaseColor", "DiffuseColor"])
     lib.connect(flt["DryRoughness"], "", toon, ["Roughness"])
+    lib.connect(flt["GlassSpecular"], "", toon, ["Specular"])
     normal = lib.expr(mat, unreal.MaterialExpressionPixelNormalWS, 300, 420)
     lib.connect(normal, "", toon, ["Normal", "TangentNormal", "NormalMap"])
     lib.connect(edge_glow, "", toon, ["EmissiveColor"])
 
-    # --- opacity pin attempt (strict first, defined fallback second) --------
-    wired = False
-    try:
-        wired = lib.connect(opacity, "", toon, ["Opacity"])
-    except Exception as exc:
-        lib.log(f"WARN {NAME}: Opacity pin attempt raised {str(exc)[:120]}")
-        wired = False
-    if wired:
-        _opacity_path = "toon_opacity_pin"
-    else:
-        _opacity_path = "water_lerp_fallback"
-        lib.log(f"WARN {NAME}: SubstrateToonBSDF exposes no Opacity pin in "
-                f"this engine build - falling back to the water-lerp edge "
-                f"(BaseColor lerps toward FresnelColor by fres_pow); alpha "
-                f"term NOT wired. blend_mode stays BLEND_TRANSLUCENT.")
-        edge_lerp = lib.expr(mat, unreal.MaterialExpressionLinearInterpolate,
-                             240, 380)
-        lib.connect(final_color, "", edge_lerp, "A")
-        lib.connect(vec["FresnelColor"], "", edge_lerp, "B")
-        lib.connect(fres_pow, "", edge_lerp, "Alpha")
-        # reconnect BaseColor to the fallback lerp
-        for pin in ("BaseColor", "DiffuseColor"):
-            try:
-                if lib.connect(edge_lerp, "", toon, [pin]):
-                    break
-            except Exception:
-                continue
+    # --- Substrate Opacity / Coverage via MaterialExpressionSubstrateWeight ---
+    # SubstrateToonBSDF operates as a pure BSDF; in Substrate architecture, opacity/coverage
+    # is modulated by wrapping the BSDF in a MaterialExpressionSubstrateWeight node.
+    weight_node = lib.expr(mat, unreal.MaterialExpressionSubstrateWeight, 750, 200)
+    lib.connect(toon, "", weight_node, "A")
+    lib.connect(opacity, "", weight_node, "Weight")
+    _opacity_path = "substrate_weight_node"
 
-    lib.connect_property(toon, unreal.MaterialProperty.MP_FRONT_MATERIAL)
+    lib.connect_property(weight_node, unreal.MaterialProperty.MP_FRONT_MATERIAL)
 
     try:
         unreal.MaterialEditingLibrary.recompile_material(mat)

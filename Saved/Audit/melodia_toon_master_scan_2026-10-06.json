@@ -1,0 +1,45 @@
+{
+  "scanned": "2026-10-06",
+  "method": "static ASCII package-path + name-table scan of the source .uasset (read-only)",
+  "source_master": "D:/EnvironmentPortfolio/BS_GodFile/Content/EnvSandbox/Materials/Masters/M_Master_Toon_Universal.uasset",
+  "source_bytes": 754331,
+  "source_package": "/Game/EnvSandbox/Materials/Masters/M_Master_Toon_Universal",
+  "material_functions": [
+    "/Game/EnvSandbox/Materials/Functions/MF_ColorRamp3",
+    "/Game/EnvSandbox/Materials/Functions/MF_NormalAdjust",
+    "/Game/EnvSandbox/Materials/Functions/MF_SpaceParallax",
+    "/Game/EnvSandbox/Materials/Functions/MF_Madoka",
+    "/Game/EnvSandbox/Materials/Functions/MF_Itto",
+    "/Game/EnvSandbox/Materials/Functions/MF_NikkiDreamGrade",
+    "/Game/EnvSandbox/Materials/Functions/MF_DF_ContactBlend",
+    "/Game/EnvSandbox/Materials/Functions/MF_Impressionist_Impasto",
+    "/Game/EnvSandbox/Materials/Functions/MF_ClothWindDrape"
+  ],
+  "meshblend_function": "/Game/Materials/MF_MeshBlend_Activator_Index",
+  "toon_profile": "/Game/EnvSandbox/Materials/ToonProfiles/TP_Iridescent_Flow",
+  "palette_mpc": "/Game/Melodia/_PROJECT/04_Materials/MPC_Melodia_Palette",
+  "neutral_textures": [
+    "/Game/EnvSandbox/Textures/Utility/T_Neutral_Height",
+    "/Game/EnvSandbox/Textures/Utility/T_Neutral_Metallic",
+    "/Game/EnvSandbox/Textures/Utility/T_Neutral_Normal",
+    "/Game/EnvSandbox/Textures/Utility/T_Neutral_ORM",
+    "/Game/EnvSandbox/Textures/Utility/T_Neutral_Roughness"
+  ],
+  "third_party_textures": [
+    "/Game/Alphas_Sparkles/T_Spark_Twinkle8",
+    "/Game/Melodia/Companions/ChoralSheep/Textures/Chladni/T_Chladni_PC_C",
+    "/Game/Melodia/Cymatics/FarawayAlabasterDrape/T_Cymatic_FarawayAlabasterDrape_BaseColor",
+    "/Game/Textures/70_Japanese_Ornament_Alphas_vfxMed/... (2)",
+    "/Game/Textures/sbs_-_noise_texture_pack_-_512x512/... Cracks/Perlin (3)"
+  ],
+  "plugin_dependencies": [
+    "/Game/UltraDynamicSky/Materials/Material_Functions/Sky_Utilities/Day_to_Night_Color",
+    "/Game/UltraDynamicSky/Materials/Weather/UltraDynamicWeather_Parameters"
+  ],
+  "gate_descriptions": [
+    "Unified ramp implementation (MF_ColorRamp3 family): RampStrength=0 bypasses; ShadowRamp variants tint the shadow band.",
+    "IttoBlendAmount is the master gate (MF_Itto lane) - Truchet + wear masks.",
+    "MadokaBlendAmount is the master gate (MF_Madoka lane) - Voronoi vein glow + radial witch rings."
+  ],
+  "target_note": "The 304 repo already builds a TRIMMED reconstruction (Python/build_master_toon.py). This scan is the convergence input: which MF lanes Melodia's universal master actually calls, and what to drop."
+}

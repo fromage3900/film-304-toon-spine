@@ -1,0 +1,11 @@
+{
+  "provider": "nous",
+  "endpoint": "https://inference-api.nousresearch.com/v1",
+  "model": "meituan/longcat-2.5-preview:free",
+  "source": "jev-live",
+  "status": "ok",
+  "choice": "DELIVER_LABELED_40_FRAME_COMPOSITES_AND_PRESERVE_NATIVE_EXPORTS",
+  "confidence": 0.9,
+  "reason": "Native 48-frame wrap MAE 1.96 is far above the ordinary max discontinuity 0.24, so native loops demonstrably do not close and claiming seamlessness is falsified by the data. The 40-frame composite loops close cleanly (wrap 0.159 vs max 0.471; ensemble 0.079 vs max 0.306), so the composited loops are the deliverable. Originals are preserved and the source scene is frozen, making delivery of labeled composites with compositing disclosure the lowest-risk, verification-consistent closeout; rebuilding shaders is unjustified given the frozen source and already-validated composites.",
+  "raw": "{\"choice\": \"DELIVER_LABELED_40_FRAME_COMPOSITES_AND_PRESERVE_NATIVE_EXPORTS\", \"confidence\": 0.9, \"reason\": \"Native 48-frame wrap MAE 1.96 is far above the ordinary max discontinuity 0.24, so native loops demonstrably do not close and claiming seamlessness is falsified by the data. The 40-frame composite loops close cleanly (wrap 0.159 vs max 0.471; ensemble 0.079 vs max 0.306), so the composited loops are the deliverable. Originals are preserved and the source scene is frozen, making delivery of labeled composites with compositing disclosure the lowest-risk, verification-consistent closeout; rebuilding shaders is unjustified given the frozen source and already-validated composites.\"}"
+}

@@ -1,0 +1,99 @@
+{
+  "stills": [
+    {
+      "shot": "Dana_Neutral",
+      "path": "G:\\film-304-toon-spine\\Showcase\\Film304_Closeout_20261018\\Delivery_Final_20261018\\Stills_4K\\Dana_Neutral.png",
+      "size": [
+        3840,
+        2160
+      ],
+      "viewed": true
+    },
+    {
+      "shot": "David_Warm",
+      "path": "G:\\film-304-toon-spine\\Showcase\\Film304_Closeout_20261018\\Delivery_Final_20261018\\Stills_4K\\David_Warm.png",
+      "size": [
+        3840,
+        2160
+      ],
+      "viewed": true
+    },
+    {
+      "shot": "Ensemble_Cool",
+      "path": "G:\\film-304-toon-spine\\Showcase\\Film304_Closeout_20261018\\Delivery_Final_20261018\\Stills_4K\\Ensemble_Cool.png",
+      "size": [
+        3840,
+        2160
+      ],
+      "viewed": true
+    },
+    {
+      "shot": "Ensemble_Neutral",
+      "path": "G:\\film-304-toon-spine\\Showcase\\Film304_Closeout_20261018\\Delivery_Final_20261018\\Stills_4K\\Ensemble_Neutral.png",
+      "size": [
+        3840,
+        2160
+      ],
+      "viewed": true
+    },
+    {
+      "shot": "Ensemble_Warm",
+      "path": "G:\\film-304-toon-spine\\Showcase\\Film304_Closeout_20261018\\Delivery_Final_20261018\\Stills_4K\\Ensemble_Warm.png",
+      "size": [
+        3840,
+        2160
+      ],
+      "viewed": true
+    }
+  ],
+  "motion": [
+    {
+      "shot": "David_Warm",
+      "frames": 48,
+      "fps": 24,
+      "path": "G:\\film-304-toon-spine\\Showcase\\Film304_Closeout_20261018\\Delivery_Final_20261018\\David_Warm_48frames_24fps.mp4",
+      "wrap_mae_8bit": 1.9577032327651978,
+      "maximum_adjacent_mae": 0.2432844638824463,
+      "mean_adjacent_mae": 0.1566741644067967,
+      "seam_within_maximum_ordinary_change": false,
+      "raw_frames": "G:\\film-304-toon-spine\\Showcase\\Film304_Closeout_20261018\\Delivery_Final_20261018\\Motion_Frames\\David_Warm",
+      "delivery_loop": {
+        "path": "G:\\film-304-toon-spine\\Showcase\\Film304_Closeout_20261018\\Delivery_Final_20261018\\David_Warm_Loop40_24fps.mp4",
+        "frames": 40,
+        "fps": 24,
+        "method": "Eight-frame cyclic dissolve of preserved native 48-frame export. No source animation edits.",
+        "wrap_mae_8bit": 0.1594110131263733,
+        "maximum_adjacent_mae": 0.4709876477718353,
+        "seam_within_maximum_ordinary_change": true,
+        "three_repeats": "G:\\film-304-toon-spine\\Showcase\\Film304_Closeout_20261018\\Delivery_Final_20261018\\David_Warm_Loop40_ThreeRepeats.mp4"
+      }
+    },
+    {
+      "shot": "Ensemble_Warm",
+      "frames": 48,
+      "fps": 24,
+      "path": "G:\\film-304-toon-spine\\Showcase\\Film304_Closeout_20261018\\Delivery_Final_20261018\\Ensemble_Warm_48frames_24fps.mp4",
+      "wrap_mae_8bit": 0.9903343915939331,
+      "maximum_adjacent_mae": 0.26030606031417847,
+      "mean_adjacent_mae": 0.07555205271916186,
+      "seam_within_maximum_ordinary_change": false,
+      "raw_frames": "G:\\film-304-toon-spine\\Showcase\\Film304_Closeout_20261018\\Delivery_Final_20261018\\Motion_Frames\\Ensemble_Warm",
+      "delivery_loop": {
+        "path": "G:\\film-304-toon-spine\\Showcase\\Film304_Closeout_20261018\\Delivery_Final_20261018\\Ensemble_Warm_Loop40_24fps.mp4",
+        "frames": 40,
+        "fps": 24,
+        "method": "Eight-frame cyclic dissolve of preserved native 48-frame export. No source animation edits.",
+        "wrap_mae_8bit": 0.07862911373376846,
+        "maximum_adjacent_mae": 0.3064660429954529,
+        "seam_within_maximum_ordinary_change": true,
+        "three_repeats": "G:\\film-304-toon-spine\\Showcase\\Film304_Closeout_20261018\\Delivery_Final_20261018\\Ensemble_Warm_Loop40_ThreeRepeats.mp4"
+      }
+    }
+  ],
+  "limits": [
+    "Editable project archive has not been reopened on a second machine.",
+    "Sam retains the existing window-facing typing pose.",
+    "Existing stylized skyline retained; no new Houdini skyline authored.",
+    "Dana skin and shared toon graphs remain frozen."
+  ]
+}

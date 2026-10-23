@@ -1,0 +1,18 @@
+[
+  {
+    "shot": "DANA_REFINED_UDS_NIGHT_FULLBODY_v01",
+    "exit_code": 0,
+    "fresh_image": true,
+    "image": "G:\\film-304-toon-spine\\Saved\\Renders\\dana_refined_uds\\DANA_REFINED_UDS_NIGHT_FULLBODY_v01.png",
+    "log": "G:\\film-304-toon-spine\\Saved\\Logs\\DANA_REFINED_UDS_NIGHT_FULLBODY_v01.log",
+    "visual_review": "pending"
+  },
+  {
+    "shot": "DANA_REFINED_UDS_DAY_FULLBODY_v01",
+    "exit_code": 0,
+    "fresh_image": true,
+    "image": "G:\\film-304-toon-spine\\Saved\\Renders\\dana_refined_uds\\DANA_REFINED_UDS_DAY_FULLBODY_v01.png",
+    "log": "G:\\film-304-toon-spine\\Saved\\Logs\\DANA_REFINED_UDS_DAY_FULLBODY_v01.log",
+    "visual_review": "pending"
+  }
+]

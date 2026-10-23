@@ -1,0 +1,28 @@
+
+=== MELODIA TOON FILM - PROJECT VERIFY ===
+repo: G:\film-304-toon-spine
+
+-- 1. fork sync
+[PASS] fork sync (vendored vs upstream)           PASS (manifest check only - upstream not available here)
+
+-- 2. builder verification (Blender, headless)
+[PASS] Blender available                          C:\Program Files\Blender Foundation\Blender 5.2\blender.exe
+[PASS] fork verifier (builders/presets/dials)     23 assertions passed, 0 failed
+
+-- 3. level/package health
+[PASS] external actors in levels are present on disk 3 level(s) use external actors; 446 packages on disk
+[FAIL] no self-named packages                     L_Toon_Shot_Office.umap contains /Game/Materials/Textures/T_Noise_White.T_Noise_White
+[PASS] levels resolve to their own package path   ok
+
+-- 4. documentation paths
+[PASS] documented paths exist                     ok
+
+-- 4b. duplicate file drift
+[PASS] duplicate files are byte-identical         1 pair(s) checked
+
+-- 5. pre-commit hook behaviour
+[PASS] pre-commit hook self-test                  PASS  (8 passed, 0 failed)
+
+8 of 9 checks passed
+report: G:\film-304-toon-spine\Saved\Audit\verify_all_2026-10-16.txt
+RESULT: FAIL

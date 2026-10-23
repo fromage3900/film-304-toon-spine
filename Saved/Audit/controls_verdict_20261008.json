@@ -1,0 +1,74 @@
+{
+  "events": [
+    {
+      "event": "session start: mode=controls",
+      "t": 0.0
+    },
+    {
+      "event": "texture probe done",
+      "t": 0.0
+    },
+    {
+      "event": "running control script",
+      "t": 0.0
+    }
+  ],
+  "fatal": "session failed: TypeError: delay_until_next_frame() required argument 'latent_info' (pos 2) not found",
+  "hardware": "RTX 3080 Ti 12GB / i9-12900KF (8P+8E, 24 threads) / 128GB / NVIDIA 610.88",
+  "machine": "desktop (Alienware Aurora R13) -- the machine class the Oct-5 real reads came from",
+  "mode": "controls",
+  "probe_textures": [
+    {
+      "asset": "/Game/Materials/Textures/T_SDF_Strokes",
+      "exists": true,
+      "surface_size": [
+        32,
+        32
+      ]
+    },
+    {
+      "asset": "/Game/Materials/Textures/T_SDF_CarpetLoop",
+      "exists": true,
+      "surface_size": [
+        32,
+        32
+      ]
+    },
+    {
+      "asset": "/Game/Materials/Textures/T_SDF_PaperGrain",
+      "exists": true,
+      "surface_size": [
+        32,
+        32
+      ]
+    },
+    {
+      "asset": "/Game/Materials/Textures/T_Noise_White",
+      "exists": true,
+      "surface_size": [
+        32,
+        32
+      ]
+    },
+    {
+      "asset": "/Game/Materials/Textures/T_Ramp_Smooth",
+      "exists": true,
+      "surface_size": [
+        32,
+        32
+      ]
+    },
+    {
+      "asset": "/Game/Materials/Textures/T_Neutral_Normal",
+      "exists": true,
+      "surface_size": [
+        32,
+        32
+      ]
+    }
+  ],
+  "purpose": "headless render session on the desktop -- A/B/C control + stills batch, pixel-measured verdicts (no size-only reads)",
+  "request": {},
+  "stills": [],
+  "written": "2026-10-08"
+}

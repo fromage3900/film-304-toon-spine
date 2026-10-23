@@ -701,6 +701,136 @@
       },
       "size": "256x256",
       "asset": "/Game/Materials/Textures/T_SDF_Cardboard.T_SDF_Cardboard"
+    },
+    "T_Neutral_Normal": {
+      "why": "Flat tangent-space normal (0,0,1) - neutral default for a missing normal map.",
+      "set": [
+        "srgb=False",
+        "filter(bilinear)=TF_BILINEAR",
+        "address_x=TA_WRAP",
+        "address_y=TA_WRAP",
+        "compression=TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen(mips_off)=TMGS_NO_MIPMAPS"
+      ],
+      "failed": [],
+      "skipped": [],
+      "ok": true,
+      "png": "G:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_Neutral_Normal.png",
+      "pixels": "8x8",
+      "readback": {
+        "srgb": "False",
+        "filter": "TF_BILINEAR",
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "8x8",
+      "asset": "/Game/Materials/Textures/T_Neutral_Normal.T_Neutral_Normal"
+    },
+    "T_Neutral_Roughness": {
+      "why": "Mid-grey 0.5 roughness - neutral default for a missing roughness map.",
+      "set": [
+        "srgb=False",
+        "filter(bilinear)=TF_BILINEAR",
+        "address_x=TA_WRAP",
+        "address_y=TA_WRAP",
+        "compression=TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen(mips_off)=TMGS_NO_MIPMAPS"
+      ],
+      "failed": [],
+      "skipped": [],
+      "ok": true,
+      "png": "G:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_Neutral_Roughness.png",
+      "pixels": "8x8",
+      "readback": {
+        "srgb": "False",
+        "filter": "TF_BILINEAR",
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "8x8",
+      "asset": "/Game/Materials/Textures/T_Neutral_Roughness.T_Neutral_Roughness"
+    },
+    "T_Neutral_Height": {
+      "why": "Mid-grey 0.5 height - neutral default for a missing height/parallax map.",
+      "set": [
+        "srgb=False",
+        "filter(bilinear)=TF_BILINEAR",
+        "address_x=TA_WRAP",
+        "address_y=TA_WRAP",
+        "compression=TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen(mips_off)=TMGS_NO_MIPMAPS"
+      ],
+      "failed": [],
+      "skipped": [],
+      "ok": true,
+      "png": "G:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_Neutral_Height.png",
+      "pixels": "8x8",
+      "readback": {
+        "srgb": "False",
+        "filter": "TF_BILINEAR",
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "8x8",
+      "asset": "/Game/Materials/Textures/T_Neutral_Height.T_Neutral_Height"
+    },
+    "T_Neutral_Metallic": {
+      "why": "Black 0.0 metallic - neutral default for a missing metallic map (also the zero mark field a missing PatternSDFMap falls back to).",
+      "set": [
+        "srgb=False",
+        "filter(bilinear)=TF_BILINEAR",
+        "address_x=TA_WRAP",
+        "address_y=TA_WRAP",
+        "compression=TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen(mips_off)=TMGS_NO_MIPMAPS"
+      ],
+      "failed": [],
+      "skipped": [],
+      "ok": true,
+      "png": "G:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_Neutral_Metallic.png",
+      "pixels": "8x8",
+      "readback": {
+        "srgb": "False",
+        "filter": "TF_BILINEAR",
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "8x8",
+      "asset": "/Game/Materials/Textures/T_Neutral_Metallic.T_Neutral_Metallic"
+    },
+    "T_Neutral_ORM": {
+      "why": "Unit-AO / 0.5-rough / 0.0-metal ORM - neutral default for a missing packed ORM map.",
+      "set": [
+        "srgb=False",
+        "filter(bilinear)=TF_BILINEAR",
+        "address_x=TA_WRAP",
+        "address_y=TA_WRAP",
+        "compression=TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen(mips_off)=TMGS_NO_MIPMAPS"
+      ],
+      "failed": [],
+      "skipped": [],
+      "ok": true,
+      "png": "G:\\film-304-toon-spine\\Saved\\GeneratedTextures\\T_Neutral_ORM.png",
+      "pixels": "8x8",
+      "readback": {
+        "srgb": "False",
+        "filter": "TF_BILINEAR",
+        "address_x": "TA_WRAP",
+        "address_y": "TA_WRAP",
+        "compression_settings": "TC_VECTOR_DISPLACEMENTMAP",
+        "mip_gen_settings": "TMGS_NO_MIPMAPS"
+      },
+      "size": "8x8",
+      "asset": "/Game/Materials/Textures/T_Neutral_ORM.T_Neutral_ORM"
     }
   },
   "errors": [],

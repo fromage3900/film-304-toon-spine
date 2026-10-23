@@ -1,0 +1,52 @@
+{
+  "/Game/Materials/Instances/MI_Concrete": {
+    "parent": "/Game/Materials/Masters/M_Master_Toon_Universal.M_Master_Toon_Universal",
+    "parameters": {
+      "RampStrength": 0.6000000238418579,
+      "TextureWeight": 0.0,
+      "Roughness": 0.0,
+      "Metallic": 0.0,
+      "bUsePaintedRamp": false
+    }
+  },
+  "/Game/Materials/Instances/MI_Toon_Environment": {
+    "parent": "/Game/Materials/Masters/M_Master_Toon_Universal.M_Master_Toon_Universal",
+    "parameters": {
+      "RampStrength": 0.0,
+      "TextureWeight": 0.0,
+      "Roughness": 0.0,
+      "Metallic": 0.0,
+      "bUsePaintedRamp": false
+    }
+  },
+  "/Game/Materials/Instances/MI_Toon_Glass": {
+    "parent": "/Game/Materials/Masters/M_Master_Toon_Glass.M_Master_Toon_Glass",
+    "parameters": {
+      "RampStrength": 0.800000011920929,
+      "TextureWeight": 0.0,
+      "Roughness": 0.0,
+      "Metallic": 0.0,
+      "bUsePaintedRamp": false
+    }
+  },
+  "/Game/Materials/Instances/MI_Toon_Stone": {
+    "parent": "/Game/Materials/Masters/M_Master_Toon_Universal.M_Master_Toon_Universal",
+    "parameters": {
+      "RampStrength": 0.0,
+      "TextureWeight": 0.0,
+      "Roughness": 0.0,
+      "Metallic": 0.0,
+      "bUsePaintedRamp": false
+    }
+  },
+  "/Game/Materials/Instances/Film304/MI_Film304_Toon": {
+    "parent": "/Game/Materials/Masters/Film304/M_UniversalToon_Film304_v06.M_UniversalToon_Film304_v06",
+    "parameters": {
+      "RampStrength": 0.0,
+      "TextureWeight": 0.0,
+      "Roughness": 0.699999988079071,
+      "Metallic": 0.0,
+      "bUsePaintedRamp": false
+    }
+  }
+}

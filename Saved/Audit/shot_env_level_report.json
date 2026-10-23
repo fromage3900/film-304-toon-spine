@@ -84,13 +84,13 @@
       "focal_length_mm": 24.0,
       "label": "Cam_Env_SH010",
       "location_uu": [
-        -20000,
-        -55000,
-        14000
+        -500,
+        -2500,
+        280
       ],
       "render_frame": 48,
       "shot_id": "SH010",
-      "still_name": "COMP_SH010_proto_v01"
+      "still_name": "COMP_SH010_proto_v04"
     },
     {
       "filmback_aspect": 1.77778,

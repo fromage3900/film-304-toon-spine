@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "hda_path": "G:\\film-304-toon-spine\\Tools\\Content\\Houdini\\HDA_Brutalist_ShotComposer.hda",
+  "operator": "film304_brutalist_shot_composer",
+  "label": "Film 304 Brutalist Shot Composer",
+  "parameters": [
+    "folder_scene",
+    "folder_cam",
+    "folder_comp",
+    "folder_out"
+  ],
+  "houdini_version": "22.0.368"
+}

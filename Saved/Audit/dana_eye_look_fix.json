@@ -1,0 +1,123 @@
+{
+  "result": "pass",
+  "eye_profile": "/Game/Materials/ToonProfiles/TP_DanaFilm_Eye",
+  "eye_master_graph": {
+    "asset": "/Game/Materials/Masters/DanaFilm/M_DanaFilm_EyeSurface.M_DanaFilm_EyeSurface",
+    "toon_bsdf_count": 1,
+    "toon_profile": "/Game/Materials/ToonProfiles/TP_DanaFilm_Eye",
+    "post_compile_readback": "/Game/Materials/ToonProfiles/TP_DanaFilm_Eye",
+    "compile_and_save": "completed"
+  },
+  "cornea_master_graph": {
+    "asset": "/Game/Materials/Masters/DanaFilm/M_DanaFilm_CorneaClear.M_DanaFilm_CorneaClear",
+    "toon_bsdf_count": 1,
+    "toon_profile": "/Game/Materials/ToonProfiles/TP_DanaFilm_Eye",
+    "post_compile_readback": "/Game/Materials/ToonProfiles/TP_DanaFilm_Eye.TP_DanaFilm_Eye",
+    "compile_and_save": "completed"
+  },
+  "diffuse_bands": [
+    [
+      0.0,
+      0.34
+    ],
+    [
+      0.32,
+      0.34
+    ],
+    [
+      0.38,
+      0.63
+    ],
+    [
+      0.7,
+      0.63
+    ],
+    [
+      0.76,
+      0.92
+    ],
+    [
+      1.0,
+      0.92
+    ]
+  ],
+  "specular_bands": [
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.58,
+      0.0
+    ],
+    [
+      0.68,
+      0.48
+    ],
+    [
+      0.86,
+      0.78
+    ],
+    [
+      1.0,
+      1.0
+    ]
+  ],
+  "material_readback": [
+    {
+      "asset": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_EyeWhite",
+      "values": {
+        "parent": "/Game/Materials/Masters/DanaFilm/M_DanaFilm_EyeSurface.M_DanaFilm_EyeSurface",
+        "EyeColor": [
+          0.96,
+          0.93,
+          0.86,
+          1.0
+        ],
+        "Roughness": 0.52,
+        "Specular": 0.22
+      },
+      "ok": true
+    },
+    {
+      "asset": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Iris",
+      "values": {
+        "parent": "/Game/Materials/Masters/DanaFilm/M_DanaFilm_EyeSurface.M_DanaFilm_EyeSurface",
+        "EyeColor": [
+          0.46,
+          0.2,
+          0.07,
+          1.0
+        ],
+        "Roughness": 0.32,
+        "Specular": 0.28
+      },
+      "ok": true
+    },
+    {
+      "asset": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_EyeInterior",
+      "values": {
+        "parent": "/Game/Materials/Masters/DanaFilm/M_DanaFilm_EyeSurface.M_DanaFilm_EyeSurface",
+        "EyeColor": [
+          0.008,
+          0.005,
+          0.008,
+          1.0
+        ],
+        "Roughness": 0.48,
+        "Specular": 0.05
+      },
+      "ok": true
+    },
+    {
+      "asset": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Cornea.MI_DanaFilm_Cornea",
+      "values": {
+        "Coverage": 0.08,
+        "Roughness": 0.035,
+        "Specular": 0.65
+      },
+      "ok": true
+    }
+  ],
+  "scope": "eye Toon Profile and material graphs only; no map, rig, or camera edits"
+}

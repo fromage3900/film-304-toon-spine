@@ -1,0 +1,21 @@
+{
+  "material": "/Game/EnvSandbox/Materials/Masters/M_Master_Toon_Universal",
+  "status": "success",
+  "added_switches": [
+    "bFilmUseUDIM",
+    "bFilmUseUDIM_Roughness",
+    "bFilmUseUDIM_Normal"
+  ],
+  "added_parameters": [
+    "BaseColorTile1001",
+    "BaseColorTile1002",
+    "BaseColorTile1003",
+    "RoughnessTile1001",
+    "RoughnessTile1002",
+    "RoughnessTile1003",
+    "NormalTile1001",
+    "NormalTile1002",
+    "NormalTile1003"
+  ],
+  "default_state": "bFilmUseUDIM=False (zero overhead, fully backward-compatible for tonight's renders)"
+}

@@ -1,0 +1,185 @@
+{
+  "canon_master": "/Game/Materials/Masters/Film304/M_UniversalToon_Film304_v06",
+  "created_instances": {
+    "MI_Film304_BrutalistConcrete": "/Game/Materials/Instances/Film304/Environment/MI_Film304_BrutalistConcrete",
+    "MI_Film304_BrutalistAsphalt": "/Game/Materials/Instances/Film304/Environment/MI_Film304_BrutalistAsphalt",
+    "MI_Film304_BrutalistGlazing": "/Game/Materials/Instances/Film304/Environment/MI_Film304_BrutalistGlazing"
+  },
+  "assigned_meshes": {
+    "SM_CITY_TowerCluster": [
+      {
+        "slot_index": 0,
+        "slot_name": "BR_Asphalt",
+        "assigned": "/Game/Materials/Instances/Film304/Environment/MI_Film304_BrutalistAsphalt.MI_Film304_BrutalistAsphalt"
+      },
+      {
+        "slot_index": 1,
+        "slot_name": "BR_Concrete",
+        "assigned": "/Game/Materials/Instances/Film304/Environment/MI_Film304_BrutalistConcrete.MI_Film304_BrutalistConcrete"
+      }
+    ],
+    "SM_CITY_CivicSuperblock": [
+      {
+        "slot_index": 0,
+        "slot_name": "BR_Asphalt",
+        "assigned": "/Game/Materials/Instances/Film304/Environment/MI_Film304_BrutalistAsphalt.MI_Film304_BrutalistAsphalt"
+      },
+      {
+        "slot_index": 1,
+        "slot_name": "BR_Concrete",
+        "assigned": "/Game/Materials/Instances/Film304/Environment/MI_Film304_BrutalistConcrete.MI_Film304_BrutalistConcrete"
+      }
+    ],
+    "SM_CITY_TightEstate": [
+      {
+        "slot_index": 0,
+        "slot_name": "BR_Asphalt",
+        "assigned": "/Game/Materials/Instances/Film304/Environment/MI_Film304_BrutalistAsphalt.MI_Film304_BrutalistAsphalt"
+      },
+      {
+        "slot_index": 1,
+        "slot_name": "BR_Concrete",
+        "assigned": "/Game/Materials/Instances/Film304/Environment/MI_Film304_BrutalistConcrete.MI_Film304_BrutalistConcrete"
+      }
+    ],
+    "SM_CITY_LowSprawl": [
+      {
+        "slot_index": 0,
+        "slot_name": "BR_Asphalt",
+        "assigned": "/Game/Materials/Instances/Film304/Environment/MI_Film304_BrutalistAsphalt.MI_Film304_BrutalistAsphalt"
+      },
+      {
+        "slot_index": 1,
+        "slot_name": "BR_Concrete",
+        "assigned": "/Game/Materials/Instances/Film304/Environment/MI_Film304_BrutalistConcrete.MI_Film304_BrutalistConcrete"
+      }
+    ],
+    "SM_KMZ_TowerCluster": [
+      {
+        "slot_index": 0,
+        "slot_name": "BR_Asphalt_KOMIKAZE",
+        "assigned": "/Game/Materials/Instances/Film304/Environment/MI_Film304_BrutalistAsphalt.MI_Film304_BrutalistAsphalt"
+      },
+      {
+        "slot_index": 1,
+        "slot_name": "BR_Concrete_KOMIKAZE",
+        "assigned": "/Game/Materials/Instances/Film304/Environment/MI_Film304_BrutalistConcrete.MI_Film304_BrutalistConcrete"
+      }
+    ],
+    "SM_KMZ_CivicSuperblock": [
+      {
+        "slot_index": 0,
+        "slot_name": "BR_Asphalt_KOMIKAZE",
+        "assigned": "/Game/Materials/Instances/Film304/Environment/MI_Film304_BrutalistAsphalt.MI_Film304_BrutalistAsphalt"
+      },
+      {
+        "slot_index": 1,
+        "slot_name": "BR_Concrete_KOMIKAZE",
+        "assigned": "/Game/Materials/Instances/Film304/Environment/MI_Film304_BrutalistConcrete.MI_Film304_BrutalistConcrete"
+      }
+    ],
+    "SM_KMZ_TightEstate": [
+      {
+        "slot_index": 0,
+        "slot_name": "BR_Asphalt_KOMIKAZE",
+        "assigned": "/Game/Materials/Instances/Film304/Environment/MI_Film304_BrutalistAsphalt.MI_Film304_BrutalistAsphalt"
+      },
+      {
+        "slot_index": 1,
+        "slot_name": "BR_Concrete_KOMIKAZE",
+        "assigned": "/Game/Materials/Instances/Film304/Environment/MI_Film304_BrutalistConcrete.MI_Film304_BrutalistConcrete"
+      }
+    ],
+    "SM_KMZ_LowSprawl": [
+      {
+        "slot_index": 0,
+        "slot_name": "BR_Asphalt_KOMIKAZE",
+        "assigned": "/Game/Materials/Instances/Film304/Environment/MI_Film304_BrutalistAsphalt.MI_Film304_BrutalistAsphalt"
+      },
+      {
+        "slot_index": 1,
+        "slot_name": "BR_Concrete_KOMIKAZE",
+        "assigned": "/Game/Materials/Instances/Film304/Environment/MI_Film304_BrutalistConcrete.MI_Film304_BrutalistConcrete"
+      }
+    ],
+    "SM_OFFICE_BarbicanScale": [
+      {
+        "slot_index": 0,
+        "slot_name": "Material_0",
+        "assigned": "/Game/Materials/Instances/Film304/Environment/MI_Film304_BrutalistConcrete.MI_Film304_BrutalistConcrete"
+      }
+    ],
+    "SM_OFFICE_Bunker": [
+      {
+        "slot_index": 0,
+        "slot_name": "Material_0",
+        "assigned": "/Game/Materials/Instances/Film304/Environment/MI_Film304_BrutalistConcrete.MI_Film304_BrutalistConcrete"
+      }
+    ],
+    "SM_OFFICE_CivicSlab": [
+      {
+        "slot_index": 0,
+        "slot_name": "Material_0",
+        "assigned": "/Game/Materials/Instances/Film304/Environment/MI_Film304_BrutalistConcrete.MI_Film304_BrutalistConcrete"
+      }
+    ],
+    "SM_OFFICE_SlenderTower": [
+      {
+        "slot_index": 0,
+        "slot_name": "Material_0",
+        "assigned": "/Game/Materials/Instances/Film304/Environment/MI_Film304_BrutalistConcrete.MI_Film304_BrutalistConcrete"
+      }
+    ],
+    "SM_FAC_CivicColonnade": [
+      {
+        "slot_index": 0,
+        "slot_name": "BR_Asphalt",
+        "assigned": "/Game/Materials/Instances/Film304/Environment/MI_Film304_BrutalistAsphalt.MI_Film304_BrutalistAsphalt"
+      },
+      {
+        "slot_index": 1,
+        "slot_name": "BR_Glazing",
+        "assigned": "/Game/Materials/Instances/Film304/Environment/MI_Film304_BrutalistGlazing.MI_Film304_BrutalistGlazing"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "BR_Concrete",
+        "assigned": "/Game/Materials/Instances/Film304/Environment/MI_Film304_BrutalistConcrete.MI_Film304_BrutalistConcrete"
+      }
+    ],
+    "SM_FAC_PunchedEstate": [
+      {
+        "slot_index": 0,
+        "slot_name": "BR_Asphalt",
+        "assigned": "/Game/Materials/Instances/Film304/Environment/MI_Film304_BrutalistAsphalt.MI_Film304_BrutalistAsphalt"
+      },
+      {
+        "slot_index": 1,
+        "slot_name": "BR_Glazing",
+        "assigned": "/Game/Materials/Instances/Film304/Environment/MI_Film304_BrutalistGlazing.MI_Film304_BrutalistGlazing"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "BR_Concrete",
+        "assigned": "/Game/Materials/Instances/Film304/Environment/MI_Film304_BrutalistConcrete.MI_Film304_BrutalistConcrete"
+      }
+    ],
+    "SM_FAC_TowerRibbon": [
+      {
+        "slot_index": 0,
+        "slot_name": "BR_Asphalt",
+        "assigned": "/Game/Materials/Instances/Film304/Environment/MI_Film304_BrutalistAsphalt.MI_Film304_BrutalistAsphalt"
+      },
+      {
+        "slot_index": 1,
+        "slot_name": "BR_Glazing",
+        "assigned": "/Game/Materials/Instances/Film304/Environment/MI_Film304_BrutalistGlazing.MI_Film304_BrutalistGlazing"
+      },
+      {
+        "slot_index": 2,
+        "slot_name": "BR_Concrete",
+        "assigned": "/Game/Materials/Instances/Film304/Environment/MI_Film304_BrutalistConcrete.MI_Film304_BrutalistConcrete"
+      }
+    ]
+  }
+}

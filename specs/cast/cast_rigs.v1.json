@@ -1,0 +1,124 @@
+{
+  "schema": "humber-cast-rigs.v1",
+  "purpose": "UE-side source of truth for the four Film 304 cast rigs. Read by Python/build_cast_rig_bindings.py. Every entry is either bound and verified, or carries the exact blocker that keeps it unbound. Nothing here is inferred at runtime.",
+  "conventions": "Docs/CONTENT_CONVENTIONS.md. Material instances are the only supported way to vary a look; masters are never duplicated. Slot matching is by semantic role, not by exact slot name, so a re-export that renames a slot still binds.",
+  "instance_dir": "/Game/Materials/Instances/OneDriveRigs_20261016",
+  "masters": {
+    "character": "/Game/Materials/Masters/OneDriveRigs_20261016/M_OneDriveRigs_FilmToon_Character_20261016",
+    "udim": "/Game/Materials/Masters/OneDriveRigs_20261016/M_OneDriveRigs_FilmToon_UDIM_20261016",
+    "albedo": "/Game/Materials/Masters/OneDriveRigs_20261016/M_OneDriveRigs_FilmToon_Albedo_20261016",
+    "eyes": "/Game/Materials/Masters/OneDriveRigs_20261016/M_OneDriveRigs_FilmToon_Eyes_20261016",
+    "cornea": "/Game/Materials/Masters/DanaFilm/M_DanaFilm_CorneaClear"
+  },
+  "slot_name_normalisation": "lowercase, strip a trailing _mat/_sg/_shader/_shd, strip non-alphanumerics, then compare against each role's patterns",
+  "characters": {
+    "Dana": {
+      "status": "imported_unbound",
+      "mesh": "/Game/Staging/DanaFilmRuntime_20261016/Dana_CleanSkin_v08",
+      "destination_policy": "left in the staging path it was imported to; the readback evidence in Saved/Audit/DanaFilmRuntime_20261016 records that exact path, so it is not moved by this builder",
+      "source_rig": "G:/Film304_AssetIntake_20261016_Source/3rd Year Film/Rigs/Temp/Dana_Rig_v1.5/Dana_Rig_v1.5.mb",
+      "known": {
+        "bone_count": 1230,
+        "triangles": 46041,
+        "sections": 10,
+        "morph_targets": 0,
+        "note": "Blink_L/Blink_R exist in the FBX but not in the asset; the legacy importer was run with bImportMorphTargets off. Blink is carried by the lid bones. See the readback report."
+      },
+      "slot_count_expected": 10,
+      "roles": {
+        "skin":          { "patterns": ["danaSkin"],           "instance": "MI_OneDriveRigs_Dana_Skin_20261016" },
+        "hair":          { "patterns": ["danaHair"],           "instance": "MI_OneDriveRigs_Dana_Hair_20261016" },
+        "eye_white":     { "patterns": ["danaEye"],            "instance": "MI_OneDriveRigs_Dana_EyeWhite_20261016" },
+        "cornea":        { "patterns": ["danaCornea"],         "instance": "MI_OneDriveRigs_Dana_Cornea_20261016" },
+        "eye_interior":  { "patterns": ["danaEyeInt"],         "instance": "MI_OneDriveRigs_Dana_EyeInterior_20261016" },
+        "shoes":         { "patterns": ["danaShoes"],          "instance": "MI_OneDriveRigs_Dana_Shoes_20261016" },
+        "cloth":         { "patterns": ["danaPants"],          "instance": "MI_OneDriveRigs_Dana_Cloth_20261016" },
+        "shirt":         { "patterns": ["danaShirt"],          "instance": "MI_OneDriveRigs_Dana_Shirt_20261016" },
+        "mouth_interior":{ "patterns": ["danaGum", "danaTongue"], "instance": "MI_OneDriveRigs_Dana_Mouth_20261016", "create_if_missing": true }
+      },
+      "instances_to_create": {
+        "MI_OneDriveRigs_Dana_Mouth_20261016": {
+          "parent_master": "character",
+          "overrides": {
+            "BaseTint": [0.46, 0.13, 0.13, 1.0],
+            "Roughness": 0.42,
+            "Specular": 0.22
+          },
+          "why": "v08 added danaGum_mat and danaTongue_mat slots that the 2026-10-16 intake never prepared an instance for; left null they render as the default surface"
+        }
+      }
+    },
+    "David": {
+      "status": "awaiting_ue_import",
+      "mesh": "/Game/Staging/CastRigs_20261016/David/David_v151_Deform_v3",
+      "fbx": "Saved/Exports/CastRigExport/David/David_v151_Deform_v3.fbx",
+      "source_rig": "G:/Film304_AssetIntake_20261016_Source/3rd Year Film/Rigs/Temp/David_Rig_v1.51/David_Rig_v1.51.mb",
+      "note": "C_DavidRenderTest_OSC in Content/Meshes/Office/Props is the older 10-slot test mesh carrying source PBR materials; it is left untouched as the pre-production reference.",
+      "roles": {
+        "skin":          { "patterns": ["davidSkin"],     "instance": "MI_OneDriveRigs_David_Skin_20261016" },
+        "hair":          { "patterns": ["davidHair"],     "instance": "MI_OneDriveRigs_David_Hair_20261016" },
+        "eye_white":     { "patterns": ["davidEye"],      "instance": "MI_OneDriveRigs_David_EyeWhite_20261016" },
+        "iris":          { "patterns": ["davidIris"],     "instance": "MI_OneDriveRigs_David_Iris_20261016" },
+        "cornea":        { "patterns": ["davidCornea"],   "instance": "MI_OneDriveRigs_David_Cornea_20261016" },
+        "eye_interior":  { "patterns": ["davidEyeInt"],   "instance": "MI_OneDriveRigs_David_EyeInterior_20261016" },
+        "shoes":         { "patterns": ["davidShoes"],    "instance": "MI_OneDriveRigs_David_Shoes_20261016" },
+        "cloth":         { "patterns": ["davidPants"],    "instance": "MI_OneDriveRigs_David_Cloth_20261016" },
+        "shirt":         { "patterns": ["davidShirt"],    "instance": "MI_OneDriveRigs_David_Shirt_20261016" }
+      }
+    },
+    "Sam": {
+      "status": "awaiting_ue_import",
+      "mesh": "/Game/Staging/CastRigs_20261016/Sam/Sam_Deform_v3",
+      "fbx": "Saved/Exports/CastRigExport/Sam/Sam_Deform_v3.fbx",
+      "source_rig": "G:/Film304_AssetIntake_20261016_Source/3rd Year Film/Rigs/Guy/Sam Rig/C_Guy.mb",
+      "note": "Sam has no mesh anywhere in the project. Textures (3 UDIM skin tiles + shoes) and ten material instances already exist from the 2026-10-16 intake.",
+      "roles": {
+        "skin":  { "patterns": ["SamSkin", "samDiffuse", "body"], "instance": "MI_OneDriveRigs_Sam_Skin_20261016" },
+        "shoes": { "patterns": ["SamShoes", "shoe"],  "instance": "MI_OneDriveRigs_Sam_Shoes_20261016" },
+        "hair":  { "patterns": ["SamHair", "hair"],    "instance": "MI_OneDriveRigs_Sam_Hair_20261016" },
+        "shirt": { "patterns": ["SamShirt", "shirt"],  "instance": "MI_OneDriveRigs_Sam_Shirt_20261016" },
+        "cloth": { "patterns": ["SamPants", "SamCloth", "pants"], "instance": "MI_OneDriveRigs_Sam_Cloth_20261016" },
+        "eye_white":    { "patterns": ["SamEyeWhite"],    "instance": "MI_OneDriveRigs_Sam_EyeWhite_20261016" },
+        "cornea":       { "patterns": ["SamCornea"],      "instance": "MI_OneDriveRigs_Sam_Cornea_20261016" },
+        "eye_interior": { "patterns": ["SamEyeInterior"], "instance": "MI_OneDriveRigs_Sam_EyeInterior_20261016" },
+        "teeth":        { "patterns": ["SamTeeth"],       "instance": "MI_OneDriveRigs_Sam_Teeth_20261016", "create_if_missing": true },
+        "mouth":        { "patterns": ["SamMouth"],       "instance": "MI_OneDriveRigs_Sam_Mouth_20261016", "create_if_missing": true }
+      },
+      "instances_to_create": {
+        "MI_OneDriveRigs_Sam_Teeth_20261016": {
+          "parent_master": "eyes",
+          "overrides": { "BaseTint": [0.82, 0.80, 0.74, 1.0], "Roughness": 0.26, "Specular": 0.34 },
+          "why": "the 2026-10-16 intake never prepared an oral instance; teeth and mouth interior render as the engine default otherwise"
+        },
+        "MI_OneDriveRigs_Sam_Mouth_20261016": {
+          "parent_master": "eyes",
+          "overrides": { "BaseTint": [0.42, 0.13, 0.13, 1.0], "Roughness": 0.40, "Specular": 0.24 },
+          "why": "same as Dana_Mouth: gum and tongue interior, kept away from the skin ramp"
+        }
+      }
+    },
+    "Spider": {
+      "status": "awaiting_ue_import",
+      "mesh": "/Game/Staging/CastRigs_20261016/Spider/Spider_Deform_v2",
+      "fbx": "Saved/Exports/CastRigExport/Spider/Spider_Deform_v2.fbx",
+      "source_rig": "G:/Film304_AssetIntake_20261016_Source/3rd Year Film/Rigs/Spider/C_Spider.ma",
+      "note": "the SH110 creature. Probe-verified 2026-10-16: 1 body (9504 tris, 207 influences), 8 eyes, 2 fangs; 586 joints; LOWRES proxies excluded. No texture maps shipped with the source, so body and eye are flat toon tints.",
+      "roles": {
+        "body":      { "patterns": ["SpiderBody"], "instance": "MI_OneDriveRigs_Spider_Body_20261016" },
+        "eye":       { "patterns": ["SpiderEye"], "instance": "MI_OneDriveRigs_Spider_Eye_20261016" },
+        "fang":      { "patterns": ["SpiderFang"], "instance": "MI_OneDriveRigs_Spider_Fang_20261016", "create_if_missing": true }
+      },
+      "instances_to_create": {
+        "MI_OneDriveRigs_Spider_Fang_20261016": {
+          "parent_master": "character",
+          "overrides": {
+            "BaseTint": [0.86, 0.85, 0.80, 1.0],
+            "Roughness": 0.22,
+            "Specular": 0.40
+          },
+          "why": "fangs are a hard near-white enamel in the reveal shot and read as a hole if they take the body tint"
+        }
+      }
+    }
+  }
+}

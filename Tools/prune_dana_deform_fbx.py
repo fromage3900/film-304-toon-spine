@@ -11,7 +11,7 @@ from pathlib import Path
 from io_scene_fbx import encode_bin, parse_fbx
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from filter_dana_render_fbx import child, name, triangles, writable
+from filter_dana_render_fbx import child, inspect, name, triangles, writable
 
 
 def hierarchy(root):
@@ -69,10 +69,24 @@ def main(source, target):
         raise RuntimeError('Input missing or output already exists')
     root, version = parse_fbx.parse(str(source))
     objects, links, models, meshes, deformers, skins, clusters, needed, roots = hierarchy(root)
-    if (len(meshes), len(skins), len(clusters), len(needed), len(roots)) != (14, 11, 64, 76, 1):
+    parents = {}
+    for link in links:
+        if len(link.props) >= 3 and link.props[0] == b'OO':
+            parents.setdefault(int(link.props[1]), []).append(int(link.props[2]))
+    if len(meshes) != 16 or len(skins) < 13 or len(clusters) < 66 or len(roots) != 1:
         raise RuntimeError('Unexpected geometry or deform hierarchy')
-    if sum(triangles(geo) for geo in meshes.values()) != 37822:
+    if sum(triangles(geo) for geo in meshes.values()) != 37918:
         raise RuntimeError('Unexpected triangle count')
+    mesh_model_ids = {parent for mesh in meshes for parent in parents.get(mesh, [])
+                      if parent in models}
+    lash_names = {'EyelashUpperLower_L', 'EyelashUpperLower_R'}
+    lash_geometry_ids = {mesh for mesh in meshes
+                         if any(name(models[parent].props[1]).split(':')[-1] in lash_names
+                                for parent in parents.get(mesh, []) if parent in mesh_model_ids)}
+    lash_skin_ids = {skin for skin in skins
+                     if any(mesh in lash_geometry_ids for mesh in parents.get(skin, []))}
+    if len(lash_geometry_ids) != 2 or len(lash_skin_ids) < 2:
+        raise RuntimeError('Weighted upper/lower lash pair missing from deform hierarchy')
     removed_ids = set()
     removed_counts = {}
     for item in objects:
@@ -97,9 +111,15 @@ def main(source, target):
     encode_bin.write(str(target), writable(root), version)
     checked, checked_version = parse_fbx.parse(str(target))
     _, _, final_models, final_meshes, _, final_skins, final_clusters, final_needed, final_roots = hierarchy(checked)
-    if (checked_version, len(final_models), len(final_meshes), len(final_skins),
-            len(final_clusters), len(final_needed), len(final_roots)) != (version, 76, 14, 11, 64, 76, 1):
+    _, _, checked_meshes = inspect(checked)
+    if (checked_version != version or len(final_meshes) != 16
+            or len(final_skins) != len(skins) or len(final_clusters) != len(clusters)
+            or len(final_needed) != len(needed) or len(final_roots) != 1):
         raise RuntimeError('Pruned FBX did not round-trip its deform hierarchy')
+    final_mesh_names = {name(model.props[1]).split(':')[-1]
+                        for geo_id, model in checked_meshes}
+    if not {'EyelashUpperLower_L', 'EyelashUpperLower_R'} <= final_mesh_names:
+        raise RuntimeError('Pruned FBX lash readback failed')
     report = {
         'source': str(source), 'source_sha256': hashlib.sha256(source.read_bytes()).hexdigest(),
         'output': str(target), 'output_sha256': hashlib.sha256(target.read_bytes()).hexdigest(),
@@ -112,7 +132,7 @@ def main(source, target):
         'body_skin_cluster_count': 0,
         'qualification': 'Preview deform export only. Body has no skin cluster in source FBX.',
     }
-    audit = target.parents[2] / 'Audit' / 'dana_fbx_deform_prune.json'
+    audit = target.parents[2] / 'Audit' / f'dana_fbx_deform_prune_{target.stem}.json'
     audit.write_text(json.dumps(report, indent=2), encoding='utf-8')
     print('DANA_FBX_DEFORM_PRUNE', json.dumps(report), flush=True)
 

@@ -1,0 +1,16 @@
+{
+  "/Game/EnvSandbox/Materials/Masters/M_Master_Toon_Universal": {
+    "shading_model": "<MaterialShadingModel.MSM_DEFAULT_LIT: 1>",
+    "blend_mode": "<BlendMode.BLEND_OPAQUE: 0>",
+    "two_sided": false,
+    "used_with_skeletal_mesh": true,
+    "toon_profile": "error: Material: Failed to find property 'toon_profile' for attribute 'toon_profile' on 'Material'"
+  },
+  "/Game/Materials/Masters/Film304/M_UniversalToon_Film304_v06": {
+    "shading_model": "<MaterialShadingModel.MSM_DEFAULT_LIT: 1>",
+    "blend_mode": "<BlendMode.BLEND_OPAQUE: 0>",
+    "two_sided": false,
+    "used_with_skeletal_mesh": true,
+    "toon_profile": "error: Material: Failed to find property 'toon_profile' for attribute 'toon_profile' on 'Material'"
+  }
+}

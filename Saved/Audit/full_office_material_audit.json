@@ -1,0 +1,1727 @@
+[
+  {
+    "actor": "Film_Subject_Dana_v08_CleanSkin",
+    "component": "SkeletalMeshComponent0",
+    "slot_index": 0,
+    "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Dana_Skin_20261016.MI_OneDriveRigs_Dana_Skin_20261016",
+    "parent": "/Game/EnvSandbox/Materials/Masters/M_Master_Toon_Universal.M_Master_Toon_Universal",
+    "textures": {
+      "BaseColorTile1001": "/Game/Materials/Textures/OneDriveRigs_20261016/T_Dana_Skin_D_1001_20261016.T_Dana_Skin_D_1001_20261016",
+      "BaseColorTile1002": "/Game/Materials/Textures/OneDriveRigs_20261016/T_Dana_Skin_D_1002_20261016.T_Dana_Skin_D_1002_20261016",
+      "BaseColorTile1003": "/Game/Materials/Textures/OneDriveRigs_20261016/T_Dana_Skin_D_1003_20261016.T_Dana_Skin_D_1003_20261016"
+    },
+    "scalars": {
+      "RampStrength": 0.8500000238418579,
+      "TextureWeight": 0.0,
+      "Roughness": 0.47999998927116394,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": true,
+      "bToonRampEnabled": true,
+      "bToonRampActive": true,
+      "bUseHeightToNormal": true
+    },
+    "issues": []
+  },
+  {
+    "actor": "Film_Subject_Dana_v08_CleanSkin",
+    "component": "SkeletalMeshComponent0",
+    "slot_index": 1,
+    "material": "/Game/Materials/Instances/MI_Dana_Hair.MI_Dana_Hair",
+    "parent": "/Game/Materials/Masters/M_Master_Toon_Hair.M_Master_Toon_Hair",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.8999999761581421,
+      "TextureWeight": 0.0,
+      "Roughness": 0.0,
+      "Metallic": 0.0,
+      "RimStrength": 0.15000000596046448,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": false,
+      "bToonRampActive": false,
+      "bUseHeightToNormal": false
+    },
+    "issues": []
+  },
+  {
+    "actor": "Film_Subject_Dana_v08_CleanSkin",
+    "component": "SkeletalMeshComponent0",
+    "slot_index": 2,
+    "material": "/Game/Materials/Instances/MI_Dana_EyeWhite.MI_Dana_EyeWhite",
+    "parent": "/Game/Materials/Masters/M_Master_Toon_Face.M_Master_Toon_Face",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.550000011920929,
+      "TextureWeight": 0.0,
+      "Roughness": 0.0,
+      "Metallic": 0.0,
+      "RimStrength": 0.03999999910593033,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": false,
+      "bToonRampActive": false,
+      "bUseHeightToNormal": false
+    },
+    "issues": []
+  },
+  {
+    "actor": "Film_Subject_Dana_v08_CleanSkin",
+    "component": "SkeletalMeshComponent0",
+    "slot_index": 3,
+    "material": "/Game/Materials/Masters/DanaFilm/M_DanaFilm_CorneaClear.M_DanaFilm_CorneaClear",
+    "parent": "BASE_MATERIAL",
+    "textures": {},
+    "scalars": {},
+    "switches": {},
+    "issues": []
+  },
+  {
+    "actor": "Film_Subject_Dana_v08_CleanSkin",
+    "component": "SkeletalMeshComponent0",
+    "slot_index": 4,
+    "material": "/Game/Materials/Instances/MI_Dana_EyeInterior.MI_Dana_EyeInterior",
+    "parent": "/Game/Materials/Masters/M_Master_Toon_Face.M_Master_Toon_Face",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.3499999940395355,
+      "TextureWeight": 0.0,
+      "Roughness": 0.0,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": false,
+      "bToonRampActive": false,
+      "bUseHeightToNormal": false
+    },
+    "issues": []
+  },
+  {
+    "actor": "Film_Subject_Dana_v08_CleanSkin",
+    "component": "SkeletalMeshComponent0",
+    "slot_index": 5,
+    "material": "/Game/Materials/Instances/MI_Dana_Skirt.MI_Dana_Skirt",
+    "parent": "/Game/Materials/Masters/M_Master_Toon_Character.M_Master_Toon_Character",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.75,
+      "TextureWeight": 0.0,
+      "Roughness": 0.0,
+      "Metallic": 0.0,
+      "RimStrength": 0.10000000149011612,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": false,
+      "bToonRampActive": false,
+      "bUseHeightToNormal": false
+    },
+    "issues": []
+  },
+  {
+    "actor": "Film_Subject_Dana_v08_CleanSkin",
+    "component": "SkeletalMeshComponent0",
+    "slot_index": 6,
+    "material": "/Game/Materials/Instances/MI_Dana_Shirt.MI_Dana_Shirt",
+    "parent": "/Game/Materials/Masters/M_Master_Toon_Character.M_Master_Toon_Character",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.75,
+      "TextureWeight": 0.0,
+      "Roughness": 0.0,
+      "Metallic": 0.0,
+      "RimStrength": 0.11999999731779099,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": false,
+      "bToonRampActive": false,
+      "bUseHeightToNormal": false
+    },
+    "issues": []
+  },
+  {
+    "actor": "Film_Subject_Dana_v08_CleanSkin",
+    "component": "SkeletalMeshComponent0",
+    "slot_index": 7,
+    "material": "/Game/Materials/Instances/MI_Dana_Shoes.MI_Dana_Shoes",
+    "parent": "/Game/Materials/Masters/M_Master_Toon_Character.M_Master_Toon_Character",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.7200000286102295,
+      "TextureWeight": 0.0,
+      "Roughness": 0.0,
+      "Metallic": 0.0,
+      "RimStrength": 0.07999999821186066,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": false,
+      "bToonRampActive": false,
+      "bUseHeightToNormal": false
+    },
+    "issues": []
+  },
+  {
+    "actor": "Film_Subject_Dana_v08_CleanSkin",
+    "component": "SkeletalMeshComponent0",
+    "slot_index": 8,
+    "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Dana_Mouth_20261016.MI_OneDriveRigs_Dana_Mouth_20261016",
+    "parent": "/Game/EnvSandbox/Materials/Masters/M_Master_Toon_Universal.M_Master_Toon_Universal",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.0,
+      "TextureWeight": 0.0,
+      "Roughness": 0.4000000059604645,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": true,
+      "bToonRampActive": true,
+      "bUseHeightToNormal": true
+    },
+    "issues": []
+  },
+  {
+    "actor": "Film_Subject_Dana_v08_CleanSkin",
+    "component": "SkeletalMeshComponent0",
+    "slot_index": 9,
+    "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Dana_Mouth_20261016.MI_OneDriveRigs_Dana_Mouth_20261016",
+    "parent": "/Game/EnvSandbox/Materials/Masters/M_Master_Toon_Universal.M_Master_Toon_Universal",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.0,
+      "TextureWeight": 0.0,
+      "Roughness": 0.4000000059604645,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": true,
+      "bToonRampActive": true,
+      "bUseHeightToNormal": true
+    },
+    "issues": []
+  },
+  {
+    "actor": "Film_Floor",
+    "component": "StaticMeshComponent0",
+    "slot_index": 0,
+    "material": "/Game/Materials/Instances/UniversalFilm_20261016/MI_Film_Floor.MI_Film_Floor",
+    "parent": "/Game/EnvSandbox/Materials/Masters/M_Master_Toon_Universal.M_Master_Toon_Universal",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.0,
+      "TextureWeight": 0.0,
+      "Roughness": 0.8500000238418579,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": true,
+      "bToonRampActive": true,
+      "bUseHeightToNormal": true
+    },
+    "issues": []
+  },
+  {
+    "actor": "Film_BackWall",
+    "component": "StaticMeshComponent0",
+    "slot_index": 0,
+    "material": "/Game/Materials/Instances/UniversalFilm_20261016/MI_Film_Wall.MI_Film_Wall",
+    "parent": "/Game/EnvSandbox/Materials/Masters/M_Master_Toon_Universal.M_Master_Toon_Universal",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.0,
+      "TextureWeight": 0.0,
+      "Roughness": 0.8500000238418579,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": true,
+      "bToonRampActive": true,
+      "bUseHeightToNormal": true
+    },
+    "issues": []
+  },
+  {
+    "actor": "Film_WarmWallPanel",
+    "component": "StaticMeshComponent0",
+    "slot_index": 0,
+    "material": "/Game/Materials/Instances/UniversalFilm_20261016/MI_Film_WarmWall.MI_Film_WarmWall",
+    "parent": "/Game/EnvSandbox/Materials/Masters/M_Master_Toon_Universal.M_Master_Toon_Universal",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.0,
+      "TextureWeight": 0.119998998939991,
+      "Roughness": 0.8500000238418579,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": true,
+      "bToonRampActive": true,
+      "bUseHeightToNormal": true
+    },
+    "issues": []
+  },
+  {
+    "actor": "Film_WindowMullion_-90",
+    "component": "StaticMeshComponent0",
+    "slot_index": 0,
+    "material": "/Game/Materials/Instances/UniversalFilm_20261016/MI_Film_Frame.MI_Film_Frame",
+    "parent": "/Game/EnvSandbox/Materials/Masters/M_Master_Toon_Universal.M_Master_Toon_Universal",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.0,
+      "TextureWeight": 0.0,
+      "Roughness": 0.8500000238418579,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": true,
+      "bToonRampActive": true,
+      "bUseHeightToNormal": true
+    },
+    "issues": []
+  },
+  {
+    "actor": "Film_WindowMullion_140",
+    "component": "StaticMeshComponent0",
+    "slot_index": 0,
+    "material": "/Game/Materials/Instances/UniversalFilm_20261016/MI_Film_Frame.MI_Film_Frame",
+    "parent": "/Game/EnvSandbox/Materials/Masters/M_Master_Toon_Universal.M_Master_Toon_Universal",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.0,
+      "TextureWeight": 0.0,
+      "Roughness": 0.8500000238418579,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": true,
+      "bToonRampActive": true,
+      "bUseHeightToNormal": true
+    },
+    "issues": []
+  },
+  {
+    "actor": "Film_WindowMullion_370",
+    "component": "StaticMeshComponent0",
+    "slot_index": 0,
+    "material": "/Game/Materials/Instances/UniversalFilm_20261016/MI_Film_Frame.MI_Film_Frame",
+    "parent": "/Game/EnvSandbox/Materials/Masters/M_Master_Toon_Universal.M_Master_Toon_Universal",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.0,
+      "TextureWeight": 0.0,
+      "Roughness": 0.8500000238418579,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": true,
+      "bToonRampActive": true,
+      "bUseHeightToNormal": true
+    },
+    "issues": []
+  },
+  {
+    "actor": "Film_ExistingOfficeDesk",
+    "component": "StaticMeshComponent0",
+    "slot_index": 0,
+    "material": "/Game/Materials/Instances/UniversalFilm_20261016/MI_Film_Desk.MI_Film_Desk",
+    "parent": "/Game/EnvSandbox/Materials/Masters/M_Master_Toon_Universal.M_Master_Toon_Universal",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.0,
+      "TextureWeight": -0.006399999838322401,
+      "Roughness": 0.904000997543335,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 2.4576029777526855,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": true,
+      "bToonRampActive": true,
+      "bUseHeightToNormal": true
+    },
+    "issues": []
+  },
+  {
+    "actor": "Film_DeskReturn",
+    "component": "StaticMeshComponent0",
+    "slot_index": 0,
+    "material": "/Game/Materials/Instances/UniversalFilm_20261016/MI_Film_Desk.MI_Film_Desk",
+    "parent": "/Game/EnvSandbox/Materials/Masters/M_Master_Toon_Universal.M_Master_Toon_Universal",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.0,
+      "TextureWeight": -0.006399999838322401,
+      "Roughness": 0.904000997543335,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 2.4576029777526855,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": true,
+      "bToonRampActive": true,
+      "bUseHeightToNormal": true
+    },
+    "issues": []
+  },
+  {
+    "actor": "Film_Cam_OfficeMedium",
+    "component": "CameraProxyMeshComponent_0",
+    "slot_index": 0,
+    "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CameraBody.MI_CineMat_CameraBody",
+    "parent": "/Engine/EditorMaterials/Camera/CineMat.CineMat",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.0,
+      "TextureWeight": 0.0,
+      "Roughness": 0.20000000298023224,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": false,
+      "bToonRampActive": false,
+      "bUseHeightToNormal": false
+    },
+    "issues": []
+  },
+  {
+    "actor": "Film_Cam_OfficeMedium",
+    "component": "CameraProxyMeshComponent_0",
+    "slot_index": 1,
+    "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CamViewFinder.MI_CineMat_CamViewFinder",
+    "parent": "/Engine/EngineDebugMaterials/M_SimpleOpaque.M_SimpleOpaque",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.0,
+      "TextureWeight": 0.0,
+      "Roughness": 0.0,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": false,
+      "bToonRampActive": false,
+      "bUseHeightToNormal": false
+    },
+    "issues": []
+  },
+  {
+    "actor": "Film_Cam_OfficeWide",
+    "component": "CameraProxyMeshComponent_0",
+    "slot_index": 0,
+    "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CameraBody.MI_CineMat_CameraBody",
+    "parent": "/Engine/EditorMaterials/Camera/CineMat.CineMat",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.0,
+      "TextureWeight": 0.0,
+      "Roughness": 0.20000000298023224,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": false,
+      "bToonRampActive": false,
+      "bUseHeightToNormal": false
+    },
+    "issues": []
+  },
+  {
+    "actor": "Film_Cam_OfficeWide",
+    "component": "CameraProxyMeshComponent_0",
+    "slot_index": 1,
+    "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CamViewFinder.MI_CineMat_CamViewFinder",
+    "parent": "/Engine/EngineDebugMaterials/M_SimpleOpaque.M_SimpleOpaque",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.0,
+      "TextureWeight": 0.0,
+      "Roughness": 0.0,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": false,
+      "bToonRampActive": false,
+      "bUseHeightToNormal": false
+    },
+    "issues": []
+  },
+  {
+    "actor": "Spider_Deform_v2",
+    "component": "SkeletalMeshComponent0",
+    "slot_index": 0,
+    "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Spider_Eye_20261016.MI_OneDriveRigs_Spider_Eye_20261016",
+    "parent": "/Game/EnvSandbox/Materials/Masters/M_Master_Toon_Universal.M_Master_Toon_Universal",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.0,
+      "TextureWeight": 0.0,
+      "Roughness": 0.10000000149011612,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 3.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": true,
+      "bToonRampActive": true,
+      "bUseHeightToNormal": true
+    },
+    "issues": []
+  },
+  {
+    "actor": "Spider_Deform_v2",
+    "component": "SkeletalMeshComponent0",
+    "slot_index": 1,
+    "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Spider_Fang_20261016.MI_OneDriveRigs_Spider_Fang_20261016",
+    "parent": "/Game/EnvSandbox/Materials/Masters/M_Master_Toon_Universal.M_Master_Toon_Universal",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.0,
+      "TextureWeight": 0.0,
+      "Roughness": 0.25,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": true,
+      "bToonRampActive": true,
+      "bUseHeightToNormal": true
+    },
+    "issues": []
+  },
+  {
+    "actor": "Spider_Deform_v2",
+    "component": "SkeletalMeshComponent0",
+    "slot_index": 2,
+    "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Spider_Body_20261016.MI_OneDriveRigs_Spider_Body_20261016",
+    "parent": "/Game/EnvSandbox/Materials/Masters/M_Master_Toon_Universal.M_Master_Toon_Universal",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.0,
+      "TextureWeight": 0.0,
+      "Roughness": 0.44999998807907104,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 2.5,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": true,
+      "bToonRampActive": true,
+      "bUseHeightToNormal": true
+    },
+    "issues": []
+  },
+  {
+    "actor": "CineCameraActor",
+    "component": "CameraProxyMeshComponent_0",
+    "slot_index": 0,
+    "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CameraBody.MI_CineMat_CameraBody",
+    "parent": "/Engine/EditorMaterials/Camera/CineMat.CineMat",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.0,
+      "TextureWeight": 0.0,
+      "Roughness": 0.20000000298023224,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": false,
+      "bToonRampActive": false,
+      "bUseHeightToNormal": false
+    },
+    "issues": []
+  },
+  {
+    "actor": "CineCameraActor",
+    "component": "CameraProxyMeshComponent_0",
+    "slot_index": 1,
+    "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CamViewFinder.MI_CineMat_CamViewFinder",
+    "parent": "/Engine/EngineDebugMaterials/M_SimpleOpaque.M_SimpleOpaque",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.0,
+      "TextureWeight": 0.0,
+      "Roughness": 0.0,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": false,
+      "bToonRampActive": false,
+      "bUseHeightToNormal": false
+    },
+    "issues": []
+  },
+  {
+    "actor": "SM_P_OfficeDesk_AC_FilmStage_20261016",
+    "component": "StaticMeshComponent0",
+    "slot_index": 0,
+    "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_P_OfficeDesk_AC_FilmStage_20261016.MI_OneDriveRigs_Env_SM_P_OfficeDesk_AC_FilmStage_20261016",
+    "parent": "/Game/Materials/Masters/OneDriveRigs_20261016/M_OneDriveRigs_FilmToon_Environment_20261016.M_OneDriveRigs_FilmToon_Environment_20261016",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.0,
+      "TextureWeight": 0.0,
+      "Roughness": 0.550000011920929,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": false,
+      "bToonRampActive": false,
+      "bUseHeightToNormal": false
+    },
+    "issues": []
+  },
+  {
+    "actor": "SM_P_OfficeDesk_AC_FilmStage_20261016",
+    "component": "StaticMeshComponent0",
+    "slot_index": 1,
+    "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_P_OfficeDesk_AC_FilmStage_20261016.MI_OneDriveRigs_Env_SM_P_OfficeDesk_AC_FilmStage_20261016",
+    "parent": "/Game/Materials/Masters/OneDriveRigs_20261016/M_OneDriveRigs_FilmToon_Environment_20261016.M_OneDriveRigs_FilmToon_Environment_20261016",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.0,
+      "TextureWeight": 0.0,
+      "Roughness": 0.550000011920929,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": false,
+      "bToonRampActive": false,
+      "bUseHeightToNormal": false
+    },
+    "issues": []
+  },
+  {
+    "actor": "SM_P_OfficeDesk_AC_FilmStage_20261017",
+    "component": "StaticMeshComponent0",
+    "slot_index": 0,
+    "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_P_OfficeDesk_AC_FilmStage_20261016.MI_OneDriveRigs_Env_SM_P_OfficeDesk_AC_FilmStage_20261016",
+    "parent": "/Game/Materials/Masters/OneDriveRigs_20261016/M_OneDriveRigs_FilmToon_Environment_20261016.M_OneDriveRigs_FilmToon_Environment_20261016",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.0,
+      "TextureWeight": 0.0,
+      "Roughness": 0.550000011920929,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": false,
+      "bToonRampActive": false,
+      "bUseHeightToNormal": false
+    },
+    "issues": []
+  },
+  {
+    "actor": "SM_P_OfficeDesk_AC_FilmStage_20261017",
+    "component": "StaticMeshComponent0",
+    "slot_index": 1,
+    "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_P_OfficeDesk_AC_FilmStage_20261016.MI_OneDriveRigs_Env_SM_P_OfficeDesk_AC_FilmStage_20261016",
+    "parent": "/Game/Materials/Masters/OneDriveRigs_20261016/M_OneDriveRigs_FilmToon_Environment_20261016.M_OneDriveRigs_FilmToon_Environment_20261016",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.0,
+      "TextureWeight": 0.0,
+      "Roughness": 0.550000011920929,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": false,
+      "bToonRampActive": false,
+      "bUseHeightToNormal": false
+    },
+    "issues": []
+  },
+  {
+    "actor": "SM_BreakRoomTogether_ZMJ_FilmStage_20261016",
+    "component": "StaticMeshComponent0",
+    "slot_index": 0,
+    "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_BreakRoomTogether_ZMJ_FilmStage_20261016.MI_OneDriveRigs_Env_SM_BreakRoomTogether_ZMJ_FilmStage_20261016",
+    "parent": "/Game/Materials/Masters/OneDriveRigs_20261016/M_OneDriveRigs_FilmToon_Environment_20261016.M_OneDriveRigs_FilmToon_Environment_20261016",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.0,
+      "TextureWeight": 0.0,
+      "Roughness": 0.550000011920929,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": false,
+      "bToonRampActive": false,
+      "bUseHeightToNormal": false
+    },
+    "issues": []
+  },
+  {
+    "actor": "SM_BreakRoomTogether_ZMJ_FilmStage_20261016",
+    "component": "StaticMeshComponent0",
+    "slot_index": 1,
+    "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_BreakRoomTogether_ZMJ_FilmStage_20261016.MI_OneDriveRigs_Env_SM_BreakRoomTogether_ZMJ_FilmStage_20261016",
+    "parent": "/Game/Materials/Masters/OneDriveRigs_20261016/M_OneDriveRigs_FilmToon_Environment_20261016.M_OneDriveRigs_FilmToon_Environment_20261016",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.0,
+      "TextureWeight": 0.0,
+      "Roughness": 0.550000011920929,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": false,
+      "bToonRampActive": false,
+      "bUseHeightToNormal": false
+    },
+    "issues": []
+  },
+  {
+    "actor": "Film_Cast_David",
+    "component": "SkeletalMeshComponent0",
+    "slot_index": 0,
+    "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_David_Skin_20261016.MI_OneDriveRigs_David_Skin_20261016",
+    "parent": "/Game/EnvSandbox/Materials/Masters/M_Master_Toon_Universal.M_Master_Toon_Universal",
+    "textures": {
+      "BaseColorTile1001": "/Game/Materials/Textures/OneDriveRigs_20261016/T_David_Skin_D_1001_20261016.T_David_Skin_D_1001_20261016",
+      "BaseColorTile1002": "/Game/Materials/Textures/OneDriveRigs_20261016/T_David_Skin_D_1002_20261016.T_David_Skin_D_1002_20261016",
+      "BaseColorTile1003": "/Game/Materials/Textures/OneDriveRigs_20261016/T_David_Skin_D_1003_20261016.T_David_Skin_D_1003_20261016"
+    },
+    "scalars": {
+      "RampStrength": 0.8500000238418579,
+      "TextureWeight": 0.0,
+      "Roughness": 0.47999998927116394,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": true,
+      "bToonRampEnabled": true,
+      "bToonRampActive": true,
+      "bUseHeightToNormal": true
+    },
+    "issues": []
+  },
+  {
+    "actor": "Film_Cast_David",
+    "component": "SkeletalMeshComponent0",
+    "slot_index": 1,
+    "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_David_Shirt_20261016.MI_OneDriveRigs_David_Shirt_20261016",
+    "parent": "/Game/EnvSandbox/Materials/Masters/M_Master_Toon_Universal.M_Master_Toon_Universal",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.8500000238418579,
+      "TextureWeight": 0.0,
+      "Roughness": 0.699999988079071,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": true,
+      "bToonRampActive": true,
+      "bUseHeightToNormal": true
+    },
+    "issues": []
+  },
+  {
+    "actor": "Film_Cast_David",
+    "component": "SkeletalMeshComponent0",
+    "slot_index": 2,
+    "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_David_Hair_20261016.MI_OneDriveRigs_David_Hair_20261016",
+    "parent": "/Game/Materials/Masters/M_Master_Toon_Hair.M_Master_Toon_Hair",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.8999999761581421,
+      "TextureWeight": 0.0,
+      "Roughness": 0.44999998807907104,
+      "Metallic": 0.0,
+      "RimStrength": 0.15000000596046448,
+      "RimIntensity": 1.2000000476837158,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": true,
+      "bToonRampActive": true,
+      "bUseHeightToNormal": false
+    },
+    "issues": []
+  },
+  {
+    "actor": "Film_Cast_David",
+    "component": "SkeletalMeshComponent0",
+    "slot_index": 3,
+    "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_David_Shoes_20261016.MI_OneDriveRigs_David_Shoes_20261016",
+    "parent": "/Game/EnvSandbox/Materials/Masters/M_Master_Toon_Universal.M_Master_Toon_Universal",
+    "textures": {
+      "BaseColorMap": "/Game/Materials/Textures/OneDriveRigs_20261016/T_David_Shoes_D_20261016.T_David_Shoes_D_20261016"
+    },
+    "scalars": {
+      "RampStrength": 0.8500000238418579,
+      "TextureWeight": 0.0,
+      "Roughness": 0.5,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": true,
+      "bToonRampActive": true,
+      "bUseHeightToNormal": true
+    },
+    "issues": []
+  },
+  {
+    "actor": "Film_Cast_David",
+    "component": "SkeletalMeshComponent0",
+    "slot_index": 4,
+    "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Dana_Mouth_20261016.MI_OneDriveRigs_Dana_Mouth_20261016",
+    "parent": "/Game/EnvSandbox/Materials/Masters/M_Master_Toon_Universal.M_Master_Toon_Universal",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.0,
+      "TextureWeight": 0.0,
+      "Roughness": 0.4000000059604645,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": true,
+      "bToonRampActive": true,
+      "bUseHeightToNormal": true
+    },
+    "issues": []
+  },
+  {
+    "actor": "Film_Cast_David",
+    "component": "SkeletalMeshComponent0",
+    "slot_index": 5,
+    "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Dana_Mouth_20261016.MI_OneDriveRigs_Dana_Mouth_20261016",
+    "parent": "/Game/EnvSandbox/Materials/Masters/M_Master_Toon_Universal.M_Master_Toon_Universal",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.0,
+      "TextureWeight": 0.0,
+      "Roughness": 0.4000000059604645,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": true,
+      "bToonRampActive": true,
+      "bUseHeightToNormal": true
+    },
+    "issues": []
+  },
+  {
+    "actor": "Film_Cast_David",
+    "component": "SkeletalMeshComponent0",
+    "slot_index": 6,
+    "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_David_EyeWhite_20261016.MI_OneDriveRigs_David_EyeWhite_20261016",
+    "parent": "/Game/EnvSandbox/Materials/Masters/M_Master_Toon_Universal.M_Master_Toon_Universal",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.0,
+      "TextureWeight": 0.0,
+      "Roughness": 0.20000000298023224,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": true,
+      "bToonRampActive": true,
+      "bUseHeightToNormal": true
+    },
+    "issues": []
+  },
+  {
+    "actor": "Film_Cast_David",
+    "component": "SkeletalMeshComponent0",
+    "slot_index": 7,
+    "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_David_EyeInterior_20261016.MI_OneDriveRigs_David_EyeInterior_20261016",
+    "parent": "/Game/EnvSandbox/Materials/Masters/M_Master_Toon_Universal.M_Master_Toon_Universal",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.0,
+      "TextureWeight": 0.0,
+      "Roughness": 0.30000001192092896,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": true,
+      "bToonRampActive": true,
+      "bUseHeightToNormal": true
+    },
+    "issues": []
+  },
+  {
+    "actor": "Film_Cast_David",
+    "component": "SkeletalMeshComponent0",
+    "slot_index": 8,
+    "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_David_Iris_20261016.MI_OneDriveRigs_David_Iris_20261016",
+    "parent": "/Game/EnvSandbox/Materials/Masters/M_Master_Toon_Universal.M_Master_Toon_Universal",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.0,
+      "TextureWeight": 0.0,
+      "Roughness": 0.15000000596046448,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": true,
+      "bToonRampActive": true,
+      "bUseHeightToNormal": true
+    },
+    "issues": []
+  },
+  {
+    "actor": "Film_Cast_David",
+    "component": "SkeletalMeshComponent0",
+    "slot_index": 9,
+    "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_David_EyeWhite_20261016.MI_OneDriveRigs_David_EyeWhite_20261016",
+    "parent": "/Game/EnvSandbox/Materials/Masters/M_Master_Toon_Universal.M_Master_Toon_Universal",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.0,
+      "TextureWeight": 0.0,
+      "Roughness": 0.20000000298023224,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": true,
+      "bToonRampActive": true,
+      "bUseHeightToNormal": true
+    },
+    "issues": []
+  },
+  {
+    "actor": "Film_Cast_David",
+    "component": "SkeletalMeshComponent0",
+    "slot_index": 10,
+    "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_David_Cloth_20261016.MI_OneDriveRigs_David_Cloth_20261016",
+    "parent": "/Game/EnvSandbox/Materials/Masters/M_Master_Toon_Universal.M_Master_Toon_Universal",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 1.0,
+      "TextureWeight": 0.7999929785728455,
+      "Roughness": 0.0,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": true,
+      "bToonRampActive": true,
+      "bUseHeightToNormal": true
+    },
+    "issues": []
+  },
+  {
+    "actor": "Film_Cast_Sam",
+    "component": "SkeletalMeshComponent0",
+    "slot_index": 0,
+    "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Sam_Skin_20261016.MI_OneDriveRigs_Sam_Skin_20261016",
+    "parent": "/Game/EnvSandbox/Materials/Masters/M_Master_Toon_Universal.M_Master_Toon_Universal",
+    "textures": {
+      "BaseColorTile1001": "/Game/Materials/Textures/OneDriveRigs_20261016/T_Sam_Skin_D_1001_20261016.T_Sam_Skin_D_1001_20261016",
+      "BaseColorTile1002": "/Game/Materials/Textures/OneDriveRigs_20261016/T_Sam_Skin_D_1002_20261016.T_Sam_Skin_D_1002_20261016",
+      "BaseColorTile1003": "/Game/Materials/Textures/OneDriveRigs_20261016/T_Sam_Skin_D_1003_20261016.T_Sam_Skin_D_1003_20261016"
+    },
+    "scalars": {
+      "RampStrength": 0.8500000238418579,
+      "TextureWeight": 0.0,
+      "Roughness": 0.5,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": true,
+      "bToonRampEnabled": true,
+      "bToonRampActive": true,
+      "bUseHeightToNormal": true
+    },
+    "issues": []
+  },
+  {
+    "actor": "Film_Cast_Sam",
+    "component": "SkeletalMeshComponent0",
+    "slot_index": 1,
+    "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Sam_Shoes_20261016.MI_OneDriveRigs_Sam_Shoes_20261016",
+    "parent": "/Game/EnvSandbox/Materials/Masters/M_Master_Toon_Universal.M_Master_Toon_Universal",
+    "textures": {
+      "BaseColorMap": "/Game/Materials/Textures/OneDriveRigs_20261016/T_Sam_Shoes_D_20261016.T_Sam_Shoes_D_20261016"
+    },
+    "scalars": {
+      "RampStrength": 0.8500000238418579,
+      "TextureWeight": 0.0,
+      "Roughness": 0.5,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": true,
+      "bToonRampActive": true,
+      "bUseHeightToNormal": true
+    },
+    "issues": []
+  },
+  {
+    "actor": "Film_Cast_Sam",
+    "component": "SkeletalMeshComponent0",
+    "slot_index": 2,
+    "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Sam_Hair_20261016.MI_OneDriveRigs_Sam_Hair_20261016",
+    "parent": "/Game/Materials/Masters/M_Master_Toon_Hair.M_Master_Toon_Hair",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.8999999761581421,
+      "TextureWeight": 0.0,
+      "Roughness": 0.44999998807907104,
+      "Metallic": 0.0,
+      "RimStrength": 0.15000000596046448,
+      "RimIntensity": 1.2000000476837158,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": true,
+      "bToonRampActive": true,
+      "bUseHeightToNormal": false
+    },
+    "issues": []
+  },
+  {
+    "actor": "Film_Cast_Sam",
+    "component": "SkeletalMeshComponent0",
+    "slot_index": 3,
+    "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Sam_EyeWhite_20261016.MI_OneDriveRigs_Sam_EyeWhite_20261016",
+    "parent": "/Game/EnvSandbox/Materials/Masters/M_Master_Toon_Universal.M_Master_Toon_Universal",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.0,
+      "TextureWeight": 0.0,
+      "Roughness": 0.20000000298023224,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": true,
+      "bToonRampActive": true,
+      "bUseHeightToNormal": true
+    },
+    "issues": []
+  },
+  {
+    "actor": "Film_Cast_Sam",
+    "component": "SkeletalMeshComponent0",
+    "slot_index": 4,
+    "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_David_Iris_20261016.MI_OneDriveRigs_David_Iris_20261016",
+    "parent": "/Game/EnvSandbox/Materials/Masters/M_Master_Toon_Universal.M_Master_Toon_Universal",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.0,
+      "TextureWeight": 0.0,
+      "Roughness": 0.15000000596046448,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": true,
+      "bToonRampActive": true,
+      "bUseHeightToNormal": true
+    },
+    "issues": []
+  },
+  {
+    "actor": "Film_Cast_Sam",
+    "component": "SkeletalMeshComponent0",
+    "slot_index": 5,
+    "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Sam_EyeWhite_20261016.MI_OneDriveRigs_Sam_EyeWhite_20261016",
+    "parent": "/Game/EnvSandbox/Materials/Masters/M_Master_Toon_Universal.M_Master_Toon_Universal",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.0,
+      "TextureWeight": 0.0,
+      "Roughness": 0.20000000298023224,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": true,
+      "bToonRampActive": true,
+      "bUseHeightToNormal": true
+    },
+    "issues": []
+  },
+  {
+    "actor": "Film_Cast_Sam",
+    "component": "SkeletalMeshComponent0",
+    "slot_index": 6,
+    "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Dana_Mouth_20261016.MI_OneDriveRigs_Dana_Mouth_20261016",
+    "parent": "/Game/EnvSandbox/Materials/Masters/M_Master_Toon_Universal.M_Master_Toon_Universal",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.0,
+      "TextureWeight": 0.0,
+      "Roughness": 0.4000000059604645,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": true,
+      "bToonRampActive": true,
+      "bUseHeightToNormal": true
+    },
+    "issues": []
+  },
+  {
+    "actor": "Film_Cast_Sam",
+    "component": "SkeletalMeshComponent0",
+    "slot_index": 7,
+    "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Dana_Mouth_20261016.MI_OneDriveRigs_Dana_Mouth_20261016",
+    "parent": "/Game/EnvSandbox/Materials/Masters/M_Master_Toon_Universal.M_Master_Toon_Universal",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.0,
+      "TextureWeight": 0.0,
+      "Roughness": 0.4000000059604645,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": true,
+      "bToonRampActive": true,
+      "bUseHeightToNormal": true
+    },
+    "issues": []
+  },
+  {
+    "actor": "Film_Cast_Sam",
+    "component": "SkeletalMeshComponent0",
+    "slot_index": 8,
+    "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Sam_Hair_20261016.MI_OneDriveRigs_Sam_Hair_20261016",
+    "parent": "/Game/Materials/Masters/M_Master_Toon_Hair.M_Master_Toon_Hair",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.8999999761581421,
+      "TextureWeight": 0.0,
+      "Roughness": 0.44999998807907104,
+      "Metallic": 0.0,
+      "RimStrength": 0.15000000596046448,
+      "RimIntensity": 1.2000000476837158,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": true,
+      "bToonRampActive": true,
+      "bUseHeightToNormal": false
+    },
+    "issues": []
+  },
+  {
+    "actor": "Film_Cast_Sam",
+    "component": "SkeletalMeshComponent0",
+    "slot_index": 9,
+    "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Sam_Cloth_20261016.MI_OneDriveRigs_Sam_Cloth_20261016",
+    "parent": "/Game/EnvSandbox/Materials/Masters/M_Master_Toon_Universal.M_Master_Toon_Universal",
+    "textures": {
+      "BaseColorMap": "/Game/Materials/Textures/OneDriveRigs_20261016/T_Sam_Shoes_D_20261016.T_Sam_Shoes_D_20261016"
+    },
+    "scalars": {
+      "RampStrength": 0.8500000238418579,
+      "TextureWeight": 0.0,
+      "Roughness": 0.75,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": true,
+      "bToonRampActive": true,
+      "bUseHeightToNormal": true
+    },
+    "issues": []
+  },
+  {
+    "actor": "Film_Cast_Sam",
+    "component": "SkeletalMeshComponent0",
+    "slot_index": 10,
+    "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Sam_EyeInterior_20261016.MI_OneDriveRigs_Sam_EyeInterior_20261016",
+    "parent": "/Game/EnvSandbox/Materials/Masters/M_Master_Toon_Universal.M_Master_Toon_Universal",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.0,
+      "TextureWeight": 0.0,
+      "Roughness": 0.30000001192092896,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": true,
+      "bToonRampActive": true,
+      "bUseHeightToNormal": true
+    },
+    "issues": []
+  },
+  {
+    "actor": "Film_Cast_Sam",
+    "component": "SkeletalMeshComponent0",
+    "slot_index": 11,
+    "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Sam_Shirt_20261016.MI_OneDriveRigs_Sam_Shirt_20261016",
+    "parent": "/Game/EnvSandbox/Materials/Masters/M_Master_Toon_Universal.M_Master_Toon_Universal",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.8500000238418579,
+      "TextureWeight": 0.0,
+      "Roughness": 0.699999988079071,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": true,
+      "bToonRampActive": true,
+      "bUseHeightToNormal": true
+    },
+    "issues": []
+  },
+  {
+    "actor": "Film_Cast_Spider",
+    "component": "SkeletalMeshComponent0",
+    "slot_index": 0,
+    "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Spider_Eye_20261016.MI_OneDriveRigs_Spider_Eye_20261016",
+    "parent": "/Game/EnvSandbox/Materials/Masters/M_Master_Toon_Universal.M_Master_Toon_Universal",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.0,
+      "TextureWeight": 0.0,
+      "Roughness": 0.10000000149011612,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 3.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": true,
+      "bToonRampActive": true,
+      "bUseHeightToNormal": true
+    },
+    "issues": []
+  },
+  {
+    "actor": "Film_Cast_Spider",
+    "component": "SkeletalMeshComponent0",
+    "slot_index": 1,
+    "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Spider_Fang_20261016.MI_OneDriveRigs_Spider_Fang_20261016",
+    "parent": "/Game/EnvSandbox/Materials/Masters/M_Master_Toon_Universal.M_Master_Toon_Universal",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.0,
+      "TextureWeight": 0.0,
+      "Roughness": 0.25,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": true,
+      "bToonRampActive": true,
+      "bUseHeightToNormal": true
+    },
+    "issues": []
+  },
+  {
+    "actor": "Film_Cast_Spider",
+    "component": "SkeletalMeshComponent0",
+    "slot_index": 2,
+    "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Spider_Body_20261016.MI_OneDriveRigs_Spider_Body_20261016",
+    "parent": "/Game/EnvSandbox/Materials/Masters/M_Master_Toon_Universal.M_Master_Toon_Universal",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.0,
+      "TextureWeight": 0.0,
+      "Roughness": 0.44999998807907104,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 2.5,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": true,
+      "bToonRampActive": true,
+      "bUseHeightToNormal": true
+    },
+    "issues": []
+  },
+  {
+    "actor": "SESSION_CAM_Cast",
+    "component": "CameraProxyMeshComponent_0",
+    "slot_index": 0,
+    "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CameraBody.MI_CineMat_CameraBody",
+    "parent": "/Engine/EditorMaterials/Camera/CineMat.CineMat",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.0,
+      "TextureWeight": 0.0,
+      "Roughness": 0.20000000298023224,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": false,
+      "bToonRampActive": false,
+      "bUseHeightToNormal": false
+    },
+    "issues": []
+  },
+  {
+    "actor": "SESSION_CAM_Cast",
+    "component": "CameraProxyMeshComponent_0",
+    "slot_index": 1,
+    "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CamViewFinder.MI_CineMat_CamViewFinder",
+    "parent": "/Engine/EngineDebugMaterials/M_SimpleOpaque.M_SimpleOpaque",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.0,
+      "TextureWeight": 0.0,
+      "Roughness": 0.0,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": false,
+      "bToonRampActive": false,
+      "bUseHeightToNormal": false
+    },
+    "issues": []
+  },
+  {
+    "actor": "SESSION_CAM_Verify",
+    "component": "CameraProxyMeshComponent_0",
+    "slot_index": 0,
+    "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CameraBody.MI_CineMat_CameraBody",
+    "parent": "/Engine/EditorMaterials/Camera/CineMat.CineMat",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.0,
+      "TextureWeight": 0.0,
+      "Roughness": 0.20000000298023224,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": false,
+      "bToonRampActive": false,
+      "bUseHeightToNormal": false
+    },
+    "issues": []
+  },
+  {
+    "actor": "SESSION_CAM_Verify",
+    "component": "CameraProxyMeshComponent_0",
+    "slot_index": 1,
+    "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CamViewFinder.MI_CineMat_CamViewFinder",
+    "parent": "/Engine/EngineDebugMaterials/M_SimpleOpaque.M_SimpleOpaque",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.0,
+      "TextureWeight": 0.0,
+      "Roughness": 0.0,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": false,
+      "bToonRampActive": false,
+      "bUseHeightToNormal": false
+    },
+    "issues": []
+  },
+  {
+    "actor": "SESSION_CAPTURE_CAST_GROUP_v01",
+    "component": "StaticMeshComponent_0",
+    "slot_index": 0,
+    "material": "/Engine/EditorMaterials/MatineeCam_mat.MatineeCam_mat",
+    "parent": "BASE_MATERIAL",
+    "textures": {},
+    "scalars": {},
+    "switches": {},
+    "issues": []
+  },
+  {
+    "actor": "Film_UDS_Daylight",
+    "component": "ClockDisk",
+    "slot_index": 0,
+    "material": "/Game/UltraDynamicSky/Blueprints/System/Editor_UI/Editor_Materials/UDS_Clock_Material.UDS_Clock_Material",
+    "parent": "BASE_MATERIAL",
+    "textures": {},
+    "scalars": {},
+    "switches": {},
+    "issues": []
+  },
+  {
+    "actor": "Film_UDS_Daylight",
+    "component": "Sky_Sphere",
+    "slot_index": 0,
+    "material": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office:PersistentLevel.Ultra_Dynamic_Sky_C_0.Sky_Sphere.MID_UDS_K_0",
+    "parent": "BASE_MATERIAL",
+    "textures": {},
+    "scalars": {},
+    "switches": {},
+    "issues": []
+  },
+  {
+    "actor": "Film_UDS_Daylight",
+    "component": "UDS Label",
+    "slot_index": 0,
+    "material": "/Game/UltraDynamicSky/Blueprints/System/Editor_UI/Editor_Materials/UDS_EditorLabel.UDS_EditorLabel",
+    "parent": "BASE_MATERIAL",
+    "textures": {},
+    "scalars": {},
+    "switches": {},
+    "issues": []
+  },
+  {
+    "actor": "Film_UDS_Daylight",
+    "component": "Compass",
+    "slot_index": 0,
+    "material": "/Game/UltraDynamicSky/Blueprints/System/Editor_UI/Editor_Materials/UDS_Compass_Material.UDS_Compass_Material",
+    "parent": "BASE_MATERIAL",
+    "textures": {},
+    "scalars": {},
+    "switches": {},
+    "issues": []
+  },
+  {
+    "actor": "Film_UDS_Daylight",
+    "component": "W",
+    "slot_index": 0,
+    "material": "/Game/UltraDynamicSky/Blueprints/System/Editor_UI/Editor_Materials/UDS_Compass_Material_Letters.UDS_Compass_Material_Letters",
+    "parent": "/Game/UltraDynamicSky/Blueprints/System/Editor_UI/Editor_Materials/UDS_Compass_Material.UDS_Compass_Material",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.0,
+      "TextureWeight": 0.0,
+      "Roughness": 0.0,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": false,
+      "bToonRampActive": false,
+      "bUseHeightToNormal": false
+    },
+    "issues": []
+  },
+  {
+    "actor": "Film_UDS_Daylight",
+    "component": "N",
+    "slot_index": 0,
+    "material": "/Game/UltraDynamicSky/Blueprints/System/Editor_UI/Editor_Materials/UDS_Compass_Material_Letters.UDS_Compass_Material_Letters",
+    "parent": "/Game/UltraDynamicSky/Blueprints/System/Editor_UI/Editor_Materials/UDS_Compass_Material.UDS_Compass_Material",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.0,
+      "TextureWeight": 0.0,
+      "Roughness": 0.0,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": false,
+      "bToonRampActive": false,
+      "bUseHeightToNormal": false
+    },
+    "issues": []
+  },
+  {
+    "actor": "Film_UDS_Daylight",
+    "component": "E",
+    "slot_index": 0,
+    "material": "/Game/UltraDynamicSky/Blueprints/System/Editor_UI/Editor_Materials/UDS_Compass_Material_Letters.UDS_Compass_Material_Letters",
+    "parent": "/Game/UltraDynamicSky/Blueprints/System/Editor_UI/Editor_Materials/UDS_Compass_Material.UDS_Compass_Material",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.0,
+      "TextureWeight": 0.0,
+      "Roughness": 0.0,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": false,
+      "bToonRampActive": false,
+      "bUseHeightToNormal": false
+    },
+    "issues": []
+  },
+  {
+    "actor": "Film_UDS_Daylight",
+    "component": "S",
+    "slot_index": 0,
+    "material": "/Game/UltraDynamicSky/Blueprints/System/Editor_UI/Editor_Materials/UDS_Compass_Material_Letters.UDS_Compass_Material_Letters",
+    "parent": "/Game/UltraDynamicSky/Blueprints/System/Editor_UI/Editor_Materials/UDS_Compass_Material.UDS_Compass_Material",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.0,
+      "TextureWeight": 0.0,
+      "Roughness": 0.0,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": false,
+      "bToonRampActive": false,
+      "bUseHeightToNormal": false
+    },
+    "issues": []
+  },
+  {
+    "actor": "Film_UDS_Daylight",
+    "component": "Sun Handle",
+    "slot_index": 0,
+    "material": "/Game/UltraDynamicSky/Blueprints/System/Editor_UI/Editor_Materials/Editor_SunHandle_Material.Editor_SunHandle_Material",
+    "parent": "BASE_MATERIAL",
+    "textures": {},
+    "scalars": {},
+    "switches": {},
+    "issues": []
+  },
+  {
+    "actor": "Film_UDS_Daylight",
+    "component": "Sun Handle",
+    "slot_index": 1,
+    "material": "/Game/UltraDynamicSky/Blueprints/System/Editor_UI/Editor_Materials/Editor_Sun_Glow.Editor_Sun_Glow",
+    "parent": "BASE_MATERIAL",
+    "textures": {},
+    "scalars": {},
+    "switches": {},
+    "issues": []
+  },
+  {
+    "actor": "Film_UDS_Daylight",
+    "component": "Moon Handle",
+    "slot_index": 0,
+    "material": "/Game/UltraDynamicSky/Blueprints/System/Editor_UI/Editor_Materials/Editor_MoonHandle_Material.Editor_MoonHandle_Material",
+    "parent": "BASE_MATERIAL",
+    "textures": {},
+    "scalars": {},
+    "switches": {},
+    "issues": []
+  },
+  {
+    "actor": "Film_UDS_Daylight",
+    "component": "Moon Handle",
+    "slot_index": 1,
+    "material": "/Game/UltraDynamicSky/Blueprints/System/Editor_UI/Editor_Materials/Editor_Moon_Glow.Editor_Moon_Glow",
+    "parent": "/Game/UltraDynamicSky/Blueprints/System/Editor_UI/Editor_Materials/Editor_Sun_Glow.Editor_Sun_Glow",
+    "textures": {},
+    "scalars": {
+      "RampStrength": 0.0,
+      "TextureWeight": 0.0,
+      "Roughness": 0.0,
+      "Metallic": 0.0,
+      "RimStrength": 0.0,
+      "RimIntensity": 0.0,
+      "DreamRimStrength": 0.0
+    },
+    "switches": {
+      "bFilmUseUDIM": false,
+      "bToonRampEnabled": false,
+      "bToonRampActive": false,
+      "bUseHeightToNormal": false
+    },
+    "issues": []
+  }
+]

@@ -1,0 +1,271 @@
+{
+  "map": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office",
+  "actors": {
+    "SkeletalMeshActor": [
+      {
+        "label": "Film_Cast_David",
+        "name": "SkeletalMeshActor_1",
+        "path": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office:PersistentLevel.SkeletalMeshActor_1",
+        "location": [
+          -142.4139448967839,
+          -36.85711249149446,
+          -0.20001403131430778
+        ],
+        "rotation": [
+          8.656369078572508e-14,
+          174.42922973632815,
+          8.562987423082688e-14
+        ],
+        "mesh": "/Game/Staging/Film304Repaired_20261017/David/SK_David_Film304_v01.SK_David_Film304_v01",
+        "animation": {
+          "AnimToPlay": "/Game/Animations/Film304Idle_20261017/AS_David_DeskSleep_48f_v02.AS_David_DeskSleep_48f_v02",
+          "bSavedLooping": true,
+          "bSavedPlaying": true,
+          "SavedPosition": 0,
+          "SavedPlayRate": 1
+        }
+      },
+      {
+        "label": "Film_Cast_Sam",
+        "name": "SkeletalMeshActor_2",
+        "path": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office:PersistentLevel.SkeletalMeshActor_2",
+        "location": [
+          -55.19357049437356,
+          -68.7190989829608,
+          -0.3999996895560486
+        ],
+        "rotation": [
+          0,
+          -165,
+          0
+        ],
+        "mesh": "/Game/Staging/Film304Repaired_20261017/Sam/SK_Sam_Film304_v01.SK_Sam_Film304_v01",
+        "animation": {
+          "AnimToPlay": "/Game/Staging/Film304Repaired_20261017/Poses_Headless/AS_Sam_ArmsCrossed_Polish01.AS_Sam_ArmsCrossed_Polish01",
+          "bSavedLooping": true,
+          "bSavedPlaying": true,
+          "SavedPosition": 0,
+          "SavedPlayRate": 1
+        }
+      },
+      {
+        "label": "Film_Cast_Spider",
+        "name": "SkeletalMeshActor_3",
+        "path": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office:PersistentLevel.SkeletalMeshActor_3",
+        "location": [
+          -155.17446525586678,
+          -56.80356917363224,
+          1.5393535447560112
+        ],
+        "rotation": [
+          -19.29234313964843,
+          180,
+          180
+        ],
+        "mesh": "/Game/Staging/CastRigs_20261016/Spider/Spider_Deform_v2.Spider_Deform_v2",
+        "animation": {
+          "AnimToPlay": "/Game/Animations/Film304Idle_20261017/AS_Spider_OfficeIdle_48f_v01.AS_Spider_OfficeIdle_48f_v01",
+          "bSavedLooping": true,
+          "bSavedPlaying": true,
+          "SavedPosition": 0.43,
+          "SavedPlayRate": 1
+        }
+      },
+      {
+        "label": "Film_Subject_Dana_v08_CleanSkin",
+        "name": "SkeletalMeshActor_0",
+        "path": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office:PersistentLevel.SkeletalMeshActor_0",
+        "location": [
+          15.900062782206001,
+          35.177690130783525,
+          2.328276978594256
+        ],
+        "rotation": [
+          4.73055761874191e-14,
+          -125.19255065917812,
+          2.618155811237221e-14
+        ],
+        "mesh": "/Game/Staging/Film304Repaired_20261017/Dana/SK_Dana_Film304_v10e.SK_Dana_Film304_v10e",
+        "animation": {
+          "AnimToPlay": "/Game/Animations/Film304Idle_20261017/AS_Dana_OfficeFaceIdle_48f_v02.AS_Dana_OfficeFaceIdle_48f_v02",
+          "bSavedLooping": true,
+          "bSavedPlaying": true,
+          "SavedPosition": 0,
+          "SavedPlayRate": 1
+        }
+      },
+      {
+        "label": "Spider_Deform_v2",
+        "name": "SkeletalMeshActor_6",
+        "path": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office:PersistentLevel.SkeletalMeshActor_6",
+        "location": [
+          -160.49990680056547,
+          -97.87164940957165,
+          54.25399932271973
+        ],
+        "rotation": [
+          1.3831033148303993e-14,
+          94.99999999999957,
+          4.841188319471598e-17
+        ],
+        "mesh": "/Game/Staging/CastRigs_20261016/Spider/Spider_Deform_v2.Spider_Deform_v2",
+        "animation": {
+          "AnimToPlay": "/Game/Animations/Film304Idle_20261017/AS_Spider_OfficeIdle_48f_v01.AS_Spider_OfficeIdle_48f_v01",
+          "bSavedLooping": true,
+          "bSavedPlaying": true,
+          "SavedPosition": 0,
+          "SavedPlayRate": 1
+        }
+      }
+    ]
+  },
+  "lights": {
+    "DirectionalLight": [
+      {
+        "label": "Cast_RimKicker_Light",
+        "path": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office:PersistentLevel.DirectionalLight_0",
+        "location": [
+          -363.1775599158841,
+          -167.81705293895703,
+          54.47832868036639
+        ],
+        "rotation": [
+          -6.47868378047849,
+          161.58206154520607,
+          80.05479392841823
+        ],
+        "intensity": {
+          "ContactShadowCastingIntensity": 1,
+          "ContactShadowNonCastingIntensity": 0,
+          "Intensity": 4.879376,
+          "IndirectLightingIntensity": 1,
+          "VolumetricScatteringIntensity": 1
+        }
+      },
+      {
+        "label": "EST_Fill_E1",
+        "path": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office:PersistentLevel.DirectionalLight_1",
+        "location": [
+          -1200,
+          5000,
+          2600
+        ],
+        "rotation": [
+          -12.000000000000002,
+          89.99999999999997,
+          -8.129025412620414e-16
+        ],
+        "intensity": {
+          "ContactShadowCastingIntensity": 1,
+          "ContactShadowNonCastingIntensity": 0,
+          "Intensity": 0,
+          "IndirectLightingIntensity": 1,
+          "VolumetricScatteringIntensity": 1
+        }
+      },
+      {
+        "label": "Light_Cinematic_SunBeam",
+        "path": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office:PersistentLevel.DirectionalLight_3",
+        "location": [
+          -1500,
+          3000,
+          1200
+        ],
+        "rotation": [
+          -17.999999999999996,
+          -21.999999999999996,
+          4.1802913746038283e-16
+        ],
+        "intensity": {
+          "ContactShadowCastingIntensity": 1,
+          "ContactShadowNonCastingIntensity": 0,
+          "Intensity": 0,
+          "IndirectLightingIntensity": 1,
+          "VolumetricScatteringIntensity": 3
+        }
+      }
+    ],
+    "PointLight": [
+      {
+        "label": "Light_AviationBeacon_HeroSpire",
+        "intensity": 8.548365
+      },
+      {
+        "label": "Light_Ceiling_Cavity_02",
+        "intensity": 13.357563
+      },
+      {
+        "label": "Light_Ceiling_Cavity_3",
+        "intensity": 8
+      },
+      {
+        "label": "Light_Ceiling_Cavity_4",
+        "intensity": 8
+      },
+      {
+        "label": "Light_Ceiling_Cavity_5",
+        "intensity": 8
+      },
+      {
+        "label": "Light_David_DeskLamp",
+        "intensity": 1.285181
+      },
+      {
+        "label": "Light_David_DeskLamp2",
+        "intensity": 1.285172
+      }
+    ],
+    "SpotLight": [
+      {
+        "label": "Light_Hero_CharacterFill",
+        "intensity": 10
+      },
+      {
+        "label": "SpotLight",
+        "intensity": 5
+      }
+    ]
+  },
+  "ppvs": [
+    {
+      "label": "EST_PPV_Ink",
+      "BlendWeight": 0,
+      "Priority": 100,
+      "bUnbound": true
+    },
+    {
+      "label": "PPV_P2_WatercolourPaper",
+      "BlendWeight": 0,
+      "Priority": 100,
+      "bUnbound": true
+    },
+    {
+      "label": "PPV_P3_RisoPrint",
+      "BlendWeight": 0,
+      "Priority": 100,
+      "bUnbound": true
+    },
+    {
+      "label": "PPV_P4_CleanCinematic",
+      "BlendWeight": 0,
+      "Priority": 100,
+      "bUnbound": true
+    },
+    {
+      "label": "PPV_StorybookOutline",
+      "BlendWeight": 0,
+      "Priority": 100,
+      "bUnbound": true
+    }
+  ],
+  "fog": [
+    {
+      "label": "EST_Fog_E1",
+      "location": [
+        0,
+        20000,
+        0
+      ]
+    }
+  ]
+}

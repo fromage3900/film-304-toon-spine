@@ -1,0 +1,465 @@
+{
+  "result": "eye_graph_verified_full_character_cel_look_unverified",
+  "eye_material_gate": "pass",
+  "eye_material_readback": [
+    {
+      "asset": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_EyeWhite",
+      "values": {
+        "parent": "/Game/Materials/Masters/DanaFilm/M_DanaFilm_EyeSurface.M_DanaFilm_EyeSurface",
+        "EyeColor": [
+          0.96,
+          0.93,
+          0.86,
+          1.0
+        ],
+        "Roughness": 0.52,
+        "Specular": 0.22
+      },
+      "ok": true
+    },
+    {
+      "asset": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Iris",
+      "values": {
+        "parent": "/Game/Materials/Masters/DanaFilm/M_DanaFilm_EyeSurface.M_DanaFilm_EyeSurface",
+        "EyeColor": [
+          0.46,
+          0.2,
+          0.07,
+          1.0
+        ],
+        "Roughness": 0.32,
+        "Specular": 0.28
+      },
+      "ok": true
+    },
+    {
+      "asset": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_EyeInterior",
+      "values": {
+        "parent": "/Game/Materials/Masters/DanaFilm/M_DanaFilm_EyeSurface.M_DanaFilm_EyeSurface",
+        "EyeColor": [
+          0.008,
+          0.005,
+          0.008,
+          1.0
+        ],
+        "Roughness": 0.48,
+        "Specular": 0.05
+      },
+      "ok": true
+    },
+    {
+      "asset": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Cornea.MI_DanaFilm_Cornea",
+      "values": {
+        "Coverage": 0.08,
+        "Roughness": 0.035,
+        "Specular": 0.65
+      },
+      "ok": true
+    }
+  ],
+  "visual_review": {
+    "day_detail": "Sclera, warm iris, and pupil separate clearly in the focused still.",
+    "lash_readability": "Only a faint upper lash edge is visible; distinct lash silhouette remains weak.",
+    "limitation": "Reviewed render is a static T-pose material preview, not deformation proof."
+  },
+  "lash_fbx": {
+    "EyelashUpperLower_L": {
+      "vertices": 39,
+      "triangles": 48,
+      "source_material": "Dana_Rig_v1_5:danaHair_mat",
+      "weighted_groups": [
+        "Dana_Rig_v1_5:FaceUpperRegion_M"
+      ],
+      "unweighted_vertices": 0
+    },
+    "EyelashUpperLower_R": {
+      "vertices": 39,
+      "triangles": 48,
+      "source_material": "Dana_Rig_v1_5:danaHair_mat",
+      "weighted_groups": [
+        "Dana_Rig_v1_5:FaceUpperRegion_M"
+      ],
+      "unweighted_vertices": 0
+    },
+    "Eyelashes_squint_Lf": {
+      "vertices": 39,
+      "triangles": 48,
+      "source_material": "Dana_Rig_v1_5:danaHair_mat",
+      "weighted_groups": [],
+      "unweighted_vertices": 39
+    },
+    "Eyelashes_squint_Rt": {
+      "vertices": 39,
+      "triangles": 48,
+      "source_material": "Dana_Rig_v1_5:danaHair_mat",
+      "weighted_groups": [],
+      "unweighted_vertices": 39
+    }
+  },
+  "source_fbx": "C:/Users/froma/Downloads/C_DanaRenderTest_OSC.fbx",
+  "renders": [
+    {
+      "path": "G:\\film-304-toon-spine\\Saved\\Renders\\dana_refined_uds\\DANA_REFINED_UDS_NIGHT_FULLBODY_v01.png",
+      "resolution": [
+        1280,
+        720
+      ],
+      "bytes": 946885,
+      "mean_rgb": [
+        141.57,
+        126.59,
+        126.63
+      ],
+      "shot": "DANA_REFINED_UDS_NIGHT_FULLBODY_v01",
+      "exit_code": 0,
+      "fresh_image": true
+    },
+    {
+      "path": "G:\\film-304-toon-spine\\Saved\\Renders\\dana_refined_uds\\DANA_REFINED_UDS_DAY_FULLBODY_v01.png",
+      "resolution": [
+        1280,
+        720
+      ],
+      "bytes": 970439,
+      "mean_rgb": [
+        146.83,
+        161.19,
+        175.56
+      ],
+      "shot": "DANA_REFINED_UDS_DAY_FULLBODY_v01",
+      "exit_code": 0,
+      "fresh_image": true
+    },
+    {
+      "path": "G:\\film-304-toon-spine\\Saved\\Renders\\dana_refined_uds\\DANA_REFINED_UDS_DAY_DETAIL_v01.png",
+      "resolution": [
+        1280,
+        720
+      ],
+      "bytes": 1037849,
+      "mean_rgb": [
+        144.63,
+        152.41,
+        160.0
+      ],
+      "shot": "DANA_REFINED_UDS_DAY_DETAIL_v01",
+      "role": "focused DanaFilm eye material detail"
+    }
+  ],
+  "visibility_preview": {
+    "fbx": {
+      "result": "pass",
+      "source": "G:\\film-304-toon-spine\\Saved\\Exports\\DanaImportAudit\\Dana_Film_EyelashPoseClean.fbx",
+      "output": "G:\\film-304-toon-spine\\Saved\\Exports\\DanaImportAudit\\Dana_Film_WeightedLashesVisible_Preview.fbx",
+      "fbx_version": 7700,
+      "readback_version": 7700,
+      "visible_lashes": {
+        "EyelashUpperLower_R": {
+          "before": 0.0,
+          "after": 1.0
+        },
+        "EyelashUpperLower_L": {
+          "before": 0.0,
+          "after": 1.0
+        }
+      },
+      "object_counts": {
+        "Geometry": 377,
+        "Deformer": 280,
+        "Model": 2464
+      },
+      "source_sha256": "e550fe2c98f05c9c5317ef75a14ba1b720acc2ba2cdde5ebfe681e0e7bbca7dc",
+      "output_sha256": "75b982a9e79fe01f6bb38c7a6ff8b674c4d47da215eee50884cecc8315f07f9c",
+      "scope": "Visibility flags only on intended weighted lashes; source file untouched."
+    },
+    "unreal_import": {
+      "result": "imported",
+      "source": "G:\\film-304-toon-spine\\Saved\\Exports\\DanaImportAudit\\Dana_Film_WeightedLashesVisible_Preview.fbx",
+      "destination": "/Game/Preview/DanaLashesVisible",
+      "imported_object_paths": [
+        "/Game/Preview/DanaLashesVisible/Dana_WeightedLashesVisible_Preview_Skeleton.Dana_WeightedLashesVisible_Preview_Skeleton",
+        "/Game/Preview/DanaLashesVisible/Dana_WeightedLashesVisible_Preview.Dana_WeightedLashesVisible_Preview"
+      ],
+      "assets": [
+        {
+          "path": "/Game/Preview/DanaLashesVisible/Dana_WeightedLashesVisible_Preview_Skeleton.Dana_WeightedLashesVisible_Preview_Skeleton",
+          "class": "Skeleton",
+          "skeleton": null
+        },
+        {
+          "path": "/Game/Preview/DanaLashesVisible/Dana_WeightedLashesVisible_Preview.Dana_WeightedLashesVisible_Preview",
+          "class": "SkeletalMesh",
+          "skeleton": "/Game/Preview/DanaLashesVisible/Dana_WeightedLashesVisible_Preview_Skeleton.Dana_WeightedLashesVisible_Preview_Skeleton"
+        }
+      ],
+      "source_asset_replaced": false,
+      "qualification": "Import readback only; inspect skeletal mesh components and render before promotion."
+    },
+    "comparison_level": {
+      "result": "built",
+      "map": "/Game/Maps/Lookdev/L_Dana_LashVisibility_Compare",
+      "variants": [
+        {
+          "variant": "Canonical",
+          "mesh": "/Game/Meshes/Office/Props/C_DanaRenderTest_OSC.C_DanaRenderTest_OSC",
+          "materials": [
+            {
+              "slot": "danaHair_mat",
+              "material": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Hair.MI_DanaFilm_Hair"
+            },
+            {
+              "slot": "danaIris_mat",
+              "material": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Iris.MI_DanaFilm_Iris"
+            },
+            {
+              "slot": "danaEye_mat",
+              "material": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_EyeWhite.MI_DanaFilm_EyeWhite"
+            },
+            {
+              "slot": "danaCornea_mat",
+              "material": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Cornea.MI_DanaFilm_Cornea"
+            },
+            {
+              "slot": "danaEyeInt_mat",
+              "material": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_EyeInterior.MI_DanaFilm_EyeInterior"
+            },
+            {
+              "slot": "danaShoes_mat",
+              "material": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Shoes.MI_DanaFilm_Shoes"
+            },
+            {
+              "slot": "danaPantsButton_mat",
+              "material": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Button.MI_DanaFilm_Button"
+            },
+            {
+              "slot": "danaPants_mat",
+              "material": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Skirt.MI_DanaFilm_Skirt"
+            },
+            {
+              "slot": "danaShirt_mat",
+              "material": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Shirt.MI_DanaFilm_Shirt"
+            },
+            {
+              "slot": "danaSkin_mat",
+              "material": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Skin.MI_DanaFilm_Skin"
+            },
+            {
+              "slot": "openPBR_shader1",
+              "material": "/Game/Materials/Masters/DanaFilm/M_DanaFilm_ImportHelpers_Hidden.M_DanaFilm_ImportHelpers_Hidden"
+            }
+          ]
+        },
+        {
+          "variant": "VisibleLashes",
+          "mesh": "/Game/Preview/DanaLashesVisible/Dana_WeightedLashesVisible_Preview.Dana_WeightedLashesVisible_Preview",
+          "materials": [
+            {
+              "slot": "danaHair_mat",
+              "material": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Hair.MI_DanaFilm_Hair"
+            },
+            {
+              "slot": "danaIris_mat",
+              "material": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Iris.MI_DanaFilm_Iris"
+            },
+            {
+              "slot": "danaEye_mat",
+              "material": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_EyeWhite.MI_DanaFilm_EyeWhite"
+            },
+            {
+              "slot": "danaCornea_mat",
+              "material": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Cornea.MI_DanaFilm_Cornea"
+            },
+            {
+              "slot": "danaEyeInt_mat",
+              "material": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_EyeInterior.MI_DanaFilm_EyeInterior"
+            },
+            {
+              "slot": "danaShoes_mat",
+              "material": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Shoes.MI_DanaFilm_Shoes"
+            },
+            {
+              "slot": "danaPantsButton_mat",
+              "material": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Button.MI_DanaFilm_Button"
+            },
+            {
+              "slot": "danaPants_mat",
+              "material": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Skirt.MI_DanaFilm_Skirt"
+            },
+            {
+              "slot": "danaShirt_mat",
+              "material": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Shirt.MI_DanaFilm_Shirt"
+            },
+            {
+              "slot": "danaSkin_mat",
+              "material": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Skin.MI_DanaFilm_Skin"
+            }
+          ]
+        }
+      ],
+      "lights": [
+        "Key",
+        "Fill",
+        "Rim"
+      ],
+      "camera": "/Game/Maps/Lookdev/L_Dana_LashVisibility_Compare.L_Dana_LashVisibility_Compare:PersistentLevel.CineCameraActor_0",
+      "sequence": "/Game/Sequences/DanaLashCompare/LS_DANA_LASH_VISIBILITY_COMPARE_v01.LS_DANA_LASH_VISIBILITY_COMPARE_v01",
+      "config": "/Game/MoviePipelines/DanaLashCompare/CFG_DANA_LASH_VISIBILITY_COMPARE_v01.CFG_DANA_LASH_VISIBILITY_COMPARE_v01",
+      "note": "side-by-side static source-pose comparison; imported preview skeleton is separate."
+    },
+    "render": {
+      "path": "G:\\film-304-toon-spine\\Saved\\Renders\\dana_lash_compare\\DANA_LASH_VISIBILITY_COMPARE_v01.png",
+      "exit_code": 0,
+      "mrq_completed": true,
+      "camera_binding_resolved": true,
+      "visual_result": "invalid_black_frame",
+      "limitation": "Headless game render returned black despite a resolved camera cut; not valid visual proof."
+    },
+    "fbx_v02": {
+      "result": "pass",
+      "source": "C:\\Users\\froma\\Downloads\\C_DanaRenderTest_OSC.fbx",
+      "output": "G:\\film-304-toon-spine\\Saved\\Exports\\DanaImportAudit\\Dana_Film_WeightedLashesVisible_v02.fbx",
+      "fbx_version": 7700,
+      "readback_version": 7700,
+      "visible_lashes": {
+        "EyelashUpperLower_L": {
+          "before": 0.0,
+          "after": 1.0
+        },
+        "FaceDeformationSystem": {
+          "before": 0.0,
+          "after": 1.0
+        },
+        "EyelashUpperLower_R": {
+          "before": 0.0,
+          "after": 1.0
+        }
+      },
+      "object_counts": {
+        "Geometry": 398,
+        "Deformer": 280,
+        "Model": 2485
+      },
+      "source_sha256": "ec08b414898dac6200b4fd474632cc063230d1184cc809d3e282aa74c7a6c440",
+      "output_sha256": "6a1b70c48636c41d6b2b130e7108fbf0afbdd1a3128dce676169951c8c9a9e46",
+      "scope": "Visibility flags on intended weighted lashes and their hidden facial deformation parent; source file untouched."
+    },
+    "unreal_import_v02": {
+      "result": "imported",
+      "source": "G:\\film-304-toon-spine\\Saved\\Exports\\DanaImportAudit\\Dana_Film_WeightedLashesVisible_v02.fbx",
+      "destination": "/Game/Preview/DanaLashesVisibleV02",
+      "imported_object_paths": [
+        "/Game/Preview/DanaLashesVisibleV02/Dana_WeightedLashesVisible_v02_Skeleton.Dana_WeightedLashesVisible_v02_Skeleton",
+        "/Game/Preview/DanaLashesVisibleV02/Dana_WeightedLashesVisible_v02.Dana_WeightedLashesVisible_v02"
+      ],
+      "assets": [
+        {
+          "path": "/Game/Preview/DanaLashesVisibleV02/Dana_WeightedLashesVisible_v02_Skeleton.Dana_WeightedLashesVisible_v02_Skeleton",
+          "class": "Skeleton",
+          "skeleton": null
+        },
+        {
+          "path": "/Game/Preview/DanaLashesVisibleV02/Dana_WeightedLashesVisible_v02.Dana_WeightedLashesVisible_v02",
+          "class": "SkeletalMesh",
+          "skeleton": "/Game/Preview/DanaLashesVisibleV02/Dana_WeightedLashesVisible_v02_Skeleton.Dana_WeightedLashesVisible_v02_Skeleton"
+        }
+      ],
+      "source_asset_replaced": false,
+      "qualification": "Import readback only; inspect skeletal mesh components and render before promotion."
+    },
+    "comparison_render": {
+      "path": "G:\\film-304-toon-spine\\Saved\\Renders\\dana_lash_compare\\DANA_LASH_VISIBILITY_COMPARE_v01.png",
+      "last_write": "2026-10-16T10:26:14-04:00",
+      "bytes": 675313,
+      "exit_code": 0,
+      "visual_result": "invalid_geometry_and_framing",
+      "observation": "Fresh run with the v02 imported asset still shows a mostly empty frame and partial body geometry. Both face regions are missing, so the lash comparison gate fails."
+    }
+  },
+  "conclusion": "The source lashes and their facial deformation parent were hidden using FBX Visibility properties marked user-defined, which Blender ignores. The corrected non-destructive FBX sets normal visibility properties; Unreal imported it to a separate SkeletalMesh and Skeleton. The render still omits most of Dana and does not support a lash comparison. The source hierarchy is malformed for a clean full-character import and requires a Maya-side render mesh/skin export; preserve canonical Unreal assets.",
+  "pending": [
+    "Validate profile bindings and band response on Dana skin, hair, shirt, and skirt master graphs after compile.",
+    "Build a side-by-side neutral light-ramp diagnostic with clear material output readback.",
+    "Resolve Maya FBX face/body render hierarchy before lash comparison or presentation staging."
+  ],
+  "scope_note": "No FBX, rig, camera, or project source assets modified by this audit.",
+  "brutalist_stage": {
+    "map": "/Game/Maps/Lookdev/L_Dana_Brutalist_Lookdev",
+    "render": "G:\\film-304-toon-spine\\Saved\\Renders\\dana_brutalist\\DANA_BRUTALIST_KEYLIGHT_PORTRAIT_v01.png",
+    "render_completed": true,
+    "visual_result": "invalid_empty_dark_frame",
+    "presentation_status": "not ready"
+  },
+  "valid_reference_render": {
+    "path": "G:\\film-304-toon-spine\\Saved\\Renders\\dana_refined_uds\\DANA_REFINED_UDS_DAY_FULLBODY_v01.png",
+    "visual_result": "usable_materials_and_face_reference",
+    "limitation": "Neutral source pose and existing daylight lookdev only; no Brutalist setting or lash FBX correction."
+  },
+  "toon_shading_audit": {
+    "full_character_render_gate": {
+      "result": "unverified_soft_shading",
+      "latest_render": "G:\\film-304-toon-spine\\Saved\\Renders\\dana_refined_uds\\DANA_REFINED_UDS_DAY_FULLBODY_v01.png",
+      "latest_render_last_write": "2026-10-16T10:53:19-04:00",
+      "visual_read": "Dana is lit and readable, but skin, hair, and clothing still read softly shaded; the intended three cel bands are not clearly visible.",
+      "profile": "/Game/Materials/ToonProfiles/TP_DanaFilm_Clean",
+      "profile_diffuse_bands": [[0.0,0.18],[0.28,0.18],[0.32,0.48],[0.62,0.48],[0.66,0.82],[1.0,0.82]],
+      "profile_diffuse_indirect_scale": 0.45,
+      "toon_profile_master_readback": [
+        {"family":"Character","profile":"/Game/Materials/ToonProfiles/TP_DanaFilm_Clean","compiled":true},
+        {"family":"Hair","profile":"/Game/Materials/ToonProfiles/TP_DanaFilm_Clean","compiled":true},
+        {"family":"Face","profile":"/Game/Materials/ToonProfiles/TP_DanaFilm_Clean","compiled":true}
+      ],
+      "key_dynamic_shadows": true,
+      "validated_palette_ramp_slots": ["danahair_mat","danashoes_mat","danapantsbutton_mat","danapants_mat","danashirt_mat","danaskin_mat"],
+      "diagnostic_limit": "Isolated diagnostic renders black and is invalid evidence; do not present it as a shader result."
+    },
+    "eye_master_graph": {
+      "asset": "/Game/Materials/Masters/DanaFilm/M_DanaFilm_EyeSurface.M_DanaFilm_EyeSurface",
+      "toon_bsdf_count": 1,
+      "toon_profile": "/Game/Materials/ToonProfiles/TP_DanaFilm_Eye",
+      "post_compile_readback": "/Game/Materials/ToonProfiles/TP_DanaFilm_Eye",
+      "compile_and_save": "completed"
+    },
+    "cornea_master_graph": {
+      "asset": "/Game/Materials/Masters/DanaFilm/M_DanaFilm_CorneaClear.M_DanaFilm_CorneaClear",
+      "toon_bsdf_count": 1,
+      "toon_profile": "/Game/Materials/ToonProfiles/TP_DanaFilm_Eye",
+      "post_compile_readback": "/Game/Materials/ToonProfiles/TP_DanaFilm_Eye.TP_DanaFilm_Eye",
+      "compile_and_save": "completed"
+    },
+    "diffuse_bands": [
+      [
+        0.0,
+        0.34
+      ],
+      [
+        0.32,
+        0.34
+      ],
+      [
+        0.38,
+        0.63
+      ],
+      [
+        0.7,
+        0.63
+      ],
+      [
+        0.76,
+        0.92
+      ],
+      [
+        1.0,
+        0.92
+      ]
+    ],
+    "compiled_materials": "Substrate Toon BSDF and profile read back after compile/save",
+    "fresh_closeup": {
+      "path": "G:\\film-304-toon-spine\\Saved\\Renders\\dana_refined_uds\\DANA_REFINED_UDS_DAY_DETAIL_v01.png",
+      "last_write": "2026-10-16T10:41:03-04:00",
+      "bytes": 1024216,
+      "exit_code": 0,
+      "visual_read": "eye detail visible; face shading still soft and does not establish a strong cel-shaded look"
+    },
+    "qualification": "graph-level Toon wiring is now verified for eyes/cornea. Full character toon perception remains visually weak and needs a separate master/profile + lighting comparison; no claim that Dana as a whole is fixed."
+  }
+}

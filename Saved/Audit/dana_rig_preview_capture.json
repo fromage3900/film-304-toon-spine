@@ -1,0 +1,28 @@
+{
+  "status": "completed",
+  "started_epoch": 1791944019.90464,
+  "errors": [],
+  "qualification": "helper geometry hidden in material slot; source rig and weights unchanged",
+  "executor_success": true,
+  "captures": [
+    {
+      "shot": "DANA_REFINED_UDS_NIGHT_FULLBODY_v01",
+      "image": "G:\\film-304-toon-spine\\Saved\\Renders\\dana_refined_uds\\DANA_REFINED_UDS_NIGHT_FULLBODY_v01.png",
+      "fresh": true,
+      "bytes": 998561
+    },
+    {
+      "shot": "DANA_REFINED_UDS_DAY_FULLBODY_v01",
+      "image": "G:\\film-304-toon-spine\\Saved\\Renders\\dana_refined_uds\\DANA_REFINED_UDS_DAY_FULLBODY_v01.png",
+      "fresh": true,
+      "bytes": 988568
+    },
+    {
+      "shot": "DANA_REFINED_UDS_DAY_DETAIL_v01",
+      "image": "G:\\film-304-toon-spine\\Saved\\Renders\\dana_refined_uds\\DANA_REFINED_UDS_DAY_DETAIL_v01.png",
+      "fresh": true,
+      "bytes": 1075815
+    }
+  ],
+  "capture_pass": true
+}

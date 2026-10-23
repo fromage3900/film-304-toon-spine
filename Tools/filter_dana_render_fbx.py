@@ -1,4 +1,4 @@
-"""Remove Maya helper meshes from Dana's FBX without re-exporting its rig.
+"""Remove Maya helpers and unbound squint lashes without re-exporting the rig.
 
 Run with Blender's Python, whose FBX parser and writer preserve the source
 transforms, geometry streams, and skin cluster data. This does not create
@@ -18,7 +18,7 @@ RENDER_MODELS = {
     'Dana_Eye_Rt_GEO', 'Dana_Cornea_Rt_GEO', 'Dana_EyeInt_Rt_GEO',
     'Dana_Shoe_Lf_GEO', 'Dana_Shoe_Rt_GEO', 'PantsButton_GEO',
     'Dana_Jeans_GEO', 'Dana_Shirt_GEO', 'Dana_Body_GEOBase',
-    'Dana_Original_Hair_GEO',
+    'Dana_Original_Hair_GEO', 'EyelashUpperLower_L', 'EyelashUpperLower_R',
 }
 
 
@@ -131,8 +131,22 @@ def main(source, target):
         raise RuntimeError('Body skin data changed; review before filtering')
     before_triangles = sum(triangles(geo) for geo, _ in meshes)
     retained_triangles = sum(triangles(geo) for geo, _ in kept)
-    if before_triangles != 312553 or retained_triangles != 37822:
+    if before_triangles != 312553 or retained_triangles != 37918:
         raise RuntimeError('Unexpected source triangle count')
+    retained_names = {name(model.props[1]).split(':')[-1] for _, model in kept}
+    expected_lashes = {'EyelashUpperLower_L', 'EyelashUpperLower_R'}
+    excluded_squint_lashes = {'Eyelashes_squint_Lf', 'Eyelashes_squint_Rt'}
+    if not expected_lashes <= retained_names or excluded_squint_lashes & retained_names:
+        raise RuntimeError('Expected weighted lash pair or squint exclusion changed')
+    skin_ids = {int(item.props[0]) for item in objects
+                if item.id == b'Deformer' and item.props[-1] == b'Skin'}
+    skinned_geometries = {int(link.props[2]) for link in connections
+                          if len(link.props) >= 3 and link.props[0] == b'OO'
+                          and int(link.props[1]) in skin_ids}
+    lash_geometry_ids = {int(geo.props[0]) for geo, model in kept
+                         if name(model.props[1]).split(':')[-1] in expected_lashes}
+    if not lash_geometry_ids <= skinned_geometries:
+        raise RuntimeError('A retained lash mesh has no skin deformer')
     child(root, b'Objects').elems[:] = [o for o in objects
                                        if not o.props or int(o.props[0]) not in removed_ids]
     child(root, b'Connections').elems[:] = [c for c in connections
@@ -154,8 +168,11 @@ def main(source, target):
     checked, checked_version = parse_fbx.parse(str(target))
     _, _, checked_meshes = inspect(checked)
     checked_triangles = sum(triangles(geo) for geo, _ in checked_meshes)
-    if checked_version != version or len(checked_meshes) != 14 or checked_triangles != 37822:
+    if checked_version != version or len(checked_meshes) != 16 or checked_triangles != 37918:
         raise RuntimeError('Filtered FBX failed readback')
+    checked_names = {name(model.props[1]).split(':')[-1] for _, model in checked_meshes}
+    if not expected_lashes <= checked_names or excluded_squint_lashes & checked_names:
+        raise RuntimeError('Filtered FBX lash readback failed')
     report = {
         'source': str(source), 'source_sha256': hashlib.sha256(source.read_bytes()).hexdigest(),
         'output': str(target), 'output_sha256': hashlib.sha256(target.read_bytes()).hexdigest(),
@@ -167,7 +184,7 @@ def main(source, target):
         'body_skin_cluster_count': len(body_skin_ids),
         'qualification': 'Geometry filter only; visible body remains unbound in the source FBX.',
     }
-    audit = target.parents[2] / 'Audit' / 'dana_fbx_geometry_filter.json'
+    audit = target.parents[2] / 'Audit' / f'dana_fbx_geometry_filter_{target.stem}.json'
     audit.parent.mkdir(parents=True, exist_ok=True)
     audit.write_text(json.dumps(report, indent=2), encoding='utf-8')
     print('DANA_FBX_GEOMETRY_FILTER', json.dumps(report), flush=True)

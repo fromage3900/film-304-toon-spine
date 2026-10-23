@@ -1,0 +1,111 @@
+{
+  "result": "pass",
+  "map": "/Game/Maps/Lookdev/L_Dana_Film_Lookdev",
+  "dana_actor": "DANA_FILM_Dana",
+  "mesh": "/Game/Meshes/Office/Props/C_DanaRenderTest_OSC.C_DanaRenderTest_OSC",
+  "dana_component_count": 1,
+  "material_slots": [
+    {
+      "index": 0,
+      "slot": "danaHair_mat",
+      "expected": "/Game/Materials/Instances/MI_Dana_Hair.MI_Dana_Hair",
+      "actual": "/Game/Materials/Instances/MI_Dana_Hair.MI_Dana_Hair",
+      "ok": true
+    },
+    {
+      "index": 1,
+      "slot": "danaIris_mat",
+      "expected": "/Game/Materials/Instances/MI_Dana_Iris.MI_Dana_Iris",
+      "actual": "/Game/Materials/Instances/MI_Dana_Iris.MI_Dana_Iris",
+      "ok": true
+    },
+    {
+      "index": 2,
+      "slot": "danaEye_mat",
+      "expected": "/Game/Materials/Instances/MI_Dana_EyeWhite.MI_Dana_EyeWhite",
+      "actual": "/Game/Materials/Instances/MI_Dana_EyeWhite.MI_Dana_EyeWhite",
+      "ok": true
+    },
+    {
+      "index": 3,
+      "slot": "danaCornea_mat",
+      "expected": "/Game/Materials/Instances/MI_Dana_Cornea.MI_Dana_Cornea",
+      "actual": "/Game/Materials/Instances/MI_Dana_Cornea.MI_Dana_Cornea",
+      "ok": true
+    },
+    {
+      "index": 4,
+      "slot": "danaEyeInt_mat",
+      "expected": "/Game/Materials/Instances/MI_Dana_EyeInterior.MI_Dana_EyeInterior",
+      "actual": "/Game/Materials/Instances/MI_Dana_EyeInterior.MI_Dana_EyeInterior",
+      "ok": true
+    },
+    {
+      "index": 5,
+      "slot": "danaShoes_mat",
+      "expected": "/Game/Materials/Instances/MI_Dana_Shoes.MI_Dana_Shoes",
+      "actual": "/Game/Materials/Instances/MI_Dana_Shoes.MI_Dana_Shoes",
+      "ok": true
+    },
+    {
+      "index": 6,
+      "slot": "danaPantsButton_mat",
+      "expected": "/Game/Materials/Instances/MI_Dana_Button.MI_Dana_Button",
+      "actual": "/Game/Materials/Instances/MI_Dana_Button.MI_Dana_Button",
+      "ok": true
+    },
+    {
+      "index": 7,
+      "slot": "danaPants_mat",
+      "expected": "/Game/Materials/Instances/MI_Dana_Skirt.MI_Dana_Skirt",
+      "actual": "/Game/Materials/Instances/MI_Dana_Skirt.MI_Dana_Skirt",
+      "ok": true
+    },
+    {
+      "index": 8,
+      "slot": "danaShirt_mat",
+      "expected": "/Game/Materials/Instances/MI_Dana_Shirt.MI_Dana_Shirt",
+      "actual": "/Game/Materials/Instances/MI_Dana_Shirt.MI_Dana_Shirt",
+      "ok": true
+    },
+    {
+      "index": 9,
+      "slot": "danaSkin_mat",
+      "expected": "/Game/Materials/Instances/MI_Dana_Skin.MI_Dana_Skin",
+      "actual": "/Game/Materials/Instances/MI_Dana_Skin.MI_Dana_Skin",
+      "ok": true
+    },
+    {
+      "index": 10,
+      "slot": "openPBR_shader1",
+      "expected": "/Game/Materials/Instances/MI_Dana_Skin.MI_Dana_Skin",
+      "actual": "/Game/Materials/Instances/MI_Dana_Skin.MI_Dana_Skin",
+      "ok": true
+    }
+  ],
+  "captures": [
+    {
+      "shot": "full",
+      "camera": "DANA_FILM_Camera_FullBody",
+      "image": "G:\\film-304-toon-spine\\Saved\\Renders\\dana_lookdev\\DANA_FILM_FULLBODY_v01.png",
+      "bytes": 17709,
+      "resolution": [
+        1280,
+        720
+      ],
+      "task_done": true
+    },
+    {
+      "shot": "detail",
+      "camera": "DANA_FILM_Camera_MaterialDetail",
+      "image": "G:\\film-304-toon-spine\\Saved\\Renders\\dana_lookdev\\DANA_FILM_MATERIAL_DETAIL_v01.png",
+      "bytes": 18329,
+      "resolution": [
+        1280,
+        720
+      ],
+      "task_done": true
+    }
+  ],
+  "qualification": "lookdev prototype; source rig pose and mesh unchanged"
+}

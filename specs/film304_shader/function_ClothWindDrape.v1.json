@@ -1,0 +1,273 @@
+{
+  "asset_path": "/Game/Materials/Functions/Film304/MF_Film304_ClothWindDrape",
+  "description": "",
+  "user_exposed_caption": "",
+  "expose_to_library": false,
+  "type": "MaterialFunction",
+  "library_categories": [
+    "Misc"
+  ],
+  "inputs": [
+    {
+      "id": "MaterialExpressionFunctionInput_0",
+      "name": "UV",
+      "sort_priority": 0,
+      "description": "",
+      "use_preview_value_as_default": false,
+      "type": "Vector2",
+      "preview_value": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "blend_input_relevance": 0,
+      "pos": [
+        -1600,
+        0
+      ]
+    },
+    {
+      "id": "MaterialExpressionFunctionInput_1",
+      "name": "Time",
+      "sort_priority": 1,
+      "description": "",
+      "use_preview_value_as_default": false,
+      "type": "Scalar",
+      "preview_value": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "blend_input_relevance": 0,
+      "pos": [
+        -1600,
+        140
+      ]
+    },
+    {
+      "id": "MaterialExpressionFunctionInput_2",
+      "name": "WindStrength",
+      "sort_priority": 2,
+      "description": "",
+      "use_preview_value_as_default": false,
+      "type": "Scalar",
+      "preview_value": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "blend_input_relevance": 0,
+      "pos": [
+        -1600,
+        260
+      ]
+    },
+    {
+      "id": "MaterialExpressionFunctionInput_3",
+      "name": "WindSpeed",
+      "sort_priority": 3,
+      "description": "",
+      "use_preview_value_as_default": false,
+      "type": "Scalar",
+      "preview_value": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "blend_input_relevance": 0,
+      "pos": [
+        -1600,
+        380
+      ]
+    },
+    {
+      "id": "MaterialExpressionFunctionInput_4",
+      "name": "WindDirection",
+      "sort_priority": 4,
+      "description": "",
+      "use_preview_value_as_default": false,
+      "type": "Vector3",
+      "preview_value": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "blend_input_relevance": 0,
+      "pos": [
+        -1600,
+        500
+      ]
+    },
+    {
+      "id": "MaterialExpressionFunctionInput_5",
+      "name": "FoldingAmount",
+      "sort_priority": 5,
+      "description": "",
+      "use_preview_value_as_default": false,
+      "type": "Scalar",
+      "preview_value": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "blend_input_relevance": 0,
+      "pos": [
+        -1600,
+        620
+      ]
+    },
+    {
+      "id": "MaterialExpressionFunctionInput_6",
+      "name": "DrapeMask",
+      "sort_priority": 6,
+      "description": "",
+      "use_preview_value_as_default": false,
+      "type": "Scalar",
+      "preview_value": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "blend_input_relevance": 0,
+      "pos": [
+        -1600,
+        740
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "MaterialExpressionFunctionOutput_1",
+      "name": "NormalOffset",
+      "sort_priority": 0,
+      "description": "",
+      "pos": [
+        -200,
+        320
+      ]
+    },
+    {
+      "id": "MaterialExpressionFunctionOutput_0",
+      "name": "WPO",
+      "sort_priority": 0,
+      "description": "",
+      "pos": [
+        -200,
+        120
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "MaterialExpressionConstant3Vector_0",
+      "class": "Constant3Vector",
+      "pos": [
+        -400,
+        320
+      ],
+      "props": {
+        "Constant": "(R=0.000000,G=0.000000,B=0.000000,A=1.000000)"
+      }
+    }
+  ],
+  "custom_hlsl_nodes": [
+    {
+      "id": "MaterialExpressionCustom_0",
+      "pos": [
+        -1000,
+        100
+      ],
+      "code": "float sweep = WindStrength * sin(Time * WindSpeed * 3.14159 * 2.0);\nfloat phaseU = UV.x * 6.28318;\nfloat fold = FoldingAmount * sin(phaseU * 2.0 + Time * WindSpeed * 6.28318 * 0.75);\nfloat flap = FoldingAmount * 0.35 * sin(phaseU + Time * WindSpeed * 6.28318 * 1.25 + 1.7);\nfloat amp = DrapeMask * saturate(WindStrength * 3.0 + FoldingAmount * 1.5);\nfloat3 offset = WindDirection * (sweep + fold + flap) * amp;\noffset.z += amp * 0.25 * (1.0 + sin(Time * WindSpeed * 3.14159 * 1.6 + phaseU * 0.5));\nreturn offset;",
+      "description": "MF_ClothWindDrape wind sweep/fold/flap",
+      "output_type": "Float3",
+      "inputs": [
+        {
+          "name": "UV"
+        },
+        {
+          "name": "Time"
+        },
+        {
+          "name": "WindStrength"
+        },
+        {
+          "name": "WindSpeed"
+        },
+        {
+          "name": "WindDirection"
+        },
+        {
+          "name": "FoldingAmount"
+        },
+        {
+          "name": "DrapeMask"
+        }
+      ],
+      "additional_outputs": []
+    }
+  ],
+  "connections": [
+    {
+      "from": "MaterialExpressionFunctionInput_0",
+      "from_pin": "None",
+      "to": "MaterialExpressionCustom_0",
+      "to_pin": "UV"
+    },
+    {
+      "from": "MaterialExpressionFunctionInput_1",
+      "from_pin": "None",
+      "to": "MaterialExpressionCustom_0",
+      "to_pin": "Time"
+    },
+    {
+      "from": "MaterialExpressionFunctionInput_2",
+      "from_pin": "None",
+      "to": "MaterialExpressionCustom_0",
+      "to_pin": "WindStrength"
+    },
+    {
+      "from": "MaterialExpressionFunctionInput_3",
+      "from_pin": "None",
+      "to": "MaterialExpressionCustom_0",
+      "to_pin": "WindSpeed"
+    },
+    {
+      "from": "MaterialExpressionFunctionInput_4",
+      "from_pin": "None",
+      "to": "MaterialExpressionCustom_0",
+      "to_pin": "WindDirection"
+    },
+    {
+      "from": "MaterialExpressionFunctionInput_5",
+      "from_pin": "None",
+      "to": "MaterialExpressionCustom_0",
+      "to_pin": "FoldingAmount"
+    },
+    {
+      "from": "MaterialExpressionFunctionInput_6",
+      "from_pin": "None",
+      "to": "MaterialExpressionCustom_0",
+      "to_pin": "DrapeMask"
+    },
+    {
+      "from": "MaterialExpressionCustom_0",
+      "from_pin": "None",
+      "to": "MaterialExpressionFunctionOutput_0",
+      "to_pin": "None"
+    },
+    {
+      "from": "MaterialExpressionConstant3Vector_0",
+      "from_pin": "None",
+      "to": "MaterialExpressionFunctionOutput_1",
+      "to_pin": "None"
+    }
+  ],
+  "expression_count": 11
+}

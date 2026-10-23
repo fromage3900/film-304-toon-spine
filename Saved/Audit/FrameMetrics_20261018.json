@@ -1,0 +1,196 @@
+{
+  "frames": [
+    {
+      "label": "HERO01_clean",
+      "path": "Saved\\Audit\\HeroLock20261018\\clean_01_wide.png.png",
+      "size": [
+        1323,
+        744
+      ],
+      "bytes": 1154152,
+      "mean_luma": 75.49,
+      "pct_clipped_white": 0.0,
+      "pct_crushed_black": 9.93,
+      "blown_row_bands": [],
+      "dark_row_bands": [],
+      "top_third_mean": 78.66,
+      "mid_third_mean": 104.3,
+      "bot_third_mean": 43.19
+    },
+    {
+      "label": "HERO02_clean",
+      "path": "Saved\\Audit\\HeroLock20261018\\clean_02_medium.png.png",
+      "size": [
+        1323,
+        744
+      ],
+      "bytes": 1141062,
+      "mean_luma": 75.98,
+      "pct_clipped_white": 0.0,
+      "pct_crushed_black": 5.42,
+      "blown_row_bands": [],
+      "dark_row_bands": [],
+      "top_third_mean": 41.37,
+      "mid_third_mean": 92.41,
+      "bot_third_mean": 94.01
+    },
+    {
+      "label": "HERO03_clean",
+      "path": "Saved\\Audit\\HeroLock20261018\\clean_03_close.png.png",
+      "size": [
+        1323,
+        744
+      ],
+      "bytes": 1091681,
+      "mean_luma": 74.53,
+      "pct_clipped_white": 0.0,
+      "pct_crushed_black": 11.13,
+      "blown_row_bands": [],
+      "dark_row_bands": [],
+      "top_third_mean": 25.35,
+      "mid_third_mean": 100.87,
+      "bot_third_mean": 97.31
+    },
+    {
+      "label": "HERO04_clean",
+      "path": "Saved\\Audit\\HeroLock20261018\\clean_04_macro.png.png",
+      "size": [
+        1323,
+        744
+      ],
+      "bytes": 852484,
+      "mean_luma": 159.03,
+      "pct_clipped_white": 0.0,
+      "pct_crushed_black": 0.45,
+      "blown_row_bands": [],
+      "dark_row_bands": [],
+      "top_third_mean": 165.13,
+      "mid_third_mean": 154.26,
+      "bot_third_mean": 157.9
+    },
+    {
+      "label": "v58_Office_SoftClean",
+      "path": "Showcase\\Film304_Closeout_20261018\\LightingStudies_v58\\01_Office_B_SoftClean\\LS_Compare_01_Office_B_SoftClean_48f_v01.0020.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "bytes": 2198971,
+      "mean_luma": 45.17,
+      "pct_clipped_white": 0.0,
+      "pct_crushed_black": 17.47,
+      "blown_row_bands": [],
+      "dark_row_bands": [],
+      "top_third_mean": 52.37,
+      "mid_third_mean": 50.72,
+      "bot_third_mean": 32.59
+    },
+    {
+      "label": "v58_Arch_SoftClean",
+      "path": "Showcase\\Film304_Closeout_20261018\\LightingStudies_v58\\02_Architecture_B_SoftClean\\LS_Compare_02_Architecture_B_SoftClean_48f_v01.0020.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "bytes": 2317588,
+      "mean_luma": 88.65,
+      "pct_clipped_white": 0.05,
+      "pct_crushed_black": 15.01,
+      "blown_row_bands": [],
+      "dark_row_bands": [],
+      "top_third_mean": 91.55,
+      "mid_third_mean": 123.01,
+      "bot_third_mean": 51.17
+    },
+    {
+      "label": "v58_Break_SoftClean",
+      "path": "Showcase\\Film304_Closeout_20261018\\LightingStudies_v58\\03_Breakroom_B_SoftClean\\LS_Compare_03_Breakroom_B_SoftClean_48f_v01.0020.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "bytes": 2337674,
+      "mean_luma": 36.26,
+      "pct_clipped_white": 0.07,
+      "pct_crushed_black": 36.28,
+      "blown_row_bands": [],
+      "dark_row_bands": [],
+      "top_third_mean": 48.15,
+      "mid_third_mean": 29.36,
+      "bot_third_mean": 30.92
+    },
+    {
+      "label": "v58_David_SoftClean",
+      "path": "Showcase\\Film304_Closeout_20261018\\LightingStudies_v58\\04_David_B_SoftClean\\LS_Compare_04_David_B_SoftClean_48f_v01.0020.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "bytes": 2402847,
+      "mean_luma": 39.77,
+      "pct_clipped_white": 0.0,
+      "pct_crushed_black": 36.82,
+      "blown_row_bands": [],
+      "dark_row_bands": [],
+      "top_third_mean": 30.66,
+      "mid_third_mean": 39.12,
+      "bot_third_mean": 49.08
+    },
+    {
+      "label": "v59_Skyline_BlueHour",
+      "path": "Showcase\\Film304_Closeout_20261018\\LightingStudies_v59\\Skyline_BlueHour\\LS_Skyline_BlueHour_48f_v01.0020.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "bytes": 2096275,
+      "mean_luma": 18.76,
+      "pct_clipped_white": 0.0,
+      "pct_crushed_black": 20.64,
+      "blown_row_bands": [],
+      "dark_row_bands": [
+        [
+          777,
+          879,
+          9.54
+        ],
+        [
+          881,
+          1079,
+          18.43
+        ]
+      ],
+      "top_third_mean": 24.49,
+      "mid_third_mean": 20.93,
+      "bot_third_mean": 10.15
+    },
+    {
+      "label": "v59_Skyline_Midnight",
+      "path": "Showcase\\Film304_Closeout_20261018\\LightingStudies_v59\\Skyline_Midnight\\LS_Skyline_Midnight_48f_v01.0020.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "bytes": 2280198,
+      "mean_luma": 24.34,
+      "pct_clipped_white": 0.0,
+      "pct_crushed_black": 23.8,
+      "blown_row_bands": [],
+      "dark_row_bands": [
+        [
+          880,
+          1003,
+          11.48
+        ],
+        [
+          1016,
+          1079,
+          5.93
+        ]
+      ],
+      "top_third_mean": 34.88,
+      "mid_third_mean": 25.08,
+      "bot_third_mean": 13.2
+    }
+  ]
+}

@@ -45,18 +45,18 @@
       "width": 1280
     },
     {
-      "bright_frac": 0.4558,
-      "bytes": 790903,
+      "bright_frac": 0.4549,
+      "bytes": 790933,
       "dir": "office_stage",
       "height": 720,
-      "mean_luma": 75.14,
+      "mean_luma": 74.95,
       "path": "D:\\film-304-toon-spine\\Saved\\Renders\\office_stage\\OS_SH020_proto_v02.png",
       "role": "office worker typing OTS",
       "stem": "OS_SH020_proto_v02",
       "thirds": [
         {
-          "dark_frac": 0.5006,
-          "mean_luma": 73.41,
+          "dark_frac": 0.5036,
+          "mean_luma": 72.82,
           "red_frac": 0.0
         },
         {
@@ -306,6 +306,6 @@
       "width": 1280
     }
   ],
-  "seconds": 2.9,
+  "seconds": 3.3,
   "written": "2026-10-08"
 }

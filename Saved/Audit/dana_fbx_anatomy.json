@@ -1,0 +1,1936 @@
+[
+  {
+    "file": "C:/Users/froma/Downloads/C_DanaRenderTest_OSC.fbx",
+    "meshes": [
+      {
+        "name": "Dana_Rig_v1_5:Dana_Jeans_GEO",
+        "vertices": 2172,
+        "triangles": 4246,
+        "parts": [
+          {
+            "index": 0,
+            "material": "Dana_Rig_v1_5:danaPants_mat",
+            "vertices": 2172,
+            "polygons": 2132,
+            "triangles": 4246,
+            "world_bounds": [
+              [
+                -0.07764460146427155,
+                0.07764460146427155
+              ],
+              [
+                -0.054064419120550156,
+                0.04780399799346924
+              ],
+              [
+                0.02445090562105179,
+                0.46666571497917175
+              ]
+            ]
+          }
+        ],
+        "weighted_groups": [
+          "Dana_Rig_v1_5:Root_M",
+          "Dana_Rig_v1_5:Hip_R",
+          "Dana_Rig_v1_5:HipPart1_R",
+          "Dana_Rig_v1_5:HipPart2_R",
+          "Dana_Rig_v1_5:Knee_R",
+          "Dana_Rig_v1_5:KneePart1_R",
+          "Dana_Rig_v1_5:KneePart2_R",
+          "Dana_Rig_v1_5:Ankle_R",
+          "Dana_Rig_v1_5:RootPart1_M",
+          "Dana_Rig_v1_5:Spine1_M",
+          "Dana_Rig_v1_5:Spine1Part1_M",
+          "Dana_Rig_v1_5:Hip_L",
+          "Dana_Rig_v1_5:HipPart1_L",
+          "Dana_Rig_v1_5:HipPart2_L",
+          "Dana_Rig_v1_5:Knee_L",
+          "Dana_Rig_v1_5:KneePart1_L",
+          "Dana_Rig_v1_5:KneePart2_L",
+          "Dana_Rig_v1_5:Ankle_L"
+        ],
+        "unweighted_vertices": 0
+      },
+      {
+        "name": "Dana_Rig_v1_5:Dana_Shirt_GEO",
+        "vertices": 1564,
+        "triangles": 3036,
+        "parts": [
+          {
+            "index": 0,
+            "material": "Dana_Rig_v1_5:danaShirt_mat",
+            "vertices": 1564,
+            "polygons": 1524,
+            "triangles": 3036,
+            "world_bounds": [
+              [
+                -0.08537307381629944,
+                0.08537476509809494
+              ],
+              [
+                -0.06007270887494087,
+                0.04949413985013962
+              ],
+              [
+                0.43992307782173157,
+                0.5982927680015564
+              ]
+            ]
+          }
+        ],
+        "weighted_groups": [
+          "Dana_Rig_v1_5:Root_M",
+          "Dana_Rig_v1_5:HipPart1_R",
+          "Dana_Rig_v1_5:RootPart1_M",
+          "Dana_Rig_v1_5:Spine1_M",
+          "Dana_Rig_v1_5:Spine1Part1_M",
+          "Dana_Rig_v1_5:Chest_M",
+          "Dana_Rig_v1_5:Scapula_R",
+          "Dana_Rig_v1_5:Shoulder_R",
+          "Dana_Rig_v1_5:ShoulderPart1_R",
+          "Dana_Rig_v1_5:ShoulderPart2_R",
+          "Dana_Rig_v1_5:Neck_M",
+          "Dana_Rig_v1_5:NeckPart1_M",
+          "Dana_Rig_v1_5:NeckPart2_M",
+          "Dana_Rig_v1_5:BreastRaiser_R",
+          "Dana_Rig_v1_5:Breast_R",
+          "Dana_Rig_v1_5:Scapula_L",
+          "Dana_Rig_v1_5:Shoulder_L",
+          "Dana_Rig_v1_5:ShoulderPart1_L",
+          "Dana_Rig_v1_5:ShoulderPart2_L",
+          "Dana_Rig_v1_5:BreastRaiser_L",
+          "Dana_Rig_v1_5:Breast_L",
+          "Dana_Rig_v1_5:HipPart1_L"
+        ],
+        "unweighted_vertices": 0
+      },
+      {
+        "name": "Dana_Rig_v1_5:Dana_Shoe_Rt_GEO",
+        "vertices": 1031,
+        "triangles": 2008,
+        "parts": [
+          {
+            "index": 0,
+            "material": "Dana_Rig_v1_5:danaShoes_mat",
+            "vertices": 1031,
+            "polygons": 1004,
+            "triangles": 2008,
+            "world_bounds": [
+              [
+                -0.04148207977414131,
+                -0.005290266592055559
+              ],
+              [
+                -0.06654641777276993,
+                0.01923859305679798
+              ],
+              [
+                -0.00019324372988194227,
+                0.03143210709095001
+              ]
+            ]
+          }
+        ],
+        "weighted_groups": [
+          "Dana_Rig_v1_5:KneePart2_R",
+          "Dana_Rig_v1_5:Ankle_R",
+          "Dana_Rig_v1_5:Toes_R"
+        ],
+        "unweighted_vertices": 0
+      },
+      {
+        "name": "Dana_Rig_v1_5:Dana_Shoe_Lf_GEO",
+        "vertices": 1031,
+        "triangles": 2008,
+        "parts": [
+          {
+            "index": 0,
+            "material": "Dana_Rig_v1_5:danaShoes_mat",
+            "vertices": 1031,
+            "polygons": 1004,
+            "triangles": 2008,
+            "world_bounds": [
+              [
+                0.005290266592055559,
+                0.04148207977414131
+              ],
+              [
+                -0.06654641032218933,
+                0.01923859864473343
+              ],
+              [
+                -0.00019324372988194227,
+                0.03143210709095001
+              ]
+            ]
+          }
+        ],
+        "weighted_groups": [
+          "Dana_Rig_v1_5:KneePart2_L",
+          "Dana_Rig_v1_5:Ankle_L",
+          "Dana_Rig_v1_5:Toes_L"
+        ],
+        "unweighted_vertices": 0
+      },
+      {
+        "name": "Dana_Rig_v1_5:Dana_Eyebrows_GEO",
+        "vertices": 178,
+        "triangles": 296,
+        "parts": [
+          {
+            "index": 0,
+            "material": "Dana_Rig_v1_5:danaHair_mat",
+            "vertices": 178,
+            "polygons": 148,
+            "triangles": 296,
+            "world_bounds": [
+              [
+                -0.09266559034585953,
+                -0.0205070897936821
+              ],
+              [
+                0.028090396896004677,
+                0.054247550666332245
+              ],
+              [
+                0.6701935529708862,
+                0.692577064037323
+              ]
+            ]
+          }
+        ],
+        "weighted_groups": [],
+        "unweighted_vertices": 178
+      },
+      {
+        "name": "Dana_Rig_v1_5:PantsButton_GEO",
+        "vertices": 225,
+        "triangles": 432,
+        "parts": [
+          {
+            "index": 0,
+            "material": "Dana_Rig_v1_5:danaPantsButton_mat",
+            "vertices": 225,
+            "polygons": 224,
+            "triangles": 432,
+            "world_bounds": [
+              [
+                -0.007283395621925592,
+                -0.0004304687026888132
+              ],
+              [
+                0.00023309513926506042,
+                0.003309079445898533
+              ],
+              [
+                0.41282638907432556,
+                0.4196932017803192
+              ]
+            ]
+          }
+        ],
+        "weighted_groups": [],
+        "unweighted_vertices": 225
+      },
+      {
+        "name": "Dana_Rig_v1_5:Dana_Body_GEOBase",
+        "vertices": 9249,
+        "triangles": 18368,
+        "parts": [
+          {
+            "index": 0,
+            "material": "Dana_Rig_v1_5:danaSkin_mat",
+            "vertices": 9249,
+            "polygons": 9192,
+            "triangles": 18368,
+            "world_bounds": [
+              [
+                -31.469757080078125,
+                31.469757080078125
+              ],
+              [
+                -0.01485500019043684,
+                74.15987396240234
+              ],
+              [
+                -5.567024230957031,
+                6.28265380859375
+              ]
+            ]
+          }
+        ],
+        "weighted_groups": [],
+        "unweighted_vertices": 9249
+      },
+      {
+        "name": "Dana_Rig_v1_5:LipRotateRegion",
+        "vertices": 9249,
+        "triangles": 18368,
+        "parts": [
+          {
+            "index": 0,
+            "material": "openPBR_shader1",
+            "vertices": 9249,
+            "polygons": 9192,
+            "triangles": 18368,
+            "world_bounds": [
+              [
+                -31.469757080078125,
+                31.469757080078125
+              ],
+              [
+                -0.014855001121759415,
+                74.15987396240234
+              ],
+              [
+                -5.567024230957031,
+                6.28265380859375
+              ]
+            ]
+          }
+        ],
+        "weighted_groups": [
+          "Dana_Rig_v1_5:LipsRotateJoints_M",
+          "Dana_Rig_v1_5:upperLipRotateJoint0_M",
+          "Dana_Rig_v1_5:upperLipRotateJoint1_R",
+          "Dana_Rig_v1_5:upperLipRotateJoint2_R",
+          "Dana_Rig_v1_5:upperLipRotateJoint3_R",
+          "Dana_Rig_v1_5:upperLipRotateJoint4_R",
+          "Dana_Rig_v1_5:upperLipRotateJoint5_R",
+          "Dana_Rig_v1_5:upperLipRotateJoint6_R",
+          "Dana_Rig_v1_5:upperLipRotateJoint7_R",
+          "Dana_Rig_v1_5:upperLipRotateJoint8_R",
+          "Dana_Rig_v1_5:upperLipRotateJoint1_L",
+          "Dana_Rig_v1_5:upperLipRotateJoint2_L",
+          "Dana_Rig_v1_5:upperLipRotateJoint3_L",
+          "Dana_Rig_v1_5:upperLipRotateJoint4_L",
+          "Dana_Rig_v1_5:upperLipRotateJoint5_L",
+          "Dana_Rig_v1_5:upperLipRotateJoint6_L",
+          "Dana_Rig_v1_5:upperLipRotateJoint7_L",
+          "Dana_Rig_v1_5:upperLipRotateJoint8_L",
+          "Dana_Rig_v1_5:lowerLipRotateJoint0_M",
+          "Dana_Rig_v1_5:lowerLipRotateJoint1_R",
+          "Dana_Rig_v1_5:lowerLipRotateJoint2_R",
+          "Dana_Rig_v1_5:lowerLipRotateJoint3_R",
+          "Dana_Rig_v1_5:lowerLipRotateJoint4_R",
+          "Dana_Rig_v1_5:lowerLipRotateJoint5_R",
+          "Dana_Rig_v1_5:lowerLipRotateJoint6_R",
+          "Dana_Rig_v1_5:lowerLipRotateJoint7_R",
+          "Dana_Rig_v1_5:lowerLipRotateJoint8_R",
+          "Dana_Rig_v1_5:lowerLipRotateJoint1_L",
+          "Dana_Rig_v1_5:lowerLipRotateJoint2_L",
+          "Dana_Rig_v1_5:lowerLipRotateJoint3_L",
+          "Dana_Rig_v1_5:lowerLipRotateJoint4_L",
+          "Dana_Rig_v1_5:lowerLipRotateJoint5_L",
+          "Dana_Rig_v1_5:lowerLipRotateJoint6_L",
+          "Dana_Rig_v1_5:lowerLipRotateJoint7_L",
+          "Dana_Rig_v1_5:lowerLipRotateJoint8_L"
+        ],
+        "unweighted_vertices": 0
+      },
+      {
+        "name": "Dana_Rig_v1_5:LipRegion",
+        "vertices": 9249,
+        "triangles": 18368,
+        "parts": [
+          {
+            "index": 0,
+            "material": "openPBR_shader1",
+            "vertices": 9249,
+            "polygons": 9192,
+            "triangles": 18368,
+            "world_bounds": [
+              [
+                -31.469757080078125,
+                31.469757080078125
+              ],
+              [
+                -0.014855001121759415,
+                74.15987396240234
+              ],
+              [
+                -5.567024230957031,
+                6.28265380859375
+              ]
+            ]
+          }
+        ],
+        "weighted_groups": [
+          "Dana_Rig_v1_5:LipJoints_M",
+          "Dana_Rig_v1_5:upperLipJoint0_M",
+          "Dana_Rig_v1_5:upperLipJoint1_R",
+          "Dana_Rig_v1_5:upperLipJoint2_R",
+          "Dana_Rig_v1_5:upperLipJoint3_R",
+          "Dana_Rig_v1_5:upperLipJoint4_R",
+          "Dana_Rig_v1_5:upperLipJoint5_R",
+          "Dana_Rig_v1_5:upperLipJoint6_R",
+          "Dana_Rig_v1_5:upperLipJoint7_R",
+          "Dana_Rig_v1_5:lowerLipJoint0_M",
+          "Dana_Rig_v1_5:lowerLipJoint1_R",
+          "Dana_Rig_v1_5:lowerLipJoint2_R",
+          "Dana_Rig_v1_5:lowerLipJoint3_R",
+          "Dana_Rig_v1_5:lowerLipJoint4_R",
+          "Dana_Rig_v1_5:lowerLipJoint5_R",
+          "Dana_Rig_v1_5:lowerLipJoint6_R",
+          "Dana_Rig_v1_5:lowerLipJoint7_R",
+          "Dana_Rig_v1_5:lowerLipJoint8_R",
+          "Dana_Rig_v1_5:upperLipJoint1_L",
+          "Dana_Rig_v1_5:upperLipJoint2_L",
+          "Dana_Rig_v1_5:upperLipJoint3_L",
+          "Dana_Rig_v1_5:upperLipJoint4_L",
+          "Dana_Rig_v1_5:upperLipJoint5_L",
+          "Dana_Rig_v1_5:upperLipJoint6_L",
+          "Dana_Rig_v1_5:upperLipJoint7_L",
+          "Dana_Rig_v1_5:lowerLipJoint1_L",
+          "Dana_Rig_v1_5:lowerLipJoint2_L",
+          "Dana_Rig_v1_5:lowerLipJoint3_L",
+          "Dana_Rig_v1_5:lowerLipJoint4_L",
+          "Dana_Rig_v1_5:lowerLipJoint5_L",
+          "Dana_Rig_v1_5:lowerLipJoint6_L",
+          "Dana_Rig_v1_5:lowerLipJoint7_L",
+          "Dana_Rig_v1_5:lowerLipJoint8_L"
+        ],
+        "unweighted_vertices": 0
+      },
+      {
+        "name": "Dana_Rig_v1_5:LipScaleRegion",
+        "vertices": 9249,
+        "triangles": 18368,
+        "parts": [
+          {
+            "index": 0,
+            "material": "openPBR_shader1",
+            "vertices": 9249,
+            "polygons": 9192,
+            "triangles": 18368,
+            "world_bounds": [
+              [
+                -31.469757080078125,
+                31.469757080078125
+              ],
+              [
+                -0.014855001121759415,
+                74.15987396240234
+              ],
+              [
+                -5.567024230957031,
+                6.28265380859375
+              ]
+            ]
+          }
+        ],
+        "weighted_groups": [
+          "Dana_Rig_v1_5:LipsScaleJoints_M",
+          "Dana_Rig_v1_5:upperLipScaleJoint0_M",
+          "Dana_Rig_v1_5:upperLipScaleJoint1_R",
+          "Dana_Rig_v1_5:upperLipScaleJoint2_R",
+          "Dana_Rig_v1_5:upperLipScaleJoint3_R",
+          "Dana_Rig_v1_5:upperLipScaleJoint4_R",
+          "Dana_Rig_v1_5:upperLipScaleJoint5_R",
+          "Dana_Rig_v1_5:upperLipScaleJoint6_R",
+          "Dana_Rig_v1_5:upperLipScaleJoint7_R",
+          "Dana_Rig_v1_5:upperLipScaleJoint8_R",
+          "Dana_Rig_v1_5:upperLipScaleJoint1_L",
+          "Dana_Rig_v1_5:upperLipScaleJoint2_L",
+          "Dana_Rig_v1_5:upperLipScaleJoint3_L",
+          "Dana_Rig_v1_5:upperLipScaleJoint4_L",
+          "Dana_Rig_v1_5:upperLipScaleJoint5_L",
+          "Dana_Rig_v1_5:upperLipScaleJoint6_L",
+          "Dana_Rig_v1_5:upperLipScaleJoint7_L",
+          "Dana_Rig_v1_5:upperLipScaleJoint8_L",
+          "Dana_Rig_v1_5:lowerLipScaleJoint0_M",
+          "Dana_Rig_v1_5:lowerLipScaleJoint1_R",
+          "Dana_Rig_v1_5:lowerLipScaleJoint2_R",
+          "Dana_Rig_v1_5:lowerLipScaleJoint3_R",
+          "Dana_Rig_v1_5:lowerLipScaleJoint4_R",
+          "Dana_Rig_v1_5:lowerLipScaleJoint5_R",
+          "Dana_Rig_v1_5:lowerLipScaleJoint6_R",
+          "Dana_Rig_v1_5:lowerLipScaleJoint7_R",
+          "Dana_Rig_v1_5:lowerLipScaleJoint8_R",
+          "Dana_Rig_v1_5:lowerLipScaleJoint1_L",
+          "Dana_Rig_v1_5:lowerLipScaleJoint2_L",
+          "Dana_Rig_v1_5:lowerLipScaleJoint3_L",
+          "Dana_Rig_v1_5:lowerLipScaleJoint4_L",
+          "Dana_Rig_v1_5:lowerLipScaleJoint5_L",
+          "Dana_Rig_v1_5:lowerLipScaleJoint6_L",
+          "Dana_Rig_v1_5:lowerLipScaleJoint7_L",
+          "Dana_Rig_v1_5:lowerLipScaleJoint8_L"
+        ],
+        "unweighted_vertices": 0
+      },
+      {
+        "name": "Dana_Rig_v1_5:ClustersRegion",
+        "vertices": 9249,
+        "triangles": 18368,
+        "parts": [
+          {
+            "index": 0,
+            "material": "openPBR_shader1",
+            "vertices": 9249,
+            "polygons": 9192,
+            "triangles": 18368,
+            "world_bounds": [
+              [
+                -31.469757080078125,
+                31.469757080078125
+              ],
+              [
+                -0.014855001121759415,
+                74.15987396240234
+              ],
+              [
+                -5.567024230957031,
+                6.28265380859375
+              ]
+            ]
+          }
+        ],
+        "weighted_groups": [],
+        "unweighted_vertices": 9249
+      },
+      {
+        "name": "Dana_Rig_v1_5:zipperLips_RRegion",
+        "vertices": 9249,
+        "triangles": 18368,
+        "parts": [
+          {
+            "index": 0,
+            "material": "openPBR_shader1",
+            "vertices": 9249,
+            "polygons": 9192,
+            "triangles": 18368,
+            "world_bounds": [
+              [
+                -31.469757080078125,
+                31.469757080078125
+              ],
+              [
+                -0.014855001121759415,
+                74.15987396240234
+              ],
+              [
+                -5.567024230957031,
+                6.28265380859375
+              ]
+            ]
+          }
+        ],
+        "weighted_groups": [],
+        "unweighted_vertices": 9249
+      },
+      {
+        "name": "Dana_Rig_v1_5:zipperLips_LRegion",
+        "vertices": 9249,
+        "triangles": 18368,
+        "parts": [
+          {
+            "index": 0,
+            "material": "openPBR_shader1",
+            "vertices": 9249,
+            "polygons": 9192,
+            "triangles": 18368,
+            "world_bounds": [
+              [
+                -31.469757080078125,
+                31.469757080078125
+              ],
+              [
+                -0.014855001121759415,
+                74.15987396240234
+              ],
+              [
+                -5.567024230957031,
+                6.28265380859375
+              ]
+            ]
+          }
+        ],
+        "weighted_groups": [],
+        "unweighted_vertices": 9249
+      },
+      {
+        "name": "Dana_Rig_v1_5:bodyBreath_GEO",
+        "vertices": 9249,
+        "triangles": 18368,
+        "parts": [
+          {
+            "index": 0,
+            "material": "openPBR_shader1",
+            "vertices": 9249,
+            "polygons": 9192,
+            "triangles": 18368,
+            "world_bounds": [
+              [
+                -0.3146975636482239,
+                0.3146975636482239
+              ],
+              [
+                -0.06282653659582138,
+                0.05567029491066933
+              ],
+              [
+                -0.00014854632900096476,
+                0.7415987253189087
+              ]
+            ]
+          }
+        ],
+        "weighted_groups": [],
+        "unweighted_vertices": 9249
+      },
+      {
+        "name": "Dana_Rig_v1_5:Dana_Eye_Rt_GEO",
+        "vertices": 1121,
+        "triangles": 2208,
+        "parts": [
+          {
+            "index": 0,
+            "material": "Dana_Rig_v1_5:danaIris_mat",
+            "vertices": 224,
+            "polygons": 192,
+            "triangles": 384,
+            "world_bounds": [
+              [
+                -0.025364898145198822,
+                -0.010721311904489994
+              ],
+              [
+                -0.034127723425626755,
+                -0.03104175068438053
+              ],
+              [
+                0.6703937649726868,
+                0.6850373148918152
+              ]
+            ]
+          },
+          {
+            "index": 1,
+            "material": "Dana_Rig_v1_5:danaEye_mat",
+            "vertices": 929,
+            "polygons": 928,
+            "triangles": 1824,
+            "world_bounds": [
+              [
+                -0.037405118346214294,
+                0.0013189157471060753
+              ],
+              [
+                -0.03412328287959099,
+                0.0031313553918153048
+              ],
+              [
+                0.6583535075187683,
+                0.6970775723457336
+              ]
+            ]
+          }
+        ],
+        "weighted_groups": [
+          "Dana_Rig_v1_5:Eye_R",
+          "Dana_Rig_v1_5:Pupil_R",
+          "Dana_Rig_v1_5:Iris_R"
+        ],
+        "unweighted_vertices": 0
+      },
+      {
+        "name": "Dana_Rig_v1_5:Dana_Original_Hair_GEO",
+        "vertices": 1130,
+        "triangles": 2256,
+        "parts": [
+          {
+            "index": 0,
+            "material": "Dana_Rig_v1_5:danaHair_mat",
+            "vertices": 1130,
+            "polygons": 1128,
+            "triangles": 2256,
+            "world_bounds": [
+              [
+                -0.10853175073862076,
+                0.10076085478067398
+              ],
+              [
+                -0.06638463586568832,
+                0.10805617272853851
+              ],
+              [
+                0.581376850605011,
+                0.7744168043136597
+              ]
+            ]
+          }
+        ],
+        "weighted_groups": [
+          "Dana_Rig_v1_5:Head_M",
+          "Dana_Rig_v1_5:Hair_R",
+          "Dana_Rig_v1_5:HairOriginalMid_M",
+          "Dana_Rig_v1_5:Hair_L",
+          "Dana_Rig_v1_5:FaceUpper_M",
+          "Dana_Rig_v1_5:FaceLower_M"
+        ],
+        "unweighted_vertices": 0
+      },
+      {
+        "name": "Dana_Rig_v1_5:Dana_Cornea_Rt_GEO",
+        "vertices": 161,
+        "triangles": 288,
+        "parts": [
+          {
+            "index": 0,
+            "material": "Dana_Rig_v1_5:danaCornea_mat",
+            "vertices": 161,
+            "polygons": 160,
+            "triangles": 288,
+            "world_bounds": [
+              [
+                -0.025609424337744713,
+                -0.010476783849298954
+              ],
+              [
+                -0.035775210708379745,
+                -0.03395692631602287
+              ],
+              [
+                0.6701492071151733,
+                0.6852818131446838
+              ]
+            ]
+          }
+        ],
+        "weighted_groups": [
+          "Dana_Rig_v1_5:Eye_R"
+        ],
+        "unweighted_vertices": 0
+      },
+      {
+        "name": "Dana_Rig_v1_5:Dana_EyeInt_Rt_GEO",
+        "vertices": 51,
+        "triangles": 90,
+        "parts": [
+          {
+            "index": 0,
+            "material": "Dana_Rig_v1_5:danaEyeInt_mat",
+            "vertices": 51,
+            "polygons": 50,
+            "triangles": 90,
+            "world_bounds": [
+              [
+                -0.02755463309586048,
+                -0.008531586267054081
+              ],
+              [
+                -0.03137945756316185,
+                -0.021867936477065086
+              ],
+              [
+                0.668669581413269,
+                0.6867615580558777
+              ]
+            ]
+          }
+        ],
+        "weighted_groups": [
+          "Dana_Rig_v1_5:Eye_R"
+        ],
+        "unweighted_vertices": 0
+      },
+      {
+        "name": "Dana_Rig_v1_5:Dana_Eye_Lf_GEO",
+        "vertices": 1121,
+        "triangles": 2208,
+        "parts": [
+          {
+            "index": 0,
+            "material": "Dana_Rig_v1_5:danaIris_mat",
+            "vertices": 224,
+            "polygons": 192,
+            "triangles": 384,
+            "world_bounds": [
+              [
+                0.010721264407038689,
+                0.02536485344171524
+              ],
+              [
+                -0.03412772715091705,
+                -0.03104175254702568
+              ],
+              [
+                0.6703937649726868,
+                0.6850373148918152
+              ]
+            ]
+          },
+          {
+            "index": 1,
+            "material": "Dana_Rig_v1_5:danaEye_mat",
+            "vertices": 929,
+            "polygons": 928,
+            "triangles": 1824,
+            "world_bounds": [
+              [
+                -0.001318955677561462,
+                0.03740507736802101
+              ],
+              [
+                -0.03412328660488129,
+                0.003131354693323374
+              ],
+              [
+                0.6583535075187683,
+                0.6970775723457336
+              ]
+            ]
+          }
+        ],
+        "weighted_groups": [
+          "Dana_Rig_v1_5:Eye_L",
+          "Dana_Rig_v1_5:Pupil_L",
+          "Dana_Rig_v1_5:Iris_L"
+        ],
+        "unweighted_vertices": 0
+      },
+      {
+        "name": "Dana_Rig_v1_5:Dana_Cornea_Lf_GEO",
+        "vertices": 161,
+        "triangles": 288,
+        "parts": [
+          {
+            "index": 0,
+            "material": "Dana_Rig_v1_5:danaCornea_mat",
+            "vertices": 161,
+            "polygons": 160,
+            "triangles": 288,
+            "world_bounds": [
+              [
+                0.010476736351847649,
+                0.02560937963426113
+              ],
+              [
+                -0.035775210708379745,
+                -0.03395692631602287
+              ],
+              [
+                0.6701492071151733,
+                0.6852818131446838
+              ]
+            ]
+          }
+        ],
+        "weighted_groups": [
+          "Dana_Rig_v1_5:Eye_L"
+        ],
+        "unweighted_vertices": 0
+      },
+      {
+        "name": "Dana_Rig_v1_5:Dana_EyeInt_Lf_GEO",
+        "vertices": 51,
+        "triangles": 90,
+        "parts": [
+          {
+            "index": 0,
+            "material": "Dana_Rig_v1_5:danaEyeInt_mat",
+            "vertices": 51,
+            "polygons": 50,
+            "triangles": 90,
+            "world_bounds": [
+              [
+                0.008531528525054455,
+                0.027554577216506004
+              ],
+              [
+                -0.03137946128845215,
+                -0.021867938339710236
+              ],
+              [
+                0.668669581413269,
+                0.6867615580558777
+              ]
+            ]
+          }
+        ],
+        "weighted_groups": [
+          "Dana_Rig_v1_5:Eye_L"
+        ],
+        "unweighted_vertices": 0
+      },
+      {
+        "name": "Dana_Rig_v1_5:Eyelashes_squint_Rt",
+        "vertices": 39,
+        "triangles": 48,
+        "parts": [
+          {
+            "index": 0,
+            "material": "Dana_Rig_v1_5:danaHair_mat",
+            "vertices": 39,
+            "polygons": 24,
+            "triangles": 48,
+            "world_bounds": [
+              [
+                -0.03992215543985367,
+                -0.010649890638887882
+              ],
+              [
+                -0.0395222045481205,
+                -0.023445414379239082
+              ],
+              [
+                0.6733728051185608,
+                0.6846202611923218
+              ]
+            ]
+          }
+        ],
+        "weighted_groups": [],
+        "unweighted_vertices": 39
+      },
+      {
+        "name": "Dana_Rig_v1_5:Eyelashes_squint_Lf",
+        "vertices": 39,
+        "triangles": 48,
+        "parts": [
+          {
+            "index": 0,
+            "material": "Dana_Rig_v1_5:danaHair_mat",
+            "vertices": 39,
+            "polygons": 24,
+            "triangles": 48,
+            "world_bounds": [
+              [
+                0.010649890638887882,
+                0.03992215543985367
+              ],
+              [
+                -0.0395222045481205,
+                -0.023445414379239082
+              ],
+              [
+                0.6733728051185608,
+                0.6846202611923218
+              ]
+            ]
+          }
+        ],
+        "weighted_groups": [],
+        "unweighted_vertices": 39
+      },
+      {
+        "name": "Dana_Rig_v1_5:ChinRegion",
+        "vertices": 9249,
+        "triangles": 18368,
+        "parts": [
+          {
+            "index": 0,
+            "material": "openPBR_shader1",
+            "vertices": 9249,
+            "polygons": 9192,
+            "triangles": 18368,
+            "world_bounds": [
+              [
+                -31.469757080078125,
+                31.469757080078125
+              ],
+              [
+                -0.014855001121759415,
+                74.15987396240234
+              ],
+              [
+                -5.567024230957031,
+                6.28265380859375
+              ]
+            ]
+          }
+        ],
+        "weighted_groups": [
+          "Dana_Rig_v1_5:faceHeadJoint",
+          "Dana_Rig_v1_5:Chin_M"
+        ],
+        "unweighted_vertices": 0
+      },
+      {
+        "name": "Dana_Rig_v1_5:JawOpenRegion",
+        "vertices": 9249,
+        "triangles": 18368,
+        "parts": [
+          {
+            "index": 0,
+            "material": "openPBR_shader1",
+            "vertices": 9249,
+            "polygons": 9192,
+            "triangles": 18368,
+            "world_bounds": [
+              [
+                -31.469757080078125,
+                31.469757080078125
+              ],
+              [
+                -0.014855001121759415,
+                74.15987396240234
+              ],
+              [
+                -5.567024230957031,
+                6.28265380859375
+              ]
+            ]
+          }
+        ],
+        "weighted_groups": [
+          "Dana_Rig_v1_5:faceHeadJoint",
+          "Dana_Rig_v1_5:Jaw_M"
+        ],
+        "unweighted_vertices": 0
+      },
+      {
+        "name": "Dana_Rig_v1_5:faceUpperLowerRegion",
+        "vertices": 9249,
+        "triangles": 18368,
+        "parts": [
+          {
+            "index": 0,
+            "material": "openPBR_shader1",
+            "vertices": 9249,
+            "polygons": 9192,
+            "triangles": 18368,
+            "world_bounds": [
+              [
+                -31.469757080078125,
+                31.469757080078125
+              ],
+              [
+                -0.01485500019043684,
+                74.15987396240234
+              ],
+              [
+                -5.567024230957031,
+                6.28265380859375
+              ]
+            ]
+          }
+        ],
+        "weighted_groups": [
+          "Dana_Rig_v1_5:faceHeadJoint",
+          "Dana_Rig_v1_5:FaceUpperRegion_M",
+          "Dana_Rig_v1_5:FaceLowerRegion_M"
+        ],
+        "unweighted_vertices": 0
+      },
+      {
+        "name": "Dana_Rig_v1_5:Dana_BunHairBase_upperLower",
+        "vertices": 347,
+        "triangles": 636,
+        "parts": [
+          {
+            "index": 0,
+            "material": "openPBR_shader1",
+            "vertices": 347,
+            "polygons": 318,
+            "triangles": 636,
+            "world_bounds": [
+              [
+                -4.485057830810547,
+                4.485053539276123
+              ],
+              [
+                64.30236053466797,
+                74.27365112304688
+              ],
+              [
+                -5.613402843475342,
+                4.239575386047363
+              ]
+            ]
+          }
+        ],
+        "weighted_groups": [
+          "Dana_Rig_v1_5:faceHeadJoint",
+          "Dana_Rig_v1_5:FaceUpperRegion_M",
+          "Dana_Rig_v1_5:FaceLowerRegion_M"
+        ],
+        "unweighted_vertices": 0
+      },
+      {
+        "name": "Dana_Rig_v1_5:Dana_BuzzCut_Hair_upperLower",
+        "vertices": 5324,
+        "triangles": 8528,
+        "parts": [
+          {
+            "index": 0,
+            "material": "openPBR_shader1",
+            "vertices": 5324,
+            "polygons": 5112,
+            "triangles": 8528,
+            "world_bounds": [
+              [
+                -5.459272861480713,
+                5.479525566101074
+              ],
+              [
+                63.92268753051758,
+                76.19608306884766
+              ],
+              [
+                -7.387757301330566,
+                4.329380989074707
+              ]
+            ]
+          }
+        ],
+        "weighted_groups": [
+          "Dana_Rig_v1_5:faceHeadJoint",
+          "Dana_Rig_v1_5:FaceUpperRegion_M",
+          "Dana_Rig_v1_5:FaceLowerRegion_M"
+        ],
+        "unweighted_vertices": 0
+      },
+      {
+        "name": "Dana_Rig_v1_5:EyelashUpperLower_L",
+        "vertices": 39,
+        "triangles": 48,
+        "parts": [
+          {
+            "index": 0,
+            "material": "Dana_Rig_v1_5:danaHair_mat",
+            "vertices": 39,
+            "polygons": 24,
+            "triangles": 48,
+            "world_bounds": [
+              [
+                1.0718932151794434,
+                3.9905450344085693
+              ],
+              [
+                67.15740203857422,
+                68.93395233154297
+              ],
+              [
+                2.344475507736206,
+                3.8042867183685303
+              ]
+            ]
+          }
+        ],
+        "weighted_groups": [
+          "Dana_Rig_v1_5:FaceUpperRegion_M"
+        ],
+        "unweighted_vertices": 0
+      },
+      {
+        "name": "Dana_Rig_v1_5:Dana_LongHair_Main_upperLower",
+        "vertices": 566,
+        "triangles": 1079,
+        "parts": [
+          {
+            "index": 0,
+            "material": "openPBR_shader1",
+            "vertices": 566,
+            "polygons": 546,
+            "triangles": 1079,
+            "world_bounds": [
+              [
+                -8.13006591796875,
+                8.7037935256958
+              ],
+              [
+                59.88858413696289,
+                74.9226303100586
+              ],
+              [
+                -9.839031219482422,
+                2.084299087524414
+              ]
+            ]
+          }
+        ],
+        "weighted_groups": [
+          "Dana_Rig_v1_5:FaceUpperRegion_M",
+          "Dana_Rig_v1_5:FaceLowerRegion_M"
+        ],
+        "unweighted_vertices": 0
+      },
+      {
+        "name": "Dana_Rig_v1_5:JawOpenStickyLipRegion",
+        "vertices": 9249,
+        "triangles": 18368,
+        "parts": [
+          {
+            "index": 0,
+            "material": "openPBR_shader1",
+            "vertices": 9249,
+            "polygons": 9192,
+            "triangles": 18368,
+            "world_bounds": [
+              [
+                -31.469757080078125,
+                31.469757080078125
+              ],
+              [
+                -0.014855001121759415,
+                74.15987396240234
+              ],
+              [
+                -5.567024230957031,
+                6.28265380859375
+              ]
+            ]
+          }
+        ],
+        "weighted_groups": [
+          "Dana_Rig_v1_5:faceHeadJoint",
+          "Dana_Rig_v1_5:Jaw_M"
+        ],
+        "unweighted_vertices": 0
+      },
+      {
+        "name": "Dana_Rig_v1_5:EyeLidRegion",
+        "vertices": 9249,
+        "triangles": 18368,
+        "parts": [
+          {
+            "index": 0,
+            "material": "openPBR_shader1",
+            "vertices": 9249,
+            "polygons": 9192,
+            "triangles": 18368,
+            "world_bounds": [
+              [
+                -31.469757080078125,
+                31.469757080078125
+              ],
+              [
+                -0.014855001121759415,
+                74.15987396240234
+              ],
+              [
+                -5.567024230957031,
+                6.28265380859375
+              ]
+            ]
+          }
+        ],
+        "weighted_groups": [
+          "Dana_Rig_v1_5:faceHeadJoint",
+          "Dana_Rig_v1_5:upperLidMain0_R",
+          "Dana_Rig_v1_5:upperLidMain1_R",
+          "Dana_Rig_v1_5:upperLidMain2_R",
+          "Dana_Rig_v1_5:upperLidMain3_R",
+          "Dana_Rig_v1_5:upperLidMain4_R",
+          "Dana_Rig_v1_5:upperLidMain5_R",
+          "Dana_Rig_v1_5:upperLidMain6_R",
+          "Dana_Rig_v1_5:upperLidMain7_R",
+          "Dana_Rig_v1_5:upperLidMain8_R",
+          "Dana_Rig_v1_5:upperLidMain9_R",
+          "Dana_Rig_v1_5:upperLidMain10_R",
+          "Dana_Rig_v1_5:upperLidMain11_R",
+          "Dana_Rig_v1_5:upperLidMain12_R",
+          "Dana_Rig_v1_5:lowerLidMain0_R",
+          "Dana_Rig_v1_5:lowerLidMain1_R",
+          "Dana_Rig_v1_5:lowerLidMain2_R",
+          "Dana_Rig_v1_5:lowerLidMain3_R",
+          "Dana_Rig_v1_5:lowerLidMain4_R",
+          "Dana_Rig_v1_5:lowerLidMain5_R",
+          "Dana_Rig_v1_5:lowerLidMain6_R",
+          "Dana_Rig_v1_5:lowerLidMain7_R",
+          "Dana_Rig_v1_5:lowerLidMain8_R",
+          "Dana_Rig_v1_5:lowerLidMain9_R",
+          "Dana_Rig_v1_5:lowerLidMain10_R",
+          "Dana_Rig_v1_5:lowerLidMain11_R",
+          "Dana_Rig_v1_5:lowerLidMain12_R",
+          "Dana_Rig_v1_5:lowerLidMain13_R",
+          "Dana_Rig_v1_5:lowerLidMain14_R",
+          "Dana_Rig_v1_5:upperLidMain0_L",
+          "Dana_Rig_v1_5:upperLidMain1_L",
+          "Dana_Rig_v1_5:upperLidMain2_L",
+          "Dana_Rig_v1_5:upperLidMain3_L",
+          "Dana_Rig_v1_5:upperLidMain4_L",
+          "Dana_Rig_v1_5:upperLidMain5_L",
+          "Dana_Rig_v1_5:upperLidMain6_L",
+          "Dana_Rig_v1_5:upperLidMain7_L",
+          "Dana_Rig_v1_5:upperLidMain8_L",
+          "Dana_Rig_v1_5:upperLidMain9_L",
+          "Dana_Rig_v1_5:upperLidMain10_L",
+          "Dana_Rig_v1_5:upperLidMain11_L",
+          "Dana_Rig_v1_5:upperLidMain12_L",
+          "Dana_Rig_v1_5:lowerLidMain1_L",
+          "Dana_Rig_v1_5:lowerLidMain2_L",
+          "Dana_Rig_v1_5:lowerLidMain3_L",
+          "Dana_Rig_v1_5:lowerLidMain4_L",
+          "Dana_Rig_v1_5:lowerLidMain5_L",
+          "Dana_Rig_v1_5:lowerLidMain6_L",
+          "Dana_Rig_v1_5:lowerLidMain7_L",
+          "Dana_Rig_v1_5:lowerLidMain8_L",
+          "Dana_Rig_v1_5:lowerLidMain9_L",
+          "Dana_Rig_v1_5:lowerLidMain10_L",
+          "Dana_Rig_v1_5:lowerLidMain11_L",
+          "Dana_Rig_v1_5:lowerLidMain12_L",
+          "Dana_Rig_v1_5:lowerLidMain13_L"
+        ],
+        "unweighted_vertices": 0
+      },
+      {
+        "name": "Dana_Rig_v1_5:LipsRegion",
+        "vertices": 9249,
+        "triangles": 18368,
+        "parts": [
+          {
+            "index": 0,
+            "material": "openPBR_shader1",
+            "vertices": 9249,
+            "polygons": 9192,
+            "triangles": 18368,
+            "world_bounds": [
+              [
+                -31.469757080078125,
+                31.469757080078125
+              ],
+              [
+                -0.014855001121759415,
+                74.15987396240234
+              ],
+              [
+                -5.567024230957031,
+                6.28265380859375
+              ]
+            ]
+          }
+        ],
+        "weighted_groups": [
+          "Dana_Rig_v1_5:faceHeadJoint",
+          "Dana_Rig_v1_5:Lips_M"
+        ],
+        "unweighted_vertices": 0
+      },
+      {
+        "name": "Dana_Rig_v1_5:Dana_HairPulled_upperLower",
+        "vertices": 7400,
+        "triangles": 14284,
+        "parts": [
+          {
+            "index": 0,
+            "material": "openPBR_shader1",
+            "vertices": 7400,
+            "polygons": 7350,
+            "triangles": 14284,
+            "world_bounds": [
+              [
+                -5.260010719299316,
+                5.266403675079346
+              ],
+              [
+                63.666622161865234,
+                74.89759826660156
+              ],
+              [
+                -6.610658645629883,
+                4.370702743530273
+              ]
+            ]
+          }
+        ],
+        "weighted_groups": [
+          "Dana_Rig_v1_5:faceHeadJoint",
+          "Dana_Rig_v1_5:FaceUpperRegion_M",
+          "Dana_Rig_v1_5:FaceLowerRegion_M"
+        ],
+        "unweighted_vertices": 0
+      },
+      {
+        "name": "Dana_Rig_v1_5:EyelashUpperLower_R",
+        "vertices": 39,
+        "triangles": 48,
+        "parts": [
+          {
+            "index": 0,
+            "material": "Dana_Rig_v1_5:danaHair_mat",
+            "vertices": 39,
+            "polygons": 24,
+            "triangles": 48,
+            "world_bounds": [
+              [
+                -3.9905450344085693,
+                -1.0718932151794434
+              ],
+              [
+                67.15740203857422,
+                68.93395233154297
+              ],
+              [
+                2.344475507736206,
+                3.8042867183685303
+              ]
+            ]
+          }
+        ],
+        "weighted_groups": [
+          "Dana_Rig_v1_5:FaceUpperRegion_M"
+        ],
+        "unweighted_vertices": 0
+      },
+      {
+        "name": "Dana_Rig_v1_5:Dana_LongHair_Bang_upperLower",
+        "vertices": 474,
+        "triangles": 944,
+        "parts": [
+          {
+            "index": 0,
+            "material": "openPBR_shader1",
+            "vertices": 474,
+            "polygons": 472,
+            "triangles": 944,
+            "world_bounds": [
+              [
+                -4.504176139831543,
+                8.363981246948242
+              ],
+              [
+                65.52912902832031,
+                76.90541076660156
+              ],
+              [
+                -6.358687877655029,
+                5.05598783493042
+              ]
+            ]
+          }
+        ],
+        "weighted_groups": [
+          "Dana_Rig_v1_5:FaceUpperRegion_M",
+          "Dana_Rig_v1_5:FaceLowerRegion_M"
+        ],
+        "unweighted_vertices": 0
+      },
+      {
+        "name": "Dana_Rig_v1_5:Dana_Bun_upperLower",
+        "vertices": 5173,
+        "triangles": 10284,
+        "parts": [
+          {
+            "index": 0,
+            "material": "openPBR_shader1",
+            "vertices": 5173,
+            "polygons": 5168,
+            "triangles": 10284,
+            "world_bounds": [
+              [
+                -4.580957412719727,
+                4.811373233795166
+              ],
+              [
+                70.49832916259766,
+                79.15913391113281
+              ],
+              [
+                -8.622838020324707,
+                0.10600471496582031
+              ]
+            ]
+          }
+        ],
+        "weighted_groups": [
+          "Dana_Rig_v1_5:FaceUpperRegion_M"
+        ],
+        "unweighted_vertices": 0
+      }
+    ],
+    "armatures": [
+      {
+        "name": "Dana_Rig_v1_5:FKSystem",
+        "bones": 554,
+        "weighted_bones": 0,
+        "weighted_plus_ancestors": 0,
+        "unweighted_leaf_bones": 31,
+        "roots": [
+          "Dana_Rig_v1_5:FKParentConstraintToAnkle_R",
+          "Dana_Rig_v1_5:FKParentConstraintToRoot_M",
+          "Dana_Rig_v1_5:FKParentConstraintToWrist_R",
+          "Dana_Rig_v1_5:FKParentConstraintToScapula_R",
+          "Dana_Rig_v1_5:FKParentConstraintToChest_M",
+          "Dana_Rig_v1_5:FKParentConstraintToLongHairBase_M",
+          "Dana_Rig_v1_5:FKOffsetRoot_M",
+          "Dana_Rig_v1_5:FKParentConstraintToAnkle_L",
+          "Dana_Rig_v1_5:FKParentConstraintToWrist_L",
+          "Dana_Rig_v1_5:FKParentConstraintToScapula_L"
+        ]
+      },
+      {
+        "name": "Dana_Rig_v1_5:IKXOffsetHip_R",
+        "bones": 5,
+        "weighted_bones": 0,
+        "weighted_plus_ancestors": 0,
+        "unweighted_leaf_bones": 1,
+        "roots": [
+          "Dana_Rig_v1_5:IKXHip_R"
+        ]
+      },
+      {
+        "name": "Dana_Rig_v1_5:IKXOffsetShoulder_R",
+        "bones": 3,
+        "weighted_bones": 0,
+        "weighted_plus_ancestors": 0,
+        "unweighted_leaf_bones": 1,
+        "roots": [
+          "Dana_Rig_v1_5:IKXShoulder_R"
+        ]
+      },
+      {
+        "name": "Dana_Rig_v1_5:IKParentConstraintLongHair_Bang1_R",
+        "bones": 38,
+        "weighted_bones": 0,
+        "weighted_plus_ancestors": 0,
+        "unweighted_leaf_bones": 3,
+        "roots": [
+          "Dana_Rig_v1_5:IKXOffsetLongHair_Bang1_R",
+          "Dana_Rig_v1_5:IKfake0Spline_R"
+        ]
+      },
+      {
+        "name": "Dana_Rig_v1_5:IKParentConstraintRoot_M",
+        "bones": 16,
+        "weighted_bones": 0,
+        "weighted_plus_ancestors": 0,
+        "unweighted_leaf_bones": 3,
+        "roots": [
+          "Dana_Rig_v1_5:IKXOffsetRoot_M",
+          "Dana_Rig_v1_5:IKfake0Spine_M"
+        ]
+      },
+      {
+        "name": "Dana_Rig_v1_5:IKXOffsetHip_L",
+        "bones": 5,
+        "weighted_bones": 0,
+        "weighted_plus_ancestors": 0,
+        "unweighted_leaf_bones": 1,
+        "roots": [
+          "Dana_Rig_v1_5:IKXHip_L"
+        ]
+      },
+      {
+        "name": "Dana_Rig_v1_5:IKXOffsetShoulder_L",
+        "bones": 3,
+        "weighted_bones": 0,
+        "weighted_plus_ancestors": 0,
+        "unweighted_leaf_bones": 1,
+        "roots": [
+          "Dana_Rig_v1_5:IKXShoulder_L"
+        ]
+      },
+      {
+        "name": "Dana_Rig_v1_5:IKSpSplineOffset_R",
+        "bones": 1,
+        "weighted_bones": 0,
+        "weighted_plus_ancestors": 0,
+        "unweighted_leaf_bones": 1,
+        "roots": [
+          "Dana_Rig_v1_5:IKSpLongHair_Bang1_R"
+        ]
+      },
+      {
+        "name": "Dana_Rig_v1_5:IKSpSpineOffset_M",
+        "bones": 1,
+        "weighted_bones": 0,
+        "weighted_plus_ancestors": 0,
+        "unweighted_leaf_bones": 1,
+        "roots": [
+          "Dana_Rig_v1_5:IKSpRoot_M"
+        ]
+      },
+      {
+        "name": "Dana_Rig_v1_5:TwistFollowParentHead_M",
+        "bones": 3,
+        "weighted_bones": 0,
+        "weighted_plus_ancestors": 0,
+        "unweighted_leaf_bones": 2,
+        "roots": [
+          "Dana_Rig_v1_5:UnTwistHead_M"
+        ]
+      },
+      {
+        "name": "Dana_Rig_v1_5:TwistFollowParentLongHair_Bang7_R",
+        "bones": 3,
+        "weighted_bones": 0,
+        "weighted_plus_ancestors": 0,
+        "unweighted_leaf_bones": 2,
+        "roots": [
+          "Dana_Rig_v1_5:UnTwistLongHair_Bang7_R"
+        ]
+      },
+      {
+        "name": "Dana_Rig_v1_5:TwistFollowParentChest_M",
+        "bones": 3,
+        "weighted_bones": 0,
+        "weighted_plus_ancestors": 0,
+        "unweighted_leaf_bones": 2,
+        "roots": [
+          "Dana_Rig_v1_5:UnTwistChest_M"
+        ]
+      },
+      {
+        "name": "Dana_Rig_v1_5:TwistFollowParentAnkle_R",
+        "bones": 3,
+        "weighted_bones": 0,
+        "weighted_plus_ancestors": 0,
+        "unweighted_leaf_bones": 2,
+        "roots": [
+          "Dana_Rig_v1_5:UnTwistAnkle_R"
+        ]
+      },
+      {
+        "name": "Dana_Rig_v1_5:TwistFollowParentKnee_R",
+        "bones": 3,
+        "weighted_bones": 0,
+        "weighted_plus_ancestors": 0,
+        "unweighted_leaf_bones": 2,
+        "roots": [
+          "Dana_Rig_v1_5:UnTwistKnee_R"
+        ]
+      },
+      {
+        "name": "Dana_Rig_v1_5:TwistFollowParentHip_R",
+        "bones": 3,
+        "weighted_bones": 0,
+        "weighted_plus_ancestors": 0,
+        "unweighted_leaf_bones": 2,
+        "roots": [
+          "Dana_Rig_v1_5:UnTwistHip_R"
+        ]
+      },
+      {
+        "name": "Dana_Rig_v1_5:TwistFollowParentWrist_R",
+        "bones": 3,
+        "weighted_bones": 0,
+        "weighted_plus_ancestors": 0,
+        "unweighted_leaf_bones": 2,
+        "roots": [
+          "Dana_Rig_v1_5:UnTwistWrist_R"
+        ]
+      },
+      {
+        "name": "Dana_Rig_v1_5:TwistFollowParentElbow_R",
+        "bones": 3,
+        "weighted_bones": 0,
+        "weighted_plus_ancestors": 0,
+        "unweighted_leaf_bones": 2,
+        "roots": [
+          "Dana_Rig_v1_5:UnTwistElbow_R"
+        ]
+      },
+      {
+        "name": "Dana_Rig_v1_5:TwistFollowParentShoulder_R",
+        "bones": 3,
+        "weighted_bones": 0,
+        "weighted_plus_ancestors": 0,
+        "unweighted_leaf_bones": 2,
+        "roots": [
+          "Dana_Rig_v1_5:UnTwistShoulder_R"
+        ]
+      },
+      {
+        "name": "Dana_Rig_v1_5:TwistFollowParentAnkle_L",
+        "bones": 3,
+        "weighted_bones": 0,
+        "weighted_plus_ancestors": 0,
+        "unweighted_leaf_bones": 2,
+        "roots": [
+          "Dana_Rig_v1_5:UnTwistAnkle_L"
+        ]
+      },
+      {
+        "name": "Dana_Rig_v1_5:TwistFollowParentKnee_L",
+        "bones": 3,
+        "weighted_bones": 0,
+        "weighted_plus_ancestors": 0,
+        "unweighted_leaf_bones": 2,
+        "roots": [
+          "Dana_Rig_v1_5:UnTwistKnee_L"
+        ]
+      },
+      {
+        "name": "Dana_Rig_v1_5:TwistFollowParentHip_L",
+        "bones": 3,
+        "weighted_bones": 0,
+        "weighted_plus_ancestors": 0,
+        "unweighted_leaf_bones": 2,
+        "roots": [
+          "Dana_Rig_v1_5:UnTwistHip_L"
+        ]
+      },
+      {
+        "name": "Dana_Rig_v1_5:TwistFollowParentWrist_L",
+        "bones": 3,
+        "weighted_bones": 0,
+        "weighted_plus_ancestors": 0,
+        "unweighted_leaf_bones": 2,
+        "roots": [
+          "Dana_Rig_v1_5:UnTwistWrist_L"
+        ]
+      },
+      {
+        "name": "Dana_Rig_v1_5:TwistFollowParentElbow_L",
+        "bones": 3,
+        "weighted_bones": 0,
+        "weighted_plus_ancestors": 0,
+        "unweighted_leaf_bones": 2,
+        "roots": [
+          "Dana_Rig_v1_5:UnTwistElbow_L"
+        ]
+      },
+      {
+        "name": "Dana_Rig_v1_5:TwistFollowParentShoulder_L",
+        "bones": 3,
+        "weighted_bones": 0,
+        "weighted_plus_ancestors": 0,
+        "unweighted_leaf_bones": 2,
+        "roots": [
+          "Dana_Rig_v1_5:UnTwistShoulder_L"
+        ]
+      },
+      {
+        "name": "Dana_Rig_v1_5:DeformationSystem",
+        "bones": 166,
+        "weighted_bones": 40,
+        "weighted_plus_ancestors": 41,
+        "unweighted_leaf_bones": 27,
+        "roots": [
+          "Dana_Rig_v1_5:Root_M"
+        ]
+      },
+      {
+        "name": "Dana_Rig_v1_5:FaceMotionFollowHead",
+        "bones": 9,
+        "weighted_bones": 0,
+        "weighted_plus_ancestors": 0,
+        "unweighted_leaf_bones": 1,
+        "roots": [
+          "Dana_Rig_v1_5:squashIKX1"
+        ]
+      },
+      {
+        "name": "Armature",
+        "bones": 1,
+        "weighted_bones": 0,
+        "weighted_plus_ancestors": 0,
+        "unweighted_leaf_bones": 1,
+        "roots": [
+          "Dana_Rig_v1_5:squashIKX0"
+        ]
+      },
+      {
+        "name": "Dana_Rig_v1_5:LidCorner1JointOffset_R",
+        "bones": 1,
+        "weighted_bones": 0,
+        "weighted_plus_ancestors": 0,
+        "unweighted_leaf_bones": 1,
+        "roots": [
+          "Dana_Rig_v1_5:LidCorner1Joint_R"
+        ]
+      },
+      {
+        "name": "Dana_Rig_v1_5:LidCorner2JointOffset_R",
+        "bones": 1,
+        "weighted_bones": 0,
+        "weighted_plus_ancestors": 0,
+        "unweighted_leaf_bones": 1,
+        "roots": [
+          "Dana_Rig_v1_5:LidCorner2Joint_R"
+        ]
+      },
+      {
+        "name": "Dana_Rig_v1_5:upperLid1JointOffset_R",
+        "bones": 1,
+        "weighted_bones": 0,
+        "weighted_plus_ancestors": 0,
+        "unweighted_leaf_bones": 1,
+        "roots": [
+          "Dana_Rig_v1_5:upperLid1Joint_R"
+        ]
+      },
+      {
+        "name": "Dana_Rig_v1_5:upperLid2JointOffset_R",
+        "bones": 1,
+        "weighted_bones": 0,
+        "weighted_plus_ancestors": 0,
+        "unweighted_leaf_bones": 1,
+        "roots": [
+          "Dana_Rig_v1_5:upperLid2Joint_R"
+        ]
+      },
+      {
+        "name": "Dana_Rig_v1_5:upperLid3JointOffset_R",
+        "bones": 1,
+        "weighted_bones": 0,
+        "weighted_plus_ancestors": 0,
+        "unweighted_leaf_bones": 1,
+        "roots": [
+          "Dana_Rig_v1_5:upperLid3Joint_R"
+        ]
+      },
+      {
+        "name": "Dana_Rig_v1_5:lowerLid1JointOffset_R",
+        "bones": 1,
+        "weighted_bones": 0,
+        "weighted_plus_ancestors": 0,
+        "unweighted_leaf_bones": 1,
+        "roots": [
+          "Dana_Rig_v1_5:lowerLid1Joint_R"
+        ]
+      },
+      {
+        "name": "Dana_Rig_v1_5:lowerLid2JointOffset_R",
+        "bones": 1,
+        "weighted_bones": 0,
+        "weighted_plus_ancestors": 0,
+        "unweighted_leaf_bones": 1,
+        "roots": [
+          "Dana_Rig_v1_5:lowerLid2Joint_R"
+        ]
+      },
+      {
+        "name": "Dana_Rig_v1_5:lowerLid3JointOffset_R",
+        "bones": 1,
+        "weighted_bones": 0,
+        "weighted_plus_ancestors": 0,
+        "unweighted_leaf_bones": 1,
+        "roots": [
+          "Dana_Rig_v1_5:lowerLid3Joint_R"
+        ]
+      },
+      {
+        "name": "Dana_Rig_v1_5:LidCorner1JointOffset_L",
+        "bones": 1,
+        "weighted_bones": 0,
+        "weighted_plus_ancestors": 0,
+        "unweighted_leaf_bones": 1,
+        "roots": [
+          "Dana_Rig_v1_5:LidCorner1Joint_L"
+        ]
+      },
+      {
+        "name": "Dana_Rig_v1_5:LidCorner2JointOffset_L",
+        "bones": 1,
+        "weighted_bones": 0,
+        "weighted_plus_ancestors": 0,
+        "unweighted_leaf_bones": 1,
+        "roots": [
+          "Dana_Rig_v1_5:LidCorner2Joint_L"
+        ]
+      },
+      {
+        "name": "Dana_Rig_v1_5:upperLid1JointOffset_L",
+        "bones": 1,
+        "weighted_bones": 0,
+        "weighted_plus_ancestors": 0,
+        "unweighted_leaf_bones": 1,
+        "roots": [
+          "Dana_Rig_v1_5:upperLid1Joint_L"
+        ]
+      },
+      {
+        "name": "Dana_Rig_v1_5:upperLid2JointOffset_L",
+        "bones": 1,
+        "weighted_bones": 0,
+        "weighted_plus_ancestors": 0,
+        "unweighted_leaf_bones": 1,
+        "roots": [
+          "Dana_Rig_v1_5:upperLid2Joint_L"
+        ]
+      },
+      {
+        "name": "Dana_Rig_v1_5:upperLid3JointOffset_L",
+        "bones": 1,
+        "weighted_bones": 0,
+        "weighted_plus_ancestors": 0,
+        "unweighted_leaf_bones": 1,
+        "roots": [
+          "Dana_Rig_v1_5:upperLid3Joint_L"
+        ]
+      },
+      {
+        "name": "Dana_Rig_v1_5:lowerLid1JointOffset_L",
+        "bones": 1,
+        "weighted_bones": 0,
+        "weighted_plus_ancestors": 0,
+        "unweighted_leaf_bones": 1,
+        "roots": [
+          "Dana_Rig_v1_5:lowerLid1Joint_L"
+        ]
+      },
+      {
+        "name": "Dana_Rig_v1_5:lowerLid2JointOffset_L",
+        "bones": 1,
+        "weighted_bones": 0,
+        "weighted_plus_ancestors": 0,
+        "unweighted_leaf_bones": 1,
+        "roots": [
+          "Dana_Rig_v1_5:lowerLid2Joint_L"
+        ]
+      },
+      {
+        "name": "Dana_Rig_v1_5:lowerLid3JointOffset_L",
+        "bones": 1,
+        "weighted_bones": 0,
+        "weighted_plus_ancestors": 0,
+        "unweighted_leaf_bones": 1,
+        "roots": [
+          "Dana_Rig_v1_5:lowerLid3Joint_L"
+        ]
+      },
+      {
+        "name": "Dana_Rig_v1_5:LipSetup",
+        "bones": 105,
+        "weighted_bones": 103,
+        "weighted_plus_ancestors": 103,
+        "unweighted_leaf_bones": 2,
+        "roots": [
+          "Dana_Rig_v1_5:LipJoints_M",
+          "Dana_Rig_v1_5:LipsRotateJoints_M",
+          "Dana_Rig_v1_5:LipsScaleJoints_M"
+        ]
+      },
+      {
+        "name": "Dana_Rig_v1_5:FaceDeformationSystem",
+        "bones": 159,
+        "weighted_bones": 68,
+        "weighted_plus_ancestors": 127,
+        "unweighted_leaf_bones": 20,
+        "roots": [
+          "Dana_Rig_v1_5:FaceDeformationFollowHead",
+          "Dana_Rig_v1_5:faceHeadJoint"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "C:/Users/froma/Downloads/35536615-b554-4979-b828-b0031dd8694f_4cae093453ba98a8652e2f0d58b4f0ce.fbx",
+    "meshes": [
+      {
+        "name": "tripo_node_35536615",
+        "vertices": 246863,
+        "triangles": 494474,
+        "parts": [
+          {
+            "index": 0,
+            "material": "tripo_mat_35536615",
+            "vertices": 246863,
+            "polygons": 494474,
+            "triangles": 494474,
+            "world_bounds": [
+              [
+                -0.38589486479759216,
+                0.38589486479759216
+              ],
+              [
+                -0.3012084662914276,
+                0.3012085556983948
+              ],
+              [
+                1.0028086805391467e-08,
+                1.0
+              ]
+            ]
+          }
+        ],
+        "weighted_groups": [],
+        "unweighted_vertices": 246863
+      }
+    ],
+    "armatures": []
+  }
+]

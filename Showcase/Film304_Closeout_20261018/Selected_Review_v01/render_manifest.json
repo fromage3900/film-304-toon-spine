@@ -1,0 +1,40 @@
+{
+  "status": "review, not final approval",
+  "stills": [
+    {
+      "shot": "DuskHero",
+      "resolution": [
+        3840,
+        2160
+      ],
+      "file": "DuskHero_4K.png",
+      "source": "Showcase\\Film304_Closeout_20261018\\LightingStudies_v13\\DuskHero\\LS_Closeout_DuskHero48f_v01.0010.png",
+      "sha256": "985693d6c5fa995614fccc685c573b85e1e8740c6972a4385c396362eb37d3a8"
+    },
+    {
+      "shot": "Ceiling",
+      "resolution": [
+        3840,
+        2160
+      ],
+      "file": "Ceiling_4K.png",
+      "source": "Showcase\\Film304_Closeout_20261018\\LightingStudies_v13\\Ceiling\\LS_Closeout_Ceiling48f_v01.0010.png",
+      "sha256": "b1b78562708bdb02ee40b8a9303997d4ccab3be389983b37866abca6556595c3"
+    },
+    {
+      "shot": "David",
+      "resolution": [
+        3840,
+        2160
+      ],
+      "file": "David_4K.png",
+      "source": "Showcase\\Film304_Closeout_20261018\\LightingStudies_v13\\David\\LS_Closeout_David48f_v01.0010.png",
+      "sha256": "86ad204137edc93a067cb5e8cc382ba7f2e9bd03cd5a7c2b2aa8630e089046a1"
+    }
+  ],
+  "remaining": [
+    "loop boundary polish",
+    "dust placement",
+    "E1/E2/E3 establishing closeout"
+  ]
+}

@@ -1,0 +1,5035 @@
+{
+  "world": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office",
+  "actor_count": 214,
+  "actors": [
+    {
+      "name": "WorldSettings",
+      "label": "WorldSettings",
+      "class": "WorldSettings",
+      "folder": "None",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "materials": [],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "Brush_0",
+      "label": "Brush0",
+      "class": "Brush",
+      "folder": "None",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "materials": [],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "SkeletalMeshActor_0",
+      "label": "Film_Subject_Dana_v08_CleanSkin",
+      "class": "SkeletalMeshActor",
+      "folder": "None",
+      "location": [
+        11.267194746202856,
+        28.88443107388941,
+        -0.6610467328081313
+      ],
+      "materials": [],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_0",
+      "label": "Film_Floor",
+      "class": "StaticMeshActor",
+      "folder": "None",
+      "location": [
+        0.0,
+        0.0,
+        -10.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_Floor.MI_Film304_Floor"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_1",
+      "label": "Film_BackWall",
+      "class": "StaticMeshActor",
+      "folder": "None",
+      "location": [
+        -398.0671019976523,
+        -167.4591959469251,
+        170.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_Wall.MI_Film304_Wall"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_2",
+      "label": "Film_WarmWallPanel",
+      "class": "StaticMeshActor",
+      "folder": "None",
+      "location": [
+        -344.08410647684366,
+        -76.99202772106867,
+        162.01014709472656
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_WarmWall.MI_Film304_WarmWall"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_3",
+      "label": "Film_WindowMullion_-90",
+      "class": "StaticMeshActor",
+      "folder": "None",
+      "location": [
+        -300.8649017972914,
+        40.99159507150432,
+        142.47697830200195
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_Frame.MI_Film304_Frame"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_4",
+      "label": "Film_WindowMullion_140",
+      "class": "StaticMeshActor",
+      "folder": "None",
+      "location": [
+        -203.66270159693056,
+        249.44238608993385,
+        141.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_Frame.MI_Film304_Frame"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_5",
+      "label": "Film_WindowMullion_370",
+      "class": "StaticMeshActor",
+      "folder": "None",
+      "location": [
+        -106.46050139656973,
+        457.8931771083634,
+        133.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_Frame.MI_Film304_Frame"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_6",
+      "label": "Film_ExistingOfficeDesk",
+      "class": "StaticMeshActor",
+      "folder": "None",
+      "location": [
+        -131.13114999029185,
+        -115.57754782788292,
+        0.037675773033868154
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_Desk.MI_Film304_Desk"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_8",
+      "label": "Film_DeskReturn",
+      "class": "StaticMeshActor",
+      "folder": "None",
+      "location": [
+        -247.98035564566572,
+        864.208271665033,
+        2.2380254455514006
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_Desk.MI_Film304_Desk"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "CineCameraActor_0",
+      "label": "Film_Cam_OfficeMedium",
+      "class": "CineCameraActor",
+      "folder": "None",
+      "location": [
+        35.68154527623585,
+        -246.6014382264962,
+        99.42661052882151
+      ],
+      "materials": [
+        {
+          "comp": "CameraProxyMeshComponent_0",
+          "slot": 0,
+          "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CameraBody.MI_CineMat_CameraBody"
+        },
+        {
+          "comp": "CameraProxyMeshComponent_0",
+          "slot": 1,
+          "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CamViewFinder.MI_CineMat_CamViewFinder"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "CineCameraActor_1",
+      "label": "Film_Cam_OfficeWide",
+      "class": "CineCameraActor",
+      "folder": "None",
+      "location": [
+        682.124884988237,
+        -240.84360336073814,
+        103.0
+      ],
+      "materials": [
+        {
+          "comp": "CameraProxyMeshComponent_0",
+          "slot": 0,
+          "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CameraBody.MI_CineMat_CameraBody"
+        },
+        {
+          "comp": "CameraProxyMeshComponent_0",
+          "slot": 1,
+          "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CamViewFinder.MI_CineMat_CamViewFinder"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "SkeletalMeshActor_6",
+      "label": "Spider_Deform_v2",
+      "class": "SkeletalMeshActor",
+      "folder": "None",
+      "location": [
+        -165.5217594130609,
+        -97.87164940957165,
+        54.29144493922131
+      ],
+      "materials": [],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "CineCameraActor_2",
+      "label": "CineCameraActor",
+      "class": "CineCameraActor",
+      "folder": "None",
+      "location": [
+        -145.1321805574181,
+        -190.16129457795884,
+        61.288109231657344
+      ],
+      "materials": [
+        {
+          "comp": "CameraProxyMeshComponent_0",
+          "slot": 0,
+          "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CameraBody.MI_CineMat_CameraBody"
+        },
+        {
+          "comp": "CameraProxyMeshComponent_0",
+          "slot": 1,
+          "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CamViewFinder.MI_CineMat_CamViewFinder"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_9",
+      "label": "SM_P_OfficeDesk_AC_FilmStage_20261016",
+      "class": "StaticMeshActor",
+      "folder": "None",
+      "location": [
+        87.88798581872831,
+        56.24988036078291,
+        -3.7166713635319084
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_Env_SM_P_OfficeDesk_AC_FilmStage.MI_Film304_Env_SM_P_OfficeDesk_AC_FilmStage"
+        },
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 1,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_Env_SM_P_OfficeDesk_AC_FilmStage.MI_Film304_Env_SM_P_OfficeDesk_AC_FilmStage"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_10",
+      "label": "SM_P_OfficeDesk_AC_FilmStage_20261017",
+      "class": "StaticMeshActor",
+      "folder": "None",
+      "location": [
+        179.40341290964338,
+        252.57791692953072,
+        -3.354927205155807
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_Env_SM_P_OfficeDesk_AC_FilmStage.MI_Film304_Env_SM_P_OfficeDesk_AC_FilmStage"
+        },
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 1,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_Env_SM_P_OfficeDesk_AC_FilmStage.MI_Film304_Env_SM_P_OfficeDesk_AC_FilmStage"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "SpotLight_0",
+      "label": "SpotLight",
+      "class": "SpotLight",
+      "folder": "None",
+      "location": [
+        24.984309196472168,
+        -100.0,
+        272.95144510269165
+      ],
+      "materials": [],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [
+        {
+          "name": "LightComponent0",
+          "class": "SpotLightComponent",
+          "intensity": 0.0
+        }
+      ],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "SkeletalMeshActor_1",
+      "label": "Film_Cast_David",
+      "class": "SkeletalMeshActor",
+      "folder": "FilmCast",
+      "location": [
+        -142.4139448967839,
+        -36.85711249149446,
+        -0.24178481204650382
+      ],
+      "materials": [],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "SkeletalMeshActor_2",
+      "label": "Film_Cast_Sam",
+      "class": "SkeletalMeshActor",
+      "folder": "FilmCast",
+      "location": [
+        -55.19357049437356,
+        -68.7190989829608,
+        -0.3515144524287166
+      ],
+      "materials": [],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "SkeletalMeshActor_3",
+      "label": "Film_Cast_Spider",
+      "class": "SkeletalMeshActor",
+      "folder": "FilmCast",
+      "location": [
+        -155.17446525586678,
+        -56.80356917363224,
+        -0.6610467328081313
+      ],
+      "materials": [],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "CineCameraActor_3",
+      "label": "SESSION_CAM_Cast",
+      "class": "CineCameraActor",
+      "folder": "FilmCast",
+      "location": [
+        898.7,
+        -685.6,
+        184.6
+      ],
+      "materials": [
+        {
+          "comp": "CameraProxyMeshComponent_0",
+          "slot": 0,
+          "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CameraBody.MI_CineMat_CameraBody"
+        },
+        {
+          "comp": "CameraProxyMeshComponent_0",
+          "slot": 1,
+          "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CamViewFinder.MI_CineMat_CamViewFinder"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "CineCameraActor_4",
+      "label": "SESSION_CAM_Verify",
+      "class": "CineCameraActor",
+      "folder": "FilmCast",
+      "location": [
+        -17.716306686401367,
+        -293.1,
+        116.20011074409388
+      ],
+      "materials": [
+        {
+          "comp": "CameraProxyMeshComponent_0",
+          "slot": 0,
+          "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CameraBody.MI_CineMat_CameraBody"
+        },
+        {
+          "comp": "CameraProxyMeshComponent_0",
+          "slot": 1,
+          "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CamViewFinder.MI_CineMat_CamViewFinder"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "SceneCapture2D_5",
+      "label": "SESSION_CAPTURE_CAST_GROUP_v01",
+      "class": "SceneCapture2D",
+      "folder": "None",
+      "location": [
+        682.124884988237,
+        -240.84360336073814,
+        103.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent_0",
+          "slot": 0,
+          "material": "/Engine/EditorMaterials/MatineeCam_mat.MatineeCam_mat"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "DirectionalLight_0",
+      "label": "Cast_RimKicker_Light",
+      "class": "DirectionalLight",
+      "folder": "None",
+      "location": [
+        -363.1775599158841,
+        -167.81705293895703,
+        168.13167760309588
+      ],
+      "materials": [],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [
+        {
+          "name": "LightComponent0",
+          "class": "DirectionalLightComponent",
+          "intensity": 0.601207971572876
+        }
+      ],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "PostProcessVolume_1",
+      "label": "PPV_StorybookOutline",
+      "class": "PostProcessVolume",
+      "folder": "None",
+      "location": [
+        0.0,
+        0.0,
+        500.0
+      ],
+      "materials": [],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_11",
+      "label": "P_Chair_KS",
+      "class": "StaticMeshActor",
+      "folder": "None",
+      "location": [
+        -142.73710181039397,
+        -40.17032074899271,
+        6.959610630019597e-07
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Meshes/Office/Props/Material.Material"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "PostProcessVolume_0",
+      "label": "PPV_P2_WatercolourPaper",
+      "class": "PostProcessVolume",
+      "folder": "None",
+      "location": [
+        0.0,
+        0.0,
+        500.0
+      ],
+      "materials": [],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "PostProcessVolume_2",
+      "label": "PPV_P3_RisoPrint",
+      "class": "PostProcessVolume",
+      "folder": "None",
+      "location": [
+        0.0,
+        0.0,
+        500.0
+      ],
+      "materials": [],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "PostProcessVolume_3",
+      "label": "PPV_P4_CleanCinematic",
+      "class": "PostProcessVolume",
+      "folder": "None",
+      "location": [
+        0.0,
+        0.0,
+        500.0
+      ],
+      "materials": [],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_12",
+      "label": "Film_Troffer_1_Panel",
+      "class": "StaticMeshActor",
+      "folder": "None",
+      "location": [
+        17.67221786050635,
+        30.88789971448523,
+        338.069167137146
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/MI_Toon_Office_Troffer.MI_Toon_Office_Troffer"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_13",
+      "label": "Film_Troffer_1_Housing",
+      "class": "StaticMeshActor",
+      "folder": "None",
+      "location": [
+        17.67221786050635,
+        30.88789971448523,
+        341.069167137146
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Engine/EngineMaterials/WorldGridMaterial.WorldGridMaterial"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "RectLight_0",
+      "label": "Film_Troffer_1_Light",
+      "class": "RectLight",
+      "folder": "None",
+      "location": [
+        17.67221786050635,
+        30.88789971448523,
+        334.069167137146
+      ],
+      "materials": [],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [
+        {
+          "name": "LightComponent0",
+          "class": "RectLightComponent",
+          "intensity": 14.0
+        }
+      ],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_14",
+      "label": "Film_Troffer_2_Panel",
+      "class": "StaticMeshActor",
+      "folder": "None",
+      "location": [
+        68.3864089017928,
+        139.64483433029653,
+        338.069167137146
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/MI_Toon_Office_Troffer.MI_Toon_Office_Troffer"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_15",
+      "label": "Film_Troffer_2_Housing",
+      "class": "StaticMeshActor",
+      "folder": "None",
+      "location": [
+        68.3864089017928,
+        139.64483433029653,
+        341.069167137146
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Engine/EngineMaterials/WorldGridMaterial.WorldGridMaterial"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "RectLight_1",
+      "label": "Film_Troffer_2_Light",
+      "class": "RectLight",
+      "folder": "None",
+      "location": [
+        68.3864089017928,
+        139.64483433029653,
+        334.069167137146
+      ],
+      "materials": [],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [
+        {
+          "name": "LightComponent0",
+          "class": "RectLightComponent",
+          "intensity": 14.0
+        }
+      ],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_16",
+      "label": "Film_Troffer_3_Panel",
+      "class": "StaticMeshActor",
+      "folder": "None",
+      "location": [
+        130.96069141864317,
+        -21.939382620188212,
+        338.069167137146
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/MI_Toon_Office_Troffer.MI_Toon_Office_Troffer"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_17",
+      "label": "Film_Troffer_3_Housing",
+      "class": "StaticMeshActor",
+      "folder": "None",
+      "location": [
+        130.96069141864317,
+        -21.939382620188212,
+        341.069167137146
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Engine/EngineMaterials/WorldGridMaterial.WorldGridMaterial"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "RectLight_2",
+      "label": "Film_Troffer_3_Light",
+      "class": "RectLight",
+      "folder": "None",
+      "location": [
+        130.96069141864317,
+        -21.939382620188212,
+        334.069167137146
+      ],
+      "materials": [],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [
+        {
+          "name": "LightComponent0",
+          "class": "RectLightComponent",
+          "intensity": 14.0
+        }
+      ],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_18",
+      "label": "Film_Troffer_4_Panel",
+      "class": "StaticMeshActor",
+      "folder": "None",
+      "location": [
+        181.67488245992962,
+        86.81755199562315,
+        338.069167137146
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/MI_Toon_Office_Troffer.MI_Toon_Office_Troffer"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_19",
+      "label": "Film_Troffer_4_Housing",
+      "class": "StaticMeshActor",
+      "folder": "None",
+      "location": [
+        181.67488245992962,
+        86.81755199562315,
+        341.069167137146
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Engine/EngineMaterials/WorldGridMaterial.WorldGridMaterial"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "RectLight_3",
+      "label": "Film_Troffer_4_Light",
+      "class": "RectLight",
+      "folder": "None",
+      "location": [
+        181.67488245992962,
+        86.81755199562315,
+        334.069167137146
+      ],
+      "materials": [],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [
+        {
+          "name": "LightComponent0",
+          "class": "RectLightComponent",
+          "intensity": 14.0
+        }
+      ],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_20",
+      "label": "Film_Troffer_5_Panel",
+      "class": "StaticMeshActor",
+      "folder": "None",
+      "location": [
+        244.24916497677992,
+        -74.76666495486162,
+        338.069167137146
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/MI_Toon_Office_Troffer.MI_Toon_Office_Troffer"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_21",
+      "label": "Film_Troffer_5_Housing",
+      "class": "StaticMeshActor",
+      "folder": "None",
+      "location": [
+        244.24916497677992,
+        -74.76666495486162,
+        341.069167137146
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Engine/EngineMaterials/WorldGridMaterial.WorldGridMaterial"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "RectLight_4",
+      "label": "Film_Troffer_5_Light",
+      "class": "RectLight",
+      "folder": "None",
+      "location": [
+        244.24916497677992,
+        -74.76666495486162,
+        334.069167137146
+      ],
+      "materials": [],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [
+        {
+          "name": "LightComponent0",
+          "class": "RectLightComponent",
+          "intensity": 14.0
+        }
+      ],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_22",
+      "label": "Film_Troffer_6_Panel",
+      "class": "StaticMeshActor",
+      "folder": "None",
+      "location": [
+        294.9633560180664,
+        33.99026966094971,
+        338.069167137146
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/MI_Toon_Office_Troffer.MI_Toon_Office_Troffer"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_23",
+      "label": "Film_Troffer_6_Housing",
+      "class": "StaticMeshActor",
+      "folder": "None",
+      "location": [
+        294.9633560180664,
+        33.99026966094971,
+        341.069167137146
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Engine/EngineMaterials/WorldGridMaterial.WorldGridMaterial"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "RectLight_5",
+      "label": "Film_Troffer_6_Light",
+      "class": "RectLight",
+      "folder": "None",
+      "location": [
+        294.9633560180664,
+        33.99026966094971,
+        334.069167137146
+      ],
+      "materials": [],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [
+        {
+          "name": "LightComponent0",
+          "class": "RectLightComponent",
+          "intensity": 14.0
+        }
+      ],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_24",
+      "label": "SM_Glass_WindowBay_01",
+      "class": "StaticMeshActor",
+      "folder": "None",
+      "location": [
+        -252.3,
+        141.80109710693358,
+        141.42720985412598
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/MI_Toon_Glass.MI_Toon_Glass"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_25",
+      "label": "SM_Glass_WindowBay_02",
+      "class": "StaticMeshActor",
+      "folder": "None",
+      "location": [
+        -155.1,
+        353.65,
+        137.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/MI_Toon_Glass.MI_Toon_Glass"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_26",
+      "label": "SM_Glass_WindowBay_03",
+      "class": "StaticMeshActor",
+      "folder": "None",
+      "location": [
+        -57.9,
+        562.1,
+        133.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/MI_Toon_Glass.MI_Toon_Glass"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_27",
+      "label": "SM_Ext_Hero_TowerCluster",
+      "class": "StaticMeshActor",
+      "folder": "None",
+      "location": [
+        -16000.0,
+        11000.0,
+        -1200.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Environment/MI_Film304_BrutalistAsphalt.MI_Film304_BrutalistAsphalt"
+        },
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 1,
+          "material": "/Game/Materials/Instances/Film304/Environment/MI_Film304_BrutalistConcrete.MI_Film304_BrutalistConcrete"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_29",
+      "label": "SM_Ext_Mid_SlenderTower",
+      "class": "StaticMeshActor",
+      "folder": "None",
+      "location": [
+        -5200.0,
+        4800.0,
+        -250.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Environment/MI_Film304_BrutalistConcrete.MI_Film304_BrutalistConcrete"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_30",
+      "label": "SM_Ext_Sky_KMZ_TowerCluster",
+      "class": "StaticMeshActor",
+      "folder": "None",
+      "location": [
+        -22000.0,
+        12000.0,
+        -1200.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Environment/MI_Film304_BrutalistAsphalt.MI_Film304_BrutalistAsphalt"
+        },
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 1,
+          "material": "/Game/Materials/Instances/Film304/Environment/MI_Film304_BrutalistConcrete.MI_Film304_BrutalistConcrete"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_31",
+      "label": "SM_Ext_FG_BarbicanScale",
+      "class": "StaticMeshActor",
+      "folder": "None",
+      "location": [
+        -9265.87626700843,
+        -1791.8759672327233,
+        -830.6018922439445
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Environment/MI_Film304_BrutalistConcrete.MI_Film304_BrutalistConcrete"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "CineCameraActor_5",
+      "label": "CineCam_Hero_WindowEstablishing",
+      "class": "CineCameraActor",
+      "folder": "None",
+      "location": [
+        540.0,
+        -180.0,
+        115.0
+      ],
+      "materials": [
+        {
+          "comp": "CameraProxyMeshComponent_0",
+          "slot": 0,
+          "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CameraBody.MI_CineMat_CameraBody"
+        },
+        {
+          "comp": "CameraProxyMeshComponent_0",
+          "slot": 1,
+          "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CamViewFinder.MI_CineMat_CamViewFinder"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "CineCameraActor_6",
+      "label": "CineCam_Hero_DeskLineup",
+      "class": "CineCameraActor",
+      "folder": "None",
+      "location": [
+        180.0,
+        -140.0,
+        105.0
+      ],
+      "materials": [
+        {
+          "comp": "CameraProxyMeshComponent_0",
+          "slot": 0,
+          "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CameraBody.MI_CineMat_CameraBody"
+        },
+        {
+          "comp": "CameraProxyMeshComponent_0",
+          "slot": 1,
+          "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CamViewFinder.MI_CineMat_CamViewFinder"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "CineCameraActor_7",
+      "label": "CineCam_Hero_LowAngleTension",
+      "class": "CineCameraActor",
+      "folder": "None",
+      "location": [
+        -60.0,
+        -220.0,
+        55.0
+      ],
+      "materials": [
+        {
+          "comp": "CameraProxyMeshComponent_0",
+          "slot": 0,
+          "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CameraBody.MI_CineMat_CameraBody"
+        },
+        {
+          "comp": "CameraProxyMeshComponent_0",
+          "slot": 1,
+          "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CamViewFinder.MI_CineMat_CamViewFinder"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_32",
+      "label": "Dress_P_ComputerMonitor_AC",
+      "class": "StaticMeshActor",
+      "folder": "None",
+      "location": [
+        -125.0630603260503,
+        -138.3346223530936,
+        53.119596375898254
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_Prop_Plastic.MI_Film304_Prop_Plastic"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_33",
+      "label": "Dress_P_Keyboard_KS",
+      "class": "StaticMeshActor",
+      "folder": "None",
+      "location": [
+        -131.08240686193628,
+        -101.47301785179711,
+        55.12883141171586
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_Prop_Plastic.MI_Film304_Prop_Plastic"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_34",
+      "label": "Dress_SM_P_Mouse_KMP_FilmStage_202",
+      "class": "StaticMeshActor",
+      "folder": "None",
+      "location": [
+        -100.63514900189003,
+        -110.53378814781946,
+        53.28673598128785
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_Prop_Plastic.MI_Film304_Prop_Plastic"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_35",
+      "label": "Dress_P_Lamp_EF",
+      "class": "StaticMeshActor",
+      "folder": "None",
+      "location": [
+        -98.07621678193713,
+        -118.945139940171,
+        70.65217062037081
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_Prop_LampShade.MI_Film304_Prop_LampShade"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_37",
+      "label": "Dress_P_Phone_KS",
+      "class": "StaticMeshActor",
+      "folder": "None",
+      "location": [
+        -177.08240686193628,
+        -101.47301785179711,
+        54.16810271437103
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_Prop_Plastic.MI_Film304_Prop_Plastic"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_38",
+      "label": "Dress_SM_Paper_PMB",
+      "class": "StaticMeshActor",
+      "folder": "None",
+      "location": [
+        -151.08240686193628,
+        -117.47301785179711,
+        54.100625048938376
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_Prop_Paper.MI_Film304_Prop_Paper"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "CineCameraActor_8",
+      "label": "Cam_E1",
+      "class": "CineCameraActor",
+      "folder": "None",
+      "location": [
+        -1200.0,
+        5000.0,
+        2600.0
+      ],
+      "materials": [
+        {
+          "comp": "CameraProxyMeshComponent_0",
+          "slot": 0,
+          "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CameraBody.MI_CineMat_CameraBody"
+        },
+        {
+          "comp": "CameraProxyMeshComponent_0",
+          "slot": 1,
+          "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CamViewFinder.MI_CineMat_CamViewFinder"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_48",
+      "label": "EST_EstablishingE1_01_SM_OFFICE_BarbicanScale",
+      "class": "StaticMeshActor",
+      "folder": "None",
+      "location": [
+        -6159.173965454102,
+        13674.468612670898,
+        0.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_EnvE1_Concrete.MI_Film304_EnvE1_Concrete"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_49",
+      "label": "EST_EstablishingE1_02_SM_CITY_CivicSuperblock",
+      "class": "StaticMeshActor",
+      "folder": "None",
+      "location": [
+        -6057.492828369141,
+        27178.033447265625,
+        0.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_EnvE1_Asphalt.MI_Film304_EnvE1_Asphalt"
+        },
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 1,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_EnvE1_Concrete.MI_Film304_EnvE1_Concrete"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_50",
+      "label": "EST_EstablishingE1_03_SM_KMZ_TowerCluster",
+      "class": "StaticMeshActor",
+      "folder": "None",
+      "location": [
+        3488.8328552246094,
+        39857.521057128906,
+        0.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_EnvE1_Asphalt.MI_Film304_EnvE1_Asphalt"
+        },
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 1,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_EnvE1_Concrete.MI_Film304_EnvE1_Concrete"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_51",
+      "label": "EST_EstablishingE1_04_SM_CITY_TowerCluster",
+      "class": "StaticMeshActor",
+      "folder": "None",
+      "location": [
+        21397.401428222656,
+        39243.51348876953,
+        0.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_EnvE1_Asphalt.MI_Film304_EnvE1_Asphalt"
+        },
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 1,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_EnvE1_Concrete.MI_Film304_EnvE1_Concrete"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_52",
+      "label": "EST_EstablishingE1_05_SM_KMZ_TowerCluster",
+      "class": "StaticMeshActor",
+      "folder": "None",
+      "location": [
+        20931.57196044922,
+        52266.27502441406,
+        0.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_EnvE1_Asphalt.MI_Film304_EnvE1_Asphalt"
+        },
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 1,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_EnvE1_Concrete.MI_Film304_EnvE1_Concrete"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_53",
+      "label": "EST_EstablishingE1_06_SM_KMZ_TowerCluster",
+      "class": "StaticMeshActor",
+      "folder": "None",
+      "location": [
+        8830.439758300781,
+        52681.170654296875,
+        0.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_EnvE1_Asphalt.MI_Film304_EnvE1_Asphalt"
+        },
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 1,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_EnvE1_Concrete.MI_Film304_EnvE1_Concrete"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "DirectionalLight_1",
+      "label": "EST_Fill_E1",
+      "class": "DirectionalLight",
+      "folder": "None",
+      "location": [
+        -1200.0,
+        5000.0,
+        2600.0
+      ],
+      "materials": [],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [
+        {
+          "name": "LightComponent0",
+          "class": "DirectionalLightComponent",
+          "intensity": 3.0
+        }
+      ],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "ExponentialHeightFog_0",
+      "label": "EST_Fog_E1",
+      "class": "ExponentialHeightFog",
+      "folder": "None",
+      "location": [
+        0.0,
+        20000.0,
+        0.0
+      ],
+      "materials": [],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 1
+    },
+    {
+      "name": "PostProcessVolume_4",
+      "label": "EST_PPV_Ink",
+      "class": "PostProcessVolume",
+      "folder": "None",
+      "location": [
+        0.0,
+        20000.0,
+        0.0
+      ],
+      "materials": [],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_41",
+      "label": "SM_VenetianBlind_Bay_01",
+      "class": "StaticMeshActor",
+      "folder": "Master_Window_Glazing",
+      "location": [
+        -252.26380169711098,
+        145.21699058071908,
+        220.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_Prop_Metal.MI_Film304_Prop_Metal"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_42",
+      "label": "SM_VenetianBlind_Bay_02",
+      "class": "StaticMeshActor",
+      "folder": "Master_Window_Glazing",
+      "location": [
+        -155.0616014967501,
+        353.6677815991486,
+        220.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_Prop_Metal.MI_Film304_Prop_Metal"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_43",
+      "label": "SM_VenetianBlind_Bay_03",
+      "class": "StaticMeshActor",
+      "folder": "Master_Window_Glazing",
+      "location": [
+        -57.85940129638922,
+        562.118572617578,
+        220.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_Prop_Metal.MI_Film304_Prop_Metal"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "DirectionalLight_3",
+      "label": "Light_Cinematic_SunBeam",
+      "class": "DirectionalLight",
+      "folder": "Baked_Cinematic_Lighting",
+      "location": [
+        -1500.0,
+        3000.0,
+        1200.0
+      ],
+      "materials": [],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [
+        {
+          "name": "LightComponent0",
+          "class": "DirectionalLightComponent",
+          "intensity": 14.0
+        }
+      ],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "PointLight_1",
+      "label": "Light_AviationBeacon_HeroSpire",
+      "class": "PointLight",
+      "folder": "Baked_Skyline_Rooftops",
+      "location": [
+        -8500.0,
+        4800.0,
+        12000.0
+      ],
+      "materials": [],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [
+        {
+          "name": "LightComponent0",
+          "class": "PointLightComponent",
+          "intensity": 2500000.0
+        }
+      ],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_63",
+      "label": "Cables_Corridor_Office_to_Estate",
+      "class": "StaticMeshActor",
+      "folder": "Baked_Skyline_Cables",
+      "location": [
+        -280.0,
+        180.0,
+        180.0
+      ],
+      "materials": [],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_64",
+      "label": "Cables_Corridor_Estate_to_Ribbon",
+      "class": "StaticMeshActor",
+      "folder": "Baked_Skyline_Cables",
+      "location": [
+        -3100.0,
+        1700.0,
+        1400.0
+      ],
+      "materials": [],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_65",
+      "label": "Cables_Corridor_StreetCrossing",
+      "class": "StaticMeshActor",
+      "folder": "Baked_Skyline_Cables",
+      "location": [
+        -2200.0,
+        900.0,
+        400.0
+      ],
+      "materials": [],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_66",
+      "label": "EST_HorizonBody",
+      "class": "StaticMeshActor",
+      "folder": "None",
+      "location": [
+        0.0,
+        20000.0,
+        0.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_EnvE1_Concrete.MI_Film304_EnvE1_Concrete"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_67",
+      "label": "EST_HorizonWindows",
+      "class": "StaticMeshActor",
+      "folder": "None",
+      "location": [
+        0.0,
+        20000.0,
+        0.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Masters/Film304/M_Film304_VCEmissive.M_Film304_VCEmissive"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "NiagaraActor_0",
+      "label": "VFX_DustMotes_WindowRays",
+      "class": "NiagaraActor",
+      "folder": "Baked_Cinematic_VFX",
+      "location": [
+        88.07648700338558,
+        264.00287076826874,
+        156.34780188267837
+      ],
+      "materials": [],
+      "niagara_count": 1,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_158",
+      "label": "Film_David_SnorePuff_1",
+      "class": "StaticMeshActor",
+      "folder": "Film304/CharacterBeats/DavidSleep",
+      "location": [
+        -144.0,
+        -79.0,
+        79.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Film304Idle_20261017/M_DavidSnorePuff_v01.M_DavidSnorePuff_v01"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_159",
+      "label": "Film_David_SnorePuff_2",
+      "class": "StaticMeshActor",
+      "folder": "Film304/CharacterBeats/DavidSleep",
+      "location": [
+        -144.0,
+        -79.0,
+        79.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Film304Idle_20261017/M_DavidSnorePuff_v01.M_DavidSnorePuff_v01"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_160",
+      "label": "Film_David_SnorePuff_3",
+      "class": "StaticMeshActor",
+      "folder": "Film304/CharacterBeats/DavidSleep",
+      "location": [
+        -144.0,
+        -79.0,
+        79.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Film304Idle_20261017/M_DavidSnorePuff_v01.M_DavidSnorePuff_v01"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_161",
+      "label": "Film_David_SnorePuff_4",
+      "class": "StaticMeshActor",
+      "folder": "Film304/CharacterBeats/DavidSleep",
+      "location": [
+        -144.0,
+        -79.0,
+        79.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Film304Idle_20261017/M_DavidSnorePuff_v01.M_DavidSnorePuff_v01"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "CineCameraActor_13",
+      "label": "Film_Cam_David_DeskSleep",
+      "class": "CineCameraActor",
+      "folder": "Film304/CharacterBeats/DavidSleep",
+      "location": [
+        -235.0,
+        -165.0,
+        104.0
+      ],
+      "materials": [
+        {
+          "comp": "CameraProxyMeshComponent_0",
+          "slot": 0,
+          "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CameraBody.MI_CineMat_CameraBody"
+        },
+        {
+          "comp": "CameraProxyMeshComponent_0",
+          "slot": 1,
+          "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CamViewFinder.MI_CineMat_CamViewFinder"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "CineCameraActor_14",
+      "label": "Film_Cam_DavidSleep_Front",
+      "class": "CineCameraActor",
+      "folder": "Film304/CharacterBeats/DavidSleep/ReviewCameras",
+      "location": [
+        -146.0,
+        -125.0,
+        132.0
+      ],
+      "materials": [
+        {
+          "comp": "CameraProxyMeshComponent_0",
+          "slot": 0,
+          "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CameraBody.MI_CineMat_CameraBody"
+        },
+        {
+          "comp": "CameraProxyMeshComponent_0",
+          "slot": 1,
+          "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CamViewFinder.MI_CineMat_CamViewFinder"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "CineCameraActor_15",
+      "label": "Film_Cam_DavidSleep_Right",
+      "class": "CineCameraActor",
+      "folder": "Film304/CharacterBeats/DavidSleep/ReviewCameras",
+      "location": [
+        -49.0,
+        -105.0,
+        87.0
+      ],
+      "materials": [
+        {
+          "comp": "CameraProxyMeshComponent_0",
+          "slot": 0,
+          "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CameraBody.MI_CineMat_CameraBody"
+        },
+        {
+          "comp": "CameraProxyMeshComponent_0",
+          "slot": 1,
+          "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CamViewFinder.MI_CineMat_CamViewFinder"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "CineCameraActor_16",
+      "label": "Film_Cam_DavidSleep_Left",
+      "class": "CineCameraActor",
+      "folder": "Film304/CharacterBeats/DavidSleep/ReviewCameras",
+      "location": [
+        -245.0,
+        -105.0,
+        87.0
+      ],
+      "materials": [
+        {
+          "comp": "CameraProxyMeshComponent_0",
+          "slot": 0,
+          "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CameraBody.MI_CineMat_CameraBody"
+        },
+        {
+          "comp": "CameraProxyMeshComponent_0",
+          "slot": 1,
+          "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CamViewFinder.MI_CineMat_CamViewFinder"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "CineCameraActor_21",
+      "label": "SESSION_FaceReview_Dana",
+      "class": "CineCameraActor",
+      "folder": "None",
+      "location": [
+        80.27230083634205,
+        17.85585707645768,
+        87.70292025845833
+      ],
+      "materials": [
+        {
+          "comp": "CameraProxyMeshComponent_0",
+          "slot": 0,
+          "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CameraBody.MI_CineMat_CameraBody"
+        },
+        {
+          "comp": "CameraProxyMeshComponent_0",
+          "slot": 1,
+          "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CamViewFinder.MI_CineMat_CamViewFinder"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "CineCameraActor_22",
+      "label": "SESSION_FaceReview_Sam",
+      "class": "CineCameraActor",
+      "folder": "None",
+      "location": [
+        8.865563650852572,
+        -36.547661154021654,
+        124.88169083865574
+      ],
+      "materials": [
+        {
+          "comp": "CameraProxyMeshComponent_0",
+          "slot": 0,
+          "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CameraBody.MI_CineMat_CameraBody"
+        },
+        {
+          "comp": "CameraProxyMeshComponent_0",
+          "slot": 1,
+          "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CamViewFinder.MI_CineMat_CamViewFinder"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "SceneCapture2D_13",
+      "label": "SESSION_CAPTURE_Sam_closed_confirmed",
+      "class": "SceneCapture2D",
+      "folder": "None",
+      "location": [
+        8.865563650852572,
+        -36.547661154021654,
+        124.88169083865574
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent_0",
+          "slot": 0,
+          "material": "/Engine/EditorMaterials/MatineeCam_mat.MatineeCam_mat"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_90",
+      "label": "SM_BreakRoomTogether_ZMJ_FilmStage_20261016",
+      "class": "StaticMeshActor",
+      "folder": "None",
+      "location": [
+        49.85856169335142,
+        891.3868303340705,
+        5.646289812612906
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/MI_Toon_Office_Polypropylene.MI_Toon_Office_Polypropylene"
+        },
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 1,
+          "material": "/Game/Materials/Instances/MI_Toon_Office_Polypropylene.MI_Toon_Office_Polypropylene"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_93",
+      "label": "Film_Wall_Right",
+      "class": "StaticMeshActor",
+      "folder": "None",
+      "location": [
+        96.39626423896607,
+        892.9209148859553,
+        170.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Engine/EngineMaterials/WorldGridMaterial.WorldGridMaterial"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_95",
+      "label": "Film_WindowMullion_600",
+      "class": "StaticMeshActor",
+      "folder": "None",
+      "location": [
+        -9.258301196208805,
+        666.3439681267928,
+        142.5
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Engine/EngineMaterials/WorldGridMaterial.WorldGridMaterial"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_97",
+      "label": "SM_S_Plant_PMB_FilmStage_20261016",
+      "class": "StaticMeshActor",
+      "folder": "None",
+      "location": [
+        15.497782859560147,
+        103.20114650685605,
+        63.80142416487121
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_S_Plant_PMB_FilmStage_20261016.MI_OneDriveRigs_Env_SM_S_Plant_PMB_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_99",
+      "label": "SukhbirGhuldu_Scissors",
+      "class": "StaticMeshActor",
+      "folder": "None",
+      "location": [
+        21.278697272740175,
+        88.68494258628148,
+        52.231923882250854
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Meshes/BreakRoom/Props/Scissors1.Scissors1"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "CineCameraActor_9",
+      "label": "EST01_NSHOT",
+      "class": "CineCameraActor",
+      "folder": "None",
+      "location": [
+        345.0,
+        175.0,
+        155.0
+      ],
+      "materials": [
+        {
+          "comp": "CameraProxyMeshComponent_0",
+          "slot": 0,
+          "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CameraBody.MI_CineMat_CameraBody"
+        },
+        {
+          "comp": "CameraProxyMeshComponent_0",
+          "slot": 1,
+          "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CamViewFinder.MI_CineMat_CamViewFinder"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "CineCameraActor_10",
+      "label": "EST02_NSHOT",
+      "class": "CineCameraActor",
+      "folder": "None",
+      "location": [
+        200.0,
+        -235.0,
+        145.0
+      ],
+      "materials": [
+        {
+          "comp": "CameraProxyMeshComponent_0",
+          "slot": 0,
+          "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CameraBody.MI_CineMat_CameraBody"
+        },
+        {
+          "comp": "CameraProxyMeshComponent_0",
+          "slot": 1,
+          "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CamViewFinder.MI_CineMat_CamViewFinder"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "CineCameraActor_11",
+      "label": "EST03_NSHOT",
+      "class": "CineCameraActor",
+      "folder": "None",
+      "location": [
+        30.0,
+        -300.0,
+        135.0
+      ],
+      "materials": [
+        {
+          "comp": "CameraProxyMeshComponent_0",
+          "slot": 0,
+          "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CameraBody.MI_CineMat_CameraBody"
+        },
+        {
+          "comp": "CameraProxyMeshComponent_0",
+          "slot": 1,
+          "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CamViewFinder.MI_CineMat_CamViewFinder"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "CineCameraActor_12",
+      "label": "EST04_NSHOT",
+      "class": "CineCameraActor",
+      "folder": "None",
+      "location": [
+        -240.0,
+        -40.0,
+        90.0
+      ],
+      "materials": [
+        {
+          "comp": "CameraProxyMeshComponent_0",
+          "slot": 0,
+          "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CameraBody.MI_CineMat_CameraBody"
+        },
+        {
+          "comp": "CameraProxyMeshComponent_0",
+          "slot": 1,
+          "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CamViewFinder.MI_CineMat_CamViewFinder"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "CineCameraActor_17",
+      "label": "EST05_NSHOT",
+      "class": "CineCameraActor",
+      "folder": "None",
+      "location": [
+        -20.0,
+        -230.0,
+        125.0
+      ],
+      "materials": [
+        {
+          "comp": "CameraProxyMeshComponent_0",
+          "slot": 0,
+          "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CameraBody.MI_CineMat_CameraBody"
+        },
+        {
+          "comp": "CameraProxyMeshComponent_0",
+          "slot": 1,
+          "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CamViewFinder.MI_CineMat_CamViewFinder"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "CineCameraActor_18",
+      "label": "EST06_NSHOT",
+      "class": "CineCameraActor",
+      "folder": "None",
+      "location": [
+        -70.0,
+        -45.0,
+        258.0
+      ],
+      "materials": [
+        {
+          "comp": "CameraProxyMeshComponent_0",
+          "slot": 0,
+          "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CameraBody.MI_CineMat_CameraBody"
+        },
+        {
+          "comp": "CameraProxyMeshComponent_0",
+          "slot": 1,
+          "material": "/Engine/EditorMaterials/Camera/MI_CineMat_CamViewFinder.MI_CineMat_CamViewFinder"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_28",
+      "label": "Film_Ceiling_Slab",
+      "class": "StaticMeshActor",
+      "folder": "Master_Ceiling_Architecture",
+      "location": [
+        0.0,
+        0.0,
+        350.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Environment/MI_Film304_BrutalistConcrete.MI_Film304_BrutalistConcrete"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_36",
+      "label": "Workstation_Row_Desk_01",
+      "class": "StaticMeshActor",
+      "folder": "Master_Workstation_Row",
+      "location": [
+        494.7073953939212,
+        232.73287894614813,
+        -3.5
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_P_OfficeDesk_AC_FilmStage_20261016.MI_OneDriveRigs_Env_SM_P_OfficeDesk_AC_FilmStage_20261016"
+        },
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 1,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_P_OfficeDesk_AC_FilmStage_20261016.MI_OneDriveRigs_Env_SM_P_OfficeDesk_AC_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_39",
+      "label": "Workstation_Row_Monitor_01",
+      "class": "StaticMeshActor",
+      "folder": "Master_Workstation_Row",
+      "location": [
+        480.8074222705952,
+        250.2483220513287,
+        52.56
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_P_ComputerMonitor_AC_FilmStage_20261016.MI_OneDriveRigs_Env_SM_P_ComputerMonitor_AC_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_40",
+      "label": "Workstation_Row_Keyboard_01",
+      "class": "StaticMeshActor",
+      "folder": "Master_Workstation_Row",
+      "location": [
+        517.0597337520612,
+        233.3435915817007,
+        53.44
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_S_Keyboard_KS_FilmStage_20261016.MI_OneDriveRigs_Env_SM_S_Keyboard_KS_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_44",
+      "label": "Workstation_Row_Chair_01",
+      "class": "StaticMeshActor",
+      "folder": "Master_Workstation_Row",
+      "location": [
+        562.68047942167,
+        201.03650931559568,
+        0.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_P_Chair_KS_FilmStage_20261016.MI_OneDriveRigs_Env_SM_P_Chair_KS_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_45",
+      "label": "Workstation_Row_Drawers_01",
+      "class": "StaticMeshActor",
+      "folder": "Master_Workstation_Row",
+      "location": [
+        469.35029968947924,
+        178.35441172394914,
+        0.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_P_DeskDrawers_SG_FilmStage_20261016.MI_OneDriveRigs_Env_SM_P_DeskDrawers_SG_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_46",
+      "label": "Workstation_Row_Desk_02",
+      "class": "StaticMeshActor",
+      "folder": "Master_Workstation_Row",
+      "location": [
+        553.8739520376191,
+        359.61596913127914,
+        -3.5
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_P_OfficeDesk_AC_FilmStage_20261016.MI_OneDriveRigs_Env_SM_P_OfficeDesk_AC_FilmStage_20261016"
+        },
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 1,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_P_OfficeDesk_AC_FilmStage_20261016.MI_OneDriveRigs_Env_SM_P_OfficeDesk_AC_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_47",
+      "label": "Workstation_Row_Monitor_02",
+      "class": "StaticMeshActor",
+      "folder": "Master_Workstation_Row",
+      "location": [
+        539.9739789142932,
+        377.1314122364597,
+        52.56
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_P_ComputerMonitor_AC_FilmStage_20261016.MI_OneDriveRigs_Env_SM_P_ComputerMonitor_AC_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_55",
+      "label": "Workstation_Row_Keyboard_02",
+      "class": "StaticMeshActor",
+      "folder": "Master_Workstation_Row",
+      "location": [
+        576.2262903957592,
+        360.2266817668317,
+        53.44
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_S_Keyboard_KS_FilmStage_20261016.MI_OneDriveRigs_Env_SM_S_Keyboard_KS_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_56",
+      "label": "Workstation_Row_Chair_02",
+      "class": "StaticMeshActor",
+      "folder": "Master_Workstation_Row",
+      "location": [
+        621.8470360653679,
+        327.9195995007267,
+        0.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_P_Chair_KS_FilmStage_20261016.MI_OneDriveRigs_Env_SM_P_Chair_KS_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_57",
+      "label": "Workstation_Row_Drawers_02",
+      "class": "StaticMeshActor",
+      "folder": "Master_Workstation_Row",
+      "location": [
+        528.5168563331772,
+        305.23750190908015,
+        0.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_P_DeskDrawers_SG_FilmStage_20261016.MI_OneDriveRigs_Env_SM_P_DeskDrawers_SG_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_58",
+      "label": "Workstation_Row_Desk_03",
+      "class": "StaticMeshActor",
+      "folder": "Master_Workstation_Row",
+      "location": [
+        613.0405086813171,
+        486.4990593164101,
+        -3.5
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_P_OfficeDesk_AC_FilmStage_20261016.MI_OneDriveRigs_Env_SM_P_OfficeDesk_AC_FilmStage_20261016"
+        },
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 1,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_P_OfficeDesk_AC_FilmStage_20261016.MI_OneDriveRigs_Env_SM_P_OfficeDesk_AC_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_59",
+      "label": "Workstation_Row_Monitor_03",
+      "class": "StaticMeshActor",
+      "folder": "Master_Workstation_Row",
+      "location": [
+        599.1405355579911,
+        504.0145024215907,
+        52.56
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_P_ComputerMonitor_AC_FilmStage_20261016.MI_OneDriveRigs_Env_SM_P_ComputerMonitor_AC_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_60",
+      "label": "Workstation_Row_Keyboard_03",
+      "class": "StaticMeshActor",
+      "folder": "Master_Workstation_Row",
+      "location": [
+        635.3928470394571,
+        487.10977195196267,
+        53.44
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_S_Keyboard_KS_FilmStage_20261016.MI_OneDriveRigs_Env_SM_S_Keyboard_KS_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_61",
+      "label": "Workstation_Row_Chair_03",
+      "class": "StaticMeshActor",
+      "folder": "Master_Workstation_Row",
+      "location": [
+        681.0135927090658,
+        454.8026896858577,
+        0.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_P_Chair_KS_FilmStage_20261016.MI_OneDriveRigs_Env_SM_P_Chair_KS_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_62",
+      "label": "Workstation_Row_Drawers_03",
+      "class": "StaticMeshActor",
+      "folder": "Master_Workstation_Row",
+      "location": [
+        587.6834129768752,
+        432.12059209421113,
+        0.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_P_DeskDrawers_SG_FilmStage_20261016.MI_OneDriveRigs_Env_SM_P_DeskDrawers_SG_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_68",
+      "label": "HeroDressing_Dana_Monitor",
+      "class": "StaticMeshActor",
+      "folder": "Master_HeroDressing_Dana",
+      "location": [
+        67.94868111201845,
+        51.06835355812076,
+        52.17
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_P_ComputerMonitor_AC_FilmStage_20261016.MI_OneDriveRigs_Env_SM_P_ComputerMonitor_AC_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_69",
+      "label": "HeroDressing_Dana_Keyboard",
+      "class": "StaticMeshActor",
+      "folder": "Master_HeroDressing_Dana",
+      "location": [
+        49.82252537128545,
+        59.52071879293475,
+        53.02
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_S_Keyboard_KS_FilmStage_20261016.MI_OneDriveRigs_Env_SM_S_Keyboard_KS_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_70",
+      "label": "HeroDressing_Dana_Mug",
+      "class": "StaticMeshActor",
+      "folder": "Master_HeroDressing_Dana",
+      "location": [
+        90.40329550269945,
+        64.16595138016173,
+        54.9755607205727
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_O_CoffeeMugLarge_ZMJ_FilmStage_20261016.MI_OneDriveRigs_Env_SM_O_CoffeeMugLarge_ZMJ_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_71",
+      "label": "HeroDressing_Dana_Plant",
+      "class": "StaticMeshActor",
+      "folder": "Master_HeroDressing_Dana",
+      "location": [
+        47.25865529459422,
+        78.07289131505551,
+        57.5818851654258
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_S_Plant_PMB_FilmStage_20261016.MI_OneDriveRigs_Env_SM_S_Plant_PMB_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_72",
+      "label": "HeroDressing_Sam_Monitor",
+      "class": "StaticMeshActor",
+      "folder": "Master_HeroDressing_Sam",
+      "location": [
+        163.0377900036758,
+        254.987605641367,
+        52.57
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_P_ComputerMonitor_AC_FilmStage_20261016.MI_OneDriveRigs_Env_SM_P_ComputerMonitor_AC_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_73",
+      "label": "HeroDressing_Sam_Keyboard",
+      "class": "StaticMeshActor",
+      "folder": "Master_HeroDressing_Sam",
+      "location": [
+        144.9116342629428,
+        247.59964909692985,
+        53.42
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_S_Keyboard_KS_FilmStage_20261016.MI_OneDriveRigs_Env_SM_S_Keyboard_KS_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_74",
+      "label": "HeroDressing_Sam_Phone",
+      "class": "StaticMeshActor",
+      "folder": "Master_HeroDressing_Sam",
+      "location": [
+        138.31049109459346,
+        272.5675129726942,
+        52.81
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_S_Phone_KS_FilmStage_20261016.MI_OneDriveRigs_Env_SM_S_Phone_KS_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_77",
+      "label": "HeroDressing_David_Phone",
+      "class": "StaticMeshActor",
+      "folder": "Master_HeroDressing_David",
+      "location": [
+        -127.72595039126888,
+        -155.59910538511176,
+        53.91
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_S_Phone_KS_FilmStage_20261016.MI_OneDriveRigs_Env_SM_S_Phone_KS_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_78",
+      "label": "Breakroom_Whiteboard",
+      "class": "StaticMeshActor",
+      "folder": "Master_Breakroom_Suite",
+      "location": [
+        850.4296987600628,
+        546.4736957151622,
+        -6.739356283445716
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_P_Whiteboard_SG_FilmStage_20261016.MI_OneDriveRigs_Env_SM_P_Whiteboard_SG_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_79",
+      "label": "Breakroom_Watercooler",
+      "class": "StaticMeshActor",
+      "folder": "Master_Breakroom_Suite",
+      "location": [
+        556.219190916908,
+        601.265508453412,
+        0.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_S_Watercooler_KS_FilmStage_20261016.MI_OneDriveRigs_Env_SM_S_Watercooler_KS_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_80",
+      "label": "FG_Corridor_Watercooler",
+      "class": "StaticMeshActor",
+      "folder": "Master_Foreground_Framing",
+      "location": [
+        502.2311703463937,
+        -697.6129668609176,
+        0.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_S_Watercooler_KS_FilmStage_20261016.MI_OneDriveRigs_Env_SM_S_Watercooler_KS_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_81",
+      "label": "FG_Corridor_Planter",
+      "class": "StaticMeshActor",
+      "folder": "Master_Foreground_Framing",
+      "location": [
+        464.1467209582701,
+        -613.6512213168696,
+        0.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_S_Plant_PMB_FilmStage_20261016.MI_OneDriveRigs_Env_SM_S_Plant_PMB_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "PointLight_2",
+      "label": "Light_David_DeskLamp",
+      "class": "PointLight",
+      "folder": "Master_HeroDressing_David",
+      "location": [
+        -93.85053760531163,
+        -101.8826608957284,
+        95.0
+      ],
+      "materials": [],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [
+        {
+          "name": "LightComponent0",
+          "class": "PointLightComponent",
+          "intensity": 3.0
+        }
+      ],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "RectLight_6",
+      "label": "Light_Workstation_Row_Troffer",
+      "class": "RectLight",
+      "folder": "None",
+      "location": [
+        208.50902032840474,
+        679.2891454821865,
+        284.6372492916787
+      ],
+      "materials": [],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [
+        {
+          "name": "LightComponent0",
+          "class": "RectLightComponent",
+          "intensity": 40.0
+        }
+      ],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_82",
+      "label": "HeroDressing_Dana_Mouse",
+      "class": "StaticMeshActor",
+      "folder": "Master_HeroDressing_Dana",
+      "location": [
+        58.27489060609945,
+        77.64687453366776,
+        52.31
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_Prop_Plastic.MI_Film304_Prop_Plastic"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_83",
+      "label": "HeroDressing_Dana_Frame",
+      "class": "StaticMeshActor",
+      "folder": "Master_HeroDressing_Dana",
+      "location": [
+        121.20743784137329,
+        20.314960062429925,
+        62.8
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_Prop_Plastic.MI_Film304_Prop_Plastic"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_84",
+      "label": "HeroDressing_Dana_Pen",
+      "class": "StaticMeshActor",
+      "folder": "Master_HeroDressing_Dana",
+      "location": [
+        39.85802029702837,
+        47.61657503434781,
+        52.3
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_Prop_Metal.MI_Film304_Prop_Metal"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_85",
+      "label": "HeroDressing_Dana_Sticky",
+      "class": "StaticMeshActor",
+      "folder": "Master_HeroDressing_Dana",
+      "location": [
+        43.60539397228547,
+        41.45563431575701,
+        54.16
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_Prop_Plastic.MI_Film304_Prop_Plastic"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_86",
+      "label": "HeroDressing_Dana_Tower",
+      "class": "StaticMeshActor",
+      "folder": "Master_HeroDressing_Dana",
+      "location": [
+        87.27185920812619,
+        80.67603479570002,
+        0.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/MI_Toon_Office_PowderCoat.MI_Toon_Office_PowderCoat"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_87",
+      "label": "HeroDressing_Dana_Bin",
+      "class": "StaticMeshActor",
+      "folder": "Master_HeroDressing_Dana",
+      "location": [
+        57.35882165277068,
+        111.17538207087775,
+        0.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/MI_Toon_Office_PowderCoat.MI_Toon_Office_PowderCoat"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_89",
+      "label": "HeroDressing_Sam_Mouse",
+      "class": "StaticMeshActor",
+      "folder": "Master_HeroDressing_Sam",
+      "location": [
+        153.36399949775682,
+        281.56612661691395,
+        52.71
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_Prop_Plastic.MI_Film304_Prop_Plastic"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_91",
+      "label": "HeroDressing_Sam_Mug",
+      "class": "StaticMeshActor",
+      "folder": "Master_HeroDressing_Sam",
+      "location": [
+        170.5789668683071,
+        290.08932428157533,
+        57.26
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_O_CoffeeMugLarge_ZMJ_FilmStage_20261016.MI_OneDriveRigs_Env_SM_O_CoffeeMugLarge_ZMJ_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_96",
+      "label": "HeroDressing_Sam_Lamp",
+      "class": "StaticMeshActor",
+      "folder": "Master_HeroDressing_Sam",
+      "location": [
+        215.3786117358851,
+        243.6417731764356,
+        75.30641035079957
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_P_Lamp_EF_FilmStage_20261016.MI_OneDriveRigs_Env_SM_P_Lamp_EF_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_101",
+      "label": "HeroDressing_Sam_Tower",
+      "class": "StaticMeshActor",
+      "folder": "Master_HeroDressing_Sam",
+      "location": [
+        189.0055983436703,
+        287.013734505426,
+        0.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/MI_Toon_Office_PowderCoat.MI_Toon_Office_PowderCoat"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_102",
+      "label": "HeroDressing_Sam_Bin",
+      "class": "StaticMeshActor",
+      "folder": "Master_HeroDressing_Sam",
+      "location": [
+        84.89214117023924,
+        347.69086237714447,
+        -1.4142046422264514
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/MI_Toon_Office_PowderCoat.MI_Toon_Office_PowderCoat"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_104",
+      "label": "HeroDressing_David_Keyboard",
+      "class": "StaticMeshActor",
+      "folder": "Master_HeroDressing_David",
+      "location": [
+        -113.84549960052712,
+        -106.90276993935366,
+        54.52
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_S_Keyboard_KS_FilmStage_20261016.MI_OneDriveRigs_Env_SM_S_Keyboard_KS_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_105",
+      "label": "HeroDressing_David_Mouse",
+      "class": "StaticMeshActor",
+      "folder": "Master_HeroDressing_David",
+      "location": [
+        -106.66098915093522,
+        -91.49553755973062,
+        53.81
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_Prop_Plastic.MI_Film304_Prop_Plastic"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_106",
+      "label": "HeroDressing_David_Mug",
+      "class": "StaticMeshActor",
+      "folder": "Master_HeroDressing_David",
+      "location": [
+        -103.0259968364965,
+        -126.29189988216272,
+        55.608912811279296
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_O_CoffeeMugLarge_ZMJ_FilmStage_20261016.MI_OneDriveRigs_Env_SM_O_CoffeeMugLarge_ZMJ_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_107",
+      "label": "HeroDressing_David_Sticky",
+      "class": "StaticMeshActor",
+      "folder": "Master_HeroDressing_David",
+      "location": [
+        -119.8183459453061,
+        -133.90878975978742,
+        55.66
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_Prop_Plastic.MI_Film304_Prop_Plastic"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_108",
+      "label": "HeroDressing_David_Bin",
+      "class": "StaticMeshActor",
+      "folder": "Master_HeroDressing_David",
+      "location": [
+        -129.86344461570266,
+        -77.3659211316218,
+        0.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/MI_Toon_Office_PowderCoat.MI_Toon_Office_PowderCoat"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_109",
+      "label": "Workstation_Row_Mouse_01",
+      "class": "StaticMeshActor",
+      "folder": "Master_Workstation_Row",
+      "location": [
+        507.7621319937658,
+        213.40482026689438,
+        52.71
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_Prop_Plastic.MI_Film304_Prop_Plastic"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_110",
+      "label": "Workstation_Row_Tower_01",
+      "class": "StaticMeshActor",
+      "folder": "Master_Workstation_Row",
+      "location": [
+        508.582965601517,
+        297.9821590296409,
+        0.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/MI_Toon_Office_PowderCoat.MI_Toon_Office_PowderCoat"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_111",
+      "label": "Workstation_Row_Bin_01",
+      "class": "StaticMeshActor",
+      "folder": "Master_Workstation_Row",
+      "location": [
+        523.423410593902,
+        164.17348519857717,
+        0.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/MI_Toon_Office_PowderCoat.MI_Toon_Office_PowderCoat"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_112",
+      "label": "Workstation_Row_Mug_01",
+      "class": "StaticMeshActor",
+      "folder": "Master_Workstation_Row",
+      "location": [
+        475.07886098003723,
+        214.30136688763892,
+        57.26
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_O_CoffeeMugLarge_ZMJ_FilmStage_20261016.MI_OneDriveRigs_Env_SM_O_CoffeeMugLarge_ZMJ_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_113",
+      "label": "Workstation_Row_Mouse_02",
+      "class": "StaticMeshActor",
+      "folder": "Master_Workstation_Row",
+      "location": [
+        566.9286886374638,
+        340.28791045202536,
+        52.71
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_Prop_Plastic.MI_Film304_Prop_Plastic"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_114",
+      "label": "Workstation_Row_Tower_02",
+      "class": "StaticMeshActor",
+      "folder": "Master_Workstation_Row",
+      "location": [
+        567.7495222452148,
+        424.86524921477195,
+        0.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/MI_Toon_Office_PowderCoat.MI_Toon_Office_PowderCoat"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_115",
+      "label": "Workstation_Row_Bin_02",
+      "class": "StaticMeshActor",
+      "folder": "Master_Workstation_Row",
+      "location": [
+        582.5899672375999,
+        291.0565753837082,
+        0.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/MI_Toon_Office_PowderCoat.MI_Toon_Office_PowderCoat"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_116",
+      "label": "Workstation_Row_Lamp_02",
+      "class": "StaticMeshActor",
+      "folder": "Master_Workstation_Row",
+      "location": [
+        527.6007873798485,
+        338.7660094462902,
+        79.29
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_P_Lamp_EF_FilmStage_20261016.MI_OneDriveRigs_Env_SM_P_Lamp_EF_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_117",
+      "label": "Workstation_Row_Mouse_03",
+      "class": "StaticMeshActor",
+      "folder": "Master_Workstation_Row",
+      "location": [
+        626.0952452811616,
+        467.17100063715634,
+        52.71
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_Prop_Plastic.MI_Film304_Prop_Plastic"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_118",
+      "label": "Workstation_Row_Tower_03",
+      "class": "StaticMeshActor",
+      "folder": "Master_Workstation_Row",
+      "location": [
+        626.9160788889128,
+        551.748339399903,
+        0.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/MI_Toon_Office_PowderCoat.MI_Toon_Office_PowderCoat"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_119",
+      "label": "Workstation_Row_Bin_03",
+      "class": "StaticMeshActor",
+      "folder": "Master_Workstation_Row",
+      "location": [
+        641.7565238812979,
+        417.9396655688392,
+        0.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/MI_Toon_Office_PowderCoat.MI_Toon_Office_PowderCoat"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_120",
+      "label": "Workstation_Row_Cactus_03",
+      "class": "StaticMeshActor",
+      "folder": "Master_Workstation_Row",
+      "location": [
+        588.8804353322498,
+        470.1806385666044,
+        60.82
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_S_Plant_PMB_FilmStage_20261016.MI_OneDriveRigs_Env_SM_S_Plant_PMB_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_121",
+      "label": "Breakroom_Table",
+      "class": "StaticMeshActor",
+      "folder": "Master_Breakroom_Suite",
+      "location": [
+        474.0895832795177,
+        496.1240439908686,
+        0.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_P_BreakroomTable_AC_FilmStage_20261016.MI_OneDriveRigs_Env_SM_P_BreakroomTable_AC_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_122",
+      "label": "Breakroom_Table_PastryDome",
+      "class": "StaticMeshActor",
+      "folder": "Master_Breakroom_Suite",
+      "location": [
+        474.0895832795177,
+        496.1240439908686,
+        76.5
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_Prop_Plastic.MI_Film304_Prop_Plastic"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_123",
+      "label": "Breakroom_Table_Pastry",
+      "class": "StaticMeshActor",
+      "folder": "Master_Breakroom_Suite",
+      "location": [
+        474.0895832795177,
+        496.1240439908686,
+        76.75
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_Prop_Plastic.MI_Film304_Prop_Plastic"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_124",
+      "label": "Breakroom_Table_CoffeeBag",
+      "class": "StaticMeshActor",
+      "folder": "Master_Breakroom_Suite",
+      "location": [
+        461.4110354272966,
+        468.93481037976903,
+        76.5
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_Prop_Plastic.MI_Film304_Prop_Plastic"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_125",
+      "label": "Breakroom_Table_Mug_01",
+      "class": "StaticMeshActor",
+      "folder": "Master_Breakroom_Suite",
+      "location": [
+        462.3027014648951,
+        518.1710260312324,
+        81.06
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_O_CoffeeMugLarge_ZMJ_FilmStage_20261016.MI_OneDriveRigs_Env_SM_O_CoffeeMugLarge_ZMJ_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_126",
+      "label": "Breakroom_Table_Mug_02",
+      "class": "StaticMeshActor",
+      "folder": "Master_Breakroom_Suite",
+      "location": [
+        494.32883032895415,
+        492.2032176912378,
+        81.06
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_O_CoffeeMugLarge_ZMJ_FilmStage_20261016.MI_OneDriveRigs_Env_SM_O_CoffeeMugLarge_ZMJ_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_127",
+      "label": "Breakroom_Chair_01",
+      "class": "StaticMeshActor",
+      "folder": "Master_Breakroom_Suite",
+      "location": [
+        428.77419392768513,
+        517.2549570779036,
+        0.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_P_Chair_KS_FilmStage_20261016.MI_OneDriveRigs_Env_SM_P_Chair_KS_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_128",
+      "label": "Breakroom_Chair_02",
+      "class": "StaticMeshActor",
+      "folder": "Master_Breakroom_Suite",
+      "location": [
+        519.4049726313501,
+        474.9931309038336,
+        0.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_P_Chair_KS_FilmStage_20261016.MI_OneDriveRigs_Env_SM_P_Chair_KS_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_129",
+      "label": "Breakroom_Chair_03",
+      "class": "StaticMeshActor",
+      "folder": "Master_Breakroom_Suite",
+      "location": [
+        452.95867019248266,
+        450.80865463903604,
+        0.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_P_Chair_KS_FilmStage_20261016.MI_OneDriveRigs_Env_SM_P_Chair_KS_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_130",
+      "label": "Breakroom_Chair_04",
+      "class": "StaticMeshActor",
+      "folder": "Master_Breakroom_Suite",
+      "location": [
+        495.22049636655265,
+        541.439433342701,
+        0.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_P_Chair_KS_FilmStage_20261016.MI_OneDriveRigs_Env_SM_P_Chair_KS_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_131",
+      "label": "Breakroom_VendingMachine",
+      "class": "StaticMeshActor",
+      "folder": "Master_Breakroom_Suite",
+      "location": [
+        619.6607360094736,
+        571.6822301315631,
+        0.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_P_VenndingMachine_Osc_FilmStage_20261016.MI_OneDriveRigs_Env_SM_P_VenndingMachine_Osc_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_132",
+      "label": "Breakroom_Clock",
+      "class": "StaticMeshActor",
+      "folder": "Master_Breakroom_Suite",
+      "location": [
+        469.81459483065004,
+        652.5904124978485,
+        230.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_Prop_Plastic.MI_Film304_Prop_Plastic"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_133",
+      "label": "Breakroom_Calendar",
+      "class": "StaticMeshActor",
+      "folder": "Master_Breakroom_Suite",
+      "location": [
+        515.1299841824825,
+        631.4594994108136,
+        180.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_Prop_Plastic.MI_Film304_Prop_Plastic"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_134",
+      "label": "Corridor_Printer",
+      "class": "StaticMeshActor",
+      "folder": "Master_Breakroom_Suite",
+      "location": [
+        532.7918447820448,
+        148.7711334021002,
+        0.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_Prop_Plastic.MI_Film304_Prop_Plastic"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_136",
+      "label": "Film_Wall_Seam_Infill",
+      "class": "StaticMeshActor",
+      "folder": "Master_Perimeter_Enclosure",
+      "location": [
+        -298.7518104885879,
+        45.5231340066876,
+        170.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/UniversalFilm_20261016/MI_Film_Wall.MI_Film_Wall"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_137",
+      "label": "HeroDressing_Dana_Laptop",
+      "class": "StaticMeshActor",
+      "folder": "Master_HeroDressing_Dana",
+      "location": [
+        80.62722896423944,
+        78.25758716922026,
+        52.36
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_Prop_Plastic.MI_Film304_Prop_Plastic"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_138",
+      "label": "HeroDressing_Dana_Succulent",
+      "class": "StaticMeshActor",
+      "folder": "Master_HeroDressing_Dana",
+      "location": [
+        95.06220171012453,
+        37.51736153780345,
+        56.95
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_S_Plant_PMB_FilmStage_20261016.MI_OneDriveRigs_Env_SM_S_Plant_PMB_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_139",
+      "label": "HeroDressing_Dana_File",
+      "class": "StaticMeshActor",
+      "folder": "Master_HeroDressing_Dana",
+      "location": [
+        26.933086811375247,
+        96.33054910601358,
+        53.361819451264694
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_Prop_Plastic.MI_Film304_Prop_Plastic"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_140",
+      "label": "HeroDressing_Dana_Lamp",
+      "class": "StaticMeshActor",
+      "folder": "Master_HeroDressing_Dana",
+      "location": [
+        120.25014207232549,
+        53.46386636327907,
+        78.15636994384249
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_P_Lamp_EF_FilmStage_20261016.MI_OneDriveRigs_Env_SM_P_Lamp_EF_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_142",
+      "label": "Workstation_Row_Sticky_01",
+      "class": "StaticMeshActor",
+      "folder": "Master_Workstation_Row",
+      "location": [
+        493.20501672077023,
+        205.84900165282494,
+        54.56
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_Prop_Plastic.MI_Film304_Prop_Plastic"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_143",
+      "label": "Workstation_Row_File_02",
+      "class": "StaticMeshActor",
+      "folder": "Master_Workstation_Row",
+      "location": [
+        572.8917738159506,
+        400.3998195479285,
+        52.71
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_Prop_Plastic.MI_Film304_Prop_Plastic"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_144",
+      "label": "Breakroom_Table_CoffeeTin",
+      "class": "StaticMeshActor",
+      "folder": "Master_Breakroom_Suite",
+      "location": [
+        479.5371911680296,
+        460.482445144955,
+        83.45
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_Prop_Plastic.MI_Film304_Prop_Plastic"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_145",
+      "label": "Breakroom_Fridge",
+      "class": "StaticMeshActor",
+      "folder": "Master_Breakroom_Suite",
+      "location": [
+        685.5251593674199,
+        542.0989518097141,
+        0.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_Prop_Plastic.MI_Film304_Prop_Plastic"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_146",
+      "label": "FG_Architectural_Column",
+      "class": "StaticMeshActor",
+      "folder": "Master_Foreground_Framing",
+      "location": [
+        720.9176586748342,
+        -678.216580017619,
+        175.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Environment/MI_Film304_BrutalistConcrete.MI_Film304_BrutalistConcrete"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_147",
+      "label": "FG_Tall_Planter",
+      "class": "StaticMeshActor",
+      "folder": "Master_Foreground_Framing",
+      "location": [
+        688.2808171752226,
+        -629.8964333194845,
+        0.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_S_Plant_PMB_FilmStage_20261016.MI_OneDriveRigs_Env_SM_S_Plant_PMB_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_148",
+      "label": "FG_Aisle_Watercooler",
+      "class": "StaticMeshActor",
+      "folder": "Master_Foreground_Framing",
+      "location": [
+        554.777499661935,
+        -655.9130474909396,
+        0.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_S_Watercooler_KS_FilmStage_20261016.MI_OneDriveRigs_Env_SM_S_Watercooler_KS_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_149",
+      "label": "FG_Aisle_Bin",
+      "class": "StaticMeshActor",
+      "folder": "Master_Foreground_Framing",
+      "location": [
+        607.9345416130291,
+        -636.5654664791015,
+        0.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/MI_Toon_Office_PowderCoat.MI_Toon_Office_PowderCoat"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_150",
+      "label": "Film_SouthWall",
+      "class": "StaticMeshActor",
+      "folder": "Master_Perimeter_Enclosure",
+      "location": [
+        155.39136073025665,
+        -447.60867396689173,
+        175.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/UniversalFilm_20261016/MI_Film_Wall.MI_Film_Wall"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "PointLight_3",
+      "label": "Light_Ceiling_Cavity_01",
+      "class": "PointLight",
+      "folder": "Master_Ceiling_Architecture",
+      "location": [
+        178.20799422956742,
+        27.238039442560073,
+        315.0
+      ],
+      "materials": [],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [
+        {
+          "name": "LightComponent0",
+          "class": "PointLightComponent",
+          "intensity": 6.0
+        }
+      ],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "PointLight_4",
+      "label": "Light_Ceiling_Cavity_02",
+      "class": "PointLight",
+      "folder": "Master_Ceiling_Architecture",
+      "location": [
+        528.5168563331772,
+        305.23750190908015,
+        315.0
+      ],
+      "materials": [],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [
+        {
+          "name": "LightComponent0",
+          "class": "PointLightComponent",
+          "intensity": 6.0
+        }
+      ],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_151",
+      "label": "FG_Planter_Box_Edge",
+      "class": "StaticMeshActor",
+      "folder": "Master_Foreground_Framing",
+      "location": [
+        496.1240439908686,
+        -474.0895832795177,
+        25.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Environment/MI_Film304_BrutalistConcrete.MI_Film304_BrutalistConcrete"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_152",
+      "label": "FG_Planter_Foliage_01",
+      "class": "StaticMeshActor",
+      "folder": "Master_Foreground_Framing",
+      "location": [
+        450.80865463903604,
+        -452.95867019248266,
+        50.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_S_Plant_PMB_FilmStage_20261016.MI_OneDriveRigs_Env_SM_S_Plant_PMB_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_153",
+      "label": "FG_Planter_Foliage_02",
+      "class": "StaticMeshActor",
+      "folder": "Master_Foreground_Framing",
+      "location": [
+        541.439433342701,
+        -495.22049636655265,
+        50.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_S_Plant_PMB_FilmStage_20261016.MI_OneDriveRigs_Env_SM_S_Plant_PMB_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_154",
+      "label": "SM_Houdini_Ceiling_HVAC_Grid",
+      "class": "StaticMeshActor",
+      "folder": "Master_Ceiling_Architecture",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/Film304/Environment/MI_Film304_BrutalistConcrete.MI_Film304_BrutalistConcrete"
+        },
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 1,
+          "material": "/Game/Materials/Instances/Film304/Scene/MI_Film304_Prop_Metal.MI_Film304_Prop_Metal"
+        },
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 2,
+          "material": "/Game/Materials/Instances/MI_Toon_Office_Troffer.MI_Toon_Office_Troffer"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_155",
+      "label": "Film_Breakroom_UpperHeader",
+      "class": "StaticMeshActor",
+      "folder": "Master_Perimeter_Enclosure",
+      "location": [
+        60.75466539305256,
+        887.4733069974433,
+        307.5
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/UniversalFilm_20261016/MI_Film_Wall.MI_Film_Wall"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_156",
+      "label": "Film_NorthEast_UpperHeader",
+      "class": "StaticMeshActor",
+      "folder": "Master_Perimeter_Enclosure",
+      "location": [
+        577.350104003943,
+        646.5808978052446,
+        307.5
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/UniversalFilm_20261016/MI_Film_Wall.MI_Film_Wall"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_157",
+      "label": "Film_Wall_Header_Full",
+      "class": "StaticMeshActor",
+      "folder": "Master_Perimeter_Enclosure",
+      "location": [
+        -114.91286663138365,
+        439.76702136763026,
+        320.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/UniversalFilm_20261016/MI_Film_Wall.MI_Film_Wall"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_162",
+      "label": "FG_Workstation_Desk",
+      "class": "StaticMeshActor",
+      "folder": "Master_Foreground_Framing",
+      "location": [
+        629.065454700064,
+        -591.250077127269,
+        -3.5
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_P_OfficeDesk_AC_FilmStage_20261016.MI_OneDriveRigs_Env_SM_P_OfficeDesk_AC_FilmStage_20261016"
+        },
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 1,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_P_OfficeDesk_AC_FilmStage_20261016.MI_OneDriveRigs_Env_SM_P_OfficeDesk_AC_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_163",
+      "label": "FG_Workstation_Monitor",
+      "class": "StaticMeshActor",
+      "folder": "Master_Foreground_Framing",
+      "location": [
+        622.7261807739535,
+        -604.8446939328187,
+        52.56
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_P_ComputerMonitor_AC_FilmStage_20261016.MI_OneDriveRigs_Env_SM_P_ComputerMonitor_AC_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_164",
+      "label": "FG_Workstation_Chair",
+      "class": "StaticMeshActor",
+      "folder": "Master_Foreground_Framing",
+      "location": [
+        648.0832764783955,
+        -550.4662267106198,
+        0.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_P_Chair_KS_FilmStage_20261016.MI_OneDriveRigs_Env_SM_P_Chair_KS_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "StaticMeshActor_165",
+      "label": "FG_Workstation_Drawers",
+      "class": "StaticMeshActor",
+      "folder": "Master_Foreground_Framing",
+      "location": [
+        665.3177661815301,
+        -608.1548075968971,
+        0.0
+      ],
+      "materials": [
+        {
+          "comp": "StaticMeshComponent0",
+          "slot": 0,
+          "material": "/Game/Materials/Instances/OneDriveRigs_20261016/MI_OneDriveRigs_Env_SM_P_DeskDrawers_SG_FilmStage_20261016.MI_OneDriveRigs_Env_SM_P_DeskDrawers_SG_FilmStage_20261016"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "BuoyancyManager_0",
+      "label": "BuoyancyManager0",
+      "class": "BuoyancyManager",
+      "folder": "None",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "materials": [],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "DefaultPhysicsVolume_0",
+      "label": "DefaultPhysicsVolume0",
+      "class": "DefaultPhysicsVolume",
+      "folder": "None",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "materials": [],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "GameplayDebuggerPlayerManager_0",
+      "label": "GameplayDebuggerPlayerManager0",
+      "class": "GameplayDebuggerPlayerManager",
+      "folder": "None",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "materials": [],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "ChaosDebugDrawActor",
+      "label": "Actor",
+      "class": "Actor",
+      "folder": "None",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "materials": [],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "SmartObjectSubsystemRenderingActor_0",
+      "label": "SmartObjectSubsystemRenderingActor0",
+      "class": "SmartObjectSubsystemRenderingActor",
+      "folder": "None",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "materials": [],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "AbstractNavData-Default",
+      "label": "AbstractNavData-Default",
+      "class": "AbstractNavData",
+      "folder": "None",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "materials": [],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    },
+    {
+      "name": "Ultra_Dynamic_Sky_C_0",
+      "label": "Film_UDS_Daylight",
+      "class": "Ultra_Dynamic_Sky_C",
+      "folder": "None",
+      "location": [
+        0.0,
+        440.0,
+        -40.0
+      ],
+      "materials": [
+        {
+          "comp": "ClockDisk",
+          "slot": 0,
+          "material": "/Game/UltraDynamicSky/Blueprints/System/Editor_UI/Editor_Materials/UDS_Clock_Material.UDS_Clock_Material"
+        },
+        {
+          "comp": "Sky_Sphere",
+          "slot": 0,
+          "material": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office:PersistentLevel.Ultra_Dynamic_Sky_C_0.Sky_Sphere.MID_UDS_K_0"
+        },
+        {
+          "comp": "UDS Label",
+          "slot": 0,
+          "material": "/Game/UltraDynamicSky/Blueprints/System/Editor_UI/Editor_Materials/UDS_EditorLabel.UDS_EditorLabel"
+        },
+        {
+          "comp": "Compass",
+          "slot": 0,
+          "material": "/Game/UltraDynamicSky/Blueprints/System/Editor_UI/Editor_Materials/UDS_Compass_Material.UDS_Compass_Material"
+        },
+        {
+          "comp": "W",
+          "slot": 0,
+          "material": "/Game/UltraDynamicSky/Blueprints/System/Editor_UI/Editor_Materials/UDS_Compass_Material_Letters.UDS_Compass_Material_Letters"
+        },
+        {
+          "comp": "N",
+          "slot": 0,
+          "material": "/Game/UltraDynamicSky/Blueprints/System/Editor_UI/Editor_Materials/UDS_Compass_Material_Letters.UDS_Compass_Material_Letters"
+        },
+        {
+          "comp": "E",
+          "slot": 0,
+          "material": "/Game/UltraDynamicSky/Blueprints/System/Editor_UI/Editor_Materials/UDS_Compass_Material_Letters.UDS_Compass_Material_Letters"
+        },
+        {
+          "comp": "S",
+          "slot": 0,
+          "material": "/Game/UltraDynamicSky/Blueprints/System/Editor_UI/Editor_Materials/UDS_Compass_Material_Letters.UDS_Compass_Material_Letters"
+        },
+        {
+          "comp": "Sun Handle",
+          "slot": 0,
+          "material": "/Game/UltraDynamicSky/Blueprints/System/Editor_UI/Editor_Materials/Editor_SunHandle_Material.Editor_SunHandle_Material"
+        },
+        {
+          "comp": "Sun Handle",
+          "slot": 1,
+          "material": "/Game/UltraDynamicSky/Blueprints/System/Editor_UI/Editor_Materials/Editor_Sun_Glow.Editor_Sun_Glow"
+        },
+        {
+          "comp": "Moon Handle",
+          "slot": 0,
+          "material": "/Game/UltraDynamicSky/Blueprints/System/Editor_UI/Editor_Materials/Editor_MoonHandle_Material.Editor_MoonHandle_Material"
+        },
+        {
+          "comp": "Moon Handle",
+          "slot": 1,
+          "material": "/Game/UltraDynamicSky/Blueprints/System/Editor_UI/Editor_Materials/Editor_Moon_Glow.Editor_Moon_Glow"
+        }
+      ],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [
+        {
+          "name": "Sun",
+          "class": "DirectionalLightComponent",
+          "intensity": 8.0
+        },
+        {
+          "name": "Moon",
+          "class": "DirectionalLightComponent",
+          "intensity": 0.0
+        }
+      ],
+      "postprocess_count": 2,
+      "fog_count": 1
+    },
+    {
+      "name": "LevelSequenceActor_0",
+      "label": "Film_OfficeIdle_LoopPlayback",
+      "class": "LevelSequenceActor",
+      "folder": "Film304/CharacterBeats",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "materials": [],
+      "niagara_count": 0,
+      "particle_count": 0,
+      "lights": [],
+      "postprocess_count": 0,
+      "fog_count": 0
+    }
+  ]
+}

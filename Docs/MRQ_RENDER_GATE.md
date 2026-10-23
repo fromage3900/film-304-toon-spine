@@ -32,8 +32,11 @@ For each shot, all must be true in the rendered output:
 3. No body or lash loss.
 4. No sliding, clipping, or floating (floor contact verified from evaluated bounds).
 5. Exposure and floor contact read correctly in frame.
-6. Outlines present and weighted correctly (`MI_Outline_Thin` characters/props,
-   `MI_Outline_Heavy` architecture).
+6. Outlines present and weighted correctly. The active post-process stack is
+   **exactly one** volume running an `MI_Outline_<preset>` from
+   `Docs/PPV_OUTLINE_WIRING_20261018.md`; no second volume may be active.
+   `MI_Outline_Heavy` must have a non-null parent (`M_Outline_InvertedHull`)
+   for architecture. Record the preset id in the shot evidence file.
 7. No missing material/texture references or pink shaders.
 8. Post-composite grade applied (`MI_Toon_PostComposite`) — grain 0.08, vignette 0.35.
 9. Render produced through a named MRQ preset, not a manual viewport capture.

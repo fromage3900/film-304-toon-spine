@@ -38,7 +38,8 @@ Content/
     Functions/      MF_*       material functions (5)
     ToonProfiles/   TP_*       art-direction data assets
     Instances/      MI_*       material instances
-    Textures/       T_*        generated stylization textures (dither/hatch/ramp LUT)
+    Textures/       T_*        generated stylization textures (dither/hatch/ramp/SDF
+                                  maps) + the T_Neutral_* fallback set
   Maps/             L_*        levels
   Environment/
     Brutalist/      SM_*/BP_*  the procedural building set (desktop import step)

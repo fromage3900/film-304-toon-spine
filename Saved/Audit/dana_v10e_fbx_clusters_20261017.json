@@ -1,0 +1,898 @@
+{
+  "fbx_version": 7700,
+  "source": "G:\\film-304-toon-spine\\Saved\\OfflineIntake\\20261017\\task1_face_eyes\\fbx\\Dana_CleanSkin_v10e_InputConnections.fbx",
+  "meshes": [
+    {
+      "mesh": "FilmExport:Dana_Eyelashes_Lf_GEO",
+      "vertices": 39,
+      "skin_count": 1,
+      "clusters": [
+        {
+          "cluster": "",
+          "joint_models": [
+            "FilmExport:Face_upperLidMain1_L"
+          ],
+          "direct_connections": [
+            {
+              "type": "OO",
+              "parent_id": 3140949493824,
+              "parent_model": null
+            }
+          ],
+          "connected_joint_links": [
+            {
+              "type": "OO",
+              "joint_id": 3140849846176,
+              "joint_name": "FilmExport:Face_upperLidMain1_L"
+            }
+          ],
+          "weight_entries": 3,
+          "unique_vertices": 3,
+          "weight_sum": 2.8945711116063197,
+          "min_weight": 0.930835026846033,
+          "max_weight": 1.0
+        },
+        {
+          "cluster": "",
+          "joint_models": [
+            "FilmExport:Face_upperLidMain2_L"
+          ],
+          "direct_connections": [
+            {
+              "type": "OO",
+              "parent_id": 3140949493824,
+              "parent_model": null
+            }
+          ],
+          "connected_joint_links": [
+            {
+              "type": "OO",
+              "joint_id": 3140849848496,
+              "joint_name": "FilmExport:Face_upperLidMain2_L"
+            }
+          ],
+          "weight_entries": 7,
+          "unique_vertices": 7,
+          "weight_sum": 3.2878349199969836,
+          "min_weight": 0.03626391523971304,
+          "max_weight": 1.0
+        },
+        {
+          "cluster": "",
+          "joint_models": [
+            "FilmExport:Face_upperLidMain3_L"
+          ],
+          "direct_connections": [
+            {
+              "type": "OO",
+              "parent_id": 3140949493824,
+              "parent_model": null
+            }
+          ],
+          "connected_joint_links": [
+            {
+              "type": "OO",
+              "joint_id": 3140849843856,
+              "joint_name": "FilmExport:Face_upperLidMain3_L"
+            }
+          ],
+          "weight_entries": 6,
+          "unique_vertices": 6,
+          "weight_sum": 2.872817830365166,
+          "min_weight": 0.005449290251262566,
+          "max_weight": 1.0
+        },
+        {
+          "cluster": "",
+          "joint_models": [
+            "FilmExport:Face_upperLidMain4_L"
+          ],
+          "direct_connections": [
+            {
+              "type": "OO",
+              "parent_id": 3140949493824,
+              "parent_model": null
+            }
+          ],
+          "connected_joint_links": [
+            {
+              "type": "OO",
+              "joint_id": 3140849834576,
+              "joint_name": "FilmExport:Face_upperLidMain4_L"
+            }
+          ],
+          "weight_entries": 5,
+          "unique_vertices": 5,
+          "weight_sum": 3.0246464628743754,
+          "min_weight": 0.0331444785685962,
+          "max_weight": 1.0
+        },
+        {
+          "cluster": "",
+          "joint_models": [
+            "FilmExport:Face_upperLidMain5_L"
+          ],
+          "direct_connections": [
+            {
+              "type": "OO",
+              "parent_id": 3140949493824,
+              "parent_model": null
+            }
+          ],
+          "connected_joint_links": [
+            {
+              "type": "OO",
+              "joint_id": 3140849836896,
+              "joint_name": "FilmExport:Face_upperLidMain5_L"
+            }
+          ],
+          "weight_entries": 5,
+          "unique_vertices": 5,
+          "weight_sum": 3.072122782456123,
+          "min_weight": 0.05916260909958293,
+          "max_weight": 1.0
+        },
+        {
+          "cluster": "",
+          "joint_models": [
+            "FilmExport:Face_upperLidMain6_L"
+          ],
+          "direct_connections": [
+            {
+              "type": "OO",
+              "parent_id": 3140949493824,
+              "parent_model": null
+            }
+          ],
+          "connected_joint_links": [
+            {
+              "type": "OO",
+              "joint_id": 3140849850816,
+              "joint_name": "FilmExport:Face_upperLidMain6_L"
+            }
+          ],
+          "weight_entries": 5,
+          "unique_vertices": 5,
+          "weight_sum": 3.090243636301791,
+          "min_weight": 0.08878706212752609,
+          "max_weight": 1.0
+        },
+        {
+          "cluster": "",
+          "joint_models": [
+            "FilmExport:Face_upperLidMain7_L"
+          ],
+          "direct_connections": [
+            {
+              "type": "OO",
+              "parent_id": 3140949493824,
+              "parent_model": null
+            }
+          ],
+          "connected_joint_links": [
+            {
+              "type": "OO",
+              "joint_id": 3140849853136,
+              "joint_name": "FilmExport:Face_upperLidMain7_L"
+            }
+          ],
+          "weight_entries": 5,
+          "unique_vertices": 5,
+          "weight_sum": 2.7994361589208605,
+          "min_weight": 0.015762474113342643,
+          "max_weight": 1.0
+        },
+        {
+          "cluster": "",
+          "joint_models": [
+            "FilmExport:Face_upperLidMain8_L"
+          ],
+          "direct_connections": [
+            {
+              "type": "OO",
+              "parent_id": 3140949493824,
+              "parent_model": null
+            }
+          ],
+          "connected_joint_links": [
+            {
+              "type": "OO",
+              "joint_id": 3140883277536,
+              "joint_name": "FilmExport:Face_upperLidMain8_L"
+            }
+          ],
+          "weight_entries": 3,
+          "unique_vertices": 3,
+          "weight_sum": 2.95832709747838,
+          "min_weight": 0.9740895715917227,
+          "max_weight": 1.0
+        },
+        {
+          "cluster": "",
+          "joint_models": [
+            "FilmExport:Face_upperLidMain9_L"
+          ],
+          "direct_connections": [
+            {
+              "type": "OO",
+              "parent_id": 3140949493824,
+              "parent_model": null
+            }
+          ],
+          "connected_joint_links": [
+            {
+              "type": "OO",
+              "joint_id": 3140883263616,
+              "joint_name": "FilmExport:Face_upperLidMain9_L"
+            }
+          ],
+          "weight_entries": 3,
+          "unique_vertices": 3,
+          "weight_sum": 2.9944528866364335,
+          "min_weight": 0.9944528866364335,
+          "max_weight": 1.0
+        },
+        {
+          "cluster": "",
+          "joint_models": [
+            "FilmExport:Face_upperLidMain10_L"
+          ],
+          "direct_connections": [
+            {
+              "type": "OO",
+              "parent_id": 3140949493824,
+              "parent_model": null
+            }
+          ],
+          "connected_joint_links": [
+            {
+              "type": "OO",
+              "joint_id": 3140883268256,
+              "joint_name": "FilmExport:Face_upperLidMain10_L"
+            }
+          ],
+          "weight_entries": 6,
+          "unique_vertices": 6,
+          "weight_sum": 2.871365747894647,
+          "min_weight": 0.0055471133635664124,
+          "max_weight": 1.0
+        },
+        {
+          "cluster": "",
+          "joint_models": [
+            "FilmExport:Face_upperLidMain11_L"
+          ],
+          "direct_connections": [
+            {
+              "type": "OO",
+              "parent_id": 3140949493824,
+              "parent_model": null
+            }
+          ],
+          "connected_joint_links": [
+            {
+              "type": "OO",
+              "joint_id": 3140883270576,
+              "joint_name": "FilmExport:Face_upperLidMain11_L"
+            }
+          ],
+          "weight_entries": 7,
+          "unique_vertices": 7,
+          "weight_sum": 3.2312599739098187,
+          "min_weight": 0.01247523948155407,
+          "max_weight": 1.0
+        },
+        {
+          "cluster": "",
+          "joint_models": [
+            "FilmExport:Face_upperLidMain12_L"
+          ],
+          "direct_connections": [
+            {
+              "type": "OO",
+              "parent_id": 3140949493824,
+              "parent_model": null
+            }
+          ],
+          "connected_joint_links": [
+            {
+              "type": "OO",
+              "joint_id": 3140883279856,
+              "joint_name": "FilmExport:Face_upperLidMain12_L"
+            }
+          ],
+          "weight_entries": 3,
+          "unique_vertices": 3,
+          "weight_sum": 2.9029213915591003,
+          "min_weight": 0.9153966310406545,
+          "max_weight": 1.0
+        },
+        {
+          "cluster": "",
+          "joint_models": [
+            "FilmExport:Face_lowerLidMain1_L"
+          ],
+          "direct_connections": [
+            {
+              "type": "OO",
+              "parent_id": 3140949493824,
+              "parent_model": null
+            }
+          ],
+          "connected_joint_links": [
+            {
+              "type": "OO",
+              "joint_id": 3140883272896,
+              "joint_name": "FilmExport:Face_lowerLidMain1_L"
+            }
+          ],
+          "weight_entries": 3,
+          "unique_vertices": 3,
+          "weight_sum": 3.0,
+          "min_weight": 1.0,
+          "max_weight": 1.0
+        }
+      ]
+    },
+    {
+      "mesh": "FilmExport:Dana_Eyelashes_Rt_GEO",
+      "vertices": 39,
+      "skin_count": 1,
+      "clusters": [
+        {
+          "cluster": "",
+          "joint_models": [
+            "FilmExport:Face_upperLidMain1_R"
+          ],
+          "direct_connections": [
+            {
+              "type": "OO",
+              "parent_id": 3140949494000,
+              "parent_model": null
+            }
+          ],
+          "connected_joint_links": [
+            {
+              "type": "OO",
+              "joint_id": 3140883265936,
+              "joint_name": "FilmExport:Face_upperLidMain1_R"
+            }
+          ],
+          "weight_entries": 3,
+          "unique_vertices": 3,
+          "weight_sum": 2.8945711116063197,
+          "min_weight": 0.930835026846033,
+          "max_weight": 1.0
+        },
+        {
+          "cluster": "",
+          "joint_models": [
+            "FilmExport:Face_upperLidMain2_R"
+          ],
+          "direct_connections": [
+            {
+              "type": "OO",
+              "parent_id": 3140949494000,
+              "parent_model": null
+            }
+          ],
+          "connected_joint_links": [
+            {
+              "type": "OO",
+              "joint_id": 3140883275216,
+              "joint_name": "FilmExport:Face_upperLidMain2_R"
+            }
+          ],
+          "weight_entries": 7,
+          "unique_vertices": 7,
+          "weight_sum": 3.287834934742291,
+          "min_weight": 0.03626391523971304,
+          "max_weight": 1.0
+        },
+        {
+          "cluster": "",
+          "joint_models": [
+            "FilmExport:Face_upperLidMain3_R"
+          ],
+          "direct_connections": [
+            {
+              "type": "OO",
+              "parent_id": 3140949494000,
+              "parent_model": null
+            }
+          ],
+          "connected_joint_links": [
+            {
+              "type": "OO",
+              "joint_id": 3140883286816,
+              "joint_name": "FilmExport:Face_upperLidMain3_R"
+            }
+          ],
+          "weight_entries": 6,
+          "unique_vertices": 6,
+          "weight_sum": 2.872817806514627,
+          "min_weight": 0.005449290257172259,
+          "max_weight": 1.0
+        },
+        {
+          "cluster": "",
+          "joint_models": [
+            "FilmExport:Face_upperLidMain4_R"
+          ],
+          "direct_connections": [
+            {
+              "type": "OO",
+              "parent_id": 3140949494000,
+              "parent_model": null
+            }
+          ],
+          "connected_joint_links": [
+            {
+              "type": "OO",
+              "joint_id": 3140883293776,
+              "joint_name": "FilmExport:Face_upperLidMain4_R"
+            }
+          ],
+          "weight_entries": 5,
+          "unique_vertices": 5,
+          "weight_sum": 3.0246464719796076,
+          "min_weight": 0.0331444785685962,
+          "max_weight": 1.0
+        },
+        {
+          "cluster": "",
+          "joint_models": [
+            "FilmExport:Face_upperLidMain5_R"
+          ],
+          "direct_connections": [
+            {
+              "type": "OO",
+              "parent_id": 3140949494000,
+              "parent_model": null
+            }
+          ],
+          "connected_joint_links": [
+            {
+              "type": "OO",
+              "joint_id": 3140883282176,
+              "joint_name": "FilmExport:Face_upperLidMain5_R"
+            }
+          ],
+          "weight_entries": 5,
+          "unique_vertices": 5,
+          "weight_sum": 3.072122782456123,
+          "min_weight": 0.05916260909958293,
+          "max_weight": 1.0
+        },
+        {
+          "cluster": "",
+          "joint_models": [
+            "FilmExport:Face_upperLidMain6_R"
+          ],
+          "direct_connections": [
+            {
+              "type": "OO",
+              "parent_id": 3140949494000,
+              "parent_model": null
+            }
+          ],
+          "connected_joint_links": [
+            {
+              "type": "OO",
+              "joint_id": 3140883291456,
+              "joint_name": "FilmExport:Face_upperLidMain6_R"
+            }
+          ],
+          "weight_entries": 5,
+          "unique_vertices": 5,
+          "weight_sum": 3.090243636301791,
+          "min_weight": 0.08878706212752609,
+          "max_weight": 1.0
+        },
+        {
+          "cluster": "",
+          "joint_models": [
+            "FilmExport:Face_upperLidMain7_R"
+          ],
+          "direct_connections": [
+            {
+              "type": "OO",
+              "parent_id": 3140949494000,
+              "parent_model": null
+            }
+          ],
+          "connected_joint_links": [
+            {
+              "type": "OO",
+              "joint_id": 3140883298416,
+              "joint_name": "FilmExport:Face_upperLidMain7_R"
+            }
+          ],
+          "weight_entries": 5,
+          "unique_vertices": 5,
+          "weight_sum": 2.7994361589208605,
+          "min_weight": 0.015762474113342643,
+          "max_weight": 1.0
+        },
+        {
+          "cluster": "",
+          "joint_models": [
+            "FilmExport:Face_upperLidMain8_R"
+          ],
+          "direct_connections": [
+            {
+              "type": "OO",
+              "parent_id": 3140949494000,
+              "parent_model": null
+            }
+          ],
+          "connected_joint_links": [
+            {
+              "type": "OO",
+              "joint_id": 3140883289136,
+              "joint_name": "FilmExport:Face_upperLidMain8_R"
+            }
+          ],
+          "weight_entries": 3,
+          "unique_vertices": 3,
+          "weight_sum": 2.95832709747838,
+          "min_weight": 0.9740895715917227,
+          "max_weight": 1.0
+        },
+        {
+          "cluster": "",
+          "joint_models": [
+            "FilmExport:Face_upperLidMain9_R"
+          ],
+          "direct_connections": [
+            {
+              "type": "OO",
+              "parent_id": 3140949494000,
+              "parent_model": null
+            }
+          ],
+          "connected_joint_links": [
+            {
+              "type": "OO",
+              "joint_id": 3140883284496,
+              "joint_name": "FilmExport:Face_upperLidMain9_R"
+            }
+          ],
+          "weight_entries": 3,
+          "unique_vertices": 3,
+          "weight_sum": 2.9944531213457894,
+          "min_weight": 0.9944531213457897,
+          "max_weight": 1.0
+        },
+        {
+          "cluster": "",
+          "joint_models": [
+            "FilmExport:Face_upperLidMain10_R"
+          ],
+          "direct_connections": [
+            {
+              "type": "OO",
+              "parent_id": 3140949494000,
+              "parent_model": null
+            }
+          ],
+          "connected_joint_links": [
+            {
+              "type": "OO",
+              "joint_id": 3140883303056,
+              "joint_name": "FilmExport:Face_upperLidMain10_R"
+            }
+          ],
+          "weight_entries": 6,
+          "unique_vertices": 6,
+          "weight_sum": 2.871364029807899,
+          "min_weight": 0.005546878654210243,
+          "max_weight": 1.0
+        },
+        {
+          "cluster": "",
+          "joint_models": [
+            "FilmExport:Face_upperLidMain11_R"
+          ],
+          "direct_connections": [
+            {
+              "type": "OO",
+              "parent_id": 3140949494000,
+              "parent_model": null
+            }
+          ],
+          "connected_joint_links": [
+            {
+              "type": "OO",
+              "joint_id": 3140883307696,
+              "joint_name": "FilmExport:Face_upperLidMain11_R"
+            }
+          ],
+          "weight_entries": 7,
+          "unique_vertices": 7,
+          "weight_sum": 3.2312614572872107,
+          "min_weight": 0.01247523948155407,
+          "max_weight": 1.0
+        },
+        {
+          "cluster": "",
+          "joint_models": [
+            "FilmExport:Face_upperLidMain12_R"
+          ],
+          "direct_connections": [
+            {
+              "type": "OO",
+              "parent_id": 3140949494000,
+              "parent_model": null
+            }
+          ],
+          "connected_joint_links": [
+            {
+              "type": "OO",
+              "joint_id": 3140883305376,
+              "joint_name": "FilmExport:Face_upperLidMain12_R"
+            }
+          ],
+          "weight_entries": 3,
+          "unique_vertices": 3,
+          "weight_sum": 2.9029213915591003,
+          "min_weight": 0.9153966310406545,
+          "max_weight": 1.0
+        },
+        {
+          "cluster": "",
+          "joint_models": [
+            "FilmExport:Face_lowerLidMain1_R"
+          ],
+          "direct_connections": [
+            {
+              "type": "OO",
+              "parent_id": 3140949494000,
+              "parent_model": null
+            }
+          ],
+          "connected_joint_links": [
+            {
+              "type": "OO",
+              "joint_id": 3140883300736,
+              "joint_name": "FilmExport:Face_lowerLidMain1_R"
+            }
+          ],
+          "weight_entries": 3,
+          "unique_vertices": 3,
+          "weight_sum": 3.0,
+          "min_weight": 1.0,
+          "max_weight": 1.0
+        }
+      ]
+    },
+    {
+      "mesh": "FilmExport:Dana_Eye_Lf_GEO",
+      "vertices": 1121,
+      "skin_count": 1,
+      "clusters": [
+        {
+          "cluster": "",
+          "joint_models": [
+            "Eye_L"
+          ],
+          "direct_connections": [
+            {
+              "type": "OO",
+              "parent_id": 3140949498576,
+              "parent_model": null
+            }
+          ],
+          "connected_joint_links": [
+            {
+              "type": "OO",
+              "joint_id": 3140883372656,
+              "joint_name": "Eye_L"
+            }
+          ],
+          "weight_entries": 897,
+          "unique_vertices": 897,
+          "weight_sum": 793.715394413967,
+          "min_weight": 0.008981942608151439,
+          "max_weight": 1.0
+        },
+        {
+          "cluster": "",
+          "joint_models": [
+            "Pupil_L"
+          ],
+          "direct_connections": [
+            {
+              "type": "OO",
+              "parent_id": 3140949498576,
+              "parent_model": null
+            }
+          ],
+          "connected_joint_links": [
+            {
+              "type": "OO",
+              "joint_id": 3140883368016,
+              "joint_name": "Pupil_L"
+            }
+          ],
+          "weight_entries": 192,
+          "unique_vertices": 192,
+          "weight_sum": 124.06352990760035,
+          "min_weight": 0.007981626778204668,
+          "max_weight": 1.0
+        },
+        {
+          "cluster": "",
+          "joint_models": [
+            "Iris_L"
+          ],
+          "direct_connections": [
+            {
+              "type": "OO",
+              "parent_id": 3140949498576,
+              "parent_model": null
+            }
+          ],
+          "connected_joint_links": [
+            {
+              "type": "OO",
+              "joint_id": 3140883377296,
+              "joint_name": "Iris_L"
+            }
+          ],
+          "weight_entries": 521,
+          "unique_vertices": 521,
+          "weight_sum": 203.22107567843264,
+          "min_weight": 0.0010363591769867503,
+          "max_weight": 1.0
+        }
+      ]
+    },
+    {
+      "mesh": "FilmExport:Dana_Eye_Rt_GEO",
+      "vertices": 1121,
+      "skin_count": 1,
+      "clusters": [
+        {
+          "cluster": "",
+          "joint_models": [
+            "Eye_R"
+          ],
+          "direct_connections": [
+            {
+              "type": "OO",
+              "parent_id": 3140949496112,
+              "parent_model": null
+            }
+          ],
+          "connected_joint_links": [
+            {
+              "type": "OO",
+              "joint_id": 3140883337856,
+              "joint_name": "Eye_R"
+            }
+          ],
+          "weight_entries": 897,
+          "unique_vertices": 897,
+          "weight_sum": 793.7106806466224,
+          "min_weight": 0.0047785331387464325,
+          "max_weight": 1.0
+        },
+        {
+          "cluster": "",
+          "joint_models": [
+            "Pupil_R"
+          ],
+          "direct_connections": [
+            {
+              "type": "OO",
+              "parent_id": 3140949496112,
+              "parent_model": null
+            }
+          ],
+          "connected_joint_links": [
+            {
+              "type": "OO",
+              "joint_id": 3140883354096,
+              "joint_name": "Pupil_R"
+            }
+          ],
+          "weight_entries": 192,
+          "unique_vertices": 192,
+          "weight_sum": 124.06360462316269,
+          "min_weight": 0.007981687796202614,
+          "max_weight": 1.0
+        },
+        {
+          "cluster": "",
+          "joint_models": [
+            "Iris_R"
+          ],
+          "direct_connections": [
+            {
+              "type": "OO",
+              "parent_id": 3140949496112,
+              "parent_model": null
+            }
+          ],
+          "connected_joint_links": [
+            {
+              "type": "OO",
+              "joint_id": 3140883356416,
+              "joint_name": "Iris_R"
+            }
+          ],
+          "weight_entries": 519,
+          "unique_vertices": 519,
+          "weight_sum": 203.22571473021483,
+          "min_weight": 0.0010164258770160883,
+          "max_weight": 1.0
+        }
+      ]
+    },
+    {
+      "mesh": "FilmExport:Dana_Cornea_Lf_GEO",
+      "vertices": 161,
+      "skin_count": 1,
+      "clusters": [
+        {
+          "cluster": "",
+          "joint_models": [
+            "Eye_L"
+          ],
+          "direct_connections": [
+            {
+              "type": "OO",
+              "parent_id": 3140949496288,
+              "parent_model": null
+            }
+          ],
+          "connected_joint_links": [
+            {
+              "type": "OO",
+              "joint_id": 3140883372656,
+              "joint_name": "Eye_L"
+            }
+          ],
+          "weight_entries": 161,
+          "unique_vertices": 161,
+          "weight_sum": 161.0,
+          "min_weight": 1.0,
+          "max_weight": 1.0
+        }
+      ]
+    },
+    {
+      "mesh": "FilmExport:Dana_Cornea_Rt_GEO",
+      "vertices": 161,
+      "skin_count": 1,
+      "clusters": [
+        {
+          "cluster": "",
+          "joint_models": [
+            "Eye_R"
+          ],
+          "direct_connections": [
+            {
+              "type": "OO",
+              "parent_id": 3140949492592,
+              "parent_model": null
+            }
+          ],
+          "connected_joint_links": [
+            {
+              "type": "OO",
+              "joint_id": 3140883337856,
+              "joint_name": "Eye_R"
+            }
+          ],
+          "weight_entries": 161,
+          "unique_vertices": 161,
+          "weight_sum": 161.0,
+          "min_weight": 1.0,
+          "max_weight": 1.0
+        }
+      ]
+    }
+  ]
+}

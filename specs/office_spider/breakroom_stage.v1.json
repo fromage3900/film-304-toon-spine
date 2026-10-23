@@ -1,0 +1,407 @@
+{
+  "schema": "humber-breakroom-stage.v1",
+  "purpose": "Build the break room set for SH090 and SH100 - plan gap 7.12 in Docs/OFFICE_SPIDER_SHOT_PLAN.md. Until this existed, both shots had cameras on the level sequencer and nothing for the camera to see.",
+  "level": "/Game/Maps/L_Toon_Shot_BreakRoom",
+  "builder": "Python/build_breakroom_scene.py",
+  "mesh_root": "/Game/Staging/OneDriveRigs_20261016/Environment",
+  "room_bounds": {
+    "x": [
+      -55.6,
+      55.6
+    ],
+    "y": [
+      -27.3,
+      27.3
+    ],
+    "z": [
+      0.0,
+      60.0
+    ],
+    "how_derived": "SM_BreakRoomTogether_ZMJ has local bounds origin (-64.3, -46.3, 21.8) and box extent (55.6, 27.3, 30). Placing that actor at (64.3, 46.3, 8.2) re-centres the shell on the world origin with its floor at Z=0, giving the interior above. Every other placement below is a bounds-centre-to-bounds-centre move measured the same way."
+  },
+  "scale_note": "The room is 111.2 x 54.6 x 60 UE units. That is the ZMJ break-room kit's own authored scale, not a rescale: the shell, floor, wall, counter, cabinet, fridge, espresso machine and the food props all share it. Meshes from the other three source kits (KS, SG, KMP, EF, PMB, CRP, Osc, AC) are at DIFFERENT scales - see unplaced below.",
+  "placements": [
+    {
+      "label": "BR_Shell",
+      "mesh": "/Game/Staging/OneDriveRigs_20261016/Environment/SM_BreakRoomTogether_ZMJ_FilmStage_20261016",
+      "zone": "shell",
+      "location": [
+        64.3,
+        46.3,
+        8.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "why": "the room shell; the origin above is the exact re-centre, not a rounded guess"
+    },
+    {
+      "label": "BR_Counter",
+      "mesh": "/Game/Staging/OneDriveRigs_20261016/Environment/SM_O_Counter_ZMJ_FilmStage_20261016",
+      "zone": "back_wall",
+      "location": [
+        0,
+        -20.9,
+        0
+      ],
+      "why": "sits on the floor against the -Y wall; local z spans 0..15.6 so the counter top is Z=15.6"
+    },
+    {
+      "label": "BR_Cabinet_L",
+      "mesh": "/Game/Staging/OneDriveRigs_20261016/Environment/SM_O_Cabinet_ZMJ_FilmStage_20261016",
+      "zone": "back_wall",
+      "location": [
+        19.2,
+        -21.4,
+        1.3
+      ],
+      "why": "under-counter unit on the right; local z spans -1.3..3.1, raised 1.3 so its base lands on Z=0"
+    },
+    {
+      "label": "BR_Cabinet_R",
+      "mesh": "/Game/Staging/OneDriveRigs_20261016/Environment/SM_O_Cabinet2_ZMJ_FilmStage_20261016",
+      "zone": "back_wall",
+      "location": [
+        -20.8,
+        -20.9,
+        1.3
+      ],
+      "why": "under-counter unit on the left; same base-to-floor correction"
+    },
+    {
+      "label": "BR_Fridge",
+      "mesh": "/Game/Staging/OneDriveRigs_20261016/Environment/SM_O_Fridge_ZMJ_FilmStage_20261016",
+      "zone": "back_wall",
+      "location": [
+        -48,
+        -20.4,
+        0
+      ],
+      "why": "tall unit at the left end of the counter run; local z spans 0..29"
+    },
+    {
+      "label": "BR_EspressoMachine",
+      "mesh": "/Game/Staging/OneDriveRigs_20261016/Environment/SM_O_EspressoMachine_ZMJ_FilmStage_20261016",
+      "zone": "counter",
+      "location": [
+        -7.3,
+        -21.7,
+        19.0
+      ],
+      "why": "THE SH100 subject. Local z spans -3.4..7.4, raised so its underside meets the counter top at Z=15.6. Sits camera-left of centre, not dead centre - a hero prop read dead-centre in a wide frame has nothing to sit against"
+    },
+    {
+      "label": "BR_Kettle",
+      "mesh": "/Game/Staging/OneDriveRigs_20261016/Environment/SM_O_Kettle_ZMJ_FilmStage_20261016",
+      "zone": "counter",
+      "location": [
+        9.9,
+        -23.5,
+        4.4
+      ],
+      "why": "local z spans 11.2..16.2 and would intersect the counter as authored, so it is raised to sit on the top at Z=15.6"
+    },
+    {
+      "label": "BR_TeaHolder",
+      "mesh": "/Game/Staging/OneDriveRigs_20261016/Environment/SM_O_TeaHolder_ZMJ_FilmStage_20261016",
+      "zone": "counter",
+      "location": [
+        15,
+        -21,
+        15.6
+      ],
+      "why": "counter dressing, base on Z=15.6"
+    },
+    {
+      "label": "BR_CoffeeSyrup",
+      "mesh": "/Game/Staging/OneDriveRigs_20261016/Environment/SM_O_CoffeeSyrup_ZMJ_FilmStage_20261016",
+      "zone": "counter",
+      "location": [
+        5,
+        -21,
+        18.0
+      ],
+      "why": "tall bottle beside the machine; local z spans -2.4..2.8, base on the counter"
+    },
+    {
+      "label": "BR_CoffeeTin",
+      "mesh": "/Game/Staging/OneDriveRigs_20261016/Environment/SM_O_CoffeeTin_ZMJ_FilmStage_20261016",
+      "zone": "counter",
+      "location": [
+        25,
+        -20.4,
+        17.0
+      ],
+      "why": "counter dressing at the right end of the run"
+    },
+    {
+      "label": "BR_CoffeeBag",
+      "mesh": "/Game/Staging/OneDriveRigs_20261016/Environment/SM_O_CoffeeBag_ZMJ_FilmStage_20261016",
+      "zone": "counter",
+      "location": [
+        27.1,
+        -20.4,
+        15.6
+      ],
+      "why": "counter dressing at the right end"
+    },
+    {
+      "label": "BR_Pastry",
+      "mesh": "/Game/Staging/OneDriveRigs_20261016/Environment/SM_O_Pastry_ZMJ_FilmStage_20261016",
+      "zone": "counter",
+      "location": [
+        -25,
+        -21,
+        15.7
+      ],
+      "why": "the donut under the glass; SH060 is the donut day-reveal, so the prop is dressed here for continuity"
+    },
+    {
+      "label": "BR_PastryCover",
+      "mesh": "/Game/Staging/OneDriveRigs_20261016/Environment/SM_O_PastryCover_ZMJ_FilmStage_20261016",
+      "zone": "counter",
+      "location": [
+        -25,
+        -21,
+        17.4
+      ],
+      "why": "dome over BR_Pastry, sitting on the pastry crown at Z=17.4"
+    },
+    {
+      "label": "BR_CoffeeMug",
+      "mesh": "/Game/Staging/OneDriveRigs_20261016/Environment/SM_O_CoffeeMugLarge_ZMJ_FilmStage_20261016",
+      "zone": "counter",
+      "location": [
+        -18.5,
+        -20.5,
+        16.4
+      ],
+      "why": "the mug in SH100's foreground"
+    },
+    {
+      "label": "BR_Shelf",
+      "mesh": "/Game/Staging/OneDriveRigs_20261016/Environment/SM_O_BreakRoomShelf_ZMJ_FilmStage_20261016",
+      "zone": "far_wall",
+      "location": [
+        6.3,
+        26.5,
+        17.5
+      ],
+      "why": "wall shelf on the +Y wall at eye height, opposite the counter so the room reads with depth rather than one flat wall"
+    },
+    {
+      "label": "BR_Cereal",
+      "mesh": "/Game/Staging/OneDriveRigs_20261016/Environment/SM_O_Cereal_ZMJ_FilmStage_20261016",
+      "zone": "counter",
+      "location": [
+        -30,
+        -21,
+        15.6
+      ],
+      "why": "dressing at the left end; note this mesh has zero X extent (it is a single-sided card), so it needs no rotation to face the camera"
+    }
+  ],
+  "unplaced": [
+    {
+      "mesh": "SM_O_CounterTop_ZMJ",
+      "reason": "local extent is (1.6, 0.1, 2.9) - 3.2 x 0.2 x 5.8 units against a 58.8-unit counter. It is a trim strip authored on a different origin convention and would need roughly 20x scale to read as a countertop. Placing it at authored scale produces a shelf the width of a coaster; guessing the multiplier is an art call, so it is left out rather than silently wrong."
+    },
+    {
+      "mesh": "SM_O_CabinetDoor2..6_ZMJ, SM_O_CabnetDoor_ZMJ",
+      "reason": "all six are identical 11.2 x 6.0 x 0.2 flat panels authored at the origin, with no door frame in the kit to align them to. Which cabinet each belongs on is a decision for the DP."
+    },
+    {
+      "mesh": "SM_O_Knob1..6_ZMJ",
+      "reason": "0.6-unit knobs, six of them, no appliance to mount to at this scale."
+    },
+    {
+      "mesh": "SM_O_BreakRoomFloor_ZMJ, SM_O_BreakRoomWall_ZMJ",
+      "reason": "superseded by BR_Shell, which already carries the floor and walls at the same footprint (both have extent 55.6 x 27.3). Adding them would double the floor."
+    },
+    {
+      "mesh": "SM_S_CoffeeTable_KS, SM_S_Watercooler_KS, SM_P_FilingCabinets_SG, SM_P_Kettle_SG, SM_P_Mop_Osc, SM_P__WatercoolerTop_KMP",
+      "reason": "the KS, SG, Osc and KMP kits are at a different authored scale - SM_P_FilingCabinets_SG alone is 322 x 174 x 275 units against this room's 111 x 55. They need a per-mesh scale decision before they can enter this room."
+    },
+    {
+      "mesh": "the remaining 40+ SM_P_* and SM_S_* office props",
+      "reason": "same scale mismatch, and most belong to the office set that L_Toon_Shot_Office already stages, not to the break room."
+    }
+  ],
+  "cameras": [
+    {
+      "label": "Cam_BR_SH090",
+      "shot": "SH090",
+      "location": [
+        0,
+        24,
+        20
+      ],
+      "rotation": [
+        270.0,
+        -12.0,
+        0.0
+      ],
+      "fov": 55,
+      "why": "wide establishing from the far end, looking down the room at the counter run. pitch -12 tips down onto the counter so the espresso machine is inside the frame rather than above it | aim_at is what the framing points at; the verifier asserts forward . aim_at >= 0.9",
+      "filmback": {
+        "width": 35.0,
+        "height": 19.6875
+      },
+      "aim_at": [
+        0.0,
+        -20.9,
+        8.0
+      ]
+    },
+    {
+      "label": "Cam_BR_SH100",
+      "shot": "SH100",
+      "location": [
+        -24,
+        -6,
+        19
+      ],
+      "rotation": [
+        -60.0,
+        -8.0,
+        0.0
+      ],
+      "fov": 35,
+      "why": "three-quarter close on BR_EspressoMachine with BR_CoffeeMug in the foreground; 35mm equivalent keeps the machine's silhouette readable at 1280x720 | aim_at is what the framing points at; the verifier asserts forward . aim_at >= 0.9",
+      "filmback": {
+        "width": 35.0,
+        "height": 19.6875
+      },
+      "aim_at": [
+        -10.0,
+        -20.9,
+        21.0
+      ]
+    },
+    {
+      "label": "Cam_BR_SH110",
+      "shot": "SH110",
+      "location": [
+        34,
+        18,
+        26
+      ],
+      "rotation": [
+        224.2,
+        -16.4,
+        0.0
+      ],
+      "fov": 40,
+      "why": "the reveal. High and far, looking back down the room so the counter run leads the eye and the creature has depth to move in. This is the shot the spider rig is being staged for; it is placed but not lit until the rig is bound | aim_at is what the framing points at; the verifier asserts forward . aim_at >= 0.9",
+      "filmback": {
+        "width": 35.0,
+        "height": 19.6875
+      },
+      "aim_at": [
+        0.0,
+        -15.0,
+        12.0
+      ]
+    }
+  ],
+  "lighting": {
+    "sun_rotation": [
+      -38,
+      24,
+      0
+    ],
+    "sun_intensity": 1.1,
+    "sun_height": 4000,
+    "why": "interior. A soft low sun through an implied window keeps the room from going flat black under the headless -game render path, where unbaked geometry gets no direct light from a weak setup. Level lights spawn MOVABLE (the 2026-10-08 lesson recorded in level_lib.spawn_lights). | 2026-10-17: cut 2.4 -> 1.1 after the first judged still. The interior is lit by practicals, not by the sun; 2.4 plus three point lights blew the counter top to pure white while the cabinet fronts crushed to near-black."
+  },
+  "practicals": [
+    {
+      "label": "BR_Light_Counter",
+      "location": [
+        0.0,
+        -16.0,
+        34.0
+      ],
+      "intensity": 520.0,
+      "colour": [
+        1.0,
+        0.94,
+        0.85
+      ],
+      "why": "overhead over the counter run - the fluorescent troffer band the office set already has a profile for (TP_Office_Troffer). Lowered 1800 -> 520: at 24uu falloff the old value clipped the worktop."
+    },
+    {
+      "label": "BR_Light_Machine",
+      "location": [
+        -10.0,
+        -18.0,
+        27.0
+      ],
+      "intensity": 180.0,
+      "colour": [
+        1.0,
+        0.92,
+        0.8
+      ],
+      "why": "practical pool on the espresso machine so SH100 has a subject brighter than its background."
+    },
+    {
+      "label": "BR_Light_Shelf",
+      "location": [
+        6.0,
+        20.0,
+        34.0
+      ],
+      "intensity": 260.0,
+      "colour": [
+        0.95,
+        0.95,
+        1.0
+      ],
+      "why": "shelf wall fill, cooler than the counter band so the two walls separate."
+    },
+    {
+      "label": "BR_Fill_Front",
+      "location": [
+        0.0,
+        10.0,
+        26.0
+      ],
+      "intensity": 260.0,
+      "colour": [
+        1.0,
+        0.96,
+        0.9
+      ],
+      "why": "camera-side fill. The 2026-10-17 still showed a 10:1 falloff: counter top pure white, cabinet fronts near-black. Lowering the overhead alone widens that gap; a fill from the room centre-front is what actually recovers the fronts."
+    },
+    {
+      "label": "BR_Fill_Machine",
+      "location": [
+        -10.0,
+        -12.0,
+        22.0
+      ],
+      "intensity": 160.0,
+      "colour": [
+        1.0,
+        0.93,
+        0.84
+      ],
+      "why": "low fill at the espresso machine so the SH100 subject separates from the cabinets behind it rather than being a silhouette against them."
+    }
+  ],
+  "open_questions_for_the_dp": [
+    "SM_O_CounterTop_ZMJ needs a scale decision (or should the counter be left bare?).",
+    "The six cabinet doors and six knobs are staged but unplaced - which cabinet does each door belong to?",
+    "The KS/SG/Osc/KMP props need per-mesh scale to enter this room. Scale them here, or keep them for the office set only?",
+    "SH110's camera is placed against an empty room. It should not be lit or rendered until Spider_Deform_v2 is bound and posed."
+  ]
+}

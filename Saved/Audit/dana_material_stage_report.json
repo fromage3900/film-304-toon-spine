@@ -1,0 +1,217 @@
+{
+  "game_only_effects": [],
+  "instances": [
+    {
+      "name": "MI_Dana_Skin",
+      "parameter_count": 9,
+      "parent": "M_Master_Toon_Character",
+      "path": "/Game/Materials/Instances/MI_Dana_Skin.MI_Dana_Skin",
+      "readback": "pass"
+    },
+    {
+      "name": "MI_Dana_Shirt",
+      "parameter_count": 12,
+      "parent": "M_Master_Toon_Character",
+      "path": "/Game/Materials/Instances/MI_Dana_Shirt.MI_Dana_Shirt",
+      "readback": "pass"
+    },
+    {
+      "name": "MI_Dana_Skirt",
+      "parameter_count": 12,
+      "parent": "M_Master_Toon_Character",
+      "path": "/Game/Materials/Instances/MI_Dana_Skirt.MI_Dana_Skirt",
+      "readback": "pass"
+    },
+    {
+      "name": "MI_Dana_Shoes",
+      "parameter_count": 9,
+      "parent": "M_Master_Toon_Character",
+      "path": "/Game/Materials/Instances/MI_Dana_Shoes.MI_Dana_Shoes",
+      "readback": "pass"
+    },
+    {
+      "name": "MI_Dana_Button",
+      "parameter_count": 9,
+      "parent": "M_Master_Toon_Character",
+      "path": "/Game/Materials/Instances/MI_Dana_Button.MI_Dana_Button",
+      "readback": "pass"
+    },
+    {
+      "name": "MI_Dana_Hair",
+      "parameter_count": 8,
+      "parent": "M_Master_Toon_Hair",
+      "path": "/Game/Materials/Instances/MI_Dana_Hair.MI_Dana_Hair",
+      "readback": "pass"
+    },
+    {
+      "name": "MI_Dana_EyeWhite",
+      "parameter_count": 9,
+      "parent": "M_Master_Toon_Face",
+      "path": "/Game/Materials/Instances/MI_Dana_EyeWhite.MI_Dana_EyeWhite",
+      "readback": "pass"
+    },
+    {
+      "name": "MI_Dana_Iris",
+      "parameter_count": 9,
+      "parent": "M_Master_Toon_Face",
+      "path": "/Game/Materials/Instances/MI_Dana_Iris.MI_Dana_Iris",
+      "readback": "pass"
+    },
+    {
+      "name": "MI_Dana_EyeInterior",
+      "parameter_count": 9,
+      "parent": "M_Master_Toon_Face",
+      "path": "/Game/Materials/Instances/MI_Dana_EyeInterior.MI_Dana_EyeInterior",
+      "readback": "pass"
+    },
+    {
+      "name": "MI_Dana_Cornea",
+      "parameter_count": 8,
+      "parent": "M_Master_Toon_Glass",
+      "path": "/Game/Materials/Instances/MI_Dana_Cornea.MI_Dana_Cornea",
+      "readback": "pass"
+    }
+  ],
+  "melodia_dependencies": [],
+  "result": "pass",
+  "scope": "Dana material instances and Dana actor overrides only",
+  "source_materials_preserved": true,
+  "stage": {
+    "actor": "C_DanaRenderTest_OSC",
+    "actor_location": [
+      -50.0,
+      -930.0,
+      30.0
+    ],
+    "all_slots_assigned": true,
+    "all_slots_persisted": true,
+    "fresh_level_readback": [
+      {
+        "index": 0,
+        "material": "/Game/Materials/Instances/MI_Dana_Hair.MI_Dana_Hair",
+        "ok": true,
+        "slot": "danaHair_mat"
+      },
+      {
+        "index": 1,
+        "material": "/Game/Materials/Instances/MI_Dana_Iris.MI_Dana_Iris",
+        "ok": true,
+        "slot": "danaIris_mat"
+      },
+      {
+        "index": 2,
+        "material": "/Game/Materials/Instances/MI_Dana_EyeWhite.MI_Dana_EyeWhite",
+        "ok": true,
+        "slot": "danaEye_mat"
+      },
+      {
+        "index": 3,
+        "material": "/Game/Materials/Instances/MI_Dana_Cornea.MI_Dana_Cornea",
+        "ok": true,
+        "slot": "danaCornea_mat"
+      },
+      {
+        "index": 4,
+        "material": "/Game/Materials/Instances/MI_Dana_EyeInterior.MI_Dana_EyeInterior",
+        "ok": true,
+        "slot": "danaEyeInt_mat"
+      },
+      {
+        "index": 5,
+        "material": "/Game/Materials/Instances/MI_Dana_Shoes.MI_Dana_Shoes",
+        "ok": true,
+        "slot": "danaShoes_mat"
+      },
+      {
+        "index": 6,
+        "material": "/Game/Materials/Instances/MI_Dana_Button.MI_Dana_Button",
+        "ok": true,
+        "slot": "danaPantsButton_mat"
+      },
+      {
+        "index": 7,
+        "material": "/Game/Materials/Instances/MI_Dana_Skirt.MI_Dana_Skirt",
+        "ok": true,
+        "slot": "danaPants_mat"
+      },
+      {
+        "index": 8,
+        "material": "/Game/Materials/Instances/MI_Dana_Shirt.MI_Dana_Shirt",
+        "ok": true,
+        "slot": "danaShirt_mat"
+      },
+      {
+        "index": 9,
+        "material": "/Game/Materials/Instances/MI_Dana_Skin.MI_Dana_Skin",
+        "ok": true,
+        "slot": "danaSkin_mat"
+      },
+      {
+        "index": 10,
+        "material": "/Game/Materials/Instances/MI_Dana_Skin.MI_Dana_Skin",
+        "ok": true,
+        "slot": "openPBR_shader1"
+      }
+    ],
+    "level": "/Game/Maps/L_Toon_Shot_Office",
+    "mesh": "/Game/Meshes/Office/Props/C_DanaRenderTest_OSC.C_DanaRenderTest_OSC",
+    "saved": true,
+    "slot_assignments": [
+      {
+        "index": 0,
+        "instance": "/Game/Materials/Instances/MI_Dana_Hair.MI_Dana_Hair",
+        "slot": "danaHair_mat"
+      },
+      {
+        "index": 1,
+        "instance": "/Game/Materials/Instances/MI_Dana_Iris.MI_Dana_Iris",
+        "slot": "danaIris_mat"
+      },
+      {
+        "index": 2,
+        "instance": "/Game/Materials/Instances/MI_Dana_EyeWhite.MI_Dana_EyeWhite",
+        "slot": "danaEye_mat"
+      },
+      {
+        "index": 3,
+        "instance": "/Game/Materials/Instances/MI_Dana_Cornea.MI_Dana_Cornea",
+        "slot": "danaCornea_mat"
+      },
+      {
+        "index": 4,
+        "instance": "/Game/Materials/Instances/MI_Dana_EyeInterior.MI_Dana_EyeInterior",
+        "slot": "danaEyeInt_mat"
+      },
+      {
+        "index": 5,
+        "instance": "/Game/Materials/Instances/MI_Dana_Shoes.MI_Dana_Shoes",
+        "slot": "danaShoes_mat"
+      },
+      {
+        "index": 6,
+        "instance": "/Game/Materials/Instances/MI_Dana_Button.MI_Dana_Button",
+        "slot": "danaPantsButton_mat"
+      },
+      {
+        "index": 7,
+        "instance": "/Game/Materials/Instances/MI_Dana_Skirt.MI_Dana_Skirt",
+        "slot": "danaPants_mat"
+      },
+      {
+        "index": 8,
+        "instance": "/Game/Materials/Instances/MI_Dana_Shirt.MI_Dana_Shirt",
+        "slot": "danaShirt_mat"
+      },
+      {
+        "index": 9,
+        "instance": "/Game/Materials/Instances/MI_Dana_Skin.MI_Dana_Skin",
+        "slot": "danaSkin_mat"
+      },
+      {
+        "index": 10,
+        "instance": "/Game/Materials/Instances/MI_Dana_Skin.MI_Dana_Skin",
+        "slot": "openPBR_shader1"
+      }
+    ]
+  }
+}

@@ -444,12 +444,15 @@ def build(rebuild=True) -> dict:
         s.set_editor_property("parameter_name", name)
         s.set_editor_property("group", "Surface")
         asset = lib.asset_path(TEX_DIR, tex_key)
-        tex = unreal.load_asset(asset)
+        # 2026-10-06: a MISSING map swaps to a NEUTRAL DEFAULT rather than
+        # leaving the slot empty (spine_lib.resolve_texture) - never /Engine
+        # placeholder content.
+        tex, swapped = lib.resolve_texture(asset, key=name)
+        if swapped:
+            report["warnings"].append(
+                f"{name}: texture asset missing at {asset} -> neutral default")
         if tex is not None:
             s.set_editor_property("texture", tex)
-        else:
-            report["warnings"].append(
-                f"{name}: texture asset missing at {asset}")
         lib.connect(uv_scaled, "", s, "Coordinates")
         return s
 

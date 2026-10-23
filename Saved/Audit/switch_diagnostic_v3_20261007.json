@@ -1,0 +1,28 @@
+{
+ "api": {
+  "MaterialEditingLibrary": [
+   "recompile_material"
+  ]
+ },
+ "masters": {
+  "M_Master_Toon_Character": {
+   "has_error_prop": "<'Material' object has no attribute 'get_editor_property_name>"
+  },
+  "M_Master_Toon_Landscape": {
+   "has_error_prop": "<'Material' object has no attribute 'get_editor_property_name>"
+  },
+  "M_Master_Toon_Face": {
+   "has_error_prop": "<'Material' object has no attribute 'get_editor_property_name>"
+  },
+  "M_Master_Toon_Hair": {
+   "has_error_prop": "<'Material' object has no attribute 'get_editor_property_name>"
+  },
+  "M_Master_Toon_Glass": {
+   "has_error_prop": "<'Material' object has no attribute 'get_editor_property_name>"
+  },
+  "M_Master_Toon_Water": {
+   "has_error_prop": "<'Material' object has no attribute 'get_editor_property_name>"
+  }
+ },
+ "inline_dump": "API ABSENT"
+}

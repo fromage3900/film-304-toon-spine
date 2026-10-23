@@ -2,10 +2,7 @@
 	"FileVersion": 3,
 	"EngineAssociation": "5.8",
 	"Category": "Film",
-	"Description": "Animation Art 5 group film - stylized look development. Content-only project: no C++ module, no third-party plugins.",
-	"AdditionalPluginDirectories": [
-		"P:/MelodiaSharedPlugins"
-	],
+	"Description": "Animation Art 5 group film - stylized look development. Content-first project; editor MCP plugins (Monolith, Claireon) are installed under Plugins/ for AI tooling.",
 	"Plugins": [
 		{
 			"Name": "MovieRenderPipeline",
@@ -16,11 +13,7 @@
 			"Enabled": true
 		},
 		{
-			"Name": "Monolith",
-			"Enabled": true
-		},
-		{
-			"Name": "Claireon",
+			"Name": "PythonAutomationTest",
 			"Enabled": true
 		},
 		{
@@ -34,6 +27,39 @@
 		{
 			"Name": "EditorScriptingUtilities",
 			"Enabled": true
+		},
+		{
+			"Name": "Monolith",
+			"Enabled": true
+		},
+		{
+			"Name": "Claireon",
+			"Enabled": true
+		},
+		{
+			"Name": "AccumulationDOF",
+			"Enabled": true
+		},
+		{
+			"Name": "AIAssistant",
+			"Enabled": true
+		},
+		{
+			"Name": "AnimationLocomotionLibrary",
+			"Enabled": true
+		},
+		{
+			"Name": "NiagaraNanite",
+			"Enabled": true
+		},
+		{
+			"Name": "HoudiniEngine",
+			"Enabled": true
+		},
+		{
+			"Name": "LXR",
+			"Enabled": false,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/bfe03ff858fa4b8d9766d7e9113f3829"
 		}
 	]
 }

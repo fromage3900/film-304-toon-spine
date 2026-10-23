@@ -1,0 +1,41 @@
+{
+  "assets": [
+    {
+      "name": "C_DanaRenderTest_OSC",
+      "class": "SkeletalMesh",
+      "path": "/Game/Meshes/Office/Props/C_DanaRenderTest_OSC",
+      "loaded_class": "SkeletalMesh",
+      "skeleton": "/Game/Meshes/Office/Props/C_DanaRenderTest_OSC_Skeleton.C_DanaRenderTest_OSC_Skeleton"
+    },
+    {
+      "name": "C_DanaRenderTest_OSC_Anim",
+      "class": "AnimSequence",
+      "path": "/Game/Meshes/Office/Props/C_DanaRenderTest_OSC_Anim",
+      "loaded_class": "AnimSequence",
+      "sequence_length": "0.125",
+      "number_of_sampled_keys": "4",
+      "skeleton": "/Game/Meshes/Office/Props/C_DanaRenderTest_OSC_Skeleton.C_DanaRenderTest_OSC_Skeleton"
+    },
+    {
+      "name": "C_DanaRenderTest_OSC_PhysicsAsset",
+      "class": "PhysicsAsset",
+      "path": "/Game/Meshes/Office/Props/C_DanaRenderTest_OSC_PhysicsAsset",
+      "loaded_class": "PhysicsAsset"
+    },
+    {
+      "name": "C_DanaRenderTest_OSC_Skeleton",
+      "class": "Skeleton",
+      "path": "/Game/Meshes/Office/Props/C_DanaRenderTest_OSC_Skeleton",
+      "loaded_class": "Skeleton"
+    },
+    {
+      "name": "C_DavidRenderTest_OSC_Anim",
+      "class": "AnimSequence",
+      "path": "/Game/Meshes/Office/Props/C_DavidRenderTest_OSC_Anim",
+      "loaded_class": "AnimSequence",
+      "sequence_length": "0.125",
+      "number_of_sampled_keys": "4",
+      "skeleton": "/Game/Meshes/Office/Props/C_DavidRenderTest_OSC_Skeleton.C_DavidRenderTest_OSC_Skeleton"
+    }
+  ]
+}

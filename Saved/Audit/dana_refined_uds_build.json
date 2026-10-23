@@ -1,0 +1,122 @@
+{
+  "result": "authored",
+  "profile": "/Game/Materials/ToonProfiles/TP_DanaFilm_Clean",
+  "profile_changes": {
+    "ShadowHatchingPatternStrength": 0.0,
+    "SpecularIndirectScale": 0.35,
+    "DiffuseIndirectScale": 1.0,
+    "ShadowExtinctionCoefficient": 4.5
+  },
+  "diffuse_bands": [
+    [
+      0.0,
+      0.42
+    ],
+    [
+      0.34,
+      0.42
+    ],
+    [
+      0.4,
+      0.72
+    ],
+    [
+      0.68,
+      0.72
+    ],
+    [
+      0.74,
+      1.0
+    ],
+    [
+      1.0,
+      1.0
+    ]
+  ],
+  "normal_space": "world",
+  "character_contact_shadow_tint": false,
+  "uds_vendor_assets": 1012,
+  "uds_external_project_dependencies": [
+    "/Game/Materials/Functions/MF_ColorRamp3"
+  ],
+  "uds_editor_helpers_retargeted_to_humber": [],
+  "materials": {
+    "MI_Dana_Skin": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Skin.MI_DanaFilm_Skin",
+    "MI_Dana_Shirt": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Shirt.MI_DanaFilm_Shirt",
+    "MI_Dana_Skirt": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Skirt.MI_DanaFilm_Skirt",
+    "MI_Dana_Shoes": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Shoes.MI_DanaFilm_Shoes",
+    "MI_Dana_Button": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Button.MI_DanaFilm_Button",
+    "MI_Dana_Hair": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Hair.MI_DanaFilm_Hair",
+    "MI_Dana_EyeWhite": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_EyeWhite.MI_DanaFilm_EyeWhite",
+    "MI_Dana_Iris": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Iris.MI_DanaFilm_Iris",
+    "MI_Dana_EyeInterior": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_EyeInterior.MI_DanaFilm_EyeInterior",
+    "MI_Dana_Cornea": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Cornea.MI_DanaFilm_Cornea"
+  },
+  "hidden_import_helpers": {
+    "slot": "openPBR_shader1",
+    "material": "/Game/Materials/Masters/DanaFilm/M_DanaFilm_ImportHelpers_Hidden",
+    "triangles": 274539,
+    "note": "preview mitigation; source mesh and skeleton unchanged"
+  },
+  "stages": [
+    {
+      "map": "/Game/Maps/Lookdev/L_Dana_Toon_UDS_Night",
+      "dana_count": 1,
+      "slots": 11,
+      "film_key_intensity": 8.0,
+      "sky": {
+        "Time of Day": "2200.0",
+        "Animate Time of Day": "False",
+        "Random Starting Time": "False",
+        "Use System Time": "False",
+        "Apply Exposure Settings": "False",
+        "Sun Light Intensity": "5.0",
+        "Moon Light Intensity": "1.2",
+        "Sky Light Intensity": "0.65",
+        "Aurora Intensity": "0.0",
+        "Cloud Coverage": "1.0",
+        "Fog": "0.15"
+      }
+    },
+    {
+      "map": "/Game/Maps/Lookdev/L_Dana_Toon_UDS_Day",
+      "dana_count": 1,
+      "slots": 11,
+      "film_key_intensity": 5.0,
+      "sky": {
+        "Time of Day": "1100.0",
+        "Animate Time of Day": "False",
+        "Random Starting Time": "False",
+        "Use System Time": "False",
+        "Apply Exposure Settings": "False",
+        "Sun Light Intensity": "5.0",
+        "Moon Light Intensity": "0.15",
+        "Sky Light Intensity": "1.0",
+        "Aurora Intensity": "0.0",
+        "Cloud Coverage": "1.0",
+        "Fog": "0.15"
+      }
+    }
+  ],
+  "jobs": [
+    {
+      "stem": "DANA_REFINED_UDS_NIGHT_FULLBODY_v01",
+      "map": "/Game/Maps/Lookdev/L_Dana_Toon_UDS_Night",
+      "sequence": "/Game/Sequences/DanaLookdev/LS_DANA_REFINED_UDS_NIGHT_FULLBODY_v01",
+      "config": "/Game/MoviePipelines/DanaLookdev/CFG_DANA_REFINED_UDS_NIGHT_FULLBODY_v01"
+    },
+    {
+      "stem": "DANA_REFINED_UDS_DAY_FULLBODY_v01",
+      "map": "/Game/Maps/Lookdev/L_Dana_Toon_UDS_Day",
+      "sequence": "/Game/Sequences/DanaLookdev/LS_DANA_REFINED_UDS_DAY_FULLBODY_v01",
+      "config": "/Game/MoviePipelines/DanaLookdev/CFG_DANA_REFINED_UDS_DAY_FULLBODY_v01"
+    },
+    {
+      "stem": "DANA_REFINED_UDS_DAY_DETAIL_v01",
+      "map": "/Game/Maps/Lookdev/L_Dana_Toon_UDS_Day",
+      "sequence": "/Game/Sequences/DanaLookdev/LS_DANA_REFINED_UDS_DAY_DETAIL_v01",
+      "config": "/Game/MoviePipelines/DanaLookdev/CFG_DANA_REFINED_UDS_DAY_DETAIL_v01"
+    }
+  ],
+  "qualification": "static source rig pose; body/facial export binding requires native Maya verification"
+}

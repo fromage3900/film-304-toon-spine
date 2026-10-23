@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "date": "2026-10-18",
+  "why": "A fixed pose is an AnimSequence with two identical keys, not a Control Rig state. CR_* are authoring rigs; the baked sequence is the render artifact. Tolerances are in centimetres and are checked by Python/verify_pose_library.py.",
+  "rigs": {
+    "David": "/Game/Rigs/Film304/CR_David",
+    "Dana": "/Game/Rigs/Film304/CR_Dana",
+    "Sam": "/Game/Rigs/Film304/CR_Sam",
+    "Spider": "/Game/Rigs/Film304/CR_Spiders"
+  },
+  "tolerances": {
+    "endpoint_local_max": 0.001,
+    "keys_expected": 2,
+    "feet_floor_min_cm": -2.0,
+    "feet_floor_max_cm": 5.0
+  },
+  "poses": [
+    {
+      "id": "David_Seated",
+      "character": "David",
+      "animation": "/Game/Staging/Film304Repaired_20261017/Poses_Headless/AS_David_Seated",
+      "skeletal_mesh": "/Game/Staging/Film304Repaired_20261017/David/SK_David_Film304_v01",
+      "fps_measured": 24,
+      "contacts": [
+        {"type": "feet_on_floor", "bones": ["Ankle_L", "Ankle_R", "Toes_L", "Toes_R"], "max_cm": 2.0},
+        {"type": "pelvis_record_only", "bone": "Hip_L",
+         "note": "skeleton/pose space is not level centimetres (head top ~75 pose-cm), so seat contact must be measured against the chair actor's world bounds in-level"}
+      ],
+      "status": "numeric pass; visual review recorded in Docs/RENDER_PLAN_COMPOSED_STYLIZED_20261017.md"
+    },
+    {
+      "id": "David_Seated_Polish01",
+      "character": "David",
+      "animation": "/Game/Staging/Film304Repaired_20261017/Poses_Headless/AS_David_Seated_Polish01",
+      "skeletal_mesh": "/Game/Staging/Film304Repaired_20261017/David/SK_David_Film304_v01",
+      "fps_measured": 24,
+      "contacts": [
+        {"type": "feet_on_floor", "bones": ["Ankle_L", "Ankle_R", "Toes_L", "Toes_R"], "max_cm": 2.0}
+      ],
+      "status": "finger/wrist polish; wrist translation unchanged from v1 by design"
+    },
+    {
+      "id": "Dana_LeanDesk",
+      "character": "Dana",
+      "animation": "/Game/Staging/Film304Repaired_20261017/Poses_Headless/AS_Dana_LeanDesk",
+      "skeletal_mesh": "/Game/Staging/Film304Repaired_20261017/Dana/SK_Dana_Film304_v10e",
+      "fps_measured": 30,
+      "contacts": [
+        {"type": "feet_on_floor", "bones": ["Ankle_L", "Ankle_R", "Toes_L", "Toes_R"], "max_cm": 2.0},
+        {"type": "hand_to_surface", "bone": "Wrist_R", "target": "Film_DeskReturn", "max_cm": 1.5}
+      ],
+      "status": "numeric pass; reads as standing at the desk in the medium frame, needs a visual re-check"
+    },
+    {
+      "id": "Dana_LeanDesk_Polish01",
+      "character": "Dana",
+      "animation": "/Game/Staging/Film304Repaired_20261017/Poses_Headless/AS_Dana_LeanDesk_Polish01",
+      "skeletal_mesh": "/Game/Staging/Film304Repaired_20261017/Dana/SK_Dana_Film304_v10e",
+      "fps_measured": 30,
+      "contacts": [
+        {"type": "feet_on_floor", "bones": ["Ankle_L", "Ankle_R", "Toes_L", "Toes_R"], "max_cm": 2.0}
+      ],
+      "status": "palm normal aligned; wrist translation unchanged"
+    },
+    {
+      "id": "Sam_ArmsCrossed",
+      "character": "Sam",
+      "animation": "/Game/Staging/Film304Repaired_20261017/Poses_Headless/AS_Sam_ArmsCrossed",
+      "skeletal_mesh": "/Game/Staging/Film304Repaired_20261017/Sam/SK_Sam_Film304_v01",
+      "fps_measured": 24,
+      "contacts": [
+        {"type": "feet_on_floor", "bones": ["Ankle_L", "Ankle_R", "Toes_L", "Toes_R"], "max_cm": 2.0},
+        {"type": "wrist_beyond_opposite_elbow", "wrist": "Wrist_L", "elbow": "Elbow_R", "min_cm": 0.0}
+      ],
+      "status": "reads as a folded gesture rather than clearly crossed; accepted per the brief"
+    },
+    {
+      "id": "Sam_ArmsCrossed_Polish01",
+      "character": "Sam",
+      "animation": "/Game/Staging/Film304Repaired_20261017/Poses_Headless/AS_Sam_ArmsCrossed_Polish01",
+      "skeletal_mesh": "/Game/Staging/Film304Repaired_20261017/Sam/SK_Sam_Film304_v01",
+      "fps_measured": 24,
+      "contacts": [
+        {"type": "feet_on_floor", "bones": ["Ankle_L", "Ankle_R", "Toes_L", "Toes_R"], "max_cm": 2.0}
+      ],
+      "status": "finger curl added; wrist translation unchanged"
+    }
+  ]
+}

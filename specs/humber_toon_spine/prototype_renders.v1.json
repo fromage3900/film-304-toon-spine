@@ -34,10 +34,10 @@
       "enabled": true,
       "mesh": "/Engine/BasicShapes/Plane",
       "size_uu": 200000,
-      "material": "/Game/Materials/Instances/MI_Toon_Environment",
+      "material": "/Game/Materials/Instances/Film304/Environment/MI_Film304_BrutalistAsphalt",
       "note": "Grounds the masses and catches the key-light shadow terminator, which is what makes toon banding readable."
     },
-    "lights": { "sun_intensity": 3.2, "sun_rotation": [-46.0, 0.0, 35.0], "sky": true, "atmosphere": true }
+    "lights": { "sun_intensity": 4.5, "sun_rotation": [-36.0, 115.0, 0.0], "sky": true, "atmosphere": true }
   },
 
   "scene": [
@@ -56,9 +56,9 @@
       "shot_id": "SH010", "name": "establish_world", "focal_length_mm": 24.0,
       "sequence": "/Game/Sequences/LS_SH010", "render_frame": 48,
       "camera_label": "Cam_Env_SH010",
-      "location_uu": [-20000, -55000, 14000], "target_uu": [0, 20000, 6000],
-      "still_name": "COMP_SH010_proto_v01",
-      "framing_intent": "Deep wide establishing vista; hero mass against sky."
+      "location_uu": [-500, -2500, 280], "target_uu": [0, 6000, 4200],
+      "still_name": "COMP_SH010_proto_v06",
+      "framing_intent": "Low-angle heroic establishing street canyon vista; Barbican slab framing left, Slender tower right, City Tower Cluster rising in center against sky, raking key light casting graphic toon shadow steps."
     },
     {
       "shot_id": "SH020", "name": "reveal_profile", "focal_length_mm": 35.0,

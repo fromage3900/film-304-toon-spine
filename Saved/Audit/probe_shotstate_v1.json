@@ -1,0 +1,182 @@
+{
+ "level": {
+  "loaded": true,
+  "actor_count": 17,
+  "actors": [
+   {
+    "label": "LGT_Sun",
+    "class": "DirectionalLight",
+    "loc": [
+     0.0,
+     0.0,
+     4000.0
+    ]
+   },
+   {
+    "label": "LGT_Sky",
+    "class": "SkyLight",
+    "loc": [
+     0.0,
+     0.0,
+     1000.0
+    ]
+   },
+   {
+    "label": "Sky",
+    "class": "SkyAtmosphere",
+    "loc": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   {
+    "label": "CITY_TowerCluster",
+    "class": "StaticMeshActor",
+    "loc": [
+     0.0,
+     26000.0,
+     40.0
+    ]
+   },
+   {
+    "label": "FAC_TowerRibbon",
+    "class": "StaticMeshActor",
+    "loc": [
+     -17000.0,
+     24000.0,
+     80.0
+    ]
+   },
+   {
+    "label": "CITY_CivicSuperblock",
+    "class": "StaticMeshActor",
+    "loc": [
+     15000.0,
+     22000.0,
+     40.0
+    ]
+   },
+   {
+    "label": "CITY_TightEstate",
+    "class": "StaticMeshActor",
+    "loc": [
+     31000.0,
+     34000.0,
+     40.0
+    ]
+   },
+   {
+    "label": "CITY_LowSprawl",
+    "class": "StaticMeshActor",
+    "loc": [
+     -3000.0,
+     11000.0,
+     40.0
+    ]
+   },
+   {
+    "label": "OFFICE_CivicSlab",
+    "class": "StaticMeshActor",
+    "loc": [
+     -20000.0,
+     12000.0,
+     0.0
+    ]
+   },
+   {
+    "label": "OFFICE_BarbicanScale",
+    "class": "StaticMeshActor",
+    "loc": [
+     -5500.0,
+     2500.0,
+     0.0
+    ]
+   },
+   {
+    "label": "OFFICE_SlenderTower",
+    "class": "StaticMeshActor",
+    "loc": [
+     4500.0,
+     1200.0,
+     0.0
+    ]
+   },
+   {
+    "label": "Cam_Env_SH010",
+    "class": "CineCameraActor",
+    "loc": [
+     -20000.0,
+     -55000.0,
+     14000.0
+    ],
+    "focal_mm": 24.0
+   },
+   {
+    "label": "Cam_Env_SH020",
+    "class": "CineCameraActor",
+    "loc": [
+     -26000.0,
+     -22000.0,
+     3000.0
+    ],
+    "focal_mm": 35.0
+   },
+   {
+    "label": "Cam_Env_SH030",
+    "class": "CineCameraActor",
+    "loc": [
+     -9000.0,
+     -14000.0,
+     300.0
+    ],
+    "focal_mm": 28.0
+   },
+   {
+    "label": "Cam_Env_SH070",
+    "class": "CineCameraActor",
+    "loc": [
+     9000.0,
+     -18000.0,
+     6000.0
+    ],
+    "focal_mm": 40.0
+   },
+   {
+    "label": "DirectionalLight",
+    "class": "DirectionalLight",
+    "loc": [
+     8730.0,
+     4800.0,
+     2925.0
+    ]
+   },
+   {
+    "label": "PointLight",
+    "class": "PointLight",
+    "loc": [
+     -4235.5,
+     3086.9,
+     2429.6
+    ]
+   }
+  ],
+  "resaved": true,
+  "resave_note": "probe resaves the level in place; no property was modified"
+ },
+ "sequences": {
+  "/Game/Sequences/OfficeSpider_Master": {
+   "error": "LevelSequence: Failed to find property 'playback_start' for attribute 'playback_start' on 'LevelSequence'"
+  },
+  "/Game/Sequences/Shots/SH010_Establish_Office": {
+   "error": "LevelSequence: Failed to find property 'playback_start' for attribute 'playback_start' on 'LevelSequence'"
+  },
+  "/Game/Sequences/Shots/SH110_Spider_Reveal": {
+   "error": "LevelSequence: Failed to find property 'playback_start' for attribute 'playback_start' on 'LevelSequence'"
+  },
+  "/Game/Sequences/LS_SH010": {
+   "error": "LevelSequence: Failed to find property 'playback_start' for attribute 'playback_start' on 'LevelSequence'"
+  }
+ },
+ "errors": []
+}

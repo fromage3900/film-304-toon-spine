@@ -1,0 +1,109 @@
+{
+  "world": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office",
+  "actor_found": true,
+  "actor_label": "Film_Subject_Dana_v08_CleanSkin",
+  "actor_path": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office:PersistentLevel.SkeletalMeshActor_0",
+  "actor_location": [
+    11.267,
+    28.884,
+    -0.661
+  ],
+  "actor_scale": [
+    1.2512,
+    1.2512,
+    1.2512
+  ],
+  "mesh": "/Game/Staging/Film304Repaired_20261017/Dana/SK_Dana_Film304_v10e.SK_Dana_Film304_v10e",
+  "materials": [
+    {
+      "slot": 0,
+      "name": "MI_Film304_Dana_Skin_Toon",
+      "path": "/Game/Materials/Instances/Film304/Cast/Dana/MI_Film304_Dana_Skin_Toon.MI_Film304_Dana_Skin_Toon"
+    },
+    {
+      "slot": 1,
+      "name": "MI_Film304_Dana_Hair_Toon",
+      "path": "/Game/Materials/Instances/Film304/Cast/Dana/MI_Film304_Dana_Hair_Toon.MI_Film304_Dana_Hair_Toon"
+    },
+    {
+      "slot": 2,
+      "name": "MI_Film304_Dana_Iris_Toon",
+      "path": "/Game/Materials/Instances/Film304/Cast/Dana/MI_Film304_Dana_Iris_Toon.MI_Film304_Dana_Iris_Toon"
+    },
+    {
+      "slot": 3,
+      "name": "MI_Film304_Dana_EyeWhite_Toon",
+      "path": "/Game/Materials/Instances/Film304/Cast/Dana/MI_Film304_Dana_EyeWhite_Toon.MI_Film304_Dana_EyeWhite_Toon"
+    },
+    {
+      "slot": 4,
+      "name": "MI_Film304_Dana_Cornea_Toon",
+      "path": "/Game/Materials/Instances/Film304/Cast/Dana/MI_Film304_Dana_Cornea_Toon.MI_Film304_Dana_Cornea_Toon"
+    },
+    {
+      "slot": 5,
+      "name": "MI_Film304_Dana_EyeInterior_Toon",
+      "path": "/Game/Materials/Instances/Film304/Cast/Dana/MI_Film304_Dana_EyeInterior_Toon.MI_Film304_Dana_EyeInterior_Toon"
+    },
+    {
+      "slot": 6,
+      "name": "MI_Film304_Dana_Cloth_Toon",
+      "path": "/Game/Materials/Instances/Film304/Cast/Dana/MI_Film304_Dana_Cloth_Toon.MI_Film304_Dana_Cloth_Toon"
+    },
+    {
+      "slot": 7,
+      "name": "MI_Film304_Dana_Shirt_Toon",
+      "path": "/Game/Materials/Instances/Film304/Cast/Dana/MI_Film304_Dana_Shirt_Toon.MI_Film304_Dana_Shirt_Toon"
+    },
+    {
+      "slot": 8,
+      "name": "MI_Film304_Dana_Shoes_Toon",
+      "path": "/Game/Materials/Instances/Film304/Cast/Dana/MI_Film304_Dana_Shoes_Toon.MI_Film304_Dana_Shoes_Toon"
+    },
+    {
+      "slot": 9,
+      "name": "MI_Film304_Dana_Mouth_Toon",
+      "path": "/Game/Materials/Instances/Film304/Cast/Dana/MI_Film304_Dana_Mouth_Toon.MI_Film304_Dana_Mouth_Toon"
+    },
+    {
+      "slot": 10,
+      "name": "MI_Film304_Dana_Teeth_Toon",
+      "path": "/Game/Materials/Instances/Film304/Cast/Dana/MI_Film304_Dana_Teeth_Toon.MI_Film304_Dana_Teeth_Toon"
+    },
+    {
+      "slot": 11,
+      "name": "MI_Film304_Dana_Mouth_Toon",
+      "path": "/Game/Materials/Instances/Film304/Cast/Dana/MI_Film304_Dana_Mouth_Toon.MI_Film304_Dana_Mouth_Toon"
+    }
+  ],
+  "bone_parent": {
+    "Head_M": "NeckPart2_M",
+    "FaceDeformationFollowHead": "Head_M",
+    "FaceUpper_M": "FaceDeformationFollowHead",
+    "FaceUpperReverseOffset_M": "FaceUpper_M",
+    "Eye_L": "FaceUpperReverseOffset_M",
+    "Eye_R": "FaceUpperReverseOffset_M",
+    "Face_upperLidMain1_L": "Head_M",
+    "Face_upperLidMain12_L": "Head_M",
+    "Face_lowerLidMain1_L": "Head_M",
+    "Face_upperLidMain1_R": "Head_M",
+    "Face_upperLidMain12_R": "Head_M",
+    "Face_lowerLidMain1_R": "Head_M",
+    "EyelashUpperLower_L": "None",
+    "EyelashUpperLower_R": "None",
+    "Dana_Rig_v1_5:EyelashUpperLower_L": "None",
+    "Dana_Rig_v1_5:EyelashUpperLower_R": "None"
+  },
+  "morph_targets": [
+    "Blink_L",
+    "Blink_R",
+    "Brow_Up",
+    "Brow_Down",
+    "Smile",
+    "Frown",
+    "Mouth_Wide",
+    "Jaw_Open"
+  ],
+  "skeleton": "/Game/Staging/Film304Repaired_20261017/Dana/SK_Dana_Film304_v10e_Skeleton.SK_Dana_Film304_v10e_Skeleton",
+  "physics_asset_error": "SkeletalMeshComponent: Failed to find property 'physics_asset' for attribute 'physics_asset' on 'SkeletalMeshComponent'"
+}

@@ -1,0 +1,22 @@
+{
+  "source": "G:\\film-304-toon-spine\\Saved\\Exports\\DanaImportAudit\\Dana_Film_EyelashFiltered.fbx",
+  "source_sha256": "e76d806935730570e46cf3767dd553137ec1a6a4170d15c2534cc5ea028b4655",
+  "output": "G:\\film-304-toon-spine\\Saved\\Exports\\DanaImportAudit\\Dana_Film_EyelashPreview.fbx",
+  "output_sha256": "f41e29640c9b89005f55e9ec03deba8c875bbb0889eebb528707463d6bae380a",
+  "fbx_version": 7700,
+  "mesh_count": 16,
+  "triangles": 37918,
+  "model_count_before": 2464,
+  "model_count_after": 81,
+  "skin_count": 13,
+  "cluster_count": 66,
+  "deform_root": "Dana_Rig_v1_5:Group",
+  "removed_object_counts": {
+    "Geometry": 361,
+    "Model": 2383,
+    "Pose": 29,
+    "Deformer": 201
+  },
+  "body_skin_cluster_count": 0,
+  "qualification": "Preview deform export only. Body has no skin cluster in source FBX."
+}

@@ -1,0 +1,23 @@
+{
+  "result": "imported",
+  "source": "G:\\film-304-toon-spine\\Saved\\Exports\\DanaImportAudit\\Dana_Film_WeightedLashesVisible_v02.fbx",
+  "destination": "/Game/Preview/DanaLashesVisibleV02",
+  "imported_object_paths": [
+    "/Game/Preview/DanaLashesVisibleV02/Dana_WeightedLashesVisible_v02_Skeleton.Dana_WeightedLashesVisible_v02_Skeleton",
+    "/Game/Preview/DanaLashesVisibleV02/Dana_WeightedLashesVisible_v02.Dana_WeightedLashesVisible_v02"
+  ],
+  "assets": [
+    {
+      "path": "/Game/Preview/DanaLashesVisibleV02/Dana_WeightedLashesVisible_v02_Skeleton.Dana_WeightedLashesVisible_v02_Skeleton",
+      "class": "Skeleton",
+      "skeleton": null
+    },
+    {
+      "path": "/Game/Preview/DanaLashesVisibleV02/Dana_WeightedLashesVisible_v02.Dana_WeightedLashesVisible_v02",
+      "class": "SkeletalMesh",
+      "skeleton": "/Game/Preview/DanaLashesVisibleV02/Dana_WeightedLashesVisible_v02_Skeleton.Dana_WeightedLashesVisible_v02_Skeleton"
+    }
+  ],
+  "source_asset_replaced": false,
+  "qualification": "Import readback only; inspect skeletal mesh components and render before promotion."
+}

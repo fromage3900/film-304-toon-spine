@@ -24,7 +24,24 @@ Recommendation: choose one look per shot/sequence. Set non-active PPVs to BlendW
 ### Other lights
 - 7 point lights (ceiling cavities, desk lamps) — likely acceptable if intensities are modest.
 - 2 spot lights (hero fill, unnamed spot) — check for overlap with the key.
-- 1 exponential height fog — keep; toon tolerates fog if materials are authored for it.
+> **STALE — re-read live before acting.** Every number below was re-read from the live
+> editor on 2026-10-19 (`Python/audit_lighting_ppv_live.py`). Both recommendations in this
+> document had already been applied and the figures no longer match:
+> RimKicker 4.88 → **0.5**; EST_Fill 0 → **1.1**; SunBeam vol scatter 3 → **2.5**;
+> "5 PPVs all at weight 1.0" → **13 PPVs, all weight 0.0 or disabled**.
+> `competing_directional_keys: false` and `ppv_stack_is_single_writer: true` today.
+> See `GOAL_GODRAYS_AND_CINEMATIC_QUALITY_20261018.md`. Kept for history only.
+
+- 1 exponential height fog (`EST_Fog_E1`) — keep, but see the caveat below. Ownership is
+  now single-source: resolve and mutate it only through `Python/film304_fog.py`, and run
+  `Python/audit_fog_drift.py` before delivery renders.
+
+  Caveat, still unproven: "toon tolerates fog if materials are authored for it" is an
+  assumption, not a rendered result. `FILM_PIPELINE.md` states that post-process cel
+  shading and the outline pass fight fog, bloom and translucency, yet forward Mie
+  volumetric scattering at g=0.65 is enabled globally. The interior toon shots have never
+  been compared with volumetric Mie fog on versus distance fog only. That A/B is now the
+  open question for godray work — see `GOAL_GODRAYS_AND_CINEMATIC_QUALITY_20261018.md`.
 
 ## Recommended next actions
 

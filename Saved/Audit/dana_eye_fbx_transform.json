@@ -1,0 +1,120 @@
+{
+  "source": "C:\\Users\\froma\\Downloads\\C_DanaRenderTest_OSC.fbx",
+  "fbx_version": 7700,
+  "eye_bones": [
+    {
+      "name": "Dana_Rig_v1_5:Eye_R",
+      "kind": "LimbNode",
+      "parent": "",
+      "properties": {
+        "PreRotation": [
+          "-180.0",
+          "-89.99998998208738",
+          "0.0"
+        ],
+        "Lcl Translation": [
+          "-1.804308772087091",
+          "2.3173049277082356",
+          "3.0653160059685227"
+        ]
+      }
+    },
+    {
+      "name": "Dana_Rig_v1_5:Pupil_R",
+      "kind": "LimbNode",
+      "parent": "",
+      "properties": {
+        "Lcl Translation": [
+          "1.5234565734872472",
+          "5.684341886080801e-13",
+          "5.813304148505338e-06"
+        ]
+      }
+    },
+    {
+      "name": "Dana_Rig_v1_5:Iris_R",
+      "kind": "LimbNode",
+      "parent": "",
+      "properties": {
+        "Lcl Translation": [
+          "1.789261817932074",
+          "5.684341886080801e-13",
+          "2.2359731777221725e-07"
+        ]
+      }
+    },
+    {
+      "name": "Dana_Rig_v1_5:Eye_L",
+      "kind": "LimbNode",
+      "parent": "",
+      "properties": {
+        "PreRotation": [
+          "-180.0",
+          "-89.99998998208738",
+          "0.0"
+        ],
+        "Lcl Translation": [
+          "1.8043087720871043",
+          "2.3173049277082356",
+          "3.065316005968519"
+        ]
+      }
+    },
+    {
+      "name": "Dana_Rig_v1_5:Pupil_L",
+      "kind": "LimbNode",
+      "parent": "",
+      "properties": {
+        "Lcl Translation": [
+          "1.5234565734860606",
+          "5.684341886080801e-13",
+          "-9.816253567773714e-07"
+        ]
+      }
+    },
+    {
+      "name": "Dana_Rig_v1_5:Iris_L",
+      "kind": "LimbNode",
+      "parent": "",
+      "properties": {
+        "Lcl Translation": [
+          "1.7892618179318778",
+          "5.684341886080801e-13",
+          "-9.08890933848383e-07"
+        ]
+      }
+    }
+  ],
+  "eye_geometry": [
+    {
+      "model": "Dana_Rig_v1_5:Dana_Eye_Lf_GEO",
+      "has_vertex_color": false,
+      "color_data": null
+    },
+    {
+      "model": "Dana_Rig_v1_5:Dana_Cornea_Lf_GEO",
+      "has_vertex_color": false,
+      "color_data": null
+    },
+    {
+      "model": "Dana_Rig_v1_5:Dana_EyeInt_Lf_GEO",
+      "has_vertex_color": false,
+      "color_data": null
+    },
+    {
+      "model": "Dana_Rig_v1_5:Dana_Eye_Rt_GEO",
+      "has_vertex_color": false,
+      "color_data": null
+    },
+    {
+      "model": "Dana_Rig_v1_5:Dana_Cornea_Rt_GEO",
+      "has_vertex_color": false,
+      "color_data": null
+    },
+    {
+      "model": "Dana_Rig_v1_5:Dana_EyeInt_Rt_GEO",
+      "has_vertex_color": false,
+      "color_data": null
+    }
+  ]
+}

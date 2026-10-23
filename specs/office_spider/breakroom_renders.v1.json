@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0.0",
+  "purpose": "Stills of the break-room set for SH090 and SH100. The set was staged and verified numerically on 2026-10-16 but never seen; this spec drives the EXISTING harness (Python/render_prototypes.py) via its `spec` request override, so no second copy of the renderer exists.",
+
+  "render_tier": {
+    "name": "prototype",
+    "method": "unreal.AutomationLibrary.take_high_res_screenshot",
+    "method_note": "Same method and same reason as the prototype spec: MRQ derives its frame range from a LevelSequence's playback range, and a still must not mutate a shared sequence.",
+    "resolution": { "width": 1280, "height": 720 },
+    "filmback_mm": { "width": 35.0, "height": 19.6875 },
+    "filmback_note": "35 x 19.6875 is exactly 1.77778 (16:9). Not optional - take_high_res_screenshot constrains the capture to the CAMERA's filmback aspect. Python/build_breakroom_scene.py now writes this filmback onto each Cam_BR_* camera so the request actually comes back 1280x720 instead of 1012x720.",
+    "output_format": "png",
+    "bit_depth": 8,
+    "spatial_samples": 1,
+    "temporal_samples": 1,
+    "motion_blur": false,
+    "depth_of_field": false,
+    "lumen_gi": false,
+    "force_game_view": true,
+    "output_dir": "Saved/Renders/breakroom",
+    "output_note": "PNGs are local regenerable output and are NOT versioned (.gitignore excludes /Saved/* except Audit json|md|txt). The render report IS the evidence."
+  },
+
+  "level": {
+    "name": "L_Toon_Shot_BreakRoom",
+    "package": "/Game/Maps/L_Toon_Shot_BreakRoom",
+    "builder": "Python/build_breakroom_scene.py",
+    "stage_spec": "specs/office_spider/breakroom_stage.v1.json",
+    "lights": { "sun_intensity": 2.4, "sun_rotation": [-38, 24, 0], "sky": true, "atmosphere": true, "practicals": 3 },
+    "why_no_ground_plane": "The prototype spec drops a 200000uu Engine plane to catch the shadow terminator. This is an interior with its own floor mesh (BR_Shell), so an engine plane would poke through it."
+  },
+
+  "shots": [
+    {
+      "shot_id": "SH090",
+      "name": "break_room_establish",
+      "focal_length_mm": 18.0,
+      "camera_label": "Cam_BR_SH090",
+      "location_uu": [0, 24, 20],
+      "still_name": "BR_SH090_establish_v01",
+      "framing_intent": "Wide establishing down the room at the counter run. This still is the gate for the whole set: if the room does not read, nothing downstream is worth lighting.",
+      "judge": [
+        "does the counter run read as the back wall of the room",
+        "is the espresso machine inside the frame and not clipped",
+        "do the three practicals separate the counter band from the shelf wall",
+        "is anything poking through a wall"
+      ]
+    },
+    {
+      "shot_id": "SH100",
+      "name": "coffee_machine",
+      "focal_length_mm": 35.0,
+      "camera_label": "Cam_BR_SH100",
+      "location_uu": [-24, -6, 19],
+      "still_name": "BR_SH100_coffee_v01",
+      "framing_intent": "Three-quarter close on the espresso machine with the mug in the foreground. The subject of this shot is a prop, so the test is whether the prop reads against the wall behind it.",
+      "judge": [
+        "does the machine silhouette separate from the cabinets behind it",
+        "is the machine still seated on the counter (no float, no sink)",
+        "is the 15.6uu counter top visible under it"
+      ]
+    },
+    {
+      "shot_id": "SH110",
+      "name": "spider_reveal_room",
+      "focal_length_mm": 28.0,
+      "camera_label": "Cam_BR_SH110",
+      "location_uu": [34, 18, 26],
+      "still_name": "BR_SH110_reveal_room_v01",
+      "framing_intent": "The reveal framing with the room EMPTY. This is deliberately a room-only pass: Spider_Deform_v2 is imported and material-bound but never posed, and Docs/CAST_RIGS_2026-10-16.md says SH110 must not be lit or rendered until the creature is in it. It exists to check the framing, not the shot.",
+      "judge": [
+        "does the counter run lead the eye from the reveal position",
+        "is there depth for a creature to move in"
+      ],
+      "gate": "NOT the SH110 shot. Do not attach this still to the sequence."
+    }
+  ],
+
+  "known_limits_at_time_of_writing": [
+    "SH110 is staged but must not ship: the spider is unposed and its rig is bound, not animated.",
+    "The room carries no character. SH090/SH100 read as an empty set until a rig is placed in them.",
+    "Levels are built from the ZMJ break-room kit at its own authored scale (111.2 x 54.6 x 60uu). Props from the KS/SG/Osc/KMP kits are deliberately excluded for scale reasons - see breakroom_stage.v1.json 'unplaced'."
+  ]
+}

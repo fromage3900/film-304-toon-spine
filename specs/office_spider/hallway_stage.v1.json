@@ -1,0 +1,183 @@
+{
+  "schema": "humber-hallway-stage.v1",
+  "purpose": "Hallway connector set for Office Spider shots that track between the cubicle bay and the break room: Act I chair/stand/carry/walk (shots 5-6, SH050-SH080), Act II carry tracks (14, 18, 46), and the door beats (41, 47). Companion to specs/office_spider/stage_shots.v1.json (office) and breakroom_stage.v1.json (break room).",
+  "level": "/Game/Maps/L_Toon_Shot_Hallway",
+  "builder": "Python/build_hallway_scene.py",
+  "room_bounds": {
+    "x": [-300, 300],
+    "y": [-2000, 2000],
+    "z": [-30, 320]
+  },
+  "scale_note": "Office-scale units (100 uu = 1 m). Corridor is 6 m wide x 40 m long x 3.2 m high, sized for tracking shots and door framing. All scenery is primitive cubes plus the office material instances; no imported prop kit is required, so the set is reproducible on a clean checkout.",
+  "placements": [
+    {
+      "object": "Floor", "asset": "/Engine/BasicShapes/Cube",
+      "role": "hallway floor (VCT)",
+      "position_uu": [0, 0, -10], "scale_uu": [6, 40, 0.2],
+      "material": "/Game/Materials/Instances/MI_OfficeSpider_VCTFloor",
+      "ground_correction": "skip",
+      "note": "Thin slab, top face at z=0. 6 x 40 m."
+    },
+    {
+      "object": "CarpetRun", "asset": "/Engine/BasicShapes/Cube",
+      "role": "carpet runner down the centre",
+      "position_uu": [0, 0, 1], "scale_uu": [2.4, 38, 0.05],
+      "material": "/Game/Materials/Instances/MI_Toon_Office_Carpet",
+      "sits_on": "Floor",
+      "note": "Reads as a track lane for the carry shots; grout-free so the spider path reads on VCT at the edges."
+    },
+    {
+      "object": "WallLeft", "asset": "/Engine/BasicShapes/Cube",
+      "role": "left wall",
+      "position_uu": [-290, 0, 160], "scale_uu": [0.2, 40, 3.2],
+      "material": "/Game/Materials/Instances/MI_Toon_Environment",
+      "ground_correction": "auto"
+    },
+    {
+      "object": "WallRight", "asset": "/Engine/BasicShapes/Cube",
+      "role": "right wall",
+      "position_uu": [290, 0, 160], "scale_uu": [0.2, 40, 3.2],
+      "material": "/Game/Materials/Instances/MI_Toon_Environment",
+      "ground_correction": "auto"
+    },
+    {
+      "object": "Ceiling", "asset": "/Engine/BasicShapes/Cube",
+      "role": "drop ceiling (gall, not a lid)",
+      "position_uu": [0, 0, 320], "scale_uu": [6, 40, 0.6],
+      "material": "/Game/Materials/Instances/MI_Toon_Office_DropCeiling",
+      "ground_correction": "skip"
+    },
+    {
+      "object": "DoorOffice", "asset": "/Engine/BasicShapes/Cube",
+      "role": "office door (frosted glass insert)",
+      "position_uu": [0, -1980, 110], "scale_uu": [1.2, 0.1, 2.2],
+      "material": "/Game/Materials/Instances/MI_OfficeSpider_FrostedGlass",
+      "ground_correction": "auto",
+      "note": "Door at the -Y end (cubicle side). PowderCoat frame is implied by the wall material."
+    },
+    {
+      "object": "DoorBreakRoom", "asset": "/Engine/BasicShapes/Cube",
+      "role": "break-room door (frosted glass insert)",
+      "position_uu": [0, 1980, 110], "scale_uu": [1.2, 0.1, 2.2],
+      "material": "/Game/Materials/Instances/MI_OfficeSpider_FrostedGlass",
+      "ground_correction": "auto",
+      "note": "Door at the +Y end (break-room side)."
+    },
+    {
+      "object": "BaseboardLeft", "asset": "/Engine/BasicShapes/Cube",
+      "role": "left baseboard",
+      "position_uu": [-295, 0, 6], "scale_uu": [0.05, 40, 0.12],
+      "material": "/Game/Materials/Instances/MI_Toon_Office_PowderCoat",
+      "ground_correction": "auto"
+    },
+    {
+      "object": "BaseboardRight", "asset": "/Engine/BasicShapes/Cube",
+      "role": "right baseboard",
+      "position_uu": [295, 0, 6], "scale_uu": [0.05, 40, 0.12],
+      "material": "/Game/Materials/Instances/MI_Toon_Office_PowderCoat",
+      "ground_correction": "auto"
+    },
+    {
+      "object": "TrofferA", "asset": "/Engine/BasicShapes/Cube",
+      "role": "troffer emissive slab 1",
+      "position_uu": [-120, -600, 295], "scale_uu": [1.2, 0.6, 0.2],
+      "material": "/Game/Materials/Instances/MI_Toon_Office_Troffer",
+      "ground_correction": "skip"
+    },
+    {
+      "object": "TrofferB", "asset": "/Engine/BasicShapes/Cube",
+      "role": "troffer emissive slab 2",
+      "position_uu": [120, 600, 295], "scale_uu": [1.2, 0.6, 0.2],
+      "material": "/Game/Materials/Instances/MI_Toon_Office_Troffer",
+      "ground_correction": "skip"
+    },
+    {
+      "object": "WallSign", "asset": "/Engine/BasicShapes/Cube",
+      "role": "wall sign / whiteboard insert",
+      "position_uu": [-295, 0, 170], "scale_uu": [0.05, 2.0, 1.2],
+      "material": "/Game/Materials/Instances/MI_Toon_Office_Whiteboard",
+      "ground_correction": "auto"
+    }
+  ],
+  "shots": [
+    {
+      "shot_id": "SH050", "name": "stretch_break_medium",
+      "camera_label": "Cam_HW_SH050",
+      "focal_length_mm": 50.0,
+      "location_uu": [-180, -1200, 145], "target_uu": [0, -400, 110],
+      "still_name": "OS_SH050_proto_v01",
+      "framing_intent": "Board pg1 shot 6: worker stretches/leans back, head/shoulder height against the corridor wall."
+    },
+    {
+      "shot_id": "SH080", "name": "hallway_track_carry",
+      "camera_label": "Cam_HW_SH080",
+      "focal_length_mm": 35.0,
+      "location_uu": [-220, -800, 130], "target_uu": [0, 400, 100],
+      "still_name": "OS_SH080_proto_v01",
+      "framing_intent": "Shots 5-6: carry walk down the corridor, tracking behind the worker; VCT edges + carpet runner read as path."
+    },
+    {
+      "shot_id": "SH046", "name": "sad_turn_profile",
+      "camera_label": "Cam_HW_SH046",
+      "focal_length_mm": 85.0,
+      "location_uu": [-260, 200, 120], "target_uu": [0, 200, 110],
+      "still_name": "OS_SH046_proto_v01",
+      "framing_intent": "Shot 46: profile track, worker shirt rim against the corridor wall."
+    },
+    {
+      "shot_id": "SH041", "name": "door_coworker_medium",
+      "camera_label": "Cam_HW_SH041",
+      "focal_length_mm": 50.0,
+      "location_uu": [-200, 1700, 150], "target_uu": [0, 1980, 110],
+      "still_name": "OS_SH041_proto_v01",
+      "framing_intent": "Shot 41: door medium, frosted glass reads the coworker silhouette."
+    },
+    {
+      "shot_id": "SH047", "name": "door_slam_entry",
+      "camera_label": "Cam_HW_SH047",
+      "focal_length_mm": 28.0,
+      "location_uu": [0, 1500, 120], "target_uu": [0, 1980, 110],
+      "still_name": "OS_SH047_proto_v01",
+      "framing_intent": "Shot 47: door wide, SLAM entry; frosted glass shake is a camera impulse."
+    }
+  ],
+  "lighting": {
+    "sun_rotation": [-40.0, 20.0, 0.0],
+    "sun_intensity": 1.5,
+    "sun_height": 3000,
+    "sky": true,
+    "sky_height": 3200,
+    "atmosphere": true,
+    "fill_light": true,
+    "fill_intensity": 1.2,
+    "fill_rotation": [-20.0, -100.0, 0.0],
+    "lighting_note": "Corridor interior: sun through implied windows at the door ends, movable lights. Practicals are troffers."
+  },
+  "practicals": [
+    {
+      "label": "LGT_Hall_Counter", "location": [0.0, -600.0, 300.0],
+      "intensity": 160.0, "colour": [1.0, 0.94, 0.85],
+      "why": "overhead troffer band near the office end."
+    },
+    {
+      "label": "LGT_Hall_Counter2", "location": [0.0, 600.0, 300.0],
+      "intensity": 160.0, "colour": [1.0, 0.94, 0.85],
+      "why": "overhead troffer band near the break-room end."
+    },
+    {
+      "label": "LGT_Hall_Fill", "location": [0.0, 0.0, 180.0],
+      "intensity": 120.0, "colour": [1.0, 0.96, 0.9],
+      "why": "camera-side fill to lift the corridor mid-tones."
+    }
+  ],
+  "deferred": [
+    { "shot_id": "SH014", "reason": "carry + TINK uses the same corridor track; camera can reuse Cam_HW_SH080 with a mug prop (mug material gap)." },
+    { "shot_id": "SH018", "reason": "reverse track reuses Cam_HW_SH080 flipped; no new scenery." },
+    { "shot_id": "SH039", "reason": "under-desk hide is an office-set shot, not hallway; uses L_Toon_Shot_Office." },
+    { "shot_id": "SH064", "reason": "spray run uses kitchen/break-room set, not hallway." }
+  ],
+  "evidence_contract": {
+    "stills_note": "Each still committed via the shared harness (render_prototypes.py) with this spec's camera list. PNGs are evidence only through the report's measured IHDR dimensions.",
+    "shader_read_note": "Minimum passes: VCT grout on floor, carpet loop on runner, environment wall material, frosted glass door, troffer emissive."
+  }
+}

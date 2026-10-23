@@ -1,0 +1,1501 @@
+{
+  "asset_path": "/Game/Materials/Functions/Film304/MF_Film304_Impressionist_Impasto",
+  "description": "",
+  "user_exposed_caption": "",
+  "expose_to_library": false,
+  "type": "MaterialFunction",
+  "library_categories": [
+    "Misc"
+  ],
+  "inputs": [
+    {
+      "id": "MaterialExpressionFunctionInput_2",
+      "name": "StrokeMask",
+      "sort_priority": 0,
+      "description": "",
+      "use_preview_value_as_default": false,
+      "type": "Scalar",
+      "preview_value": [
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "blend_input_relevance": 0,
+      "pos": [
+        -900,
+        -100
+      ]
+    },
+    {
+      "id": "MaterialExpressionFunctionInput_1",
+      "name": "StrokeMask",
+      "sort_priority": 0,
+      "description": "",
+      "use_preview_value_as_default": false,
+      "type": "Scalar",
+      "preview_value": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "blend_input_relevance": 0,
+      "pos": [
+        -900,
+        -100
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "MaterialExpressionFunctionOutput_5",
+      "name": "Result",
+      "sort_priority": 0,
+      "description": "",
+      "pos": [
+        80,
+        40
+      ]
+    },
+    {
+      "id": "MaterialExpressionFunctionOutput_1",
+      "name": "Result",
+      "sort_priority": 0,
+      "description": "",
+      "pos": [
+        80,
+        40
+      ]
+    },
+    {
+      "id": "MaterialExpressionFunctionOutput_2",
+      "name": "Result",
+      "sort_priority": 0,
+      "description": "",
+      "pos": [
+        80,
+        40
+      ]
+    },
+    {
+      "id": "MaterialExpressionFunctionOutput_3",
+      "name": "Result",
+      "sort_priority": 0,
+      "description": "",
+      "pos": [
+        80,
+        40
+      ]
+    },
+    {
+      "id": "MaterialExpressionFunctionOutput_4",
+      "name": "Result",
+      "sort_priority": 0,
+      "description": "",
+      "pos": [
+        80,
+        40
+      ]
+    },
+    {
+      "id": "MaterialExpressionFunctionOutput_0",
+      "name": "ImpastoHeight",
+      "sort_priority": 0,
+      "description": "",
+      "pos": [
+        80,
+        40
+      ]
+    },
+    {
+      "id": "MaterialExpressionFunctionOutput_6",
+      "name": "Result",
+      "sort_priority": 0,
+      "description": "",
+      "pos": [
+        80,
+        40
+      ]
+    },
+    {
+      "id": "MaterialExpressionFunctionOutput_7",
+      "name": "Result",
+      "sort_priority": 0,
+      "description": "",
+      "pos": [
+        80,
+        40
+      ]
+    },
+    {
+      "id": "MaterialExpressionFunctionOutput_8",
+      "name": "Result",
+      "sort_priority": 0,
+      "description": "",
+      "pos": [
+        80,
+        40
+      ]
+    },
+    {
+      "id": "MaterialExpressionFunctionOutput_9",
+      "name": "Result",
+      "sort_priority": 0,
+      "description": "",
+      "pos": [
+        80,
+        40
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "MaterialExpressionScalarParameter_1",
+      "class": "ScalarParameter",
+      "pos": [
+        -600,
+        100
+      ],
+      "parameter_name": "ImpastoStrength",
+      "group": "Impasto",
+      "sort_priority": 32,
+      "props": {
+        "DefaultValue": "0.350000",
+        "ControlType": "Numeric",
+        "SliderMin": "0.000000",
+        "SliderMax": "0.000000",
+        "Enumeration": "None",
+        "EnumerationIndex": "0",
+        "bUseCustomPrimitiveData": "False",
+        "PrimitiveDataIndex": "0",
+        "ParameterName": "ImpastoStrength",
+        "ExpressionGUID": "3B62A86E43B0A53FECAC13AE1B61268B",
+        "Group": "Impasto",
+        "SortPriority": "32"
+      }
+    },
+    {
+      "id": "MaterialExpressionScalarParameter_2",
+      "class": "ScalarParameter",
+      "pos": [
+        -600,
+        200
+      ],
+      "parameter_name": "ImpastoHeight",
+      "group": "Impasto",
+      "sort_priority": 32,
+      "props": {
+        "DefaultValue": "0.025000",
+        "ControlType": "Numeric",
+        "SliderMin": "0.000000",
+        "SliderMax": "0.000000",
+        "Enumeration": "None",
+        "EnumerationIndex": "0",
+        "bUseCustomPrimitiveData": "False",
+        "PrimitiveDataIndex": "0",
+        "ParameterName": "ImpastoHeight",
+        "ExpressionGUID": "0388F9B848347D3BE477AD9123A8687E",
+        "Group": "Impasto",
+        "SortPriority": "32"
+      }
+    },
+    {
+      "id": "MaterialExpressionMultiply_0",
+      "class": "Multiply",
+      "pos": [
+        -320,
+        40
+      ],
+      "props": {
+        "A": "(Expression=\"/Script/Engine.MaterialExpressionFunctionInput'/Game/Materials/Functions/Film304/MF_Film304_Impressionist_Impasto.MF_Film304_Impressionist_Impasto:MaterialExpressionFunctionInput_2'\")",
+        "B": "(Expression=\"/Script/Engine.MaterialExpressionScalarParameter'/Game/Materials/Functions/Film304/MF_Film304_Impressionist_Impasto.MF_Film304_Impressionist_Impasto:MaterialExpressionScalarParameter_1'\")",
+        "ConstA": "0.000000",
+        "ConstB": "1.000000"
+      }
+    },
+    {
+      "id": "MaterialExpressionMultiply_1",
+      "class": "Multiply",
+      "pos": [
+        -120,
+        40
+      ],
+      "props": {
+        "A": "(Expression=\"/Script/Engine.MaterialExpressionMultiply'/Game/Materials/Functions/Film304/MF_Film304_Impressionist_Impasto.MF_Film304_Impressionist_Impasto:MaterialExpressionMultiply_0'\")",
+        "B": "(Expression=\"/Script/Engine.MaterialExpressionScalarParameter'/Game/Materials/Functions/Film304/MF_Film304_Impressionist_Impasto.MF_Film304_Impressionist_Impasto:MaterialExpressionScalarParameter_2'\")",
+        "ConstA": "0.000000",
+        "ConstB": "1.000000"
+      }
+    },
+    {
+      "id": "MaterialExpressionComment_2",
+      "class": "Comment",
+      "pos": [
+        -680,
+        -30
+      ],
+      "text": "✦ Impasto",
+      "props": {
+        "SizeX": "0",
+        "SizeY": "0",
+        "Text": "✦ Impasto",
+        "CommentColor": "(R=0.550000,G=0.450000,B=0.780000,A=1.000000)",
+        "FontSize": "18",
+        "bCommentBubbleVisible_InDetailsPanel": "False",
+        "bColorCommentBubble": "False",
+        "bGroupMode": "True"
+      }
+    },
+    {
+      "id": "MaterialExpressionComment_3",
+      "class": "Comment",
+      "pos": [
+        -980,
+        -230
+      ],
+      "text": "Impasto ~ thicc paint",
+      "props": {
+        "SizeX": "0",
+        "SizeY": "0",
+        "Text": "Impasto ~ thicc paint",
+        "CommentColor": "(R=0.550000,G=0.450000,B=0.780000,A=1.000000)",
+        "FontSize": "18",
+        "bCommentBubbleVisible_InDetailsPanel": "False",
+        "bColorCommentBubble": "False",
+        "bGroupMode": "True"
+      }
+    },
+    {
+      "id": "MaterialExpressionScalarParameter_0",
+      "class": "ScalarParameter",
+      "pos": [
+        -600,
+        0
+      ],
+      "parameter_name": "StrokeMask",
+      "group": "Impasto",
+      "sort_priority": 32,
+      "props": {
+        "DefaultValue": "0.500000",
+        "ControlType": "Numeric",
+        "SliderMin": "0.000000",
+        "SliderMax": "0.000000",
+        "Enumeration": "None",
+        "EnumerationIndex": "0",
+        "bUseCustomPrimitiveData": "False",
+        "PrimitiveDataIndex": "0",
+        "ParameterName": "StrokeMask",
+        "ExpressionGUID": "7E77F331470A519BC6C5989B581D1524",
+        "Group": "Impasto",
+        "SortPriority": "32"
+      }
+    },
+    {
+      "id": "MaterialExpressionScalarParameter_3",
+      "class": "ScalarParameter",
+      "pos": [
+        -600,
+        100
+      ],
+      "parameter_name": "ImpastoStrength",
+      "group": "Impasto",
+      "sort_priority": 32,
+      "props": {
+        "DefaultValue": "0.350000",
+        "ControlType": "Numeric",
+        "SliderMin": "0.000000",
+        "SliderMax": "0.000000",
+        "Enumeration": "None",
+        "EnumerationIndex": "0",
+        "bUseCustomPrimitiveData": "False",
+        "PrimitiveDataIndex": "0",
+        "ParameterName": "ImpastoStrength",
+        "ExpressionGUID": "85BEBDCD4A24C18AFD5ED185CC7429B3",
+        "Group": "Impasto",
+        "SortPriority": "32"
+      }
+    },
+    {
+      "id": "MaterialExpressionScalarParameter_4",
+      "class": "ScalarParameter",
+      "pos": [
+        -600,
+        200
+      ],
+      "parameter_name": "ImpastoHeight",
+      "group": "Impasto",
+      "sort_priority": 32,
+      "props": {
+        "DefaultValue": "0.025000",
+        "ControlType": "Numeric",
+        "SliderMin": "0.000000",
+        "SliderMax": "0.000000",
+        "Enumeration": "None",
+        "EnumerationIndex": "0",
+        "bUseCustomPrimitiveData": "False",
+        "PrimitiveDataIndex": "0",
+        "ParameterName": "ImpastoHeight",
+        "ExpressionGUID": "3502B3B1446F0238EB7960A5CF61A6C0",
+        "Group": "Impasto",
+        "SortPriority": "32"
+      }
+    },
+    {
+      "id": "MaterialExpressionMultiply_2",
+      "class": "Multiply",
+      "pos": [
+        -320,
+        40
+      ],
+      "props": {
+        "A": "(Expression=\"/Script/Engine.MaterialExpressionScalarParameter'/Game/Materials/Functions/Film304/MF_Film304_Impressionist_Impasto.MF_Film304_Impressionist_Impasto:MaterialExpressionScalarParameter_0'\")",
+        "B": "(Expression=\"/Script/Engine.MaterialExpressionScalarParameter'/Game/Materials/Functions/Film304/MF_Film304_Impressionist_Impasto.MF_Film304_Impressionist_Impasto:MaterialExpressionScalarParameter_3'\")",
+        "ConstA": "0.000000",
+        "ConstB": "1.000000"
+      }
+    },
+    {
+      "id": "MaterialExpressionMultiply_3",
+      "class": "Multiply",
+      "pos": [
+        -120,
+        40
+      ],
+      "props": {
+        "A": "(Expression=\"/Script/Engine.MaterialExpressionMultiply'/Game/Materials/Functions/Film304/MF_Film304_Impressionist_Impasto.MF_Film304_Impressionist_Impasto:MaterialExpressionMultiply_2'\")",
+        "B": "(Expression=\"/Script/Engine.MaterialExpressionScalarParameter'/Game/Materials/Functions/Film304/MF_Film304_Impressionist_Impasto.MF_Film304_Impressionist_Impasto:MaterialExpressionScalarParameter_4'\")",
+        "ConstA": "0.000000",
+        "ConstB": "1.000000"
+      }
+    },
+    {
+      "id": "MaterialExpressionScalarParameter_5",
+      "class": "ScalarParameter",
+      "pos": [
+        -600,
+        0
+      ],
+      "parameter_name": "StrokeMask",
+      "group": "Impasto",
+      "sort_priority": 32,
+      "props": {
+        "DefaultValue": "0.500000",
+        "ControlType": "Numeric",
+        "SliderMin": "0.000000",
+        "SliderMax": "0.000000",
+        "Enumeration": "None",
+        "EnumerationIndex": "0",
+        "bUseCustomPrimitiveData": "False",
+        "PrimitiveDataIndex": "0",
+        "ParameterName": "StrokeMask",
+        "ExpressionGUID": "1FE24E014CFF161C591D178580A3A658",
+        "Group": "Impasto",
+        "SortPriority": "32"
+      }
+    },
+    {
+      "id": "MaterialExpressionScalarParameter_6",
+      "class": "ScalarParameter",
+      "pos": [
+        -600,
+        100
+      ],
+      "parameter_name": "ImpastoStrength",
+      "group": "Impasto",
+      "sort_priority": 32,
+      "props": {
+        "DefaultValue": "0.350000",
+        "ControlType": "Numeric",
+        "SliderMin": "0.000000",
+        "SliderMax": "0.000000",
+        "Enumeration": "None",
+        "EnumerationIndex": "0",
+        "bUseCustomPrimitiveData": "False",
+        "PrimitiveDataIndex": "0",
+        "ParameterName": "ImpastoStrength",
+        "ExpressionGUID": "EEC57815459F526F4DBAA1A846C358DA",
+        "Group": "Impasto",
+        "SortPriority": "32"
+      }
+    },
+    {
+      "id": "MaterialExpressionScalarParameter_7",
+      "class": "ScalarParameter",
+      "pos": [
+        -600,
+        200
+      ],
+      "parameter_name": "ImpastoHeight",
+      "group": "Impasto",
+      "sort_priority": 32,
+      "props": {
+        "DefaultValue": "0.025000",
+        "ControlType": "Numeric",
+        "SliderMin": "0.000000",
+        "SliderMax": "0.000000",
+        "Enumeration": "None",
+        "EnumerationIndex": "0",
+        "bUseCustomPrimitiveData": "False",
+        "PrimitiveDataIndex": "0",
+        "ParameterName": "ImpastoHeight",
+        "ExpressionGUID": "DED16F5B4A53D1C38AEA0E9340C90844",
+        "Group": "Impasto",
+        "SortPriority": "32"
+      }
+    },
+    {
+      "id": "MaterialExpressionMultiply_4",
+      "class": "Multiply",
+      "pos": [
+        -320,
+        40
+      ],
+      "props": {
+        "A": "(Expression=\"/Script/Engine.MaterialExpressionScalarParameter'/Game/Materials/Functions/Film304/MF_Film304_Impressionist_Impasto.MF_Film304_Impressionist_Impasto:MaterialExpressionScalarParameter_5'\")",
+        "B": "(Expression=\"/Script/Engine.MaterialExpressionScalarParameter'/Game/Materials/Functions/Film304/MF_Film304_Impressionist_Impasto.MF_Film304_Impressionist_Impasto:MaterialExpressionScalarParameter_6'\")",
+        "ConstA": "0.000000",
+        "ConstB": "1.000000"
+      }
+    },
+    {
+      "id": "MaterialExpressionMultiply_5",
+      "class": "Multiply",
+      "pos": [
+        -120,
+        40
+      ],
+      "props": {
+        "A": "(Expression=\"/Script/Engine.MaterialExpressionMultiply'/Game/Materials/Functions/Film304/MF_Film304_Impressionist_Impasto.MF_Film304_Impressionist_Impasto:MaterialExpressionMultiply_4'\")",
+        "B": "(Expression=\"/Script/Engine.MaterialExpressionScalarParameter'/Game/Materials/Functions/Film304/MF_Film304_Impressionist_Impasto.MF_Film304_Impressionist_Impasto:MaterialExpressionScalarParameter_7'\")",
+        "ConstA": "0.000000",
+        "ConstB": "1.000000"
+      }
+    },
+    {
+      "id": "MaterialExpressionScalarParameter_8",
+      "class": "ScalarParameter",
+      "pos": [
+        -600,
+        0
+      ],
+      "parameter_name": "StrokeMask",
+      "group": "Impasto",
+      "sort_priority": 32,
+      "props": {
+        "DefaultValue": "0.500000",
+        "ControlType": "Numeric",
+        "SliderMin": "0.000000",
+        "SliderMax": "0.000000",
+        "Enumeration": "None",
+        "EnumerationIndex": "0",
+        "bUseCustomPrimitiveData": "False",
+        "PrimitiveDataIndex": "0",
+        "ParameterName": "StrokeMask",
+        "ExpressionGUID": "826966E941643E3D4B7735ADC263BECE",
+        "Group": "Impasto",
+        "SortPriority": "32"
+      }
+    },
+    {
+      "id": "MaterialExpressionScalarParameter_9",
+      "class": "ScalarParameter",
+      "pos": [
+        -600,
+        100
+      ],
+      "parameter_name": "ImpastoStrength",
+      "group": "Impasto",
+      "sort_priority": 32,
+      "props": {
+        "DefaultValue": "0.350000",
+        "ControlType": "Numeric",
+        "SliderMin": "0.000000",
+        "SliderMax": "0.000000",
+        "Enumeration": "None",
+        "EnumerationIndex": "0",
+        "bUseCustomPrimitiveData": "False",
+        "PrimitiveDataIndex": "0",
+        "ParameterName": "ImpastoStrength",
+        "ExpressionGUID": "AFE5007243BF9E5E8714ED85CE1F6DD1",
+        "Group": "Impasto",
+        "SortPriority": "32"
+      }
+    },
+    {
+      "id": "MaterialExpressionScalarParameter_10",
+      "class": "ScalarParameter",
+      "pos": [
+        -600,
+        200
+      ],
+      "parameter_name": "ImpastoHeight",
+      "group": "Impasto",
+      "sort_priority": 32,
+      "props": {
+        "DefaultValue": "0.025000",
+        "ControlType": "Numeric",
+        "SliderMin": "0.000000",
+        "SliderMax": "0.000000",
+        "Enumeration": "None",
+        "EnumerationIndex": "0",
+        "bUseCustomPrimitiveData": "False",
+        "PrimitiveDataIndex": "0",
+        "ParameterName": "ImpastoHeight",
+        "ExpressionGUID": "8697ED494CB2740339506BA28FD4DE68",
+        "Group": "Impasto",
+        "SortPriority": "32"
+      }
+    },
+    {
+      "id": "MaterialExpressionMultiply_6",
+      "class": "Multiply",
+      "pos": [
+        -320,
+        40
+      ],
+      "props": {
+        "A": "(Expression=\"/Script/Engine.MaterialExpressionScalarParameter'/Game/Materials/Functions/Film304/MF_Film304_Impressionist_Impasto.MF_Film304_Impressionist_Impasto:MaterialExpressionScalarParameter_8'\")",
+        "B": "(Expression=\"/Script/Engine.MaterialExpressionScalarParameter'/Game/Materials/Functions/Film304/MF_Film304_Impressionist_Impasto.MF_Film304_Impressionist_Impasto:MaterialExpressionScalarParameter_9'\")",
+        "ConstA": "0.000000",
+        "ConstB": "1.000000"
+      }
+    },
+    {
+      "id": "MaterialExpressionMultiply_7",
+      "class": "Multiply",
+      "pos": [
+        -120,
+        40
+      ],
+      "props": {
+        "A": "(Expression=\"/Script/Engine.MaterialExpressionMultiply'/Game/Materials/Functions/Film304/MF_Film304_Impressionist_Impasto.MF_Film304_Impressionist_Impasto:MaterialExpressionMultiply_6'\")",
+        "B": "(Expression=\"/Script/Engine.MaterialExpressionScalarParameter'/Game/Materials/Functions/Film304/MF_Film304_Impressionist_Impasto.MF_Film304_Impressionist_Impasto:MaterialExpressionScalarParameter_10'\")",
+        "ConstA": "0.000000",
+        "ConstB": "1.000000"
+      }
+    },
+    {
+      "id": "MaterialExpressionScalarParameter_11",
+      "class": "ScalarParameter",
+      "pos": [
+        -600,
+        0
+      ],
+      "parameter_name": "StrokeMask",
+      "group": "Impasto",
+      "sort_priority": 32,
+      "props": {
+        "DefaultValue": "0.500000",
+        "ControlType": "Numeric",
+        "SliderMin": "0.000000",
+        "SliderMax": "0.000000",
+        "Enumeration": "None",
+        "EnumerationIndex": "0",
+        "bUseCustomPrimitiveData": "False",
+        "PrimitiveDataIndex": "0",
+        "ParameterName": "StrokeMask",
+        "ExpressionGUID": "5C8C96FA4ADD598B73CA75AC304A311A",
+        "Group": "Impasto",
+        "SortPriority": "32"
+      }
+    },
+    {
+      "id": "MaterialExpressionScalarParameter_12",
+      "class": "ScalarParameter",
+      "pos": [
+        -600,
+        100
+      ],
+      "parameter_name": "ImpastoStrength",
+      "group": "Impasto",
+      "sort_priority": 32,
+      "props": {
+        "DefaultValue": "0.350000",
+        "ControlType": "Numeric",
+        "SliderMin": "0.000000",
+        "SliderMax": "0.000000",
+        "Enumeration": "None",
+        "EnumerationIndex": "0",
+        "bUseCustomPrimitiveData": "False",
+        "PrimitiveDataIndex": "0",
+        "ParameterName": "ImpastoStrength",
+        "ExpressionGUID": "D5103C354F5FDED3F0117BADECAD1833",
+        "Group": "Impasto",
+        "SortPriority": "32"
+      }
+    },
+    {
+      "id": "MaterialExpressionScalarParameter_13",
+      "class": "ScalarParameter",
+      "pos": [
+        -600,
+        200
+      ],
+      "parameter_name": "ImpastoHeight",
+      "group": "Impasto",
+      "sort_priority": 32,
+      "props": {
+        "DefaultValue": "0.025000",
+        "ControlType": "Numeric",
+        "SliderMin": "0.000000",
+        "SliderMax": "0.000000",
+        "Enumeration": "None",
+        "EnumerationIndex": "0",
+        "bUseCustomPrimitiveData": "False",
+        "PrimitiveDataIndex": "0",
+        "ParameterName": "ImpastoHeight",
+        "ExpressionGUID": "6545C61849D70B31F4F1AF81636F925E",
+        "Group": "Impasto",
+        "SortPriority": "32"
+      }
+    },
+    {
+      "id": "MaterialExpressionMultiply_8",
+      "class": "Multiply",
+      "pos": [
+        -320,
+        40
+      ],
+      "props": {
+        "A": "(Expression=\"/Script/Engine.MaterialExpressionScalarParameter'/Game/Materials/Functions/Film304/MF_Film304_Impressionist_Impasto.MF_Film304_Impressionist_Impasto:MaterialExpressionScalarParameter_11'\")",
+        "B": "(Expression=\"/Script/Engine.MaterialExpressionScalarParameter'/Game/Materials/Functions/Film304/MF_Film304_Impressionist_Impasto.MF_Film304_Impressionist_Impasto:MaterialExpressionScalarParameter_12'\")",
+        "ConstA": "0.000000",
+        "ConstB": "1.000000"
+      }
+    },
+    {
+      "id": "MaterialExpressionMultiply_9",
+      "class": "Multiply",
+      "pos": [
+        -120,
+        40
+      ],
+      "props": {
+        "A": "(Expression=\"/Script/Engine.MaterialExpressionMultiply'/Game/Materials/Functions/Film304/MF_Film304_Impressionist_Impasto.MF_Film304_Impressionist_Impasto:MaterialExpressionMultiply_8'\")",
+        "B": "(Expression=\"/Script/Engine.MaterialExpressionScalarParameter'/Game/Materials/Functions/Film304/MF_Film304_Impressionist_Impasto.MF_Film304_Impressionist_Impasto:MaterialExpressionScalarParameter_13'\")",
+        "ConstA": "0.000000",
+        "ConstB": "1.000000"
+      }
+    },
+    {
+      "id": "MaterialExpressionScalarParameter_14",
+      "class": "ScalarParameter",
+      "pos": [
+        -600,
+        0
+      ],
+      "parameter_name": "StrokeMask",
+      "group": "Impasto",
+      "sort_priority": 32,
+      "props": {
+        "DefaultValue": "0.500000",
+        "ControlType": "Numeric",
+        "SliderMin": "0.000000",
+        "SliderMax": "0.000000",
+        "Enumeration": "None",
+        "EnumerationIndex": "0",
+        "bUseCustomPrimitiveData": "False",
+        "PrimitiveDataIndex": "0",
+        "ParameterName": "StrokeMask",
+        "ExpressionGUID": "E00F54804F43BCAE2DDE4FB09ACF67FA",
+        "Group": "Impasto",
+        "SortPriority": "32"
+      }
+    },
+    {
+      "id": "MaterialExpressionScalarParameter_15",
+      "class": "ScalarParameter",
+      "pos": [
+        -600,
+        100
+      ],
+      "parameter_name": "ImpastoStrength",
+      "group": "Impasto",
+      "sort_priority": 32,
+      "props": {
+        "DefaultValue": "0.350000",
+        "ControlType": "Numeric",
+        "SliderMin": "0.000000",
+        "SliderMax": "0.000000",
+        "Enumeration": "None",
+        "EnumerationIndex": "0",
+        "bUseCustomPrimitiveData": "False",
+        "PrimitiveDataIndex": "0",
+        "ParameterName": "ImpastoStrength",
+        "ExpressionGUID": "36C737A647E2DB5E8C76E3A4BDA43893",
+        "Group": "Impasto",
+        "SortPriority": "32"
+      }
+    },
+    {
+      "id": "MaterialExpressionScalarParameter_16",
+      "class": "ScalarParameter",
+      "pos": [
+        -600,
+        200
+      ],
+      "parameter_name": "ImpastoHeight",
+      "group": "Impasto",
+      "sort_priority": 32,
+      "props": {
+        "DefaultValue": "0.025000",
+        "ControlType": "Numeric",
+        "SliderMin": "0.000000",
+        "SliderMax": "0.000000",
+        "Enumeration": "None",
+        "EnumerationIndex": "0",
+        "bUseCustomPrimitiveData": "False",
+        "PrimitiveDataIndex": "0",
+        "ParameterName": "ImpastoHeight",
+        "ExpressionGUID": "5572590E4D17A3D3FAE538AAA0EC9BA6",
+        "Group": "Impasto",
+        "SortPriority": "32"
+      }
+    },
+    {
+      "id": "MaterialExpressionMultiply_10",
+      "class": "Multiply",
+      "pos": [
+        -320,
+        40
+      ],
+      "props": {
+        "A": "(Expression=\"/Script/Engine.MaterialExpressionScalarParameter'/Game/Materials/Functions/Film304/MF_Film304_Impressionist_Impasto.MF_Film304_Impressionist_Impasto:MaterialExpressionScalarParameter_14'\")",
+        "B": "(Expression=\"/Script/Engine.MaterialExpressionScalarParameter'/Game/Materials/Functions/Film304/MF_Film304_Impressionist_Impasto.MF_Film304_Impressionist_Impasto:MaterialExpressionScalarParameter_15'\")",
+        "ConstA": "0.000000",
+        "ConstB": "1.000000"
+      }
+    },
+    {
+      "id": "MaterialExpressionMultiply_11",
+      "class": "Multiply",
+      "pos": [
+        -120,
+        40
+      ],
+      "props": {
+        "A": "(Expression=\"/Script/Engine.MaterialExpressionMultiply'/Game/Materials/Functions/Film304/MF_Film304_Impressionist_Impasto.MF_Film304_Impressionist_Impasto:MaterialExpressionMultiply_10'\")",
+        "B": "(Expression=\"/Script/Engine.MaterialExpressionScalarParameter'/Game/Materials/Functions/Film304/MF_Film304_Impressionist_Impasto.MF_Film304_Impressionist_Impasto:MaterialExpressionScalarParameter_16'\")",
+        "ConstA": "0.000000",
+        "ConstB": "1.000000"
+      }
+    },
+    {
+      "id": "MaterialExpressionScalarParameter_17",
+      "class": "ScalarParameter",
+      "pos": [
+        -600,
+        0
+      ],
+      "parameter_name": "StrokeMask",
+      "group": "Impasto",
+      "sort_priority": 32,
+      "props": {
+        "DefaultValue": "0.500000",
+        "ControlType": "Numeric",
+        "SliderMin": "0.000000",
+        "SliderMax": "0.000000",
+        "Enumeration": "None",
+        "EnumerationIndex": "0",
+        "bUseCustomPrimitiveData": "False",
+        "PrimitiveDataIndex": "0",
+        "ParameterName": "StrokeMask",
+        "ExpressionGUID": "B2E63C224E54100068003999DB4FBFA9",
+        "Group": "Impasto",
+        "SortPriority": "32"
+      }
+    },
+    {
+      "id": "MaterialExpressionScalarParameter_18",
+      "class": "ScalarParameter",
+      "pos": [
+        -600,
+        100
+      ],
+      "parameter_name": "ImpastoStrength",
+      "group": "Impasto",
+      "sort_priority": 32,
+      "props": {
+        "DefaultValue": "0.350000",
+        "ControlType": "Numeric",
+        "SliderMin": "0.000000",
+        "SliderMax": "0.000000",
+        "Enumeration": "None",
+        "EnumerationIndex": "0",
+        "bUseCustomPrimitiveData": "False",
+        "PrimitiveDataIndex": "0",
+        "ParameterName": "ImpastoStrength",
+        "ExpressionGUID": "446F696041BA72BB2E37E184587F9DEB",
+        "Group": "Impasto",
+        "SortPriority": "32"
+      }
+    },
+    {
+      "id": "MaterialExpressionScalarParameter_19",
+      "class": "ScalarParameter",
+      "pos": [
+        -600,
+        200
+      ],
+      "parameter_name": "ImpastoHeight",
+      "group": "Impasto",
+      "sort_priority": 32,
+      "props": {
+        "DefaultValue": "0.025000",
+        "ControlType": "Numeric",
+        "SliderMin": "0.000000",
+        "SliderMax": "0.000000",
+        "Enumeration": "None",
+        "EnumerationIndex": "0",
+        "bUseCustomPrimitiveData": "False",
+        "PrimitiveDataIndex": "0",
+        "ParameterName": "ImpastoHeight",
+        "ExpressionGUID": "8C47033F44FABBC55DD50BBBD9FD2F2B",
+        "Group": "Impasto",
+        "SortPriority": "32"
+      }
+    },
+    {
+      "id": "MaterialExpressionMultiply_12",
+      "class": "Multiply",
+      "pos": [
+        -320,
+        40
+      ],
+      "props": {
+        "A": "(Expression=\"/Script/Engine.MaterialExpressionScalarParameter'/Game/Materials/Functions/Film304/MF_Film304_Impressionist_Impasto.MF_Film304_Impressionist_Impasto:MaterialExpressionScalarParameter_17'\")",
+        "B": "(Expression=\"/Script/Engine.MaterialExpressionScalarParameter'/Game/Materials/Functions/Film304/MF_Film304_Impressionist_Impasto.MF_Film304_Impressionist_Impasto:MaterialExpressionScalarParameter_18'\")",
+        "ConstA": "0.000000",
+        "ConstB": "1.000000"
+      }
+    },
+    {
+      "id": "MaterialExpressionMultiply_13",
+      "class": "Multiply",
+      "pos": [
+        -120,
+        40
+      ],
+      "props": {
+        "A": "(Expression=\"/Script/Engine.MaterialExpressionMultiply'/Game/Materials/Functions/Film304/MF_Film304_Impressionist_Impasto.MF_Film304_Impressionist_Impasto:MaterialExpressionMultiply_12'\")",
+        "B": "(Expression=\"/Script/Engine.MaterialExpressionScalarParameter'/Game/Materials/Functions/Film304/MF_Film304_Impressionist_Impasto.MF_Film304_Impressionist_Impasto:MaterialExpressionScalarParameter_19'\")",
+        "ConstA": "0.000000",
+        "ConstB": "1.000000"
+      }
+    },
+    {
+      "id": "MaterialExpressionScalarParameter_20",
+      "class": "ScalarParameter",
+      "pos": [
+        -600,
+        0
+      ],
+      "parameter_name": "StrokeMask",
+      "group": "Impasto",
+      "sort_priority": 32,
+      "props": {
+        "DefaultValue": "0.500000",
+        "ControlType": "Numeric",
+        "SliderMin": "0.000000",
+        "SliderMax": "0.000000",
+        "Enumeration": "None",
+        "EnumerationIndex": "0",
+        "bUseCustomPrimitiveData": "False",
+        "PrimitiveDataIndex": "0",
+        "ParameterName": "StrokeMask",
+        "ExpressionGUID": "D97BCF6948B4900B05CA7EA1F8160DA1",
+        "Group": "Impasto",
+        "SortPriority": "32"
+      }
+    },
+    {
+      "id": "MaterialExpressionScalarParameter_21",
+      "class": "ScalarParameter",
+      "pos": [
+        -600,
+        100
+      ],
+      "parameter_name": "ImpastoStrength",
+      "group": "Impasto",
+      "sort_priority": 32,
+      "props": {
+        "DefaultValue": "0.350000",
+        "ControlType": "Numeric",
+        "SliderMin": "0.000000",
+        "SliderMax": "0.000000",
+        "Enumeration": "None",
+        "EnumerationIndex": "0",
+        "bUseCustomPrimitiveData": "False",
+        "PrimitiveDataIndex": "0",
+        "ParameterName": "ImpastoStrength",
+        "ExpressionGUID": "60A96FD5402C0561798A64933C698E8B",
+        "Group": "Impasto",
+        "SortPriority": "32"
+      }
+    },
+    {
+      "id": "MaterialExpressionScalarParameter_22",
+      "class": "ScalarParameter",
+      "pos": [
+        -600,
+        200
+      ],
+      "parameter_name": "ImpastoHeight",
+      "group": "Impasto",
+      "sort_priority": 32,
+      "props": {
+        "DefaultValue": "0.025000",
+        "ControlType": "Numeric",
+        "SliderMin": "0.000000",
+        "SliderMax": "0.000000",
+        "Enumeration": "None",
+        "EnumerationIndex": "0",
+        "bUseCustomPrimitiveData": "False",
+        "PrimitiveDataIndex": "0",
+        "ParameterName": "ImpastoHeight",
+        "ExpressionGUID": "2ACB33BF49AE83B60373859FC3D41CC6",
+        "Group": "Impasto",
+        "SortPriority": "32"
+      }
+    },
+    {
+      "id": "MaterialExpressionMultiply_14",
+      "class": "Multiply",
+      "pos": [
+        -320,
+        40
+      ],
+      "props": {
+        "A": "(Expression=\"/Script/Engine.MaterialExpressionScalarParameter'/Game/Materials/Functions/Film304/MF_Film304_Impressionist_Impasto.MF_Film304_Impressionist_Impasto:MaterialExpressionScalarParameter_20'\")",
+        "B": "(Expression=\"/Script/Engine.MaterialExpressionScalarParameter'/Game/Materials/Functions/Film304/MF_Film304_Impressionist_Impasto.MF_Film304_Impressionist_Impasto:MaterialExpressionScalarParameter_21'\")",
+        "ConstA": "0.000000",
+        "ConstB": "1.000000"
+      }
+    },
+    {
+      "id": "MaterialExpressionMultiply_15",
+      "class": "Multiply",
+      "pos": [
+        -120,
+        40
+      ],
+      "props": {
+        "A": "(Expression=\"/Script/Engine.MaterialExpressionMultiply'/Game/Materials/Functions/Film304/MF_Film304_Impressionist_Impasto.MF_Film304_Impressionist_Impasto:MaterialExpressionMultiply_14'\")",
+        "B": "(Expression=\"/Script/Engine.MaterialExpressionScalarParameter'/Game/Materials/Functions/Film304/MF_Film304_Impressionist_Impasto.MF_Film304_Impressionist_Impasto:MaterialExpressionScalarParameter_22'\")",
+        "ConstA": "0.000000",
+        "ConstB": "1.000000"
+      }
+    },
+    {
+      "id": "MaterialExpressionScalarParameter_23",
+      "class": "ScalarParameter",
+      "pos": [
+        -600,
+        0
+      ],
+      "parameter_name": "StrokeMask",
+      "group": "Impasto",
+      "sort_priority": 32,
+      "props": {
+        "DefaultValue": "0.500000",
+        "ControlType": "Numeric",
+        "SliderMin": "0.000000",
+        "SliderMax": "0.000000",
+        "Enumeration": "None",
+        "EnumerationIndex": "0",
+        "bUseCustomPrimitiveData": "False",
+        "PrimitiveDataIndex": "0",
+        "ParameterName": "StrokeMask",
+        "ExpressionGUID": "44055A504C572B77091FC297574E2D12",
+        "Group": "Impasto",
+        "SortPriority": "32"
+      }
+    },
+    {
+      "id": "MaterialExpressionScalarParameter_24",
+      "class": "ScalarParameter",
+      "pos": [
+        -600,
+        100
+      ],
+      "parameter_name": "ImpastoStrength",
+      "group": "Impasto",
+      "sort_priority": 32,
+      "props": {
+        "DefaultValue": "0.350000",
+        "ControlType": "Numeric",
+        "SliderMin": "0.000000",
+        "SliderMax": "0.000000",
+        "Enumeration": "None",
+        "EnumerationIndex": "0",
+        "bUseCustomPrimitiveData": "False",
+        "PrimitiveDataIndex": "0",
+        "ParameterName": "ImpastoStrength",
+        "ExpressionGUID": "E581D2EC4658D019C1B65F9FD0F73B73",
+        "Group": "Impasto",
+        "SortPriority": "32"
+      }
+    },
+    {
+      "id": "MaterialExpressionScalarParameter_25",
+      "class": "ScalarParameter",
+      "pos": [
+        -600,
+        200
+      ],
+      "parameter_name": "ImpastoHeight",
+      "group": "Impasto",
+      "sort_priority": 32,
+      "props": {
+        "DefaultValue": "0.025000",
+        "ControlType": "Numeric",
+        "SliderMin": "0.000000",
+        "SliderMax": "0.000000",
+        "Enumeration": "None",
+        "EnumerationIndex": "0",
+        "bUseCustomPrimitiveData": "False",
+        "PrimitiveDataIndex": "0",
+        "ParameterName": "ImpastoHeight",
+        "ExpressionGUID": "67373E154551D57614004ABB001D8D6C",
+        "Group": "Impasto",
+        "SortPriority": "32"
+      }
+    },
+    {
+      "id": "MaterialExpressionMultiply_16",
+      "class": "Multiply",
+      "pos": [
+        -320,
+        40
+      ],
+      "props": {
+        "A": "(Expression=\"/Script/Engine.MaterialExpressionScalarParameter'/Game/Materials/Functions/Film304/MF_Film304_Impressionist_Impasto.MF_Film304_Impressionist_Impasto:MaterialExpressionScalarParameter_23'\")",
+        "B": "(Expression=\"/Script/Engine.MaterialExpressionScalarParameter'/Game/Materials/Functions/Film304/MF_Film304_Impressionist_Impasto.MF_Film304_Impressionist_Impasto:MaterialExpressionScalarParameter_24'\")",
+        "ConstA": "0.000000",
+        "ConstB": "1.000000"
+      }
+    },
+    {
+      "id": "MaterialExpressionMultiply_17",
+      "class": "Multiply",
+      "pos": [
+        -120,
+        40
+      ],
+      "props": {
+        "A": "(Expression=\"/Script/Engine.MaterialExpressionMultiply'/Game/Materials/Functions/Film304/MF_Film304_Impressionist_Impasto.MF_Film304_Impressionist_Impasto:MaterialExpressionMultiply_16'\")",
+        "B": "(Expression=\"/Script/Engine.MaterialExpressionScalarParameter'/Game/Materials/Functions/Film304/MF_Film304_Impressionist_Impasto.MF_Film304_Impressionist_Impasto:MaterialExpressionScalarParameter_25'\")",
+        "ConstA": "0.000000",
+        "ConstB": "1.000000"
+      }
+    },
+    {
+      "id": "MaterialExpressionScalarParameter_26",
+      "class": "ScalarParameter",
+      "pos": [
+        -600,
+        0
+      ],
+      "parameter_name": "StrokeMask",
+      "group": "Impasto",
+      "sort_priority": 32,
+      "props": {
+        "DefaultValue": "0.500000",
+        "ControlType": "Numeric",
+        "SliderMin": "0.000000",
+        "SliderMax": "0.000000",
+        "Enumeration": "None",
+        "EnumerationIndex": "0",
+        "bUseCustomPrimitiveData": "False",
+        "PrimitiveDataIndex": "0",
+        "ParameterName": "StrokeMask",
+        "ExpressionGUID": "4E251A9C4797048697AD3D8B4AC59379",
+        "Group": "Impasto",
+        "SortPriority": "32"
+      }
+    },
+    {
+      "id": "MaterialExpressionScalarParameter_27",
+      "class": "ScalarParameter",
+      "pos": [
+        -600,
+        100
+      ],
+      "parameter_name": "ImpastoStrength",
+      "group": "Impasto",
+      "sort_priority": 32,
+      "props": {
+        "DefaultValue": "0.350000",
+        "ControlType": "Numeric",
+        "SliderMin": "0.000000",
+        "SliderMax": "0.000000",
+        "Enumeration": "None",
+        "EnumerationIndex": "0",
+        "bUseCustomPrimitiveData": "False",
+        "PrimitiveDataIndex": "0",
+        "ParameterName": "ImpastoStrength",
+        "ExpressionGUID": "2457711C41215CA9EE487EBB5F9F76BF",
+        "Group": "Impasto",
+        "SortPriority": "32"
+      }
+    },
+    {
+      "id": "MaterialExpressionScalarParameter_28",
+      "class": "ScalarParameter",
+      "pos": [
+        -600,
+        200
+      ],
+      "parameter_name": "ImpastoHeight",
+      "group": "Impasto",
+      "sort_priority": 32,
+      "props": {
+        "DefaultValue": "0.025000",
+        "ControlType": "Numeric",
+        "SliderMin": "0.000000",
+        "SliderMax": "0.000000",
+        "Enumeration": "None",
+        "EnumerationIndex": "0",
+        "bUseCustomPrimitiveData": "False",
+        "PrimitiveDataIndex": "0",
+        "ParameterName": "ImpastoHeight",
+        "ExpressionGUID": "51A764E04756C133C4BC338AA5179710",
+        "Group": "Impasto",
+        "SortPriority": "32"
+      }
+    },
+    {
+      "id": "MaterialExpressionMultiply_18",
+      "class": "Multiply",
+      "pos": [
+        -320,
+        40
+      ],
+      "props": {
+        "A": "(Expression=\"/Script/Engine.MaterialExpressionScalarParameter'/Game/Materials/Functions/Film304/MF_Film304_Impressionist_Impasto.MF_Film304_Impressionist_Impasto:MaterialExpressionScalarParameter_26'\")",
+        "B": "(Expression=\"/Script/Engine.MaterialExpressionScalarParameter'/Game/Materials/Functions/Film304/MF_Film304_Impressionist_Impasto.MF_Film304_Impressionist_Impasto:MaterialExpressionScalarParameter_27'\")",
+        "ConstA": "0.000000",
+        "ConstB": "1.000000"
+      }
+    },
+    {
+      "id": "MaterialExpressionMultiply_19",
+      "class": "Multiply",
+      "pos": [
+        -120,
+        40
+      ],
+      "props": {
+        "A": "(Expression=\"/Script/Engine.MaterialExpressionMultiply'/Game/Materials/Functions/Film304/MF_Film304_Impressionist_Impasto.MF_Film304_Impressionist_Impasto:MaterialExpressionMultiply_18'\")",
+        "B": "(Expression=\"/Script/Engine.MaterialExpressionScalarParameter'/Game/Materials/Functions/Film304/MF_Film304_Impressionist_Impasto.MF_Film304_Impressionist_Impasto:MaterialExpressionScalarParameter_28'\")",
+        "ConstA": "0.000000",
+        "ConstB": "1.000000"
+      }
+    }
+  ],
+  "custom_hlsl_nodes": [],
+  "connections": [
+    {
+      "from": "MaterialExpressionFunctionInput_2",
+      "from_pin": "None",
+      "to": "MaterialExpressionMultiply_0",
+      "to_pin": "A"
+    },
+    {
+      "from": "MaterialExpressionScalarParameter_1",
+      "from_pin": "None",
+      "to": "MaterialExpressionMultiply_0",
+      "to_pin": "B"
+    },
+    {
+      "from": "MaterialExpressionMultiply_0",
+      "from_pin": "None",
+      "to": "MaterialExpressionMultiply_1",
+      "to_pin": "A"
+    },
+    {
+      "from": "MaterialExpressionScalarParameter_2",
+      "from_pin": "None",
+      "to": "MaterialExpressionMultiply_1",
+      "to_pin": "B"
+    },
+    {
+      "from": "MaterialExpressionMultiply_1",
+      "from_pin": "None",
+      "to": "MaterialExpressionFunctionOutput_0",
+      "to_pin": "None"
+    },
+    {
+      "from": "MaterialExpressionScalarParameter_0",
+      "from_pin": "None",
+      "to": "MaterialExpressionMultiply_2",
+      "to_pin": "A"
+    },
+    {
+      "from": "MaterialExpressionScalarParameter_3",
+      "from_pin": "None",
+      "to": "MaterialExpressionMultiply_2",
+      "to_pin": "B"
+    },
+    {
+      "from": "MaterialExpressionMultiply_2",
+      "from_pin": "None",
+      "to": "MaterialExpressionMultiply_3",
+      "to_pin": "A"
+    },
+    {
+      "from": "MaterialExpressionScalarParameter_4",
+      "from_pin": "None",
+      "to": "MaterialExpressionMultiply_3",
+      "to_pin": "B"
+    },
+    {
+      "from": "MaterialExpressionMultiply_3",
+      "from_pin": "None",
+      "to": "MaterialExpressionFunctionOutput_1",
+      "to_pin": "None"
+    },
+    {
+      "from": "MaterialExpressionScalarParameter_5",
+      "from_pin": "None",
+      "to": "MaterialExpressionMultiply_4",
+      "to_pin": "A"
+    },
+    {
+      "from": "MaterialExpressionScalarParameter_6",
+      "from_pin": "None",
+      "to": "MaterialExpressionMultiply_4",
+      "to_pin": "B"
+    },
+    {
+      "from": "MaterialExpressionMultiply_4",
+      "from_pin": "None",
+      "to": "MaterialExpressionMultiply_5",
+      "to_pin": "A"
+    },
+    {
+      "from": "MaterialExpressionScalarParameter_7",
+      "from_pin": "None",
+      "to": "MaterialExpressionMultiply_5",
+      "to_pin": "B"
+    },
+    {
+      "from": "MaterialExpressionMultiply_5",
+      "from_pin": "None",
+      "to": "MaterialExpressionFunctionOutput_2",
+      "to_pin": "None"
+    },
+    {
+      "from": "MaterialExpressionScalarParameter_8",
+      "from_pin": "None",
+      "to": "MaterialExpressionMultiply_6",
+      "to_pin": "A"
+    },
+    {
+      "from": "MaterialExpressionScalarParameter_9",
+      "from_pin": "None",
+      "to": "MaterialExpressionMultiply_6",
+      "to_pin": "B"
+    },
+    {
+      "from": "MaterialExpressionMultiply_6",
+      "from_pin": "None",
+      "to": "MaterialExpressionMultiply_7",
+      "to_pin": "A"
+    },
+    {
+      "from": "MaterialExpressionScalarParameter_10",
+      "from_pin": "None",
+      "to": "MaterialExpressionMultiply_7",
+      "to_pin": "B"
+    },
+    {
+      "from": "MaterialExpressionMultiply_7",
+      "from_pin": "None",
+      "to": "MaterialExpressionFunctionOutput_3",
+      "to_pin": "None"
+    },
+    {
+      "from": "MaterialExpressionScalarParameter_11",
+      "from_pin": "None",
+      "to": "MaterialExpressionMultiply_8",
+      "to_pin": "A"
+    },
+    {
+      "from": "MaterialExpressionScalarParameter_12",
+      "from_pin": "None",
+      "to": "MaterialExpressionMultiply_8",
+      "to_pin": "B"
+    },
+    {
+      "from": "MaterialExpressionMultiply_8",
+      "from_pin": "None",
+      "to": "MaterialExpressionMultiply_9",
+      "to_pin": "A"
+    },
+    {
+      "from": "MaterialExpressionScalarParameter_13",
+      "from_pin": "None",
+      "to": "MaterialExpressionMultiply_9",
+      "to_pin": "B"
+    },
+    {
+      "from": "MaterialExpressionMultiply_9",
+      "from_pin": "None",
+      "to": "MaterialExpressionFunctionOutput_4",
+      "to_pin": "None"
+    },
+    {
+      "from": "MaterialExpressionScalarParameter_14",
+      "from_pin": "None",
+      "to": "MaterialExpressionMultiply_10",
+      "to_pin": "A"
+    },
+    {
+      "from": "MaterialExpressionScalarParameter_15",
+      "from_pin": "None",
+      "to": "MaterialExpressionMultiply_10",
+      "to_pin": "B"
+    },
+    {
+      "from": "MaterialExpressionMultiply_10",
+      "from_pin": "None",
+      "to": "MaterialExpressionMultiply_11",
+      "to_pin": "A"
+    },
+    {
+      "from": "MaterialExpressionScalarParameter_16",
+      "from_pin": "None",
+      "to": "MaterialExpressionMultiply_11",
+      "to_pin": "B"
+    },
+    {
+      "from": "MaterialExpressionMultiply_11",
+      "from_pin": "None",
+      "to": "MaterialExpressionFunctionOutput_5",
+      "to_pin": "None"
+    },
+    {
+      "from": "MaterialExpressionScalarParameter_17",
+      "from_pin": "None",
+      "to": "MaterialExpressionMultiply_12",
+      "to_pin": "A"
+    },
+    {
+      "from": "MaterialExpressionScalarParameter_18",
+      "from_pin": "None",
+      "to": "MaterialExpressionMultiply_12",
+      "to_pin": "B"
+    },
+    {
+      "from": "MaterialExpressionMultiply_12",
+      "from_pin": "None",
+      "to": "MaterialExpressionMultiply_13",
+      "to_pin": "A"
+    },
+    {
+      "from": "MaterialExpressionScalarParameter_19",
+      "from_pin": "None",
+      "to": "MaterialExpressionMultiply_13",
+      "to_pin": "B"
+    },
+    {
+      "from": "MaterialExpressionMultiply_13",
+      "from_pin": "None",
+      "to": "MaterialExpressionFunctionOutput_6",
+      "to_pin": "None"
+    },
+    {
+      "from": "MaterialExpressionScalarParameter_20",
+      "from_pin": "None",
+      "to": "MaterialExpressionMultiply_14",
+      "to_pin": "A"
+    },
+    {
+      "from": "MaterialExpressionScalarParameter_21",
+      "from_pin": "None",
+      "to": "MaterialExpressionMultiply_14",
+      "to_pin": "B"
+    },
+    {
+      "from": "MaterialExpressionMultiply_14",
+      "from_pin": "None",
+      "to": "MaterialExpressionMultiply_15",
+      "to_pin": "A"
+    },
+    {
+      "from": "MaterialExpressionScalarParameter_22",
+      "from_pin": "None",
+      "to": "MaterialExpressionMultiply_15",
+      "to_pin": "B"
+    },
+    {
+      "from": "MaterialExpressionMultiply_15",
+      "from_pin": "None",
+      "to": "MaterialExpressionFunctionOutput_7",
+      "to_pin": "None"
+    },
+    {
+      "from": "MaterialExpressionScalarParameter_23",
+      "from_pin": "None",
+      "to": "MaterialExpressionMultiply_16",
+      "to_pin": "A"
+    },
+    {
+      "from": "MaterialExpressionScalarParameter_24",
+      "from_pin": "None",
+      "to": "MaterialExpressionMultiply_16",
+      "to_pin": "B"
+    },
+    {
+      "from": "MaterialExpressionMultiply_16",
+      "from_pin": "None",
+      "to": "MaterialExpressionMultiply_17",
+      "to_pin": "A"
+    },
+    {
+      "from": "MaterialExpressionScalarParameter_25",
+      "from_pin": "None",
+      "to": "MaterialExpressionMultiply_17",
+      "to_pin": "B"
+    },
+    {
+      "from": "MaterialExpressionMultiply_17",
+      "from_pin": "None",
+      "to": "MaterialExpressionFunctionOutput_8",
+      "to_pin": "None"
+    },
+    {
+      "from": "MaterialExpressionScalarParameter_26",
+      "from_pin": "None",
+      "to": "MaterialExpressionMultiply_18",
+      "to_pin": "A"
+    },
+    {
+      "from": "MaterialExpressionScalarParameter_27",
+      "from_pin": "None",
+      "to": "MaterialExpressionMultiply_18",
+      "to_pin": "B"
+    },
+    {
+      "from": "MaterialExpressionMultiply_18",
+      "from_pin": "None",
+      "to": "MaterialExpressionMultiply_19",
+      "to_pin": "A"
+    },
+    {
+      "from": "MaterialExpressionScalarParameter_28",
+      "from_pin": "None",
+      "to": "MaterialExpressionMultiply_19",
+      "to_pin": "B"
+    },
+    {
+      "from": "MaterialExpressionMultiply_19",
+      "from_pin": "None",
+      "to": "MaterialExpressionFunctionOutput_9",
+      "to_pin": "None"
+    }
+  ],
+  "expression_count": 63
+}

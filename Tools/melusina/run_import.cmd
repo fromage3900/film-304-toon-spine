@@ -1,0 +1,2 @@
+@echo off
+"C:\Program Files\Autodesk\Maya2027\bin\mayapy.exe" "G:\film-304-toon-spine\Tools\melusina\import_arp.py" > "G:\film-304-toon-spine\Saved\OfflineIntake\20261017\melusina_assignment1\log\import_arp.log" 2> "G:\film-304-toon-spine\Saved\OfflineIntake\20261017\melusina_assignment1\log\import_arp.err"

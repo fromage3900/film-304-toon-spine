@@ -1,0 +1,115 @@
+{
+  "result": "built",
+  "map": "/Game/Maps/Lookdev/L_Dana_LashVisibility_Compare",
+  "variants": [
+    {
+      "variant": "Canonical",
+      "mesh": "/Game/Meshes/Office/Props/C_DanaRenderTest_OSC.C_DanaRenderTest_OSC",
+      "materials": [
+        {
+          "slot": "danaHair_mat",
+          "material": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Hair.MI_DanaFilm_Hair"
+        },
+        {
+          "slot": "danaIris_mat",
+          "material": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Iris.MI_DanaFilm_Iris"
+        },
+        {
+          "slot": "danaEye_mat",
+          "material": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_EyeWhite.MI_DanaFilm_EyeWhite"
+        },
+        {
+          "slot": "danaCornea_mat",
+          "material": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Cornea.MI_DanaFilm_Cornea"
+        },
+        {
+          "slot": "danaEyeInt_mat",
+          "material": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_EyeInterior.MI_DanaFilm_EyeInterior"
+        },
+        {
+          "slot": "danaShoes_mat",
+          "material": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Shoes.MI_DanaFilm_Shoes"
+        },
+        {
+          "slot": "danaPantsButton_mat",
+          "material": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Button.MI_DanaFilm_Button"
+        },
+        {
+          "slot": "danaPants_mat",
+          "material": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Skirt.MI_DanaFilm_Skirt"
+        },
+        {
+          "slot": "danaShirt_mat",
+          "material": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Shirt.MI_DanaFilm_Shirt"
+        },
+        {
+          "slot": "danaSkin_mat",
+          "material": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Skin.MI_DanaFilm_Skin"
+        },
+        {
+          "slot": "openPBR_shader1",
+          "material": "/Game/Materials/Masters/DanaFilm/M_DanaFilm_ImportHelpers_Hidden.M_DanaFilm_ImportHelpers_Hidden"
+        }
+      ]
+    },
+    {
+      "variant": "VisibleLashes",
+      "mesh": "/Game/Preview/DanaLashesVisibleV02/Dana_WeightedLashesVisible_v02.Dana_WeightedLashesVisible_v02",
+      "materials": [
+        {
+          "slot": "danaHair_mat",
+          "material": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Hair.MI_DanaFilm_Hair"
+        },
+        {
+          "slot": "danaIris_mat",
+          "material": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Iris.MI_DanaFilm_Iris"
+        },
+        {
+          "slot": "danaEye_mat",
+          "material": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_EyeWhite.MI_DanaFilm_EyeWhite"
+        },
+        {
+          "slot": "danaCornea_mat",
+          "material": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Cornea.MI_DanaFilm_Cornea"
+        },
+        {
+          "slot": "danaEyeInt_mat",
+          "material": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_EyeInterior.MI_DanaFilm_EyeInterior"
+        },
+        {
+          "slot": "danaShoes_mat",
+          "material": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Shoes.MI_DanaFilm_Shoes"
+        },
+        {
+          "slot": "danaPantsButton_mat",
+          "material": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Button.MI_DanaFilm_Button"
+        },
+        {
+          "slot": "danaPants_mat",
+          "material": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Skirt.MI_DanaFilm_Skirt"
+        },
+        {
+          "slot": "danaShirt_mat",
+          "material": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Shirt.MI_DanaFilm_Shirt"
+        },
+        {
+          "slot": "danaSkin_mat",
+          "material": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Skin.MI_DanaFilm_Skin"
+        },
+        {
+          "slot": "openPBR_shader1",
+          "material": "/Game/Materials/Masters/DanaFilm/M_DanaFilm_ImportHelpers_Hidden.M_DanaFilm_ImportHelpers_Hidden"
+        }
+      ]
+    }
+  ],
+  "lights": [
+    "Key",
+    "Fill",
+    "Rim"
+  ],
+  "camera": "/Game/Maps/Lookdev/L_Dana_LashVisibility_Compare.L_Dana_LashVisibility_Compare:PersistentLevel.CineCameraActor_1",
+  "sequence": "/Game/Sequences/DanaLashCompare/LS_DANA_LASH_VISIBILITY_COMPARE_v01.LS_DANA_LASH_VISIBILITY_COMPARE_v01",
+  "config": "/Game/MoviePipelines/DanaLashCompare/CFG_DANA_LASH_VISIBILITY_COMPARE_v01.CFG_DANA_LASH_VISIBILITY_COMPARE_v01",
+  "note": "side-by-side static source-pose comparison; imported preview skeleton is separate."
+}

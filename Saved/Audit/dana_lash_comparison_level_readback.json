@@ -1,0 +1,193 @@
+{
+  "result": "pass",
+  "map": "/Game/Maps/Lookdev/L_Dana_LashVisibility_Compare",
+  "actors": [
+    {
+      "label": "DANA_LASHCMP_Canonical",
+      "class": "SkeletalMeshActor",
+      "location": [
+        0.0,
+        -85.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        -115.0,
+        0.0
+      ],
+      "hidden_in_game": false,
+      "actor_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "mesh": "/Game/Meshes/Office/Props/C_DanaRenderTest_OSC.C_DanaRenderTest_OSC",
+      "bounds_origin": [
+        0.28794599302337787,
+        -85.0868877344331,
+        38.96148524036267
+      ],
+      "bounds_extent": [
+        43.86770242038028,
+        43.03634378103515,
+        52.391982838154554
+      ],
+      "materials": [
+        "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Hair.MI_DanaFilm_Hair",
+        "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Iris.MI_DanaFilm_Iris",
+        "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_EyeWhite.MI_DanaFilm_EyeWhite",
+        "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Cornea.MI_DanaFilm_Cornea",
+        "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_EyeInterior.MI_DanaFilm_EyeInterior",
+        "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Shoes.MI_DanaFilm_Shoes",
+        "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Button.MI_DanaFilm_Button",
+        "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Skirt.MI_DanaFilm_Skirt",
+        "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Shirt.MI_DanaFilm_Shirt",
+        "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Skin.MI_DanaFilm_Skin",
+        "/Game/Materials/Masters/DanaFilm/M_DanaFilm_ImportHelpers_Hidden.M_DanaFilm_ImportHelpers_Hidden"
+      ]
+    },
+    {
+      "label": "DANA_LASHCMP_VisibleLashes",
+      "class": "SkeletalMeshActor",
+      "location": [
+        0.0,
+        85.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        -115.0,
+        0.0
+      ],
+      "hidden_in_game": false,
+      "actor_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "mesh": "/Game/Preview/DanaLashesVisible/Dana_WeightedLashesVisible_Preview.Dana_WeightedLashesVisible_Preview",
+      "bounds_origin": [
+        -1.881028641448932,
+        85.87713806071653,
+        38.711178162135184
+      ],
+      "bounds_extent": [
+        21.211876203668787,
+        32.210797035987895,
+        38.73050274606794
+      ],
+      "materials": [
+        "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Hair.MI_DanaFilm_Hair",
+        "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Iris.MI_DanaFilm_Iris",
+        "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_EyeWhite.MI_DanaFilm_EyeWhite",
+        "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Cornea.MI_DanaFilm_Cornea",
+        "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_EyeInterior.MI_DanaFilm_EyeInterior",
+        "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Shoes.MI_DanaFilm_Shoes",
+        "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Button.MI_DanaFilm_Button",
+        "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Skirt.MI_DanaFilm_Skirt",
+        "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Shirt.MI_DanaFilm_Shirt",
+        "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Skin.MI_DanaFilm_Skin"
+      ]
+    },
+    {
+      "label": "DANA_LASHCMP_Floor",
+      "class": "StaticMeshActor",
+      "location": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "hidden_in_game": false,
+      "actor_scale": [
+        6.0,
+        6.0,
+        1.0
+      ]
+    },
+    {
+      "label": "DANA_LASHCMP_Camera",
+      "class": "CineCameraActor",
+      "location": [
+        255.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        13.665573540749634,
+        180.0,
+        -3.294202883807882e-07
+      ],
+      "hidden_in_game": false,
+      "actor_scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "label": "DANA_LASHCMP_Light_Key",
+      "class": "RectLight",
+      "location": [
+        100.0,
+        90.0,
+        145.0
+      ],
+      "rotation": [
+        -31.671852732420405,
+        -138.01278750418336,
+        -5.613335937014264e-07
+      ],
+      "hidden_in_game": false,
+      "actor_scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "label": "DANA_LASHCMP_Light_Fill",
+      "class": "RectLight",
+      "location": [
+        100.0,
+        -120.0,
+        80.0
+      ],
+      "rotation": [
+        -6.5733825735392735,
+        129.80557109226518,
+        1.1510773761593478e-07
+      ],
+      "hidden_in_game": false,
+      "actor_scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "label": "DANA_LASHCMP_Light_Rim",
+      "class": "RectLight",
+      "location": [
+        -80.0,
+        0.0,
+        130.0
+      ],
+      "rotation": [
+        -40.364536573097396,
+        0.0,
+        -0.0
+      ],
+      "hidden_in_game": false,
+      "actor_scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  ]
+}

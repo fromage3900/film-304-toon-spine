@@ -1,0 +1,29 @@
+{
+  "source": "G:\\film-304-toon-spine\\Saved\\Exports\\DanaImportAudit\\Dana_Film_GeometryFiltered.fbx",
+  "source_sha256": "0910fd5a6002593f6a6f201d7abeecf39cd773bbbae34b399d05f19aa26d0ee9",
+  "output": "G:\\film-304-toon-spine\\Saved\\Exports\\DanaImportAudit\\Dana_Film_DeformPreview.fbx",
+  "output_sha256": "daadaf522f8564b16142d9f46483aab391f3842aff8aa99b1e1cac9e570472f3",
+  "fbx_version": 7700,
+  "mesh_count": 14,
+  "triangles": 37822,
+  "model_count_before": 2462,
+  "model_count_after": 76,
+  "skin_count": 11,
+  "cluster_count": 64,
+  "deform_root": "Dana_Rig_v1_5:Group",
+  "removed_object_counts": {
+    "Geometry": 361,
+    "Model": 2386,
+    "Pose": 29,
+    "Deformer": 205
+  },
+  "body_skin_cluster_count": 0,
+  "unreal_import_trial": {
+    "geometry_filtered": "Import stopped on zero-scale PupilFfd controls and multiple roots; partial shoe asset removed.",
+    "deform_preview": "Imported only weighted clothing as a partial skeletal mesh: 11298 triangles, 6919 vertices, 42 bones, 3 material slots. Body, eyes, and hair were not included in that skeletal mesh.",
+    "trial_assets_removed": true,
+    "trial_import_folders_empty_on_readback": true,
+    "production_mesh_replaced": false
+  },
+  "qualification": "Preview deform export only. Body has no skin cluster in source FBX."
+}

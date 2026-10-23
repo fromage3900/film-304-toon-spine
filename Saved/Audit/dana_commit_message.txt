@@ -1,0 +1,5 @@
+feat(dana): stage toon lookdev and group review renders
+
+Package isolated Dana Toon materials, comparison maps, render jobs, and three
+fresh day/night stills. Include the source FBX audit and guarded export tools.
+Keep the unresolved body skinning requirement explicit in the showcase note.

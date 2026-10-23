@@ -1,0 +1,87 @@
+{
+  "result": "profile_bound_render_pending",
+  "map": "/Game/Maps/Lookdev/L_Dana_Toon_UDS_Day",
+  "profile": "/Game/Materials/ToonProfiles/TP_DanaFilm_Clean",
+  "eye_profile": "/Game/Materials/ToonProfiles/TP_DanaFilm_Eye",
+  "masters": [
+    {
+      "family": "Character",
+      "toon_profile": "/Game/Materials/ToonProfiles/TP_DanaFilm_Clean.TP_DanaFilm_Clean",
+      "compiled": true
+    },
+    {
+      "family": "Hair",
+      "toon_profile": "/Game/Materials/ToonProfiles/TP_DanaFilm_Clean.TP_DanaFilm_Clean",
+      "compiled": true
+    },
+    {
+      "family": "Face",
+      "toon_profile": "/Game/Materials/ToonProfiles/TP_DanaFilm_Clean.TP_DanaFilm_Clean",
+      "compiled": true
+    }
+  ],
+  "diffuse_bands": [
+    [
+      0.0,
+      0.18
+    ],
+    [
+      0.28,
+      0.18
+    ],
+    [
+      0.32,
+      0.48
+    ],
+    [
+      0.62,
+      0.48
+    ],
+    [
+      0.66,
+      0.82
+    ],
+    [
+      1.0,
+      0.82
+    ]
+  ],
+  "diffuse_indirect_scale": 0.45,
+  "key_cast_dynamic_shadows": true,
+  "materials": [
+    {
+      "slot": "danahair_mat",
+      "material": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Hair.MI_DanaFilm_Hair",
+      "palette_ramp_strength": 0.5
+    },
+    {
+      "slot": "danashoes_mat",
+      "material": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Shoes.MI_DanaFilm_Shoes",
+      "palette_ramp_strength": 0.4000000059604645
+    },
+    {
+      "slot": "danapantsbutton_mat",
+      "material": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Button.MI_DanaFilm_Button",
+      "palette_ramp_strength": 0.44999998807907104
+    },
+    {
+      "slot": "danapants_mat",
+      "material": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Skirt.MI_DanaFilm_Skirt",
+      "palette_ramp_strength": 0.41999998688697815
+    },
+    {
+      "slot": "danashirt_mat",
+      "material": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Shirt.MI_DanaFilm_Shirt",
+      "palette_ramp_strength": 0.41999998688697815
+    },
+    {
+      "slot": "danaskin_mat",
+      "material": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Skin.MI_DanaFilm_Skin",
+      "palette_ramp_strength": 0.3499999940395355
+    }
+  ],
+  "sequence": "/Game/Sequences/DanaLookdev/LS_DANA_REFINED_UDS_DAY_FULLBODY_v01",
+  "config": "/Game/MoviePipelines/DanaLookdev/CFG_DANA_REFINED_UDS_DAY_FULLBODY_v01",
+  "render_stem": "DANA_REFINED_UDS_DAY_FULLBODY_v02",
+  "proof_gate": "Fresh daylight render must visibly show three diffuse bands on skin, hair and clothing."
+}

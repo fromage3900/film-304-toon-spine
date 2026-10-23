@@ -1,0 +1,88 @@
+{
+  "result": "saved",
+  "changes": [
+    {
+      "asset": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_EyeWhite",
+      "scalars": {
+        "RampStrength": 0.08,
+        "InkIntensity": 0.004,
+        "DryRoughness": 0.48
+      },
+      "vectors": {
+        "BaseTint": [
+          0.82,
+          0.79,
+          0.73,
+          1
+        ],
+        "AccentTint": [
+          0.96,
+          0.93,
+          0.86,
+          1
+        ]
+      }
+    },
+    {
+      "asset": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Iris",
+      "scalars": {
+        "RampStrength": 0.1,
+        "InkIntensity": 0.006,
+        "DryRoughness": 0.3
+      },
+      "vectors": {
+        "BaseTint": [
+          0.24,
+          0.095,
+          0.04,
+          1
+        ],
+        "AccentTint": [
+          0.55,
+          0.25,
+          0.08,
+          1
+        ]
+      }
+    },
+    {
+      "asset": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_EyeInterior",
+      "scalars": {
+        "RampStrength": 0.0,
+        "InkIntensity": 0.0,
+        "DryRoughness": 0.48
+      },
+      "vectors": {
+        "BaseTint": [
+          0.012,
+          0.008,
+          0.012,
+          1
+        ],
+        "AccentTint": [
+          0.012,
+          0.008,
+          0.012,
+          1
+        ]
+      }
+    },
+    {
+      "asset": "/Game/Materials/Instances/DanaFilm/MI_DanaFilm_Cornea",
+      "scalars": {
+        "Coverage": 0.16,
+        "Roughness": 0.06,
+        "Specular": 0.45
+      },
+      "vectors": {
+        "CorneaTint": [
+          0.94,
+          0.97,
+          1.0,
+          1
+        ]
+      }
+    }
+  ],
+  "reason": "Reduce face shader grading on eye surfaces; brighten sclera/iris separation and strengthen clear cornea highlight."
+}

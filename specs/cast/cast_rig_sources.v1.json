@@ -1,0 +1,82 @@
+{
+  "schema": "humber-cast-rig-sources.v1",
+  "purpose": "Maya-side source of truth for the four Film 304 cast rigs. Read by Tools/export_cast_from_maya.py, one character per mayapy process, because maya.standalone is single-scene.",
+  "intake_root": "G:/Film304_AssetIntake_20261016_Source/3rd Year Film/Rigs",
+  "export_root": "Saved/Exports/CastRigExport",
+  "report_root": "Saved/Audit/CastMayaExport_20261016",
+  "export_rules": {
+    "read_only": "the source .ma/.mb is opened and never saved",
+    "select": "visible, non-intermediate, non-helper meshes that carry a skinCluster, plus the joint hierarchy above every influence",
+    "exclude": "rig control/helper geometry, intermediate originals, LOWRES proxies, constraints, cameras, lights",
+    "animation": "baked across the scene playback range so the clip survives the roundtrip",
+    "textures": "never embedded; the film textures are imported separately as UE assets",
+    "refuse_existing": "an existing export file is preserved; a revision must pick a new output name"
+  },
+  "helper_patterns": "case-insensitive regex on the short transform name; matched meshes are excluded from export",
+  "characters": {
+    "Dana": {
+      "source": "Temp/Dana_Rig_v1.5/Dana_Rig_v1.5.mb",
+      "output": "Dana_v08_Deform.fbx",
+      "helper_regex": "Region|upperLower|bodyBreath|squint|Guide|Helper|CTRL",
+      "required_body_regex": "Dana_Body",
+      "note": "Dana already passed the validated v08 roundtrip; this entry regenerates the same deform-only export for reproducibility",
+      "already_exported_to": "Saved/Audit/MayaDanaNative_20261016/ExportCandidate/Dana_CleanSkin_v08.fbx",
+      "skip_if": "already_exported_to"
+    },
+    "David": {
+      "source": "Temp/David_Rig_v1.51/David_Rig_v1.51.mb",
+      "output": "David_v151_Deform_v4.fbx",
+      "helper_regex": "Region|upperLower|bodyBreath|squint|Guide|Helper|CTRL",
+      "required_body_regex": "^David_Body_GEO$",
+      "include_hidden_regex": "^David_Body_GEO$",
+      "material_roles": [
+        { "pattern": "^David_Body_GEO$",        "material": "DavidSkin" },
+        { "pattern": "^David_Hair_GEO$",        "material": "DavidHair" },
+        { "pattern": "^David_Eye_(Lf|Rt)_GEO$",  "material": "DavidEyeWhite" },
+        { "pattern": "^David_Eyelash_",         "material": "DavidEyelash" },
+        { "pattern": "^David_Cornea_",          "material": "DavidCornea" },
+        { "pattern": "^David_EyeInt_",          "material": "DavidEyeInterior" },
+        { "pattern": "Teeth_GEO",             "material": "DavidTeeth" },
+        { "pattern": "^David_Tongue_GEO$",      "material": "DavidMouth" },
+        { "pattern": "^David_Pants_GEO$",       "material": "DavidPants" },
+        { "pattern": "^David_Shirt_GEO$",       "material": "DavidShirt" },
+        { "pattern": "^David_Shoe_",            "material": "DavidShoes" }
+      ],
+      "note": "the project currently only has C_DavidRenderTest_OSC, an 11-slot test mesh with source PBR materials; this export is the production-grade replacement. The body needed an explicit visibility exception: David_Body_GEO is skinned (skinCluster105, 18432 tris) but the artist left visibility=false in the saved scene. The sibling David_Body_GEOBase / _GEOBase1 / David_PartialBody_GEO stay excluded because they carry no skinCluster."
+    },
+    "Sam": {
+      "source": "Guy/Sam Rig/C_Guy.mb",
+      "output": "Sam_Deform_v4.fbx",
+      "helper_regex": "Region|upperLower|bodyBreath|squint|Guide|Helper|CTRL",
+      "required_body_regex": "^Sam_Body_GEO$",
+      "include_hidden_regex": "^Sam_Body_GEO$",
+      "material_roles": [
+        { "pattern": "^Sam_Body_GEO$",          "material": "SamSkin" },
+        { "pattern": "^Sam_Hair_Main_GEO$",     "material": "SamHair" },
+        { "pattern": "SamHairStrands_GEO",      "material": "SamHairStrands" },
+        { "pattern": "^Sam_Eye_(Lf|Rt)_GEO$",    "material": "SamEyeWhite" },
+        { "pattern": "^Sam_Eyelash_",           "material": "SamEyelash" },
+        { "pattern": "^Sam_Cornea_",            "material": "SamCornea" },
+        { "pattern": "^Sam_EyeInt_",            "material": "SamEyeInterior" },
+        { "pattern": "Teeth_GEO",             "material": "SamTeeth" },
+        { "pattern": "^Sam_Tongue_GEO$",        "material": "SamMouth" },
+        { "pattern": "^Sam_Pants_GEO$",         "material": "SamPants" },
+        { "pattern": "^Sam_Shirt_GEO$",         "material": "SamShirt" },
+        { "pattern": "^Sam_Shoe_",              "material": "SamShoes" }
+      ],
+      "note": "Sam has no mesh anywhere in the project. Census 2026-10-16: 83 shapes, and the same body-hidden-by-the-artist situation as David - Sam_Body_GEO carries skinCluster152 and 18432 tris with visibility=false. Sam_Body_GEOBase, Sam_BodyFull_GEO and Sam_BodyPartial_GEO stay excluded because none of them carry a skinCluster. The face rig meshes (ChinRegion, LipRegion, JawOpenRegion, ...) are bound but are facial deformation helpers, excluded by helper_regex."
+    },
+    "Spider": {
+      "source": "Spider/C_Spider.ma",
+      "output": "Spider_Deform_v2.fbx",
+      "helper_regex": "Region|upperLower|bodyBreath|squint|Guide|Helper|CTRL",
+      "required_body_regex": "Body_geo|Body_GEO|body_geo",
+      "material_roles": [
+        { "pattern": "Body_geo$",            "material": "SpiderBody" },
+        { "pattern": "FrontEye|TopEye",      "material": "SpiderEye" },
+        { "pattern": "fang",                 "material": "SpiderFang" }
+      ],
+      "note": "the SH110 creature. Probe-verified 2026-10-16: 11 visible bound meshes (body 9504 tris / 207 influences, 8 eyes, 2 fangs); 586 joints, 238 unique influences; LOWRES proxies correctly excluded. No texture maps shipped with the source, so body and eye are flat toon tints. v2 exists because v1 imported as only two slots named blinn2/blinn4 - the legacy importer used the Maya shading-group names, which merged body, eyes and fangs. material_roles gives the three parts distinct named slots."
+    }
+  }
+}

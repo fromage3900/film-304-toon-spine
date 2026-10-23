@@ -1,0 +1,38 @@
+{
+  "source": "G:/film-304-toon-spine/Saved/Exports/DanaImportAudit/Dana_Film_GeometryFiltered.fbx",
+  "fbx_version": 7700,
+  "render_meshes": 14,
+  "model_objects": 2462,
+  "skin_deformers_on_render_geometry": 11,
+  "clusters_on_render_geometry": 64,
+  "directly_weighted_bones": 48,
+  "weighted_bones_and_ancestors": 56,
+  "required_roots": [
+    {
+      "id": 1553079618992,
+      "name": "Dana_Rig_v1_5:Group",
+      "type": "Null",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  ],
+  "zero_scale_required_models": [],
+  "weighted_bones_and_render_mesh_ancestors": 76,
+  "required_roots_with_meshes": [
+    {
+      "id": 1553079618992,
+      "name": "Dana_Rig_v1_5:Group",
+      "type": "Null",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  ],
+  "zero_scale_with_meshes": [],
+  "render_mesh_model_roots": []
+}

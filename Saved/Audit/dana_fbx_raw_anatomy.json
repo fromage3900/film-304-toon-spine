@@ -1,0 +1,5159 @@
+[
+  {
+    "file": "C:/Users/froma/Downloads/C_DanaRenderTest_OSC.fbx",
+    "version": 7700,
+    "limb_nodes": 751,
+    "geometry": [
+      {
+        "name": "",
+        "model": "Dana_Rig_v1_5:Dana_Eyebrows_GEO",
+        "vertices": 178,
+        "triangles": 296,
+        "parts": {
+          "0": {
+            "triangles": 296,
+            "vertex_count": 178,
+            "bounds": [
+              [
+                -9.266559600830078,
+                -2.0507090091705322
+              ],
+              [
+                67.01935577392578,
+                69.25770568847656
+              ],
+              [
+                -5.424749851226807,
+                -2.809034585952759
+              ]
+            ],
+            "material": "Dana_Rig_v1_5:danaHair_mat",
+            "skin_influences": []
+          }
+        },
+        "ancestry": [
+          {
+            "name": "Dana_Rig_v1_5:Dana_Eyebrows_GEO",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Geometry",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Group",
+            "visibility": null
+          }
+        ]
+      },
+      {
+        "name": "",
+        "model": "Dana_Rig_v1_5:Dana_Eye_Lf_GEO",
+        "vertices": 1121,
+        "triangles": 2208,
+        "parts": {
+          "0": {
+            "triangles": 384,
+            "vertex_count": 224,
+            "bounds": [
+              [
+                1.0721287727355957,
+                2.536487579345703
+              ],
+              [
+                67.03937530517578,
+                68.50373077392578
+              ],
+              [
+                3.1041817665100098,
+                3.4127790927886963
+              ]
+            ],
+            "material": "Dana_Rig_v1_5:danaIris_mat",
+            "skin_influences": [
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:Pupil_L"
+                ],
+                "vertex_count": 192
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:Iris_L"
+                ],
+                "vertex_count": 128
+              }
+            ]
+          },
+          "1": {
+            "triangles": 1824,
+            "vertex_count": 929,
+            "bounds": [
+              [
+                -0.13189327716827393,
+                3.7405102252960205
+              ],
+              [
+                65.8353500366211,
+                69.70775604248047
+              ],
+              [
+                -0.3131293058395386,
+                3.41233491897583
+              ]
+            ],
+            "material": "Dana_Rig_v1_5:danaEye_mat",
+            "skin_influences": [
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:Eye_L"
+                ],
+                "vertex_count": 897
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:Iris_L"
+                ],
+                "vertex_count": 425
+              }
+            ]
+          }
+        },
+        "ancestry": [
+          {
+            "name": "Dana_Rig_v1_5:Dana_Eye_Lf_GEO",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Dana_Eye_Lf_GEO_GRP",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Geometry",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Group",
+            "visibility": null
+          }
+        ]
+      },
+      {
+        "name": "",
+        "model": "Dana_Rig_v1_5:Dana_Cornea_Lf_GEO",
+        "vertices": 161,
+        "triangles": 288,
+        "parts": {
+          "0": {
+            "triangles": 288,
+            "vertex_count": 161,
+            "bounds": [
+              [
+                1.0476759672164917,
+                2.5609402656555176
+              ],
+              [
+                67.01492309570312,
+                68.52818298339844
+              ],
+              [
+                3.3956992626190186,
+                3.5775279998779297
+              ]
+            ],
+            "material": "Dana_Rig_v1_5:danaCornea_mat",
+            "skin_influences": [
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:Eye_L"
+                ],
+                "vertex_count": 161
+              }
+            ]
+          }
+        },
+        "ancestry": [
+          {
+            "name": "Dana_Rig_v1_5:Dana_Cornea_Lf_GEO",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Dana_Eye_Lf_GEO_GRP",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Geometry",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Group",
+            "visibility": null
+          }
+        ]
+      },
+      {
+        "name": "",
+        "model": "Dana_Rig_v1_5:Dana_EyeInt_Lf_GEO",
+        "vertices": 51,
+        "triangles": 90,
+        "parts": {
+          "0": {
+            "triangles": 90,
+            "vertex_count": 51,
+            "bounds": [
+              [
+                0.8531551957130432,
+                2.755460023880005
+              ],
+              [
+                66.86695861816406,
+                68.67615509033203
+              ],
+              [
+                2.186800241470337,
+                3.1379523277282715
+              ]
+            ],
+            "material": "Dana_Rig_v1_5:danaEyeInt_mat",
+            "skin_influences": [
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:Eye_L"
+                ],
+                "vertex_count": 51
+              }
+            ]
+          }
+        },
+        "ancestry": [
+          {
+            "name": "Dana_Rig_v1_5:Dana_EyeInt_Lf_GEO",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Dana_Eye_Lf_GEO_GRP",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Geometry",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Group",
+            "visibility": null
+          }
+        ]
+      },
+      {
+        "name": "",
+        "model": "Dana_Rig_v1_5:Dana_Eye_Rt_GEO",
+        "vertices": 1121,
+        "triangles": 2208,
+        "parts": {
+          "0": {
+            "triangles": 384,
+            "vertex_count": 224,
+            "bounds": [
+              [
+                -2.536487579345703,
+                -1.0721288919448853
+              ],
+              [
+                67.03937530517578,
+                68.50373077392578
+              ],
+              [
+                3.1041817665100098,
+                3.4127790927886963
+              ]
+            ],
+            "material": "Dana_Rig_v1_5:danaIris_mat",
+            "skin_influences": [
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:Pupil_R"
+                ],
+                "vertex_count": 192
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:Iris_R"
+                ],
+                "vertex_count": 128
+              }
+            ]
+          },
+          "1": {
+            "triangles": 1824,
+            "vertex_count": 929,
+            "bounds": [
+              [
+                -3.740509510040283,
+                0.13189387321472168
+              ],
+              [
+                65.8353500366211,
+                69.70775604248047
+              ],
+              [
+                -0.3131293058395386,
+                3.41233491897583
+              ]
+            ],
+            "material": "Dana_Rig_v1_5:danaEye_mat",
+            "skin_influences": [
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:Eye_R"
+                ],
+                "vertex_count": 897
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:Iris_R"
+                ],
+                "vertex_count": 423
+              }
+            ]
+          }
+        },
+        "ancestry": [
+          {
+            "name": "Dana_Rig_v1_5:Dana_Eye_Rt_GEO",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Dana_Eye_Rt_GEO_GRP",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Geometry",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Group",
+            "visibility": null
+          }
+        ]
+      },
+      {
+        "name": "",
+        "model": "Dana_Rig_v1_5:Dana_Cornea_Rt_GEO",
+        "vertices": 161,
+        "triangles": 288,
+        "parts": {
+          "0": {
+            "triangles": 288,
+            "vertex_count": 161,
+            "bounds": [
+              [
+                -2.5609402656555176,
+                -1.0476760864257812
+              ],
+              [
+                67.01492309570312,
+                68.52818298339844
+              ],
+              [
+                3.3956992626190186,
+                3.5775279998779297
+              ]
+            ],
+            "material": "Dana_Rig_v1_5:danaCornea_mat",
+            "skin_influences": [
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:Eye_R"
+                ],
+                "vertex_count": 161
+              }
+            ]
+          }
+        },
+        "ancestry": [
+          {
+            "name": "Dana_Rig_v1_5:Dana_Cornea_Rt_GEO",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Dana_Eye_Rt_GEO_GRP",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Geometry",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Group",
+            "visibility": null
+          }
+        ]
+      },
+      {
+        "name": "",
+        "model": "Dana_Rig_v1_5:Dana_EyeInt_Rt_GEO",
+        "vertices": 51,
+        "triangles": 90,
+        "parts": {
+          "0": {
+            "triangles": 90,
+            "vertex_count": 51,
+            "bounds": [
+              [
+                -2.7554612159729004,
+                -0.853156328201294
+              ],
+              [
+                66.86695861816406,
+                68.67615509033203
+              ],
+              [
+                2.186800241470337,
+                3.1379523277282715
+              ]
+            ],
+            "material": "Dana_Rig_v1_5:danaEyeInt_mat",
+            "skin_influences": [
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:Eye_R"
+                ],
+                "vertex_count": 51
+              }
+            ]
+          }
+        },
+        "ancestry": [
+          {
+            "name": "Dana_Rig_v1_5:Dana_EyeInt_Rt_GEO",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Dana_Eye_Rt_GEO_GRP",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Geometry",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Group",
+            "visibility": null
+          }
+        ]
+      },
+      {
+        "name": "",
+        "model": "Dana_Rig_v1_5:Dana_Shoe_Lf_GEO",
+        "vertices": 1031,
+        "triangles": 2008,
+        "parts": {
+          "0": {
+            "triangles": 2008,
+            "vertex_count": 1031,
+            "bounds": [
+              [
+                0.5290267467498779,
+                4.148208141326904
+              ],
+              [
+                -0.019324583932757378,
+                3.1432111263275146
+              ],
+              [
+                -1.9238600730895996,
+                6.654641628265381
+              ]
+            ],
+            "material": "Dana_Rig_v1_5:danaShoes_mat",
+            "skin_influences": [
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:Toes_L"
+                ],
+                "vertex_count": 443
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:Ankle_L"
+                ],
+                "vertex_count": 897
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:KneePart2_L"
+                ],
+                "vertex_count": 334
+              }
+            ]
+          }
+        },
+        "ancestry": [
+          {
+            "name": "Dana_Rig_v1_5:Dana_Shoe_Lf_GEO",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Geometry",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Group",
+            "visibility": null
+          }
+        ]
+      },
+      {
+        "name": "",
+        "model": "Dana_Rig_v1_5:Dana_Shoe_Rt_GEO",
+        "vertices": 1031,
+        "triangles": 2008,
+        "parts": {
+          "0": {
+            "triangles": 2008,
+            "vertex_count": 1031,
+            "bounds": [
+              [
+                -4.148208141326904,
+                -0.5290267467498779
+              ],
+              [
+                -0.019324583932757378,
+                3.1432111263275146
+              ],
+              [
+                -1.9238600730895996,
+                6.654641628265381
+              ]
+            ],
+            "material": "Dana_Rig_v1_5:danaShoes_mat",
+            "skin_influences": [
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:Ankle_R"
+                ],
+                "vertex_count": 897
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:Toes_R"
+                ],
+                "vertex_count": 443
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:KneePart2_R"
+                ],
+                "vertex_count": 334
+              }
+            ]
+          }
+        },
+        "ancestry": [
+          {
+            "name": "Dana_Rig_v1_5:Dana_Shoe_Rt_GEO",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Geometry",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Group",
+            "visibility": null
+          }
+        ]
+      },
+      {
+        "name": "",
+        "model": "Dana_Rig_v1_5:PantsButton_GEO",
+        "vertices": 225,
+        "triangles": 432,
+        "parts": {
+          "0": {
+            "triangles": 432,
+            "vertex_count": 225,
+            "bounds": [
+              [
+                -0.7722353935241699,
+                -0.08484435081481934
+              ],
+              [
+                43.20945358276367,
+                43.891990661621094
+              ],
+              [
+                5.240771293640137,
+                5.506852626800537
+              ]
+            ],
+            "material": "Dana_Rig_v1_5:danaPantsButton_mat",
+            "skin_influences": []
+          }
+        },
+        "ancestry": [
+          {
+            "name": "Dana_Rig_v1_5:PantsButton_GEO",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:PantsButton_follicle",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Geometry",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Group",
+            "visibility": null
+          }
+        ]
+      },
+      {
+        "name": "",
+        "model": "Dana_Rig_v1_5:Dana_Jeans_GEO",
+        "vertices": 2172,
+        "triangles": 4246,
+        "parts": {
+          "0": {
+            "triangles": 4246,
+            "vertex_count": 2172,
+            "bounds": [
+              [
+                -7.764460563659668,
+                7.764460563659668
+              ],
+              [
+                2.4450910091400146,
+                46.66657257080078
+              ],
+              [
+                -4.780396938323975,
+                5.406445503234863
+              ]
+            ],
+            "material": "Dana_Rig_v1_5:danaPants_mat",
+            "skin_influences": [
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:HipPart1_R"
+                ],
+                "vertex_count": 542
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:Root_M"
+                ],
+                "vertex_count": 910
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:Hip_R"
+                ],
+                "vertex_count": 298
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:HipPart2_R"
+                ],
+                "vertex_count": 273
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:Hip_L"
+                ],
+                "vertex_count": 301
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:Ankle_L"
+                ],
+                "vertex_count": 254
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:HipPart1_L"
+                ],
+                "vertex_count": 542
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:HipPart2_L"
+                ],
+                "vertex_count": 271
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:Knee_L"
+                ],
+                "vertex_count": 177
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:Knee_R"
+                ],
+                "vertex_count": 177
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:RootPart1_M"
+                ],
+                "vertex_count": 676
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:Spine1_M"
+                ],
+                "vertex_count": 614
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:Ankle_R"
+                ],
+                "vertex_count": 256
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:Spine1Part1_M"
+                ],
+                "vertex_count": 629
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:KneePart1_R"
+                ],
+                "vertex_count": 160
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:KneePart2_R"
+                ],
+                "vertex_count": 356
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:KneePart1_L"
+                ],
+                "vertex_count": 160
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:KneePart2_L"
+                ],
+                "vertex_count": 354
+              }
+            ]
+          }
+        },
+        "ancestry": [
+          {
+            "name": "Dana_Rig_v1_5:Dana_Jeans_GEO",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Geometry",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Group",
+            "visibility": null
+          }
+        ]
+      },
+      {
+        "name": "",
+        "model": "Dana_Rig_v1_5:Dana_Shirt_GEO",
+        "vertices": 1564,
+        "triangles": 3036,
+        "parts": {
+          "0": {
+            "triangles": 3036,
+            "vertex_count": 1564,
+            "bounds": [
+              [
+                -8.537307739257812,
+                8.537476539611816
+              ],
+              [
+                43.9923095703125,
+                59.829280853271484
+              ],
+              [
+                -4.9494099617004395,
+                6.007274627685547
+              ]
+            ],
+            "material": "Dana_Rig_v1_5:danaShirt_mat",
+            "skin_influences": [
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:HipPart1_R"
+                ],
+                "vertex_count": 11
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:Root_M"
+                ],
+                "vertex_count": 165
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:ShoulderPart1_L"
+                ],
+                "vertex_count": 277
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:Scapula_L"
+                ],
+                "vertex_count": 444
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:Shoulder_L"
+                ],
+                "vertex_count": 229
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:ShoulderPart2_L"
+                ],
+                "vertex_count": 138
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:HipPart1_L"
+                ],
+                "vertex_count": 11
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:RootPart1_M"
+                ],
+                "vertex_count": 231
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:Spine1_M"
+                ],
+                "vertex_count": 366
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:ShoulderPart1_R"
+                ],
+                "vertex_count": 277
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:Spine1Part1_M"
+                ],
+                "vertex_count": 393
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:Shoulder_R"
+                ],
+                "vertex_count": 229
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:Chest_M"
+                ],
+                "vertex_count": 1091
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:Scapula_R"
+                ],
+                "vertex_count": 448
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:ShoulderPart2_R"
+                ],
+                "vertex_count": 138
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:NeckPart2_M"
+                ],
+                "vertex_count": 2
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:Neck_M"
+                ],
+                "vertex_count": 114
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:NeckPart1_M"
+                ],
+                "vertex_count": 75
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:BreastRaiser_R"
+                ],
+                "vertex_count": 126
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:Breast_R"
+                ],
+                "vertex_count": 47
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:BreastRaiser_L"
+                ],
+                "vertex_count": 126
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:Breast_L"
+                ],
+                "vertex_count": 55
+              }
+            ]
+          }
+        },
+        "ancestry": [
+          {
+            "name": "Dana_Rig_v1_5:Dana_Shirt_GEO",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Geometry",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Group",
+            "visibility": null
+          }
+        ]
+      },
+      {
+        "name": "",
+        "model": "Dana_Rig_v1_5:Dana_Body_GEOBase",
+        "vertices": 9249,
+        "triangles": 18368,
+        "parts": {
+          "0": {
+            "triangles": 18368,
+            "vertex_count": 9249,
+            "bounds": [
+              [
+                -31.469757080078125,
+                31.469757080078125
+              ],
+              [
+                -0.01485500019043684,
+                74.15987396240234
+              ],
+              [
+                -5.567024230957031,
+                6.28265380859375
+              ]
+            ],
+            "material": "Dana_Rig_v1_5:danaSkin_mat",
+            "skin_influences": []
+          }
+        },
+        "ancestry": [
+          {
+            "name": "Dana_Rig_v1_5:Dana_Body_GEOBase",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:Geometry",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Group",
+            "visibility": null
+          }
+        ]
+      },
+      {
+        "name": "",
+        "model": "Dana_Rig_v1_5:Dana_Original_Hair_GEO",
+        "vertices": 1130,
+        "triangles": 2256,
+        "parts": {
+          "0": {
+            "triangles": 2256,
+            "vertex_count": 1130,
+            "bounds": [
+              [
+                -10.85317325592041,
+                10.076087951660156
+              ],
+              [
+                58.13768768310547,
+                77.44168090820312
+              ],
+              [
+                -10.805612564086914,
+                6.6384711265563965
+              ]
+            ],
+            "material": "Dana_Rig_v1_5:danaHair_mat",
+            "skin_influences": [
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:FaceUpper_M"
+                ],
+                "vertex_count": 886
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:FaceLower_M"
+                ],
+                "vertex_count": 543
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:Hair_R"
+                ],
+                "vertex_count": 254
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:Hair_L"
+                ],
+                "vertex_count": 197
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:Head_M"
+                ],
+                "vertex_count": 1014
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:HairOriginalMid_M"
+                ],
+                "vertex_count": 263
+              }
+            ]
+          }
+        },
+        "ancestry": [
+          {
+            "name": "Dana_Rig_v1_5:Dana_Original_Hair_GEO",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Dana_Original_Hair_GRP",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Dana_Hair_Options_GRP",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Geometry",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Group",
+            "visibility": null
+          }
+        ]
+      },
+      {
+        "name": "",
+        "model": "Dana_Rig_v1_5:EyeLidRegion",
+        "vertices": 9249,
+        "triangles": 18368,
+        "parts": {
+          "0": {
+            "triangles": 18368,
+            "vertex_count": 9249,
+            "bounds": [
+              [
+                -31.469757080078125,
+                31.469757080078125
+              ],
+              [
+                -0.014855001121759415,
+                74.15987396240234
+              ],
+              [
+                -5.567024230957031,
+                6.28265380859375
+              ]
+            ],
+            "material": "openPBR_shader1",
+            "skin_influences": [
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:faceHeadJoint"
+                ],
+                "vertex_count": 9041
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLidMain0_R"
+                ],
+                "vertex_count": 1
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLidMain1_R"
+                ],
+                "vertex_count": 35
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLidMain2_R"
+                ],
+                "vertex_count": 35
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLidMain3_R"
+                ],
+                "vertex_count": 37
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLidMain4_R"
+                ],
+                "vertex_count": 37
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLidMain5_R"
+                ],
+                "vertex_count": 36
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLidMain6_R"
+                ],
+                "vertex_count": 37
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLidMain7_R"
+                ],
+                "vertex_count": 35
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLidMain8_R"
+                ],
+                "vertex_count": 37
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLidMain9_R"
+                ],
+                "vertex_count": 37
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLidMain10_R"
+                ],
+                "vertex_count": 36
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLidMain11_R"
+                ],
+                "vertex_count": 36
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLidMain12_R"
+                ],
+                "vertex_count": 2
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLidMain0_R"
+                ],
+                "vertex_count": 34
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLidMain1_R"
+                ],
+                "vertex_count": 37
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLidMain2_R"
+                ],
+                "vertex_count": 37
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLidMain3_R"
+                ],
+                "vertex_count": 37
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLidMain4_R"
+                ],
+                "vertex_count": 37
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLidMain5_R"
+                ],
+                "vertex_count": 37
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLidMain6_R"
+                ],
+                "vertex_count": 37
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLidMain7_R"
+                ],
+                "vertex_count": 37
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLidMain8_R"
+                ],
+                "vertex_count": 37
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLidMain9_R"
+                ],
+                "vertex_count": 37
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLidMain10_R"
+                ],
+                "vertex_count": 37
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLidMain11_R"
+                ],
+                "vertex_count": 37
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLidMain12_R"
+                ],
+                "vertex_count": 37
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLidMain13_R"
+                ],
+                "vertex_count": 37
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLidMain14_R"
+                ],
+                "vertex_count": 34
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLidMain0_L"
+                ],
+                "vertex_count": 35
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLidMain1_L"
+                ],
+                "vertex_count": 35
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLidMain2_L"
+                ],
+                "vertex_count": 35
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLidMain3_L"
+                ],
+                "vertex_count": 37
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLidMain4_L"
+                ],
+                "vertex_count": 37
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLidMain5_L"
+                ],
+                "vertex_count": 36
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLidMain6_L"
+                ],
+                "vertex_count": 37
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLidMain7_L"
+                ],
+                "vertex_count": 35
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLidMain8_L"
+                ],
+                "vertex_count": 37
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLidMain9_L"
+                ],
+                "vertex_count": 37
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLidMain10_L"
+                ],
+                "vertex_count": 36
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLidMain11_L"
+                ],
+                "vertex_count": 36
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLidMain12_L"
+                ],
+                "vertex_count": 36
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLidMain1_L"
+                ],
+                "vertex_count": 37
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLidMain2_L"
+                ],
+                "vertex_count": 37
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLidMain3_L"
+                ],
+                "vertex_count": 37
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLidMain4_L"
+                ],
+                "vertex_count": 37
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLidMain5_L"
+                ],
+                "vertex_count": 37
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLidMain6_L"
+                ],
+                "vertex_count": 37
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLidMain7_L"
+                ],
+                "vertex_count": 37
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLidMain8_L"
+                ],
+                "vertex_count": 37
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLidMain9_L"
+                ],
+                "vertex_count": 37
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLidMain10_L"
+                ],
+                "vertex_count": 37
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLidMain11_L"
+                ],
+                "vertex_count": 37
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLidMain12_L"
+                ],
+                "vertex_count": 37
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLidMain13_L"
+                ],
+                "vertex_count": 37
+              }
+            ]
+          }
+        },
+        "ancestry": [
+          {
+            "name": "Dana_Rig_v1_5:EyeLidRegion",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:RegionDeformations",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:FaceDeformationSystem",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:FaceGroup",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Group",
+            "visibility": null
+          }
+        ]
+      },
+      {
+        "name": "",
+        "model": "Dana_Rig_v1_5:LipRegion",
+        "vertices": 9249,
+        "triangles": 18368,
+        "parts": {
+          "0": {
+            "triangles": 18368,
+            "vertex_count": 9249,
+            "bounds": [
+              [
+                -31.469757080078125,
+                31.469757080078125
+              ],
+              [
+                -0.014855001121759415,
+                74.15987396240234
+              ],
+              [
+                -5.567024230957031,
+                6.28265380859375
+              ]
+            ],
+            "material": "openPBR_shader1",
+            "skin_influences": [
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLipJoint0_M"
+                ],
+                "vertex_count": 16
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLipJoint1_R"
+                ],
+                "vertex_count": 17
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLipJoint2_R"
+                ],
+                "vertex_count": 16
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLipJoint3_R"
+                ],
+                "vertex_count": 16
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLipJoint4_R"
+                ],
+                "vertex_count": 16
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLipJoint5_R"
+                ],
+                "vertex_count": 16
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLipJoint6_R"
+                ],
+                "vertex_count": 17
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLipJoint7_R"
+                ],
+                "vertex_count": 39
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLipJoint0_M"
+                ],
+                "vertex_count": 16
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLipJoint1_R"
+                ],
+                "vertex_count": 17
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLipJoint2_R"
+                ],
+                "vertex_count": 16
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLipJoint3_R"
+                ],
+                "vertex_count": 16
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLipJoint4_R"
+                ],
+                "vertex_count": 16
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLipJoint5_R"
+                ],
+                "vertex_count": 16
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLipJoint6_R"
+                ],
+                "vertex_count": 17
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLipJoint7_R"
+                ],
+                "vertex_count": 10
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLipJoint8_R"
+                ],
+                "vertex_count": 17
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLipJoint1_L"
+                ],
+                "vertex_count": 16
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLipJoint2_L"
+                ],
+                "vertex_count": 16
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLipJoint3_L"
+                ],
+                "vertex_count": 16
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLipJoint4_L"
+                ],
+                "vertex_count": 16
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLipJoint5_L"
+                ],
+                "vertex_count": 16
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLipJoint6_L"
+                ],
+                "vertex_count": 17
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLipJoint7_L"
+                ],
+                "vertex_count": 39
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLipJoint1_L"
+                ],
+                "vertex_count": 16
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLipJoint2_L"
+                ],
+                "vertex_count": 16
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLipJoint3_L"
+                ],
+                "vertex_count": 16
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLipJoint4_L"
+                ],
+                "vertex_count": 16
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLipJoint5_L"
+                ],
+                "vertex_count": 16
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLipJoint6_L"
+                ],
+                "vertex_count": 17
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLipJoint7_L"
+                ],
+                "vertex_count": 10
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLipJoint8_L"
+                ],
+                "vertex_count": 17
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:LipJoints_M"
+                ],
+                "vertex_count": 8951
+              }
+            ]
+          }
+        },
+        "ancestry": [
+          {
+            "name": "Dana_Rig_v1_5:LipRegion",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:RegionDeformations",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:FaceDeformationSystem",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:FaceGroup",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Group",
+            "visibility": null
+          }
+        ]
+      },
+      {
+        "name": "",
+        "model": "Dana_Rig_v1_5:LipRotateRegion",
+        "vertices": 9249,
+        "triangles": 18368,
+        "parts": {
+          "0": {
+            "triangles": 18368,
+            "vertex_count": 9249,
+            "bounds": [
+              [
+                -31.469757080078125,
+                31.469757080078125
+              ],
+              [
+                -0.014855001121759415,
+                74.15987396240234
+              ],
+              [
+                -5.567024230957031,
+                6.28265380859375
+              ]
+            ],
+            "material": "openPBR_shader1",
+            "skin_influences": [
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLipRotateJoint0_M"
+                ],
+                "vertex_count": 42
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLipRotateJoint1_R"
+                ],
+                "vertex_count": 39
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLipRotateJoint2_R"
+                ],
+                "vertex_count": 39
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLipRotateJoint3_R"
+                ],
+                "vertex_count": 45
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLipRotateJoint4_R"
+                ],
+                "vertex_count": 45
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLipRotateJoint5_R"
+                ],
+                "vertex_count": 40
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLipRotateJoint6_R"
+                ],
+                "vertex_count": 27
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLipRotateJoint7_R"
+                ],
+                "vertex_count": 54
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLipRotateJoint8_R"
+                ],
+                "vertex_count": 42
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLipRotateJoint1_L"
+                ],
+                "vertex_count": 39
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLipRotateJoint2_L"
+                ],
+                "vertex_count": 39
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLipRotateJoint3_L"
+                ],
+                "vertex_count": 45
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLipRotateJoint4_L"
+                ],
+                "vertex_count": 45
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLipRotateJoint5_L"
+                ],
+                "vertex_count": 40
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLipRotateJoint6_L"
+                ],
+                "vertex_count": 27
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLipRotateJoint7_L"
+                ],
+                "vertex_count": 54
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLipRotateJoint8_L"
+                ],
+                "vertex_count": 42
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLipRotateJoint0_M"
+                ],
+                "vertex_count": 28
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLipRotateJoint1_R"
+                ],
+                "vertex_count": 29
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLipRotateJoint2_R"
+                ],
+                "vertex_count": 28
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLipRotateJoint3_R"
+                ],
+                "vertex_count": 26
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLipRotateJoint4_R"
+                ],
+                "vertex_count": 22
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLipRotateJoint5_R"
+                ],
+                "vertex_count": 19
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLipRotateJoint6_R"
+                ],
+                "vertex_count": 16
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLipRotateJoint7_R"
+                ],
+                "vertex_count": 8
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLipRotateJoint8_R"
+                ],
+                "vertex_count": 53
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLipRotateJoint1_L"
+                ],
+                "vertex_count": 29
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLipRotateJoint2_L"
+                ],
+                "vertex_count": 28
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLipRotateJoint3_L"
+                ],
+                "vertex_count": 26
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLipRotateJoint4_L"
+                ],
+                "vertex_count": 22
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLipRotateJoint5_L"
+                ],
+                "vertex_count": 19
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLipRotateJoint6_L"
+                ],
+                "vertex_count": 16
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLipRotateJoint7_L"
+                ],
+                "vertex_count": 8
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLipRotateJoint8_L"
+                ],
+                "vertex_count": 53
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:LipsRotateJoints_M"
+                ],
+                "vertex_count": 8951
+              }
+            ]
+          }
+        },
+        "ancestry": [
+          {
+            "name": "Dana_Rig_v1_5:LipRotateRegion",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:RegionDeformations",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:FaceDeformationSystem",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:FaceGroup",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Group",
+            "visibility": null
+          }
+        ]
+      },
+      {
+        "name": "",
+        "model": "Dana_Rig_v1_5:LipScaleRegion",
+        "vertices": 9249,
+        "triangles": 18368,
+        "parts": {
+          "0": {
+            "triangles": 18368,
+            "vertex_count": 9249,
+            "bounds": [
+              [
+                -31.469757080078125,
+                31.469757080078125
+              ],
+              [
+                -0.014855001121759415,
+                74.15987396240234
+              ],
+              [
+                -5.567024230957031,
+                6.28265380859375
+              ]
+            ],
+            "material": "openPBR_shader1",
+            "skin_influences": [
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLipScaleJoint0_M"
+                ],
+                "vertex_count": 42
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLipScaleJoint1_R"
+                ],
+                "vertex_count": 39
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLipScaleJoint2_R"
+                ],
+                "vertex_count": 39
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLipScaleJoint3_R"
+                ],
+                "vertex_count": 45
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLipScaleJoint4_R"
+                ],
+                "vertex_count": 45
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLipScaleJoint5_R"
+                ],
+                "vertex_count": 40
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLipScaleJoint6_R"
+                ],
+                "vertex_count": 27
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLipScaleJoint7_R"
+                ],
+                "vertex_count": 54
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLipScaleJoint8_R"
+                ],
+                "vertex_count": 42
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLipScaleJoint1_L"
+                ],
+                "vertex_count": 39
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLipScaleJoint2_L"
+                ],
+                "vertex_count": 39
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLipScaleJoint3_L"
+                ],
+                "vertex_count": 45
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLipScaleJoint4_L"
+                ],
+                "vertex_count": 45
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLipScaleJoint5_L"
+                ],
+                "vertex_count": 40
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLipScaleJoint6_L"
+                ],
+                "vertex_count": 27
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLipScaleJoint7_L"
+                ],
+                "vertex_count": 54
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:upperLipScaleJoint8_L"
+                ],
+                "vertex_count": 42
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLipScaleJoint0_M"
+                ],
+                "vertex_count": 28
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLipScaleJoint1_R"
+                ],
+                "vertex_count": 29
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLipScaleJoint2_R"
+                ],
+                "vertex_count": 28
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLipScaleJoint3_R"
+                ],
+                "vertex_count": 26
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLipScaleJoint4_R"
+                ],
+                "vertex_count": 22
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLipScaleJoint5_R"
+                ],
+                "vertex_count": 19
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLipScaleJoint6_R"
+                ],
+                "vertex_count": 16
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLipScaleJoint7_R"
+                ],
+                "vertex_count": 8
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLipScaleJoint8_R"
+                ],
+                "vertex_count": 53
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLipScaleJoint1_L"
+                ],
+                "vertex_count": 29
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLipScaleJoint2_L"
+                ],
+                "vertex_count": 28
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLipScaleJoint3_L"
+                ],
+                "vertex_count": 26
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLipScaleJoint4_L"
+                ],
+                "vertex_count": 22
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLipScaleJoint5_L"
+                ],
+                "vertex_count": 19
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLipScaleJoint6_L"
+                ],
+                "vertex_count": 16
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLipScaleJoint7_L"
+                ],
+                "vertex_count": 8
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:lowerLipScaleJoint8_L"
+                ],
+                "vertex_count": 53
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:LipsScaleJoints_M"
+                ],
+                "vertex_count": 8951
+              }
+            ]
+          }
+        },
+        "ancestry": [
+          {
+            "name": "Dana_Rig_v1_5:LipScaleRegion",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:RegionDeformations",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:FaceDeformationSystem",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:FaceGroup",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Group",
+            "visibility": null
+          }
+        ]
+      },
+      {
+        "name": "",
+        "model": "Dana_Rig_v1_5:ClustersRegion",
+        "vertices": 9249,
+        "triangles": 18368,
+        "parts": {
+          "0": {
+            "triangles": 18368,
+            "vertex_count": 9249,
+            "bounds": [
+              [
+                -31.469757080078125,
+                31.469757080078125
+              ],
+              [
+                -0.014855001121759415,
+                74.15987396240234
+              ],
+              [
+                -5.567024230957031,
+                6.28265380859375
+              ]
+            ],
+            "material": "openPBR_shader1",
+            "skin_influences": []
+          }
+        },
+        "ancestry": [
+          {
+            "name": "Dana_Rig_v1_5:ClustersRegion",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:RegionDeformations",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:FaceDeformationSystem",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:FaceGroup",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Group",
+            "visibility": null
+          }
+        ]
+      },
+      {
+        "name": "",
+        "model": "Dana_Rig_v1_5:JawOpenRegion",
+        "vertices": 9249,
+        "triangles": 18368,
+        "parts": {
+          "0": {
+            "triangles": 18368,
+            "vertex_count": 9249,
+            "bounds": [
+              [
+                -31.469757080078125,
+                31.469757080078125
+              ],
+              [
+                -0.014855001121759415,
+                74.15987396240234
+              ],
+              [
+                -5.567024230957031,
+                6.28265380859375
+              ]
+            ],
+            "material": "openPBR_shader1",
+            "skin_influences": [
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:faceHeadJoint"
+                ],
+                "vertex_count": 9186
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:Jaw_M"
+                ],
+                "vertex_count": 1345
+              }
+            ]
+          }
+        },
+        "ancestry": [
+          {
+            "name": "Dana_Rig_v1_5:JawOpenRegion",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:RegionDeformations",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:FaceDeformationSystem",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:FaceGroup",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Group",
+            "visibility": null
+          }
+        ]
+      },
+      {
+        "name": "",
+        "model": "Dana_Rig_v1_5:JawOpenStickyLipRegion",
+        "vertices": 9249,
+        "triangles": 18368,
+        "parts": {
+          "0": {
+            "triangles": 18368,
+            "vertex_count": 9249,
+            "bounds": [
+              [
+                -31.469757080078125,
+                31.469757080078125
+              ],
+              [
+                -0.014855001121759415,
+                74.15987396240234
+              ],
+              [
+                -5.567024230957031,
+                6.28265380859375
+              ]
+            ],
+            "material": "openPBR_shader1",
+            "skin_influences": [
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:faceHeadJoint"
+                ],
+                "vertex_count": 9249
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:Jaw_M"
+                ],
+                "vertex_count": 1352
+              }
+            ]
+          }
+        },
+        "ancestry": [
+          {
+            "name": "Dana_Rig_v1_5:JawOpenStickyLipRegion",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:RegionDeformations",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:FaceDeformationSystem",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:FaceGroup",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Group",
+            "visibility": null
+          }
+        ]
+      },
+      {
+        "name": "",
+        "model": "Dana_Rig_v1_5:zipperLips_RRegion",
+        "vertices": 9249,
+        "triangles": 18368,
+        "parts": {
+          "0": {
+            "triangles": 18368,
+            "vertex_count": 9249,
+            "bounds": [
+              [
+                -31.469757080078125,
+                31.469757080078125
+              ],
+              [
+                -0.014855001121759415,
+                74.15987396240234
+              ],
+              [
+                -5.567024230957031,
+                6.28265380859375
+              ]
+            ],
+            "material": "openPBR_shader1",
+            "skin_influences": []
+          }
+        },
+        "ancestry": [
+          {
+            "name": "Dana_Rig_v1_5:zipperLips_RRegion",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:RegionDeformations",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:FaceDeformationSystem",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:FaceGroup",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Group",
+            "visibility": null
+          }
+        ]
+      },
+      {
+        "name": "",
+        "model": "Dana_Rig_v1_5:zipperLips_LRegion",
+        "vertices": 9249,
+        "triangles": 18368,
+        "parts": {
+          "0": {
+            "triangles": 18368,
+            "vertex_count": 9249,
+            "bounds": [
+              [
+                -31.469757080078125,
+                31.469757080078125
+              ],
+              [
+                -0.014855001121759415,
+                74.15987396240234
+              ],
+              [
+                -5.567024230957031,
+                6.28265380859375
+              ]
+            ],
+            "material": "openPBR_shader1",
+            "skin_influences": []
+          }
+        },
+        "ancestry": [
+          {
+            "name": "Dana_Rig_v1_5:zipperLips_LRegion",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:RegionDeformations",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:FaceDeformationSystem",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:FaceGroup",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Group",
+            "visibility": null
+          }
+        ]
+      },
+      {
+        "name": "",
+        "model": "Dana_Rig_v1_5:ChinRegion",
+        "vertices": 9249,
+        "triangles": 18368,
+        "parts": {
+          "0": {
+            "triangles": 18368,
+            "vertex_count": 9249,
+            "bounds": [
+              [
+                -31.469757080078125,
+                31.469757080078125
+              ],
+              [
+                -0.014855001121759415,
+                74.15987396240234
+              ],
+              [
+                -5.567024230957031,
+                6.28265380859375
+              ]
+            ],
+            "material": "openPBR_shader1",
+            "skin_influences": [
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:Chin_M"
+                ],
+                "vertex_count": 452
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:faceHeadJoint"
+                ],
+                "vertex_count": 9249
+              }
+            ]
+          }
+        },
+        "ancestry": [
+          {
+            "name": "Dana_Rig_v1_5:ChinRegion",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:RegionDeformations",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:FaceDeformationSystem",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:FaceGroup",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Group",
+            "visibility": null
+          }
+        ]
+      },
+      {
+        "name": "",
+        "model": "Dana_Rig_v1_5:LipsRegion",
+        "vertices": 9249,
+        "triangles": 18368,
+        "parts": {
+          "0": {
+            "triangles": 18368,
+            "vertex_count": 9249,
+            "bounds": [
+              [
+                -31.469757080078125,
+                31.469757080078125
+              ],
+              [
+                -0.014855001121759415,
+                74.15987396240234
+              ],
+              [
+                -5.567024230957031,
+                6.28265380859375
+              ]
+            ],
+            "material": "openPBR_shader1",
+            "skin_influences": [
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:Lips_M"
+                ],
+                "vertex_count": 646
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:faceHeadJoint"
+                ],
+                "vertex_count": 8951
+              }
+            ]
+          }
+        },
+        "ancestry": [
+          {
+            "name": "Dana_Rig_v1_5:LipsRegion",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:RegionDeformations",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:FaceDeformationSystem",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:FaceGroup",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Group",
+            "visibility": null
+          }
+        ]
+      },
+      {
+        "name": "",
+        "model": "Dana_Rig_v1_5:faceUpperLowerRegion",
+        "vertices": 9249,
+        "triangles": 18368,
+        "parts": {
+          "0": {
+            "triangles": 18368,
+            "vertex_count": 9249,
+            "bounds": [
+              [
+                -31.469757080078125,
+                31.469757080078125
+              ],
+              [
+                -0.01485500019043684,
+                74.15987396240234
+              ],
+              [
+                -5.567024230957031,
+                6.28265380859375
+              ]
+            ],
+            "material": "openPBR_shader1",
+            "skin_influences": [
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:faceHeadJoint"
+                ],
+                "vertex_count": 8128
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:FaceUpperRegion_M"
+                ],
+                "vertex_count": 2156
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:FaceLowerRegion_M"
+                ],
+                "vertex_count": 2207
+              }
+            ]
+          }
+        },
+        "ancestry": [
+          {
+            "name": "Dana_Rig_v1_5:faceUpperLowerRegion",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:RegionDeformations",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:FaceDeformationSystem",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:FaceGroup",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Group",
+            "visibility": null
+          }
+        ]
+      },
+      {
+        "name": "",
+        "model": "Dana_Rig_v1_5:EyelashUpperLower_R",
+        "vertices": 39,
+        "triangles": 48,
+        "parts": {
+          "0": {
+            "triangles": 48,
+            "vertex_count": 39,
+            "bounds": [
+              [
+                -3.9905450344085693,
+                -1.0718932151794434
+              ],
+              [
+                67.15740203857422,
+                68.93395233154297
+              ],
+              [
+                2.344475507736206,
+                3.8042867183685303
+              ]
+            ],
+            "material": "Dana_Rig_v1_5:danaHair_mat",
+            "skin_influences": [
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:FaceUpperRegion_M"
+                ],
+                "vertex_count": 39
+              }
+            ]
+          }
+        },
+        "ancestry": [
+          {
+            "name": "Dana_Rig_v1_5:EyelashUpperLower_R",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:RegionDeformations",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:FaceDeformationSystem",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:FaceGroup",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Group",
+            "visibility": null
+          }
+        ]
+      },
+      {
+        "name": "",
+        "model": "Dana_Rig_v1_5:EyelashUpperLower_L",
+        "vertices": 39,
+        "triangles": 48,
+        "parts": {
+          "0": {
+            "triangles": 48,
+            "vertex_count": 39,
+            "bounds": [
+              [
+                1.0718932151794434,
+                3.9905450344085693
+              ],
+              [
+                67.15740203857422,
+                68.93395233154297
+              ],
+              [
+                2.344475507736206,
+                3.8042867183685303
+              ]
+            ],
+            "material": "Dana_Rig_v1_5:danaHair_mat",
+            "skin_influences": [
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:FaceUpperRegion_M"
+                ],
+                "vertex_count": 39
+              }
+            ]
+          }
+        },
+        "ancestry": [
+          {
+            "name": "Dana_Rig_v1_5:EyelashUpperLower_L",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:RegionDeformations",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:FaceDeformationSystem",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:FaceGroup",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Group",
+            "visibility": null
+          }
+        ]
+      },
+      {
+        "name": "",
+        "model": "Dana_Rig_v1_5:Dana_BunHairBase_upperLower",
+        "vertices": 347,
+        "triangles": 636,
+        "parts": {
+          "0": {
+            "triangles": 636,
+            "vertex_count": 347,
+            "bounds": [
+              [
+                -4.485057830810547,
+                4.485053539276123
+              ],
+              [
+                64.30236053466797,
+                74.27365112304688
+              ],
+              [
+                -5.613402843475342,
+                4.239575386047363
+              ]
+            ],
+            "material": "openPBR_shader1",
+            "skin_influences": [
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:FaceLowerRegion_M"
+                ],
+                "vertex_count": 30
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:FaceUpperRegion_M"
+                ],
+                "vertex_count": 347
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:faceHeadJoint"
+                ],
+                "vertex_count": 298
+              }
+            ]
+          }
+        },
+        "ancestry": [
+          {
+            "name": "Dana_Rig_v1_5:Dana_BunHairBase_upperLower",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:hairsUpperLower",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:RegionDeformations",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:FaceDeformationSystem",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:FaceGroup",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Group",
+            "visibility": null
+          }
+        ]
+      },
+      {
+        "name": "",
+        "model": "Dana_Rig_v1_5:Dana_Bun_upperLower",
+        "vertices": 5173,
+        "triangles": 10284,
+        "parts": {
+          "0": {
+            "triangles": 10284,
+            "vertex_count": 5173,
+            "bounds": [
+              [
+                -4.580957412719727,
+                4.811373233795166
+              ],
+              [
+                70.49832916259766,
+                79.15913391113281
+              ],
+              [
+                -8.622838020324707,
+                0.10600471496582031
+              ]
+            ],
+            "material": "openPBR_shader1",
+            "skin_influences": [
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:FaceUpperRegion_M"
+                ],
+                "vertex_count": 5173
+              }
+            ]
+          }
+        },
+        "ancestry": [
+          {
+            "name": "Dana_Rig_v1_5:Dana_Bun_upperLower",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:hairsUpperLower",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:RegionDeformations",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:FaceDeformationSystem",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:FaceGroup",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Group",
+            "visibility": null
+          }
+        ]
+      },
+      {
+        "name": "",
+        "model": "Dana_Rig_v1_5:Dana_BuzzCut_Hair_upperLower",
+        "vertices": 5324,
+        "triangles": 8528,
+        "parts": {
+          "0": {
+            "triangles": 8528,
+            "vertex_count": 5324,
+            "bounds": [
+              [
+                -5.459272861480713,
+                5.479525566101074
+              ],
+              [
+                63.92268753051758,
+                76.19608306884766
+              ],
+              [
+                -7.387757301330566,
+                4.329380989074707
+              ]
+            ],
+            "material": "openPBR_shader1",
+            "skin_influences": [
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:FaceUpperRegion_M"
+                ],
+                "vertex_count": 5324
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:FaceLowerRegion_M"
+                ],
+                "vertex_count": 434
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:faceHeadJoint"
+                ],
+                "vertex_count": 4307
+              }
+            ]
+          }
+        },
+        "ancestry": [
+          {
+            "name": "Dana_Rig_v1_5:Dana_BuzzCut_Hair_upperLower",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:hairsUpperLower",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:RegionDeformations",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:FaceDeformationSystem",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:FaceGroup",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Group",
+            "visibility": null
+          }
+        ]
+      },
+      {
+        "name": "",
+        "model": "Dana_Rig_v1_5:Dana_LongHair_Bang_upperLower",
+        "vertices": 474,
+        "triangles": 944,
+        "parts": {
+          "0": {
+            "triangles": 944,
+            "vertex_count": 474,
+            "bounds": [
+              [
+                -4.504176139831543,
+                8.363981246948242
+              ],
+              [
+                65.52912902832031,
+                76.90541076660156
+              ],
+              [
+                -6.358687877655029,
+                5.05598783493042
+              ]
+            ],
+            "material": "openPBR_shader1",
+            "skin_influences": [
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:FaceUpperRegion_M"
+                ],
+                "vertex_count": 474
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:FaceLowerRegion_M"
+                ],
+                "vertex_count": 349
+              }
+            ]
+          }
+        },
+        "ancestry": [
+          {
+            "name": "Dana_Rig_v1_5:Dana_LongHair_Bang_upperLower",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:hairsUpperLower",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:RegionDeformations",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:FaceDeformationSystem",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:FaceGroup",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Group",
+            "visibility": null
+          }
+        ]
+      },
+      {
+        "name": "",
+        "model": "Dana_Rig_v1_5:Dana_LongHair_Main_upperLower",
+        "vertices": 566,
+        "triangles": 1079,
+        "parts": {
+          "0": {
+            "triangles": 1079,
+            "vertex_count": 566,
+            "bounds": [
+              [
+                -8.13006591796875,
+                8.7037935256958
+              ],
+              [
+                59.88858413696289,
+                74.9226303100586
+              ],
+              [
+                -9.839031219482422,
+                2.084299087524414
+              ]
+            ],
+            "material": "openPBR_shader1",
+            "skin_influences": [
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:FaceUpperRegion_M"
+                ],
+                "vertex_count": 485
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:FaceLowerRegion_M"
+                ],
+                "vertex_count": 541
+              }
+            ]
+          }
+        },
+        "ancestry": [
+          {
+            "name": "Dana_Rig_v1_5:Dana_LongHair_Main_upperLower",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:hairsUpperLower",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:RegionDeformations",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:FaceDeformationSystem",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:FaceGroup",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Group",
+            "visibility": null
+          }
+        ]
+      },
+      {
+        "name": "",
+        "model": "Dana_Rig_v1_5:Dana_HairPulled_upperLower",
+        "vertices": 7400,
+        "triangles": 14284,
+        "parts": {
+          "0": {
+            "triangles": 14284,
+            "vertex_count": 7400,
+            "bounds": [
+              [
+                -5.260010719299316,
+                5.266403675079346
+              ],
+              [
+                63.666622161865234,
+                74.89759826660156
+              ],
+              [
+                -6.610658645629883,
+                4.370702743530273
+              ]
+            ],
+            "material": "openPBR_shader1",
+            "skin_influences": [
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:FaceUpperRegion_M"
+                ],
+                "vertex_count": 7400
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:FaceLowerRegion_M"
+                ],
+                "vertex_count": 590
+              },
+              {
+                "bones": [
+                  "Dana_Rig_v1_5:faceHeadJoint"
+                ],
+                "vertex_count": 5860
+              }
+            ]
+          }
+        },
+        "ancestry": [
+          {
+            "name": "Dana_Rig_v1_5:Dana_HairPulled_upperLower",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:hairsUpperLower",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:RegionDeformations",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:FaceDeformationSystem",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:FaceGroup",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Group",
+            "visibility": null
+          }
+        ]
+      },
+      {
+        "name": "",
+        "model": "Dana_Rig_v1_5:bodyBreath_GEO",
+        "vertices": 9249,
+        "triangles": 18368,
+        "parts": {
+          "0": {
+            "triangles": 18368,
+            "vertex_count": 9249,
+            "bounds": [
+              [
+                -31.469757080078125,
+                31.469757080078125
+              ],
+              [
+                -0.014855001121759415,
+                74.15987396240234
+              ],
+              [
+                -5.567024230957031,
+                6.28265380859375
+              ]
+            ],
+            "material": "openPBR_shader1",
+            "skin_influences": []
+          }
+        },
+        "ancestry": [
+          {
+            "name": "Dana_Rig_v1_5:bodyBreath_GEO",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Breath_Deform",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:RegionDeformations",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:FaceDeformationSystem",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:FaceGroup",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Group",
+            "visibility": null
+          }
+        ]
+      },
+      {
+        "name": "",
+        "model": "Dana_Rig_v1_5:Eyelashes_squint_Rt",
+        "vertices": 39,
+        "triangles": 48,
+        "parts": {
+          "0": {
+            "triangles": 48,
+            "vertex_count": 39,
+            "bounds": [
+              [
+                -3.992215633392334,
+                -1.0649890899658203
+              ],
+              [
+                67.3372802734375,
+                68.46202850341797
+              ],
+              [
+                2.3445467948913574,
+                3.952225923538208
+              ]
+            ],
+            "material": "Dana_Rig_v1_5:danaHair_mat",
+            "skin_influences": []
+          }
+        },
+        "ancestry": [
+          {
+            "name": "Dana_Rig_v1_5:Eyelashes_squint_Rt",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:eyelashes_blendshapes",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:FaceDeformationSystem",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:FaceGroup",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Group",
+            "visibility": null
+          }
+        ]
+      },
+      {
+        "name": "",
+        "model": "Dana_Rig_v1_5:Eyelashes_squint_Lf",
+        "vertices": 39,
+        "triangles": 48,
+        "parts": {
+          "0": {
+            "triangles": 48,
+            "vertex_count": 39,
+            "bounds": [
+              [
+                1.0649890899658203,
+                3.992215633392334
+              ],
+              [
+                67.3372802734375,
+                68.46202850341797
+              ],
+              [
+                2.3445467948913574,
+                3.952225923538208
+              ]
+            ],
+            "material": "Dana_Rig_v1_5:danaHair_mat",
+            "skin_influences": []
+          }
+        },
+        "ancestry": [
+          {
+            "name": "Dana_Rig_v1_5:Eyelashes_squint_Lf",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:eyelashes_blendshapes",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:FaceDeformationSystem",
+            "visibility": [
+              0.0
+            ]
+          },
+          {
+            "name": "Dana_Rig_v1_5:FaceGroup",
+            "visibility": null
+          },
+          {
+            "name": "Dana_Rig_v1_5:Group",
+            "visibility": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "G:/film-304-toon-spine/Saved/Exports/DanaImportAudit/Dana_UE_Original.fbx",
+    "version": 7300,
+    "limb_nodes": 2484,
+    "geometry": [
+      {
+        "name": "C_DanaRenderTest_OSC",
+        "model": "C_DanaRenderTest_OSC",
+        "vertices": 130912,
+        "triangles": 312553,
+        "parts": {
+          "0": {
+            "triangles": 2744,
+            "vertex_count": 1644,
+            "bounds": [
+              [
+                -10.85317325592041,
+                10.076087951660156
+              ],
+              [
+                -6.6384711265563965,
+                10.805612564086914
+              ],
+              [
+                58.13768768310547,
+                77.44168090820312
+              ]
+            ],
+            "material": "danaHair_mat",
+            "skin_influences": [
+              {
+                "bones": [
+                  "Head_M"
+                ],
+                "vertex_count": 1056
+              },
+              {
+                "bones": [
+                  "Hair_R"
+                ],
+                "vertex_count": 269
+              },
+              {
+                "bones": [
+                  "HairOriginalMid_M"
+                ],
+                "vertex_count": 274
+              },
+              {
+                "bones": [
+                  "Hair_L"
+                ],
+                "vertex_count": 207
+              },
+              {
+                "bones": [
+                  "Dana_Eyebrows_GEO"
+                ],
+                "vertex_count": 178
+              },
+              {
+                "bones": [
+                  "FaceUpper_M"
+                ],
+                "vertex_count": 918
+              },
+              {
+                "bones": [
+                  "FaceLower_M"
+                ],
+                "vertex_count": 570
+              },
+              {
+                "bones": [
+                  "FaceUpperRegion_M"
+                ],
+                "vertex_count": 144
+              },
+              {
+                "bones": [
+                  "Eyelashes_squint_Rt"
+                ],
+                "vertex_count": 72
+              },
+              {
+                "bones": [
+                  "Eyelashes_squint_Lf"
+                ],
+                "vertex_count": 72
+              }
+            ]
+          },
+          "1": {
+            "triangles": 768,
+            "vertex_count": 448,
+            "bounds": [
+              [
+                -2.536487579345703,
+                2.536487579345703
+              ],
+              [
+                -3.4127790927886963,
+                -3.1041817665100098
+              ],
+              [
+                67.03937530517578,
+                68.50373077392578
+              ]
+            ],
+            "material": "danaIris_mat",
+            "skin_influences": [
+              {
+                "bones": [
+                  "Pupil_R"
+                ],
+                "vertex_count": 192
+              },
+              {
+                "bones": [
+                  "Iris_R"
+                ],
+                "vertex_count": 128
+              },
+              {
+                "bones": [
+                  "Pupil_L"
+                ],
+                "vertex_count": 192
+              },
+              {
+                "bones": [
+                  "Iris_L"
+                ],
+                "vertex_count": 128
+              }
+            ]
+          },
+          "2": {
+            "triangles": 3648,
+            "vertex_count": 1922,
+            "bounds": [
+              [
+                -3.740509510040283,
+                3.7405102252960205
+              ],
+              [
+                -3.41233491897583,
+                0.3131293058395386
+              ],
+              [
+                65.8353500366211,
+                69.70775604248047
+              ]
+            ],
+            "material": "danaEye_mat",
+            "skin_influences": [
+              {
+                "bones": [
+                  "Eye_R"
+                ],
+                "vertex_count": 929
+              },
+              {
+                "bones": [
+                  "Iris_R"
+                ],
+                "vertex_count": 423
+              },
+              {
+                "bones": [
+                  "Eye_L"
+                ],
+                "vertex_count": 929
+              },
+              {
+                "bones": [
+                  "Iris_L"
+                ],
+                "vertex_count": 425
+              }
+            ]
+          },
+          "3": {
+            "triangles": 576,
+            "vertex_count": 322,
+            "bounds": [
+              [
+                -2.5609402656555176,
+                2.5609402656555176
+              ],
+              [
+                -3.5775279998779297,
+                -3.3956992626190186
+              ],
+              [
+                67.01492309570312,
+                68.52818298339844
+              ]
+            ],
+            "material": "danaCornea_mat",
+            "skin_influences": [
+              {
+                "bones": [
+                  "Eye_R"
+                ],
+                "vertex_count": 161
+              },
+              {
+                "bones": [
+                  "Eye_L"
+                ],
+                "vertex_count": 161
+              }
+            ]
+          },
+          "4": {
+            "triangles": 180,
+            "vertex_count": 102,
+            "bounds": [
+              [
+                -2.7554612159729004,
+                2.755460023880005
+              ],
+              [
+                -3.1379523277282715,
+                -2.186800241470337
+              ],
+              [
+                66.86695861816406,
+                68.67615509033203
+              ]
+            ],
+            "material": "danaEyeInt_mat",
+            "skin_influences": [
+              {
+                "bones": [
+                  "Eye_R"
+                ],
+                "vertex_count": 51
+              },
+              {
+                "bones": [
+                  "Eye_L"
+                ],
+                "vertex_count": 51
+              }
+            ]
+          },
+          "5": {
+            "triangles": 4016,
+            "vertex_count": 2452,
+            "bounds": [
+              [
+                -4.148208141326904,
+                4.148208141326904
+              ],
+              [
+                -6.654641628265381,
+                1.9238600730895996
+              ],
+              [
+                -0.019324583932757378,
+                3.1432111263275146
+              ]
+            ],
+            "material": "danaShoes_mat",
+            "skin_influences": [
+              {
+                "bones": [
+                  "KneePart2_R"
+                ],
+                "vertex_count": 395
+              },
+              {
+                "bones": [
+                  "Ankle_R"
+                ],
+                "vertex_count": 1061
+              },
+              {
+                "bones": [
+                  "Toes_R"
+                ],
+                "vertex_count": 529
+              },
+              {
+                "bones": [
+                  "KneePart2_L"
+                ],
+                "vertex_count": 395
+              },
+              {
+                "bones": [
+                  "Ankle_L"
+                ],
+                "vertex_count": 1061
+              },
+              {
+                "bones": [
+                  "Toes_L"
+                ],
+                "vertex_count": 529
+              }
+            ]
+          },
+          "6": {
+            "triangles": 432,
+            "vertex_count": 241,
+            "bounds": [
+              [
+                -0.7283385396003723,
+                -0.04304588586091995
+              ],
+              [
+                0.02330729551613331,
+                0.3309054672718048
+              ],
+              [
+                41.28264236450195,
+                41.969322204589844
+              ]
+            ],
+            "material": "danaPantsButton_mat",
+            "skin_influences": [
+              {
+                "bones": [
+                  "PantsButton_GEO"
+                ],
+                "vertex_count": 241
+              }
+            ]
+          },
+          "7": {
+            "triangles": 4246,
+            "vertex_count": 2522,
+            "bounds": [
+              [
+                -7.764460563659668,
+                7.764460563659668
+              ],
+              [
+                -5.406445503234863,
+                4.780396938323975
+              ],
+              [
+                2.4450910091400146,
+                46.66657257080078
+              ]
+            ],
+            "material": "danaPants_mat",
+            "skin_influences": [
+              {
+                "bones": [
+                  "Root_M"
+                ],
+                "vertex_count": 1102
+              },
+              {
+                "bones": [
+                  "Hip_R"
+                ],
+                "vertex_count": 351
+              },
+              {
+                "bones": [
+                  "HipPart1_R"
+                ],
+                "vertex_count": 624
+              },
+              {
+                "bones": [
+                  "HipPart2_R"
+                ],
+                "vertex_count": 307
+              },
+              {
+                "bones": [
+                  "Knee_R"
+                ],
+                "vertex_count": 195
+              },
+              {
+                "bones": [
+                  "KneePart1_R"
+                ],
+                "vertex_count": 176
+              },
+              {
+                "bones": [
+                  "KneePart2_R"
+                ],
+                "vertex_count": 408
+              },
+              {
+                "bones": [
+                  "Ankle_R"
+                ],
+                "vertex_count": 298
+              },
+              {
+                "bones": [
+                  "RootPart1_M"
+                ],
+                "vertex_count": 834
+              },
+              {
+                "bones": [
+                  "Spine1_M"
+                ],
+                "vertex_count": 766
+              },
+              {
+                "bones": [
+                  "Spine1Part1_M"
+                ],
+                "vertex_count": 782
+              },
+              {
+                "bones": [
+                  "Hip_L"
+                ],
+                "vertex_count": 356
+              },
+              {
+                "bones": [
+                  "HipPart1_L"
+                ],
+                "vertex_count": 624
+              },
+              {
+                "bones": [
+                  "HipPart2_L"
+                ],
+                "vertex_count": 305
+              },
+              {
+                "bones": [
+                  "Knee_L"
+                ],
+                "vertex_count": 195
+              },
+              {
+                "bones": [
+                  "KneePart1_L"
+                ],
+                "vertex_count": 176
+              },
+              {
+                "bones": [
+                  "KneePart2_L"
+                ],
+                "vertex_count": 406
+              },
+              {
+                "bones": [
+                  "Ankle_L"
+                ],
+                "vertex_count": 296
+              }
+            ]
+          },
+          "8": {
+            "triangles": 3036,
+            "vertex_count": 1944,
+            "bounds": [
+              [
+                -8.537307739257812,
+                8.537476539611816
+              ],
+              [
+                -6.007274627685547,
+                4.9494099617004395
+              ],
+              [
+                43.9923095703125,
+                59.829280853271484
+              ]
+            ],
+            "material": "danaShirt_mat",
+            "skin_influences": [
+              {
+                "bones": [
+                  "Root_M"
+                ],
+                "vertex_count": 205
+              },
+              {
+                "bones": [
+                  "HipPart1_R"
+                ],
+                "vertex_count": 14
+              },
+              {
+                "bones": [
+                  "RootPart1_M"
+                ],
+                "vertex_count": 277
+              },
+              {
+                "bones": [
+                  "Spine1_M"
+                ],
+                "vertex_count": 462
+              },
+              {
+                "bones": [
+                  "Spine1Part1_M"
+                ],
+                "vertex_count": 493
+              },
+              {
+                "bones": [
+                  "Chest_M"
+                ],
+                "vertex_count": 1389
+              },
+              {
+                "bones": [
+                  "Scapula_R"
+                ],
+                "vertex_count": 574
+              },
+              {
+                "bones": [
+                  "Shoulder_R"
+                ],
+                "vertex_count": 323
+              },
+              {
+                "bones": [
+                  "ShoulderPart1_R"
+                ],
+                "vertex_count": 376
+              },
+              {
+                "bones": [
+                  "ShoulderPart2_R"
+                ],
+                "vertex_count": 159
+              },
+              {
+                "bones": [
+                  "Neck_M"
+                ],
+                "vertex_count": 124
+              },
+              {
+                "bones": [
+                  "NeckPart1_M"
+                ],
+                "vertex_count": 81
+              },
+              {
+                "bones": [
+                  "NeckPart2_M"
+                ],
+                "vertex_count": 2
+              },
+              {
+                "bones": [
+                  "BreastRaiser_R"
+                ],
+                "vertex_count": 155
+              },
+              {
+                "bones": [
+                  "Breast_R"
+                ],
+                "vertex_count": 49
+              },
+              {
+                "bones": [
+                  "Scapula_L"
+                ],
+                "vertex_count": 570
+              },
+              {
+                "bones": [
+                  "Shoulder_L"
+                ],
+                "vertex_count": 323
+              },
+              {
+                "bones": [
+                  "ShoulderPart1_L"
+                ],
+                "vertex_count": 376
+              },
+              {
+                "bones": [
+                  "ShoulderPart2_L"
+                ],
+                "vertex_count": 159
+              },
+              {
+                "bones": [
+                  "BreastRaiser_L"
+                ],
+                "vertex_count": 155
+              },
+              {
+                "bones": [
+                  "Breast_L"
+                ],
+                "vertex_count": 57
+              },
+              {
+                "bones": [
+                  "HipPart1_L"
+                ],
+                "vertex_count": 14
+              }
+            ]
+          },
+          "9": {
+            "triangles": 18368,
+            "vertex_count": 10083,
+            "bounds": [
+              [
+                -31.469757080078125,
+                31.469757080078125
+              ],
+              [
+                -6.28265380859375,
+                5.567024230957031
+              ],
+              [
+                -0.01485500019043684,
+                74.15987396240234
+              ]
+            ],
+            "material": "danaSkin_mat",
+            "skin_influences": [
+              {
+                "bones": [
+                  "Dana_Body_GEOBase"
+                ],
+                "vertex_count": 10083
+              }
+            ]
+          },
+          "10": {
+            "triangles": 274539,
+            "vertex_count": 109232,
+            "bounds": [
+              [
+                -31.469757080078125,
+                31.469757080078125
+              ],
+              [
+                -6.28265380859375,
+                9.839031219482422
+              ],
+              [
+                -0.014855001121759415,
+                79.15913391113281
+              ]
+            ],
+            "material": "openPBR_shader1",
+            "skin_influences": [
+              {
+                "bones": [
+                  "LipJoints_M"
+                ],
+                "vertex_count": 9755
+              },
+              {
+                "bones": [
+                  "upperLipJoint0_M"
+                ],
+                "vertex_count": 17
+              },
+              {
+                "bones": [
+                  "upperLipJoint1_R"
+                ],
+                "vertex_count": 18
+              },
+              {
+                "bones": [
+                  "upperLipJoint2_R"
+                ],
+                "vertex_count": 17
+              },
+              {
+                "bones": [
+                  "upperLipJoint3_R"
+                ],
+                "vertex_count": 17
+              },
+              {
+                "bones": [
+                  "upperLipJoint4_R"
+                ],
+                "vertex_count": 17
+              },
+              {
+                "bones": [
+                  "upperLipJoint5_R"
+                ],
+                "vertex_count": 17
+              },
+              {
+                "bones": [
+                  "upperLipJoint6_R"
+                ],
+                "vertex_count": 18
+              },
+              {
+                "bones": [
+                  "upperLipJoint7_R"
+                ],
+                "vertex_count": 39
+              },
+              {
+                "bones": [
+                  "lowerLipJoint0_M"
+                ],
+                "vertex_count": 20
+              },
+              {
+                "bones": [
+                  "lowerLipJoint1_R"
+                ],
+                "vertex_count": 18
+              },
+              {
+                "bones": [
+                  "lowerLipJoint2_R"
+                ],
+                "vertex_count": 17
+              },
+              {
+                "bones": [
+                  "lowerLipJoint3_R"
+                ],
+                "vertex_count": 17
+              },
+              {
+                "bones": [
+                  "lowerLipJoint4_R"
+                ],
+                "vertex_count": 17
+              },
+              {
+                "bones": [
+                  "lowerLipJoint5_R"
+                ],
+                "vertex_count": 17
+              },
+              {
+                "bones": [
+                  "lowerLipJoint6_R"
+                ],
+                "vertex_count": 18
+              },
+              {
+                "bones": [
+                  "lowerLipJoint7_R"
+                ],
+                "vertex_count": 10
+              },
+              {
+                "bones": [
+                  "lowerLipJoint8_R"
+                ],
+                "vertex_count": 18
+              },
+              {
+                "bones": [
+                  "upperLipJoint1_L"
+                ],
+                "vertex_count": 17
+              },
+              {
+                "bones": [
+                  "upperLipJoint2_L"
+                ],
+                "vertex_count": 17
+              },
+              {
+                "bones": [
+                  "upperLipJoint3_L"
+                ],
+                "vertex_count": 17
+              },
+              {
+                "bones": [
+                  "upperLipJoint4_L"
+                ],
+                "vertex_count": 17
+              },
+              {
+                "bones": [
+                  "upperLipJoint5_L"
+                ],
+                "vertex_count": 17
+              },
+              {
+                "bones": [
+                  "upperLipJoint6_L"
+                ],
+                "vertex_count": 18
+              },
+              {
+                "bones": [
+                  "upperLipJoint7_L"
+                ],
+                "vertex_count": 39
+              },
+              {
+                "bones": [
+                  "lowerLipJoint1_L"
+                ],
+                "vertex_count": 17
+              },
+              {
+                "bones": [
+                  "lowerLipJoint2_L"
+                ],
+                "vertex_count": 17
+              },
+              {
+                "bones": [
+                  "lowerLipJoint3_L"
+                ],
+                "vertex_count": 17
+              },
+              {
+                "bones": [
+                  "lowerLipJoint4_L"
+                ],
+                "vertex_count": 17
+              },
+              {
+                "bones": [
+                  "lowerLipJoint5_L"
+                ],
+                "vertex_count": 17
+              },
+              {
+                "bones": [
+                  "lowerLipJoint6_L"
+                ],
+                "vertex_count": 18
+              },
+              {
+                "bones": [
+                  "lowerLipJoint7_L"
+                ],
+                "vertex_count": 10
+              },
+              {
+                "bones": [
+                  "lowerLipJoint8_L"
+                ],
+                "vertex_count": 18
+              },
+              {
+                "bones": [
+                  "LipsRotateJoints_M"
+                ],
+                "vertex_count": 9755
+              },
+              {
+                "bones": [
+                  "upperLipRotateJoint0_M"
+                ],
+                "vertex_count": 43
+              },
+              {
+                "bones": [
+                  "upperLipRotateJoint1_R"
+                ],
+                "vertex_count": 40
+              },
+              {
+                "bones": [
+                  "upperLipRotateJoint2_R"
+                ],
+                "vertex_count": 40
+              },
+              {
+                "bones": [
+                  "upperLipRotateJoint3_R"
+                ],
+                "vertex_count": 46
+              },
+              {
+                "bones": [
+                  "upperLipRotateJoint4_R"
+                ],
+                "vertex_count": 46
+              },
+              {
+                "bones": [
+                  "upperLipRotateJoint5_R"
+                ],
+                "vertex_count": 41
+              },
+              {
+                "bones": [
+                  "upperLipRotateJoint6_R"
+                ],
+                "vertex_count": 28
+              },
+              {
+                "bones": [
+                  "upperLipRotateJoint7_R"
+                ],
+                "vertex_count": 54
+              },
+              {
+                "bones": [
+                  "upperLipRotateJoint8_R"
+                ],
+                "vertex_count": 42
+              },
+              {
+                "bones": [
+                  "upperLipRotateJoint1_L"
+                ],
+                "vertex_count": 40
+              },
+              {
+                "bones": [
+                  "upperLipRotateJoint2_L"
+                ],
+                "vertex_count": 40
+              },
+              {
+                "bones": [
+                  "upperLipRotateJoint3_L"
+                ],
+                "vertex_count": 46
+              },
+              {
+                "bones": [
+                  "upperLipRotateJoint4_L"
+                ],
+                "vertex_count": 46
+              },
+              {
+                "bones": [
+                  "upperLipRotateJoint5_L"
+                ],
+                "vertex_count": 41
+              },
+              {
+                "bones": [
+                  "upperLipRotateJoint6_L"
+                ],
+                "vertex_count": 28
+              },
+              {
+                "bones": [
+                  "upperLipRotateJoint7_L"
+                ],
+                "vertex_count": 54
+              },
+              {
+                "bones": [
+                  "upperLipRotateJoint8_L"
+                ],
+                "vertex_count": 42
+              },
+              {
+                "bones": [
+                  "lowerLipRotateJoint0_M"
+                ],
+                "vertex_count": 31
+              },
+              {
+                "bones": [
+                  "lowerLipRotateJoint1_R"
+                ],
+                "vertex_count": 30
+              },
+              {
+                "bones": [
+                  "lowerLipRotateJoint2_R"
+                ],
+                "vertex_count": 29
+              },
+              {
+                "bones": [
+                  "lowerLipRotateJoint3_R"
+                ],
+                "vertex_count": 27
+              },
+              {
+                "bones": [
+                  "lowerLipRotateJoint4_R"
+                ],
+                "vertex_count": 23
+              },
+              {
+                "bones": [
+                  "lowerLipRotateJoint5_R"
+                ],
+                "vertex_count": 20
+              },
+              {
+                "bones": [
+                  "lowerLipRotateJoint6_R"
+                ],
+                "vertex_count": 17
+              },
+              {
+                "bones": [
+                  "lowerLipRotateJoint7_R"
+                ],
+                "vertex_count": 8
+              },
+              {
+                "bones": [
+                  "lowerLipRotateJoint8_R"
+                ],
+                "vertex_count": 54
+              },
+              {
+                "bones": [
+                  "lowerLipRotateJoint1_L"
+                ],
+                "vertex_count": 30
+              },
+              {
+                "bones": [
+                  "lowerLipRotateJoint2_L"
+                ],
+                "vertex_count": 29
+              },
+              {
+                "bones": [
+                  "lowerLipRotateJoint3_L"
+                ],
+                "vertex_count": 27
+              },
+              {
+                "bones": [
+                  "lowerLipRotateJoint4_L"
+                ],
+                "vertex_count": 23
+              },
+              {
+                "bones": [
+                  "lowerLipRotateJoint5_L"
+                ],
+                "vertex_count": 20
+              },
+              {
+                "bones": [
+                  "lowerLipRotateJoint6_L"
+                ],
+                "vertex_count": 17
+              },
+              {
+                "bones": [
+                  "lowerLipRotateJoint7_L"
+                ],
+                "vertex_count": 8
+              },
+              {
+                "bones": [
+                  "lowerLipRotateJoint8_L"
+                ],
+                "vertex_count": 54
+              },
+              {
+                "bones": [
+                  "LipsScaleJoints_M"
+                ],
+                "vertex_count": 9755
+              },
+              {
+                "bones": [
+                  "upperLipScaleJoint0_M"
+                ],
+                "vertex_count": 43
+              },
+              {
+                "bones": [
+                  "upperLipScaleJoint1_R"
+                ],
+                "vertex_count": 40
+              },
+              {
+                "bones": [
+                  "upperLipScaleJoint2_R"
+                ],
+                "vertex_count": 40
+              },
+              {
+                "bones": [
+                  "upperLipScaleJoint3_R"
+                ],
+                "vertex_count": 46
+              },
+              {
+                "bones": [
+                  "upperLipScaleJoint4_R"
+                ],
+                "vertex_count": 46
+              },
+              {
+                "bones": [
+                  "upperLipScaleJoint5_R"
+                ],
+                "vertex_count": 41
+              },
+              {
+                "bones": [
+                  "upperLipScaleJoint6_R"
+                ],
+                "vertex_count": 28
+              },
+              {
+                "bones": [
+                  "upperLipScaleJoint7_R"
+                ],
+                "vertex_count": 54
+              },
+              {
+                "bones": [
+                  "upperLipScaleJoint8_R"
+                ],
+                "vertex_count": 42
+              },
+              {
+                "bones": [
+                  "upperLipScaleJoint1_L"
+                ],
+                "vertex_count": 40
+              },
+              {
+                "bones": [
+                  "upperLipScaleJoint2_L"
+                ],
+                "vertex_count": 40
+              },
+              {
+                "bones": [
+                  "upperLipScaleJoint3_L"
+                ],
+                "vertex_count": 46
+              },
+              {
+                "bones": [
+                  "upperLipScaleJoint4_L"
+                ],
+                "vertex_count": 46
+              },
+              {
+                "bones": [
+                  "upperLipScaleJoint5_L"
+                ],
+                "vertex_count": 41
+              },
+              {
+                "bones": [
+                  "upperLipScaleJoint6_L"
+                ],
+                "vertex_count": 28
+              },
+              {
+                "bones": [
+                  "upperLipScaleJoint7_L"
+                ],
+                "vertex_count": 54
+              },
+              {
+                "bones": [
+                  "upperLipScaleJoint8_L"
+                ],
+                "vertex_count": 42
+              },
+              {
+                "bones": [
+                  "lowerLipScaleJoint0_M"
+                ],
+                "vertex_count": 31
+              },
+              {
+                "bones": [
+                  "lowerLipScaleJoint1_R"
+                ],
+                "vertex_count": 30
+              },
+              {
+                "bones": [
+                  "lowerLipScaleJoint2_R"
+                ],
+                "vertex_count": 29
+              },
+              {
+                "bones": [
+                  "lowerLipScaleJoint3_R"
+                ],
+                "vertex_count": 27
+              },
+              {
+                "bones": [
+                  "lowerLipScaleJoint4_R"
+                ],
+                "vertex_count": 23
+              },
+              {
+                "bones": [
+                  "lowerLipScaleJoint5_R"
+                ],
+                "vertex_count": 20
+              },
+              {
+                "bones": [
+                  "lowerLipScaleJoint6_R"
+                ],
+                "vertex_count": 17
+              },
+              {
+                "bones": [
+                  "lowerLipScaleJoint7_R"
+                ],
+                "vertex_count": 8
+              },
+              {
+                "bones": [
+                  "lowerLipScaleJoint8_R"
+                ],
+                "vertex_count": 54
+              },
+              {
+                "bones": [
+                  "lowerLipScaleJoint1_L"
+                ],
+                "vertex_count": 30
+              },
+              {
+                "bones": [
+                  "lowerLipScaleJoint2_L"
+                ],
+                "vertex_count": 29
+              },
+              {
+                "bones": [
+                  "lowerLipScaleJoint3_L"
+                ],
+                "vertex_count": 27
+              },
+              {
+                "bones": [
+                  "lowerLipScaleJoint4_L"
+                ],
+                "vertex_count": 23
+              },
+              {
+                "bones": [
+                  "lowerLipScaleJoint5_L"
+                ],
+                "vertex_count": 20
+              },
+              {
+                "bones": [
+                  "lowerLipScaleJoint6_L"
+                ],
+                "vertex_count": 17
+              },
+              {
+                "bones": [
+                  "lowerLipScaleJoint7_L"
+                ],
+                "vertex_count": 8
+              },
+              {
+                "bones": [
+                  "lowerLipScaleJoint8_L"
+                ],
+                "vertex_count": 54
+              },
+              {
+                "bones": [
+                  "ClustersRegion"
+                ],
+                "vertex_count": 10083
+              },
+              {
+                "bones": [
+                  "zipperLips_RRegion"
+                ],
+                "vertex_count": 10083
+              },
+              {
+                "bones": [
+                  "zipperLips_LRegion"
+                ],
+                "vertex_count": 10083
+              },
+              {
+                "bones": [
+                  "bodyBreath_GEO"
+                ],
+                "vertex_count": 10083
+              },
+              {
+                "bones": [
+                  "faceHeadJoint"
+                ],
+                "vertex_count": 27144
+              },
+              {
+                "bones": [
+                  "upperLidMain0_R"
+                ],
+                "vertex_count": 1
+              },
+              {
+                "bones": [
+                  "upperLidMain1_R"
+                ],
+                "vertex_count": 26
+              },
+              {
+                "bones": [
+                  "upperLidMain2_R"
+                ],
+                "vertex_count": 27
+              },
+              {
+                "bones": [
+                  "upperLidMain3_R"
+                ],
+                "vertex_count": 25
+              },
+              {
+                "bones": [
+                  "upperLidMain4_R"
+                ],
+                "vertex_count": 25
+              },
+              {
+                "bones": [
+                  "upperLidMain5_R"
+                ],
+                "vertex_count": 25
+              },
+              {
+                "bones": [
+                  "upperLidMain6_R"
+                ],
+                "vertex_count": 25
+              },
+              {
+                "bones": [
+                  "upperLidMain7_R"
+                ],
+                "vertex_count": 25
+              },
+              {
+                "bones": [
+                  "upperLidMain8_R"
+                ],
+                "vertex_count": 25
+              },
+              {
+                "bones": [
+                  "upperLidMain9_R"
+                ],
+                "vertex_count": 25
+              },
+              {
+                "bones": [
+                  "upperLidMain10_R"
+                ],
+                "vertex_count": 25
+              },
+              {
+                "bones": [
+                  "upperLidMain11_R"
+                ],
+                "vertex_count": 26
+              },
+              {
+                "bones": [
+                  "upperLidMain12_R"
+                ],
+                "vertex_count": 2
+              },
+              {
+                "bones": [
+                  "lowerLidMain0_R"
+                ],
+                "vertex_count": 24
+              },
+              {
+                "bones": [
+                  "lowerLidMain1_R"
+                ],
+                "vertex_count": 25
+              },
+              {
+                "bones": [
+                  "lowerLidMain2_R"
+                ],
+                "vertex_count": 25
+              },
+              {
+                "bones": [
+                  "lowerLidMain3_R"
+                ],
+                "vertex_count": 25
+              },
+              {
+                "bones": [
+                  "lowerLidMain4_R"
+                ],
+                "vertex_count": 25
+              },
+              {
+                "bones": [
+                  "lowerLidMain5_R"
+                ],
+                "vertex_count": 25
+              },
+              {
+                "bones": [
+                  "lowerLidMain6_R"
+                ],
+                "vertex_count": 25
+              },
+              {
+                "bones": [
+                  "lowerLidMain7_R"
+                ],
+                "vertex_count": 25
+              },
+              {
+                "bones": [
+                  "lowerLidMain8_R"
+                ],
+                "vertex_count": 25
+              },
+              {
+                "bones": [
+                  "lowerLidMain9_R"
+                ],
+                "vertex_count": 26
+              },
+              {
+                "bones": [
+                  "lowerLidMain10_R"
+                ],
+                "vertex_count": 26
+              },
+              {
+                "bones": [
+                  "lowerLidMain11_R"
+                ],
+                "vertex_count": 27
+              },
+              {
+                "bones": [
+                  "lowerLidMain12_R"
+                ],
+                "vertex_count": 27
+              },
+              {
+                "bones": [
+                  "lowerLidMain13_R"
+                ],
+                "vertex_count": 26
+              },
+              {
+                "bones": [
+                  "lowerLidMain14_R"
+                ],
+                "vertex_count": 24
+              },
+              {
+                "bones": [
+                  "upperLidMain0_L"
+                ],
+                "vertex_count": 25
+              },
+              {
+                "bones": [
+                  "upperLidMain1_L"
+                ],
+                "vertex_count": 26
+              },
+              {
+                "bones": [
+                  "upperLidMain2_L"
+                ],
+                "vertex_count": 27
+              },
+              {
+                "bones": [
+                  "upperLidMain3_L"
+                ],
+                "vertex_count": 25
+              },
+              {
+                "bones": [
+                  "upperLidMain4_L"
+                ],
+                "vertex_count": 25
+              },
+              {
+                "bones": [
+                  "upperLidMain5_L"
+                ],
+                "vertex_count": 25
+              },
+              {
+                "bones": [
+                  "upperLidMain6_L"
+                ],
+                "vertex_count": 25
+              },
+              {
+                "bones": [
+                  "upperLidMain7_L"
+                ],
+                "vertex_count": 25
+              },
+              {
+                "bones": [
+                  "upperLidMain8_L"
+                ],
+                "vertex_count": 25
+              },
+              {
+                "bones": [
+                  "upperLidMain9_L"
+                ],
+                "vertex_count": 25
+              },
+              {
+                "bones": [
+                  "upperLidMain10_L"
+                ],
+                "vertex_count": 25
+              },
+              {
+                "bones": [
+                  "upperLidMain11_L"
+                ],
+                "vertex_count": 26
+              },
+              {
+                "bones": [
+                  "upperLidMain12_L"
+                ],
+                "vertex_count": 26
+              },
+              {
+                "bones": [
+                  "lowerLidMain1_L"
+                ],
+                "vertex_count": 25
+              },
+              {
+                "bones": [
+                  "lowerLidMain2_L"
+                ],
+                "vertex_count": 25
+              },
+              {
+                "bones": [
+                  "lowerLidMain3_L"
+                ],
+                "vertex_count": 25
+              },
+              {
+                "bones": [
+                  "lowerLidMain4_L"
+                ],
+                "vertex_count": 25
+              },
+              {
+                "bones": [
+                  "lowerLidMain5_L"
+                ],
+                "vertex_count": 25
+              },
+              {
+                "bones": [
+                  "lowerLidMain6_L"
+                ],
+                "vertex_count": 25
+              },
+              {
+                "bones": [
+                  "lowerLidMain7_L"
+                ],
+                "vertex_count": 25
+              },
+              {
+                "bones": [
+                  "lowerLidMain8_L"
+                ],
+                "vertex_count": 25
+              },
+              {
+                "bones": [
+                  "lowerLidMain9_L"
+                ],
+                "vertex_count": 26
+              },
+              {
+                "bones": [
+                  "lowerLidMain10_L"
+                ],
+                "vertex_count": 26
+              },
+              {
+                "bones": [
+                  "lowerLidMain11_L"
+                ],
+                "vertex_count": 27
+              },
+              {
+                "bones": [
+                  "lowerLidMain12_L"
+                ],
+                "vertex_count": 27
+              },
+              {
+                "bones": [
+                  "lowerLidMain13_L"
+                ],
+                "vertex_count": 26
+              },
+              {
+                "bones": [
+                  "Jaw_M"
+                ],
+                "vertex_count": 2666
+              },
+              {
+                "bones": [
+                  "Chin_M"
+                ],
+                "vertex_count": 461
+              },
+              {
+                "bones": [
+                  "Lips_M"
+                ],
+                "vertex_count": 676
+              },
+              {
+                "bones": [
+                  "FaceUpperRegion_M"
+                ],
+                "vertex_count": 22962
+              },
+              {
+                "bones": [
+                  "FaceLowerRegion_M"
+                ],
+                "vertex_count": 4400
+              }
+            ]
+          }
+        },
+        "ancestry": [
+          {
+            "name": "C_DanaRenderTest_OSC",
+            "visibility": null
+          },
+          {
+            "name": "C_DanaRenderTest_OSC",
+            "visibility": null
+          }
+        ]
+      }
+    ]
+  }
+]

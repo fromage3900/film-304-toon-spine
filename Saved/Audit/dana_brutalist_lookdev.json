@@ -1,0 +1,9 @@
+{
+  "result": "render_ready",
+  "map": "/Game/Maps/Lookdev/L_Dana_Brutalist_Lookdev",
+  "sequence": "/Game/Sequences/ProtoDiag/LS_DANA_BRUTALIST_KEYLIGHT_PORTRAIT_v01",
+  "config": "/Game/MoviePipelines/DanaBrutalist/CFG_DANA_BRUTALIST_KEYLIGHT_PORTRAIT_v01",
+  "output": "G:\\film-304-toon-spine\\Saved\\Renders\\dana_brutalist",
+  "shot": "DANA_BRUTALIST_KEYLIGHT_PORTRAIT_v01",
+  "pose": "neutral source pose; body has no skin weights"
+}

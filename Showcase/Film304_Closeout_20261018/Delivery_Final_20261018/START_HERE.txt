@@ -1,0 +1,17 @@
+FILM 304 OFFICE — REUSABLE UNREAL PROJECT
+Open HumberToonShader.uproject with Unreal Engine 5.8 and the project plugins enabled.
+Open /Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.
+Window > Cinematics > Movie Render Queue. Load Q_Office_ReadyToRender from
+/Game/MoviePipelines/Film304Closeout_20261018 if the queue is empty.
+Enable the desired job and choose Render (Local). Neutral ensemble is enabled by default.
+Change the output folder to a location on your computer before rendering.
+CFG_Office_Motion48_1080_v01 renders 48 frames at 24 fps.
+CFG_Office_Still20_1080_v01 renders one frame for material staging.
+Neutral, Warm and Cool lighting sequences are under /Game/Sequences/Film304Closeout_20261018.
+Dana's current skin and the shared toon graphs are intentionally preserved.
+Native Houdini source assets are under Tools/houdini/Published/Film304Closeout_20261018.
+This is an editable project archive, not a cooked standalone application.
+External plugin installation/license requirements still apply. See delivery manifest for proof limits.
+Delivery_Final_20261018 contains five 4K stills, original 48-frame motion exports,
+and separate 40-frame Loop40 movies with an eight-frame cyclic dissolve.
+The native 48-frame renders have a brightness discontinuity; use Loop40 for looping playback.

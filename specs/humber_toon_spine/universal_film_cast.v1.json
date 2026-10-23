@@ -1,0 +1,24 @@
+{
+  "name": "Dana",
+  "mesh": "/Game/Meshes/Office/Props/C_DanaRenderTest_OSC",
+  "yaw": -115.0,
+  "display_height_cm": 170.0,
+  "status": "existing reference mesh only; rig and eyes under Luna review",
+  "slots": {
+    "danahair_mat": "Hair",
+    "danairis_mat": "Iris",
+    "danaeye_mat": "EyeWhite",
+    "danacornea_mat": "Hidden",
+    "danaeyeint_mat": "EyeInterior",
+    "danashoes_mat": "Shoes",
+    "danapantsbutton_mat": "Button",
+    "danapants_mat": "Skirt",
+    "danashirt_mat": "Shirt",
+    "danaskin_mat": "Skin",
+    "openpbr_shader1": "Hidden"
+  },
+  "remaining_cast": {
+    "count_requested": 5,
+    "status": "await validated meshes and explicit slot maps; no auto-import"
+  }
+}

@@ -1,0 +1,510 @@
+{
+  "seqs": [
+    {
+      "file": "Content\\Sequences\\Film304Hero_20261018\\LS_HERO01_WideDiagonal.uasset",
+      "bytes": 16690,
+      "keep": [
+        "/Game/Sequences/Film304Hero_20261018/LS_HERO01_WideDiagonal",
+        "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_HeroTonight",
+        "/Script/CinematicCamera",
+        "/Script/LevelSequence",
+        "CameraBindingID",
+        "CameraCutTrack",
+        "CineCameraActor",
+        "L_Film_HeroTonight",
+        "TickResolution",
+        "UpgradedLevelSequenceBindingReferences",
+        "/Game/Animations/Film304Idle_20261017/AS_Dana_OfficeIdle_48f_v01",
+        "/Game/Animations/Film304Idle_20261017/AS_David_DeskSleep_48f_v02",
+        "/Game/Animations/Film304Idle_20261017/AS_Sam_OfficeIdle_48f_v01",
+        "/Game/Animations/Film304Idle_20261017/AS_Spider_OfficeIdle_48f_v01",
+        "/Game/Sequences/Film304Hero_20261018/LS_HERO01_WideDiagonal",
+        "Default__MovieSceneCameraCutSection",
+        "LevelSequence",
+        "LS_HERO01_WideDiagonal",
+        "MovieSceneCameraCutSection",
+        "MovieSceneCameraCutTrack",
+        "PersistentLevel.SkeletalMeshActor_0",
+        "PersistentLevel.SkeletalMeshActor_2",
+        "PersistentLevel.SkeletalMeshActor_6",
+        "PersistentLevel.SkeletalMeshActor_1",
+        "PersistentLevel.CineCameraActor_9",
+        "LevelSequence",
+        "LS_HERO01_WideDiagonal",
+        "LS_HERO01_WideDiagonal",
+        "/Script/LevelSequence.LevelSequence"
+      ],
+      "int32": {
+        "1920": 0,
+        "1080": 0,
+        "1323": 0,
+        "744": 0,
+        "1": 287,
+        "20": 9,
+        "47": 6,
+        "48": 8
+      }
+    },
+    {
+      "file": "Content\\Sequences\\Film304Hero_20261018\\LS_HERO02_DeskInsert.uasset",
+      "bytes": 16681,
+      "keep": [
+        "/Game/Sequences/Film304Hero_20261018/LS_HERO02_DeskInsert",
+        "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_HeroTonight",
+        "/Script/CinematicCamera",
+        "/Script/LevelSequence",
+        "CameraBindingID",
+        "CameraCutTrack",
+        "CineCameraActor",
+        "L_Film_HeroTonight",
+        "TickResolution",
+        "UpgradedLevelSequenceBindingReferences",
+        "/Game/Animations/Film304Idle_20261017/AS_Dana_OfficeIdle_48f_v01",
+        "/Game/Animations/Film304Idle_20261017/AS_David_DeskSleep_48f_v02",
+        "/Game/Animations/Film304Idle_20261017/AS_Sam_OfficeIdle_48f_v01",
+        "/Game/Animations/Film304Idle_20261017/AS_Spider_OfficeIdle_48f_v01",
+        "/Game/Sequences/Film304Hero_20261018/LS_HERO02_DeskInsert",
+        "Default__MovieSceneCameraCutSection",
+        "LevelSequence",
+        "LS_HERO02_DeskInsert",
+        "MovieSceneCameraCutSection",
+        "MovieSceneCameraCutTrack",
+        "PersistentLevel.SkeletalMeshActor_2",
+        "PersistentLevel.SkeletalMeshActor_0",
+        "PersistentLevel.SkeletalMeshActor_1",
+        "PersistentLevel.SkeletalMeshActor_6",
+        "PersistentLevel.CineCameraActor_12",
+        "LevelSequence",
+        "LS_HERO02_DeskInsert",
+        "LS_HERO02_DeskInsert",
+        "/Script/LevelSequence.LevelSequence"
+      ],
+      "int32": {
+        "1920": 0,
+        "1080": 0,
+        "1323": 0,
+        "744": 0,
+        "1": 287,
+        "20": 9,
+        "47": 6,
+        "48": 8
+      }
+    },
+    {
+      "file": "Content\\Sequences\\Film304Hero_20261018\\LS_HERO03_EntryArrival.uasset",
+      "bytes": 16691,
+      "keep": [
+        "/Game/Sequences/Film304Hero_20261018/LS_HERO03_EntryArrival",
+        "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_HeroTonight",
+        "/Script/CinematicCamera",
+        "/Script/LevelSequence",
+        "CameraBindingID",
+        "CameraCutTrack",
+        "CineCameraActor",
+        "L_Film_HeroTonight",
+        "TickResolution",
+        "UpgradedLevelSequenceBindingReferences",
+        "/Game/Animations/Film304Idle_20261017/AS_Dana_OfficeIdle_48f_v01",
+        "/Game/Animations/Film304Idle_20261017/AS_David_DeskSleep_48f_v02",
+        "/Game/Animations/Film304Idle_20261017/AS_Sam_OfficeIdle_48f_v01",
+        "/Game/Animations/Film304Idle_20261017/AS_Spider_OfficeIdle_48f_v01",
+        "/Game/Sequences/Film304Hero_20261018/LS_HERO03_EntryArrival",
+        "Default__MovieSceneCameraCutSection",
+        "LevelSequence",
+        "LS_HERO03_EntryArrival",
+        "MovieSceneCameraCutSection",
+        "MovieSceneCameraCutTrack",
+        "PersistentLevel.SkeletalMeshActor_2",
+        "PersistentLevel.SkeletalMeshActor_6",
+        "PersistentLevel.SkeletalMeshActor_1",
+        "PersistentLevel.CineCameraActor_10",
+        "PersistentLevel.SkeletalMeshActor_0",
+        "LevelSequence",
+        "LS_HERO03_EntryArrival",
+        "LS_HERO03_EntryArrival",
+        "/Script/LevelSequence.LevelSequence"
+      ],
+      "int32": {
+        "1920": 0,
+        "1080": 0,
+        "1323": 0,
+        "744": 0,
+        "1": 287,
+        "20": 9,
+        "47": 6,
+        "48": 9
+      }
+    }
+  ],
+  "cfgs": [
+    {
+      "file": "Content\\MoviePipelines\\Hero20261018\\CFG_HERO01_WideDiagonal.uasset",
+      "bytes": 3759,
+      "keep": [
+        "/Game/MoviePipelines/Hero20261018/CFG_HERO01_WideDiagonal",
+        "EMoviePipelineTextureStreamingMethod",
+        "EMoviePipelineTextureStreamingMethod::FullyLoad",
+        "OutputDirectory",
+        "OutputSetting",
+        "/Game/MoviePipelines/Hero20261018/CFG_HERO01_WideDiagonal",
+        "CFG_HERO01_WideDiagonal",
+        "Default__MoviePipelinePrimaryConfig",
+        "DefaultOutputSetting",
+        "MoviePipelineAntiAliasingSetting",
+        "MoviePipelineDeferredPassBase",
+        "MoviePipelineGameOverrideSetting",
+        "MoviePipelineImageSequenceOutput_PNG",
+        "MoviePipelineOutputSetting",
+        "MoviePipelinePrimaryConfig",
+        "MoviePipelinePrimaryConfig",
+        "CFG_HERO01_WideDiagonal",
+        "CFG_HERO01_WideDiagonal",
+        "/Script/MovieRenderPipelineCore.MoviePipelinePrimaryConfig",
+        "HERO01_SWEEP_NIGHT_CLEAR"
+      ],
+      "int32": {
+        "1920": 0,
+        "1080": 0,
+        "1323": 0,
+        "744": 0,
+        "1": 28,
+        "20": 20,
+        "47": 0,
+        "48": 5
+      }
+    },
+    {
+      "file": "Content\\MoviePipelines\\Hero20261018\\CFG_HERO02_DeskInsert.uasset",
+      "bytes": 3746,
+      "keep": [
+        "/Game/MoviePipelines/Hero20261018/CFG_HERO02_DeskInsert",
+        "EMoviePipelineTextureStreamingMethod",
+        "EMoviePipelineTextureStreamingMethod::FullyLoad",
+        "OutputDirectory",
+        "OutputSetting",
+        "/Game/MoviePipelines/Hero20261018/CFG_HERO02_DeskInsert",
+        "CFG_HERO02_DeskInsert",
+        "Default__MoviePipelinePrimaryConfig",
+        "DefaultOutputSetting",
+        "MoviePipelineAntiAliasingSetting",
+        "MoviePipelineDeferredPassBase",
+        "MoviePipelineGameOverrideSetting",
+        "MoviePipelineImageSequenceOutput_PNG",
+        "MoviePipelineOutputSetting",
+        "MoviePipelinePrimaryConfig",
+        "MoviePipelinePrimaryConfig",
+        "CFG_HERO02_DeskInsert",
+        "CFG_HERO02_DeskInsert",
+        "/Script/MovieRenderPipelineCore.MoviePipelinePrimaryConfig",
+        "CFG_HERO02_DeskInsert"
+      ],
+      "int32": {
+        "1920": 0,
+        "1080": 0,
+        "1323": 0,
+        "744": 0,
+        "1": 28,
+        "20": 20,
+        "47": 0,
+        "48": 3
+      }
+    },
+    {
+      "file": "Content\\MoviePipelines\\Hero20261018\\CFG_HERO03_EntryArrival.uasset",
+      "bytes": 3758,
+      "keep": [
+        "/Game/MoviePipelines/Hero20261018/CFG_HERO03_EntryArrival",
+        "EMoviePipelineTextureStreamingMethod",
+        "EMoviePipelineTextureStreamingMethod::FullyLoad",
+        "OutputDirectory",
+        "OutputSetting",
+        "/Game/MoviePipelines/Hero20261018/CFG_HERO03_EntryArrival",
+        "CFG_HERO03_EntryArrival",
+        "Default__MoviePipelinePrimaryConfig",
+        "DefaultOutputSetting",
+        "MoviePipelineAntiAliasingSetting",
+        "MoviePipelineDeferredPassBase",
+        "MoviePipelineGameOverrideSetting",
+        "MoviePipelineImageSequenceOutput_PNG",
+        "MoviePipelineOutputSetting",
+        "MoviePipelinePrimaryConfig",
+        "MoviePipelinePrimaryConfig",
+        "CFG_HERO03_EntryArrival",
+        "CFG_HERO03_EntryArrival",
+        "/Script/MovieRenderPipelineCore.MoviePipelinePrimaryConfig",
+        "HERO03_EntryArrival_V02"
+      ],
+      "int32": {
+        "1920": 0,
+        "1080": 0,
+        "1323": 0,
+        "744": 0,
+        "1": 28,
+        "20": 20,
+        "47": 0,
+        "48": 3
+      }
+    }
+  ],
+  "hero04_hits": [],
+  "showcase": [
+    {
+      "file": "HERO01_SWEEP_CLOUD03.png",
+      "bytes": 2373911,
+      "wh": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "file": "HERO01_SWEEP_NIGHT.png",
+      "bytes": 2415332,
+      "wh": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "file": "HERO01_SWEEP_NIGHT_CLEAR.png",
+      "bytes": 2415300,
+      "wh": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "file": "HERO01_WideDiagonal_20261018.png",
+      "bytes": 2368759,
+      "wh": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "file": "HERO01_WideDiagonal_V02.png",
+      "bytes": 2372765,
+      "wh": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "file": "HERO02_DeskInsert_20261018.png",
+      "bytes": 1975727,
+      "wh": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "file": "HERO03_EntryArrival_20261018.png",
+      "bytes": 2418740,
+      "wh": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "file": "HERO03_EntryArrival_V02.png",
+      "bytes": 2418777,
+      "wh": [
+        1920,
+        1080
+      ]
+    }
+  ],
+  "captures": [
+    {
+      "file": "after_revert_wide.png.png",
+      "bytes": 1515298,
+      "wh": [
+        1799,
+        744
+      ]
+    },
+    {
+      "file": "check_editor_off.png.png",
+      "bytes": 1006144,
+      "wh": [
+        1323,
+        744
+      ]
+    },
+    {
+      "file": "check_editor_on.png.png",
+      "bytes": 979605,
+      "wh": [
+        1323,
+        744
+      ]
+    },
+    {
+      "file": "clean_01_wide.png.png",
+      "bytes": 1154152,
+      "wh": [
+        1323,
+        744
+      ]
+    },
+    {
+      "file": "clean_02_medium.png.png",
+      "bytes": 1141062,
+      "wh": [
+        1323,
+        744
+      ]
+    },
+    {
+      "file": "clean_03_close.png.png",
+      "bytes": 1091681,
+      "wh": [
+        1323,
+        744
+      ]
+    },
+    {
+      "file": "clean_04_macro.png.png",
+      "bytes": 852484,
+      "wh": [
+        1323,
+        744
+      ]
+    },
+    {
+      "file": "hero_01_wide_clean.png.png",
+      "bytes": 990557,
+      "wh": [
+        1323,
+        744
+      ]
+    },
+    {
+      "file": "hero_01_wide_dither.png.png",
+      "bytes": 1035206,
+      "wh": [
+        1323,
+        744
+      ]
+    },
+    {
+      "file": "hero_01_wide_riso.png.png",
+      "bytes": 1032108,
+      "wh": [
+        1323,
+        744
+      ]
+    },
+    {
+      "file": "hero_02_medium_clean.png.png",
+      "bytes": 1126121,
+      "wh": [
+        1323,
+        744
+      ]
+    },
+    {
+      "file": "hero_02_medium_dither.png.png",
+      "bytes": 1137469,
+      "wh": [
+        1323,
+        744
+      ]
+    },
+    {
+      "file": "hero_02_medium_riso.png.png",
+      "bytes": 1135446,
+      "wh": [
+        1323,
+        744
+      ]
+    },
+    {
+      "file": "hero_02_medium_uds1200.png.png",
+      "bytes": 1102804,
+      "wh": [
+        1323,
+        744
+      ]
+    },
+    {
+      "file": "hero_02_medium_uds1730.png.png",
+      "bytes": 1085071,
+      "wh": [
+        1323,
+        744
+      ]
+    },
+    {
+      "file": "hero_02_medium_uds2130.png.png",
+      "bytes": 1095808,
+      "wh": [
+        1323,
+        744
+      ]
+    },
+    {
+      "file": "hero_02_medium_uds700.png.png",
+      "bytes": 1145609,
+      "wh": [
+        1323,
+        744
+      ]
+    },
+    {
+      "file": "hero_03_close_clean.png.png",
+      "bytes": 1088195,
+      "wh": [
+        1323,
+        744
+      ]
+    },
+    {
+      "file": "hero_03_close_dither.png.png",
+      "bytes": 1143736,
+      "wh": [
+        1323,
+        744
+      ]
+    },
+    {
+      "file": "hero_03_close_riso.png.png",
+      "bytes": 1143470,
+      "wh": [
+        1323,
+        744
+      ]
+    },
+    {
+      "file": "hero_04_macro_clean.png.png",
+      "bytes": 854326,
+      "wh": [
+        1323,
+        744
+      ]
+    },
+    {
+      "file": "hero_04_macro_dither.png.png",
+      "bytes": 852578,
+      "wh": [
+        1323,
+        744
+      ]
+    },
+    {
+      "file": "hero_04_macro_riso.png.png",
+      "bytes": 853730,
+      "wh": [
+        1323,
+        744
+      ]
+    }
+  ],
+  "L_Film_Office": {
+    "exists": true,
+    "bytes": 960537
+  },
+  "L_Film_HeroTonight_20261018": {
+    "exists": true,
+    "bytes": 555506
+  }
+}

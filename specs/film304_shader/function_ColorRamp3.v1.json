@@ -1,0 +1,547 @@
+{
+  "asset_path": "/Game/Materials/Functions/Film304/MF_Film304_ColorRamp3",
+  "description": "",
+  "user_exposed_caption": "",
+  "expose_to_library": false,
+  "type": "MaterialFunction",
+  "library_categories": [
+    "Misc"
+  ],
+  "inputs": [
+    {
+      "id": "MaterialExpressionFunctionInput_0",
+      "name": "RampLow",
+      "sort_priority": 0,
+      "description": "",
+      "use_preview_value_as_default": false,
+      "type": "Vector3",
+      "preview_value": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "blend_input_relevance": 0,
+      "pos": [
+        -1100,
+        0
+      ]
+    },
+    {
+      "id": "MaterialExpressionFunctionInput_1",
+      "name": "RampMid",
+      "sort_priority": 1,
+      "description": "",
+      "use_preview_value_as_default": false,
+      "type": "Vector3",
+      "preview_value": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "blend_input_relevance": 0,
+      "pos": [
+        -1100,
+        120
+      ]
+    },
+    {
+      "id": "MaterialExpressionFunctionInput_2",
+      "name": "RampHigh",
+      "sort_priority": 2,
+      "description": "",
+      "use_preview_value_as_default": false,
+      "type": "Vector3",
+      "preview_value": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "blend_input_relevance": 0,
+      "pos": [
+        -1100,
+        240
+      ]
+    },
+    {
+      "id": "MaterialExpressionFunctionInput_3",
+      "name": "RampPosMid",
+      "sort_priority": 3,
+      "description": "",
+      "use_preview_value_as_default": false,
+      "type": "Vector3",
+      "preview_value": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "blend_input_relevance": 0,
+      "pos": [
+        -1100,
+        360
+      ]
+    },
+    {
+      "id": "MaterialExpressionFunctionInput_4",
+      "name": "Mask",
+      "sort_priority": 4,
+      "description": "",
+      "use_preview_value_as_default": false,
+      "type": "Vector3",
+      "preview_value": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "blend_input_relevance": 0,
+      "pos": [
+        -1100,
+        480
+      ]
+    },
+    {
+      "id": "MaterialExpressionFunctionInput_5",
+      "name": "RampContrast",
+      "sort_priority": 5,
+      "description": "",
+      "use_preview_value_as_default": false,
+      "type": "Vector3",
+      "preview_value": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "blend_input_relevance": 0,
+      "pos": [
+        -1100,
+        600
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "MaterialExpressionFunctionOutput_0",
+      "name": "Color",
+      "sort_priority": 0,
+      "description": "",
+      "pos": [
+        140,
+        240
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "MaterialExpressionSaturate_0",
+      "class": "Saturate",
+      "pos": [
+        -880,
+        480
+      ],
+      "props": {
+        "Input": "(Expression=\"/Script/Engine.MaterialExpressionFunctionInput'/Game/Materials/Functions/Film304/MF_Film304_ColorRamp3.MF_Film304_ColorRamp3:MaterialExpressionFunctionInput_4'\")"
+      }
+    },
+    {
+      "id": "MaterialExpressionMultiply_0",
+      "class": "Multiply",
+      "pos": [
+        -880,
+        620
+      ],
+      "props": {
+        "A": "(Expression=\"/Script/Engine.MaterialExpressionFunctionInput'/Game/Materials/Functions/Film304/MF_Film304_ColorRamp3.MF_Film304_ColorRamp3:MaterialExpressionFunctionInput_5'\")",
+        "B": "(Expression=\"/Script/Engine.MaterialExpressionConstant'/Game/Materials/Functions/Film304/MF_Film304_ColorRamp3.MF_Film304_ColorRamp3:MaterialExpressionConstant_0'\")",
+        "ConstA": "0.000000",
+        "ConstB": "1.000000"
+      }
+    },
+    {
+      "id": "MaterialExpressionConstant_0",
+      "class": "Constant",
+      "pos": [
+        -1040,
+        700
+      ],
+      "props": {
+        "R": "4.000000"
+      }
+    },
+    {
+      "id": "MaterialExpressionAdd_0",
+      "class": "Add",
+      "pos": [
+        -720,
+        620
+      ],
+      "props": {
+        "A": "(Expression=\"/Script/Engine.MaterialExpressionConstant'/Game/Materials/Functions/Film304/MF_Film304_ColorRamp3.MF_Film304_ColorRamp3:MaterialExpressionConstant_1'\")",
+        "B": "(Expression=\"/Script/Engine.MaterialExpressionMultiply'/Game/Materials/Functions/Film304/MF_Film304_ColorRamp3.MF_Film304_ColorRamp3:MaterialExpressionMultiply_0'\")",
+        "ConstA": "0.000000",
+        "ConstB": "1.000000"
+      }
+    },
+    {
+      "id": "MaterialExpressionConstant_1",
+      "class": "Constant",
+      "pos": [
+        -880,
+        720
+      ],
+      "props": {
+        "R": "1.000000"
+      }
+    },
+    {
+      "id": "MaterialExpressionPower_0",
+      "class": "Power",
+      "pos": [
+        -560,
+        480
+      ],
+      "props": {
+        "Base": "(Expression=\"/Script/Engine.MaterialExpressionSaturate'/Game/Materials/Functions/Film304/MF_Film304_ColorRamp3.MF_Film304_ColorRamp3:MaterialExpressionSaturate_0'\")",
+        "Exponent": "(Expression=\"/Script/Engine.MaterialExpressionAdd'/Game/Materials/Functions/Film304/MF_Film304_ColorRamp3.MF_Film304_ColorRamp3:MaterialExpressionAdd_0'\")",
+        "ConstExponent": "2.000000"
+      }
+    },
+    {
+      "id": "MaterialExpressionSubtract_0",
+      "class": "Subtract",
+      "pos": [
+        -720,
+        360
+      ],
+      "props": {
+        "A": "(Expression=\"/Script/Engine.MaterialExpressionConstant'/Game/Materials/Functions/Film304/MF_Film304_ColorRamp3.MF_Film304_ColorRamp3:MaterialExpressionConstant_1'\")",
+        "B": "(Expression=\"/Script/Engine.MaterialExpressionFunctionInput'/Game/Materials/Functions/Film304/MF_Film304_ColorRamp3.MF_Film304_ColorRamp3:MaterialExpressionFunctionInput_3'\")",
+        "ConstA": "1.000000",
+        "ConstB": "1.000000"
+      }
+    },
+    {
+      "id": "MaterialExpressionDivide_0",
+      "class": "Divide",
+      "pos": [
+        -560,
+        320
+      ],
+      "props": {
+        "A": "(Expression=\"/Script/Engine.MaterialExpressionPower'/Game/Materials/Functions/Film304/MF_Film304_ColorRamp3.MF_Film304_ColorRamp3:MaterialExpressionPower_0'\")",
+        "B": "(Expression=\"/Script/Engine.MaterialExpressionFunctionInput'/Game/Materials/Functions/Film304/MF_Film304_ColorRamp3.MF_Film304_ColorRamp3:MaterialExpressionFunctionInput_3'\")",
+        "ConstA": "1.000000",
+        "ConstB": "2.000000"
+      }
+    },
+    {
+      "id": "MaterialExpressionSaturate_1",
+      "class": "Saturate",
+      "pos": [
+        -400,
+        320
+      ],
+      "props": {
+        "Input": "(Expression=\"/Script/Engine.MaterialExpressionDivide'/Game/Materials/Functions/Film304/MF_Film304_ColorRamp3.MF_Film304_ColorRamp3:MaterialExpressionDivide_0'\")"
+      }
+    },
+    {
+      "id": "MaterialExpressionSubtract_1",
+      "class": "Subtract",
+      "pos": [
+        -560,
+        440
+      ],
+      "props": {
+        "A": "(Expression=\"/Script/Engine.MaterialExpressionPower'/Game/Materials/Functions/Film304/MF_Film304_ColorRamp3.MF_Film304_ColorRamp3:MaterialExpressionPower_0'\")",
+        "B": "(Expression=\"/Script/Engine.MaterialExpressionFunctionInput'/Game/Materials/Functions/Film304/MF_Film304_ColorRamp3.MF_Film304_ColorRamp3:MaterialExpressionFunctionInput_3'\")",
+        "ConstA": "1.000000",
+        "ConstB": "1.000000"
+      }
+    },
+    {
+      "id": "MaterialExpressionDivide_1",
+      "class": "Divide",
+      "pos": [
+        -400,
+        440
+      ],
+      "props": {
+        "A": "(Expression=\"/Script/Engine.MaterialExpressionSubtract'/Game/Materials/Functions/Film304/MF_Film304_ColorRamp3.MF_Film304_ColorRamp3:MaterialExpressionSubtract_1'\")",
+        "B": "(Expression=\"/Script/Engine.MaterialExpressionSubtract'/Game/Materials/Functions/Film304/MF_Film304_ColorRamp3.MF_Film304_ColorRamp3:MaterialExpressionSubtract_0'\")",
+        "ConstA": "1.000000",
+        "ConstB": "2.000000"
+      }
+    },
+    {
+      "id": "MaterialExpressionSaturate_2",
+      "class": "Saturate",
+      "pos": [
+        -240,
+        440
+      ],
+      "props": {
+        "Input": "(Expression=\"/Script/Engine.MaterialExpressionDivide'/Game/Materials/Functions/Film304/MF_Film304_ColorRamp3.MF_Film304_ColorRamp3:MaterialExpressionDivide_1'\")"
+      }
+    },
+    {
+      "id": "MaterialExpressionLinearInterpolate_0",
+      "class": "LinearInterpolate",
+      "pos": [
+        -240,
+        200
+      ],
+      "props": {
+        "A": "(Expression=\"/Script/Engine.MaterialExpressionFunctionInput'/Game/Materials/Functions/Film304/MF_Film304_ColorRamp3.MF_Film304_ColorRamp3:MaterialExpressionFunctionInput_0'\")",
+        "B": "(Expression=\"/Script/Engine.MaterialExpressionFunctionInput'/Game/Materials/Functions/Film304/MF_Film304_ColorRamp3.MF_Film304_ColorRamp3:MaterialExpressionFunctionInput_1'\")",
+        "Alpha": "(Expression=\"/Script/Engine.MaterialExpressionPower'/Game/Materials/Functions/Film304/MF_Film304_ColorRamp3.MF_Film304_ColorRamp3:MaterialExpressionPower_1'\")",
+        "ConstA": "0.000000",
+        "ConstB": "1.000000",
+        "ConstAlpha": "0.500000"
+      }
+    },
+    {
+      "id": "MaterialExpressionLinearInterpolate_1",
+      "class": "LinearInterpolate",
+      "pos": [
+        -40,
+        240
+      ],
+      "props": {
+        "A": "(Expression=\"/Script/Engine.MaterialExpressionLinearInterpolate'/Game/Materials/Functions/Film304/MF_Film304_ColorRamp3.MF_Film304_ColorRamp3:MaterialExpressionLinearInterpolate_0'\")",
+        "B": "(Expression=\"/Script/Engine.MaterialExpressionFunctionInput'/Game/Materials/Functions/Film304/MF_Film304_ColorRamp3.MF_Film304_ColorRamp3:MaterialExpressionFunctionInput_2'\")",
+        "Alpha": "(Expression=\"/Script/Engine.MaterialExpressionPower'/Game/Materials/Functions/Film304/MF_Film304_ColorRamp3.MF_Film304_ColorRamp3:MaterialExpressionPower_2'\")",
+        "ConstA": "0.000000",
+        "ConstB": "1.000000",
+        "ConstAlpha": "0.500000"
+      }
+    },
+    {
+      "id": "MaterialExpressionScalarParameter_0",
+      "class": "ScalarParameter",
+      "pos": [
+        -880,
+        120
+      ],
+      "parameter_name": "RampSharpness",
+      "group": "ColorRamp",
+      "sort_priority": 32,
+      "props": {
+        "DefaultValue": "1.000000",
+        "ControlType": "Numeric",
+        "SliderMin": "0.000000",
+        "SliderMax": "0.000000",
+        "Enumeration": "None",
+        "EnumerationIndex": "0",
+        "bUseCustomPrimitiveData": "False",
+        "PrimitiveDataIndex": "0",
+        "ParameterName": "RampSharpness",
+        "ExpressionGUID": "707BF21547AC3DA0BBEC598C8965E319",
+        "Group": "ColorRamp",
+        "SortPriority": "32"
+      }
+    },
+    {
+      "id": "MaterialExpressionPower_1",
+      "class": "Power",
+      "pos": [
+        -80,
+        160
+      ],
+      "props": {
+        "Base": "(Expression=\"/Script/Engine.MaterialExpressionSaturate'/Game/Materials/Functions/Film304/MF_Film304_ColorRamp3.MF_Film304_ColorRamp3:MaterialExpressionSaturate_1'\")",
+        "Exponent": "(Expression=\"/Script/Engine.MaterialExpressionScalarParameter'/Game/Materials/Functions/Film304/MF_Film304_ColorRamp3.MF_Film304_ColorRamp3:MaterialExpressionScalarParameter_0'\")",
+        "ConstExponent": "2.000000"
+      }
+    },
+    {
+      "id": "MaterialExpressionPower_2",
+      "class": "Power",
+      "pos": [
+        -80,
+        380
+      ],
+      "props": {
+        "Base": "(Expression=\"/Script/Engine.MaterialExpressionSaturate'/Game/Materials/Functions/Film304/MF_Film304_ColorRamp3.MF_Film304_ColorRamp3:MaterialExpressionSaturate_2'\")",
+        "Exponent": "(Expression=\"/Script/Engine.MaterialExpressionScalarParameter'/Game/Materials/Functions/Film304/MF_Film304_ColorRamp3.MF_Film304_ColorRamp3:MaterialExpressionScalarParameter_0'\")",
+        "ConstExponent": "2.000000"
+      }
+    }
+  ],
+  "custom_hlsl_nodes": [],
+  "connections": [
+    {
+      "from": "MaterialExpressionFunctionInput_4",
+      "from_pin": "None",
+      "to": "MaterialExpressionSaturate_0",
+      "to_pin": "Input"
+    },
+    {
+      "from": "MaterialExpressionFunctionInput_5",
+      "from_pin": "None",
+      "to": "MaterialExpressionMultiply_0",
+      "to_pin": "A"
+    },
+    {
+      "from": "MaterialExpressionConstant_0",
+      "from_pin": "None",
+      "to": "MaterialExpressionMultiply_0",
+      "to_pin": "B"
+    },
+    {
+      "from": "MaterialExpressionConstant_1",
+      "from_pin": "None",
+      "to": "MaterialExpressionAdd_0",
+      "to_pin": "A"
+    },
+    {
+      "from": "MaterialExpressionMultiply_0",
+      "from_pin": "None",
+      "to": "MaterialExpressionAdd_0",
+      "to_pin": "B"
+    },
+    {
+      "from": "MaterialExpressionSaturate_0",
+      "from_pin": "None",
+      "to": "MaterialExpressionPower_0",
+      "to_pin": "Base"
+    },
+    {
+      "from": "MaterialExpressionAdd_0",
+      "from_pin": "None",
+      "to": "MaterialExpressionPower_0",
+      "to_pin": "Exponent"
+    },
+    {
+      "from": "MaterialExpressionConstant_1",
+      "from_pin": "None",
+      "to": "MaterialExpressionSubtract_0",
+      "to_pin": "A"
+    },
+    {
+      "from": "MaterialExpressionFunctionInput_3",
+      "from_pin": "None",
+      "to": "MaterialExpressionSubtract_0",
+      "to_pin": "B"
+    },
+    {
+      "from": "MaterialExpressionPower_0",
+      "from_pin": "None",
+      "to": "MaterialExpressionDivide_0",
+      "to_pin": "A"
+    },
+    {
+      "from": "MaterialExpressionFunctionInput_3",
+      "from_pin": "None",
+      "to": "MaterialExpressionDivide_0",
+      "to_pin": "B"
+    },
+    {
+      "from": "MaterialExpressionDivide_0",
+      "from_pin": "None",
+      "to": "MaterialExpressionSaturate_1",
+      "to_pin": "Input"
+    },
+    {
+      "from": "MaterialExpressionPower_0",
+      "from_pin": "None",
+      "to": "MaterialExpressionSubtract_1",
+      "to_pin": "A"
+    },
+    {
+      "from": "MaterialExpressionFunctionInput_3",
+      "from_pin": "None",
+      "to": "MaterialExpressionSubtract_1",
+      "to_pin": "B"
+    },
+    {
+      "from": "MaterialExpressionSubtract_1",
+      "from_pin": "None",
+      "to": "MaterialExpressionDivide_1",
+      "to_pin": "A"
+    },
+    {
+      "from": "MaterialExpressionSubtract_0",
+      "from_pin": "None",
+      "to": "MaterialExpressionDivide_1",
+      "to_pin": "B"
+    },
+    {
+      "from": "MaterialExpressionDivide_1",
+      "from_pin": "None",
+      "to": "MaterialExpressionSaturate_2",
+      "to_pin": "Input"
+    },
+    {
+      "from": "MaterialExpressionFunctionInput_0",
+      "from_pin": "None",
+      "to": "MaterialExpressionLinearInterpolate_0",
+      "to_pin": "A"
+    },
+    {
+      "from": "MaterialExpressionFunctionInput_1",
+      "from_pin": "None",
+      "to": "MaterialExpressionLinearInterpolate_0",
+      "to_pin": "B"
+    },
+    {
+      "from": "MaterialExpressionPower_1",
+      "from_pin": "None",
+      "to": "MaterialExpressionLinearInterpolate_0",
+      "to_pin": "Alpha"
+    },
+    {
+      "from": "MaterialExpressionLinearInterpolate_0",
+      "from_pin": "None",
+      "to": "MaterialExpressionLinearInterpolate_1",
+      "to_pin": "A"
+    },
+    {
+      "from": "MaterialExpressionFunctionInput_2",
+      "from_pin": "None",
+      "to": "MaterialExpressionLinearInterpolate_1",
+      "to_pin": "B"
+    },
+    {
+      "from": "MaterialExpressionPower_2",
+      "from_pin": "None",
+      "to": "MaterialExpressionLinearInterpolate_1",
+      "to_pin": "Alpha"
+    },
+    {
+      "from": "MaterialExpressionLinearInterpolate_1",
+      "from_pin": "None",
+      "to": "MaterialExpressionFunctionOutput_0",
+      "to_pin": "None"
+    },
+    {
+      "from": "MaterialExpressionSaturate_1",
+      "from_pin": "None",
+      "to": "MaterialExpressionPower_1",
+      "to_pin": "Base"
+    },
+    {
+      "from": "MaterialExpressionScalarParameter_0",
+      "from_pin": "None",
+      "to": "MaterialExpressionPower_1",
+      "to_pin": "Exponent"
+    },
+    {
+      "from": "MaterialExpressionSaturate_2",
+      "from_pin": "None",
+      "to": "MaterialExpressionPower_2",
+      "to_pin": "Base"
+    },
+    {
+      "from": "MaterialExpressionScalarParameter_0",
+      "from_pin": "None",
+      "to": "MaterialExpressionPower_2",
+      "to_pin": "Exponent"
+    }
+  ],
+  "expression_count": 24
+}

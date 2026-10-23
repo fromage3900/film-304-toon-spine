@@ -1,0 +1,21 @@
+{
+  "map": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office",
+  "dana_skin": [
+    [
+      "Film_Subject_Dana_v08_CleanSkin",
+      "/Game/Materials/Instances/Film304/Cast/Dana/Closeout20261018/MI_Dana_Skin_Toon_UDIMCorrect_v01.MI_Dana_Skin_Toon_UDIMCorrect_v01"
+    ]
+  ],
+  "sun_forward_priority": 3,
+  "saved_queue": "/Game/MoviePipelines/Film304Closeout_20261018/Q_Office_ReadyToRender.Q_Office_ReadyToRender",
+  "queue_jobs": [
+    "01_Ensemble_Neutral",
+    "02_Ensemble_Warm",
+    "03_Ensemble_Cool",
+    "04_Dana_Neutral",
+    "05_David_Warm"
+  ],
+  "final_stills_success": true,
+  "motion_export_success": true,
+  "source_receipt": "full_morning_light_transform_convergence.json"
+}

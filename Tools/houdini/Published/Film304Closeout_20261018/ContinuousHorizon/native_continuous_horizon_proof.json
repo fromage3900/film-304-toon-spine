@@ -1,0 +1,20 @@
+{
+  "hda": "G:\\film-304-toon-spine\\Tools\\houdini\\Published\\Film304Closeout_20261018\\ContinuousHorizon\\Film304_ContinuousHorizon_v01.hda",
+  "ring_buildings": [
+    48,
+    80,
+    128
+  ],
+  "ring_radii_cm": [
+    80000,
+    190000,
+    420000
+  ],
+  "coverage_degrees": 360,
+  "ground_elevation_cm": -5500,
+  "ground_span_cm": 1200000,
+  "point_count": 783496,
+  "polygons": 195874,
+  "existing_kit_preserved": true,
+  "visual_coverage_gate": "pending multi-heading Unreal renders"
+}

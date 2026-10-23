@@ -68,7 +68,7 @@ REPORT = Path(os.environ.get("TEMP", ".")) / "shot_env_level_report.json"
 AUDIT_COPY = REPO / "Saved" / "Audit" / "shot_env_level_report.json"
 
 GROUND_LABEL = "ENV_Ground"
-LIGHT_LABELS = ("LGT_Sun", "LGT_Sky", "Sky")
+LIGHT_LABELS = ("LGT_Sun", "LGT_Sky", "Sky", "LGT_PPV")
 # Bounds are floats; a piece already resting on the plane reads exactly 0.
 GROUNDING_TOL_UU = 5.0
 
@@ -206,6 +206,29 @@ def build():
                            sun_intensity=float(L.get("sun_intensity", 3.2)),
                            sky=bool(L.get("sky", True)),
                            atmosphere=bool(L.get("atmosphere", True)))
+
+    try:
+        for a in unreal.EditorLevelLibrary.get_all_level_actors():
+            if a.get_actor_label() == "LGT_Sky":
+                skc = a.get_component_by_class(unreal.SkyLightComponent)
+                if skc:
+                    skc.set_intensity(float(L.get("sky_intensity", 1.0)))
+                    skc.call_method("recapture_sky")
+                    log("skylight recaptured after atmosphere spawn")
+                break
+    except Exception as e:                                         # noqa: BLE001
+        log("WARN skylight recapture: %s" % e)
+
+    try:
+        ppv = unreal.EditorLevelLibrary.spawn_actor_from_class(
+            unreal.PostProcessVolume,
+            unreal.Vector(0.0, 0.0, float(L.get("sky_height", 1000.0))),
+            unreal.Rotator(0.0, 0.0, 0.0))
+        ppv.set_actor_label("LGT_PPV")
+        ppv.set_editor_property("unbounded", True)
+        log("PPV unbounded spawned")
+    except Exception as e:                                         # noqa: BLE001
+        log("WARN PPV spawn: %s" % e)
 
     for piece in spec["scene"]:
         loc = [float(v) for v in piece["position_uu"]]
