@@ -78,3 +78,18 @@ Thumbs.db
 # Prefix match, because the folder name carries the engine range:
 #   "UDS v9.7 UE 5.5-5.8"
 /Content/UDS*/
+
+# --- third-party editor plugins (installed on the SSD; never versioned) --------
+# Monolith (github.com/tumourlove/monolith) and Claireon (The Believer Company)
+# are C++ editor plugins copied into Plugins/ for AI/MCP tooling. Their prebuilt
+# binaries and the Claireon embedding model are large and machine-local, so they
+# stay out of git exactly like the UDS content above. Keep only the *.uplugin
+# descriptors under version control if a pin is ever wanted.
+/Plugins/Monolith/Binaries/
+/Plugins/Monolith/Intermediate/
+/Plugins/Monolith/Saved/
+/Plugins/Monolith/.github/
+/Plugins/Claireon/Binaries/
+/Plugins/Claireon/Intermediate/
+/Plugins/Claireon/Saved/
+/Plugins/Claireon/Resources/Models/
