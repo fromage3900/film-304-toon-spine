@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "claireon": {
+      "type": "http",
+      "url": "http://127.0.0.1:62468/mcp"
+    }
+  }
+}

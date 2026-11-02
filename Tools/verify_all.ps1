@@ -26,6 +26,24 @@ $ErrorActionPreference = 'Continue'
 $repoRoot = Split-Path -Parent $PSScriptRoot
 Push-Location $repoRoot
 
+# -----------------------------------------------------------------------
+# git safe.directory, scoped to THIS repo (never --global).
+#
+# The on-disk owner SID of G:\film-304-toon-spine differs from the account
+# running the gate, so every nested `git` call dies with "dubious ownership".
+# Section 3 runs `git ls-files` to decide WHICH LEVELS to audit; when that
+# fails it returns an empty list, the loop body never executes, and the level
+# checks report PASS having examined ZERO levels. Observed on 2026-10-04:
+# the gate printed "9 of 9" while `0 level(s) checked`. A gate that can pass
+# while checking nothing is worse than no gate, so this is set here rather
+# than left to the caller's environment.
+# -----------------------------------------------------------------------
+if (-not $env:GIT_CONFIG_KEY_0 -or $env:GIT_CONFIG_KEY_0 -notmatch 'safe\.directory') {
+    $env:GIT_CONFIG_COUNT    = '1'
+    $env:GIT_CONFIG_KEY_0    = 'safe.directory'
+    $env:GIT_CONFIG_VALUE_0  = ($repoRoot -replace '\\', '/')
+}
+
 $results = @()
 function Record {
     param([string]$Check, [bool]$Ok, [string]$Detail)
