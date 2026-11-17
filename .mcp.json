@@ -3,6 +3,10 @@
     "claireon": {
       "type": "http",
       "url": "http://127.0.0.1:62468/mcp"
+    },
+    "maya": {
+      "type": "http",
+      "url": "http://127.0.0.1:9765/mcp"
     }
   }
 }

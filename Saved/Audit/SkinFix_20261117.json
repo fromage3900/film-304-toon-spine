@@ -1,0 +1,54 @@
+{
+  "date": "2026-11-17",
+  "asset": "/Game/Staging/DanaProfessor_20261016/WarmCourtyard/MI_Dana_Skin",
+  "parent": "/Game/EnvSandbox/Materials/Masters/M_Master_Toon_Universal",
+  "reference_asset": "/Game/Materials/Recovery_Office_20261018/MI_Dana_Skin_SourceBaseline_v03",
+  "action": "cleared 45 drifted overrides, applied 40 baseline values plus subtle subsurface, saved",
+  "before": {
+    "Roughness": 1.1112,
+    "RoughnessBias": 2.0,
+    "PaletteRampLow": [0.03, 0.0096, 0.0054],
+    "PaletteRampMid": [0.12, 0.042, 0.018],
+    "PaletteRampHigh": [0.12, 0.042, 0.018],
+    "bLayerA_Active": false,
+    "bImpasto_Active": true,
+    "bDreamRim_Active": true,
+    "SkinSSS_Strength": 0.0
+  },
+  "after_verified_by_reread": {
+    "Roughness": 0.65,
+    "Specular": 0.18,
+    "Metallic": 0.0,
+    "RampStrength": 0.85,
+    "BaseTint": [1.0, 1.0, 1.0],
+    "RampLow": [0.25, 0.25, 0.3],
+    "RampMid": [0.6, 0.6, 0.65],
+    "RampHigh": [1.0, 1.0, 1.0],
+    "BaseColorTile1001": "/Game/Materials/Textures/OneDriveRigs_20261016/T_Dana_Skin_D_1001_20261016",
+    "BaseColorTile1002": "/Game/Materials/Textures/OneDriveRigs_20261016/T_Dana_Skin_D_1002_20261016",
+    "BaseColorTile1003": "/Game/Materials/Textures/OneDriveRigs_20261016/T_Dana_Skin_D_1003_20261016",
+    "SkinSSS_Strength": 0.28,
+    "SkinSSS_Radius": 0.3,
+    "SkinSSS_Color": [1.0, 0.55, 0.45],
+    "bLayerA_Active": true,
+    "bImpasto_Active": false,
+    "bDreamRim_Active": false,
+    "bFilmUseUDIM": true,
+    "total_overrides": 39
+  },
+  "verification": {
+    "set_count": 40,
+    "all_set_success": true,
+    "saved": true,
+    "dirty_packages_before": 3,
+    "dirty_packages_after": 2,
+    "untouched": [
+      "/Game/Materials/Recovery_Office_20261018/MI_Dana_Skin_FaceVerified_v02",
+      "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office"
+    ]
+  },
+  "known_open": {
+    "visual_proof": "Not captured: take_high_res_screenshot queued with Film_Cam_Showcase_DanaPortrait_v02 but a 64s modal blocked the game thread and no PNG was written. Owner must eyeball in viewport.",
+    "master_hlsl": "M_Master_Toon_Universal Custom_26 uses Parameters.WorldPosition (illegal in pixel shader); Custom_27 DreamCompositeGate has undeclared inputs but zero consumers. Not modified in this pass."
+  }
+}

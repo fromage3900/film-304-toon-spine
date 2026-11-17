@@ -53,6 +53,10 @@
 			"Enabled": true
 		},
 		{
+			"Name": "Spout2_DX12",
+			"Enabled": true
+		},
+		{
 			"Name": "HoudiniEngine",
 			"Enabled": true
 		},
