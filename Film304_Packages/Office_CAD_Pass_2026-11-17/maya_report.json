@@ -1,0 +1,74 @@
+{
+  "source": "G:\\film-304-toon-spine\\Saved\\Scenes\\L_Scene62-66_BS_v27_eyefix.mb",
+  "output": "G:\\film-304-toon-spine\\Saved\\Scenes\\L_Scene62-66_BS_v28_cad_pass.mb",
+  "steps": [
+    {
+      "ok": true,
+      "step": "opened_source"
+    },
+    {
+      "files": [
+        "CAD_CeilingBay.fbx",
+        "CAD_DoorFrame.fbx",
+        "CAD_FloorSlab.fbx",
+        "CAD_TrimBase.fbx",
+        "CAD_TrimMullion.fbx",
+        "CAD_TrimPanel.fbx",
+        "CAD_WallModule.fbx",
+        "CAD_WindowMullion.fbx"
+      ],
+      "new_shapes": 8,
+      "step": "imported"
+    },
+    {
+      "diag": {
+        "CAD_CeilingBay_curvShape": [
+          -55.0,
+          332.8,
+          -55.0,
+          55.0,
+          338.3,
+          55.0
+        ],
+        "CAD_DoorFrame_curvShape": [
+          -58.0,
+          0.0,
+          -20.0,
+          58.0,
+          248.0,
+          26.0
+        ],
+        "CAD_FloorSlab_curvShape": [
+          -1100.0,
+          -20.0,
+          -1100.0,
+          1100.0,
+          0.0,
+          1100.0
+        ]
+      },
+      "step": "imported_bounds_sample"
+    },
+    {
+      "new_shapes": 8,
+      "shading_groups": 8,
+      "groups": [
+        "AIT_CAD_CAD_CeilingBay_",
+        "AIT_CAD_CAD_DoorFrame_",
+        "AIT_CAD_CAD_FloorSlab_",
+        "AIT_CAD_CAD_TrimBase_",
+        "AIT_CAD_CAD_TrimMullion_",
+        "AIT_CAD_CAD_TrimPanel_",
+        "AIT_CAD_CAD_WallModule_",
+        "AIT_CAD_CAD_WindowMullion_"
+      ],
+      "step": "look_applied"
+    },
+    {
+      "path": "G:\\film-304-toon-spine\\Saved\\Scenes\\L_Scene62-66_BS_v28_cad_pass.mb",
+      "exists": true,
+      "size": 4370524,
+      "step": "saved"
+    }
+  ]
+}
