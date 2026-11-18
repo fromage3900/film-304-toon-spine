@@ -1,0 +1,129 @@
+{
+  "kit": "Film304 Office Trim Sheet",
+  "version": "1.0.0",
+  "assembled": "2026-11-17",
+  "repo": "G:/film-304-toon-spine",
+  "files": [
+    {
+      "path": "00_START_HERE.md",
+      "bytes": 2672,
+      "sha256": "339be081a12cf1b1492f9a12d2e458b2ae3be395adc8494025786c50e5e5942b"
+    },
+    {
+      "path": "01_Atlas/_t_duct_a.png",
+      "bytes": 2336,
+      "sha256": "adf8387998faaf7c37954203acecfe6aafe578d3aa9ae9ee4ca5b0419c9bd2d1"
+    },
+    {
+      "path": "01_Atlas/_t_duct_h.png",
+      "bytes": 2336,
+      "sha256": "adf8387998faaf7c37954203acecfe6aafe578d3aa9ae9ee4ca5b0419c9bd2d1"
+    },
+    {
+      "path": "01_Atlas/_t_mullion_a.png",
+      "bytes": 2323,
+      "sha256": "4bbedeee06ba0b3b410fe993a65252ea96bfffbbdf5b1516aa99da1e80c44628"
+    },
+    {
+      "path": "01_Atlas/_t_mullion_h.png",
+      "bytes": 2323,
+      "sha256": "4bbedeee06ba0b3b410fe993a65252ea96bfffbbdf5b1516aa99da1e80c44628"
+    },
+    {
+      "path": "01_Atlas/_t_panel_a.png",
+      "bytes": 2307,
+      "sha256": "72e3f244c3ef9ea42513655c533990a362c5d57d28dba4ee72613006a85a6be3"
+    },
+    {
+      "path": "01_Atlas/_t_panel_h.png",
+      "bytes": 2307,
+      "sha256": "72e3f244c3ef9ea42513655c533990a362c5d57d28dba4ee72613006a85a6be3"
+    },
+    {
+      "path": "01_Atlas/_t_reveal_a.png",
+      "bytes": 2304,
+      "sha256": "a5533d1131611f5bf04e23c70fc70b690a6f6781d8ad2f91fd6d852062841935"
+    },
+    {
+      "path": "01_Atlas/_t_reveal_h.png",
+      "bytes": 2304,
+      "sha256": "a5533d1131611f5bf04e23c70fc70b690a6f6781d8ad2f91fd6d852062841935"
+    },
+    {
+      "path": "01_Atlas/_t_slat_a.png",
+      "bytes": 2366,
+      "sha256": "efb4113b96e2d44b06b9cab70a718b0ada5f573705aa0bb32f8438951a1ac277"
+    },
+    {
+      "path": "01_Atlas/_t_slat_h.png",
+      "bytes": 2366,
+      "sha256": "efb4113b96e2d44b06b9cab70a718b0ada5f573705aa0bb32f8438951a1ac277"
+    },
+    {
+      "path": "01_Atlas/_t_tbar_a.png",
+      "bytes": 2323,
+      "sha256": "7359088b2824bb7a38b1d107187bd591d17bf948bbc9569eaa0ecd9d43e87e84"
+    },
+    {
+      "path": "01_Atlas/_t_tbar_h.png",
+      "bytes": 2323,
+      "sha256": "7359088b2824bb7a38b1d107187bd591d17bf948bbc9569eaa0ecd9d43e87e84"
+    },
+    {
+      "path": "01_Atlas/_t_troffer_a.png",
+      "bytes": 2366,
+      "sha256": "0ff9b2ffafee17b098fc7283601d28b3e3102db033818b3d89cf1ea8643beaf4"
+    },
+    {
+      "path": "01_Atlas/_t_troffer_h.png",
+      "bytes": 2366,
+      "sha256": "0ff9b2ffafee17b098fc7283601d28b3e3102db033818b3d89cf1ea8643beaf4"
+    },
+    {
+      "path": "01_Atlas/atlas_report.json",
+      "bytes": 2565,
+      "sha256": "87382072f7c5de5d14e5d314ad9db3593f730a110b783f4ec12518e83c4375fa"
+    },
+    {
+      "path": "01_Atlas/T_OfficeTrim_Albedo_2048x1024.png",
+      "bytes": 9503,
+      "sha256": "1edb04a27a5ae8bef66db823970334150107a77bfdcbb2c5e87c2d6d4a2ff438"
+    },
+    {
+      "path": "01_Atlas/T_OfficeTrim_Height_2048x1024.png",
+      "bytes": 9053,
+      "sha256": "3fbe98cfa8d9a00a2a8017525ab8f7c6042bb0232b0c9da6c7b5e2506bce555c"
+    },
+    {
+      "path": "01_Atlas/T_OfficeTrim_Normal_2048x1024.png",
+      "bytes": 11033,
+      "sha256": "e937d927582d5d2df7ce0e4818b9c47a163ddf650ff52d51441891f63ab403fd"
+    },
+    {
+      "path": "01_Atlas/T_OfficeTrim_ORM_2048x1024.png",
+      "bytes": 9188,
+      "sha256": "8f02f89172041fcc8555fba6fc1e528919651073d17d7e15ee7bb5269b3b30a9"
+    },
+    {
+      "path": "02_Houdini_COP/assemble_trimsheet.py",
+      "bytes": 4567,
+      "sha256": "14f618655f16899f1b09ba44907cb3e6791ed1ac4a72949353f71e56ceaa5d38"
+    },
+    {
+      "path": "02_Houdini_COP/build_trimsheet_final.py",
+      "bytes": 3750,
+      "sha256": "0e72eaff7bc4f5b94b154bd5fa8e4e61c5e6a067a7e686fe0fcf72c6d65df427"
+    },
+    {
+      "path": "02_Houdini_COP/Film304_OfficeTrimSheet_v01.hip",
+      "bytes": 136987,
+      "sha256": "c80189eaf8d5c843f761edf192b7f5443c79aa8fd7165b4942f59b5676a9743f"
+    },
+    {
+      "path": "03_Docs/TRIM_SHEET.md",
+      "bytes": 2782,
+      "sha256": "c13353ff82f300a3ce8e4fbb5d7ef51ebb545fb4c6a2d728d2c429a658e12257"
+    }
+  ],
+  "commit": "557701310bad"
+}

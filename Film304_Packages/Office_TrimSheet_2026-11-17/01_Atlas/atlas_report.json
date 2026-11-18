@@ -1,0 +1,94 @@
+{
+  "atlas": [
+    2048,
+    1024
+  ],
+  "tile": 512,
+  "cols": 4,
+  "rows": 2,
+  "order": [
+    "tbar",
+    "troffer",
+    "duct",
+    "panel",
+    "base",
+    "mullion",
+    "slat",
+    "reveal"
+  ],
+  "maps": [
+    "T_OfficeTrim_Height_2048x1024.png",
+    "T_OfficeTrim_Albedo_2048x1024.png",
+    "T_OfficeTrim_Normal_2048x1024.png",
+    "T_OfficeTrim_ORM_2048x1024.png"
+  ],
+  "normal_convention": "tangent space, OpenGL +Y up, derived from height (Sobel, strength 2.0)",
+  "orm": "R = cavity AO from height, G = roughness, B = metallic (0)",
+  "T_OfficeTrim_Height_2048x1024.png": {
+    "seam_left_right": 108.5,
+    "seam_top_bottom": 54.0312
+  },
+  "T_OfficeTrim_Albedo_2048x1024.png": {
+    "seam_left_right": 95.3333,
+    "seam_top_bottom": 43.9064
+  },
+  "T_OfficeTrim_Normal_2048x1024.png": {
+    "seam_left_right": 0.0007,
+    "seam_top_bottom": 30.2264
+  },
+  "T_OfficeTrim_ORM_2048x1024.png": {
+    "seam_left_right": 59.3333,
+    "seam_top_bottom": 30.3817
+  },
+  "per_tile_seams": {
+    "tbar": {
+      "height_seam_left_right": 0.0,
+      "height_seam_top_bottom": 0.0,
+      "albedo_seam_left_right": 0.0,
+      "albedo_seam_top_bottom": 0.0
+    },
+    "troffer": {
+      "height_seam_left_right": 0.0,
+      "height_seam_top_bottom": 0.0,
+      "albedo_seam_left_right": 0.0,
+      "albedo_seam_top_bottom": 0.0
+    },
+    "duct": {
+      "height_seam_left_right": 0.0,
+      "height_seam_top_bottom": 0.0,
+      "albedo_seam_left_right": 0.0,
+      "albedo_seam_top_bottom": 0.0
+    },
+    "panel": {
+      "height_seam_left_right": 0.0,
+      "height_seam_top_bottom": 0.0,
+      "albedo_seam_left_right": 0.0,
+      "albedo_seam_top_bottom": 0.0
+    },
+    "base": {
+      "height_seam_left_right": 0.0,
+      "height_seam_top_bottom": 0.0,
+      "albedo_seam_left_right": 0.0,
+      "albedo_seam_top_bottom": 0.0
+    },
+    "mullion": {
+      "height_seam_left_right": 0.0,
+      "height_seam_top_bottom": 0.0,
+      "albedo_seam_left_right": 0.0,
+      "albedo_seam_top_bottom": 0.0
+    },
+    "slat": {
+      "height_seam_left_right": 0.0,
+      "height_seam_top_bottom": 0.0,
+      "albedo_seam_left_right": 0.0,
+      "albedo_seam_top_bottom": 0.0
+    },
+    "reveal": {
+      "height_seam_left_right": 0.0,
+      "height_seam_top_bottom": 0.0,
+      "albedo_seam_left_right": 0.0,
+      "albedo_seam_top_bottom": 0.0
+    }
+  },
+  "note": "atlas edges are tile BORDERS and are not expected to match; each 512x512 tile is seamless on both axes"
+}
