@@ -1,0 +1,4202 @@
+{
+  "blender": "5.2.1 LTS",
+  "addons_enabled": [
+    "uvpackmaster3",
+    "ZenUtils",
+    "SimpleBake",
+    "BL_BakeLab2"
+  ],
+  "addons_failed": {},
+  "uvpm3_ops": [],
+  "texel_density": 10.0,
+  "assets": [
+    {
+      "file": "BreakRoomTogether_ZMJ.fbx",
+      "objects": 69,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0024,
+            0.0024
+          ],
+          "uv_hi": [
+            0.9976,
+            0.7317
+          ],
+          "uv_area": 0.7259,
+          "loops": 640,
+          "polys": 160
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0113,
+            0.0113
+          ],
+          "uv_hi": [
+            0.9434,
+            0.9887
+          ],
+          "uv_area": 0.9111,
+          "loops": 504,
+          "polys": 168
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0046,
+            0.0047
+          ],
+          "uv_hi": [
+            0.9901,
+            0.9958
+          ],
+          "uv_area": 0.9767,
+          "loops": 216,
+          "polys": 72
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0089,
+            0.0089
+          ],
+          "uv_hi": [
+            0.9911,
+            0.9774
+          ],
+          "uv_area": 0.9513,
+          "loops": 9072,
+          "polys": 2268
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0014,
+            0.0014
+          ],
+          "uv_hi": [
+            0.4917,
+            0.9986
+          ],
+          "uv_area": 0.4889,
+          "loops": 6,
+          "polys": 2
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0014,
+            0.0014
+          ],
+          "uv_hi": [
+            0.4917,
+            0.9986
+          ],
+          "uv_area": 0.4889,
+          "loops": 6,
+          "polys": 2
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0014,
+            0.0014
+          ],
+          "uv_hi": [
+            0.4917,
+            0.9986
+          ],
+          "uv_area": 0.4889,
+          "loops": 6,
+          "polys": 2
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0014,
+            0.0014
+          ],
+          "uv_hi": [
+            0.4917,
+            0.9986
+          ],
+          "uv_area": 0.4889,
+          "loops": 6,
+          "polys": 2
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0014,
+            0.0014
+          ],
+          "uv_hi": [
+            0.4917,
+            0.9986
+          ],
+          "uv_area": 0.4889,
+          "loops": 6,
+          "polys": 2
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0014,
+            0.0014
+          ],
+          "uv_hi": [
+            0.4917,
+            0.9986
+          ],
+          "uv_area": 0.4889,
+          "loops": 6,
+          "polys": 2
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0014,
+            0.0014
+          ],
+          "uv_hi": [
+            0.4917,
+            0.9986
+          ],
+          "uv_area": 0.4889,
+          "loops": 6,
+          "polys": 2
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0014,
+            0.0014
+          ],
+          "uv_hi": [
+            0.4917,
+            0.9986
+          ],
+          "uv_area": 0.4889,
+          "loops": 6,
+          "polys": 2
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0014,
+            0.0014
+          ],
+          "uv_hi": [
+            0.4917,
+            0.9986
+          ],
+          "uv_area": 0.4889,
+          "loops": 6,
+          "polys": 2
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.006,
+            0.006
+          ],
+          "uv_hi": [
+            0.9941,
+            0.9941
+          ],
+          "uv_area": 0.9764,
+          "loops": 852,
+          "polys": 284
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0014,
+            0.0014
+          ],
+          "uv_hi": [
+            0.4917,
+            0.9986
+          ],
+          "uv_area": 0.4889,
+          "loops": 6,
+          "polys": 2
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0014,
+            0.0014
+          ],
+          "uv_hi": [
+            0.4917,
+            0.9986
+          ],
+          "uv_area": 0.4889,
+          "loops": 6,
+          "polys": 2
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0048,
+            0.0049
+          ],
+          "uv_hi": [
+            0.9209,
+            0.9955
+          ],
+          "uv_area": 0.9076,
+          "loops": 24,
+          "polys": 6
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0093,
+            0.0093
+          ],
+          "uv_hi": [
+            0.9908,
+            0.9908
+          ],
+          "uv_area": 0.9634,
+          "loops": 696,
+          "polys": 174
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0061,
+            0.006
+          ],
+          "uv_hi": [
+            0.9809,
+            0.9941
+          ],
+          "uv_area": 0.9631,
+          "loops": 2052,
+          "polys": 684
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0043,
+            0.005
+          ],
+          "uv_hi": [
+            0.982,
+            0.9964
+          ],
+          "uv_area": 0.9693,
+          "loops": 36,
+          "polys": 12
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0043,
+            0.005
+          ],
+          "uv_hi": [
+            0.982,
+            0.9964
+          ],
+          "uv_area": 0.9693,
+          "loops": 36,
+          "polys": 12
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0043,
+            0.005
+          ],
+          "uv_hi": [
+            0.982,
+            0.9964
+          ],
+          "uv_area": 0.9693,
+          "loops": 36,
+          "polys": 12
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0043,
+            0.005
+          ],
+          "uv_hi": [
+            0.982,
+            0.9964
+          ],
+          "uv_area": 0.9693,
+          "loops": 36,
+          "polys": 12
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0043,
+            0.005
+          ],
+          "uv_hi": [
+            0.982,
+            0.9964
+          ],
+          "uv_area": 0.9693,
+          "loops": 36,
+          "polys": 12
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0043,
+            0.005
+          ],
+          "uv_hi": [
+            0.982,
+            0.9964
+          ],
+          "uv_area": 0.9693,
+          "loops": 36,
+          "polys": 12
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0043,
+            0.004
+          ],
+          "uv_hi": [
+            0.9922,
+            0.9963
+          ],
+          "uv_area": 0.9804,
+          "loops": 24,
+          "polys": 6
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0097,
+            0.0097
+          ],
+          "uv_hi": [
+            0.9903,
+            0.987
+          ],
+          "uv_area": 0.9583,
+          "loops": 7344,
+          "polys": 1840
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0097,
+            0.0097
+          ],
+          "uv_hi": [
+            0.9903,
+            0.987
+          ],
+          "uv_area": 0.9583,
+          "loops": 7344,
+          "polys": 1840
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0097,
+            0.0097
+          ],
+          "uv_hi": [
+            0.9903,
+            0.987
+          ],
+          "uv_area": 0.9583,
+          "loops": 7344,
+          "polys": 1840
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0051,
+            0.0051
+          ],
+          "uv_hi": [
+            0.8147,
+            0.9955
+          ],
+          "uv_area": 0.8018,
+          "loops": 160,
+          "polys": 40
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0074,
+            0.0074
+          ],
+          "uv_hi": [
+            0.9931,
+            0.9838
+          ],
+          "uv_area": 0.9625,
+          "loops": 3390,
+          "polys": 1130
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0052,
+            0.0052
+          ],
+          "uv_hi": [
+            0.9948,
+            0.9409
+          ],
+          "uv_area": 0.9259,
+          "loops": 960,
+          "polys": 320
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0067,
+            0.0064
+          ],
+          "uv_hi": [
+            0.9891,
+            0.9937
+          ],
+          "uv_area": 0.97,
+          "loops": 744,
+          "polys": 248
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0068,
+            0.0068
+          ],
+          "uv_hi": [
+            0.9478,
+            0.9934
+          ],
+          "uv_area": 0.9284,
+          "loops": 3174,
+          "polys": 1058
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0082,
+            0.0082
+          ],
+          "uv_hi": [
+            0.9087,
+            0.9918
+          ],
+          "uv_area": 0.8857,
+          "loops": 760,
+          "polys": 190
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0042,
+            0.0052
+          ],
+          "uv_hi": [
+            0.9959,
+            0.9866
+          ],
+          "uv_area": 0.9733,
+          "loops": 128,
+          "polys": 32
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0123,
+            0.0123
+          ],
+          "uv_hi": [
+            0.9868,
+            0.9877
+          ],
+          "uv_area": 0.9506,
+          "loops": 28680,
+          "polys": 9560
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0069,
+            0.0069
+          ],
+          "uv_hi": [
+            0.9931,
+            0.9648
+          ],
+          "uv_area": 0.9446,
+          "loops": 3174,
+          "polys": 1058
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0053,
+            0.0053
+          ],
+          "uv_hi": [
+            0.9949,
+            0.9927
+          ],
+          "uv_area": 0.9772,
+          "loops": 636,
+          "polys": 212
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0085,
+            0.0084
+          ],
+          "uv_hi": [
+            0.923,
+            0.9917
+          ],
+          "uv_area": 0.8992,
+          "loops": 1539,
+          "polys": 513
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0099,
+            0.0099
+          ],
+          "uv_hi": [
+            0.9901,
+            0.9183
+          ],
+          "uv_area": 0.8903,
+          "loops": 7344,
+          "polys": 1840
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0099,
+            0.0099
+          ],
+          "uv_hi": [
+            0.9901,
+            0.9183
+          ],
+          "uv_area": 0.8903,
+          "loops": 7344,
+          "polys": 1840
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0099,
+            0.0099
+          ],
+          "uv_hi": [
+            0.9901,
+            0.9183
+          ],
+          "uv_area": 0.8903,
+          "loops": 7344,
+          "polys": 1840
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0099,
+            0.0099
+          ],
+          "uv_hi": [
+            0.9901,
+            0.9183
+          ],
+          "uv_area": 0.8903,
+          "loops": 7344,
+          "polys": 1840
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0064,
+            0.0064
+          ],
+          "uv_hi": [
+            0.9904,
+            0.9936
+          ],
+          "uv_area": 0.9713,
+          "loops": 368,
+          "polys": 92
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0074,
+            0.0074
+          ],
+          "uv_hi": [
+            0.9024,
+            0.9926
+          ],
+          "uv_area": 0.8819,
+          "loops": 15528,
+          "polys": 5176
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0041,
+            0.0043
+          ],
+          "uv_hi": [
+            0.996,
+            0.9253
+          ],
+          "uv_area": 0.9136,
+          "loops": 216,
+          "polys": 72
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0041,
+            0.0043
+          ],
+          "uv_hi": [
+            0.996,
+            0.9253
+          ],
+          "uv_area": 0.9136,
+          "loops": 216,
+          "polys": 72
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0041,
+            0.0043
+          ],
+          "uv_hi": [
+            0.996,
+            0.9253
+          ],
+          "uv_area": 0.9136,
+          "loops": 216,
+          "polys": 72
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0041,
+            0.0043
+          ],
+          "uv_hi": [
+            0.996,
+            0.9253
+          ],
+          "uv_area": 0.9136,
+          "loops": 216,
+          "polys": 72
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0041,
+            0.0043
+          ],
+          "uv_hi": [
+            0.996,
+            0.9253
+          ],
+          "uv_area": 0.9136,
+          "loops": 216,
+          "polys": 72
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0041,
+            0.0043
+          ],
+          "uv_hi": [
+            0.996,
+            0.9253
+          ],
+          "uv_area": 0.9136,
+          "loops": 216,
+          "polys": 72
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0072,
+            0.0072
+          ],
+          "uv_hi": [
+            0.9554,
+            0.9928
+          ],
+          "uv_area": 0.9345,
+          "loops": 1284,
+          "polys": 428
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0072,
+            0.0072
+          ],
+          "uv_hi": [
+            0.9554,
+            0.9928
+          ],
+          "uv_area": 0.9345,
+          "loops": 1284,
+          "polys": 428
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0072,
+            0.0072
+          ],
+          "uv_hi": [
+            0.9554,
+            0.9928
+          ],
+          "uv_area": 0.9345,
+          "loops": 1284,
+          "polys": 428
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0072,
+            0.0072
+          ],
+          "uv_hi": [
+            0.9554,
+            0.9928
+          ],
+          "uv_area": 0.9345,
+          "loops": 1284,
+          "polys": 428
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0072,
+            0.0072
+          ],
+          "uv_hi": [
+            0.9554,
+            0.9928
+          ],
+          "uv_area": 0.9345,
+          "loops": 1284,
+          "polys": 428
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0072,
+            0.0072
+          ],
+          "uv_hi": [
+            0.9554,
+            0.9928
+          ],
+          "uv_area": 0.9345,
+          "loops": 1284,
+          "polys": 428
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0072,
+            0.0072
+          ],
+          "uv_hi": [
+            0.9554,
+            0.9928
+          ],
+          "uv_area": 0.9345,
+          "loops": 1284,
+          "polys": 428
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0072,
+            0.0072
+          ],
+          "uv_hi": [
+            0.9554,
+            0.9928
+          ],
+          "uv_area": 0.9345,
+          "loops": 1284,
+          "polys": 428
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0066,
+            0.0069
+          ],
+          "uv_hi": [
+            0.9935,
+            0.9908
+          ],
+          "uv_area": 0.9711,
+          "loops": 2244,
+          "polys": 748
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0053,
+            0.0055
+          ],
+          "uv_hi": [
+            0.9947,
+            0.883
+          ],
+          "uv_area": 0.8682,
+          "loops": 648,
+          "polys": 216
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0046,
+            0.0046
+          ],
+          "uv_hi": [
+            0.9956,
+            0.9919
+          ],
+          "uv_area": 0.9784,
+          "loops": 1216,
+          "polys": 320
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.01,
+            0.01
+          ],
+          "uv_hi": [
+            0.9902,
+            0.9869
+          ],
+          "uv_area": 0.9576,
+          "loops": 11388,
+          "polys": 3796
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0057,
+            0.0057
+          ],
+          "uv_hi": [
+            0.9282,
+            0.9944
+          ],
+          "uv_area": 0.9121,
+          "loops": 184,
+          "polys": 46
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0071,
+            0.0071
+          ],
+          "uv_hi": [
+            0.9929,
+            0.9718
+          ],
+          "uv_area": 0.9511,
+          "loops": 176,
+          "polys": 44
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0043,
+            0.0043
+          ],
+          "uv_hi": [
+            0.7335,
+            0.9957
+          ],
+          "uv_area": 0.723,
+          "loops": 230,
+          "polys": 56
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0079,
+            0.0079
+          ],
+          "uv_hi": [
+            0.9921,
+            0.8125
+          ],
+          "uv_area": 0.792,
+          "loops": 656,
+          "polys": 164
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0115,
+            0.0115
+          ],
+          "uv_hi": [
+            0.9885,
+            0.8957
+          ],
+          "uv_area": 0.8638,
+          "loops": 1320,
+          "polys": 330
+        }
+      ]
+    },
+    {
+      "file": "O_BookShelf_PMB.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0072,
+            0.0076
+          ],
+          "uv_hi": [
+            0.993,
+            0.9586
+          ],
+          "uv_area": 0.9375,
+          "loops": 888,
+          "polys": 296
+        }
+      ]
+    },
+    {
+      "file": "O_Book_PMB.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0064,
+            0.0064
+          ],
+          "uv_hi": [
+            0.9936,
+            0.9306
+          ],
+          "uv_area": 0.9123,
+          "loops": 664,
+          "polys": 166
+        }
+      ]
+    },
+    {
+      "file": "O_BookshelfWobble_PMB.fbx",
+      "objects": 2,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0048,
+            0.0048
+          ],
+          "uv_hi": [
+            0.9952,
+            0.9493
+          ],
+          "uv_area": 0.9353,
+          "loops": 48,
+          "polys": 12
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.007,
+            0.0064
+          ],
+          "uv_hi": [
+            0.9936,
+            0.9832
+          ],
+          "uv_area": 0.9637,
+          "loops": 96,
+          "polys": 24
+        }
+      ]
+    },
+    {
+      "file": "O_BreakRoomFloor_ZMJ.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0014,
+            0.0014
+          ],
+          "uv_hi": [
+            0.4917,
+            0.9986
+          ],
+          "uv_area": 0.4889,
+          "loops": 6,
+          "polys": 2
+        }
+      ]
+    },
+    {
+      "file": "O_BreakRoomShelf_ZMJ.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.006,
+            0.006
+          ],
+          "uv_hi": [
+            0.9941,
+            0.9941
+          ],
+          "uv_area": 0.9764,
+          "loops": 852,
+          "polys": 284
+        }
+      ]
+    },
+    {
+      "file": "O_BreakRoomWall_ZMJ.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0014,
+            0.0014
+          ],
+          "uv_hi": [
+            0.4917,
+            0.9986
+          ],
+          "uv_area": 0.4889,
+          "loops": 6,
+          "polys": 2
+        }
+      ]
+    },
+    {
+      "file": "O_Cabinet2_ZMJ.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0048,
+            0.0049
+          ],
+          "uv_hi": [
+            0.9209,
+            0.9955
+          ],
+          "uv_area": 0.9076,
+          "loops": 24,
+          "polys": 6
+        }
+      ]
+    },
+    {
+      "file": "O_CabinetDoor2_ZMJ.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0043,
+            0.005
+          ],
+          "uv_hi": [
+            0.982,
+            0.9964
+          ],
+          "uv_area": 0.9693,
+          "loops": 36,
+          "polys": 12
+        }
+      ]
+    },
+    {
+      "file": "O_CabinetDoor3_ZMJ.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0043,
+            0.005
+          ],
+          "uv_hi": [
+            0.982,
+            0.9964
+          ],
+          "uv_area": 0.9693,
+          "loops": 36,
+          "polys": 12
+        }
+      ]
+    },
+    {
+      "file": "O_CabinetDoor4_ZMJ.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0043,
+            0.005
+          ],
+          "uv_hi": [
+            0.982,
+            0.9964
+          ],
+          "uv_area": 0.9693,
+          "loops": 36,
+          "polys": 12
+        }
+      ]
+    },
+    {
+      "file": "O_CabinetDoor5_ZMJ.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0043,
+            0.005
+          ],
+          "uv_hi": [
+            0.982,
+            0.9964
+          ],
+          "uv_area": 0.9693,
+          "loops": 36,
+          "polys": 12
+        }
+      ]
+    },
+    {
+      "file": "O_CabinetDoor6_ZMJ.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0043,
+            0.005
+          ],
+          "uv_hi": [
+            0.982,
+            0.9964
+          ],
+          "uv_area": 0.9693,
+          "loops": 36,
+          "polys": 12
+        }
+      ]
+    },
+    {
+      "file": "O_Cabinet_ZMJ.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0061,
+            0.006
+          ],
+          "uv_hi": [
+            0.9809,
+            0.9941
+          ],
+          "uv_area": 0.9631,
+          "loops": 2052,
+          "polys": 684
+        }
+      ]
+    },
+    {
+      "file": "O_CabnetDoor_ZMJ.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0043,
+            0.005
+          ],
+          "uv_hi": [
+            0.982,
+            0.9964
+          ],
+          "uv_area": 0.9693,
+          "loops": 36,
+          "polys": 12
+        }
+      ]
+    },
+    {
+      "file": "O_Cereal_ZMJ.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0043,
+            0.004
+          ],
+          "uv_hi": [
+            0.9922,
+            0.9963
+          ],
+          "uv_area": 0.9804,
+          "loops": 24,
+          "polys": 6
+        }
+      ]
+    },
+    {
+      "file": "O_Chair_ZMJ.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0097,
+            0.0097
+          ],
+          "uv_hi": [
+            0.9903,
+            0.987
+          ],
+          "uv_area": 0.9583,
+          "loops": 7344,
+          "polys": 1840
+        }
+      ]
+    },
+    {
+      "file": "O_CoffeMug_ZMJ.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0068,
+            0.0068
+          ],
+          "uv_hi": [
+            0.9478,
+            0.9934
+          ],
+          "uv_area": 0.9284,
+          "loops": 3174,
+          "polys": 1058
+        }
+      ]
+    },
+    {
+      "file": "O_CoffeeBag_ZMJ.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0051,
+            0.0051
+          ],
+          "uv_hi": [
+            0.8147,
+            0.9955
+          ],
+          "uv_area": 0.8018,
+          "loops": 160,
+          "polys": 40
+        }
+      ]
+    },
+    {
+      "file": "O_CoffeeMugLarge_ZMJ.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0074,
+            0.0074
+          ],
+          "uv_hi": [
+            0.9931,
+            0.9838
+          ],
+          "uv_area": 0.9625,
+          "loops": 3390,
+          "polys": 1130
+        }
+      ]
+    },
+    {
+      "file": "O_CoffeeSyrup_ZMJ.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0052,
+            0.0052
+          ],
+          "uv_hi": [
+            0.9948,
+            0.9409
+          ],
+          "uv_area": 0.9259,
+          "loops": 960,
+          "polys": 320
+        }
+      ]
+    },
+    {
+      "file": "O_CoffeeTin_ZMJ.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0067,
+            0.0064
+          ],
+          "uv_hi": [
+            0.9891,
+            0.9937
+          ],
+          "uv_area": 0.97,
+          "loops": 744,
+          "polys": 248
+        }
+      ]
+    },
+    {
+      "file": "O_CounterTop_PMB.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0036,
+            0.0036
+          ],
+          "uv_hi": [
+            0.6404,
+            0.9964
+          ],
+          "uv_area": 0.6323,
+          "loops": 608,
+          "polys": 152
+        }
+      ]
+    },
+    {
+      "file": "O_CounterTop_ZMJ.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0042,
+            0.0052
+          ],
+          "uv_hi": [
+            0.9959,
+            0.9866
+          ],
+          "uv_area": 0.9733,
+          "loops": 128,
+          "polys": 32
+        }
+      ]
+    },
+    {
+      "file": "O_Counter_ZMJ.fbx",
+      "objects": 2,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0088,
+            0.0088
+          ],
+          "uv_hi": [
+            0.9867,
+            0.9912
+          ],
+          "uv_area": 0.9608,
+          "loops": 756,
+          "polys": 189
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0055,
+            0.0055
+          ],
+          "uv_hi": [
+            0.9945,
+            0.6881
+          ],
+          "uv_area": 0.6751,
+          "loops": 80,
+          "polys": 20
+        }
+      ]
+    },
+    {
+      "file": "O_EspressoMachine_ZMJ.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0123,
+            0.0123
+          ],
+          "uv_hi": [
+            0.9868,
+            0.9877
+          ],
+          "uv_area": 0.9506,
+          "loops": 28680,
+          "polys": 9560
+        }
+      ]
+    },
+    {
+      "file": "O_EsspressoCup_ZMJ.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0069,
+            0.0069
+          ],
+          "uv_hi": [
+            0.9931,
+            0.9648
+          ],
+          "uv_area": 0.9446,
+          "loops": 3174,
+          "polys": 1058
+        }
+      ]
+    },
+    {
+      "file": "O_EsspressoPlate_ZMJ.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0053,
+            0.0053
+          ],
+          "uv_hi": [
+            0.9949,
+            0.9927
+          ],
+          "uv_area": 0.9772,
+          "loops": 636,
+          "polys": 212
+        }
+      ]
+    },
+    {
+      "file": "O_Fridge_ZMJ.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0085,
+            0.0084
+          ],
+          "uv_hi": [
+            0.923,
+            0.9917
+          ],
+          "uv_area": 0.8992,
+          "loops": 1539,
+          "polys": 513
+        }
+      ]
+    },
+    {
+      "file": "O_HighChair_ZMJ.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0099,
+            0.0099
+          ],
+          "uv_hi": [
+            0.9901,
+            0.9183
+          ],
+          "uv_area": 0.8903,
+          "loops": 7344,
+          "polys": 1840
+        }
+      ]
+    },
+    {
+      "file": "O_HighTable_ZMJ.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0068,
+            0.0068
+          ],
+          "uv_hi": [
+            0.9932,
+            0.9794
+          ],
+          "uv_area": 0.9594,
+          "loops": 368,
+          "polys": 92
+        }
+      ]
+    },
+    {
+      "file": "O_Kettle_ZMJ.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0074,
+            0.0074
+          ],
+          "uv_hi": [
+            0.9024,
+            0.9926
+          ],
+          "uv_area": 0.8819,
+          "loops": 15528,
+          "polys": 5176
+        }
+      ]
+    },
+    {
+      "file": "O_Knob1_ZMJ.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0041,
+            0.0043
+          ],
+          "uv_hi": [
+            0.996,
+            0.9253
+          ],
+          "uv_area": 0.9136,
+          "loops": 216,
+          "polys": 72
+        }
+      ]
+    },
+    {
+      "file": "O_Knob2_ZMJ.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0041,
+            0.0043
+          ],
+          "uv_hi": [
+            0.996,
+            0.9253
+          ],
+          "uv_area": 0.9136,
+          "loops": 216,
+          "polys": 72
+        }
+      ]
+    },
+    {
+      "file": "O_Knob3_ZMJ.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0041,
+            0.0043
+          ],
+          "uv_hi": [
+            0.996,
+            0.9253
+          ],
+          "uv_area": 0.9136,
+          "loops": 216,
+          "polys": 72
+        }
+      ]
+    },
+    {
+      "file": "O_Knob4_ZMJ.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0041,
+            0.0043
+          ],
+          "uv_hi": [
+            0.996,
+            0.9253
+          ],
+          "uv_area": 0.9136,
+          "loops": 216,
+          "polys": 72
+        }
+      ]
+    },
+    {
+      "file": "O_Knob5_ZMJ.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0041,
+            0.0043
+          ],
+          "uv_hi": [
+            0.996,
+            0.9253
+          ],
+          "uv_area": 0.9136,
+          "loops": 216,
+          "polys": 72
+        }
+      ]
+    },
+    {
+      "file": "O_Knob6_ZMJ.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0041,
+            0.0043
+          ],
+          "uv_hi": [
+            0.996,
+            0.9253
+          ],
+          "uv_area": 0.9136,
+          "loops": 216,
+          "polys": 72
+        }
+      ]
+    },
+    {
+      "file": "O_Light_ZMJ.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0072,
+            0.0072
+          ],
+          "uv_hi": [
+            0.9554,
+            0.9928
+          ],
+          "uv_area": 0.9345,
+          "loops": 1284,
+          "polys": 428
+        }
+      ]
+    },
+    {
+      "file": "O_MicrowavePillar_ZMJ.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0066,
+            0.0069
+          ],
+          "uv_hi": [
+            0.9935,
+            0.9908
+          ],
+          "uv_area": 0.9711,
+          "loops": 2244,
+          "polys": 748
+        }
+      ]
+    },
+    {
+      "file": "O_PastryCover_ZMJ.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0046,
+            0.0046
+          ],
+          "uv_hi": [
+            0.9956,
+            0.9919
+          ],
+          "uv_area": 0.9784,
+          "loops": 1216,
+          "polys": 320
+        }
+      ]
+    },
+    {
+      "file": "O_Pastry_ZMJ.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0053,
+            0.0055
+          ],
+          "uv_hi": [
+            0.9947,
+            0.883
+          ],
+          "uv_area": 0.8682,
+          "loops": 648,
+          "polys": 216
+        }
+      ]
+    },
+    {
+      "file": "O_PencilHolder_ENR.fbx",
+      "objects": 5,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0048,
+            0.0048
+          ],
+          "uv_hi": [
+            0.9253,
+            0.9952
+          ],
+          "uv_area": 0.9116,
+          "loops": 2814,
+          "polys": 707
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.003,
+            0.0033
+          ],
+          "uv_hi": [
+            0.9971,
+            0.674
+          ],
+          "uv_area": 0.6667,
+          "loops": 408,
+          "polys": 136
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0056,
+            0.0063
+          ],
+          "uv_hi": [
+            0.9945,
+            0.959
+          ],
+          "uv_area": 0.9421,
+          "loops": 720,
+          "polys": 180
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0039,
+            0.0039
+          ],
+          "uv_hi": [
+            0.9961,
+            0.9917
+          ],
+          "uv_area": 0.98,
+          "loops": 663096,
+          "polys": 221032
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0034,
+            0.0039
+          ],
+          "uv_hi": [
+            0.9966,
+            0.6922
+          ],
+          "uv_area": 0.6836,
+          "loops": 1296,
+          "polys": 324
+        }
+      ]
+    },
+    {
+      "file": "O_Sink_ZMJ.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.01,
+            0.01
+          ],
+          "uv_hi": [
+            0.9902,
+            0.9869
+          ],
+          "uv_area": 0.9576,
+          "loops": 11388,
+          "polys": 3796
+        }
+      ]
+    },
+    {
+      "file": "O_Speakers_SG.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0109,
+            0.0109
+          ],
+          "uv_hi": [
+            0.9851,
+            0.9891
+          ],
+          "uv_area": 0.9529,
+          "loops": 29310,
+          "polys": 9770
+        }
+      ]
+    },
+    {
+      "file": "O_Table_ZMJ.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0057,
+            0.0057
+          ],
+          "uv_hi": [
+            0.9282,
+            0.9944
+          ],
+          "uv_area": 0.9121,
+          "loops": 184,
+          "polys": 46
+        }
+      ]
+    },
+    {
+      "file": "O_TeaHolder_ZMJ.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0071,
+            0.0071
+          ],
+          "uv_hi": [
+            0.9929,
+            0.9718
+          ],
+          "uv_area": 0.9511,
+          "loops": 176,
+          "polys": 44
+        }
+      ]
+    },
+    {
+      "file": "O_WallWindow_ZMJ.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0043,
+            0.0043
+          ],
+          "uv_hi": [
+            0.7335,
+            0.9957
+          ],
+          "uv_area": 0.723,
+          "loops": 230,
+          "polys": 56
+        }
+      ]
+    },
+    {
+      "file": "O_Window_ZMJ.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0079,
+            0.0079
+          ],
+          "uv_hi": [
+            0.9921,
+            0.8125
+          ],
+          "uv_area": 0.792,
+          "loops": 656,
+          "polys": 164
+        }
+      ]
+    },
+    {
+      "file": "O_WoodFloor_ZMJ.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0115,
+            0.0115
+          ],
+          "uv_hi": [
+            0.9885,
+            0.8957
+          ],
+          "uv_area": 0.8638,
+          "loops": 1320,
+          "polys": 330
+        }
+      ]
+    },
+    {
+      "file": "P_ Lighter_KMP.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0102,
+            0.0099
+          ],
+          "uv_hi": [
+            0.9838,
+            0.9901
+          ],
+          "uv_area": 0.9542,
+          "loops": 2328,
+          "polys": 776
+        }
+      ]
+    },
+    {
+      "file": "P_ WatercoolerTop_KMP.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.006,
+            0.006
+          ],
+          "uv_hi": [
+            0.9756,
+            0.9941
+          ],
+          "uv_area": 0.958,
+          "loops": 1905,
+          "polys": 635
+        }
+      ]
+    },
+    {
+      "file": "P_Bin01_SY.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.006,
+            0.006
+          ],
+          "uv_hi": [
+            0.994,
+            0.9485
+          ],
+          "uv_area": 0.9312,
+          "loops": 1332,
+          "polys": 444
+        }
+      ]
+    },
+    {
+      "file": "P_Bin02_SY.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0064,
+            0.0064
+          ],
+          "uv_hi": [
+            0.9936,
+            0.9301
+          ],
+          "uv_area": 0.9118,
+          "loops": 1020,
+          "polys": 340
+        }
+      ]
+    },
+    {
+      "file": "P_Bin03_SY.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.006,
+            0.006
+          ],
+          "uv_hi": [
+            0.994,
+            0.9485
+          ],
+          "uv_area": 0.9312,
+          "loops": 1332,
+          "polys": 444
+        }
+      ]
+    },
+    {
+      "file": "P_Box_EF.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0073,
+            0.0073
+          ],
+          "uv_hi": [
+            0.9927,
+            0.9446
+          ],
+          "uv_area": 0.9236,
+          "loops": 750,
+          "polys": 250
+        }
+      ]
+    },
+    {
+      "file": "P_BreakroomTable_AC.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0062,
+            0.006
+          ],
+          "uv_hi": [
+            0.994,
+            0.9829
+          ],
+          "uv_area": 0.9651,
+          "loops": 544,
+          "polys": 126
+        }
+      ]
+    },
+    {
+      "file": "P_BugSpray_KS.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.009,
+            0.0085
+          ],
+          "uv_hi": [
+            0.9916,
+            0.9861
+          ],
+          "uv_area": 0.9607,
+          "loops": 1523,
+          "polys": 389
+        }
+      ]
+    },
+    {
+      "file": "P_Calendar_SG.fbx",
+      "objects": 9,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0113,
+            0.0113
+          ],
+          "uv_hi": [
+            0.9864,
+            0.9887
+          ],
+          "uv_area": 0.9532,
+          "loops": 70224,
+          "polys": 17556
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0022,
+            0.0022
+          ],
+          "uv_hi": [
+            0.9978,
+            0.9978
+          ],
+          "uv_area": 0.991,
+          "loops": 24,
+          "polys": 6
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0022,
+            0.0022
+          ],
+          "uv_hi": [
+            0.9978,
+            0.9978
+          ],
+          "uv_area": 0.991,
+          "loops": 24,
+          "polys": 6
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0022,
+            0.0022
+          ],
+          "uv_hi": [
+            0.5247,
+            0.9978
+          ],
+          "uv_area": 0.5201,
+          "loops": 24,
+          "polys": 6
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0022,
+            0.0022
+          ],
+          "uv_hi": [
+            0.9978,
+            0.9978
+          ],
+          "uv_area": 0.991,
+          "loops": 24,
+          "polys": 6
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0022,
+            0.0022
+          ],
+          "uv_hi": [
+            0.9978,
+            0.9978
+          ],
+          "uv_area": 0.991,
+          "loops": 24,
+          "polys": 6
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0022,
+            0.0022
+          ],
+          "uv_hi": [
+            0.9978,
+            0.9978
+          ],
+          "uv_area": 0.991,
+          "loops": 24,
+          "polys": 6
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0022,
+            0.0022
+          ],
+          "uv_hi": [
+            0.9978,
+            0.9978
+          ],
+          "uv_area": 0.991,
+          "loops": 24,
+          "polys": 6
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0022,
+            0.0022
+          ],
+          "uv_hi": [
+            0.9978,
+            0.9978
+          ],
+          "uv_area": 0.991,
+          "loops": 24,
+          "polys": 6
+        }
+      ]
+    },
+    {
+      "file": "P_Chair_KS.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0123,
+            0.0123
+          ],
+          "uv_hi": [
+            0.9854,
+            0.9877
+          ],
+          "uv_area": 0.9491,
+          "loops": 7878,
+          "polys": 1935
+        }
+      ]
+    },
+    {
+      "file": "P_Clock_AC.fbx",
+      "objects": 3,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0025,
+            0.0025
+          ],
+          "uv_hi": [
+            0.4095,
+            0.9975
+          ],
+          "uv_area": 0.4049,
+          "loops": 512,
+          "polys": 128
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0045,
+            0.0045
+          ],
+          "uv_hi": [
+            0.9253,
+            0.9955
+          ],
+          "uv_area": 0.9126,
+          "loops": 128,
+          "polys": 32
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0082,
+            0.0085
+          ],
+          "uv_hi": [
+            0.9921,
+            0.9921
+          ],
+          "uv_area": 0.9678,
+          "loops": 96,
+          "polys": 24
+        }
+      ]
+    },
+    {
+      "file": "P_ComputerMonitor_AC.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0062,
+            0.0062
+          ],
+          "uv_hi": [
+            0.858,
+            0.994
+          ],
+          "uv_area": 0.8414,
+          "loops": 128,
+          "polys": 32
+        }
+      ]
+    },
+    {
+      "file": "P_ComputerTower_AC.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0045,
+            0.0045
+          ],
+          "uv_hi": [
+            0.9955,
+            0.7903
+          ],
+          "uv_area": 0.7786,
+          "loops": 72,
+          "polys": 18
+        }
+      ]
+    },
+    {
+      "file": "P_Cubical_KMP.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0044,
+            0.0049
+          ],
+          "uv_hi": [
+            0.9956,
+            0.9471
+          ],
+          "uv_area": 0.9339,
+          "loops": 468,
+          "polys": 156
+        }
+      ]
+    },
+    {
+      "file": "P_Cushion_EF.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0048,
+            0.0045
+          ],
+          "uv_hi": [
+            0.9956,
+            0.9841
+          ],
+          "uv_area": 0.9705,
+          "loops": 4656,
+          "polys": 1552
+        }
+      ]
+    },
+    {
+      "file": "P_Cushion_Long_EF.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0046,
+            0.0046
+          ],
+          "uv_hi": [
+            0.9957,
+            0.9795
+          ],
+          "uv_area": 0.9662,
+          "loops": 5376,
+          "polys": 1792
+        }
+      ]
+    },
+    {
+      "file": "P_DeskDrawers_KS.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0119,
+            0.0119
+          ],
+          "uv_hi": [
+            0.9875,
+            0.9881
+          ],
+          "uv_area": 0.9523,
+          "loops": 2152,
+          "polys": 538
+        }
+      ]
+    },
+    {
+      "file": "P_DishSoap_SG.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0093,
+            0.0093
+          ],
+          "uv_hi": [
+            0.9907,
+            0.9849
+          ],
+          "uv_area": 0.9576,
+          "loops": 198438,
+          "polys": 66146
+        }
+      ]
+    },
+    {
+      "file": "P_DonutBox_KS.fbx",
+      "objects": 2,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0064,
+            0.006
+          ],
+          "uv_hi": [
+            0.9941,
+            0.9941
+          ],
+          "uv_area": 0.976,
+          "loops": 400,
+          "polys": 100
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0056,
+            0.0056
+          ],
+          "uv_hi": [
+            0.9521,
+            0.9948
+          ],
+          "uv_area": 0.9363,
+          "loops": 416,
+          "polys": 104
+        }
+      ]
+    },
+    {
+      "file": "P_Door_KS.fbx",
+      "objects": 2,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0063,
+            0.0069
+          ],
+          "uv_hi": [
+            0.9937,
+            0.9907
+          ],
+          "uv_area": 0.9714,
+          "loops": 1880,
+          "polys": 466
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0073,
+            0.0074
+          ],
+          "uv_hi": [
+            0.9929,
+            0.9172
+          ],
+          "uv_area": 0.8967,
+          "loops": 912,
+          "polys": 216
+        }
+      ]
+    },
+    {
+      "file": "P_File_EF.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0032,
+            0.003
+          ],
+          "uv_hi": [
+            0.9972,
+            0.8527
+          ],
+          "uv_area": 0.8446,
+          "loops": 528,
+          "polys": 176
+        }
+      ]
+    },
+    {
+      "file": "P_FilingCabinets_SG.fbx",
+      "objects": 10,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0078,
+            0.0078
+          ],
+          "uv_hi": [
+            0.9877,
+            0.9922
+          ],
+          "uv_area": 0.9646,
+          "loops": 440,
+          "polys": 110
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0068,
+            0.0067
+          ],
+          "uv_hi": [
+            0.9479,
+            0.9941
+          ],
+          "uv_area": 0.9292,
+          "loops": 56,
+          "polys": 14
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0068,
+            0.0067
+          ],
+          "uv_hi": [
+            0.9479,
+            0.9941
+          ],
+          "uv_area": 0.9292,
+          "loops": 56,
+          "polys": 14
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0068,
+            0.0067
+          ],
+          "uv_hi": [
+            0.9479,
+            0.9941
+          ],
+          "uv_area": 0.9292,
+          "loops": 72,
+          "polys": 18
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0065,
+            0.0065
+          ],
+          "uv_hi": [
+            0.9802,
+            0.9935
+          ],
+          "uv_area": 0.9609,
+          "loops": 156,
+          "polys": 39
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0075,
+            0.0078
+          ],
+          "uv_hi": [
+            0.9902,
+            0.9926
+          ],
+          "uv_area": 0.9677,
+          "loops": 344,
+          "polys": 86
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0061,
+            0.006
+          ],
+          "uv_hi": [
+            0.9942,
+            0.968
+          ],
+          "uv_area": 0.9505,
+          "loops": 56,
+          "polys": 14
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0063,
+            0.0059
+          ],
+          "uv_hi": [
+            0.9896,
+            0.9941
+          ],
+          "uv_area": 0.9718,
+          "loops": 56,
+          "polys": 14
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.006,
+            0.0061
+          ],
+          "uv_hi": [
+            0.977,
+            0.9941
+          ],
+          "uv_area": 0.9592,
+          "loops": 56,
+          "polys": 14
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0097,
+            0.0097
+          ],
+          "uv_hi": [
+            0.9903,
+            0.9875
+          ],
+          "uv_area": 0.9589,
+          "loops": 6528,
+          "polys": 1638
+        }
+      ]
+    },
+    {
+      "file": "P_FireExtinguisher_SY.fbx",
+      "objects": 6,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.007,
+            0.007
+          ],
+          "uv_hi": [
+            0.9362,
+            0.993
+          ],
+          "uv_area": 0.9161,
+          "loops": 1236,
+          "polys": 412
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0038,
+            0.0036
+          ],
+          "uv_hi": [
+            0.9966,
+            0.9966
+          ],
+          "uv_area": 0.9858,
+          "loops": 120,
+          "polys": 40
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0044,
+            0.0044
+          ],
+          "uv_hi": [
+            0.7182,
+            0.9956
+          ],
+          "uv_area": 0.7077,
+          "loops": 192,
+          "polys": 48
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0052,
+            0.0052
+          ],
+          "uv_hi": [
+            0.9948,
+            0.9264
+          ],
+          "uv_area": 0.9117,
+          "loops": 224,
+          "polys": 56
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0053,
+            0.0053
+          ],
+          "uv_hi": [
+            0.9947,
+            0.9462
+          ],
+          "uv_area": 0.9309,
+          "loops": 8400,
+          "polys": 2800
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0058,
+            0.0058
+          ],
+          "uv_hi": [
+            0.9947,
+            0.9641
+          ],
+          "uv_area": 0.9476,
+          "loops": 56,
+          "polys": 14
+        }
+      ]
+    },
+    {
+      "file": "P_FirstAidBox_SY.fbx",
+      "objects": 2,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.006,
+            0.0055
+          ],
+          "uv_hi": [
+            0.995,
+            0.8997
+          ],
+          "uv_area": 0.8844,
+          "loops": 276,
+          "polys": 92
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.004,
+            0.0043
+          ],
+          "uv_hi": [
+            0.9961,
+            0.907
+          ],
+          "uv_area": 0.8956,
+          "loops": 168,
+          "polys": 56
+        }
+      ]
+    },
+    {
+      "file": "P_Kettle_SG.fbx",
+      "objects": 5,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0043,
+            0.0043
+          ],
+          "uv_hi": [
+            0.9964,
+            0.9871
+          ],
+          "uv_area": 0.975,
+          "loops": 192,
+          "polys": 34
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0041,
+            0.0045
+          ],
+          "uv_hi": [
+            0.9942,
+            0.9961
+          ],
+          "uv_area": 0.9817,
+          "loops": 1152,
+          "polys": 289
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0052,
+            0.0052
+          ],
+          "uv_hi": [
+            0.9948,
+            0.9783
+          ],
+          "uv_area": 0.963,
+          "loops": 1280,
+          "polys": 320
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0084,
+            0.0084
+          ],
+          "uv_hi": [
+            0.9918,
+            0.9862
+          ],
+          "uv_area": 0.9616,
+          "loops": 2042,
+          "polys": 511
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0041,
+            0.0041
+          ],
+          "uv_hi": [
+            0.912,
+            0.9959
+          ],
+          "uv_area": 0.9004,
+          "loops": 600,
+          "polys": 150
+        }
+      ]
+    },
+    {
+      "file": "P_Lamp_EF.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0095,
+            0.0094
+          ],
+          "uv_hi": [
+            0.9907,
+            0.9907
+          ],
+          "uv_area": 0.9629,
+          "loops": 47124,
+          "polys": 15708
+        }
+      ]
+    },
+    {
+      "file": "P_Laptop_KS.fbx",
+      "objects": 2,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0099,
+            0.0099
+          ],
+          "uv_hi": [
+            0.9814,
+            0.9901
+          ],
+          "uv_area": 0.9522,
+          "loops": 2714,
+          "polys": 672
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0043,
+            0.0041
+          ],
+          "uv_hi": [
+            0.8533,
+            0.9963
+          ],
+          "uv_area": 0.8424,
+          "loops": 198,
+          "polys": 44
+        }
+      ]
+    },
+    {
+      "file": "P_Markers_SG.fbx",
+      "objects": 2,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0056,
+            0.0056
+          ],
+          "uv_hi": [
+            0.8843,
+            0.9944
+          ],
+          "uv_area": 0.8689,
+          "loops": 540,
+          "polys": 180
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0065,
+            0.0065
+          ],
+          "uv_hi": [
+            0.9697,
+            0.9935
+          ],
+          "uv_area": 0.9506,
+          "loops": 1404,
+          "polys": 468
+        }
+      ]
+    },
+    {
+      "file": "P_Mop_Osc.fbx",
+      "objects": 3,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0012,
+            0.0012
+          ],
+          "uv_hi": [
+            0.7669,
+            0.9988
+          ],
+          "uv_area": 0.7639,
+          "loops": 340,
+          "polys": 90
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0019,
+            0.0019
+          ],
+          "uv_hi": [
+            0.9981,
+            0.9981
+          ],
+          "uv_area": 0.9923,
+          "loops": 60,
+          "polys": 20
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0068,
+            0.0064
+          ],
+          "uv_hi": [
+            0.9725,
+            0.9936
+          ],
+          "uv_area": 0.9534,
+          "loops": 1452,
+          "polys": 484
+        }
+      ]
+    },
+    {
+      "file": "P_Mouse_KMP.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0064,
+            0.0064
+          ],
+          "uv_hi": [
+            0.9322,
+            0.9936
+          ],
+          "uv_area": 0.914,
+          "loops": 4092,
+          "polys": 1364
+        }
+      ]
+    },
+    {
+      "file": "P_OfficeDesk_AC.fbx",
+      "objects": 2,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0035,
+            0.0035
+          ],
+          "uv_hi": [
+            0.8042,
+            0.9965
+          ],
+          "uv_area": 0.7952,
+          "loops": 184,
+          "polys": 46
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0093,
+            0.0093
+          ],
+          "uv_hi": [
+            0.9876,
+            0.9907
+          ],
+          "uv_area": 0.96,
+          "loops": 168,
+          "polys": 42
+        }
+      ]
+    },
+    {
+      "file": "P_PaperTowels_Osc.fbx",
+      "objects": 2,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0012,
+            0.0012
+          ],
+          "uv_hi": [
+            0.3839,
+            0.9988
+          ],
+          "uv_area": 0.3817,
+          "loops": 120,
+          "polys": 30
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0059,
+            0.0059
+          ],
+          "uv_hi": [
+            0.9941,
+            0.8669
+          ],
+          "uv_area": 0.8509,
+          "loops": 864,
+          "polys": 216
+        }
+      ]
+    },
+    {
+      "file": "P_Pen_KMP.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0088,
+            0.0088
+          ],
+          "uv_hi": [
+            0.9912,
+            0.985
+          ],
+          "uv_area": 0.959,
+          "loops": 1218,
+          "polys": 406
+        }
+      ]
+    },
+    {
+      "file": "P_PictureFrame_AC.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0065,
+            0.0065
+          ],
+          "uv_hi": [
+            0.9936,
+            0.9936
+          ],
+          "uv_area": 0.9744,
+          "loops": 84,
+          "polys": 21
+        }
+      ]
+    },
+    {
+      "file": "P_Scissors_SG.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0079,
+            0.0079
+          ],
+          "uv_hi": [
+            0.9921,
+            0.9646
+          ],
+          "uv_area": 0.9416,
+          "loops": 934,
+          "polys": 240
+        }
+      ]
+    },
+    {
+      "file": "P_Shelf_PMB.fbx",
+      "objects": 2,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.006,
+            0.0062
+          ],
+          "uv_hi": [
+            0.9942,
+            0.985
+          ],
+          "uv_area": 0.9673,
+          "loops": 180,
+          "polys": 60
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0053,
+            0.0061
+          ],
+          "uv_hi": [
+            0.9951,
+            0.9821
+          ],
+          "uv_area": 0.966,
+          "loops": 120,
+          "polys": 40
+        }
+      ]
+    },
+    {
+      "file": "P_SmokeDetector_SG.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0103,
+            0.0103
+          ],
+          "uv_hi": [
+            0.9711,
+            0.9897
+          ],
+          "uv_area": 0.941,
+          "loops": 6342,
+          "polys": 2114
+        }
+      ]
+    },
+    {
+      "file": "P_StickyNote_PMB.fbx",
+      "objects": 2,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0049,
+            0.0048
+          ],
+          "uv_hi": [
+            0.9958,
+            0.9343
+          ],
+          "uv_area": 0.921,
+          "loops": 288,
+          "polys": 96
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0069,
+            0.0069
+          ],
+          "uv_hi": [
+            0.9782,
+            0.9932
+          ],
+          "uv_area": 0.958,
+          "loops": 1152,
+          "polys": 384
+        }
+      ]
+    },
+    {
+      "file": "P_StorageBox_Osc.fbx",
+      "objects": 2,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0081,
+            0.008
+          ],
+          "uv_hi": [
+            0.9286,
+            0.9922
+          ],
+          "uv_area": 0.906,
+          "loops": 1032,
+          "polys": 256
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0058,
+            0.0058
+          ],
+          "uv_hi": [
+            0.9942,
+            0.7593
+          ],
+          "uv_area": 0.7449,
+          "loops": 1072,
+          "polys": 276
+        }
+      ]
+    },
+    {
+      "file": "P_Swatter_KS.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0059,
+            0.0059
+          ],
+          "uv_hi": [
+            0.722,
+            0.9941
+          ],
+          "uv_area": 0.7076,
+          "loops": 1056,
+          "polys": 265
+        }
+      ]
+    },
+    {
+      "file": "P_ThumbTack_PMB.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0063,
+            0.0065
+          ],
+          "uv_hi": [
+            0.9939,
+            0.9704
+          ],
+          "uv_area": 0.952,
+          "loops": 2208,
+          "polys": 736
+        }
+      ]
+    },
+    {
+      "file": "P_Vase1_CRP.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.005,
+            0.0044
+          ],
+          "uv_hi": [
+            0.8551,
+            0.9956
+          ],
+          "uv_area": 0.8426,
+          "loops": 1632,
+          "polys": 544
+        }
+      ]
+    },
+    {
+      "file": "P_Vase2_CRP.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0058,
+            0.0042
+          ],
+          "uv_hi": [
+            0.996,
+            0.9368
+          ],
+          "uv_area": 0.9234,
+          "loops": 1536,
+          "polys": 512
+        }
+      ]
+    },
+    {
+      "file": "P_Vase3_CRP.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0065,
+            0.0068
+          ],
+          "uv_hi": [
+            0.9937,
+            0.9745
+          ],
+          "uv_area": 0.9554,
+          "loops": 2400,
+          "polys": 800
+        }
+      ]
+    },
+    {
+      "file": "P_Vase4_CRP.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0068,
+            0.0068
+          ],
+          "uv_hi": [
+            0.9218,
+            0.9933
+          ],
+          "uv_area": 0.9027,
+          "loops": 2400,
+          "polys": 800
+        }
+      ]
+    },
+    {
+      "file": "P_VenndingMachine_Osc.fbx",
+      "objects": 9,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0083,
+            0.0085
+          ],
+          "uv_hi": [
+            0.9635,
+            0.9918
+          ],
+          "uv_area": 0.9392,
+          "loops": 1728,
+          "polys": 432
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0106,
+            0.0106
+          ],
+          "uv_hi": [
+            0.9895,
+            0.9863
+          ],
+          "uv_area": 0.9552,
+          "loops": 6336,
+          "polys": 1600
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0026,
+            0.0026
+          ],
+          "uv_hi": [
+            0.9272,
+            0.9974
+          ],
+          "uv_area": 0.9197,
+          "loops": 248,
+          "polys": 65
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0111,
+            0.0111
+          ],
+          "uv_hi": [
+            0.9592,
+            0.9889
+          ],
+          "uv_area": 0.9271,
+          "loops": 840,
+          "polys": 280
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0047,
+            0.0047
+          ],
+          "uv_hi": [
+            0.9964,
+            0.9699
+          ],
+          "uv_area": 0.9572,
+          "loops": 24,
+          "polys": 6
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0041,
+            0.0045
+          ],
+          "uv_hi": [
+            0.9963,
+            0.981
+          ],
+          "uv_area": 0.9689,
+          "loops": 100,
+          "polys": 25
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.008,
+            0.008
+          ],
+          "uv_hi": [
+            0.992,
+            0.9535
+          ],
+          "uv_area": 0.9305,
+          "loops": 1472,
+          "polys": 384
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0048,
+            0.0048
+          ],
+          "uv_hi": [
+            0.7707,
+            0.9952
+          ],
+          "uv_area": 0.7585,
+          "loops": 192,
+          "polys": 51
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0059,
+            0.0059
+          ],
+          "uv_hi": [
+            0.9208,
+            0.9941
+          ],
+          "uv_area": 0.9042,
+          "loops": 516,
+          "polys": 172
+        }
+      ]
+    },
+    {
+      "file": "P_WandsAirFresher_Osc.fbx",
+      "objects": 2,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.006,
+            0.0059
+          ],
+          "uv_hi": [
+            0.9887,
+            0.9947
+          ],
+          "uv_area": 0.9716,
+          "loops": 1072,
+          "polys": 272
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0045,
+            0.0045
+          ],
+          "uv_hi": [
+            0.4526,
+            0.9955
+          ],
+          "uv_area": 0.4439,
+          "loops": 660,
+          "polys": 220
+        }
+      ]
+    },
+    {
+      "file": "P_Whiteboard_SG.fbx",
+      "objects": 3,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0058,
+            0.0058
+          ],
+          "uv_hi": [
+            0.7693,
+            0.9942
+          ],
+          "uv_area": 0.7545,
+          "loops": 4016,
+          "polys": 1036
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0059,
+            0.0059
+          ],
+          "uv_hi": [
+            0.7734,
+            0.9941
+          ],
+          "uv_area": 0.7584,
+          "loops": 4016,
+          "polys": 1036
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0046,
+            0.0049
+          ],
+          "uv_hi": [
+            0.8065,
+            0.9955
+          ],
+          "uv_area": 0.7944,
+          "loops": 360,
+          "polys": 99
+        }
+      ]
+    },
+    {
+      "file": "S_Cactus_PMB.fbx",
+      "objects": 3,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0096,
+            0.0096
+          ],
+          "uv_hi": [
+            0.9905,
+            0.9848
+          ],
+          "uv_area": 0.9567,
+          "loops": 1380,
+          "polys": 360
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0107,
+            0.0107
+          ],
+          "uv_hi": [
+            0.9893,
+            0.9686
+          ],
+          "uv_area": 0.9372,
+          "loops": 5400,
+          "polys": 1440
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0071,
+            0.0069
+          ],
+          "uv_hi": [
+            0.9296,
+            0.9932
+          ],
+          "uv_area": 0.9098,
+          "loops": 950,
+          "polys": 240
+        }
+      ]
+    },
+    {
+      "file": "S_CoffeeTable_KS.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0074,
+            0.0074
+          ],
+          "uv_hi": [
+            0.9861,
+            0.9926
+          ],
+          "uv_area": 0.9642,
+          "loops": 3396,
+          "polys": 834
+        }
+      ]
+    },
+    {
+      "file": "S_Keyboard_KS.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.012,
+            0.012
+          ],
+          "uv_hi": [
+            0.9728,
+            0.988
+          ],
+          "uv_area": 0.9378,
+          "loops": 13104,
+          "polys": 3272
+        }
+      ]
+    },
+    {
+      "file": "S_Phone_KS.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.006,
+            0.0057
+          ],
+          "uv_hi": [
+            0.9946,
+            0.9869
+          ],
+          "uv_area": 0.9701,
+          "loops": 630,
+          "polys": 151
+        }
+      ]
+    },
+    {
+      "file": "S_Plant_PMB.fbx",
+      "objects": 4,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0115,
+            0.0112
+          ],
+          "uv_hi": [
+            0.9888,
+            0.9757
+          ],
+          "uv_area": 0.9426,
+          "loops": 1280,
+          "polys": 320
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0048,
+            0.0048
+          ],
+          "uv_hi": [
+            0.9952,
+            0.8678
+          ],
+          "uv_area": 0.8547,
+          "loops": 128,
+          "polys": 32
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.004,
+            0.004
+          ],
+          "uv_hi": [
+            0.9355,
+            0.996
+          ],
+          "uv_area": 0.924,
+          "loops": 1944,
+          "polys": 648
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.007,
+            0.0072
+          ],
+          "uv_hi": [
+            0.9591,
+            0.993
+          ],
+          "uv_area": 0.9386,
+          "loops": 910,
+          "polys": 230
+        }
+      ]
+    },
+    {
+      "file": "S_Printer_KS.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0119,
+            0.0119
+          ],
+          "uv_hi": [
+            0.9856,
+            0.9881
+          ],
+          "uv_area": 0.9506,
+          "loops": 3661,
+          "polys": 892
+        }
+      ]
+    },
+    {
+      "file": "S_SecurityCam_KS.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0094,
+            0.0091
+          ],
+          "uv_hi": [
+            0.9912,
+            0.9622
+          ],
+          "uv_area": 0.9359,
+          "loops": 1348,
+          "polys": 349
+        }
+      ]
+    },
+    {
+      "file": "S_Succulent_PMB.fbx",
+      "objects": 2,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.0115,
+            0.0115
+          ],
+          "uv_hi": [
+            0.9818,
+            0.9886
+          ],
+          "uv_area": 0.9482,
+          "loops": 1536,
+          "polys": 384
+        },
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.006,
+            0.006
+          ],
+          "uv_hi": [
+            0.9197,
+            0.9942
+          ],
+          "uv_area": 0.9029,
+          "loops": 710,
+          "polys": 180
+        }
+      ]
+    },
+    {
+      "file": "S_Watercooler_KS.fbx",
+      "objects": 1,
+      "exported": true,
+      "uv_layout": null,
+      "results": [
+        {
+          "packer": "blender",
+          "uv_lo": [
+            0.01,
+            0.0099
+          ],
+          "uv_hi": [
+            0.9868,
+            0.9902
+          ],
+          "uv_area": 0.9576,
+          "loops": 2328,
+          "polys": 548
+        }
+      ]
+    }
+  ]
+}

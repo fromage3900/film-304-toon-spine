@@ -1,0 +1,256 @@
+{
+  "source_scene": "G:\\film-304-canon-onedrive\\Set_Environments\\Textured\\S_OfficeScene01\\scenes\\S_OfficeScene01_ENR (1).0008.mb",
+  "output_scene": "G:\\film-304-toon-spine\\Saved\\Scenes\\S_OfficeScene01_BS_Toon_v01.mb",
+  "steps": [
+    {
+      "meshes": 403,
+      "lights": 0,
+      "cameras": 6,
+      "anim_curves": 107,
+      "skydome_candidates": [],
+      "scene_min": [
+        -1000.0,
+        -1000.0,
+        -1000.0
+      ],
+      "scene_max": [
+        1000.0,
+        1000.0,
+        1551.0
+      ],
+      "step": "inventory"
+    },
+    {
+      "disabled": [],
+      "step": "skydome_disabled"
+    },
+    {
+      "files": [
+        "CAD_CeilingBay.fbx",
+        "CAD_DoorFrame.fbx",
+        "CAD_FloorSlab.fbx",
+        "CAD_TrimBase.fbx",
+        "CAD_TrimMullion.fbx",
+        "CAD_TrimPanel.fbx",
+        "CAD_WallModule.fbx",
+        "CAD_WindowMullion.fbx"
+      ],
+      "new_meshes": 8,
+      "step": "imported_cad"
+    },
+    {
+      "count": 8,
+      "detail": [
+        {
+          "mesh": "CAD_CeilingBay_curvShape",
+          "size_cm": [
+            110.0,
+            5.5,
+            110.0
+          ],
+          "shift": [
+            0.0,
+            -1332.8,
+            275.5
+          ]
+        },
+        {
+          "mesh": "CAD_DoorFrame_curvShape",
+          "size_cm": [
+            116.0,
+            248.0,
+            46.0
+          ],
+          "shift": [
+            0.0,
+            -1000.0,
+            272.5
+          ]
+        },
+        {
+          "mesh": "CAD_FloorSlab_curvShape",
+          "size_cm": [
+            2200.0,
+            20.0,
+            2200.0
+          ],
+          "shift": [
+            0.0,
+            -980.0,
+            275.5
+          ]
+        },
+        {
+          "mesh": "CAD_TrimBase_curvShape",
+          "size_cm": [
+            2024.0,
+            182.7,
+            18.0
+          ],
+          "shift": [
+            88.0,
+            -999.8,
+            275.5
+          ]
+        },
+        {
+          "mesh": "CAD_TrimMullion_curvShape",
+          "size_cm": [
+            1320.0,
+            222.0,
+            18.0
+          ],
+          "shift": [
+            440.0,
+            -1118.6,
+            275.5
+          ]
+        },
+        {
+          "mesh": "CAD_TrimPanel_curvShape",
+          "size_cm": [
+            484.0,
+            143.1,
+            18.0
+          ],
+          "shift": [
+            858.0,
+            -1237.4,
+            275.5
+          ]
+        },
+        {
+          "mesh": "CAD_WallModule_curvShape",
+          "size_cm": [
+            2200.0,
+            340.0,
+            46.0
+          ],
+          "shift": [
+            0.0,
+            -1000.0,
+            272.5
+          ]
+        },
+        {
+          "mesh": "CAD_WindowMullion_curvShape",
+          "size_cm": [
+            220.0,
+            180.0,
+            48.0
+          ],
+          "shift": [
+            0.0,
+            -1000.0,
+            271.5
+          ]
+        }
+      ],
+      "step": "placed"
+    },
+    {
+      "attrs": [
+        "outColor",
+        "outColorR",
+        "outColorG",
+        "outColorB",
+        "hardwareColor",
+        "hardwareColorR",
+        "hardwareColorG",
+        "hardwareColorB",
+        "maskColor",
+        "maskColorR",
+        "maskColorG",
+        "maskColorB",
+        "edgeColor",
+        "edgeColorR",
+        "edgeColorG",
+        "edgeColorB",
+        "edgeTonemap",
+        "edgeTonemapR",
+        "edgeTonemapG",
+        "edgeTonemapB",
+        "edgeTonemapHueSaturation",
+        "edgeTonemapHueSaturationR",
+        "edgeTonemapHueSaturationG",
+        "edgeTonemapHueSaturationB",
+        "silhouetteColor"
+      ],
+      "step": "aiToon_attrs"
+    },
+    {
+      "groups": 8,
+      "detail": {
+        "CAD_CeilingBay_curvShape": {
+          "toon": "AIT_BS_CAD_CeilingBay_curvShape",
+          "ramp": "RAMP_BS_CAD_CeilingBay_curvShape",
+          "tonemap_input": [],
+          "ramp_interpolation": 0
+        },
+        "CAD_DoorFrame_curvShape": {
+          "toon": "AIT_BS_CAD_DoorFrame_curvShape",
+          "ramp": "RAMP_BS_CAD_DoorFrame_curvShape",
+          "tonemap_input": [],
+          "ramp_interpolation": 0
+        },
+        "CAD_FloorSlab_curvShape": {
+          "toon": "AIT_BS_CAD_FloorSlab_curvShape",
+          "ramp": "RAMP_BS_CAD_FloorSlab_curvShape",
+          "tonemap_input": [],
+          "ramp_interpolation": 0
+        },
+        "CAD_TrimBase_curvShape": {
+          "toon": "AIT_BS_CAD_TrimBase_curvShape",
+          "ramp": "RAMP_BS_CAD_TrimBase_curvShape",
+          "tonemap_input": [],
+          "ramp_interpolation": 0
+        },
+        "CAD_TrimMullion_curvShape": {
+          "toon": "AIT_BS_CAD_TrimMullion_curvShape",
+          "ramp": "RAMP_BS_CAD_TrimMullion_curvShape",
+          "tonemap_input": [],
+          "ramp_interpolation": 0
+        },
+        "CAD_TrimPanel_curvShape": {
+          "toon": "AIT_BS_CAD_TrimPanel_curvShape",
+          "ramp": "RAMP_BS_CAD_TrimPanel_curvShape",
+          "tonemap_input": [],
+          "ramp_interpolation": 0
+        },
+        "CAD_WallModule_curvShape": {
+          "toon": "AIT_BS_CAD_WallModule_curvShape",
+          "ramp": "RAMP_BS_CAD_WallModule_curvShape",
+          "tonemap_input": [],
+          "ramp_interpolation": 0
+        },
+        "CAD_WindowMullion_curvShape": {
+          "toon": "AIT_BS_CAD_WindowMullion_curvShape",
+          "ramp": "RAMP_BS_CAD_WindowMullion_curvShape",
+          "tonemap_input": [],
+          "ramp_interpolation": 0
+        }
+      },
+      "step": "toon_applied"
+    },
+    {
+      "path": "G:\\film-304-toon-spine\\Saved\\Scenes\\S_OfficeScene01_BS_Toon_v01.mb",
+      "exists": true,
+      "size": 213685084,
+      "step": "saved"
+    },
+    {
+      "camera": "|S_OfficeScene_ER:C_OfficeCamera_ER:camera1|S_OfficeScene_ER:C_OfficeCamera_ER:cameraShape1",
+      "ok": false,
+      "error": null,
+      "still": null,
+      "step": "render"
+    },
+    {
+      "camera": "|S_OfficeScene_ER:camera1|S_OfficeScene_ER:cameraShape1",
+      "ok": false,
+      "error": null,
+      "still": null,
+      "step": "render"
+    }
+  ]
+}

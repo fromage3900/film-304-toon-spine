@@ -1,0 +1,90 @@
+{
+  "scene": "G:\\film-304-toon-spine\\Saved\\Scenes\\S_OfficeScene01_BS_Toon_v01.mb",
+  "steps": [
+    {
+      "lights": 0,
+      "toon_nodes": 16,
+      "ramp_nodes": 8,
+      "step": "inventory"
+    },
+    {
+      "made": [
+        "directionalLight1",
+        "directionalLight2"
+      ],
+      "step": "lights_added"
+    },
+    {
+      "count": 8,
+      "failed": [
+        {
+          "toon": "AIT_BS_CAD_CeilingBay_curvShapeSG",
+          "reason": "no ramp"
+        },
+        {
+          "toon": "AIT_BS_CAD_DoorFrame_curvShapeSG",
+          "reason": "no ramp"
+        },
+        {
+          "toon": "AIT_BS_CAD_FloorSlab_curvShapeSG",
+          "reason": "no ramp"
+        },
+        {
+          "toon": "AIT_BS_CAD_TrimBase_curvShapeSG",
+          "reason": "no ramp"
+        }
+      ],
+      "sample": [
+        "AIT_BS_CAD_CeilingBay_curvShape",
+        "AIT_BS_CAD_DoorFrame_curvShape",
+        "AIT_BS_CAD_FloorSlab_curvShape"
+      ],
+      "step": "ramp_linked"
+    },
+    {
+      "path": "G:\\film-304-toon-spine\\Saved\\Scenes\\S_OfficeScene01_BS_Toon_v02.mb",
+      "exists": true,
+      "size": 213687984,
+      "step": "saved"
+    },
+    {
+      "cameras": [
+        "|S_OfficeScene_ER:C_OfficeCamera_ER:camera1",
+        "|S_OfficeScene_ER:camera1"
+      ],
+      "step": "render_cameras"
+    },
+    {
+      "camera": "camera1",
+      "ok": true,
+      "error": null,
+      "still": "G:\\film-304-toon-spine\\Saved\\Audit\\OfficeToon_2026-11-18\\BS_Toon_v02_cam0.png",
+      "step": "render"
+    },
+    {
+      "camera": "camera1",
+      "ok": true,
+      "error": null,
+      "still": "G:\\film-304-toon-spine\\Saved\\Audit\\OfficeToon_2026-11-18\\BS_Toon_v02_cam1.png",
+      "step": "render"
+    }
+  ],
+  "renders": [
+    {
+      "camera": "camera1",
+      "ok": true,
+      "error": null,
+      "still": "G:\\film-304-toon-spine\\Saved\\Audit\\OfficeToon_2026-11-18\\BS_Toon_v02_cam0.png",
+      "image_dir": "C:/Users/froma/OneDrive/Documents/maya/projects/default/images",
+      "found": 1
+    },
+    {
+      "camera": "camera1",
+      "ok": true,
+      "error": null,
+      "still": "G:\\film-304-toon-spine\\Saved\\Audit\\OfficeToon_2026-11-18\\BS_Toon_v02_cam1.png",
+      "image_dir": "C:/Users/froma/OneDrive/Documents/maya/projects/default/images",
+      "found": 1
+    }
+  ]
+}
