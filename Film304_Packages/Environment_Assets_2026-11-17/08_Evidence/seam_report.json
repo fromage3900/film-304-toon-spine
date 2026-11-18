@@ -1,0 +1,52 @@
+{
+  "T_Tilable_Blinds_512.png": {
+    "size": [
+      512,
+      512,
+      3
+    ],
+    "seam_left_right": 0.0,
+    "seam_top_bottom": 0.0,
+    "std": 86.0
+  },
+  "T_Tilable_Concrete_512.png": {
+    "size": [
+      512,
+      512,
+      3
+    ],
+    "seam_left_right": 0.0,
+    "seam_top_bottom": 0.0,
+    "std": 23.5
+  },
+  "T_Tilable_Facade_512.png": {
+    "size": [
+      512,
+      512,
+      3
+    ],
+    "seam_left_right": 0.0,
+    "seam_top_bottom": 0.0,
+    "std": 44.0
+  },
+  "T_Tilable_Hatch_512.png": {
+    "size": [
+      512,
+      512,
+      3
+    ],
+    "seam_left_right": 0.0,
+    "seam_top_bottom": 0.0,
+    "std": 27.5
+  },
+  "T_Tilable_MetalPanel_512.png": {
+    "size": [
+      512,
+      512,
+      3
+    ],
+    "seam_left_right": 0.0,
+    "seam_top_bottom": 0.0,
+    "std": 34.5
+  }
+}

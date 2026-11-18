@@ -1,0 +1,664 @@
+{
+  "kit": "Film304 Environment Assets Reusable Kit",
+  "version": "1.0.0",
+  "assembled": "2026-11-17",
+  "repo": "G:/film-304-toon-spine",
+  "files": [
+    {
+      "path": "01_Buildings/FBX/EN_CITY_CivicSuperblock.fbx",
+      "bytes": 23340,
+      "sha256": "b9077863a70c1a57ea41469ea466e913f0b998633bce21c3d53fd0a2323e90e3",
+      "source": "Humber_FinalYear_Prep/Capstone_Pipeline_Scaffold/02_Assets/Models/Environments/EN_CITY_CivicSuperblock.fbx"
+    },
+    {
+      "path": "01_Buildings/FBX/EN_CITY_LowSprawl.fbx",
+      "bytes": 75724,
+      "sha256": "29d9727dc53dc37e973d19b91c5337f6bd66d9d07451a4a8a60e8cbff89d7a64",
+      "source": "Humber_FinalYear_Prep/Capstone_Pipeline_Scaffold/02_Assets/Models/Environments/EN_CITY_LowSprawl.fbx"
+    },
+    {
+      "path": "01_Buildings/FBX/EN_CITY_TightEstate.fbx",
+      "bytes": 55116,
+      "sha256": "71bae2e3426e177dd119e2b68a752b372fa78d29ec760179121cb46d04c8ab8e",
+      "source": "Humber_FinalYear_Prep/Capstone_Pipeline_Scaffold/02_Assets/Models/Environments/EN_CITY_TightEstate.fbx"
+    },
+    {
+      "path": "01_Buildings/FBX/EN_CITY_TowerCluster.fbx",
+      "bytes": 39996,
+      "sha256": "f6174ee436b0e7baab1109e09cd640b2be2754c8ed6689efb9492b9357c47dd0",
+      "source": "Humber_FinalYear_Prep/Capstone_Pipeline_Scaffold/02_Assets/Models/Environments/EN_CITY_TowerCluster.fbx"
+    },
+    {
+      "path": "01_Buildings/FBX/EN_CUBICLE_Canonical.fbx",
+      "bytes": 80076,
+      "sha256": "b553b935e60154fc8dbb2ee60e1b2542475e18106a65a781ccbdec54eca1bd7b",
+      "source": "Humber_FinalYear_Prep/Capstone_Pipeline_Scaffold/02_Assets/Models/Environments/EN_CUBICLE_Canonical.fbx"
+    },
+    {
+      "path": "01_Buildings/FBX/EN_CUBICLE_MazeShift.fbx",
+      "bytes": 138876,
+      "sha256": "ff0a65bdaa3fc4b1c03d1f72a348cd6ee87c13f4d6a6140e8d441fb4ab5fbc6a",
+      "source": "Humber_FinalYear_Prep/Capstone_Pipeline_Scaffold/02_Assets/Models/Environments/EN_CUBICLE_MazeShift.fbx"
+    },
+    {
+      "path": "01_Buildings/FBX/EN_CUBICLE_OpenPlan.fbx",
+      "bytes": 103756,
+      "sha256": "be3dfb6019e2a9bb73ee593e184aa319dda595459ef03f9e9579cd70a9c1259c",
+      "source": "Humber_FinalYear_Prep/Capstone_Pipeline_Scaffold/02_Assets/Models/Environments/EN_CUBICLE_OpenPlan.fbx"
+    },
+    {
+      "path": "01_Buildings/FBX/EN_CUBICLE_Swarm.fbx",
+      "bytes": 239628,
+      "sha256": "5a25f255502c2e47d094cb2f9fd9dd73fd4e669dc79f8dfe09836f8b746a8595",
+      "source": "Humber_FinalYear_Prep/Capstone_Pipeline_Scaffold/02_Assets/Models/Environments/EN_CUBICLE_Swarm.fbx"
+    },
+    {
+      "path": "01_Buildings/FBX/EN_FAC_CivicColonnade.fbx",
+      "bytes": 36140,
+      "sha256": "c0b041ca56af8fcbe9a86ac7308eaaed0a80b0d37fe12034ba4e84b8c05160ff",
+      "source": "Humber_FinalYear_Prep/Capstone_Pipeline_Scaffold/02_Assets/Models/Environments/EN_FAC_CivicColonnade.fbx"
+    },
+    {
+      "path": "01_Buildings/FBX/EN_FAC_PunchedEstate.fbx",
+      "bytes": 89196,
+      "sha256": "b34ea64fb05939eaaad9ddae52ba9b674f5711adff23e4c6e764c15078098a0f",
+      "source": "Humber_FinalYear_Prep/Capstone_Pipeline_Scaffold/02_Assets/Models/Environments/EN_FAC_PunchedEstate.fbx"
+    },
+    {
+      "path": "01_Buildings/FBX/EN_FAC_TowerRibbon.fbx",
+      "bytes": 51052,
+      "sha256": "53a09fd9ed498fd7f1d2d536dd06677376180de0bbac1a29146882520730f7da",
+      "source": "Humber_FinalYear_Prep/Capstone_Pipeline_Scaffold/02_Assets/Models/Environments/EN_FAC_TowerRibbon.fbx"
+    },
+    {
+      "path": "01_Buildings/FBX/EN_KMZ_CivicSuperblock.fbx",
+      "bytes": 23356,
+      "sha256": "024561a9ccdd3c9f50f3b7eb0cdf4ac9b7809feeb66af110b690bb441756bc3d",
+      "source": "Humber_FinalYear_Prep/Capstone_Pipeline_Scaffold/02_Assets/Models/Environments/EN_KMZ_CivicSuperblock.fbx"
+    },
+    {
+      "path": "01_Buildings/FBX/EN_KMZ_LowSprawl.fbx",
+      "bytes": 75740,
+      "sha256": "9dd9e2272eb76cc26bc9b85e1537e625e7e5beefcc4bf81bff7620c24e1a968b",
+      "source": "Humber_FinalYear_Prep/Capstone_Pipeline_Scaffold/02_Assets/Models/Environments/EN_KMZ_LowSprawl.fbx"
+    },
+    {
+      "path": "01_Buildings/FBX/EN_KMZ_TightEstate.fbx",
+      "bytes": 55132,
+      "sha256": "5bb804a3e488583d007b9449c4f97ee6fe712c6a98e6c56e20dbfb7862aa1b10",
+      "source": "Humber_FinalYear_Prep/Capstone_Pipeline_Scaffold/02_Assets/Models/Environments/EN_KMZ_TightEstate.fbx"
+    },
+    {
+      "path": "01_Buildings/FBX/EN_KMZ_TowerCluster.fbx",
+      "bytes": 40012,
+      "sha256": "f8e006ec674122703b45ffe17c59fdd0308eadae4191c6970e60e58ec7ffdac5",
+      "source": "Humber_FinalYear_Prep/Capstone_Pipeline_Scaffold/02_Assets/Models/Environments/EN_KMZ_TowerCluster.fbx"
+    },
+    {
+      "path": "01_Buildings/FBX/EN_OFFICE_BarbicanScale.fbx",
+      "bytes": 50204,
+      "sha256": "9ec3434188d4328eabbe3bbd7ff042861120d0ca73034044bf6f342200e55ffe",
+      "source": "Humber_FinalYear_Prep/Capstone_Pipeline_Scaffold/02_Assets/Models/Environments/EN_OFFICE_BarbicanScale.fbx"
+    },
+    {
+      "path": "01_Buildings/FBX/EN_OFFICE_Bunker.fbx",
+      "bytes": 26124,
+      "sha256": "6bab27761616cae2c322a864d3a83c50371174dba9ca1215529c695ebe13ddaf",
+      "source": "Humber_FinalYear_Prep/Capstone_Pipeline_Scaffold/02_Assets/Models/Environments/EN_OFFICE_Bunker.fbx"
+    },
+    {
+      "path": "01_Buildings/FBX/EN_OFFICE_CivicSlab.fbx",
+      "bytes": 41196,
+      "sha256": "10d7aadb1da25000c1cbac2903088a022d430a68d74b5ac57f55de89a82bfb9b",
+      "source": "Humber_FinalYear_Prep/Capstone_Pipeline_Scaffold/02_Assets/Models/Environments/EN_OFFICE_CivicSlab.fbx"
+    },
+    {
+      "path": "01_Buildings/FBX/EN_OFFICE_SlenderTower.fbx",
+      "bytes": 40892,
+      "sha256": "223b94f274004c47f2d7086d431de347b24cb6f1feee6b13ed4538d4b2884243",
+      "source": "Humber_FinalYear_Prep/Capstone_Pipeline_Scaffold/02_Assets/Models/Environments/EN_OFFICE_SlenderTower.fbx"
+    },
+    {
+      "path": "01_Buildings/FBX/EN_ROOF_BarrelVault.fbx",
+      "bytes": 18188,
+      "sha256": "f755a614bc09ff0f474f2566af400811d6b8e8ca0287abbbff3d6906eabcd234",
+      "source": "Humber_FinalYear_Prep/Capstone_Pipeline_Scaffold/02_Assets/Models/Environments/EN_ROOF_BarrelVault.fbx"
+    },
+    {
+      "path": "01_Buildings/FBX/EN_ROOF_FlatParapet.fbx",
+      "bytes": 17788,
+      "sha256": "5184e59a04b4e5895639b1e596a04669b5814e32af3b4480352443562a306262",
+      "source": "Humber_FinalYear_Prep/Capstone_Pipeline_Scaffold/02_Assets/Models/Environments/EN_ROOF_FlatParapet.fbx"
+    },
+    {
+      "path": "01_Buildings/FBX/EN_ROOF_LowPitch.fbx",
+      "bytes": 16892,
+      "sha256": "35e204ae94daa05a2767f3bc12225a3d0a174916149bcf1a5986c40ba89f7042",
+      "source": "Humber_FinalYear_Prep/Capstone_Pipeline_Scaffold/02_Assets/Models/Environments/EN_ROOF_LowPitch.fbx"
+    },
+    {
+      "path": "01_Buildings/FBX/EN_ROOF_PlantDeck.fbx",
+      "bytes": 18588,
+      "sha256": "4b0649540c9c73c117d0cb8bf6b917e5cd24a9db41a80631c31533e6bf8985d2",
+      "source": "Humber_FinalYear_Prep/Capstone_Pipeline_Scaffold/02_Assets/Models/Environments/EN_ROOF_PlantDeck.fbx"
+    },
+    {
+      "path": "01_Buildings/FBX/EN_ROOF_PyramidHip.fbx",
+      "bytes": 16924,
+      "sha256": "12884d68876760ce5b169dd348fac677d60207ef7c28eb9943d3862429a41510",
+      "source": "Humber_FinalYear_Prep/Capstone_Pipeline_Scaffold/02_Assets/Models/Environments/EN_ROOF_PyramidHip.fbx"
+    },
+    {
+      "path": "01_Buildings/FBX/EN_ROOF_Sawtooth.fbx",
+      "bytes": 22204,
+      "sha256": "2f0f53b7a66d528335e310ba050c345c356c75bc0eee04b642301ee3fcfb4817",
+      "source": "Humber_FinalYear_Prep/Capstone_Pipeline_Scaffold/02_Assets/Models/Environments/EN_ROOF_Sawtooth.fbx"
+    },
+    {
+      "path": "01_Buildings/FBX/EN_slot05_manifest.txt",
+      "bytes": 202,
+      "sha256": "fccbafff092eaafaaac6504ec512fa6acbfa9f82d4308f22c63ca3ec456fe8f1",
+      "source": "Humber_FinalYear_Prep/Capstone_Pipeline_Scaffold/02_Assets/Models/Environments/EN_slot05_manifest.txt"
+    },
+    {
+      "path": "01_Buildings/UE/SM_CITY_CivicSuperblock.uasset",
+      "bytes": 81001,
+      "sha256": "86b118c60f661185733cff40420147d536b66d7cf81854ba650604ae29613faf",
+      "source": "Content/Environment/Brutalist/01_CITY_PBR/SM_CITY_CivicSuperblock.uasset"
+    },
+    {
+      "path": "01_Buildings/UE/SM_CITY_LowSprawl.uasset",
+      "bytes": 130978,
+      "sha256": "bd3eb0ac1405db760a075eaf0240833eafd58d4ec0d372d923bbf05433fb233f",
+      "source": "Content/Environment/Brutalist/01_CITY_PBR/SM_CITY_LowSprawl.uasset"
+    },
+    {
+      "path": "01_Buildings/UE/SM_CITY_TightEstate.uasset",
+      "bytes": 113200,
+      "sha256": "b5e6e69998cef4848f6f710b3d759c0a3ba929b8d1b43bf6d2324f1c93f8a04a",
+      "source": "Content/Environment/Brutalist/01_CITY_PBR/SM_CITY_TightEstate.uasset"
+    },
+    {
+      "path": "01_Buildings/UE/SM_CITY_TowerCluster.uasset",
+      "bytes": 98077,
+      "sha256": "a6e40e19efdb6c47f3fce64c733dabcfec22594422ca9b1c3ac4e7946091238b",
+      "source": "Content/Environment/Brutalist/01_CITY_PBR/SM_CITY_TowerCluster.uasset"
+    },
+    {
+      "path": "01_Buildings/UE/SM_CUBICLE_Canonical.uasset",
+      "bytes": 162987,
+      "sha256": "dae08604479012be5868861cc8f7219b030a9bd0f8bb6a0e716dee6a821611c0",
+      "source": "Content/Environment/Brutalist/04_INTERIOR_CUBICLES/SM_CUBICLE_Canonical.uasset"
+    },
+    {
+      "path": "01_Buildings/UE/SM_CUBICLE_MazeShift.uasset",
+      "bytes": 245160,
+      "sha256": "0af402ac22c3028cd8df157fe5f3a12e3a6704f2dfbd357e6aac9084c7c9b4e7",
+      "source": "Content/Environment/Brutalist/04_INTERIOR_CUBICLES/SM_CUBICLE_MazeShift.uasset"
+    },
+    {
+      "path": "01_Buildings/UE/SM_CUBICLE_OpenPlan.uasset",
+      "bytes": 188374,
+      "sha256": "220657012b0ba6c954b85988fc936797ed213eeadafb126b836251d3f54f6454",
+      "source": "Content/Environment/Brutalist/04_INTERIOR_CUBICLES/SM_CUBICLE_OpenPlan.uasset"
+    },
+    {
+      "path": "01_Buildings/UE/SM_CUBICLE_Swarm.uasset",
+      "bytes": 360970,
+      "sha256": "5e716ee4120fce60292065c37051535bbf5ba0580140ab68c4b5335e0e4c1c9a",
+      "source": "Content/Environment/Brutalist/04_INTERIOR_CUBICLES/SM_CUBICLE_Swarm.uasset"
+    },
+    {
+      "path": "01_Buildings/UE/SM_FAC_CivicColonnade.uasset",
+      "bytes": 94903,
+      "sha256": "f520a23d696a7062105604563a7cc3b654c17191360e6186df99c2422099686e",
+      "source": "Content/Environment/Brutalist/05_FACADE_VARIATION/SM_FAC_CivicColonnade.uasset"
+    },
+    {
+      "path": "01_Buildings/UE/SM_FAC_PunchedEstate.uasset",
+      "bytes": 144187,
+      "sha256": "6fc974b68fd143f4b116fb88c0e882ab3f8df26a89c3363a68b5036693d24dec",
+      "source": "Content/Environment/Brutalist/05_FACADE_VARIATION/SM_FAC_PunchedEstate.uasset"
+    },
+    {
+      "path": "01_Buildings/UE/SM_FAC_TowerRibbon.uasset",
+      "bytes": 112121,
+      "sha256": "6b3a2631eff1546e68e6b4fc20385babe43024d23d585881c1db8a1abdead656",
+      "source": "Content/Environment/Brutalist/05_FACADE_VARIATION/SM_FAC_TowerRibbon.uasset"
+    },
+    {
+      "path": "01_Buildings/UE/SM_KMZ_CivicSuperblock.uasset",
+      "bytes": 81064,
+      "sha256": "4569db616ab3ed1601bc5cdd3237708499a8377cb1d54be06d5506dd37a8d6cb",
+      "source": "Content/Environment/Brutalist/02_CITY_KOMIKAZE/SM_KMZ_CivicSuperblock.uasset"
+    },
+    {
+      "path": "01_Buildings/UE/SM_KMZ_LowSprawl.uasset",
+      "bytes": 131041,
+      "sha256": "8b0999acb71be6fd330cc2e1ca594f0bde2b7a120c31d44a50bbd7d26fbc6931",
+      "source": "Content/Environment/Brutalist/02_CITY_KOMIKAZE/SM_KMZ_LowSprawl.uasset"
+    },
+    {
+      "path": "01_Buildings/UE/SM_KMZ_TightEstate.uasset",
+      "bytes": 113264,
+      "sha256": "31338dc13e889d5c1c5fd9e6b2c6472d765ebe266fe921b593b8cbe1ac7f7df4",
+      "source": "Content/Environment/Brutalist/02_CITY_KOMIKAZE/SM_KMZ_TightEstate.uasset"
+    },
+    {
+      "path": "01_Buildings/UE/SM_KMZ_TowerCluster.uasset",
+      "bytes": 98147,
+      "sha256": "fcf56588129821898dd47eaaed20c2c3e86098c90339a3ef0df811a84cb2bb75",
+      "source": "Content/Environment/Brutalist/02_CITY_KOMIKAZE/SM_KMZ_TowerCluster.uasset"
+    },
+    {
+      "path": "01_Buildings/UE/SM_OFFICE_BarbicanScale.uasset",
+      "bytes": 119518,
+      "sha256": "0c2c23250f5c7a35c336b3ebd49cf767b64157a26cd9e4308254da2cdce379b1",
+      "source": "Content/Environment/Brutalist/03_OFFICE_BLOCK/SM_OFFICE_BarbicanScale.uasset"
+    },
+    {
+      "path": "01_Buildings/UE/SM_OFFICE_Bunker.uasset",
+      "bytes": 85432,
+      "sha256": "f66704282fea0c30a12a37e22d4e0dc7dd0f802829fb0f038889112a3b11cd46",
+      "source": "Content/Environment/Brutalist/03_OFFICE_BLOCK/SM_OFFICE_Bunker.uasset"
+    },
+    {
+      "path": "01_Buildings/UE/SM_OFFICE_CivicSlab.uasset",
+      "bytes": 111672,
+      "sha256": "57060cf5bba5c659a4744ff1dd973c7ac6bd9a525978967d3d3c09048de118a3",
+      "source": "Content/Environment/Brutalist/03_OFFICE_BLOCK/SM_OFFICE_CivicSlab.uasset"
+    },
+    {
+      "path": "01_Buildings/UE/SM_OFFICE_SlenderTower.uasset",
+      "bytes": 109697,
+      "sha256": "c1d347cf3a45c6380e281083048108cb5378bf938658de672a66e47b1f99178d",
+      "source": "Content/Environment/Brutalist/03_OFFICE_BLOCK/SM_OFFICE_SlenderTower.uasset"
+    },
+    {
+      "path": "01_Buildings/UE/SM_ROOF_BarrelVault.uasset",
+      "bytes": 75360,
+      "sha256": "860b0f6023c6ac6f0717a2ddb3afcd117918f59c8c2dc5d418875e24c5388d0d",
+      "source": "Content/Environment/Brutalist/06_ROOFS/SM_ROOF_BarrelVault.uasset"
+    },
+    {
+      "path": "01_Buildings/UE/SM_ROOF_FlatParapet.uasset",
+      "bytes": 74426,
+      "sha256": "7aadc72e8d24771a6bcf75617aa251433e5a2bb4cb8abd124a79520d20045061",
+      "source": "Content/Environment/Brutalist/06_ROOFS/SM_ROOF_FlatParapet.uasset"
+    },
+    {
+      "path": "01_Buildings/UE/SM_ROOF_LowPitch.uasset",
+      "bytes": 73372,
+      "sha256": "ca1b13e21af4b8de29d16b379ac8cb6649da9120d8f5b8ac1add97d4d0312038",
+      "source": "Content/Environment/Brutalist/06_ROOFS/SM_ROOF_LowPitch.uasset"
+    },
+    {
+      "path": "01_Buildings/UE/SM_ROOF_PlantDeck.uasset",
+      "bytes": 74847,
+      "sha256": "4889738d5188ca81a6fbc8414270bcb96c96add02c78417d533e3c7a86f27508",
+      "source": "Content/Environment/Brutalist/06_ROOFS/SM_ROOF_PlantDeck.uasset"
+    },
+    {
+      "path": "01_Buildings/UE/SM_ROOF_PyramidHip.uasset",
+      "bytes": 73317,
+      "sha256": "5d527b4ea0633d27800e981c0480c2d6b9784f10b65a618cae78b2426c8b65a1",
+      "source": "Content/Environment/Brutalist/06_ROOFS/SM_ROOF_PyramidHip.uasset"
+    },
+    {
+      "path": "01_Buildings/UE/SM_ROOF_Sawtooth.uasset",
+      "bytes": 78981,
+      "sha256": "cb8feb0a0575d2553867e18c3aca0cb4098754fd5e3a81fbaf0b4c6172ee7cc1",
+      "source": "Content/Environment/Brutalist/06_ROOFS/SM_ROOF_Sawtooth.uasset"
+    },
+    {
+      "path": "02_Blinds/MI_Dusk_Blinds.uasset",
+      "bytes": 17884,
+      "sha256": "e357236f2a90167d2a7ff1d15fba26dca26ca85b82bbf210775fbc45a8eb2dc1",
+      "source": "Content/Materials/Instances/Film304/Scene/Dusk20261018/MI_Dusk_Blinds.uasset"
+    },
+    {
+      "path": "02_Blinds/MI_OfficeSpider_Blinds.uasset",
+      "bytes": 8228,
+      "sha256": "5622152c1c3d841242a23c0abd73a664c07728dcd0f81976a3851836bc631829",
+      "source": "Content/Materials/Instances/MI_OfficeSpider_Blinds.uasset"
+    },
+    {
+      "path": "02_Blinds/SM_VenetianBlinds_Bay.fbx",
+      "bytes": 16992,
+      "sha256": "bc477a45eab5743d3ff2c4e43c877d18f58c1260708c0de553b800f69c2227c5",
+      "source": "Content/Meshes/Architecture/SM_VenetianBlinds_Bay.fbx"
+    },
+    {
+      "path": "02_Blinds/SM_VenetianBlinds_Bay.uasset",
+      "bytes": 81370,
+      "sha256": "2d2a6143274505dfe50371f05b81110ef9f3e0a714cc588f26bfaea77af96aab",
+      "source": "Content/Meshes/Architecture/SM_VenetianBlinds_Bay.uasset"
+    },
+    {
+      "path": "02_Blinds/SM_VenetianBlinds_Bay_uv.fbx",
+      "bytes": 27520,
+      "sha256": "27b304c905c15f2905624b884fccb9f0e1ad2a4aedbf205aa5d1f364616e33cc",
+      "source": "Content/Meshes/Architecture/SM_VenetianBlinds_Bay_uv.fbx"
+    },
+    {
+      "path": "02_Blinds/SM_VenetianBlinds_Bay_uv.uasset",
+      "bytes": 87360,
+      "sha256": "2779194c832647e4aa6852122ed291eee2498e152220331f40c4080ddfcfee32",
+      "source": "Content/Meshes/Architecture/SM_VenetianBlinds_Bay_uv.uasset"
+    },
+    {
+      "path": "02_Blinds/T_SDF_Blinds.uasset",
+      "bytes": 18876,
+      "sha256": "8141ee628a688292c8ad96f862363392d99f9f24556ab50ddb595619286c0826",
+      "source": "Content/Materials/Textures/T_SDF_Blinds.uasset"
+    },
+    {
+      "path": "02_Blinds/bake_cinematic_window_blinds.py",
+      "bytes": 4559,
+      "sha256": "86b5ccec1d29d39faaf2d65468967cbf52942cbabd231cbc5a85ea1c088f1d70",
+      "source": "Tools/houdini/bake_cinematic_window_blinds.py"
+    },
+    {
+      "path": "03_Windows/E1_horizon_windows.fbx",
+      "bytes": 9592985,
+      "sha256": "8507d00b925de76363c0aa37bac114fa1f822e52cebae64f59bbdc05ed8cb405",
+      "source": "Humber_FinalYear_Prep/Film304_Handoff_Package_2026-11-12/03_Houdini/Geometry_Exports/Archive_Existing/Saved/GoalEst/horizon/E1_horizon_windows.fbx"
+    },
+    {
+      "path": "03_Windows/MI_Dusk_HorizonWindows.uasset",
+      "bytes": 8182,
+      "sha256": "b43d885ceaa12c684d4128448cb377766e485a39eef3010af3eedb45aa041c60",
+      "source": "Content/Materials/Instances/Film304/Scene/Dusk20261018/MI_Dusk_HorizonWindows.uasset"
+    },
+    {
+      "path": "03_Windows/MI_WindowGlass_Restored.uasset",
+      "bytes": 8966,
+      "sha256": "7cb6b259f798a3f3f55f9bc745577582d01512ddd428571fcf85970ff66d6e80",
+      "source": "Content/Materials/Recovery_Office_20261018/MI_WindowGlass_Restored.uasset"
+    },
+    {
+      "path": "03_Windows/M_Film304_NightWindows.uasset",
+      "bytes": 1540,
+      "sha256": "d3ac0ec22cfb401bc8454fd9dd121b68144accf4157e8fa0a71ae74ef2a4a02d",
+      "source": "Content/Materials/Masters/Film304/M_Film304_NightWindows.uasset"
+    },
+    {
+      "path": "03_Windows/M_WindowGlass_Restored.uasset",
+      "bytes": 34503,
+      "sha256": "2964d7fc6c3511eff9f944badfb0aa710008362c54e66c7bd870155ea3d22079",
+      "source": "Content/Materials/Recovery_Office_20261018/M_WindowGlass_Restored.uasset"
+    },
+    {
+      "path": "03_Windows/SM_E1_HorizonWindows.uasset",
+      "bytes": 445233,
+      "sha256": "2f5b16e2b7e5f6129ffe19449833180c64f39bd967bf417da037a77791a0eb39",
+      "source": "Content/Environment/Establishing_Houdini/SM_E1_HorizonWindows.uasset"
+    },
+    {
+      "path": "03_Windows/build_window_light_rig_20261018.py",
+      "bytes": 2338,
+      "sha256": "6a972bf521720bfe9901c4a9111d154f0a804cd135b54ff72a37edc9b357d0e2",
+      "source": "Tools/houdini/build_window_light_rig_20261018.py"
+    },
+    {
+      "path": "04_Walls/MI_Dusk_Wall.uasset",
+      "bytes": 21779,
+      "sha256": "8c598d336ef8c966c2cf51d893a6529f0a063c7dbbb37c24b7abd19548f8d5f2",
+      "source": "Content/Materials/Instances/Film304/Scene/Dusk20261018/MI_Dusk_Wall.uasset"
+    },
+    {
+      "path": "04_Walls/MI_Dusk_WarmWall.uasset",
+      "bytes": 18313,
+      "sha256": "6281ca092b473c782ef4fb142c9f1ac6b6d11abf9c8cbf1b7a2239e15a8395e9",
+      "source": "Content/Materials/Instances/Film304/Scene/Dusk20261018/MI_Dusk_WarmWall.uasset"
+    },
+    {
+      "path": "04_Walls/MI_Film304_Wall.uasset",
+      "bytes": 12398,
+      "sha256": "36d50647ebcd2c8b82a32750c9d41808165132f2ec45e624990ef606b830e714",
+      "source": "Content/Materials/Instances/Film304/Scene/MI_Film304_Wall.uasset"
+    },
+    {
+      "path": "04_Walls/MI_Film304_WarmWall.uasset",
+      "bytes": 20223,
+      "sha256": "aa417ef41d784846bef0304a500be3b8e30901112aa063ff8f6f7d1b7d51509e",
+      "source": "Content/Materials/Instances/Film304/Scene/MI_Film304_WarmWall.uasset"
+    },
+    {
+      "path": "04_Walls/MI_Film_Wall.uasset",
+      "bytes": 12310,
+      "sha256": "1bb927dacfadbc8eb485c4dbc5c68d4d1cc643373e7722c360bcaf0863576b4c",
+      "source": "Content/Materials/Instances/UniversalFilm_20261016/MI_Film_Wall.uasset"
+    },
+    {
+      "path": "04_Walls/MI_Film_WarmWall.uasset",
+      "bytes": 15649,
+      "sha256": "e65b1d841745d201aa79391623db7cc77d849d4bc7afbb358e32e1635a08cd2b",
+      "source": "Content/Materials/Instances/UniversalFilm_20261016/MI_Film_WarmWall.uasset"
+    },
+    {
+      "path": "04_Walls/SM_BreakRoomTogether_ZMJ_FilmStage_20261016.uasset",
+      "bytes": 641634,
+      "sha256": "7669728945edb32c6bf578f2f904dd4550702e17cc06ba1b5d4847ac34a5f784",
+      "source": "Content/Staging/OneDriveRigs_20261016/Environment/SM_BreakRoomTogether_ZMJ_FilmStage_20261016.uasset"
+    },
+    {
+      "path": "04_Walls/SM_O_BreakRoomFloor_ZMJ_FilmStage_20261016.uasset",
+      "bytes": 71811,
+      "sha256": "b372abde982568920499670a7c5b23dc697a5bad349dda1d2545a28c8324852b",
+      "source": "Content/Staging/OneDriveRigs_20261016/Environment/SM_O_BreakRoomFloor_ZMJ_FilmStage_20261016.uasset"
+    },
+    {
+      "path": "04_Walls/SM_O_BreakRoomShelf_ZMJ_FilmStage_20261016.uasset",
+      "bytes": 82731,
+      "sha256": "43e6b80426d7c1e119ff74620b62ae972b6d73d8104dbdfe334e4ff722966866",
+      "source": "Content/Staging/OneDriveRigs_20261016/Environment/SM_O_BreakRoomShelf_ZMJ_FilmStage_20261016.uasset"
+    },
+    {
+      "path": "04_Walls/SM_O_BreakRoomWall_ZMJ_FilmStage_20261016.uasset",
+      "bytes": 71783,
+      "sha256": "23289174d2f68bd9e3368b4f66f995de2b5d432f1df53706c9c066c4a703cc6a",
+      "source": "Content/Staging/OneDriveRigs_20261016/Environment/SM_O_BreakRoomWall_ZMJ_FilmStage_20261016.uasset"
+    },
+    {
+      "path": "04_Walls/build_south_wall.py",
+      "bytes": 1735,
+      "sha256": "859774f54e82395db5104d21f0c70673d70a6e10525d8e9740ec4abc7113b35f",
+      "source": "Tools/houdini/build_south_wall.py"
+    },
+    {
+      "path": "04_Walls/check_wall_gaps.py",
+      "bytes": 928,
+      "sha256": "9a39c8756f9edf4194c51da44ebbc3455a9b23e19d1c91e91291e6f1f8ac4f51",
+      "source": "Tools/houdini/check_wall_gaps.py"
+    },
+    {
+      "path": "04_Walls/check_wall_materials.py",
+      "bytes": 1012,
+      "sha256": "1ff317a1a1f791196c34969989731cbd9c57f50e9ce8748ec7941fe63dceebe6",
+      "source": "Tools/houdini/check_wall_materials.py"
+    },
+    {
+      "path": "04_Walls/check_wall_visibility.py",
+      "bytes": 465,
+      "sha256": "3b6699e465b6fffe2c980a87c42db87d663dabf68f68f019dd5a4b9cf9637fe0",
+      "source": "Tools/houdini/check_wall_visibility.py"
+    },
+    {
+      "path": "04_Walls/extend_north_wall.py",
+      "bytes": 985,
+      "sha256": "5b20679e1323b34fab8fa3f130164bd8ea1836ab866fcc58dd85cc9f27b93751",
+      "source": "Tools/houdini/extend_north_wall.py"
+    },
+    {
+      "path": "04_Walls/find_perimeter_walls.py",
+      "bytes": 942,
+      "sha256": "5abbbfe25f46819d11488b08f28555bbec99d9608f2570ec89401c45eb834ab7",
+      "source": "Tools/houdini/find_perimeter_walls.py"
+    },
+    {
+      "path": "04_Walls/fix_walls_pos.py",
+      "bytes": 1109,
+      "sha256": "22d61edfffcb46747b3aee31bca70a592c48e1c149cfb24d579c6a829bed3b92",
+      "source": "Tools/houdini/fix_walls_pos.py"
+    },
+    {
+      "path": "04_Walls/inspect_backwall.py",
+      "bytes": 561,
+      "sha256": "b9ff0d3224545812215c951c9e3121dd8345217dc0355d777435791a25e6296c",
+      "source": "Tools/houdini/inspect_backwall.py"
+    },
+    {
+      "path": "04_Walls/inspect_walls.py",
+      "bytes": 557,
+      "sha256": "3a25ce1f837780704b49e4b0d58eb9d8d70cca94e12ac29c45632b8a4eb17df8",
+      "source": "Tools/houdini/inspect_walls.py"
+    },
+    {
+      "path": "05_Textures_Tilable/T_Tilable_Blinds_512.png",
+      "bytes": 2301,
+      "sha256": "f9e8a43372c764916c09c2e388e4a58163d0d7563b31979defee806537b53d55",
+      "source": "Film304_Packages/Environment_Assets_2026-11-17/05_Textures_Tilable/T_Tilable_Blinds_512.png"
+    },
+    {
+      "path": "05_Textures_Tilable/T_Tilable_Concrete_512.png",
+      "bytes": 2278,
+      "sha256": "982eabe1c6099dff4f074f73b982ac6703e73842fabe33eb55198717de6219cb",
+      "source": "Film304_Packages/Environment_Assets_2026-11-17/05_Textures_Tilable/T_Tilable_Concrete_512.png"
+    },
+    {
+      "path": "05_Textures_Tilable/T_Tilable_Facade_512.png",
+      "bytes": 2285,
+      "sha256": "75a9d1bc4f31c909b5ad5f6d54e86944d0030bb7b9fe6866b1e2816fa3c3656d",
+      "source": "Film304_Packages/Environment_Assets_2026-11-17/05_Textures_Tilable/T_Tilable_Facade_512.png"
+    },
+    {
+      "path": "05_Textures_Tilable/T_Tilable_Hatch_512.png",
+      "bytes": 2354,
+      "sha256": "df1e42586cbbebab9a72cdb68d7cff50e60dce6b6868dcb9846069b5b4a851d7",
+      "source": "Film304_Packages/Environment_Assets_2026-11-17/05_Textures_Tilable/T_Tilable_Hatch_512.png"
+    },
+    {
+      "path": "05_Textures_Tilable/T_Tilable_MetalPanel_512.png",
+      "bytes": 2283,
+      "sha256": "76a9b4b81844849338e7d2de4c5beed1b3a07b7f55b61d03d7ca5c47d82cdc68",
+      "source": "Film304_Packages/Environment_Assets_2026-11-17/05_Textures_Tilable/T_Tilable_MetalPanel_512.png"
+    },
+    {
+      "path": "06_Houdini_COP/Film304_TilableTextures_v01.hip",
+      "bytes": 156136,
+      "sha256": "5e0c98eeddf93f522b129c2f244ab23b522989118f53febcf9b7e35435a7609e",
+      "source": "Film304_Packages/Environment_Assets_2026-11-17/06_Houdini_COP/Film304_TilableTextures_v01.hip"
+    },
+    {
+      "path": "06_Houdini_COP/build_cop_textures_v4.py",
+      "bytes": 4102,
+      "sha256": "a743656e6168ca087bcd300ead12006c9c9a855d29b32537efc3e4a66181d26a",
+      "source": "C:\\Users\\froma\\AppData\\Local\\hermes\\cache\\scratch\\build_cop_textures_v4.py"
+    },
+    {
+      "path": "08_Evidence/brutalist_sheet_city_komikaze.png",
+      "bytes": 1353257,
+      "sha256": "fef8ee98882442d657b28841d8d26095f9944ae132d69f35c07368986e536b19",
+      "source": "Humber_FinalYear_Prep/Capstone_Pipeline_Scaffold/02_Assets/Materials/Review/brutalist_sheet_city_komikaze.png"
+    },
+    {
+      "path": "08_Evidence/brutalist_sheet_city_pbr.png",
+      "bytes": 1280138,
+      "sha256": "2b63aea7d2dd8d828c4c5f0a3fb99f2e719950436581219f406d083d7df38be4",
+      "source": "Humber_FinalYear_Prep/Capstone_Pipeline_Scaffold/02_Assets/Materials/Review/brutalist_sheet_city_pbr.png"
+    },
+    {
+      "path": "08_Evidence/brutalist_sheet_facade.png",
+      "bytes": 986077,
+      "sha256": "616b924c352a9988b8d4930e43403826d263f5f4e2c2a294d2944c63389e8e29",
+      "source": "Humber_FinalYear_Prep/Capstone_Pipeline_Scaffold/02_Assets/Materials/Review/brutalist_sheet_facade.png"
+    },
+    {
+      "path": "08_Evidence/brutalist_sheet_family.png",
+      "bytes": 2283164,
+      "sha256": "803bc1515ceb86800a629bdd907896ea9e22e85b6150a00197cd73cdd09cac5f",
+      "source": "Humber_FinalYear_Prep/Capstone_Pipeline_Scaffold/02_Assets/Materials/Review/brutalist_sheet_family.png"
+    },
+    {
+      "path": "08_Evidence/brutalist_sheet_palette.png",
+      "bytes": 304285,
+      "sha256": "dee5715157d2a9cadc08718f01361dcfa061f61ea718b5e8efabfe163681cd86",
+      "source": "Humber_FinalYear_Prep/Capstone_Pipeline_Scaffold/02_Assets/Materials/Review/brutalist_sheet_palette.png"
+    },
+    {
+      "path": "08_Evidence/brutalist_sheet_roofs.png",
+      "bytes": 1814052,
+      "sha256": "7487f6fcb1ac72d07c9ea58c1f5d721e3629de1217aa7d8672f34a4e10563bc8",
+      "source": "Humber_FinalYear_Prep/Capstone_Pipeline_Scaffold/02_Assets/Materials/Review/brutalist_sheet_roofs.png"
+    },
+    {
+      "path": "08_Evidence/grid_cast_spheres.png",
+      "bytes": 890777,
+      "sha256": "e78b585f32912c7a8a8ed92d903e60e69f836c9c05a0074c18a09096e2541dbe",
+      "source": "Humber_FinalYear_Prep/Capstone_Pipeline_Scaffold/02_Assets/Materials/Review/grid_cast_spheres.png"
+    },
+    {
+      "path": "08_Evidence/grid_cast_spheres_v2.png",
+      "bytes": 890777,
+      "sha256": "e78b585f32912c7a8a8ed92d903e60e69f836c9c05a0074c18a09096e2541dbe",
+      "source": "Humber_FinalYear_Prep/Capstone_Pipeline_Scaffold/02_Assets/Materials/Review/grid_cast_spheres_v2.png"
+    },
+    {
+      "path": "08_Evidence/grid_cast_spheres_v3.png",
+      "bytes": 890777,
+      "sha256": "e78b585f32912c7a8a8ed92d903e60e69f836c9c05a0074c18a09096e2541dbe",
+      "source": "Humber_FinalYear_Prep/Capstone_Pipeline_Scaffold/02_Assets/Materials/Review/grid_cast_spheres_v3.png"
+    },
+    {
+      "path": "08_Evidence/grid_cast_spheres_v4.png",
+      "bytes": 855126,
+      "sha256": "bdcad728d0a7d39616e6dfbdb0e808d49e8098f10bcf85a094be0231fa40731d",
+      "source": "Humber_FinalYear_Prep/Capstone_Pipeline_Scaffold/02_Assets/Materials/Review/grid_cast_spheres_v4.png"
+    },
+    {
+      "path": "08_Evidence/grid_office_planes.png",
+      "bytes": 841444,
+      "sha256": "9917c3de2e72ad9fe7eec9f40dfbe9aa58c292c6fb8bf23e9c3f64e5fe8c12c8",
+      "source": "Humber_FinalYear_Prep/Capstone_Pipeline_Scaffold/02_Assets/Materials/Review/grid_office_planes.png"
+    },
+    {
+      "path": "08_Evidence/grid_office_planes_v2.png",
+      "bytes": 841444,
+      "sha256": "9917c3de2e72ad9fe7eec9f40dfbe9aa58c292c6fb8bf23e9c3f64e5fe8c12c8",
+      "source": "Humber_FinalYear_Prep/Capstone_Pipeline_Scaffold/02_Assets/Materials/Review/grid_office_planes_v2.png"
+    },
+    {
+      "path": "08_Evidence/grid_office_planes_v4.png",
+      "bytes": 834834,
+      "sha256": "3aba83f637dc290ce5f7a99763950280abef86a069fbf93b77ce31652d6f6736",
+      "source": "Humber_FinalYear_Prep/Capstone_Pipeline_Scaffold/02_Assets/Materials/Review/grid_office_planes_v4.png"
+    },
+    {
+      "path": "08_Evidence/preview_carpet.png",
+      "bytes": 669301,
+      "sha256": "4c90b2b51f24844886dfa57fd46768c9d1dd108547e691ce4325e274090bcbab",
+      "source": "Humber_FinalYear_Prep/Capstone_Pipeline_Scaffold/02_Assets/Materials/Review/preview_carpet.png"
+    },
+    {
+      "path": "08_Evidence/preview_control_gouache.png",
+      "bytes": 820199,
+      "sha256": "422f1bc04ea2d599841ec39b15951e2d0b5d92cc75326e137aae1320eab4055a",
+      "source": "Humber_FinalYear_Prep/Capstone_Pipeline_Scaffold/02_Assets/Materials/Review/preview_control_gouache.png"
+    },
+    {
+      "path": "08_Evidence/red_test.png",
+      "bytes": 380302,
+      "sha256": "17f390a9ce1e2db6bfc2aff11f1ec8de623ede6a328cdde39de46b0b979d1cb2",
+      "source": "Humber_FinalYear_Prep/Capstone_Pipeline_Scaffold/02_Assets/Materials/Review/red_test.png"
+    },
+    {
+      "path": "08_Evidence/red_test_control.png",
+      "bytes": 390444,
+      "sha256": "303060e35545c48c363cc1e8d0b2c5ca1d249bcb008116edd31f26c95df4c11b",
+      "source": "Humber_FinalYear_Prep/Capstone_Pipeline_Scaffold/02_Assets/Materials/Review/red_test_control.png"
+    }
+  ],
+  "seam_report": "08_Evidence/seam_report.json",
+  "commit": "3e0d3a354af8"
+}
