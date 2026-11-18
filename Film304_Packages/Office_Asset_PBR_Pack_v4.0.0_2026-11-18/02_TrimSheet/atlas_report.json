@@ -1,0 +1,174 @@
+{
+  "atlas": [
+    2048,
+    1024
+  ],
+  "master_atlas": [
+    4096,
+    2048
+  ],
+  "version": "3.0-brutalist-polish",
+  "tile": 512,
+  "cols": 4,
+  "rows": 2,
+  "order": [
+    "tbar",
+    "troffer",
+    "duct",
+    "panel",
+    "base",
+    "mullion",
+    "slat",
+    "reveal"
+  ],
+  "maps": [
+    "T_OfficeTrim_Height_2048x1024.png",
+    "T_OfficeTrim_Albedo_2048x1024.png",
+    "T_OfficeTrim_Normal_2048x1024.png",
+    "T_OfficeTrim_ORM_2048x1024.png",
+    "T_OfficeTrim_Roughness_2048x1024.png",
+    "T_OfficeTrim_Metallic_2048x1024.png",
+    "T_OfficeTrim_AO_2048x1024.png",
+    "T_OfficeTrim_Curvature_2048x1024.png"
+  ],
+  "normal_convention": "tangent space, OpenGL +Y up, derived per-tile from height (toroidal Scharr 3x3, zero cross-tile bleed)",
+  "orm": "R = multi-scale cavity AO, G = microsurface roughness, B = physically based metallic",
+  "T_OfficeTrim_Height_2048x1024.png": {
+    "seam_left_right": 94.393555,
+    "seam_top_bottom": 56.341309,
+    "std": 54.03
+  },
+  "T_OfficeTrim_Albedo_2048x1024.png": {
+    "seam_left_right": 84.697914,
+    "seam_top_bottom": 57.62923,
+    "std": 48.59
+  },
+  "T_OfficeTrim_Normal_2048x1024.png": {
+    "seam_left_right": 18.768229,
+    "seam_top_bottom": 18.959799,
+    "std": 62.1
+  },
+  "T_OfficeTrim_ORM_2048x1024.png": {
+    "seam_left_right": 64.949867,
+    "seam_top_bottom": 75.467125,
+    "std": 84.38
+  },
+  "T_OfficeTrim_Roughness_2048x1024.png": {
+    "seam_left_right": 31.344727,
+    "seam_top_bottom": 56.901367,
+    "std": 58.96
+  },
+  "T_OfficeTrim_Metallic_2048x1024.png": {
+    "seam_left_right": 108.5,
+    "seam_top_bottom": 98.496582,
+    "std": 105.69
+  },
+  "T_OfficeTrim_AO_2048x1024.png": {
+    "seam_left_right": 55.004883,
+    "seam_top_bottom": 71.003418,
+    "std": 70.87
+  },
+  "T_OfficeTrim_Curvature_2048x1024.png": {
+    "seam_left_right": 27.443359,
+    "seam_top_bottom": 41.083496,
+    "std": 32.75
+  },
+  "per_tile_seams": {
+    "tbar": {
+      "height_seam_left_right": 0.0,
+      "height_seam_top_bottom": 0.0,
+      "albedo_seam_left_right": 0.0,
+      "albedo_seam_top_bottom": 0.0,
+      "normal_seam_left_right": 0.0,
+      "normal_seam_top_bottom": 0.0,
+      "orm_seam_left_right": 0.0,
+      "orm_seam_top_bottom": 0.0,
+      "height_std": 48.69,
+      "albedo_std": 46.27
+    },
+    "troffer": {
+      "height_seam_left_right": 0.0,
+      "height_seam_top_bottom": 0.0,
+      "albedo_seam_left_right": 0.0,
+      "albedo_seam_top_bottom": 0.0,
+      "normal_seam_left_right": 0.0,
+      "normal_seam_top_bottom": 0.0,
+      "orm_seam_left_right": 0.0,
+      "orm_seam_top_bottom": 0.0,
+      "height_std": 48.62,
+      "albedo_std": 49.08
+    },
+    "duct": {
+      "height_seam_left_right": 0.0,
+      "height_seam_top_bottom": 0.0,
+      "albedo_seam_left_right": 0.0,
+      "albedo_seam_top_bottom": 0.0,
+      "normal_seam_left_right": 0.0,
+      "normal_seam_top_bottom": 0.0,
+      "orm_seam_left_right": 0.0,
+      "orm_seam_top_bottom": 0.0,
+      "height_std": 24.23,
+      "albedo_std": 18.37
+    },
+    "panel": {
+      "height_seam_left_right": 0.0,
+      "height_seam_top_bottom": 0.0,
+      "albedo_seam_left_right": 0.0,
+      "albedo_seam_top_bottom": 0.0,
+      "normal_seam_left_right": 0.0,
+      "normal_seam_top_bottom": 0.0,
+      "orm_seam_left_right": 0.0,
+      "orm_seam_top_bottom": 0.0,
+      "height_std": 59.39,
+      "albedo_std": 28.65
+    },
+    "base": {
+      "height_seam_left_right": 0.0,
+      "height_seam_top_bottom": 0.0,
+      "albedo_seam_left_right": 0.0,
+      "albedo_seam_top_bottom": 0.0,
+      "normal_seam_left_right": 0.0,
+      "normal_seam_top_bottom": 0.0,
+      "orm_seam_left_right": 0.0,
+      "orm_seam_top_bottom": 0.0,
+      "height_std": 59.14,
+      "albedo_std": 35.49
+    },
+    "mullion": {
+      "height_seam_left_right": 0.0,
+      "height_seam_top_bottom": 0.0,
+      "albedo_seam_left_right": 0.0,
+      "albedo_seam_top_bottom": 0.0,
+      "normal_seam_left_right": 0.0,
+      "normal_seam_top_bottom": 0.0,
+      "orm_seam_left_right": 0.0,
+      "orm_seam_top_bottom": 0.0,
+      "height_std": 37.52,
+      "albedo_std": 15.78
+    },
+    "slat": {
+      "height_seam_left_right": 0.0,
+      "height_seam_top_bottom": 0.0,
+      "albedo_seam_left_right": 0.0,
+      "albedo_seam_top_bottom": 0.0,
+      "normal_seam_left_right": 0.0,
+      "normal_seam_top_bottom": 0.0,
+      "orm_seam_left_right": 0.0,
+      "orm_seam_top_bottom": 0.0,
+      "height_std": 48.02,
+      "albedo_std": 51.19
+    },
+    "reveal": {
+      "height_seam_left_right": 0.0,
+      "height_seam_top_bottom": 0.0,
+      "albedo_seam_left_right": 0.0,
+      "albedo_seam_top_bottom": 0.0,
+      "normal_seam_left_right": 0.0,
+      "normal_seam_top_bottom": 0.0,
+      "orm_seam_left_right": 0.0,
+      "orm_seam_top_bottom": 0.0,
+      "height_std": 15.45,
+      "albedo_std": 24.31
+    }
+  }
+}

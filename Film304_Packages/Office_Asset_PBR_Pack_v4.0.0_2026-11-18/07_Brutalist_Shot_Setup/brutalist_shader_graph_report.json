@@ -1,0 +1,254 @@
+{
+  "pipeline_version": "4.0.0-brutalist-master",
+  "shader_standard": "Arnold aiToon (ToonShader_Setup.pdf compliant + Full PBR/Curvature)",
+  "skydome_policy": "STRICTLY_DISABLED (0 skydomes active)",
+  "contour_filter": {
+    "type": "aiAOVFilter",
+    "translator": "contour",
+    "width": 1.75
+  },
+  "base_tonemap_ramp": {
+    "interpolation": "None (0)",
+    "bands": [
+      {
+        "position": 0.0,
+        "rgb": [
+          0.24,
+          0.25,
+          0.28
+        ]
+      },
+      {
+        "position": 0.32,
+        "rgb": [
+          0.5,
+          0.51,
+          0.53
+        ]
+      },
+      {
+        "position": 0.56,
+        "rgb": [
+          0.78,
+          0.78,
+          0.77
+        ]
+      },
+      {
+        "position": 0.8,
+        "rgb": [
+          1.0,
+          0.99,
+          0.96
+        ]
+      }
+    ]
+  },
+  "specular_tonemap_ramp": {
+    "interpolation": "None (0)",
+    "bands": [
+      {
+        "position": 0.0,
+        "rgb": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "position": 0.45,
+        "rgb": [
+          0.32,
+          0.34,
+          0.36
+        ]
+      },
+      {
+        "position": 0.78,
+        "rgb": [
+          0.92,
+          0.94,
+          0.98
+        ]
+      }
+    ]
+  },
+  "cad_module_shader_graphs": {
+    "CAD_CeilingBay_curvShape": {
+      "toon_node": "AIT_BS_CAD_CeilingBay",
+      "shading_engine": "AIT_BS_CAD_CeilingBaySG",
+      "base_ramp_node": "RAMP_BS_CAD_CeilingBay",
+      "spec_ramp_node": "RAMP_SPEC_BS_CAD_CeilingBay",
+      "normal_map_node": "AINRM_CAD_CeilingBay",
+      "ao_multiply_node": "MUL_CAD_CeilingBay_AlbedoAO",
+      "curvature_boost_node": "PMA_CAD_CeilingBay_CurvBoost",
+      "uv_repeat": [
+        4.0,
+        4.0
+      ],
+      "angle_threshold": 16.0,
+      "edge_width_scale": 0.6,
+      "textures": {
+        "Albedo": "02_TrimSheet/tiles_512/T_Trim_tbar_Albedo_512.png",
+        "Normal": "02_TrimSheet/tiles_512/T_Trim_tbar_Normal_512.png",
+        "ORM": "02_TrimSheet/tiles_512/T_Trim_tbar_ORM_512.png",
+        "Curvature": "02_TrimSheet/tiles_512/T_Trim_tbar_Curvature_512.png",
+        "BakedMeshCurvature": "01_CAD_Pass/baked_maps/CAD_CeilingBay_BakedCurvatureAO_1024.png"
+      }
+    },
+    "CAD_DoorFrame_curvShape": {
+      "toon_node": "AIT_BS_CAD_DoorFrame",
+      "shading_engine": "AIT_BS_CAD_DoorFrameSG",
+      "base_ramp_node": "RAMP_BS_CAD_DoorFrame",
+      "spec_ramp_node": "RAMP_SPEC_BS_CAD_DoorFrame",
+      "normal_map_node": "AINRM_CAD_DoorFrame",
+      "ao_multiply_node": "MUL_CAD_DoorFrame_AlbedoAO",
+      "curvature_boost_node": "PMA_CAD_DoorFrame_CurvBoost",
+      "uv_repeat": [
+        1.0,
+        2.0
+      ],
+      "angle_threshold": 15.0,
+      "edge_width_scale": 0.72,
+      "textures": {
+        "Albedo": "02_TrimSheet/tiles_512/T_Trim_mullion_Albedo_512.png",
+        "Normal": "02_TrimSheet/tiles_512/T_Trim_mullion_Normal_512.png",
+        "ORM": "02_TrimSheet/tiles_512/T_Trim_mullion_ORM_512.png",
+        "Curvature": "02_TrimSheet/tiles_512/T_Trim_mullion_Curvature_512.png",
+        "BakedMeshCurvature": "01_CAD_Pass/baked_maps/CAD_DoorFrame_BakedCurvatureAO_1024.png"
+      }
+    },
+    "CAD_FloorSlab_curvShape": {
+      "toon_node": "AIT_BS_CAD_FloorSlab",
+      "shading_engine": "AIT_BS_CAD_FloorSlabSG",
+      "base_ramp_node": "RAMP_BS_CAD_FloorSlab",
+      "spec_ramp_node": "RAMP_SPEC_BS_CAD_FloorSlab",
+      "normal_map_node": "AINRM_CAD_FloorSlab",
+      "ao_multiply_node": "MUL_CAD_FloorSlab_AlbedoAO",
+      "curvature_boost_node": "PMA_CAD_FloorSlab_CurvBoost",
+      "uv_repeat": [
+        8.0,
+        8.0
+      ],
+      "angle_threshold": 22.0,
+      "edge_width_scale": 0.5,
+      "textures": {
+        "BaseColor": "03_TilableTextures/T_Tilable_CarpetFloor_PBR/T_Tilable_CarpetFloor_BaseColor_1024.png",
+        "Normal": "03_TilableTextures/T_Tilable_CarpetFloor_PBR/T_Tilable_CarpetFloor_Normal_1024.png",
+        "ORM": "03_TilableTextures/T_Tilable_CarpetFloor_PBR/T_Tilable_CarpetFloor_ORM_1024.png",
+        "Curvature": "03_TilableTextures/T_Tilable_CarpetFloor_PBR/T_Tilable_CarpetFloor_Curvature_1024.png",
+        "BakedMeshCurvature": "01_CAD_Pass/baked_maps/CAD_FloorSlab_BakedCurvatureAO_1024.png"
+      }
+    },
+    "CAD_TrimBase_curvShape": {
+      "toon_node": "AIT_BS_CAD_TrimBase",
+      "shading_engine": "AIT_BS_CAD_TrimBaseSG",
+      "base_ramp_node": "RAMP_BS_CAD_TrimBase",
+      "spec_ramp_node": "RAMP_SPEC_BS_CAD_TrimBase",
+      "normal_map_node": "AINRM_CAD_TrimBase",
+      "ao_multiply_node": "MUL_CAD_TrimBase_AlbedoAO",
+      "curvature_boost_node": "PMA_CAD_TrimBase_CurvBoost",
+      "uv_repeat": [
+        1.0,
+        8.0
+      ],
+      "angle_threshold": 14.0,
+      "edge_width_scale": 0.68,
+      "textures": {
+        "Albedo": "02_TrimSheet/tiles_512/T_Trim_base_Albedo_512.png",
+        "Normal": "02_TrimSheet/tiles_512/T_Trim_base_Normal_512.png",
+        "ORM": "02_TrimSheet/tiles_512/T_Trim_base_ORM_512.png",
+        "Curvature": "02_TrimSheet/tiles_512/T_Trim_base_Curvature_512.png",
+        "BakedMeshCurvature": "01_CAD_Pass/baked_maps/CAD_TrimBase_BakedCurvatureAO_1024.png"
+      }
+    },
+    "CAD_TrimMullion_curvShape": {
+      "toon_node": "AIT_BS_CAD_TrimMullion",
+      "shading_engine": "AIT_BS_CAD_TrimMullionSG",
+      "base_ramp_node": "RAMP_BS_CAD_TrimMullion",
+      "spec_ramp_node": "RAMP_SPEC_BS_CAD_TrimMullion",
+      "normal_map_node": "AINRM_CAD_TrimMullion",
+      "ao_multiply_node": "MUL_CAD_TrimMullion_AlbedoAO",
+      "curvature_boost_node": "PMA_CAD_TrimMullion_CurvBoost",
+      "uv_repeat": [
+        1.0,
+        6.0
+      ],
+      "angle_threshold": 14.0,
+      "edge_width_scale": 0.7,
+      "textures": {
+        "Albedo": "02_TrimSheet/tiles_512/T_Trim_mullion_Albedo_512.png",
+        "Normal": "02_TrimSheet/tiles_512/T_Trim_mullion_Normal_512.png",
+        "ORM": "02_TrimSheet/tiles_512/T_Trim_mullion_ORM_512.png",
+        "Curvature": "02_TrimSheet/tiles_512/T_Trim_mullion_Curvature_512.png",
+        "BakedMeshCurvature": "01_CAD_Pass/baked_maps/CAD_TrimMullion_BakedCurvatureAO_1024.png"
+      }
+    },
+    "CAD_TrimPanel_curvShape": {
+      "toon_node": "AIT_BS_CAD_TrimPanel",
+      "shading_engine": "AIT_BS_CAD_TrimPanelSG",
+      "base_ramp_node": "RAMP_BS_CAD_TrimPanel",
+      "spec_ramp_node": "RAMP_SPEC_BS_CAD_TrimPanel",
+      "normal_map_node": "AINRM_CAD_TrimPanel",
+      "ao_multiply_node": "MUL_CAD_TrimPanel_AlbedoAO",
+      "curvature_boost_node": "PMA_CAD_TrimPanel_CurvBoost",
+      "uv_repeat": [
+        1.0,
+        4.0
+      ],
+      "angle_threshold": 16.0,
+      "edge_width_scale": 0.65,
+      "textures": {
+        "Albedo": "02_TrimSheet/tiles_512/T_Trim_panel_Albedo_512.png",
+        "Normal": "02_TrimSheet/tiles_512/T_Trim_panel_Normal_512.png",
+        "ORM": "02_TrimSheet/tiles_512/T_Trim_panel_ORM_512.png",
+        "Curvature": "02_TrimSheet/tiles_512/T_Trim_panel_Curvature_512.png",
+        "BakedMeshCurvature": "01_CAD_Pass/baked_maps/CAD_TrimPanel_BakedCurvatureAO_1024.png"
+      }
+    },
+    "CAD_WallModule_curvShape": {
+      "toon_node": "AIT_BS_CAD_WallModule",
+      "shading_engine": "AIT_BS_CAD_WallModuleSG",
+      "base_ramp_node": "RAMP_BS_CAD_WallModule",
+      "spec_ramp_node": "RAMP_SPEC_BS_CAD_WallModule",
+      "normal_map_node": "AINRM_CAD_WallModule",
+      "ao_multiply_node": "MUL_CAD_WallModule_AlbedoAO",
+      "curvature_boost_node": "PMA_CAD_WallModule_CurvBoost",
+      "uv_repeat": [
+        6.0,
+        2.0
+      ],
+      "angle_threshold": 18.0,
+      "edge_width_scale": 0.62,
+      "textures": {
+        "BaseColor": "03_TilableTextures/T_Tilable_Concrete_PBR/T_Tilable_Concrete_BaseColor_1024.png",
+        "Normal": "03_TilableTextures/T_Tilable_Concrete_PBR/T_Tilable_Concrete_Normal_1024.png",
+        "ORM": "03_TilableTextures/T_Tilable_Concrete_PBR/T_Tilable_Concrete_ORM_1024.png",
+        "Curvature": "03_TilableTextures/T_Tilable_Concrete_PBR/T_Tilable_Concrete_Curvature_1024.png",
+        "BakedMeshCurvature": "01_CAD_Pass/baked_maps/CAD_WallModule_BakedCurvatureAO_1024.png"
+      }
+    },
+    "CAD_WindowMullion_curvShape": {
+      "toon_node": "AIT_BS_CAD_WindowMullion",
+      "shading_engine": "AIT_BS_CAD_WindowMullionSG",
+      "base_ramp_node": "RAMP_BS_CAD_WindowMullion",
+      "spec_ramp_node": "RAMP_SPEC_BS_CAD_WindowMullion",
+      "normal_map_node": "AINRM_CAD_WindowMullion",
+      "ao_multiply_node": "MUL_CAD_WindowMullion_AlbedoAO",
+      "curvature_boost_node": "PMA_CAD_WindowMullion_CurvBoost",
+      "uv_repeat": [
+        2.0,
+        3.0
+      ],
+      "angle_threshold": 12.0,
+      "edge_width_scale": 0.75,
+      "textures": {
+        "Albedo": "02_TrimSheet/tiles_512/T_Trim_slat_Albedo_512.png",
+        "Normal": "02_TrimSheet/tiles_512/T_Trim_slat_Normal_512.png",
+        "ORM": "02_TrimSheet/tiles_512/T_Trim_slat_ORM_512.png",
+        "Curvature": "02_TrimSheet/tiles_512/T_Trim_slat_Curvature_512.png",
+        "BakedMeshCurvature": "01_CAD_Pass/baked_maps/CAD_WindowMullion_BakedCurvatureAO_1024.png"
+      }
+    }
+  }
+}

@@ -1,0 +1,746 @@
+{
+  "T_Tilable_Blinds_512.png": {
+    "version": "4.0-brutalist-polish",
+    "size": [
+      512,
+      512,
+      3
+    ],
+    "seam_left_right": 0.0,
+    "seam_top_bottom": 0.0,
+    "std": 64.47,
+    "pbr_channels": {
+      "T_Tilable_Blinds_BaseColor_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 62.04
+      },
+      "T_Tilable_Blinds_Height_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 69.62
+      },
+      "T_Tilable_Blinds_Normal_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 70.21
+      },
+      "T_Tilable_Blinds_Roughness_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 61.98
+      },
+      "T_Tilable_Blinds_Metallic_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 67.12
+      },
+      "T_Tilable_Blinds_AO_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 95.3
+      },
+      "T_Tilable_Blinds_Curvature_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 61.05
+      },
+      "T_Tilable_Blinds_ORM_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 78.41
+      }
+    }
+  },
+  "T_Tilable_Concrete_512.png": {
+    "version": "4.0-brutalist-polish",
+    "size": [
+      512,
+      512,
+      3
+    ],
+    "seam_left_right": 0.0,
+    "seam_top_bottom": 0.0,
+    "std": 15.13,
+    "pbr_channels": {
+      "T_Tilable_Concrete_BaseColor_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 13.72
+      },
+      "T_Tilable_Concrete_Height_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 9.64
+      },
+      "T_Tilable_Concrete_Normal_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 63.38
+      },
+      "T_Tilable_Concrete_Roughness_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 3.27
+      },
+      "T_Tilable_Concrete_Metallic_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 0.0
+      },
+      "T_Tilable_Concrete_AO_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 49.47
+      },
+      "T_Tilable_Concrete_Curvature_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 23.55
+      },
+      "T_Tilable_Concrete_ORM_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 40.88
+      }
+    }
+  },
+  "T_Tilable_Facade_512.png": {
+    "version": "4.0-brutalist-polish",
+    "size": [
+      512,
+      512,
+      3
+    ],
+    "seam_left_right": 0.0,
+    "seam_top_bottom": 0.0,
+    "std": 61.47,
+    "pbr_channels": {
+      "T_Tilable_Facade_BaseColor_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 58.92
+      },
+      "T_Tilable_Facade_Height_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 74.62
+      },
+      "T_Tilable_Facade_Normal_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 64.84
+      },
+      "T_Tilable_Facade_Roughness_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 83.9
+      },
+      "T_Tilable_Facade_Metallic_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 69.69
+      },
+      "T_Tilable_Facade_AO_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 99.33
+      },
+      "T_Tilable_Facade_Curvature_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 60.81
+      },
+      "T_Tilable_Facade_ORM_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 96.02
+      }
+    }
+  },
+  "T_Tilable_Hatch_512.png": {
+    "version": "4.0-brutalist-polish",
+    "size": [
+      512,
+      512,
+      3
+    ],
+    "seam_left_right": 0.0,
+    "seam_top_bottom": 0.0,
+    "std": 54.28,
+    "pbr_channels": {
+      "T_Tilable_Hatch_BaseColor_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 52.29
+      },
+      "T_Tilable_Hatch_Height_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 47.19
+      },
+      "T_Tilable_Hatch_Normal_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 66.65
+      },
+      "T_Tilable_Hatch_Roughness_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 52.05
+      },
+      "T_Tilable_Hatch_Metallic_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 78.35
+      },
+      "T_Tilable_Hatch_AO_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 87.96
+      },
+      "T_Tilable_Hatch_Curvature_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 52.99
+      },
+      "T_Tilable_Hatch_ORM_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 101.02
+      }
+    }
+  },
+  "T_Tilable_MetalPanel_512.png": {
+    "version": "4.0-brutalist-polish",
+    "size": [
+      512,
+      512,
+      3
+    ],
+    "seam_left_right": 0.0,
+    "seam_top_bottom": 0.0,
+    "std": 58.92,
+    "pbr_channels": {
+      "T_Tilable_MetalPanel_BaseColor_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 55.88
+      },
+      "T_Tilable_MetalPanel_Height_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 44.7
+      },
+      "T_Tilable_MetalPanel_Normal_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 64.04
+      },
+      "T_Tilable_MetalPanel_Roughness_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 32.67
+      },
+      "T_Tilable_MetalPanel_Metallic_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 48.72
+      },
+      "T_Tilable_MetalPanel_AO_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 95.71
+      },
+      "T_Tilable_MetalPanel_Curvature_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 33.19
+      },
+      "T_Tilable_MetalPanel_ORM_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 84.97
+      }
+    }
+  },
+  "T_Tilable_CarpetFloor_512.png": {
+    "version": "4.0-brutalist-polish",
+    "size": [
+      512,
+      512,
+      3
+    ],
+    "seam_left_right": 0.0,
+    "seam_top_bottom": 0.0,
+    "std": 18.46,
+    "pbr_channels": {
+      "T_Tilable_CarpetFloor_BaseColor_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 17.57
+      },
+      "T_Tilable_CarpetFloor_Height_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 16.61
+      },
+      "T_Tilable_CarpetFloor_Normal_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 70.53
+      },
+      "T_Tilable_CarpetFloor_Roughness_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 4.72
+      },
+      "T_Tilable_CarpetFloor_Metallic_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 0.0
+      },
+      "T_Tilable_CarpetFloor_AO_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 79.48
+      },
+      "T_Tilable_CarpetFloor_Curvature_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 53.84
+      },
+      "T_Tilable_CarpetFloor_ORM_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 106.07
+      }
+    }
+  },
+  "T_Tilable_OfficeWall_512.png": {
+    "version": "4.0-brutalist-polish",
+    "size": [
+      512,
+      512,
+      3
+    ],
+    "seam_left_right": 0.0,
+    "seam_top_bottom": 0.0,
+    "std": 11.6,
+    "pbr_channels": {
+      "T_Tilable_OfficeWall_BaseColor_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 10.61
+      },
+      "T_Tilable_OfficeWall_Height_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 9.77
+      },
+      "T_Tilable_OfficeWall_Normal_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 65.31
+      },
+      "T_Tilable_OfficeWall_Roughness_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 6.42
+      },
+      "T_Tilable_OfficeWall_Metallic_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 0.0
+      },
+      "T_Tilable_OfficeWall_AO_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 50.66
+      },
+      "T_Tilable_OfficeWall_Curvature_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 25.08
+      },
+      "T_Tilable_OfficeWall_ORM_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 97.3
+      }
+    }
+  },
+  "T_Tilable_WoodLaminate_512.png": {
+    "version": "4.0-brutalist-polish",
+    "size": [
+      512,
+      512,
+      3
+    ],
+    "seam_left_right": 0.0,
+    "seam_top_bottom": 0.0,
+    "std": 33.15,
+    "pbr_channels": {
+      "T_Tilable_WoodLaminate_BaseColor_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 32.96
+      },
+      "T_Tilable_WoodLaminate_Height_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 9.88
+      },
+      "T_Tilable_WoodLaminate_Normal_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 68.09
+      },
+      "T_Tilable_WoodLaminate_Roughness_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 18.79
+      },
+      "T_Tilable_WoodLaminate_Metallic_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 0.0
+      },
+      "T_Tilable_WoodLaminate_AO_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 59.57
+      },
+      "T_Tilable_WoodLaminate_Curvature_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 39.04
+      },
+      "T_Tilable_WoodLaminate_ORM_1024.png": {
+        "size": [
+          1024,
+          1024,
+          3
+        ],
+        "seam_left_right": 0.0,
+        "seam_top_bottom": 0.0,
+        "std": 86.14
+      }
+    }
+  }
+}

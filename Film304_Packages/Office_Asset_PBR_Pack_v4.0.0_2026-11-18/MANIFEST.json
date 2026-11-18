@@ -1,0 +1,1264 @@
+{
+  "pack": "Film304 Office Asset, Polished Brutalist TrimSheet, Tilable PBR & Shot Setup Pack",
+  "version": "4.0.0",
+  "assembled": "2026-11-18",
+  "author": "Brennan Shepherd",
+  "total_files": 251,
+  "contents": [
+    {
+      "path": "00_START_HERE.md",
+      "bytes": 1685,
+      "sha256": "511fdc0b4ffe9d138769e45e68af49bffdce516a1b4a8de33aff1caafbd75ca4"
+    },
+    {
+      "path": "01_CAD_Pass/CAD_CeilingBay.fbx",
+      "bytes": 18448,
+      "sha256": "fc9ee327a2095e3062b890dc0dfe0980d400ec3e2821a7f4487d9b48e4baf70b"
+    },
+    {
+      "path": "01_CAD_Pass/CAD_DoorFrame.fbx",
+      "bytes": 19616,
+      "sha256": "3453bc85e3ba65fbded0c595b957671cfd02e8176de7ffe02df8c405ada591f4"
+    },
+    {
+      "path": "01_CAD_Pass/CAD_FloorSlab.fbx",
+      "bytes": 17568,
+      "sha256": "31bef0abd3ad93c34595f8b2a1b34fd9b849cae883e51d5bd94f9fc25946ffe9"
+    },
+    {
+      "path": "01_CAD_Pass/CAD_TrimBase.fbx",
+      "bytes": 19840,
+      "sha256": "79056b1115baf281a69dfb7251398ea446a5162e9052d0dded0e485c0931159f"
+    },
+    {
+      "path": "01_CAD_Pass/CAD_TrimMullion.fbx",
+      "bytes": 18704,
+      "sha256": "d6c6723f1c9788cdbf27ad5556af65ae452646786df612f034dc464c98a0ece3"
+    },
+    {
+      "path": "01_CAD_Pass/CAD_TrimPanel.fbx",
+      "bytes": 19824,
+      "sha256": "2f31c161e3ab9368e678232d23a11e07283f40dfabb598d5d9dc43e5754ddd92"
+    },
+    {
+      "path": "01_CAD_Pass/CAD_WallModule.fbx",
+      "bytes": 26656,
+      "sha256": "2e3d829935be7a7288c3366e6f1a00ea8b65a867166c49f919e99abd7588f946"
+    },
+    {
+      "path": "01_CAD_Pass/CAD_WindowMullion.fbx",
+      "bytes": 21088,
+      "sha256": "bdecb4f36695bba88dc120e1499fee87665976321c9cc3f48c5dfd92ba5b9939"
+    },
+    {
+      "path": "01_CAD_Pass/bake_status.md",
+      "bytes": 2830,
+      "sha256": "e46be2a923c3a64b329255926f765ba57e32ea73a90b9c9fae9d0303242ffec7"
+    },
+    {
+      "path": "01_CAD_Pass/cad_report.json",
+      "bytes": 1683,
+      "sha256": "d5411254faa531599dc9f6895dc539507b375631b02ed5288a0404024002b8e6"
+    },
+    {
+      "path": "01_CAD_Pass/maya_report.json",
+      "bytes": 1738,
+      "sha256": "af1b091d2de01a472fbb1b14d172f1de3cd2e3e48850d2b666787de34f74cb30"
+    },
+    {
+      "path": "01_CAD_Pass/numpy_bake_report.json",
+      "bytes": 1481,
+      "sha256": "c73995037125b4a5df36db8402710b8b57c2d84e335557b632531615efb0b553"
+    },
+    {
+      "path": "01_CAD_Pass/baked_maps/CAD_CeilingBay_BakedCurvatureAO_1024.png",
+      "bytes": 7918,
+      "sha256": "08ccff5c505f9c371707152475f5b1a9d8ce56941f282ca4c35e5feb02192ec9"
+    },
+    {
+      "path": "01_CAD_Pass/baked_maps/CAD_DoorFrame_BakedCurvatureAO_1024.png",
+      "bytes": 8069,
+      "sha256": "23772062b3b0973283fdecdd4044641c882105bf9afc69de14f20e5eff08cc88"
+    },
+    {
+      "path": "01_CAD_Pass/baked_maps/CAD_FloorSlab_BakedCurvatureAO_1024.png",
+      "bytes": 4911,
+      "sha256": "575bc96d2c2f61155defaeb7435ea210ec5411aef547739e2d28dc368304652b"
+    },
+    {
+      "path": "01_CAD_Pass/baked_maps/CAD_TrimBase_BakedCurvatureAO_1024.png",
+      "bytes": 6583,
+      "sha256": "2153b13c2fb3bb200dd8139dcc2cac31ca29141ca3e5391e8da150dbeac01fba"
+    },
+    {
+      "path": "01_CAD_Pass/baked_maps/CAD_TrimMullion_BakedCurvatureAO_1024.png",
+      "bytes": 6284,
+      "sha256": "5b3a404f7840b01f91ae70fef2f95ff81168e0e9ac7503dad7331b061c63fa3e"
+    },
+    {
+      "path": "01_CAD_Pass/baked_maps/CAD_TrimPanel_BakedCurvatureAO_1024.png",
+      "bytes": 7798,
+      "sha256": "9f939ffac05ad85e6a8e683976d554c1790b751cb114343d80edc35730bd8b4e"
+    },
+    {
+      "path": "01_CAD_Pass/baked_maps/CAD_WallModule_BakedCurvatureAO_1024.png",
+      "bytes": 9325,
+      "sha256": "14c85cd2a2792fef01cbb4a2ce36b7bb7db65e6d63ddeedcab1929ed17a9c2bc"
+    },
+    {
+      "path": "01_CAD_Pass/baked_maps/CAD_WindowMullion_BakedCurvatureAO_1024.png",
+      "bytes": 9955,
+      "sha256": "e1018afeff2a07d9cbfb67c26c59ce14add1a4ce3d242226185b7b058793929b"
+    },
+    {
+      "path": "02_TrimSheet/Film304_OfficeTrimSheet_v01.hip",
+      "bytes": 136987,
+      "sha256": "c80189eaf8d5c843f761edf192b7f5443c79aa8fd7165b4942f59b5676a9743f"
+    },
+    {
+      "path": "02_TrimSheet/T_OfficeTrim_AO_2048x1024.png",
+      "bytes": 1397629,
+      "sha256": "19ce59e698ddfa4bc550d78852993c11a39421e6cd58fd51248b998d80d484de"
+    },
+    {
+      "path": "02_TrimSheet/T_OfficeTrim_Albedo_2048x1024.png",
+      "bytes": 1468799,
+      "sha256": "8e146b593ab5d51fced83973120c695108ba1437aad1b3596c6de1cc5ad4c86e"
+    },
+    {
+      "path": "02_TrimSheet/T_OfficeTrim_Curvature_2048x1024.png",
+      "bytes": 1446204,
+      "sha256": "fca5d742e810ee74d07816f55c74033c29ecdc52d28a4928121e7603d13e5005"
+    },
+    {
+      "path": "02_TrimSheet/T_OfficeTrim_Height_2048x1024.png",
+      "bytes": 615332,
+      "sha256": "480f4d96cbc82ef55b1dd7b5a5837f529b36b57351cc761e3e1432b8cb6a68c8"
+    },
+    {
+      "path": "02_TrimSheet/T_OfficeTrim_Metallic_2048x1024.png",
+      "bytes": 114890,
+      "sha256": "d6e271ec2ab3a18a5c4d4d8a0b42b73b1381b4ec228975c0f28d8dccad5a5e8d"
+    },
+    {
+      "path": "02_TrimSheet/T_OfficeTrim_Normal_2048x1024.png",
+      "bytes": 2671372,
+      "sha256": "40213df126643c958d830b0b3941e34de7880d1d3ceb244b25a793fa83d6205d"
+    },
+    {
+      "path": "02_TrimSheet/T_OfficeTrim_ORM_2048x1024.png",
+      "bytes": 1544800,
+      "sha256": "f52b63ad9330adf7023ba8e8f80d6fd1a007535f4a294066631b8b2a508f63b5"
+    },
+    {
+      "path": "02_TrimSheet/T_OfficeTrim_Roughness_2048x1024.png",
+      "bytes": 696355,
+      "sha256": "c578e7d03f681b113b694efe959c7de41b689c6ef7c9bc8e81e8668ec1ddba2a"
+    },
+    {
+      "path": "02_TrimSheet/atlas_report.json",
+      "bytes": 4845,
+      "sha256": "e7ba9ff1d0e82b1c3406f35a00cf3708faf324359810b36c6d333504c902d724"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_base_AO_512.png",
+      "bytes": 101655,
+      "sha256": "525a2bef297df6d93bdfe2a328d35f71ec605b335a949f4691bf210dbb07f631"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_base_Albedo_512.png",
+      "bytes": 65311,
+      "sha256": "c16ccea4a09f9a16eddef901b7e4d3ff81f52db2c99015ad1fe34a8af7cdf552"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_base_Curvature_512.png",
+      "bytes": 91665,
+      "sha256": "c8f30d0ec6b471b84a36980daa91037f795c71cea9b47ac51638c0953c527bb2"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_base_Height_512.png",
+      "bytes": 38337,
+      "sha256": "c73deb4224af5b30135e06a3208e96b3d89b4c925a1573efe4287bf37229703a"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_base_Metallic_512.png",
+      "bytes": 1610,
+      "sha256": "6d117b19876c7a3277a32f6e802de11703a736472c5da89509da07c347bc3c89"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_base_Normal_512.png",
+      "bytes": 207840,
+      "sha256": "0fff66c244bc72df27ab1e7e254d1ec71098a5de64599dfe41f4a91538e7309a"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_base_ORM_512.png",
+      "bytes": 141899,
+      "sha256": "361ba8674114d942f48cf229edd0fcdf0fa87558f5c7086681e5c68157440e24"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_base_Roughness_512.png",
+      "bytes": 54941,
+      "sha256": "257d48ee0690c7973b7e958c2d147617657659edd0f9349eb2ca484b992b945a"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_duct_AO_512.png",
+      "bytes": 151979,
+      "sha256": "26943cb5b60c3b61c744af7ea24342961cc6f956c46bc0bfbdc52d26df40dd35"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_duct_Albedo_512.png",
+      "bytes": 161912,
+      "sha256": "ce95f03c467a439a867d20a09207eaf2f338dc12181bc5c7278854b6df855cb5"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_duct_Curvature_512.png",
+      "bytes": 125271,
+      "sha256": "2ebffc13b592a1d9e0a9782a91bba24e6d738b421b3b6c4c9c909d83bbdca85c"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_duct_Height_512.png",
+      "bytes": 53369,
+      "sha256": "d7cc9e2999700921c44c9563262c283b5f047d14cbfea3086e8bb3c7d26b3780"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_duct_Metallic_512.png",
+      "bytes": 22141,
+      "sha256": "0cdd0fc24630af573c3ee6e0124deb3e068e9aceffd5fc7cb61b2910e68a8a21"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_duct_Normal_512.png",
+      "bytes": 268903,
+      "sha256": "995df992755c06da40e3b7898efea6be79218ffd1eb53c6c39f9763a92bed194"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_duct_ORM_512.png",
+      "bytes": 190118,
+      "sha256": "aa803bbfc547e107ccd08b0ff9d97a9d900fab3869286d47976c8cf42b187d98"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_duct_Roughness_512.png",
+      "bytes": 78838,
+      "sha256": "57864333d2623a66fee33daf1bfc7d77ffe04a676ddd27a3c73002210c7bde60"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_mullion_AO_512.png",
+      "bytes": 97988,
+      "sha256": "4b8f9592062815955098eaa9556ce63624cf5d4758f5e533c6215f819115b714"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_mullion_Albedo_512.png",
+      "bytes": 106782,
+      "sha256": "278c88f1f27db40501e4ae0719fbdc025dd43cc59092b42f012de573687e5ff3"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_mullion_Curvature_512.png",
+      "bytes": 83319,
+      "sha256": "78258ad5ddaea2932e5389d9aaf5eb816425ed03dd53f73af0ca8f3ff61a109a"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_mullion_Height_512.png",
+      "bytes": 32795,
+      "sha256": "ecf4be4cff1c04b4af7c0eda9c2c862f570aca687052b433ea7029a05b590518"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_mullion_Metallic_512.png",
+      "bytes": 1913,
+      "sha256": "da44c5c7ee1ece000f359146ef4fc934f493afd552273bd6c57548c46cbf21a6"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_mullion_Normal_512.png",
+      "bytes": 189862,
+      "sha256": "d6fee3c9366457bbe25e131a259f74bba91848b6d7370100c868b6aa408b0287"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_mullion_ORM_512.png",
+      "bytes": 127653,
+      "sha256": "82bd78667f2ba44ee066091058544b3b4cec0eec7728179c368babe990cce898"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_mullion_Roughness_512.png",
+      "bytes": 51464,
+      "sha256": "79fc4eaf71f5ca0fa27211966d4b041c3b8be4daaf6b6db9b5c0ad56aa7d77f3"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_panel_AO_512.png",
+      "bytes": 185038,
+      "sha256": "df13d17c8580fdccc93147a59469c638b37ee0e2f5e9d4bbc614b7de99be8e28"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_panel_Albedo_512.png",
+      "bytes": 186469,
+      "sha256": "001ebe1473a581f51ad7bc9fa8ede9e1d02de0a47036bd1c26218e0e950bf202"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_panel_Curvature_512.png",
+      "bytes": 193216,
+      "sha256": "85466d4178db7e0e66f97da0a29ec00fd0d239bbd1527ac0a0a6a7113883f147"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_panel_Height_512.png",
+      "bytes": 89756,
+      "sha256": "c30fb80c4cedf2957caf78b6c42a8b471f8d5df3d207f799341dd000e773b5eb"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_panel_Metallic_512.png",
+      "bytes": 1566,
+      "sha256": "517ae60e1a8293424f4a9392be419f5b29446bf028086b0293cfe95fe050f23c"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_panel_Normal_512.png",
+      "bytes": 340379,
+      "sha256": "dc1883d6e60139f1fbd7e8400c5c3d950dcdc790f44595196492c96fe01d264e"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_panel_ORM_512.png",
+      "bytes": 233642,
+      "sha256": "70ba50cc6cce193c02405d6a7a15b20f0c192f7a8c658a39ad22cdba6a875b63"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_panel_Roughness_512.png",
+      "bytes": 135609,
+      "sha256": "4bdc38b373c8ed5fe5c21a76710aace41e3e9b48a9df412465314c00a0a2e237"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_reveal_AO_512.png",
+      "bytes": 270444,
+      "sha256": "9111073204d314237304ffeae68e6212e262407d7f3eed0d39e5baccee1a3eab"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_reveal_Albedo_512.png",
+      "bytes": 264105,
+      "sha256": "781828497b6130f59879f978dbd625b992d009e31cf2d1ec904cae460f58944a"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_reveal_Curvature_512.png",
+      "bytes": 267414,
+      "sha256": "29510dcee0d9ad531b90de625f7833258d516ce5c54687c1100d736a95904075"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_reveal_Height_512.png",
+      "bytes": 127610,
+      "sha256": "fd6747d7d5e631ca55d64416d099ccc2696927660907c99791b311031ee13f4a"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_reveal_Metallic_512.png",
+      "bytes": 1616,
+      "sha256": "5b734a4ddd19522bf780dbcb5cb2ce9821bb2deb7a9c40c1c4163c236412b4a6"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_reveal_Normal_512.png",
+      "bytes": 527553,
+      "sha256": "3457f338ad6f22f7eb1ce7005b0f5e18b62f212bd7fcf822d00b5345dd3692a5"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_reveal_ORM_512.png",
+      "bytes": 228855,
+      "sha256": "8e0edb2232eff86d96da2d4d5654319ba9162c39d6476f63ea4955e7705ce2a7"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_reveal_Roughness_512.png",
+      "bytes": 86023,
+      "sha256": "ed74cf089d3a7ac32b3362a41f99c2b43c9a509a5dd91f2b896f3157c6431cc3"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_slat_AO_512.png",
+      "bytes": 122498,
+      "sha256": "b3197e011ae887720f0c7617443bf3abeb41db273d510801517bf4e6263cea62"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_slat_Albedo_512.png",
+      "bytes": 153638,
+      "sha256": "5762944e4d92d5ee4a94fd45faa9a0474221ce9388e976725d2ff68db124df82"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_slat_Curvature_512.png",
+      "bytes": 136508,
+      "sha256": "82ac152bc68849f4f34914c5d3c18ca663cbf5709a1b7f4a1ed104822b44e0ed"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_slat_Height_512.png",
+      "bytes": 45696,
+      "sha256": "1384ca6d7ee9c57c33d9f9898dc94e5c57e44e2b8a5bcb57fa80a181dd535d5d"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_slat_Metallic_512.png",
+      "bytes": 50683,
+      "sha256": "dd039dab372bca54f093bf9188cdeafb52569d3f26dac1b78ff06fb614c48d10"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_slat_Normal_512.png",
+      "bytes": 261375,
+      "sha256": "eba21d56fdc2144ca19578ac51a0e99c1bac4414f1fa9a024bbc9d3d5ff9c0d8"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_slat_ORM_512.png",
+      "bytes": 170782,
+      "sha256": "19a5e2be58651c871e3bfcf8a356c3e939fc2e55bf6b5a1cd3cc390ee46164c4"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_slat_Roughness_512.png",
+      "bytes": 92745,
+      "sha256": "615b74dcf06ea2a0c7657cea126269e30647c0f8df89e1a95fa572d5a8b26e6d"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_tbar_AO_512.png",
+      "bytes": 214481,
+      "sha256": "b31305bec1a6d38cca09cbc1b7db6dfbe14d4dcd9d0ba3f25656f130280ca8ca"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_tbar_Albedo_512.png",
+      "bytes": 220368,
+      "sha256": "e95ce59bd8ba8c5402f2926c96429344736d477157908173773a20e1bf986e3f"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_tbar_Curvature_512.png",
+      "bytes": 232805,
+      "sha256": "bf6d2218290006fb5b870865b965cc37f45a28f7a2d9e44d8f18cbaa1ff2a74b"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_tbar_Height_512.png",
+      "bytes": 107310,
+      "sha256": "540c069d69c97ad625d137cd1fdb9e384ee1e730d6a1d476db77b02c86e4d34b"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_tbar_Metallic_512.png",
+      "bytes": 1825,
+      "sha256": "57af5300f103572a6ec2f260737ef03a1778790d39172df8f76012b7cd57082b"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_tbar_Normal_512.png",
+      "bytes": 437747,
+      "sha256": "5c0c18ea704e106e9ee1a41e57a7d3decc994cd3a647c318adbbbcca215b3adc"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_tbar_ORM_512.png",
+      "bytes": 204628,
+      "sha256": "3d812365f3a5083cb8bf68604d75a60051ee26351c5ba0de631619c5b6397474"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_tbar_Roughness_512.png",
+      "bytes": 55307,
+      "sha256": "8e0f49575e4269af2b7ba46393999c7972599abe78cc9058e159dbb618f61b22"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_troffer_AO_512.png",
+      "bytes": 203314,
+      "sha256": "acfa4ea0cd3efbb69d5b269c9f9d4e74fc523dc0519d03ad29d84f95715b346d"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_troffer_Albedo_512.png",
+      "bytes": 235447,
+      "sha256": "4c2297eb369c0ca453701ddf2f022a9038af16de484a83fdb3c6f184dfe36286"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_troffer_Curvature_512.png",
+      "bytes": 214064,
+      "sha256": "129da17b3921ed8fb17aa445c0c1f58292e72d5b0ad782a315f3d33febbbf4df"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_troffer_Height_512.png",
+      "bytes": 79675,
+      "sha256": "cfd3bff840e0dc65a564d08296ccc7bffd851d733fb100bb77b949f844a7b138"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_troffer_Metallic_512.png",
+      "bytes": 9842,
+      "sha256": "f53d088cd0d7d6dae50636e135bf696f862c5e7d47584b3ccca444c4565a7969"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_troffer_Normal_512.png",
+      "bytes": 348903,
+      "sha256": "118b25df4c2efcc2092d0c545e281e62fd2c5a8603ace984e248d80183029a27"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_troffer_ORM_512.png",
+      "bytes": 185309,
+      "sha256": "49560c3f2ec5b85d4e3188066cb154cf40fbe0effa794ad5d85156dac0ca439c"
+    },
+    {
+      "path": "02_TrimSheet/tiles_512/T_Trim_troffer_Roughness_512.png",
+      "bytes": 66596,
+      "sha256": "32d940b1e3f9d5df8af40025f21492daba499eb6035887c7e19e4812bb35d051"
+    },
+    {
+      "path": "02_TrimSheet/master_4096x2048/T_OfficeTrim_AO_4096x2048.png",
+      "bytes": 4452205,
+      "sha256": "630bc570ff78b31ef95df2688f0f0357f323dff080c6d1566745f04f3741e971"
+    },
+    {
+      "path": "02_TrimSheet/master_4096x2048/T_OfficeTrim_Albedo_4096x2048.png",
+      "bytes": 4337426,
+      "sha256": "46409d1b1be20acd41684f405fe89c7a27a0b6560ba8e48cd9aff069ba83872e"
+    },
+    {
+      "path": "02_TrimSheet/master_4096x2048/T_OfficeTrim_Curvature_4096x2048.png",
+      "bytes": 3838370,
+      "sha256": "dfe934bdca7b1e0852c81c30fb28e2325e10e8ae5c81818e26e34bfc52b95494"
+    },
+    {
+      "path": "02_TrimSheet/master_4096x2048/T_OfficeTrim_Height_4096x2048.png",
+      "bytes": 1631809,
+      "sha256": "73ae8fb09ccd6457dc28eb7427f6d12057ea29399b8e13810ccdfc2cd2ceb590"
+    },
+    {
+      "path": "02_TrimSheet/master_4096x2048/T_OfficeTrim_Metallic_4096x2048.png",
+      "bytes": 269321,
+      "sha256": "2c16d7cf5d6be25fba675c0258a281ecfa8b401f6c4d150d4346fb0b01317113"
+    },
+    {
+      "path": "02_TrimSheet/master_4096x2048/T_OfficeTrim_Normal_4096x2048.png",
+      "bytes": 9671070,
+      "sha256": "143ea1007fe19c90a3de3c6542f080db34603f539a192c7c518a45bf25a27fba"
+    },
+    {
+      "path": "02_TrimSheet/master_4096x2048/T_OfficeTrim_ORM_4096x2048.png",
+      "bytes": 4830931,
+      "sha256": "3709e6087b898eafa0b66d5ec10e01df1ae01466b610330f4e12419fd704b9c4"
+    },
+    {
+      "path": "02_TrimSheet/master_4096x2048/T_OfficeTrim_Roughness_4096x2048.png",
+      "bytes": 1887385,
+      "sha256": "e437b6af08283f530b1d7d0dcb58de6a92b9ce800a43226cc86c3396c652e66e"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Blinds_512.png",
+      "bytes": 264100,
+      "sha256": "8de364d723a7a47f80a2aec6342792992c91aad2dc92019feda43524e47a423b"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_CarpetFloor_512.png",
+      "bytes": 401230,
+      "sha256": "f8c5b897eb522eaffd83da309f4f570e50c07760b2b6b61080552a35ef573612"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Concrete_512.png",
+      "bytes": 273449,
+      "sha256": "300b2430b0b026a923f19b45dff9f8090de23f10255b020092807a18e71da8f8"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Facade_512.png",
+      "bytes": 172705,
+      "sha256": "8d83b8be70dab8370feead470dc7378e45261b8d491eed07d9ba3086b695e98a"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Hatch_512.png",
+      "bytes": 242427,
+      "sha256": "534a65b6ce045af27c5909556ae224da3b20ead9e3b21ade19a725768953b3f5"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_MetalPanel_512.png",
+      "bytes": 128560,
+      "sha256": "ebd4ab3b6c7ee1a8b9cade6d26f5bb148d4efa7d8ab57758f7a85541fc489673"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_OfficeWall_512.png",
+      "bytes": 323805,
+      "sha256": "f96be208be35a4dda41702509ae6534be00392d736b6771f392d1ca7f9f0690f"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_WoodLaminate_512.png",
+      "bytes": 576058,
+      "sha256": "086d2b6a9f0b0232df94f8cfe82bb7ba252eb20bc83201f10abc04d51c060efd"
+    },
+    {
+      "path": "03_TilableTextures/seam_report.json",
+      "bytes": 15525,
+      "sha256": "526ca188ee2dbf0fe69d227ab34910fe1abf5d548dfe8857065ee97395b75361"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Blinds_PBR/T_Tilable_Blinds_AO_1024.png",
+      "bytes": 397652,
+      "sha256": "4595405574e65d3790b77fa17872126ef03a2bc5fd5d292e610e1dc07206b328"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Blinds_PBR/T_Tilable_Blinds_AO_512.png",
+      "bytes": 106036,
+      "sha256": "39a55d986848d91a44a125b8fad7fe28179f418755994ae76016bb45d331bdc1"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Blinds_PBR/T_Tilable_Blinds_BaseColor_1024.png",
+      "bytes": 785757,
+      "sha256": "6e03e988c47d37405c7f125e6571fcf3dd091b8d72e1921dcee3851db89b7ec7"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Blinds_PBR/T_Tilable_Blinds_BaseColor_512.png",
+      "bytes": 264100,
+      "sha256": "8de364d723a7a47f80a2aec6342792992c91aad2dc92019feda43524e47a423b"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Blinds_PBR/T_Tilable_Blinds_Curvature_1024.png",
+      "bytes": 665437,
+      "sha256": "ad8171edd287d7027c8f7fdfddbeafb59ef5ffe9602e5ff5231783bcaef480a3"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Blinds_PBR/T_Tilable_Blinds_Curvature_512.png",
+      "bytes": 218329,
+      "sha256": "3c71687f8fd7fdf52820aea5f8dec6f75a89bfe3d6a8bdca5ef65a140147763b"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Blinds_PBR/T_Tilable_Blinds_Height_1024.png",
+      "bytes": 314369,
+      "sha256": "43996d54ef0f9c81161d87eaffc35e295e661d9d1da3de8311ec848c1bf651e9"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Blinds_PBR/T_Tilable_Blinds_Height_512.png",
+      "bytes": 116784,
+      "sha256": "0ea245693c3a8150bb4d963862c6047f99699196433ff31c68cdf38f2b32f7b4"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Blinds_PBR/T_Tilable_Blinds_Metallic_1024.png",
+      "bytes": 31915,
+      "sha256": "56aee9fc425413f0b1a6f1f0dc603354b3f17e8837a24e2e7451dba82b8df25c"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Blinds_PBR/T_Tilable_Blinds_Metallic_512.png",
+      "bytes": 13989,
+      "sha256": "9e7f018d6615fc2ca2c8e3bb6f1ad8ef3d87dbd034c8e525e2994b7bfb4994d0"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Blinds_PBR/T_Tilable_Blinds_Normal_1024.png",
+      "bytes": 1366568,
+      "sha256": "3eec583611d690478eda777c9a52de193feca1ac2fc5520a266c05a2d987eaaa"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Blinds_PBR/T_Tilable_Blinds_Normal_512.png",
+      "bytes": 391985,
+      "sha256": "64e9d09b94b771f521cd734850deef719bfd6805968c03bbb9c59c6f636c92b5"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Blinds_PBR/T_Tilable_Blinds_ORM_1024.png",
+      "bytes": 422510,
+      "sha256": "6c7fb36641ac72204563bda5f37f21707775a4996750f1eece7dd63c989c414b"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Blinds_PBR/T_Tilable_Blinds_ORM_512.png",
+      "bytes": 123427,
+      "sha256": "e611208e44913bceb997df902129055810dc4369d782a8ced085f8999a3442e2"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Blinds_PBR/T_Tilable_Blinds_Roughness_1024.png",
+      "bytes": 78799,
+      "sha256": "611df22f8feb5b457eb3cd58a52d2f2e21be071cbf62a55c87b78e586c1d17fe"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Blinds_PBR/T_Tilable_Blinds_Roughness_512.png",
+      "bytes": 32346,
+      "sha256": "0a45e9cb2bfb4e0512fe4b3a0f8e236a7015b350b9a4fd0c075371542ffa040f"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Concrete_PBR/T_Tilable_Concrete_AO_1024.png",
+      "bytes": 798986,
+      "sha256": "cf52b558a979269293c72c985f741d2401cee18d55458207b81680ffd8f641fc"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Concrete_PBR/T_Tilable_Concrete_AO_512.png",
+      "bytes": 261524,
+      "sha256": "8f3605de505722efe18eace6e52e61c97de19957b5135d4808c72c2cbf8d895a"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Concrete_PBR/T_Tilable_Concrete_BaseColor_1024.png",
+      "bytes": 807294,
+      "sha256": "5f8530490b518d9ee386e9256ca9917ccea038d515dfdccc8a709b8e994db4f9"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Concrete_PBR/T_Tilable_Concrete_BaseColor_512.png",
+      "bytes": 273449,
+      "sha256": "300b2430b0b026a923f19b45dff9f8090de23f10255b020092807a18e71da8f8"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Concrete_PBR/T_Tilable_Concrete_Curvature_1024.png",
+      "bytes": 713945,
+      "sha256": "9bab8b35f91c2d0c10314a730b570bfbfc105e6819cdc798afd4edbe6036af03"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Concrete_PBR/T_Tilable_Concrete_Curvature_512.png",
+      "bytes": 261040,
+      "sha256": "845acd8df4ad38597a9b1194da7d29b1956f32a017f4ea0dea9917bf954edcb3"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Concrete_PBR/T_Tilable_Concrete_Height_1024.png",
+      "bytes": 343444,
+      "sha256": "d3c79e6804685a8ce38dbc0b782e5080d1cf33e1e225d079b11d09fc8cf25aee"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Concrete_PBR/T_Tilable_Concrete_Height_512.png",
+      "bytes": 126556,
+      "sha256": "ee4c6f13c8891e37a8681c0e766a7bc6db7f6e16e790b458376232401ab280ea"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Concrete_PBR/T_Tilable_Concrete_Metallic_1024.png",
+      "bytes": 4545,
+      "sha256": "083cec6b8416976ba827e0664474e636b5ef8228cfcebdd6664b0b0744101ca3"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Concrete_PBR/T_Tilable_Concrete_Metallic_512.png",
+      "bytes": 1489,
+      "sha256": "78fc29ba35c6e117ee1f2581e46cec8fff75ad8067eaddf49dfb0bd782b56cb6"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Concrete_PBR/T_Tilable_Concrete_Normal_1024.png",
+      "bytes": 1691983,
+      "sha256": "b29323bdf5fb720e6ec7fc548f0c9ebcc12c12315d19569ec0f5971327f74781"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Concrete_PBR/T_Tilable_Concrete_Normal_512.png",
+      "bytes": 487458,
+      "sha256": "28d1f5228755c7b44e4487c39f1e2fdcc6bab6ab9919662f558ae9956feb94a5"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Concrete_PBR/T_Tilable_Concrete_ORM_1024.png",
+      "bytes": 872734,
+      "sha256": "7670cebddc2d069bb9315ee556b980607d0c84147028abc39c6dfdab6f9c2c5f"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Concrete_PBR/T_Tilable_Concrete_ORM_512.png",
+      "bytes": 297008,
+      "sha256": "ba3722704fd26f26fb230b42e1ea19455d25ddaeda75b917633c42d30a562afd"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Concrete_PBR/T_Tilable_Concrete_Roughness_1024.png",
+      "bytes": 333351,
+      "sha256": "6b9f08379d72a0785c355ce65c5d51fd838323c875c65991677515902d391d0f"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Concrete_PBR/T_Tilable_Concrete_Roughness_512.png",
+      "bytes": 123703,
+      "sha256": "f6213b6d89fd0ec50f391d0041a3e6f7518c0770458699eaeb64b80544cda0ce"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Facade_PBR/T_Tilable_Facade_AO_1024.png",
+      "bytes": 336175,
+      "sha256": "02652fbe3a8e91617f95c2e92127e93745417606dd96813be91375121c75636d"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Facade_PBR/T_Tilable_Facade_AO_512.png",
+      "bytes": 101007,
+      "sha256": "17db91ead837d182c43f85b6ebffe8cd0b365a8a288601b068cf3062531e7264"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Facade_PBR/T_Tilable_Facade_BaseColor_1024.png",
+      "bytes": 479832,
+      "sha256": "ffafbe7b4424ab59a54e53cf7fff040b48aa7297357811e1081bb1560b306c33"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Facade_PBR/T_Tilable_Facade_BaseColor_512.png",
+      "bytes": 172705,
+      "sha256": "8d83b8be70dab8370feead470dc7378e45261b8d491eed07d9ba3086b695e98a"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Facade_PBR/T_Tilable_Facade_Curvature_1024.png",
+      "bytes": 432102,
+      "sha256": "f358c502e444f3e11521c119fa510582ee248cf2ad6ac1bc1e16d1caa0a731ec"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Facade_PBR/T_Tilable_Facade_Curvature_512.png",
+      "bytes": 172077,
+      "sha256": "8be6f0d98cb5036a3738be736387ed03b78fd39daf769077cb2bedc0a0427bae"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Facade_PBR/T_Tilable_Facade_Height_1024.png",
+      "bytes": 192352,
+      "sha256": "60dd114ab96cc16ec5654bf3db4dc7e59760618e04e174c751cbf6394ef51d83"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Facade_PBR/T_Tilable_Facade_Height_512.png",
+      "bytes": 75039,
+      "sha256": "55436ae9e62bd5307325f912ed25a0190d1916a80289cb0fea7ea7916403c767"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Facade_PBR/T_Tilable_Facade_Metallic_1024.png",
+      "bytes": 13918,
+      "sha256": "4a62ff20fb30065d05096319348b86f3984d29c3987f02816bec2f6935c88d94"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Facade_PBR/T_Tilable_Facade_Metallic_512.png",
+      "bytes": 10711,
+      "sha256": "96cf183d782e85dd2f6793f93412c5ce479618b8499adedb722f2ec99e3d5da1"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Facade_PBR/T_Tilable_Facade_Normal_1024.png",
+      "bytes": 960363,
+      "sha256": "db87be56f65a8b53eaecbaccdb3e18213dd4e8ecc9eaeebd2d7955f3ef6e84a8"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Facade_PBR/T_Tilable_Facade_Normal_512.png",
+      "bytes": 274395,
+      "sha256": "76adf8bb1526a76d1576135b27426129659cb098b268ade9257fb7b57ffbd01b"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Facade_PBR/T_Tilable_Facade_ORM_1024.png",
+      "bytes": 578765,
+      "sha256": "1039c6e148cabb9ea9cd86137cdf09945ac85ad0a093a49ad715d5544019c553"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Facade_PBR/T_Tilable_Facade_ORM_512.png",
+      "bytes": 189574,
+      "sha256": "8069fc8531c017373d2ac907f3c5e3a5e8de59ed28bd67f5d962ffdb26745e6c"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Facade_PBR/T_Tilable_Facade_Roughness_1024.png",
+      "bytes": 308955,
+      "sha256": "392fab6d6cc38d9d39047076fbf5c1a4fae34629ae680effde9d23735cac28f9"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Facade_PBR/T_Tilable_Facade_Roughness_512.png",
+      "bytes": 118102,
+      "sha256": "aa4c572e88528ae2d486e5d0f008ba6fffcaceeb8a3d903d9d1eff070b1df8fa"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Hatch_PBR/T_Tilable_Hatch_AO_1024.png",
+      "bytes": 644512,
+      "sha256": "12baf9572e614e8f602cc8fd16e0ee505479b3363df5b2df75701e84bbedd357"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Hatch_PBR/T_Tilable_Hatch_AO_512.png",
+      "bytes": 209879,
+      "sha256": "4ee4c23cd1a3f324d377ed1a5494eb4fdb13a7a1d374e511ba1f44de3910cc6f"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Hatch_PBR/T_Tilable_Hatch_BaseColor_1024.png",
+      "bytes": 739903,
+      "sha256": "aca47f388529ad0bc9dfa1a602bb8e4b87748daa125677b3368e223e6af0b820"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Hatch_PBR/T_Tilable_Hatch_BaseColor_512.png",
+      "bytes": 242427,
+      "sha256": "534a65b6ce045af27c5909556ae224da3b20ead9e3b21ade19a725768953b3f5"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Hatch_PBR/T_Tilable_Hatch_Curvature_1024.png",
+      "bytes": 727726,
+      "sha256": "513f7db4efd64aadd1f7c8cfa6bf5a562616ffe6704278326db4dce596077bca"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Hatch_PBR/T_Tilable_Hatch_Curvature_512.png",
+      "bytes": 256066,
+      "sha256": "5433ceeb2f1262380e35aa83dc8b81ffc72fe0bb0bf7662f2d98fe57b4c18a77"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Hatch_PBR/T_Tilable_Hatch_Height_1024.png",
+      "bytes": 406987,
+      "sha256": "f1aa493e0de737c2f15327310224268c14b48a5be5d170258bdd446a370be8f8"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Hatch_PBR/T_Tilable_Hatch_Height_512.png",
+      "bytes": 146686,
+      "sha256": "cc3cab3e9531487b77f6f7387495c9741b971208f3a1e69ed9611128688dbbcb"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Hatch_PBR/T_Tilable_Hatch_Metallic_1024.png",
+      "bytes": 5335,
+      "sha256": "869fd1c0eb6a7350eae078fe6f9802b0addf1a27afbaa8ec209883fff471b852"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Hatch_PBR/T_Tilable_Hatch_Metallic_512.png",
+      "bytes": 1876,
+      "sha256": "7a2038e9347dfded12ff24bfd479928f927ae280731bf50aa0ed2c78dec417c2"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Hatch_PBR/T_Tilable_Hatch_Normal_1024.png",
+      "bytes": 1776846,
+      "sha256": "614391839b784a0e527ffb4e37181c8d7cc8b3e9cf8f376b7e9bc3302830c272"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Hatch_PBR/T_Tilable_Hatch_Normal_512.png",
+      "bytes": 481296,
+      "sha256": "ceee403c4683e48bc5b5307c1d87f2af0705f7ab0685d993c3ea38e8d19eae4a"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Hatch_PBR/T_Tilable_Hatch_ORM_1024.png",
+      "bytes": 574443,
+      "sha256": "10c373f78c5ebb957eb1fcd521a420219becbae22266da2eec3d8d9c9bb7fdbe"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Hatch_PBR/T_Tilable_Hatch_ORM_512.png",
+      "bytes": 174800,
+      "sha256": "6a2e597e465a27a8c9b0bfe29e918a557689b1553141d7223e0ca9c0f6ec6cec"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Hatch_PBR/T_Tilable_Hatch_Roughness_1024.png",
+      "bytes": 63600,
+      "sha256": "37324b48795fd5345f7584607a002b59d5261a80a470a7afca507f8772cb95de"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_Hatch_PBR/T_Tilable_Hatch_Roughness_512.png",
+      "bytes": 26268,
+      "sha256": "9bf99d88209e44f8b850fa75c89afacc091c30440d38b06eb2738f0c121fa1ca"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_MetalPanel_PBR/T_Tilable_MetalPanel_AO_1024.png",
+      "bytes": 301463,
+      "sha256": "6eb55d8c314b950fddfcc5d48c9e4379f8d98970931a63288f4c2b2240f5b2fe"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_MetalPanel_PBR/T_Tilable_MetalPanel_AO_512.png",
+      "bytes": 64427,
+      "sha256": "6e75a235475047500246e0efb541fa0329c32fbcc69b4c1bcf72f53274c95a51"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_MetalPanel_PBR/T_Tilable_MetalPanel_BaseColor_1024.png",
+      "bytes": 429391,
+      "sha256": "ece7d1d61b293490a69de7da788c43e590ba50fbe916b100124e648d31a04eb9"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_MetalPanel_PBR/T_Tilable_MetalPanel_BaseColor_512.png",
+      "bytes": 128560,
+      "sha256": "ebd4ab3b6c7ee1a8b9cade6d26f5bb148d4efa7d8ab57758f7a85541fc489673"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_MetalPanel_PBR/T_Tilable_MetalPanel_Curvature_1024.png",
+      "bytes": 365105,
+      "sha256": "74a4a3c77a988450b2eaa74043ffcec2a6fbe75a51ffbbea4144e6f1bd6f8628"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_MetalPanel_PBR/T_Tilable_MetalPanel_Curvature_512.png",
+      "bytes": 131848,
+      "sha256": "bec32c28bff46d262319711640b6601956772b54fafb08405735b2f95244ad92"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_MetalPanel_PBR/T_Tilable_MetalPanel_Height_1024.png",
+      "bytes": 128029,
+      "sha256": "0a64561d0c021a52ae6126f503380c3c7f2b8ffb6cf257efc1d082cbe24a5175"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_MetalPanel_PBR/T_Tilable_MetalPanel_Height_512.png",
+      "bytes": 48179,
+      "sha256": "a58252d7076271a298ded31ca7b11fc38d4ac355632211ec646c7e988e53e474"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_MetalPanel_PBR/T_Tilable_MetalPanel_Metallic_1024.png",
+      "bytes": 4673,
+      "sha256": "dadaf7e00de2034524fac03bcea60d86801a542416dc49d6422f8b839967f639"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_MetalPanel_PBR/T_Tilable_MetalPanel_Metallic_512.png",
+      "bytes": 1562,
+      "sha256": "8e24d92e53abe75123e870c24d944447cce25247c81e46ed6a16814dcf6646b4"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_MetalPanel_PBR/T_Tilable_MetalPanel_Normal_1024.png",
+      "bytes": 972155,
+      "sha256": "7158a217fcdbc4ce4ddfeb360155bd71882ee569d782157206276c05e6ff385c"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_MetalPanel_PBR/T_Tilable_MetalPanel_Normal_512.png",
+      "bytes": 251068,
+      "sha256": "70f416e89dbef4374b53e265da66ca79f4875f7594bccca97dd2df1a4a92bda6"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_MetalPanel_PBR/T_Tilable_MetalPanel_ORM_1024.png",
+      "bytes": 426106,
+      "sha256": "c7e855968faefa659aaacfdfc1e72c5100c21932e03322231fb062f3ed109f9e"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_MetalPanel_PBR/T_Tilable_MetalPanel_ORM_512.png",
+      "bytes": 110917,
+      "sha256": "ed21dcb0ddb1fc84c8bc5ba31bfd30c41a03327d42724acc7c8bb2433523c53d"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_MetalPanel_PBR/T_Tilable_MetalPanel_Roughness_1024.png",
+      "bytes": 197759,
+      "sha256": "928e76482f95e272340e753adb42d8dc39158862b287a33895dc3c83c931fba4"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_MetalPanel_PBR/T_Tilable_MetalPanel_Roughness_512.png",
+      "bytes": 67852,
+      "sha256": "d8093460a5c42bcd627ca02d92feb1c4096fcd4b634c7ef97384451590d839c5"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_CarpetFloor_PBR/T_Tilable_CarpetFloor_AO_1024.png",
+      "bytes": 1247341,
+      "sha256": "e0f42804c7114d71f831d33470defcb0f2beb5b9759f415aee56add63f8ed114"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_CarpetFloor_PBR/T_Tilable_CarpetFloor_AO_512.png",
+      "bytes": 399595,
+      "sha256": "ca1e6cb6fabe2fc280435ac735d958ec12f11e2255e5c5986bf46b9398052ec6"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_CarpetFloor_PBR/T_Tilable_CarpetFloor_BaseColor_1024.png",
+      "bytes": 1159184,
+      "sha256": "d2599da119372bb20a407240c5e2d4beac195a1441d1a8ebf9fab37b523cd9a1"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_CarpetFloor_PBR/T_Tilable_CarpetFloor_BaseColor_512.png",
+      "bytes": 401230,
+      "sha256": "f8c5b897eb522eaffd83da309f4f570e50c07760b2b6b61080552a35ef573612"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_CarpetFloor_PBR/T_Tilable_CarpetFloor_Curvature_1024.png",
+      "bytes": 1030971,
+      "sha256": "b5ff52c2a9d2ab4455424d3e56d3c6d4755cf7d619e31d87c86f3d8dac8bbbe2"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_CarpetFloor_PBR/T_Tilable_CarpetFloor_Curvature_512.png",
+      "bytes": 454755,
+      "sha256": "a3cba2e70599d4353a07445537cef402614bc773aec7485a5d101396c76cd5fb"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_CarpetFloor_PBR/T_Tilable_CarpetFloor_Height_1024.png",
+      "bytes": 596318,
+      "sha256": "466e7817fd40dbbd85918334726170325c29584241538b3b586f738073f196a4"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_CarpetFloor_PBR/T_Tilable_CarpetFloor_Height_512.png",
+      "bytes": 215558,
+      "sha256": "f04603ccb66d8ac8e9ef6a6219306a93836efcc13671a46ba0e2910a07b8ed25"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_CarpetFloor_PBR/T_Tilable_CarpetFloor_Metallic_1024.png",
+      "bytes": 3129,
+      "sha256": "87658cfaf8e619d7f15fe7179e5874c38663d3254302928d9c1e7eaacee0a9f4"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_CarpetFloor_PBR/T_Tilable_CarpetFloor_Metallic_512.png",
+      "bytes": 842,
+      "sha256": "57b5e40e68e97c62837b9d0a5a8f7aac22471c1633897f9bcf4fa62864ecc974"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_CarpetFloor_PBR/T_Tilable_CarpetFloor_Normal_1024.png",
+      "bytes": 2435797,
+      "sha256": "2fd61d7c4986fc33b45ad6c8ff9dfe78fe090ad832e706139dee1b227b263605"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_CarpetFloor_PBR/T_Tilable_CarpetFloor_Normal_512.png",
+      "bytes": 686116,
+      "sha256": "c454495286eba63a01ec6c3a6ee4acc741043cc5b470842b6e62c91cfed8bd58"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_CarpetFloor_PBR/T_Tilable_CarpetFloor_ORM_1024.png",
+      "bytes": 1218821,
+      "sha256": "d8e03108dc75ef81e0aa6624a56ad63d12f77beefd954a881ab15ab05e0c2926"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_CarpetFloor_PBR/T_Tilable_CarpetFloor_ORM_512.png",
+      "bytes": 387884,
+      "sha256": "cbc9516d83515efa1fe55748d386078d4093f628891de53dfea9774adf89cf74"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_CarpetFloor_PBR/T_Tilable_CarpetFloor_Roughness_1024.png",
+      "bytes": 377984,
+      "sha256": "658c529b3e1af6b18eb2e5d016612b92c8b882c928d1182ad0e39ec87ab9a5e5"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_CarpetFloor_PBR/T_Tilable_CarpetFloor_Roughness_512.png",
+      "bytes": 139642,
+      "sha256": "5738cd7ba12dd6d4e6ca36069287315b5e4a34fddd86c31a96ee94fe62479640"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_OfficeWall_PBR/T_Tilable_OfficeWall_AO_1024.png",
+      "bytes": 1227937,
+      "sha256": "164223d1f1a8204b978ff9abb086039388f5a61a205b57f3e5a620f7be59add1"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_OfficeWall_PBR/T_Tilable_OfficeWall_AO_512.png",
+      "bytes": 456643,
+      "sha256": "a15d6225114d9b1b978ae1881125b5da38a0e5bbe98980f2787b865b34d87ffd"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_OfficeWall_PBR/T_Tilable_OfficeWall_BaseColor_1024.png",
+      "bytes": 982635,
+      "sha256": "e166f7479b44c618442fc7577330cdc7ce45c78d12063139b38088d599cc6f86"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_OfficeWall_PBR/T_Tilable_OfficeWall_BaseColor_512.png",
+      "bytes": 323805,
+      "sha256": "f96be208be35a4dda41702509ae6534be00392d736b6771f392d1ca7f9f0690f"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_OfficeWall_PBR/T_Tilable_OfficeWall_Curvature_1024.png",
+      "bytes": 959184,
+      "sha256": "a2fe996f4e82044d3116e3aa0bc28e2e3efd8d5ede14c5c57e0b2292434e6d09"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_OfficeWall_PBR/T_Tilable_OfficeWall_Curvature_512.png",
+      "bytes": 373623,
+      "sha256": "3f0386d7e3c90651cf500831853df1f2d11f914ecf2c9ed9ba18794ac87bf148"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_OfficeWall_PBR/T_Tilable_OfficeWall_Height_1024.png",
+      "bytes": 520236,
+      "sha256": "fee346ecf9ddebb110d589f82f7d76b0cb405e84bac64559103871694a2954d5"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_OfficeWall_PBR/T_Tilable_OfficeWall_Height_512.png",
+      "bytes": 184779,
+      "sha256": "12ad2b501c4c6c12f10a052d1995ed05fca4b5fe11797ba0e5f4d7241dce7b6d"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_OfficeWall_PBR/T_Tilable_OfficeWall_Metallic_1024.png",
+      "bytes": 3129,
+      "sha256": "87658cfaf8e619d7f15fe7179e5874c38663d3254302928d9c1e7eaacee0a9f4"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_OfficeWall_PBR/T_Tilable_OfficeWall_Metallic_512.png",
+      "bytes": 842,
+      "sha256": "57b5e40e68e97c62837b9d0a5a8f7aac22471c1633897f9bcf4fa62864ecc974"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_OfficeWall_PBR/T_Tilable_OfficeWall_Normal_1024.png",
+      "bytes": 2484653,
+      "sha256": "b44dc7a3da5b3e1f2857d50e60edc0c76fc835e88c4f9a7944a5c889fa07e453"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_OfficeWall_PBR/T_Tilable_OfficeWall_Normal_512.png",
+      "bytes": 654070,
+      "sha256": "8b49534b5b8daf8bd8df5c076729d5c27e4cfe30e625a009673c37113c4f4459"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_OfficeWall_PBR/T_Tilable_OfficeWall_ORM_1024.png",
+      "bytes": 1356601,
+      "sha256": "2ce39158080597373212fb1386b68b689e023a278b38a59b74d5ea0f5c20539a"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_OfficeWall_PBR/T_Tilable_OfficeWall_ORM_512.png",
+      "bytes": 436636,
+      "sha256": "6e842150f711fdaf185b8290b7619b2d37d2f008a70ec933b7a9a2dc1ba0a4b3"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_OfficeWall_PBR/T_Tilable_OfficeWall_Roughness_1024.png",
+      "bytes": 470337,
+      "sha256": "c297bd60b847451402d1ff7679849651e6be2232b60cf044b30e488059571e19"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_OfficeWall_PBR/T_Tilable_OfficeWall_Roughness_512.png",
+      "bytes": 170164,
+      "sha256": "37a9e834c7733d4853bb12be1f021167092089064bcdd37c711ff7137a3c93cd"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_WoodLaminate_PBR/T_Tilable_WoodLaminate_AO_1024.png",
+      "bytes": 1541249,
+      "sha256": "734517409d3728fcdb7d3509812292ae603f1766b638a8bf93ac80f3566b7e41"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_WoodLaminate_PBR/T_Tilable_WoodLaminate_AO_512.png",
+      "bytes": 535126,
+      "sha256": "812379156a2d5ce482f00a3bcd64e7b352919af0d4afb84acb18127c4c5e4168"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_WoodLaminate_PBR/T_Tilable_WoodLaminate_BaseColor_1024.png",
+      "bytes": 1784215,
+      "sha256": "9cd589794d1e131b3ce0dba0d41ebaa3bd27583dcdd463b0866782731351da63"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_WoodLaminate_PBR/T_Tilable_WoodLaminate_BaseColor_512.png",
+      "bytes": 576058,
+      "sha256": "086d2b6a9f0b0232df94f8cfe82bb7ba252eb20bc83201f10abc04d51c060efd"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_WoodLaminate_PBR/T_Tilable_WoodLaminate_Curvature_1024.png",
+      "bytes": 1295580,
+      "sha256": "d2ecdfdcbc18d634d85c67b518f91719d062a87dd9571e84d9714d99a9742956"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_WoodLaminate_PBR/T_Tilable_WoodLaminate_Curvature_512.png",
+      "bytes": 519670,
+      "sha256": "a82f6c0d16f00a7ca0f04d17e794df8113dd12e9441fe42c7f663e6b6971190e"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_WoodLaminate_PBR/T_Tilable_WoodLaminate_Height_1024.png",
+      "bytes": 654312,
+      "sha256": "a3de8ac05807c521a3ddd6c466c2479d7b2148ce1194ea57d43b73c4d2b76b44"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_WoodLaminate_PBR/T_Tilable_WoodLaminate_Height_512.png",
+      "bytes": 214964,
+      "sha256": "d157adbfd6c9f35acd72a4e040496f62ee966bebb3eb1f79a264106866f58aa1"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_WoodLaminate_PBR/T_Tilable_WoodLaminate_Metallic_1024.png",
+      "bytes": 3129,
+      "sha256": "87658cfaf8e619d7f15fe7179e5874c38663d3254302928d9c1e7eaacee0a9f4"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_WoodLaminate_PBR/T_Tilable_WoodLaminate_Metallic_512.png",
+      "bytes": 842,
+      "sha256": "57b5e40e68e97c62837b9d0a5a8f7aac22471c1633897f9bcf4fa62864ecc974"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_WoodLaminate_PBR/T_Tilable_WoodLaminate_Normal_1024.png",
+      "bytes": 2843653,
+      "sha256": "3c46ba8adb40fcef76cef74d76f7f310ccc17771062e06e1503bc0cbdfe788dc"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_WoodLaminate_PBR/T_Tilable_WoodLaminate_Normal_512.png",
+      "bytes": 721283,
+      "sha256": "eb62653ff5b57d7268b5892921cbd99cc80e62d8c97c0fcc15462e2c0f281686"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_WoodLaminate_PBR/T_Tilable_WoodLaminate_ORM_1024.png",
+      "bytes": 1774735,
+      "sha256": "7eb79d5d2b99a53a307e7c991eadb744ce899c383017a25dcae3b56fb47a65a2"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_WoodLaminate_PBR/T_Tilable_WoodLaminate_ORM_512.png",
+      "bytes": 553813,
+      "sha256": "1ee6266d2cfe07c4726781944dc89a05635508070363e7f76df5be2692735cb1"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_WoodLaminate_PBR/T_Tilable_WoodLaminate_Roughness_1024.png",
+      "bytes": 928707,
+      "sha256": "108cf1c1c5d5602e37e4f2dd81dbc7f15bc084e507a46b50ae086ab8eafb95ee"
+    },
+    {
+      "path": "03_TilableTextures/T_Tilable_WoodLaminate_PBR/T_Tilable_WoodLaminate_Roughness_512.png",
+      "bytes": 291210,
+      "sha256": "a198a16ecc11b845b69df46a7394fe36ef52debbba751dafdc45374cb31feef9"
+    },
+    {
+      "path": "04_MayaTest/L_Scene62-66_BS_v28_cad_pass.mb",
+      "bytes": 4370524,
+      "sha256": "746c8a2d9bccfe0b0d18ca56e1a35d5333193807fb82d552c2f996626296834a"
+    },
+    {
+      "path": "05_CanonDriveIndex/canon_index.json",
+      "bytes": 65713,
+      "sha256": "0633208e20a05a137dc1760eb8e936fc9b8d5e32a3fa379e867e214ba96971d8"
+    },
+    {
+      "path": "06_ContactSheets_and_Pipeline/Film304_3x3_Tiling_Proof_Sheet.png",
+      "bytes": 1008214,
+      "sha256": "3331521883b346e606cc9d859a6941e6226e571f0d80ca924c7bfbf2a07a585f"
+    },
+    {
+      "path": "06_ContactSheets_and_Pipeline/Film304_OfficeTrimSheet_ContactSheet.png",
+      "bytes": 2641552,
+      "sha256": "f5382274fd2506fae03d12fc048ce3ba47cf14cc131e3f4e456e8b7f659e7b1d"
+    },
+    {
+      "path": "06_ContactSheets_and_Pipeline/Film304_Tilable_PBR_Suite_ContactSheet.png",
+      "bytes": 5737321,
+      "sha256": "e8380682fc6a32597553427f9ecd87c24a8ef14708b4e3a3b691bc2e1465da56"
+    },
+    {
+      "path": "06_ContactSheets_and_Pipeline/film304_numpy_pbr_pipeline.py",
+      "bytes": 73790,
+      "sha256": "53179268eb512f8d10d21bc752625d14fa953f949ac468751bf0de9e1783f16e"
+    },
+    {
+      "path": "07_Brutalist_Shot_Setup/Film304_Brutalist_Shot_AOV_Breakdown.png",
+      "bytes": 3836330,
+      "sha256": "bfe14ae2382c5e517c0891c7854391d859a3942bec96649be38a029da1bd3158"
+    },
+    {
+      "path": "07_Brutalist_Shot_Setup/Film304_Brutalist_Shot_Cam0_Wide.png",
+      "bytes": 3119465,
+      "sha256": "9c5cf6ff768e31569b949cf82d0cf43650728354f4a255695fa9c22dd2e91321"
+    },
+    {
+      "path": "07_Brutalist_Shot_Setup/Film304_Brutalist_Shot_Cam1_Detail.png",
+      "bytes": 2889664,
+      "sha256": "43e3dda80204ac1e29fd936ea8e5d8342ee7fb4d49037ae2d181470563566fc3"
+    },
+    {
+      "path": "07_Brutalist_Shot_Setup/brutalist_shader_graph_report.json",
+      "bytes": 9069,
+      "sha256": "fa65fbe7bc6786022b1972f6fac6b437c5f667cb39941f2ac2a104a8c0050fc2"
+    },
+    {
+      "path": "07_Brutalist_Shot_Setup/setup_brutalist_office_shot.py",
+      "bytes": 25434,
+      "sha256": "aa7e2ff55439c1492030c6b95886f0dbb67f850af66287ec0c412495041e11bb"
+    }
+  ]
+}

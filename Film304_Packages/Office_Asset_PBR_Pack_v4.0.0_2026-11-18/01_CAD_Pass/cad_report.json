@@ -1,0 +1,49 @@
+{
+  "room_cm": 2200.0,
+  "ceil_z_cm": 340.0,
+  "wall_thickness_cm": 40.0,
+  "bevel_cm": 0.6,
+  "modules": [
+    {
+      "module": "CAD_FloorSlab",
+      "fbx": "G:\\film-304-toon-spine\\Film304_Packages\\Office_CAD_Pass_2026-11-17\\01_Modules\\CAD_FloorSlab.fbx",
+      "exported": true
+    },
+    {
+      "module": "CAD_WallModule",
+      "fbx": "G:\\film-304-toon-spine\\Film304_Packages\\Office_CAD_Pass_2026-11-17\\01_Modules\\CAD_WallModule.fbx",
+      "exported": true
+    },
+    {
+      "module": "CAD_DoorFrame",
+      "fbx": "G:\\film-304-toon-spine\\Film304_Packages\\Office_CAD_Pass_2026-11-17\\01_Modules\\CAD_DoorFrame.fbx",
+      "exported": true
+    },
+    {
+      "module": "CAD_WindowMullion",
+      "fbx": "G:\\film-304-toon-spine\\Film304_Packages\\Office_CAD_Pass_2026-11-17\\01_Modules\\CAD_WindowMullion.fbx",
+      "exported": true
+    },
+    {
+      "module": "CAD_CeilingBay",
+      "fbx": "G:\\film-304-toon-spine\\Film304_Packages\\Office_CAD_Pass_2026-11-17\\01_Modules\\CAD_CeilingBay.fbx",
+      "exported": true
+    },
+    {
+      "module": "CAD_TrimBase",
+      "fbx": "G:\\film-304-toon-spine\\Film304_Packages\\Office_CAD_Pass_2026-11-17\\01_Modules\\CAD_TrimBase.fbx",
+      "exported": true
+    },
+    {
+      "module": "CAD_TrimPanel",
+      "fbx": "G:\\film-304-toon-spine\\Film304_Packages\\Office_CAD_Pass_2026-11-17\\01_Modules\\CAD_TrimPanel.fbx",
+      "exported": true
+    },
+    {
+      "module": "CAD_TrimMullion",
+      "fbx": "G:\\film-304-toon-spine\\Film304_Packages\\Office_CAD_Pass_2026-11-17\\01_Modules\\CAD_TrimMullion.fbx",
+      "exported": true
+    }
+  ],
+  "parm_errors": []
+}

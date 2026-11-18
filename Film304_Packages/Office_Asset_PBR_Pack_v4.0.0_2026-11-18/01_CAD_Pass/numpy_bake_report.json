@@ -1,0 +1,82 @@
+{
+  "CAD_CeilingBay": {
+    "polygons": 162,
+    "uv_vertices": 84,
+    "curvature_min": 0.3927,
+    "curvature_max": 4.541,
+    "baked_resolution": [
+      1024,
+      1024
+    ]
+  },
+  "CAD_DoorFrame": {
+    "polygons": 216,
+    "uv_vertices": 112,
+    "curvature_min": 0.437,
+    "curvature_max": 6.7215,
+    "baked_resolution": [
+      1024,
+      1024
+    ]
+  },
+  "CAD_FloorSlab": {
+    "polygons": 54,
+    "uv_vertices": 28,
+    "curvature_min": 0.3928,
+    "curvature_max": 20.3815,
+    "baked_resolution": [
+      1024,
+      1024
+    ]
+  },
+  "CAD_TrimBase": {
+    "polygons": 216,
+    "uv_vertices": 112,
+    "curvature_min": 0.3317,
+    "curvature_max": 646.4655,
+    "baked_resolution": [
+      1024,
+      1024
+    ]
+  },
+  "CAD_TrimMullion": {
+    "polygons": 162,
+    "uv_vertices": 84,
+    "curvature_min": 0.3317,
+    "curvature_max": 517.3773,
+    "baked_resolution": [
+      1024,
+      1024
+    ]
+  },
+  "CAD_TrimPanel": {
+    "polygons": 216,
+    "uv_vertices": 112,
+    "curvature_min": 0.2688,
+    "curvature_max": 203.1532,
+    "baked_resolution": [
+      1024,
+      1024
+    ]
+  },
+  "CAD_WallModule": {
+    "polygons": 648,
+    "uv_vertices": 336,
+    "curvature_min": 0.441,
+    "curvature_max": 20.3817,
+    "baked_resolution": [
+      1024,
+      1024
+    ]
+  },
+  "CAD_WindowMullion": {
+    "polygons": 324,
+    "uv_vertices": 168,
+    "curvature_min": 0.513,
+    "curvature_max": 6.4343,
+    "baked_resolution": [
+      1024,
+      1024
+    ]
+  }
+}
