@@ -1,0 +1,99 @@
+{
+  "source": "G:\\film-304-toon-spine\\Tools\\build_office_ceiling.py",
+  "source_sha256": "3a0cedb6e548d664a64224bcfb077cf9a2d179df34eeddba9564ce928fbc1a63",
+  "native_hip": "G:\\film-304-toon-spine\\Saved\\Houdini\\OfficeCeiling_Closeout_20261018_v03\\OfficeCeiling_Converged_v03.hip",
+  "room_cm": 2200,
+  "room_yaw_baked_degrees": -25,
+  "fbx_axis": "Z-up right-handed",
+  "convert_units": false,
+  "convert_axis": false,
+  "reuses_existing_troffers": true,
+  "hvac_source": "G:\\film-304-toon-spine\\Tools\\houdini\\bake_cinematic_cubicle_ceiling.py",
+  "hvac_details": [
+    "two trunk ducts",
+    "cross branches",
+    "joint flanges",
+    "threaded hangers",
+    "conduit runs",
+    "junction boxes"
+  ],
+  "service_aisle_offset_x_cm": 260,
+  "meshes": [
+    {
+      "source_stem": "SM_Houdini_Office_Ceiling_Tiles",
+      "material_class": "Concrete",
+      "points": 3200,
+      "quads": 2400,
+      "inward_faces": 0,
+      "bounds_min_cm": [
+        -1460.2239990234375,
+        -1460.2239990234375,
+        336.70001220703125
+      ],
+      "bounds_max_cm": [
+        1460.2239990234375,
+        1460.2239990234375,
+        338.29998779296875
+      ],
+      "fbx": "G:\\film-304-toon-spine\\Saved\\Houdini\\OfficeCeiling_Closeout_20261018_v03\\SM_Houdini_Office_Ceiling_Tiles.fbx",
+      "fbx_bytes": 44512,
+      "sha256": "75d8cef8fd726fbb05ed347d3acdc77472f767b1f04fdb8118a5ca480734c873"
+    },
+    {
+      "source_stem": "SM_Houdini_Office_Ceiling_Metal",
+      "material_class": "Metal",
+      "points": 1016,
+      "quads": 762,
+      "inward_faces": 0,
+      "bounds_min_cm": [
+        -1462.90625,
+        -1462.90625,
+        299.0
+      ],
+      "bounds_max_cm": [
+        1462.90625,
+        1462.90625,
+        350.0
+      ],
+      "fbx": "G:\\film-304-toon-spine\\Saved\\Houdini\\OfficeCeiling_Closeout_20261018_v03\\SM_Houdini_Office_Ceiling_Metal.fbx",
+      "fbx_bytes": 24320,
+      "sha256": "81a89f1513e5bcf5dfe199b77b3a1e4604ca65e3c6db0d91d6e37414a0b41451"
+    }
+  ],
+  "unreal_import_verified": true,
+  "assembly": [
+    {
+      "actor": "Film_Closeout_Ceiling_Concrete",
+      "asset": "/Game/Meshes/Architecture/Closeout20261018/SM_Houdini_Office_Ceiling_Tiles_Converged_v03.SM_Houdini_Office_Ceiling_Tiles_Converged_v03",
+      "material": "/Game/Materials/Instances/Film304/Scene/Dusk20261018/MI_Dusk_Ceiling",
+      "bounds_origin_cm": [
+        0.0,
+        0.0,
+        337.5
+      ],
+      "bounds_extent_cm": [
+        1460.2239990234375,
+        1460.2239990234375,
+        0.79998779296875
+      ],
+      "sections": 1
+    },
+    {
+      "actor": "Film_Closeout_Ceiling_Metal",
+      "asset": "/Game/Meshes/Architecture/Closeout20261018/SM_Houdini_Office_Ceiling_Metal_Converged_v03.SM_Houdini_Office_Ceiling_Metal_Converged_v03",
+      "material": "/Game/Materials/Instances/Film304/Scene/Dusk20261018/MI_Dusk_Metal",
+      "bounds_origin_cm": [
+        0.0,
+        0.0,
+        324.5
+      ],
+      "bounds_extent_cm": [
+        1462.90625,
+        1462.90625,
+        25.5
+      ],
+      "sections": 1
+    }
+  ],
+  "working_map": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office_Assembly_20261018_v01"
+}

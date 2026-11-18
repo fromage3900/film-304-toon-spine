@@ -1,0 +1,576 @@
+{
+  "world": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office",
+  "actor_count": 219,
+  "dirty_content": [],
+  "dirty_maps": [
+    "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office"
+  ],
+  "actors": [
+    {
+      "label": "Film_Cam_OfficeMedium",
+      "path": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office:PersistentLevel.CineCameraActor_0",
+      "class": "CineCameraActor",
+      "location": "<Struct 'Vector' (0x000001CFB229CCE0) {x: 35.681545, y: -246.601438, z: 99.426611}>",
+      "rotation": "<Struct 'Rotator' (0x000001CFB229CCE0) {pitch: -0.925959, yaw: 108.130102, roll: 0.000000}>",
+      "scale": "<Struct 'Vector' (0x000001CFB229CCE0) {x: 1.000000, y: 1.000000, z: 1.000000}>",
+      "bounds": [
+        "<Struct 'Vector' (0x000001CFB229CC90) {x: 35.681545, y: -246.601438, z: 99.426611}>",
+        "<Struct 'Vector' (0x000001CFB229C7E0) {x: 1010.000000, y: 1010.000000, z: 1010.000000}>"
+      ],
+      "mesh": "/Engine/EditorMeshes/Camera/SM_CineCam.SM_CineCam",
+      "materials": [
+        "/Engine/EditorMaterials/Camera/MI_CineMat_CameraBody.MI_CineMat_CameraBody",
+        "/Engine/EditorMaterials/Camera/MI_CineMat_CamViewFinder.MI_CineMat_CamViewFinder"
+      ]
+    },
+    {
+      "label": "Film_Cam_OfficeWide",
+      "path": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office:PersistentLevel.CineCameraActor_1",
+      "class": "CineCameraActor",
+      "location": "<Struct 'Vector' (0x000001CFB229C7E0) {x: 682.124885, y: -240.843603, z: 103.000000}>",
+      "rotation": "<Struct 'Rotator' (0x000001CFB229C7E0) {pitch: -0.633606, yaw: 160.552971, roll: 0.000000}>",
+      "scale": "<Struct 'Vector' (0x000001CFB229C7E0) {x: 1.000000, y: 1.000000, z: 1.000000}>",
+      "bounds": [
+        "<Struct 'Vector' (0x000001CFB229CCE0) {x: 682.124885, y: -240.843603, z: 103.000000}>",
+        "<Struct 'Vector' (0x000001CFB229C2E0) {x: 1010.000000, y: 1010.000000, z: 1010.000000}>"
+      ],
+      "mesh": "/Engine/EditorMeshes/Camera/SM_CineCam.SM_CineCam",
+      "materials": [
+        "/Engine/EditorMaterials/Camera/MI_CineMat_CameraBody.MI_CineMat_CameraBody",
+        "/Engine/EditorMaterials/Camera/MI_CineMat_CamViewFinder.MI_CineMat_CamViewFinder"
+      ]
+    },
+    {
+      "label": "SESSION_CAM_Cast",
+      "path": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office:PersistentLevel.CineCameraActor_3",
+      "class": "CineCameraActor",
+      "location": "<Struct 'Vector' (0x000001CFB229C2E0) {x: 898.700000, y: -685.600000, z: 184.600000}>",
+      "rotation": "<Struct 'Rotator' (0x000001CFB229C2E0) {pitch: -1.200000, yaw: 130.200003, roll: -0.000000}>",
+      "scale": "<Struct 'Vector' (0x000001CFB229C2E0) {x: 1.000000, y: 1.000000, z: 1.000000}>",
+      "bounds": [
+        "<Struct 'Vector' (0x000001CFB229C7E0) {x: 898.700000, y: -685.600000, z: 184.600000}>",
+        "<Struct 'Vector' (0x000001CFB229C1A0) {x: 1010.000000, y: 1010.000000, z: 1010.000000}>"
+      ],
+      "mesh": "/Engine/EditorMeshes/Camera/SM_CineCam.SM_CineCam",
+      "materials": [
+        "/Engine/EditorMaterials/Camera/MI_CineMat_CameraBody.MI_CineMat_CameraBody",
+        "/Engine/EditorMaterials/Camera/MI_CineMat_CamViewFinder.MI_CineMat_CamViewFinder"
+      ]
+    },
+    {
+      "label": "SESSION_CAM_Verify",
+      "path": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office:PersistentLevel.CineCameraActor_4",
+      "class": "CineCameraActor",
+      "location": "<Struct 'Vector' (0x000001CFB229C1A0) {x: -17.716307, y: -293.100000, z: 116.200111}>",
+      "rotation": "<Struct 'Rotator' (0x000001CFB229C1A0) {pitch: -4.980925, yaw: 94.563120, roll: -0.980998}>",
+      "scale": "<Struct 'Vector' (0x000001CFB229C1A0) {x: 1.000000, y: 1.000000, z: 1.000000}>",
+      "bounds": [
+        "<Struct 'Vector' (0x000001CFB229C2E0) {x: -17.716307, y: -293.100000, z: 116.200111}>",
+        "<Struct 'Vector' (0x000001CFB229C100) {x: 1010.000000, y: 1010.000000, z: 1010.000000}>"
+      ],
+      "mesh": "/Engine/EditorMeshes/Camera/SM_CineCam.SM_CineCam",
+      "materials": [
+        "/Engine/EditorMaterials/Camera/MI_CineMat_CameraBody.MI_CineMat_CameraBody",
+        "/Engine/EditorMaterials/Camera/MI_CineMat_CamViewFinder.MI_CineMat_CamViewFinder"
+      ]
+    },
+    {
+      "label": "Film_Troffer_1_Panel",
+      "path": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office:PersistentLevel.StaticMeshActor_12",
+      "class": "StaticMeshActor",
+      "location": "<Struct 'Vector' (0x000001CFB229C100) {x: 17.672218, y: 30.887900, z: 338.100000}>",
+      "rotation": "<Struct 'Rotator' (0x000001CFB229C100) {pitch: -25.000000, yaw: 0.000000, roll: -0.000000}>",
+      "scale": "<Struct 'Vector' (0x000001CFB229C100) {x: 1.200000, y: 0.600000, z: 0.030000}>",
+      "bounds": [
+        "<Struct 'Vector' (0x000001CFB229C3D0) {x: 17.672218, y: 30.887900, z: 338.100000}>",
+        "<Struct 'Vector' (0x000001CFB229C1A0) {x: 55.012395, y: 30.000000, z: 26.716557}>"
+      ],
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "materials": [
+        "/Game/Materials/Instances/MI_Toon_Office_Troffer.MI_Toon_Office_Troffer"
+      ]
+    },
+    {
+      "label": "Film_Troffer_1_Housing",
+      "path": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office:PersistentLevel.StaticMeshActor_13",
+      "class": "StaticMeshActor",
+      "location": "<Struct 'Vector' (0x000001CFB229C1A0) {x: 17.672218, y: 30.887900, z: 341.100000}>",
+      "rotation": "<Struct 'Rotator' (0x000001CFB229C1A0) {pitch: -25.000000, yaw: 0.000000, roll: -0.000000}>",
+      "scale": "<Struct 'Vector' (0x000001CFB229C1A0) {x: 1.280000, y: 0.680000, z: 0.020000}>",
+      "bounds": [
+        "<Struct 'Vector' (0x000001CFB229D5A0) {x: 17.672218, y: 30.887900, z: 341.100000}>",
+        "<Struct 'Vector' (0x000001CFB229CBF0) {x: 58.426317, y: 34.000000, z: 27.953877}>"
+      ],
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "materials": [
+        "/Game/Materials/Instances/Film304/Scene/Dusk20261018/MI_Dusk_Metal.MI_Dusk_Metal"
+      ]
+    },
+    {
+      "label": "Film_Troffer_1_Light",
+      "path": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office:PersistentLevel.RectLight_0",
+      "class": "RectLight",
+      "location": "<Struct 'Vector' (0x000001CFB229CBF0) {x: 17.672218, y: 30.887900, z: 334.069167}>",
+      "rotation": "<Struct 'Rotator' (0x000001CFB229CBF0) {pitch: -25.000000, yaw: 0.000000, roll: -90.000000}>",
+      "scale": "<Struct 'Vector' (0x000001CFB229CBF0) {x: 1.000000, y: 1.000000, z: 1.000000}>",
+      "bounds": [
+        "<Struct 'Vector' (0x000001CFB229D190) {x: 17.672218, y: 30.887900, z: 334.069167}>",
+        "<Struct 'Vector' (0x000001CFB229C790) {x: 128.000000, y: 128.000000, z: 128.000000}>"
+      ],
+      "mesh": null,
+      "materials": []
+    },
+    {
+      "label": "Film_Troffer_2_Panel",
+      "path": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office:PersistentLevel.StaticMeshActor_14",
+      "class": "StaticMeshActor",
+      "location": "<Struct 'Vector' (0x000001CFB229C790) {x: 68.386409, y: 139.644834, z: 338.100000}>",
+      "rotation": "<Struct 'Rotator' (0x000001CFB229C790) {pitch: -15.000000, yaw: 0.000000, roll: -0.000000}>",
+      "scale": "<Struct 'Vector' (0x000001CFB229C790) {x: 1.200000, y: 0.600000, z: 0.030000}>",
+      "bounds": [
+        "<Struct 'Vector' (0x000001CFB229CBA0) {x: 68.386409, y: 139.644834, z: 338.100000}>",
+        "<Struct 'Vector' (0x000001CFB229CBF0) {x: 58.343778, y: 30.000000, z: 16.978031}>"
+      ],
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "materials": [
+        "/Game/Materials/Instances/MI_Toon_Office_Troffer.MI_Toon_Office_Troffer"
+      ]
+    },
+    {
+      "label": "Film_Troffer_2_Housing",
+      "path": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office:PersistentLevel.StaticMeshActor_15",
+      "class": "StaticMeshActor",
+      "location": "<Struct 'Vector' (0x000001CFB229CBF0) {x: 68.386409, y: 139.644834, z: 341.100000}>",
+      "rotation": "<Struct 'Rotator' (0x000001CFB229CBF0) {pitch: -25.000000, yaw: 0.000000, roll: -0.000000}>",
+      "scale": "<Struct 'Vector' (0x000001CFB229CBF0) {x: 1.280000, y: 0.680000, z: 0.020000}>",
+      "bounds": [
+        "<Struct 'Vector' (0x000001CFB229C600) {x: 68.386409, y: 139.644834, z: 341.100000}>",
+        "<Struct 'Vector' (0x000001CFB229D500) {x: 58.426317, y: 34.000000, z: 27.953877}>"
+      ],
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "materials": [
+        "/Game/Materials/Instances/Film304/Scene/Dusk20261018/MI_Dusk_Metal.MI_Dusk_Metal"
+      ]
+    },
+    {
+      "label": "Film_Troffer_2_Light",
+      "path": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office:PersistentLevel.RectLight_1",
+      "class": "RectLight",
+      "location": "<Struct 'Vector' (0x000001CFB229D500) {x: 68.386409, y: 139.644834, z: 334.069167}>",
+      "rotation": "<Struct 'Rotator' (0x000001CFB229D500) {pitch: -25.000000, yaw: 0.000000, roll: -90.000000}>",
+      "scale": "<Struct 'Vector' (0x000001CFB229D500) {x: 1.000000, y: 1.000000, z: 1.000000}>",
+      "bounds": [
+        "<Struct 'Vector' (0x000001CFB229C1F0) {x: 68.386409, y: 139.644834, z: 334.069167}>",
+        "<Struct 'Vector' (0x000001CFB229C240) {x: 128.000000, y: 128.000000, z: 128.000000}>"
+      ],
+      "mesh": null,
+      "materials": []
+    },
+    {
+      "label": "Film_Troffer_3_Panel",
+      "path": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office:PersistentLevel.StaticMeshActor_16",
+      "class": "StaticMeshActor",
+      "location": "<Struct 'Vector' (0x000001CFB229C240) {x: 130.960691, y: -21.939383, z: 338.100000}>",
+      "rotation": "<Struct 'Rotator' (0x000001CFB229C240) {pitch: -25.000000, yaw: 0.000000, roll: -0.000000}>",
+      "scale": "<Struct 'Vector' (0x000001CFB229C240) {x: 1.200000, y: 0.600000, z: 0.030000}>",
+      "bounds": [
+        "<Struct 'Vector' (0x000001CFB229C150) {x: 130.960691, y: -21.939383, z: 338.100000}>",
+        "<Struct 'Vector' (0x000001CFB229D500) {x: 55.012395, y: 30.000000, z: 26.716557}>"
+      ],
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "materials": [
+        "/Game/Materials/Instances/MI_Toon_Office_Troffer.MI_Toon_Office_Troffer"
+      ]
+    },
+    {
+      "label": "Film_Troffer_3_Housing",
+      "path": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office:PersistentLevel.StaticMeshActor_17",
+      "class": "StaticMeshActor",
+      "location": "<Struct 'Vector' (0x000001CFB229D500) {x: 130.960691, y: -21.939383, z: 341.100000}>",
+      "rotation": "<Struct 'Rotator' (0x000001CFB229D500) {pitch: -25.000000, yaw: 0.000000, roll: -0.000000}>",
+      "scale": "<Struct 'Vector' (0x000001CFB229D500) {x: 1.280000, y: 0.680000, z: 0.020000}>",
+      "bounds": [
+        "<Struct 'Vector' (0x000001CFB229C060) {x: 130.960691, y: -21.939383, z: 341.100000}>",
+        "<Struct 'Vector' (0x000001CFB229C0B0) {x: 58.426317, y: 34.000000, z: 27.953877}>"
+      ],
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "materials": [
+        "/Game/Materials/Instances/Film304/Scene/Dusk20261018/MI_Dusk_Metal.MI_Dusk_Metal"
+      ]
+    },
+    {
+      "label": "Film_Troffer_3_Light",
+      "path": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office:PersistentLevel.RectLight_2",
+      "class": "RectLight",
+      "location": "<Struct 'Vector' (0x000001CFB229C0B0) {x: 130.960691, y: -21.939383, z: 334.069167}>",
+      "rotation": "<Struct 'Rotator' (0x000001CFB229C0B0) {pitch: -25.000000, yaw: 0.000000, roll: -90.000000}>",
+      "scale": "<Struct 'Vector' (0x000001CFB229C0B0) {x: 1.000000, y: 1.000000, z: 1.000000}>",
+      "bounds": [
+        "<Struct 'Vector' (0x000001CFB229CB50) {x: 130.960691, y: -21.939383, z: 334.069167}>",
+        "<Struct 'Vector' (0x000001CFB229C290) {x: 128.000000, y: 128.000000, z: 128.000000}>"
+      ],
+      "mesh": null,
+      "materials": []
+    },
+    {
+      "label": "Film_Troffer_4_Panel",
+      "path": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office:PersistentLevel.StaticMeshActor_18",
+      "class": "StaticMeshActor",
+      "location": "<Struct 'Vector' (0x000001CFB229C290) {x: 181.674882, y: 86.817552, z: 338.100000}>",
+      "rotation": "<Struct 'Rotator' (0x000001CFB229C290) {pitch: -25.000000, yaw: 0.000000, roll: -0.000000}>",
+      "scale": "<Struct 'Vector' (0x000001CFB229C290) {x: 1.200000, y: 0.600000, z: 0.030000}>",
+      "bounds": [
+        "<Struct 'Vector' (0x000001CFB229CF60) {x: 181.674882, y: 86.817552, z: 338.100000}>",
+        "<Struct 'Vector' (0x000001CFB229C0B0) {x: 55.012395, y: 30.000000, z: 26.716557}>"
+      ],
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "materials": [
+        "/Game/Materials/Instances/MI_Toon_Office_Troffer.MI_Toon_Office_Troffer"
+      ]
+    },
+    {
+      "label": "Film_Troffer_4_Housing",
+      "path": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office:PersistentLevel.StaticMeshActor_19",
+      "class": "StaticMeshActor",
+      "location": "<Struct 'Vector' (0x000001CFB229C0B0) {x: 181.674882, y: 86.817552, z: 341.100000}>",
+      "rotation": "<Struct 'Rotator' (0x000001CFB229C0B0) {pitch: -25.000000, yaw: 0.000000, roll: -0.000000}>",
+      "scale": "<Struct 'Vector' (0x000001CFB229C0B0) {x: 1.280000, y: 0.680000, z: 0.020000}>",
+      "bounds": [
+        "<Struct 'Vector' (0x000001CFB229DFF0) {x: 181.674882, y: 86.817552, z: 341.100000}>",
+        "<Struct 'Vector' (0x000001CFB229E040) {x: 58.426317, y: 34.000000, z: 27.953877}>"
+      ],
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "materials": [
+        "/Game/Materials/Instances/Film304/Scene/Dusk20261018/MI_Dusk_Metal.MI_Dusk_Metal"
+      ]
+    },
+    {
+      "label": "Film_Troffer_4_Light",
+      "path": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office:PersistentLevel.RectLight_3",
+      "class": "RectLight",
+      "location": "<Struct 'Vector' (0x000001CFB229E040) {x: 181.674882, y: 86.817552, z: 334.069167}>",
+      "rotation": "<Struct 'Rotator' (0x000001CFB229E040) {pitch: -25.000000, yaw: 0.000000, roll: -90.000000}>",
+      "scale": "<Struct 'Vector' (0x000001CFB229E040) {x: 1.000000, y: 1.000000, z: 1.000000}>",
+      "bounds": [
+        "<Struct 'Vector' (0x000001CFB229DF50) {x: 181.674882, y: 86.817552, z: 334.069167}>",
+        "<Struct 'Vector' (0x000001CFB229DFA0) {x: 128.000000, y: 128.000000, z: 128.000000}>"
+      ],
+      "mesh": null,
+      "materials": []
+    },
+    {
+      "label": "Film_Troffer_5_Panel",
+      "path": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office:PersistentLevel.StaticMeshActor_20",
+      "class": "StaticMeshActor",
+      "location": "<Struct 'Vector' (0x000001CFB229DFA0) {x: 244.249165, y: -74.766665, z: 338.100000}>",
+      "rotation": "<Struct 'Rotator' (0x000001CFB229DFA0) {pitch: -25.000000, yaw: 0.000000, roll: -0.000000}>",
+      "scale": "<Struct 'Vector' (0x000001CFB229DFA0) {x: 1.200000, y: 0.600000, z: 0.030000}>",
+      "bounds": [
+        "<Struct 'Vector' (0x000001CFB229DF00) {x: 244.249165, y: -74.766665, z: 338.100000}>",
+        "<Struct 'Vector' (0x000001CFB229E040) {x: 55.012395, y: 30.000000, z: 26.716557}>"
+      ],
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "materials": [
+        "/Game/Materials/Instances/MI_Toon_Office_Troffer.MI_Toon_Office_Troffer"
+      ]
+    },
+    {
+      "label": "Film_Troffer_5_Housing",
+      "path": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office:PersistentLevel.StaticMeshActor_21",
+      "class": "StaticMeshActor",
+      "location": "<Struct 'Vector' (0x000001CFB229E040) {x: 244.249165, y: -74.766665, z: 341.100000}>",
+      "rotation": "<Struct 'Rotator' (0x000001CFB229E040) {pitch: -25.000000, yaw: 0.000000, roll: -0.000000}>",
+      "scale": "<Struct 'Vector' (0x000001CFB229E040) {x: 1.280000, y: 0.680000, z: 0.020000}>",
+      "bounds": [
+        "<Struct 'Vector' (0x000001CFB229D6E0) {x: 244.249165, y: -74.766665, z: 341.100000}>",
+        "<Struct 'Vector' (0x000001CFB229DEB0) {x: 58.426317, y: 34.000000, z: 27.953877}>"
+      ],
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "materials": [
+        "/Game/Materials/Instances/Film304/Scene/Dusk20261018/MI_Dusk_Metal.MI_Dusk_Metal"
+      ]
+    },
+    {
+      "label": "Film_Troffer_5_Light",
+      "path": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office:PersistentLevel.RectLight_4",
+      "class": "RectLight",
+      "location": "<Struct 'Vector' (0x000001CFB229DEB0) {x: 244.249165, y: -74.766665, z: 334.069167}>",
+      "rotation": "<Struct 'Rotator' (0x000001CFB229DEB0) {pitch: -25.000000, yaw: 0.000000, roll: -90.000000}>",
+      "scale": "<Struct 'Vector' (0x000001CFB229DEB0) {x: 1.000000, y: 1.000000, z: 1.000000}>",
+      "bounds": [
+        "<Struct 'Vector' (0x000001CFB229D780) {x: 244.249165, y: -74.766665, z: 334.069167}>",
+        "<Struct 'Vector' (0x000001CFB229D730) {x: 128.000000, y: 128.000000, z: 128.000000}>"
+      ],
+      "mesh": null,
+      "materials": []
+    },
+    {
+      "label": "Film_Troffer_6_Panel",
+      "path": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office:PersistentLevel.StaticMeshActor_22",
+      "class": "StaticMeshActor",
+      "location": "<Struct 'Vector' (0x000001CFB229D730) {x: 294.963356, y: 33.990270, z: 338.100000}>",
+      "rotation": "<Struct 'Rotator' (0x000001CFB229D730) {pitch: -25.000000, yaw: 0.000000, roll: -0.000000}>",
+      "scale": "<Struct 'Vector' (0x000001CFB229D730) {x: 1.200000, y: 0.600000, z: 0.030000}>",
+      "bounds": [
+        "<Struct 'Vector' (0x000001CFB229D690) {x: 294.963356, y: 33.990270, z: 338.100000}>",
+        "<Struct 'Vector' (0x000001CFB229DEB0) {x: 55.012395, y: 30.000000, z: 26.716557}>"
+      ],
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "materials": [
+        "/Game/Materials/Instances/MI_Toon_Office_Troffer.MI_Toon_Office_Troffer"
+      ]
+    },
+    {
+      "label": "Film_Troffer_6_Housing",
+      "path": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office:PersistentLevel.StaticMeshActor_23",
+      "class": "StaticMeshActor",
+      "location": "<Struct 'Vector' (0x000001CFB229DEB0) {x: 294.963356, y: 33.990270, z: 341.100000}>",
+      "rotation": "<Struct 'Rotator' (0x000001CFB229DEB0) {pitch: -25.000000, yaw: 0.000000, roll: -0.000000}>",
+      "scale": "<Struct 'Vector' (0x000001CFB229DEB0) {x: 1.280000, y: 0.680000, z: 0.020000}>",
+      "bounds": [
+        "<Struct 'Vector' (0x000001CFB229D5F0) {x: 294.963356, y: 33.990270, z: 341.100000}>",
+        "<Struct 'Vector' (0x000001CFB229D640) {x: 58.426317, y: 34.000000, z: 27.953877}>"
+      ],
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "materials": [
+        "/Game/Materials/Instances/Film304/Scene/Dusk20261018/MI_Dusk_Metal.MI_Dusk_Metal"
+      ]
+    },
+    {
+      "label": "Film_Troffer_6_Light",
+      "path": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office:PersistentLevel.RectLight_5",
+      "class": "RectLight",
+      "location": "<Struct 'Vector' (0x000001CFB229D640) {x: 294.963356, y: 33.990270, z: 334.069167}>",
+      "rotation": "<Struct 'Rotator' (0x000001CFB229D640) {pitch: -25.000000, yaw: 0.000000, roll: -90.000000}>",
+      "scale": "<Struct 'Vector' (0x000001CFB229D640) {x: 1.000000, y: 1.000000, z: 1.000000}>",
+      "bounds": [
+        "<Struct 'Vector' (0x000001CFB229E090) {x: 294.963356, y: 33.990270, z: 334.069167}>",
+        "<Struct 'Vector' (0x000001CFB229E0E0) {x: 128.000000, y: 128.000000, z: 128.000000}>"
+      ],
+      "mesh": null,
+      "materials": []
+    },
+    {
+      "label": "CineCam_Hero_WindowEstablishing",
+      "path": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office:PersistentLevel.CineCameraActor_5",
+      "class": "CineCameraActor",
+      "location": "<Struct 'Vector' (0x000001CFB229E0E0) {x: 540.000000, y: -180.000000, z: 115.000000}>",
+      "rotation": "<Struct 'Rotator' (0x000001CFB229E0E0) {pitch: -2.000000, yaw: 158.000000, roll: -0.000000}>",
+      "scale": "<Struct 'Vector' (0x000001CFB229E0E0) {x: 1.000000, y: 1.000000, z: 1.000000}>",
+      "bounds": [
+        "<Struct 'Vector' (0x000001CFB229D640) {x: 540.000000, y: -180.000000, z: 115.000000}>",
+        "<Struct 'Vector' (0x000001CFB229E680) {x: 1010.000000, y: 1010.000000, z: 1010.000000}>"
+      ],
+      "mesh": "/Engine/EditorMeshes/Camera/SM_CineCam.SM_CineCam",
+      "materials": [
+        "/Engine/EditorMaterials/Camera/MI_CineMat_CameraBody.MI_CineMat_CameraBody",
+        "/Engine/EditorMaterials/Camera/MI_CineMat_CamViewFinder.MI_CineMat_CamViewFinder"
+      ]
+    },
+    {
+      "label": "CineCam_Hero_DeskLineup",
+      "path": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office:PersistentLevel.CineCameraActor_6",
+      "class": "CineCameraActor",
+      "location": "<Struct 'Vector' (0x000001CFB229E680) {x: 180.000000, y: -140.000000, z: 105.000000}>",
+      "rotation": "<Struct 'Rotator' (0x000001CFB229E680) {pitch: -1.500000, yaw: 155.000000, roll: -0.000000}>",
+      "scale": "<Struct 'Vector' (0x000001CFB229E680) {x: 1.000000, y: 1.000000, z: 1.000000}>",
+      "bounds": [
+        "<Struct 'Vector' (0x000001CFB229E0E0) {x: 180.000000, y: -140.000000, z: 105.000000}>",
+        "<Struct 'Vector' (0x000001CFB229E770) {x: 1010.000000, y: 1010.000000, z: 1010.000000}>"
+      ],
+      "mesh": "/Engine/EditorMeshes/Camera/SM_CineCam.SM_CineCam",
+      "materials": [
+        "/Engine/EditorMaterials/Camera/MI_CineMat_CameraBody.MI_CineMat_CameraBody",
+        "/Engine/EditorMaterials/Camera/MI_CineMat_CamViewFinder.MI_CineMat_CamViewFinder"
+      ]
+    },
+    {
+      "label": "CineCam_Hero_LowAngleTension",
+      "path": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office:PersistentLevel.CineCameraActor_7",
+      "class": "CineCameraActor",
+      "location": "<Struct 'Vector' (0x000001CFB229E770) {x: -60.000000, y: -220.000000, z: 55.000000}>",
+      "rotation": "<Struct 'Rotator' (0x000001CFB229E770) {pitch: 8.500000, yaw: 142.000000, roll: 0.000000}>",
+      "scale": "<Struct 'Vector' (0x000001CFB229E770) {x: 1.000000, y: 1.000000, z: 1.000000}>",
+      "bounds": [
+        "<Struct 'Vector' (0x000001CFB229E680) {x: -60.000000, y: -220.000000, z: 55.000000}>",
+        "<Struct 'Vector' (0x000001CFB229E7C0) {x: 1010.000000, y: 1010.000000, z: 1010.000000}>"
+      ],
+      "mesh": "/Engine/EditorMeshes/Camera/SM_CineCam.SM_CineCam",
+      "materials": [
+        "/Engine/EditorMaterials/Camera/MI_CineMat_CameraBody.MI_CineMat_CameraBody",
+        "/Engine/EditorMaterials/Camera/MI_CineMat_CamViewFinder.MI_CineMat_CamViewFinder"
+      ]
+    },
+    {
+      "label": "Cam_E1",
+      "path": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office:PersistentLevel.CineCameraActor_8",
+      "class": "CineCameraActor",
+      "location": "<Struct 'Vector' (0x000001CFB229E680) {x: -1200.000000, y: 5000.000000, z: 2600.000000}>",
+      "rotation": "<Struct 'Rotator' (0x000001CFB229E680) {pitch: 0.654396, yaw: 88.036342, roll: -0.000000}>",
+      "scale": "<Struct 'Vector' (0x000001CFB229E680) {x: 1.000000, y: 1.000000, z: 1.000000}>",
+      "bounds": [
+        "<Struct 'Vector' (0x000001CFB229E770) {x: -1200.000000, y: 5000.000000, z: 2600.000000}>",
+        "<Struct 'Vector' (0x000001CFB229E5E0) {x: 1010.000000, y: 1010.000000, z: 1010.000000}>"
+      ],
+      "mesh": "/Engine/EditorMeshes/Camera/SM_CineCam.SM_CineCam",
+      "materials": [
+        "/Engine/EditorMaterials/Camera/MI_CineMat_CameraBody.MI_CineMat_CameraBody",
+        "/Engine/EditorMaterials/Camera/MI_CineMat_CamViewFinder.MI_CineMat_CamViewFinder"
+      ]
+    },
+    {
+      "label": "Film_Cam_David_DeskSleep",
+      "path": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office:PersistentLevel.CineCameraActor_13",
+      "class": "CineCameraActor",
+      "location": "<Struct 'Vector' (0x000001CFB229E5E0) {x: -235.000000, y: -165.000000, z: 104.000000}>",
+      "rotation": "<Struct 'Rotator' (0x000001CFB229E5E0) {pitch: -15.197787, yaw: 46.076299, roll: 0.000000}>",
+      "scale": "<Struct 'Vector' (0x000001CFB229E5E0) {x: 1.000000, y: 1.000000, z: 1.000000}>",
+      "bounds": [
+        "<Struct 'Vector' (0x000001CFB229E680) {x: -235.000000, y: -165.000000, z: 104.000000}>",
+        "<Struct 'Vector' (0x000001CFB229E7C0) {x: 1010.000000, y: 1010.000000, z: 1010.000000}>"
+      ],
+      "mesh": "/Engine/EditorMeshes/Camera/SM_CineCam.SM_CineCam",
+      "materials": [
+        "/Engine/EditorMaterials/Camera/MI_CineMat_CameraBody.MI_CineMat_CameraBody",
+        "/Engine/EditorMaterials/Camera/MI_CineMat_CamViewFinder.MI_CineMat_CamViewFinder"
+      ]
+    },
+    {
+      "label": "Film_Cam_DavidSleep_Front",
+      "path": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office:PersistentLevel.CineCameraActor_14",
+      "class": "CineCameraActor",
+      "location": "<Struct 'Vector' (0x000001CFB229E7C0) {x: -146.000000, y: -125.000000, z: 132.000000}>",
+      "rotation": "<Struct 'Rotator' (0x000001CFB229E7C0) {pitch: -56.115459, yaw: 88.781125, roll: 0.000001}>",
+      "scale": "<Struct 'Vector' (0x000001CFB229E7C0) {x: 1.000000, y: 1.000000, z: 1.000000}>",
+      "bounds": [
+        "<Struct 'Vector' (0x000001CFB229E5E0) {x: -146.000000, y: -125.000000, z: 132.000000}>",
+        "<Struct 'Vector' (0x000001CFB229E180) {x: 1010.000000, y: 1010.000000, z: 1010.000000}>"
+      ],
+      "mesh": "/Engine/EditorMeshes/Camera/SM_CineCam.SM_CineCam",
+      "materials": [
+        "/Engine/EditorMaterials/Camera/MI_CineMat_CameraBody.MI_CineMat_CameraBody",
+        "/Engine/EditorMaterials/Camera/MI_CineMat_CamViewFinder.MI_CineMat_CamViewFinder"
+      ]
+    },
+    {
+      "label": "Film_Cam_DavidSleep_Right",
+      "path": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office:PersistentLevel.CineCameraActor_15",
+      "class": "CineCameraActor",
+      "location": "<Struct 'Vector' (0x000001CFB229E180) {x: -49.000000, y: -105.000000, z: 87.000000}>",
+      "rotation": "<Struct 'Rotator' (0x000001CFB229E180) {pitch: -12.987321, yaw: 164.291362, roll: 0.000000}>",
+      "scale": "<Struct 'Vector' (0x000001CFB229E180) {x: 1.000000, y: 1.000000, z: 1.000000}>",
+      "bounds": [
+        "<Struct 'Vector' (0x000001CFB229E7C0) {x: -49.000000, y: -105.000000, z: 87.000000}>",
+        "<Struct 'Vector' (0x000001CFB229DE60) {x: 1010.000000, y: 1010.000000, z: 1010.000000}>"
+      ],
+      "mesh": "/Engine/EditorMeshes/Camera/SM_CineCam.SM_CineCam",
+      "materials": [
+        "/Engine/EditorMaterials/Camera/MI_CineMat_CameraBody.MI_CineMat_CameraBody",
+        "/Engine/EditorMaterials/Camera/MI_CineMat_CamViewFinder.MI_CineMat_CamViewFinder"
+      ]
+    },
+    {
+      "label": "Film_Cam_DavidSleep_Left",
+      "path": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office:PersistentLevel.CineCameraActor_16",
+      "class": "CineCameraActor",
+      "location": "<Struct 'Vector' (0x000001CFB229DE60) {x: -245.000000, y: -105.000000, z: 87.000000}>",
+      "rotation": "<Struct 'Rotator' (0x000001CFB229DE60) {pitch: -12.519333, yaw: 15.109575, roll: 0.000000}>",
+      "scale": "<Struct 'Vector' (0x000001CFB229DE60) {x: 1.000000, y: 1.000000, z: 1.000000}>",
+      "bounds": [
+        "<Struct 'Vector' (0x000001CFB229E180) {x: -245.000000, y: -105.000000, z: 87.000000}>",
+        "<Struct 'Vector' (0x000001CFB229EC20) {x: 1010.000000, y: 1010.000000, z: 1010.000000}>"
+      ],
+      "mesh": "/Engine/EditorMeshes/Camera/SM_CineCam.SM_CineCam",
+      "materials": [
+        "/Engine/EditorMaterials/Camera/MI_CineMat_CameraBody.MI_CineMat_CameraBody",
+        "/Engine/EditorMaterials/Camera/MI_CineMat_CamViewFinder.MI_CineMat_CamViewFinder"
+      ]
+    },
+    {
+      "label": "Film_Ceiling_Slab",
+      "path": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office:PersistentLevel.StaticMeshActor_28",
+      "class": "StaticMeshActor",
+      "location": "<Struct 'Vector' (0x000001CFB229EC20) {x: 0.000000, y: 0.000000, z: 350.000000}>",
+      "rotation": "<Struct 'Rotator' (0x000001CFB229EC20) {pitch: 0.000000, yaw: -25.000000, roll: 0.000000}>",
+      "scale": "<Struct 'Vector' (0x000001CFB229EC20) {x: 24.000000, y: 24.000000, z: 0.200000}>",
+      "bounds": [
+        "<Struct 'Vector' (0x000001CFB229CDD0) {x: 0.000000, y: 0.000000, z: 350.000000}>",
+        "<Struct 'Vector' (0x000001CFB229DE60) {x: 1594.711259, y: 1594.711259, z: 10.000000}>"
+      ],
+      "mesh": "/Engine/BasicShapes/Cube.Cube",
+      "materials": [
+        "/Game/Materials/Instances/Film304/Environment/MI_Film304_BrutalistConcrete.MI_Film304_BrutalistConcrete"
+      ]
+    },
+    {
+      "label": "Light_Workstation_Row_Troffer",
+      "path": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office:PersistentLevel.RectLight_6",
+      "class": "RectLight",
+      "location": "<Struct 'Vector' (0x000001CFB229DE60) {x: 208.509020, y: 679.289145, z: 284.637249}>",
+      "rotation": "<Struct 'Rotator' (0x000001CFB229DE60) {pitch: -90.000000, yaw: -25.000000, roll: 0.000000}>",
+      "scale": "<Struct 'Vector' (0x000001CFB229DE60) {x: 1.000000, y: 1.000000, z: 1.000000}>",
+      "bounds": [
+        "<Struct 'Vector' (0x000001CFB229EBD0) {x: 208.509020, y: 679.289145, z: 284.637249}>",
+        "<Struct 'Vector' (0x000001CFB229E590) {x: 128.000000, y: 128.000000, z: 128.000000}>"
+      ],
+      "mesh": null,
+      "materials": []
+    },
+    {
+      "label": "Light_Ceiling_Cavity_02",
+      "path": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office:PersistentLevel.PointLight_4",
+      "class": "PointLight",
+      "location": "<Struct 'Vector' (0x000001CFB229E590) {x: 528.516856, y: 305.237502, z: 315.000000}>",
+      "rotation": "<Struct 'Rotator' (0x000001CFB229E590) {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>",
+      "scale": "<Struct 'Vector' (0x000001CFB229E590) {x: 1.000000, y: 1.000000, z: 1.000000}>",
+      "bounds": [
+        "<Struct 'Vector' (0x000001CFB229E630) {x: 528.516856, y: 305.237502, z: 315.000000}>",
+        "<Struct 'Vector' (0x000001CFB229DE60) {x: 128.000000, y: 128.000000, z: 128.000000}>"
+      ],
+      "mesh": null,
+      "materials": []
+    },
+    {
+      "label": "Light_Ceiling_Cavity_3",
+      "path": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office:PersistentLevel.PointLight_0",
+      "class": "PointLight",
+      "location": "<Struct 'Vector' (0x000001CFB229DE60) {x: 499.517543, y: 305.820554, z: 81.743139}>",
+      "rotation": "<Struct 'Rotator' (0x000001CFB229DE60) {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>",
+      "scale": "<Struct 'Vector' (0x000001CFB229DE60) {x: 1.000000, y: 1.000000, z: 1.000000}>",
+      "bounds": [
+        "<Struct 'Vector' (0x000001CFB229E8B0) {x: 499.517543, y: 305.820554, z: 81.743139}>",
+        "<Struct 'Vector' (0x000001CFB229E590) {x: 128.000000, y: 128.000000, z: 128.000000}>"
+      ],
+      "mesh": null,
+      "materials": []
+    },
+    {
+      "label": "Light_Ceiling_Cavity_4",
+      "path": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office:PersistentLevel.PointLight_5",
+      "class": "PointLight",
+      "location": "<Struct 'Vector' (0x000001CFB229E590) {x: 222.126160, y: 238.363303, z: 86.454166}>",
+      "rotation": "<Struct 'Rotator' (0x000001CFB229E590) {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>",
+      "scale": "<Struct 'Vector' (0x000001CFB229E590) {x: 1.000000, y: 1.000000, z: 1.000000}>",
+      "bounds": [
+        "<Struct 'Vector' (0x000001CFB229E4F0) {x: 222.126160, y: 238.363303, z: 86.454166}>",
+        "<Struct 'Vector' (0x000001CFB229DE60) {x: 128.000000, y: 128.000000, z: 128.000000}>"
+      ],
+      "mesh": null,
+      "materials": []
+    },
+    {
+      "label": "Light_Ceiling_Cavity_5",
+      "path": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office:PersistentLevel.PointLight_6",
+      "class": "PointLight",
+      "location": "<Struct 'Vector' (0x000001CFB229DE60) {x: 126.732057, y: 52.827140, z: 86.454166}>",
+      "rotation": "<Struct 'Rotator' (0x000001CFB229DE60) {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>",
+      "scale": "<Struct 'Vector' (0x000001CFB229DE60) {x: 1.000000, y: 1.000000, z: 1.000000}>",
+      "bounds": [
+        "<Struct 'Vector' (0x000001CFB229E4A0) {x: 126.732057, y: 52.827140, z: 86.454166}>",
+        "<Struct 'Vector' (0x000001CFB229E590) {x: 128.000000, y: 128.000000, z: 128.000000}>"
+      ],
+      "mesh": null,
+      "materials": []
+    }
+  ]
+}

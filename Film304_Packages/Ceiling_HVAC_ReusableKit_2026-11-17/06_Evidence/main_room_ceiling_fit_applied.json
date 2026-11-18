@@ -1,0 +1,26 @@
+{
+  "world": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office",
+  "rows": [
+    {
+      "actor": "Film_Closeout_Ceiling_Concrete",
+      "mesh": "/Game/Meshes/Architecture/Closeout20261018/SM_Houdini_Office_Ceiling_Tiles_MainRoomFit_v05",
+      "bounds": "<Struct 'BoxSphereBounds' (0x0000022B15EA72C0) {origin: {x: 354.850952, y: -35.757416, z: 337.500000}, box_extent: {x: 945.444580, y: 934.996246, z: 0.799988}, sphere_radius: 1000.678576}>"
+    },
+    {
+      "actor": "Film_Closeout_Ceiling_Metal",
+      "mesh": "/Game/Meshes/Architecture/Closeout20261018/SM_Houdini_Office_Ceiling_Metal_MainRoomFit_v05",
+      "bounds": "<Struct 'BoxSphereBounds' (0x0000022AC7EE01C0) {origin: {x: 355.281494, y: -34.834137, z: 324.500000}, box_extent: {x: 948.557373, y: 938.601776, z: 25.500000}, sphere_radius: 1004.016295}>"
+    }
+  ],
+  "native_wall_bounds_verified": true,
+  "FBX_Y_mirror_compensated": true,
+  "previous_light_values_restored": "Restored before render; post-render live key is 20, rim 2.8 and troffers 6. Do not claim key remains at 160.",
+  "new_levels": 0,
+  "render_evidence": "LightingStudies_v36/Ceiling/LS_Closeout_Ceiling48f_v01.0010.png",
+  "render_review": "Completed and viewed; grid follows fixture rows",
+  "post_render_live_lights": {
+    "SpotLight": 20.0,
+    "Cast_RimKicker_Light": 2.799999952316284,
+    "Film_Troffer_1_Light": 6.0
+  }
+}

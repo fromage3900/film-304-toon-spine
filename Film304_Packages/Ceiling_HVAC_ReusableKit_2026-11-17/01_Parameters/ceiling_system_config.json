@@ -1,0 +1,86 @@
+{
+  "system": "Film304_SuspendedCeiling_HVAC",
+  "version": "1.0.0",
+  "authored": "2026-10-18/2026-11-17",
+  "units": "centimetres (FBX imports 1:1 into UE 5.8)",
+  "authority": "room FLOOR (Film_Floor) is the reference; ceiling slab overhangs it",
+  "parameters": {
+    "ROOM": 2200.0,
+    "ROOM_note": "floor extent, X and Y, centred on origin",
+    "CEIL_Z": 340.0,
+    "CEIL_Z_note": "underside of the ceiling slab",
+    "BAYS": 20,
+    "BAYS_note": "20 x 20 grid",
+    "BAY": 110.0,
+    "BAY_note": "ROOM / BAYS",
+    "TILE_T": 1.6,
+    "TILE_T_note": "tile thickness",
+    "TILE_SIZE": 107.6,
+    "TILE_SIZE_note": "BAY - 2.4 cm reveal",
+    "TILE_DROP": 2.5,
+    "TILE_DROP_note": "CEIL_Z - TILE_T - 0.9 -> tile top 335.9",
+    "BAR_W": 2.4,
+    "BAR_H": 3.6,
+    "BAR_Z": 336.4,
+    "YAW": -25.0,
+    "YAW_note": "whole room is yawed; baked into geometry"
+  },
+  "hvac": {
+    "trunk_ducts": {
+      "count": 3,
+      "y": [
+        -800.0,
+        0.0,
+        800.0
+      ],
+      "size": [
+        2080.0,
+        62.0,
+        34.0
+      ]
+    },
+    "branch_ducts": {
+      "count": 8,
+      "x_start": -900.0,
+      "x_pitch": 257.0,
+      "y": 400.0,
+      "size": [
+        26.0,
+        460.0,
+        22.0
+      ]
+    },
+    "service_aisle_offset_x_cm": 260.0,
+    "details": [
+      "two trunk ducts",
+      "cross branches",
+      "joint flanges",
+      "threaded hangers",
+      "conduit runs",
+      "junction boxes"
+    ]
+  },
+  "troffers": {
+    "count": 6,
+    "size": [
+      134.0,
+      105.0
+    ],
+    "z": [
+      336.6,
+      339.6
+    ],
+    "note": "hand-placed fixtures reused, not regenerated; matching RectLight at z=334"
+  },
+  "materials": [
+    "M_Concrete_Beam",
+    "M_Duct_Metal",
+    "M_Troffer_Diffuser"
+  ],
+  "export": {
+    "fbx_axis": "Z-up right-handed",
+    "convert_units": false,
+    "convert_axis": false
+  },
+  "rebuild": "edit 01_Parameters/ceiling_system_config.json -> run 04_Builder/build_office_ceiling.py in Houdini hython"
+}

@@ -1,0 +1,93 @@
+{
+  "world": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office.L_Film_Office",
+  "fixture_count": 6,
+  "fixture_before": [
+    {
+      "actor": "Film_Troffer_1_Panel",
+      "transform": "<Struct 'Transform' (0x0000022A88B7B300) {rotation: {x: -0.000000, y: 0.216440, z: 0.000000, w: 0.976296}, translation: {x: 17.672218, y: 30.887900, z: 338.100000}, scale3d: {x: 1.200000, y: 0.600000, z: 0.030000}}>"
+    },
+    {
+      "actor": "Film_Troffer_1_Housing",
+      "transform": "<Struct 'Transform' (0x0000022A88B7B300) {rotation: {x: -0.000000, y: 0.216440, z: 0.000000, w: 0.976296}, translation: {x: 17.672218, y: 30.887900, z: 341.100000}, scale3d: {x: 1.280000, y: 0.680000, z: 0.020000}}>"
+    },
+    {
+      "actor": "Film_Troffer_1_Light",
+      "transform": "<Struct 'Transform' (0x0000022A88B7B300) {rotation: {x: 0.690346, y: 0.153046, z: -0.153046, w: 0.690346}, translation: {x: 17.672218, y: 30.887900, z: 334.069167}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>"
+    },
+    {
+      "actor": "Film_Troffer_2_Panel",
+      "transform": "<Struct 'Transform' (0x0000022A88B7B300) {rotation: {x: -0.000000, y: 0.130526, z: 0.000000, w: 0.991445}, translation: {x: 68.386409, y: 139.644834, z: 338.100000}, scale3d: {x: 1.200000, y: 0.600000, z: 0.030000}}>"
+    },
+    {
+      "actor": "Film_Troffer_2_Housing",
+      "transform": "<Struct 'Transform' (0x0000022A88B7B300) {rotation: {x: -0.000000, y: 0.216440, z: 0.000000, w: 0.976296}, translation: {x: 68.386409, y: 139.644834, z: 341.100000}, scale3d: {x: 1.280000, y: 0.680000, z: 0.020000}}>"
+    },
+    {
+      "actor": "Film_Troffer_2_Light",
+      "transform": "<Struct 'Transform' (0x0000022A88B7B300) {rotation: {x: 0.690346, y: 0.153046, z: -0.153046, w: 0.690346}, translation: {x: 68.386409, y: 139.644834, z: 334.069167}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>"
+    },
+    {
+      "actor": "Film_Troffer_3_Panel",
+      "transform": "<Struct 'Transform' (0x0000022A88B7B300) {rotation: {x: -0.000000, y: 0.216440, z: 0.000000, w: 0.976296}, translation: {x: 130.960691, y: -21.939383, z: 338.100000}, scale3d: {x: 1.200000, y: 0.600000, z: 0.030000}}>"
+    },
+    {
+      "actor": "Film_Troffer_3_Housing",
+      "transform": "<Struct 'Transform' (0x0000022A88B7B300) {rotation: {x: -0.000000, y: 0.216440, z: 0.000000, w: 0.976296}, translation: {x: 130.960691, y: -21.939383, z: 341.100000}, scale3d: {x: 1.280000, y: 0.680000, z: 0.020000}}>"
+    },
+    {
+      "actor": "Film_Troffer_3_Light",
+      "transform": "<Struct 'Transform' (0x0000022A88B7B300) {rotation: {x: 0.690346, y: 0.153046, z: -0.153046, w: 0.690346}, translation: {x: 130.960691, y: -21.939383, z: 334.069167}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>"
+    },
+    {
+      "actor": "Film_Troffer_4_Panel",
+      "transform": "<Struct 'Transform' (0x0000022A88B7B300) {rotation: {x: -0.000000, y: 0.216440, z: 0.000000, w: 0.976296}, translation: {x: 181.674882, y: 86.817552, z: 338.100000}, scale3d: {x: 1.200000, y: 0.600000, z: 0.030000}}>"
+    },
+    {
+      "actor": "Film_Troffer_4_Housing",
+      "transform": "<Struct 'Transform' (0x0000022A88B7B300) {rotation: {x: -0.000000, y: 0.216440, z: 0.000000, w: 0.976296}, translation: {x: 181.674882, y: 86.817552, z: 341.100000}, scale3d: {x: 1.280000, y: 0.680000, z: 0.020000}}>"
+    },
+    {
+      "actor": "Film_Troffer_4_Light",
+      "transform": "<Struct 'Transform' (0x0000022A88B7B300) {rotation: {x: 0.690346, y: 0.153046, z: -0.153046, w: 0.690346}, translation: {x: 181.674882, y: 86.817552, z: 334.069167}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>"
+    },
+    {
+      "actor": "Film_Troffer_5_Panel",
+      "transform": "<Struct 'Transform' (0x0000022A88B7B300) {rotation: {x: -0.000000, y: 0.216440, z: 0.000000, w: 0.976296}, translation: {x: 244.249165, y: -74.766665, z: 338.100000}, scale3d: {x: 1.200000, y: 0.600000, z: 0.030000}}>"
+    },
+    {
+      "actor": "Film_Troffer_5_Housing",
+      "transform": "<Struct 'Transform' (0x0000022A88B7B300) {rotation: {x: -0.000000, y: 0.216440, z: 0.000000, w: 0.976296}, translation: {x: 244.249165, y: -74.766665, z: 341.100000}, scale3d: {x: 1.280000, y: 0.680000, z: 0.020000}}>"
+    },
+    {
+      "actor": "Film_Troffer_5_Light",
+      "transform": "<Struct 'Transform' (0x0000022A88B7B300) {rotation: {x: 0.690346, y: 0.153046, z: -0.153046, w: 0.690346}, translation: {x: 244.249165, y: -74.766665, z: 334.069167}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>"
+    },
+    {
+      "actor": "Film_Troffer_6_Panel",
+      "transform": "<Struct 'Transform' (0x0000022A88B7B300) {rotation: {x: -0.000000, y: 0.216440, z: 0.000000, w: 0.976296}, translation: {x: 294.963356, y: 33.990270, z: 338.100000}, scale3d: {x: 1.200000, y: 0.600000, z: 0.030000}}>"
+    },
+    {
+      "actor": "Film_Troffer_6_Housing",
+      "transform": "<Struct 'Transform' (0x0000022A88B7B300) {rotation: {x: -0.000000, y: 0.216440, z: 0.000000, w: 0.976296}, translation: {x: 294.963356, y: 33.990270, z: 341.100000}, scale3d: {x: 1.280000, y: 0.680000, z: 0.020000}}>"
+    },
+    {
+      "actor": "Film_Troffer_6_Light",
+      "transform": "<Struct 'Transform' (0x0000022A88B7B300) {rotation: {x: 0.690346, y: 0.153046, z: -0.153046, w: 0.690346}, translation: {x: 294.963356, y: 33.990270, z: 334.069167}, scale3d: {x: 1.000000, y: 1.000000, z: 1.000000}}>"
+    }
+  ],
+  "ceiling": [
+    {
+      "actor": "Film_Closeout_Ceiling_Concrete",
+      "mesh": "/Game/Meshes/Architecture/Closeout20261018/SM_Houdini_Office_Ceiling_Tiles_Converged_v03.SM_Houdini_Office_Ceiling_Tiles_Converged_v03",
+      "bounds": "(<Struct 'Vector' (0x0000022A88C27CB0) {x: 0.000000, y: 0.000000, z: 337.500000}>, <Struct 'Vector' (0x0000022A88C27D50) {x: 1460.223999, y: 1460.223999, z: 0.799988}>)"
+    },
+    {
+      "actor": "Film_Closeout_Ceiling_Metal",
+      "mesh": "/Game/Meshes/Architecture/Closeout20261018/SM_Houdini_Office_Ceiling_Metal_Converged_v03.SM_Houdini_Office_Ceiling_Metal_Converged_v03",
+      "bounds": "(<Struct 'Vector' (0x0000022A88C27CB0) {x: 0.000000, y: 0.000000, z: 324.500000}>, <Struct 'Vector' (0x0000022A88C27D50) {x: 1462.906250, y: 1462.906250, z: 25.500000}>)"
+    }
+  ],
+  "new_levels_created": 0,
+  "shared_material_graphs_edited": false,
+  "saved_actual_office": true
+}

@@ -1,0 +1,314 @@
+{
+  "fixtures": [
+    {
+      "fixture": 1,
+      "previous": {
+        "Film_Troffer_1_Panel": {
+          "position": [
+            17.67221786050635,
+            30.88789971448523,
+            338.1
+          ],
+          "rotation": [
+            -25.000000000000007,
+            0.0,
+            -0.0
+          ]
+        },
+        "Film_Troffer_1_Housing": {
+          "position": [
+            17.67221786050635,
+            30.88789971448523,
+            341.1
+          ],
+          "rotation": [
+            -25.000000000000007,
+            0.0,
+            -0.0
+          ]
+        },
+        "Film_Troffer_1_Light": {
+          "position": [
+            17.67221786050635,
+            30.88789971448523,
+            334.069167137146
+          ],
+          "rotation": [
+            -25.000000000000014,
+            0.0,
+            -90.00000000000001
+          ]
+        }
+      },
+      "panel_top_cm": 334.7,
+      "housing_top_cm": 336.7,
+      "tile_underside_cm": 336.7,
+      "light_forward": [
+        -2.220446049250313e-16,
+        1.6653345369377348e-16,
+        -1.0000000000000002
+      ],
+      "light_intensity": 6.0,
+      "intensity_units": "<LightUnits.CANDELAS: 1>"
+    },
+    {
+      "fixture": 2,
+      "previous": {
+        "Film_Troffer_2_Panel": {
+          "position": [
+            68.3864089017928,
+            139.64483433029653,
+            338.1
+          ],
+          "rotation": [
+            -14.999999999999996,
+            0.0,
+            -0.0
+          ]
+        },
+        "Film_Troffer_2_Housing": {
+          "position": [
+            68.3864089017928,
+            139.64483433029653,
+            341.1
+          ],
+          "rotation": [
+            -25.000000000000007,
+            0.0,
+            -0.0
+          ]
+        },
+        "Film_Troffer_2_Light": {
+          "position": [
+            68.3864089017928,
+            139.64483433029653,
+            334.069167137146
+          ],
+          "rotation": [
+            -25.000000000000014,
+            0.0,
+            -90.00000000000001
+          ]
+        }
+      },
+      "panel_top_cm": 334.7,
+      "housing_top_cm": 336.7,
+      "tile_underside_cm": 336.7,
+      "light_forward": [
+        -2.220446049250313e-16,
+        1.6653345369377348e-16,
+        -1.0000000000000002
+      ],
+      "light_intensity": 6.0,
+      "intensity_units": "<LightUnits.CANDELAS: 1>"
+    },
+    {
+      "fixture": 3,
+      "previous": {
+        "Film_Troffer_3_Panel": {
+          "position": [
+            130.96069141864317,
+            -21.939382620188212,
+            338.1
+          ],
+          "rotation": [
+            -25.000000000000007,
+            0.0,
+            -0.0
+          ]
+        },
+        "Film_Troffer_3_Housing": {
+          "position": [
+            130.96069141864317,
+            -21.939382620188212,
+            341.1
+          ],
+          "rotation": [
+            -25.000000000000007,
+            0.0,
+            -0.0
+          ]
+        },
+        "Film_Troffer_3_Light": {
+          "position": [
+            130.96069141864317,
+            -21.939382620188212,
+            334.069167137146
+          ],
+          "rotation": [
+            -25.000000000000014,
+            0.0,
+            -90.00000000000001
+          ]
+        }
+      },
+      "panel_top_cm": 334.7,
+      "housing_top_cm": 336.7,
+      "tile_underside_cm": 336.7,
+      "light_forward": [
+        -2.220446049250313e-16,
+        1.6653345369377348e-16,
+        -1.0000000000000002
+      ],
+      "light_intensity": 6.0,
+      "intensity_units": "<LightUnits.CANDELAS: 1>"
+    },
+    {
+      "fixture": 4,
+      "previous": {
+        "Film_Troffer_4_Panel": {
+          "position": [
+            181.67488245992962,
+            86.81755199562315,
+            338.1
+          ],
+          "rotation": [
+            -25.000000000000007,
+            0.0,
+            -0.0
+          ]
+        },
+        "Film_Troffer_4_Housing": {
+          "position": [
+            181.67488245992962,
+            86.81755199562315,
+            341.1
+          ],
+          "rotation": [
+            -25.000000000000007,
+            0.0,
+            -0.0
+          ]
+        },
+        "Film_Troffer_4_Light": {
+          "position": [
+            181.67488245992962,
+            86.81755199562315,
+            334.069167137146
+          ],
+          "rotation": [
+            -25.000000000000014,
+            0.0,
+            -90.00000000000001
+          ]
+        }
+      },
+      "panel_top_cm": 334.7,
+      "housing_top_cm": 336.7,
+      "tile_underside_cm": 336.7,
+      "light_forward": [
+        -2.220446049250313e-16,
+        1.6653345369377348e-16,
+        -1.0000000000000002
+      ],
+      "light_intensity": 6.0,
+      "intensity_units": "<LightUnits.CANDELAS: 1>"
+    },
+    {
+      "fixture": 5,
+      "previous": {
+        "Film_Troffer_5_Panel": {
+          "position": [
+            244.24916497677992,
+            -74.76666495486162,
+            338.1
+          ],
+          "rotation": [
+            -25.000000000000007,
+            0.0,
+            -0.0
+          ]
+        },
+        "Film_Troffer_5_Housing": {
+          "position": [
+            244.24916497677992,
+            -74.76666495486162,
+            341.1
+          ],
+          "rotation": [
+            -25.000000000000007,
+            0.0,
+            -0.0
+          ]
+        },
+        "Film_Troffer_5_Light": {
+          "position": [
+            244.24916497677992,
+            -74.76666495486162,
+            334.069167137146
+          ],
+          "rotation": [
+            -25.000000000000014,
+            0.0,
+            -90.00000000000001
+          ]
+        }
+      },
+      "panel_top_cm": 334.7,
+      "housing_top_cm": 336.7,
+      "tile_underside_cm": 336.7,
+      "light_forward": [
+        -2.220446049250313e-16,
+        1.6653345369377348e-16,
+        -1.0000000000000002
+      ],
+      "light_intensity": 6.0,
+      "intensity_units": "<LightUnits.CANDELAS: 1>"
+    },
+    {
+      "fixture": 6,
+      "previous": {
+        "Film_Troffer_6_Panel": {
+          "position": [
+            294.9633560180664,
+            33.99026966094971,
+            338.1
+          ],
+          "rotation": [
+            -25.000000000000007,
+            0.0,
+            -0.0
+          ]
+        },
+        "Film_Troffer_6_Housing": {
+          "position": [
+            294.9633560180664,
+            33.99026966094971,
+            341.1
+          ],
+          "rotation": [
+            -25.000000000000007,
+            0.0,
+            -0.0
+          ]
+        },
+        "Film_Troffer_6_Light": {
+          "position": [
+            294.9633560180664,
+            33.99026966094971,
+            334.069167137146
+          ],
+          "rotation": [
+            -25.000000000000014,
+            0.0,
+            -90.00000000000001
+          ]
+        }
+      },
+      "panel_top_cm": 334.7,
+      "housing_top_cm": 336.7,
+      "tile_underside_cm": 336.7,
+      "light_forward": [
+        -2.220446049250313e-16,
+        1.6653345369377348e-16,
+        -1.0000000000000002
+      ],
+      "light_intensity": 6.0,
+      "intensity_units": "<LightUnits.CANDELAS: 1>"
+    }
+  ],
+  "count": 6,
+  "added_duplicate_fixtures": 0,
+  "world": "/Game/Maps/Lookdev/UniversalFilm_20261016/L_Film_Office_Assembly_20261018_v01.L_Film_Office_Assembly_20261018_v01",
+  "review_camera": "Film_Cam_Closeout_CeilingReview"
+}

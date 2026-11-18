@@ -1,0 +1,309 @@
+{
+  "kit": "Film304 Ceiling + HVAC Reusable Kit",
+  "version": "1.0.0",
+  "assembled": "2026-11-17",
+  "repo": "G:/film-304-toon-spine",
+  "commit": "3bff9b249ad0",
+  "files": [
+    {
+      "path": "02_Houdini/OfficeCeiling_Final_v03.hip",
+      "bytes": 70068,
+      "sha256": "09520710a5d1a454a41ccf00064a731249ecebb20a1484a377aed6148b01d3fc",
+      "source": "Tools/houdini/Published/Film304Closeout_20261018/Ceiling/OfficeCeiling_Final_v03.hip"
+    },
+    {
+      "path": "02_Houdini/OfficeCeiling_Converged_v03.hip",
+      "bytes": 70316,
+      "sha256": "0a905ecb5b21ba327a737adf73d7b51218ccc8f6f48bfb5a6a906e2a56f1b6e8",
+      "source": "Saved/Houdini/OfficeCeiling_Closeout_20261018_v03/OfficeCeiling_Converged_v03.hip"
+    },
+    {
+      "path": "02_Houdini/geometry/CeilMetal.bgeo.sc",
+      "bytes": 10489,
+      "sha256": "a8648eb801e0b4a744d5e00226c126e60fe998587a79eb44234a0dc7e342899d",
+      "source": "Tools/houdini/Published/Film304Closeout_20261018/Ceiling/geometry/CeilMetal.bgeo.sc"
+    },
+    {
+      "path": "02_Houdini/geometry/CeilTiles.bgeo.sc",
+      "bytes": 28354,
+      "sha256": "531257c6f7c066135a706d1a288058a16753c5aeb12273f3543fbaad32cc54c8",
+      "source": "Tools/houdini/Published/Film304Closeout_20261018/Ceiling/geometry/CeilTiles.bgeo.sc"
+    },
+    {
+      "path": "02_Houdini/exports/SM_Houdini_Office_Ceiling_Metal.fbx",
+      "bytes": 24320,
+      "sha256": "81a89f1513e5bcf5dfe199b77b3a1e4604ca65e3c6db0d91d6e37414a0b41451",
+      "source": "Tools/houdini/Published/Film304Closeout_20261018/Ceiling/exports/SM_Houdini_Office_Ceiling_Metal.fbx"
+    },
+    {
+      "path": "02_Houdini/exports/SM_Houdini_Office_Ceiling_Tiles.fbx",
+      "bytes": 44512,
+      "sha256": "75d8cef8fd726fbb05ed347d3acdc77472f767b1f04fdb8118a5ca480734c873",
+      "source": "Tools/houdini/Published/Film304Closeout_20261018/Ceiling/exports/SM_Houdini_Office_Ceiling_Tiles.fbx"
+    },
+    {
+      "path": "03_UE_Assets/Meshes/SM_Houdini_Office_Ceiling_Metal.uasset",
+      "bytes": 87085,
+      "sha256": "555525eff8872fa5df79182e3b1a63ddfd7545be9ebe3f6d2148ec16b6ccaba6",
+      "source": "Content/Meshes/Architecture/SM_Houdini_Office_Ceiling_Metal.uasset"
+    },
+    {
+      "path": "03_UE_Assets/Meshes/SM_Houdini_Office_Ceiling_Tiles.uasset",
+      "bytes": 135001,
+      "sha256": "cd109cdd08e99ceed8da8f5681752378ce2615e6c13a4c2321ecff6cbcce76b2",
+      "source": "Content/Meshes/Architecture/SM_Houdini_Office_Ceiling_Tiles.uasset"
+    },
+    {
+      "path": "03_UE_Assets/Meshes/SM_Houdini_Office_Ceiling_Troffers.uasset",
+      "bytes": 93953,
+      "sha256": "78b79cad5146fa466c1b0a0ddeb1f4f93f76c79261f47ed2709afc3c1f3c292a",
+      "source": "Content/Meshes/Architecture/SM_Houdini_Office_Ceiling_Troffers.uasset"
+    },
+    {
+      "path": "03_UE_Assets/Meshes/SM_Houdini_Ceiling_HVAC_Grid.uasset",
+      "bytes": 101782,
+      "sha256": "208cfd4e33c7cc93846aa3579ad46093526197d765de628bcced80292b76784c",
+      "source": "Content/Meshes/Architecture/SM_Houdini_Ceiling_HVAC_Grid.uasset"
+    },
+    {
+      "path": "03_UE_Assets/Meshes/SM_Houdini_Ceiling_HVAC_Grid_v2.uasset",
+      "bytes": 81945,
+      "sha256": "94805cbbf22b5a1b4de7d542ab8a6cda606d543dbff6b3203c5af2011e69cc6c",
+      "source": "Content/Meshes/Architecture/SM_Houdini_Ceiling_HVAC_Grid_v2.uasset"
+    },
+    {
+      "path": "03_UE_Assets/Meshes/SM_Houdini_Office_Ceiling_Metal_Converged_v03.uasset",
+      "bytes": 94532,
+      "sha256": "bbf74e276441129574a33df927616e070b73f2d4ec7518a6015ce4837e98945f",
+      "source": "Content/Meshes/Architecture/Closeout20261018/SM_Houdini_Office_Ceiling_Metal_Converged_v03.uasset"
+    },
+    {
+      "path": "03_UE_Assets/Meshes/SM_Houdini_Office_Ceiling_Tiles_Converged_v03.uasset",
+      "bytes": 132931,
+      "sha256": "b08d7da04f23f7dcf899914989e9902e839dc138b3a9adac0886bc943b27f00d",
+      "source": "Content/Meshes/Architecture/Closeout20261018/SM_Houdini_Office_Ceiling_Tiles_Converged_v03.uasset"
+    },
+    {
+      "path": "03_UE_Assets/Meshes/SM_Houdini_Office_Ceiling_Metal_MainRoomFit_v05.uasset",
+      "bytes": 87948,
+      "sha256": "44612e03e19d60db7f373716797b784a4d1b7f10d10124c0dab6f5e650f1b2d3",
+      "source": "Content/Meshes/Architecture/Closeout20261018/SM_Houdini_Office_Ceiling_Metal_MainRoomFit_v05.uasset"
+    },
+    {
+      "path": "03_UE_Assets/Meshes/SM_Houdini_Office_Ceiling_Tiles_MainRoomFit_v05.uasset",
+      "bytes": 98022,
+      "sha256": "a5f5ad13c05973920505800c5c17970e3d8e10767c504e596b134d7938851add",
+      "source": "Content/Meshes/Architecture/Closeout20261018/SM_Houdini_Office_Ceiling_Tiles_MainRoomFit_v05.uasset"
+    },
+    {
+      "path": "03_UE_Assets/Meshes/SM_Houdini_Office_Ceiling_Metal.fbx",
+      "bytes": 33926,
+      "sha256": "96b2286aa566bd94c07902bde61a94cd419abfe3bf75d3564db5734698b2a722",
+      "source": "Content/Meshes/Architecture/SM_Houdini_Office_Ceiling_Metal.fbx"
+    },
+    {
+      "path": "03_UE_Assets/Meshes/SM_Houdini_Office_Ceiling_Tiles.fbx",
+      "bytes": 220672,
+      "sha256": "5b9a7350cc47902c1164b6327b96d6ecf9cb2e8bca28f2ad5deafa70378ea914",
+      "source": "Content/Meshes/Architecture/SM_Houdini_Office_Ceiling_Tiles.fbx"
+    },
+    {
+      "path": "03_UE_Assets/Meshes/SM_Houdini_Office_Ceiling_Troffers.fbx",
+      "bytes": 50569,
+      "sha256": "07d798b5e4ef1079411d0b943cb1ca3c11e4f9cd14411ec356029adaaf668fda",
+      "source": "Content/Meshes/Architecture/SM_Houdini_Office_Ceiling_Troffers.fbx"
+    },
+    {
+      "path": "03_UE_Assets/Meshes/SM_Houdini_Ceiling_HVAC_Grid.fbx",
+      "bytes": 33360,
+      "sha256": "438d8a57425d809684de23d4fa0ce9ddd5a2f27bc41d9aea3ba783f5550a75dc",
+      "source": "Content/Meshes/Architecture/SM_Houdini_Ceiling_HVAC_Grid.fbx"
+    },
+    {
+      "path": "03_UE_Assets/Meshes/SM_Houdini_Ceiling_HVAC_Grid_v2.fbx",
+      "bytes": 275008,
+      "sha256": "e202f7e62173a5d1d706aefc7488965724833446a7b9177f10d846a59c8b6018",
+      "source": "Content/Meshes/Architecture/SM_Houdini_Ceiling_HVAC_Grid_v2.fbx"
+    },
+    {
+      "path": "03_UE_Assets/Materials/M_Concrete_Beam.uasset",
+      "bytes": 61835,
+      "sha256": "ed57435f52c3d4571eba14a39feb1cdc407591b81633105deffdcaa44f6915d1",
+      "source": "Content/Meshes/Architecture/_mat_M_Concrete_Beam.uasset"
+    },
+    {
+      "path": "03_UE_Assets/Materials/M_Duct_Metal.uasset",
+      "bytes": 61784,
+      "sha256": "3ca0b969019f83247846232b8473e5fcbba28a5833e02ddb8554c7dc3afc97c1",
+      "source": "Content/Meshes/Architecture/_mat_M_Duct_Metal.uasset"
+    },
+    {
+      "path": "03_UE_Assets/Materials/M_Troffer_Diffuser.uasset",
+      "bytes": 61886,
+      "sha256": "e40181c940cc03395c46f1fbe02fa0f78ebeea7c9d1a0038c64cb0cb8daa46ff",
+      "source": "Content/Meshes/Architecture/_mat_M_Troffer_Diffuser.uasset"
+    },
+    {
+      "path": "04_Builder/build_office_ceiling.py",
+      "bytes": 6555,
+      "sha256": "3a0cedb6e548d664a64224bcfb077cf9a2d179df34eeddba9564ce928fbc1a63",
+      "source": "Tools/build_office_ceiling.py"
+    },
+    {
+      "path": "04_Builder/converge_office_ceiling_20261018.py",
+      "bytes": 5011,
+      "sha256": "f838c79662ae3112811ae1ac08085fc3be0eee5f9fea621b95c2a9c8ad8b69ab",
+      "source": "Tools/houdini/converge_office_ceiling_20261018.py"
+    },
+    {
+      "path": "04_Builder/bake_cinematic_cubicle_ceiling.py",
+      "bytes": 6281,
+      "sha256": "d4f7f9df2eebb261b56de41dfabcdb9e0db75f73a09cdf49f74ab2230a632b9a",
+      "source": "Tools/houdini/bake_cinematic_cubicle_ceiling.py"
+    },
+    {
+      "path": "04_Builder/fit_ceiling_to_main_room_20261018.py",
+      "bytes": 4566,
+      "sha256": "add5a2e0553be3ec7af8b9dcfcc85002c873cfee4ecd5e8b18dbb160ca297240",
+      "source": "Tools/houdini/fit_ceiling_to_main_room_20261018.py"
+    },
+    {
+      "path": "04_Builder/seal_and_realign_ceiling.py",
+      "bytes": 5267,
+      "sha256": "e62f3d608edf68e139f3e1f67afea01f81798649c9c2438fcffaf49705dbdda2",
+      "source": "Tools/houdini/seal_and_realign_ceiling.py"
+    },
+    {
+      "path": "04_Builder/export_headless_fbx_uv.py",
+      "bytes": 1327,
+      "sha256": "507b8822bb817e27a48eca5fd5f7d55096b8ecb128a1cda560462ef064b9619d",
+      "source": "Tools/houdini/export_headless_fbx_uv.py"
+    },
+    {
+      "path": "04_Builder/apply_ceiling_and_fg.py",
+      "bytes": 3988,
+      "sha256": "5a387eb5900f00293f54d08787dc84c294616e560f3913b2f5559ed6a7b54be5",
+      "source": "Tools/houdini/apply_ceiling_and_fg.py"
+    },
+    {
+      "path": "04_Builder/stage_ceiling_and_lights.py",
+      "bytes": 3552,
+      "sha256": "e2589fbc9327f1520994da01df5694fb948a234b036bd1526aef197e40892ccf",
+      "source": "Tools/houdini/stage_ceiling_and_lights.py"
+    },
+    {
+      "path": "04_Builder/move_hvac_grid.py",
+      "bytes": 808,
+      "sha256": "a56990f08f540795f9199b1e014d4742f04771e954c17c7417d5c4502cbfd027",
+      "source": "Tools/houdini/move_hvac_grid.py"
+    },
+    {
+      "path": "04_Builder/import_hvac_mesh.py",
+      "bytes": 767,
+      "sha256": "fb8fcfa8a23763b554d612e8e87b21816965c35935000004173a0f3e39806b10",
+      "source": "Tools/houdini/import_hvac_mesh.py"
+    },
+    {
+      "path": "04_Builder/fix_flat_ceiling.py",
+      "bytes": 2149,
+      "sha256": "e1039604f456549fa450325c77413fc5683dda65f3e95f6331ef6135cd162a54",
+      "source": "Tools/houdini/fix_flat_ceiling.py"
+    },
+    {
+      "path": "04_Builder/check_all_hvac.py",
+      "bytes": 389,
+      "sha256": "8ba07fb466cb15a5dcf65df7480bfc1403062b96f8e80cad2796fd25c13eda09",
+      "source": "Tools/houdini/check_all_hvac.py"
+    },
+    {
+      "path": "04_Builder/check_hvac_bounds.py",
+      "bytes": 515,
+      "sha256": "d977a949c5ea9d9e612d5217a29c3788905f0fcbf198ba07f82e1e331e62763d",
+      "source": "Tools/houdini/check_hvac_bounds.py"
+    },
+    {
+      "path": "04_Builder/check_ceiling_actors.py",
+      "bytes": 452,
+      "sha256": "6278b3712b40fa92b4b890a2ba2e4ca35b0ced355142c42c54b90e47c09479f1",
+      "source": "Tools/houdini/check_ceiling_actors.py"
+    },
+    {
+      "path": "04_Builder/check_troffer_intensity.py",
+      "bytes": 1318,
+      "sha256": "61b71a5785de114764342e24a411e0c9b2e6db625f9166c0b880960e4de67529",
+      "source": "Tools/houdini/check_troffer_intensity.py"
+    },
+    {
+      "path": "06_Evidence/ceiling_native_convergence.json",
+      "bytes": 3259,
+      "sha256": "1cf7566e26968364aa19b9a28c5571de7f76bc39ffa8a8dc30a53c4321302da4",
+      "source": "Saved/Audit/Closeout_20261018/ceiling_native_convergence.json"
+    },
+    {
+      "path": "06_Evidence/native_publish_manifest.json",
+      "bytes": 4601,
+      "sha256": "67d3dc811391b59970468938df90ede8c3ab09891b00933d7e3cf01ce9ee865f",
+      "source": "Tools/houdini/Published/Film304Closeout_20261018/native_publish_manifest.json"
+    },
+    {
+      "path": "06_Evidence/troffer_alignment.json",
+      "bytes": 7692,
+      "sha256": "86ed2d7c24e8833f277ec9fbdfb41ad149dbdab24ff58599cfe044851abc607d",
+      "source": "Saved/Audit/Closeout_20261018/troffer_alignment.json"
+    },
+    {
+      "path": "06_Evidence/main_room_ceiling_fit_applied.json",
+      "bytes": 1417,
+      "sha256": "f4f9eea46d9cdcbd780d151e719f22aefb0563d32e96cdc5d69e6534f10b420a",
+      "source": "Saved/Audit/Closeout_20261018/main_room_ceiling_fit_applied.json"
+    },
+    {
+      "path": "06_Evidence/assembly_preflight.json",
+      "bytes": 33282,
+      "sha256": "d2f986698f12a89eb330b1659672a5dd7215527b8da2999f934470f0a051e97c",
+      "source": "Saved/Audit/Closeout_20261018/assembly_preflight.json"
+    },
+    {
+      "path": "06_Evidence/main_office_ceiling_applied.json",
+      "bytes": 6380,
+      "sha256": "f9858ce86ef2b6820215706c15623413d5a07d16340f89f50f82d5e75ff6f9c4",
+      "source": "Saved/Audit/Closeout_20261018/main_office_ceiling_applied.json"
+    },
+    {
+      "path": "06_Evidence/ceiling_hvac_troffers_assembled.png",
+      "bytes": 1624447,
+      "sha256": "351b86368dfd772e3bb227c1bf47f658a83d0d8608586a77f45409afd1363d19",
+      "source": "Saved/Audit/Closeout_20261018/ceiling_hvac_troffers_assembled.png"
+    },
+    {
+      "path": "06_Evidence/MainOffice_BeforeCeiling.png",
+      "bytes": 1115216,
+      "sha256": "a6b48bd57461c87c95e361b75414ed5f06e97df2d37845bdc8d4fa6f83a16403",
+      "source": "Saved/Audit/Closeout_20261018/MainOffice_BeforeCeiling.png"
+    },
+    {
+      "path": "00_START_HERE.md",
+      "bytes": 2298,
+      "sha256": "b2ed28c5d7eb44586fb6d33ad41d272e3078a2e05e1a285a1c0c71fc64ae3ff7",
+      "source": "Film304_Packages/Ceiling_HVAC_ReusableKit_2026-11-17/00_START_HERE.md"
+    },
+    {
+      "path": "05_Docs/CEILING_SYSTEM.md",
+      "bytes": 5448,
+      "sha256": "2abef60b89cfcf15fdff268993209bce487861ab6374d40ccac067c9273c973c",
+      "source": "Film304_Packages/Ceiling_HVAC_ReusableKit_2026-11-17/05_Docs/CEILING_SYSTEM.md"
+    },
+    {
+      "path": "05_Docs/HOUDINI_FBX_UV_PACKMASTER_PIPELINE.md",
+      "bytes": 2517,
+      "sha256": "9a1525f6f46e13dcae1fa7e471cb2bb7d79164299acbdc13f7146dbfe3c7d911",
+      "source": "Docs/HOUDINI_FBX_UV_PACKMASTER_PIPELINE.md"
+    },
+    {
+      "path": "05_Docs/HOUDINI_ENGINE_VFX_AND_COMPOSED_STAGING_20261017.md",
+      "bytes": 14059,
+      "sha256": "0069baba9a20330b3bb7c4a1968e5f06d044a9096bcecab38381350ee10d1143",
+      "source": "Docs/HOUDINI_ENGINE_VFX_AND_COMPOSED_STAGING_20261017.md"
+    }
+  ]
+}
